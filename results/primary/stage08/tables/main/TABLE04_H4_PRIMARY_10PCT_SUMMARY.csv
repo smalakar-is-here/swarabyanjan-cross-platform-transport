@@ -1,0 +1,16 @@
+domain,metric,total_model_seed_settings,estimable_settings,nonestimable_settings,canonical_p_lt_0_05_and_degradation_direction
+baitbuster:youtube_human,lift,20,0,20,0
+baitbuster:youtube_human,error_capture,20,20,0,0
+baitbuster:youtube_human,aurc,20,20,0,0
+banglaclick:facebook,lift,20,20,0,20
+banglaclick:facebook,error_capture,20,20,0,20
+banglaclick:facebook,aurc,20,20,0,20
+banglaclick:news,lift,20,20,0,20
+banglaclick:news,error_capture,20,20,0,20
+banglaclick:news,aurc,20,20,0,20
+banglaclick:twitter,lift,20,20,0,20
+banglaclick:twitter,error_capture,20,20,0,20
+banglaclick:twitter,aurc,20,20,0,20
+banglaclick:youtube,lift,20,20,0,20
+banglaclick:youtube,error_capture,20,20,0,15
+banglaclick:youtube,aurc,20,20,0,15

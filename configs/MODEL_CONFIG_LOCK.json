@@ -1,0 +1,200 @@
+{
+  "candidate_results": {
+    "banglabert": [
+      {
+        "epoch": 1,
+        "internal_dev_auroc": 0.861641858902133
+      },
+      {
+        "epoch": 2,
+        "internal_dev_auroc": 0.8695763901243353
+      },
+      {
+        "epoch": 3,
+        "internal_dev_auroc": 0.8646029769317441
+      },
+      {
+        "epoch": 4,
+        "internal_dev_auroc": 0.8599932791713614
+      }
+    ],
+    "ebm": [
+      {
+        "candidate_index": 0,
+        "internal_dev_auroc": 0.733208800332088,
+        "params": {
+          "interactions": 0,
+          "learning_rate": 0.05,
+          "max_bins": 32,
+          "max_rounds": 1000,
+          "random_state": 20260906,
+          "validation_size": 0
+        }
+      },
+      {
+        "candidate_index": 1,
+        "internal_dev_auroc": 0.7312676668841052,
+        "params": {
+          "interactions": 0,
+          "learning_rate": 0.05,
+          "max_bins": 64,
+          "max_rounds": 1000,
+          "random_state": 20260906,
+          "validation_size": 0
+        }
+      },
+      {
+        "candidate_index": 2,
+        "internal_dev_auroc": 0.7315839411729823,
+        "params": {
+          "interactions": 0,
+          "learning_rate": 0.03,
+          "max_bins": 64,
+          "max_rounds": 1500,
+          "random_state": 20260906,
+          "validation_size": 0
+        }
+      }
+    ],
+    "tfidf_lr": [
+      {
+        "candidate_index": 0,
+        "internal_dev_auroc": 0.7899859653284311,
+        "params": {
+          "C": 0.25
+        }
+      },
+      {
+        "candidate_index": 1,
+        "internal_dev_auroc": 0.8004546442902606,
+        "params": {
+          "C": 1.0
+        }
+      },
+      {
+        "candidate_index": 2,
+        "internal_dev_auroc": 0.798300025697286,
+        "params": {
+          "C": 4.0
+        }
+      }
+    ],
+    "xlmr": [
+      {
+        "epoch": 1,
+        "internal_dev_auroc": 0.839055921247702
+      },
+      {
+        "epoch": 2,
+        "internal_dev_auroc": 0.8625432406254324
+      },
+      {
+        "epoch": 3,
+        "internal_dev_auroc": 0.8738895807388959
+      },
+      {
+        "epoch": 4,
+        "internal_dev_auroc": 0.8712131095692739
+      }
+    ]
+  },
+  "config_lock_sha256": "af6f73a7b839c70f2d9f592b6091f35c8ad24c5e8af5ae227812d6452128fa0a",
+  "configuration_data_boundary": "CLEAN BanglaBait TRAIN internal 90/10 split only",
+  "configuration_split_manifest_sha256": "b72f6a055215c5ff6ace81bd9196191a94cf1b7c63605cbf421948a461fcbae4",
+  "final_refit_seeds": [
+    42,
+    137,
+    2718,
+    31415,
+    65537
+  ],
+  "firewall": {
+    "DEV": "calibration only Stage 04",
+    "TEST": "locked evaluation Stage 05",
+    "external": "Stage 05 inference only"
+  },
+  "models": {
+    "banglabert": {
+      "base_config": {
+        "batch_size": 16,
+        "learning_rate": 2e-05,
+        "max_epochs": 4,
+        "max_length": 128,
+        "warmup_ratio": 0.1,
+        "weight_decay": 0.01
+      },
+      "repo_id": "csebuetnlp/banglabert",
+      "revision": "9ce791f330578f50da6bc52b54205166fb5d1c8c",
+      "selected_epoch": 2
+    },
+    "ebm": {
+      "class": "interpret.glassbox.ExplainableBoostingClassifier",
+      "cue_schema_sha256": "200e3ccee3dd6e11b57728b8d6d5ac91bd88cc2e8c3c5e8986d9daa145d73556",
+      "features": [
+        "curiosity_information_withholding",
+        "interrogative_structure",
+        "vague_deictic_reference",
+        "sensational_emotional_loading",
+        "exaggeration_superlative",
+        "specificity_numerals",
+        "punctuation_intensity",
+        "direct_address_imperative",
+        "token_count",
+        "character_count",
+        "mean_token_length",
+        "latin_code_mixing_proportion"
+      ],
+      "interactions": 0,
+      "selected": {
+        "candidate_index": 0,
+        "internal_dev_auroc": 0.733208800332088,
+        "params": {
+          "interactions": 0,
+          "learning_rate": 0.05,
+          "max_bins": 32,
+          "max_rounds": 1000,
+          "random_state": 20260906,
+          "validation_size": 0
+        }
+      }
+    },
+    "tfidf_lr": {
+      "char_ngrams": [
+        3,
+        5
+      ],
+      "class": "TF-IDF FeatureUnion + L2 LogisticRegression",
+      "max_features_per_branch": 100000,
+      "min_df": 2,
+      "selected": {
+        "candidate_index": 1,
+        "internal_dev_auroc": 0.8004546442902606,
+        "params": {
+          "C": 1.0
+        }
+      },
+      "solver": "liblinear",
+      "sublinear_tf": true,
+      "word_ngrams": [
+        1,
+        2
+      ]
+    },
+    "xlmr": {
+      "base_config": {
+        "batch_size": 16,
+        "learning_rate": 2e-05,
+        "max_epochs": 4,
+        "max_length": 128,
+        "warmup_ratio": 0.1,
+        "weight_decay": 0.01
+      },
+      "repo_id": "FacebookAI/xlm-roberta-base",
+      "revision": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089",
+      "selected_epoch": 3
+    }
+  },
+  "protocol_version": "SWARABYANJAN-CROSSPLATFORM-v1.0.0",
+  "schema_version": 1,
+  "selection_metric": "internal_train_split_AUROC"
+}

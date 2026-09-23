@@ -1,0 +1,2721 @@
+{
+  "causal_real_world_claim": false,
+  "estimability_policy": "All 5,000 locked ordinary cluster-bootstrap draws are required; no NaN filtering or rejection resampling.",
+  "exclusions_sha256": "23a55bf1da181f4b7f6ae4284572ae1fda5085f052b140eff731c2efda3fd8da",
+  "families": [
+    "curiosity_information_withholding",
+    "direct_address_imperative",
+    "punctuation_intensity"
+  ],
+  "finalization_version": "SWARABYANJAN-H3P-FINALIZATION-v1.0.0",
+  "models": [
+    "ebm",
+    "banglabert"
+  ],
+  "pair_representation": "Immutable pair-level inference cache from successful Stage 05; original and neutralized inputs share P0 normalization.",
+  "pairs_sha256": "7b8dd09ed22b177c461a6137c706ff64120d4f071601e0708cd8f6477229eb94",
+  "response": "delta_z = normalized-original logit - cue-neutralized logit",
+  "rows": [
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.2620933231057097,
+        0.13281398741307976
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.5232,
+      "seed": 42,
+      "source_mean_delta_z": 0.4130480069594056,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 0.33542759239534353,
+      "target_minus_source_delta_z": -0.07762041456406205,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.5288803015306007,
+        -0.08818035864268635
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0076,
+      "seed": 42,
+      "source_mean_delta_z": 0.4130480069594056,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 0.08847769349813461,
+      "target_minus_source_delta_z": -0.32457031346127097,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.5857536856669421,
+        -0.2497221652966214
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0,
+      "seed": 42,
+      "source_mean_delta_z": 0.4130480069594056,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": 0.002228260040283203,
+      "target_minus_source_delta_z": -0.4108197469191224,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.3576037955013852,
+        0.30386229852652685
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.8932,
+      "seed": 42,
+      "source_mean_delta_z": 0.4130480069594056,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 0.38755111396312714,
+      "target_minus_source_delta_z": -0.025496892996278442,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.2868558180581799,
+        0.06240094194417793
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.208,
+      "seed": 42,
+      "source_mean_delta_z": 0.4130480069594056,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 0.29305590401802745,
+      "target_minus_source_delta_z": -0.11999210294137813,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.28123167459316706,
+        0.08950811362223499
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.3452,
+      "seed": 137,
+      "source_mean_delta_z": 0.49606429785490036,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 0.39758372204987524,
+      "target_minus_source_delta_z": -0.09848057580502512,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.5641183662907272,
+        -0.15027183615954745
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0008,
+      "seed": 137,
+      "source_mean_delta_z": 0.49606429785490036,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 0.14741441011428832,
+      "target_minus_source_delta_z": -0.348649887740612,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.630068243126951,
+        -0.2579295986861575
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0,
+      "seed": 137,
+      "source_mean_delta_z": 0.49606429785490036,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": 0.06112527847290039,
+      "target_minus_source_delta_z": -0.43493901938199997,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.32346700481413043,
+        0.21166015982846978
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.722,
+      "seed": 137,
+      "source_mean_delta_z": 0.49606429785490036,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 0.44272974133491516,
+      "target_minus_source_delta_z": -0.0533345565199852,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.36198530487069486,
+        0.0010612034379082868
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0512,
+      "seed": 137,
+      "source_mean_delta_z": 0.49606429785490036,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 0.3316943844869023,
+      "target_minus_source_delta_z": -0.16436991336799806,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.39715841292364973,
+        0.09610275807765337
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.2188,
+      "seed": 2718,
+      "source_mean_delta_z": 0.4575016177898529,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 0.27644616372768926,
+      "target_minus_source_delta_z": -0.1810554540621636,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.6122096587295089,
+        -0.05554776335664688
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.016,
+      "seed": 2718,
+      "source_mean_delta_z": 0.4575016177898529,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 0.11104879528284073,
+      "target_minus_source_delta_z": -0.34645282250701215,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.6798085658920601,
+        -0.2620792403871964
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0,
+      "seed": 2718,
+      "source_mean_delta_z": 0.4575016177898529,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": -0.011949896812438965,
+      "target_minus_source_delta_z": -0.46945151460229184,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.550569466570867,
+        0.001861841392283165
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0516,
+      "seed": 2718,
+      "source_mean_delta_z": 0.4575016177898529,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 0.18461371213197708,
+      "target_minus_source_delta_z": -0.2728879056578758,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.45574248591082467,
+        0.006665031100681693
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0592,
+      "seed": 2718,
+      "source_mean_delta_z": 0.4575016177898529,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 0.22414918960559935,
+      "target_minus_source_delta_z": -0.23335242818425353,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.3033175798572955,
+        0.07108568634623293
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.196,
+      "seed": 31415,
+      "source_mean_delta_z": 0.43806166504966276,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 0.2977371163397669,
+      "target_minus_source_delta_z": -0.14032454870989586,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.4843884747887924,
+        -0.1428065726735928
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0008,
+      "seed": 31415,
+      "source_mean_delta_z": 0.43806166504966276,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 0.12105117812752723,
+      "target_minus_source_delta_z": -0.3170104869221355,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.5631994690819114,
+        -0.25795703141347454
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0,
+      "seed": 31415,
+      "source_mean_delta_z": 0.43806166504966276,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": 0.03000962734222412,
+      "target_minus_source_delta_z": -0.40805203770743864,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.2276236825366961,
+        0.24042464537710379
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.928,
+      "seed": 31415,
+      "source_mean_delta_z": 0.43806166504966276,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 0.4459342509508133,
+      "target_minus_source_delta_z": 0.00787258590115053,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.3738752795337681,
+        -0.0724505863219926
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0024,
+      "seed": 31415,
+      "source_mean_delta_z": 0.43806166504966276,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 0.22892148821126848,
+      "target_minus_source_delta_z": -0.20914017683839428,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.5454584260061037,
+        -0.005698213161947785
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.046,
+      "seed": 65537,
+      "source_mean_delta_z": 0.5243853962633247,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 0.22935178347469093,
+      "target_minus_source_delta_z": -0.29503361278863377,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.6403004064496266,
+        -0.04153253724620104
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0248,
+      "seed": 65537,
+      "source_mean_delta_z": 0.5243853962633247,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 0.1810174763202667,
+      "target_minus_source_delta_z": -0.343367919943058,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.7332850232136016,
+        -0.24475679267106554
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0,
+      "seed": 65537,
+      "source_mean_delta_z": 0.5243853962633247,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": 0.03973591327667236,
+      "target_minus_source_delta_z": -0.48464948298665234,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.7023821726076159,
+        -0.10539577191869075
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0048,
+      "seed": 65537,
+      "source_mean_delta_z": 0.5243853962633247,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 0.1289605088531971,
+      "target_minus_source_delta_z": -0.3954248874101276,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.5843841526606179,
+        -0.10543600023840233
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0024,
+      "seed": 65537,
+      "source_mean_delta_z": 0.5243853962633247,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 0.19663787246460007,
+      "target_minus_source_delta_z": -0.3277475237987246,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        0.15775966303783404,
+        0.42763226181359265
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0,
+      "seed": 42,
+      "source_mean_delta_z": 1.028605974241399,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 1.3017166868300905,
+      "target_minus_source_delta_z": 0.27311071258869135,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.13207911520881505,
+        0.18211895641852927
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.5204,
+      "seed": 42,
+      "source_mean_delta_z": 1.028605974241399,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 1.087093442929389,
+      "target_minus_source_delta_z": 0.05848746868798993,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.11233283825642203,
+        0.27173879716518673
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.5008,
+      "seed": 42,
+      "source_mean_delta_z": 1.028605974241399,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": 1.1072276110415937,
+      "target_minus_source_delta_z": 0.07862163680019463,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.11335033773220132,
+        1.4279202349767024
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.4996,
+      "seed": 42,
+      "source_mean_delta_z": 1.028605974241399,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 1.685264148821139,
+      "target_minus_source_delta_z": 0.65665817457974,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        0.2582020754338451,
+        0.7231615663904697
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0,
+      "seed": 42,
+      "source_mean_delta_z": 1.028605974241399,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 1.3992766300294812,
+      "target_minus_source_delta_z": 0.3706706557880821,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        0.162582228692169,
+        0.41786021012663765
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0,
+      "seed": 137,
+      "source_mean_delta_z": 1.0287694877570959,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 1.3010658152862504,
+      "target_minus_source_delta_z": 0.27229632752915456,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.13472538932745315,
+        0.17439086670147905
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.5224,
+      "seed": 137,
+      "source_mean_delta_z": 1.0287694877570959,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 1.0854316299355091,
+      "target_minus_source_delta_z": 0.056662142178413255,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.11533050460669124,
+        0.26821886596484945
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.4896,
+      "seed": 137,
+      "source_mean_delta_z": 1.0287694877570959,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": 1.1056753797361356,
+      "target_minus_source_delta_z": 0.07690589197903974,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.11248368920040558,
+        1.4204168278154583
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.5,
+      "seed": 137,
+      "source_mean_delta_z": 1.0287694877570959,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 1.6826867164434862,
+      "target_minus_source_delta_z": 0.6539172286863904,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        0.26673205345384327,
+        0.7191979066113994
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0,
+      "seed": 137,
+      "source_mean_delta_z": 1.0287694877570959,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 1.3998347015466872,
+      "target_minus_source_delta_z": 0.37106521378959134,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        0.16016468188517294,
+        0.4184828292976986
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0,
+      "seed": 2718,
+      "source_mean_delta_z": 1.0293860118549223,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 1.3006169684744857,
+      "target_minus_source_delta_z": 0.2712309566195634,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.12576313562771482,
+        0.17455509398408656
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.5288,
+      "seed": 2718,
+      "source_mean_delta_z": 1.0293860118549223,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 1.0864650159511533,
+      "target_minus_source_delta_z": 0.05707900409623101,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.11391861076628479,
+        0.26939071357916483
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.4856,
+      "seed": 2718,
+      "source_mean_delta_z": 1.0293860118549223,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": 1.1062448395236053,
+      "target_minus_source_delta_z": 0.07685882766868302,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.11349241951244254,
+        1.4258318573563897
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.4868,
+      "seed": 2718,
+      "source_mean_delta_z": 1.0293860118549223,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 1.6846002453705973,
+      "target_minus_source_delta_z": 0.655214233515675,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        0.2609761878018108,
+        0.7066500504493317
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0,
+      "seed": 2718,
+      "source_mean_delta_z": 1.0293860118549223,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 1.3984764038954745,
+      "target_minus_source_delta_z": 0.36909039204055216,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        0.15471268827473741,
+        0.4330330336756186
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0004,
+      "seed": 31415,
+      "source_mean_delta_z": 1.028845992599959,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 1.2994383940238334,
+      "target_minus_source_delta_z": 0.27059240142387453,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.1238711507986881,
+        0.17411420041958917
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.5272,
+      "seed": 31415,
+      "source_mean_delta_z": 1.028845992599959,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 1.0835680870019915,
+      "target_minus_source_delta_z": 0.05472209440203257,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.11188369450765719,
+        0.2664539423315765
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.5028,
+      "seed": 31415,
+      "source_mean_delta_z": 1.028845992599959,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": 1.1058989575354807,
+      "target_minus_source_delta_z": 0.07705296493552183,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.11247482282985596,
+        1.426218536474194
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.4748,
+      "seed": 31415,
+      "source_mean_delta_z": 1.028845992599959,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 1.685215030046878,
+      "target_minus_source_delta_z": 0.6563690374469191,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        0.2587704679968207,
+        0.7199883150902098
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0,
+      "seed": 31415,
+      "source_mean_delta_z": 1.028845992599959,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 1.3980511908599333,
+      "target_minus_source_delta_z": 0.36920519825997444,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        0.1548897863070296,
+        0.4140247173836789
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0004,
+      "seed": 65537,
+      "source_mean_delta_z": 1.030351311433318,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 1.2996420292606319,
+      "target_minus_source_delta_z": 0.26929071782731384,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.12191245782624856,
+        0.16827874914150392
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.5176,
+      "seed": 65537,
+      "source_mean_delta_z": 1.030351311433318,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 1.082506950269776,
+      "target_minus_source_delta_z": 0.05215563883645791,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.11190863670772765,
+        0.2786580428599498
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.4892,
+      "seed": 65537,
+      "source_mean_delta_z": 1.030351311433318,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": 1.1127374013934976,
+      "target_minus_source_delta_z": 0.0823860899601796,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.11390150358848161,
+        1.4228346199872774
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.502,
+      "seed": 65537,
+      "source_mean_delta_z": 1.030351311433318,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 1.6860858825453433,
+      "target_minus_source_delta_z": 0.6557345711120253,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        0.26286423172919837,
+        0.7144701624742307
+      ],
+      "cue": "curiosity_information_withholding",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0,
+      "seed": 65537,
+      "source_mean_delta_z": 1.030351311433318,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 1.3977360920738218,
+      "target_minus_source_delta_z": 0.3673847806405037,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.03874689725894137,
+        0.2821871015808973
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.1424,
+      "seed": 42,
+      "source_mean_delta_z": 0.29586026250668196,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 0.4048258680090334,
+      "target_minus_source_delta_z": 0.10896560550235146,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.31191228604976734,
+        0.06783269654730753
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.206,
+      "seed": 42,
+      "source_mean_delta_z": 0.29586026250668196,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 0.16941669177129326,
+      "target_minus_source_delta_z": -0.1264435707353887,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.29741849028923806,
+        0.08321245166756497
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.2648,
+      "seed": 42,
+      "source_mean_delta_z": 0.29586026250668196,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": 0.18987460931142172,
+      "target_minus_source_delta_z": -0.10598565319526024,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.3164811295780606,
+        0.02053622791801977
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0916,
+      "seed": 42,
+      "source_mean_delta_z": 0.29586026250668196,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 0.14661475718021394,
+      "target_minus_source_delta_z": -0.14924550532646802,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.18847796999179053,
+        0.1912922830193371
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.8596,
+      "seed": 42,
+      "source_mean_delta_z": 0.29586026250668196,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 0.2593438389747502,
+      "target_minus_source_delta_z": -0.03651642353193174,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.046441973552743654,
+        0.26223314163122496
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.1652,
+      "seed": 137,
+      "source_mean_delta_z": 0.41532557395597297,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 0.5226171198858841,
+      "target_minus_source_delta_z": 0.10729154592991114,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.3768067817671507,
+        0.1006639187634268
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.2244,
+      "seed": 137,
+      "source_mean_delta_z": 0.41532557395597297,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 0.26340906311342693,
+      "target_minus_source_delta_z": -0.15191651084254604,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.43093548828506495,
+        0.03790611133324518
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.114,
+      "seed": 137,
+      "source_mean_delta_z": 0.41532557395597297,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": 0.24233674009641012,
+      "target_minus_source_delta_z": -0.17298883385956285,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.4101950835921881,
+        -0.07426617780618994
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0084,
+      "seed": 137,
+      "source_mean_delta_z": 0.41532557395597297,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 0.17357632489874958,
+      "target_minus_source_delta_z": -0.2417492490572234,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.19194273764212866,
+        0.23186088238098562
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.7468,
+      "seed": 137,
+      "source_mean_delta_z": 0.41532557395597297,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 0.3699476663127292,
+      "target_minus_source_delta_z": -0.04537790764324379,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.07093846579370905,
+        0.3139323982608416
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.2012,
+      "seed": 2718,
+      "source_mean_delta_z": 0.3185964038838511,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 0.42877714556299096,
+      "target_minus_source_delta_z": 0.11018074167913988,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.37065886995658853,
+        0.05510600712245271
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.1524,
+      "seed": 2718,
+      "source_mean_delta_z": 0.3185964038838511,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 0.15572247205369444,
+      "target_minus_source_delta_z": -0.16287393183015664,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -1.0634637220608798,
+        0.08159636028465744
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.1336,
+      "seed": 2718,
+      "source_mean_delta_z": 0.3185964038838511,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": -0.04887199898560842,
+      "target_minus_source_delta_z": -0.3674684028694595,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.42509087269693824,
+        -0.027340711933140846
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0308,
+      "seed": 2718,
+      "source_mean_delta_z": 0.3185964038838511,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 0.09738404899835587,
+      "target_minus_source_delta_z": -0.2212123548854952,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.20634565743383992,
+        0.21724277921867305
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.9096,
+      "seed": 2718,
+      "source_mean_delta_z": 0.3185964038838511,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 0.28544386932054044,
+      "target_minus_source_delta_z": -0.03315253456331063,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.06485260305778426,
+        0.2267867688588208
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.2392,
+      "seed": 31415,
+      "source_mean_delta_z": 0.433918551609352,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 0.5132582737035895,
+      "target_minus_source_delta_z": 0.07933972209423745,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.3998665914213787,
+        -0.02857376294658426
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0224,
+      "seed": 31415,
+      "source_mean_delta_z": 0.433918551609352,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 0.2141601946878146,
+      "target_minus_source_delta_z": -0.2197583569215374,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.20611113170944692,
+        0.2648838152488073
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.6432,
+      "seed": 31415,
+      "source_mean_delta_z": 0.433918551609352,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": 0.4936148126920064,
+      "target_minus_source_delta_z": 0.05969626108265441,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.40102346598055405,
+        -0.09232816397469913
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0008,
+      "seed": 31415,
+      "source_mean_delta_z": 0.433918551609352,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 0.18888060115277766,
+      "target_minus_source_delta_z": -0.24503795045657434,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.1788098697386528,
+        0.11195515078984843
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.6112,
+      "seed": 31415,
+      "source_mean_delta_z": 0.433918551609352,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 0.3885158314551721,
+      "target_minus_source_delta_z": -0.0454027201541799,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.15674952002871784,
+        0.14991337057469326
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.968,
+      "seed": 65537,
+      "source_mean_delta_z": 0.30577940445231355,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 0.29714010196524515,
+      "target_minus_source_delta_z": -0.008639302487068401,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.3292505383199753,
+        0.17379933318396895
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.444,
+      "seed": 65537,
+      "source_mean_delta_z": 0.30577940445231355,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 0.20788856436419917,
+      "target_minus_source_delta_z": -0.09789084008811438,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.6368173844353768,
+        0.1426102868227315
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.3036,
+      "seed": 65537,
+      "source_mean_delta_z": 0.30577940445231355,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": 0.1204866220553716,
+      "target_minus_source_delta_z": -0.18529278239694197,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.43333911513504775,
+        -0.11168685241750849
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0012,
+      "seed": 65537,
+      "source_mean_delta_z": 0.30577940445231355,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 0.036145915649831294,
+      "target_minus_source_delta_z": -0.2696334888024823,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.2761294711552141,
+        0.01760241208110843
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0792,
+      "seed": 65537,
+      "source_mean_delta_z": 0.30577940445231355,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 0.17003901521337098,
+      "target_minus_source_delta_z": -0.13574038923894258,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.015597632314983621,
+        0.2122927147750185
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0908,
+      "seed": 42,
+      "source_mean_delta_z": 1.410425552475717,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 1.511731543960452,
+      "target_minus_source_delta_z": 0.10130599148473496,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.7178831747549582,
+        -0.27966583204872963
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0004,
+      "seed": 42,
+      "source_mean_delta_z": 1.410425552475717,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 0.8663564179715928,
+      "target_minus_source_delta_z": -0.5440691345041242,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.8159159364591055,
+        -0.2596336445670131
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0,
+      "seed": 42,
+      "source_mean_delta_z": 1.410425552475717,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": 0.8924320333153033,
+      "target_minus_source_delta_z": -0.5179935191604137,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.2114613905295341,
+        0.3170504995233702
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.7256,
+      "seed": 42,
+      "source_mean_delta_z": 1.410425552475717,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 1.4584820181606115,
+      "target_minus_source_delta_z": 0.04805646568489452,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        0.0074054704032694,
+        0.4034417281220678
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0364,
+      "seed": 42,
+      "source_mean_delta_z": 1.410425552475717,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 1.5677080688461957,
+      "target_minus_source_delta_z": 0.15728251637047874,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.017478731448670404,
+        0.2110844037876458
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.098,
+      "seed": 137,
+      "source_mean_delta_z": 1.4114739814119401,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 1.5126119664069866,
+      "target_minus_source_delta_z": 0.10113798499504645,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.7276738121917798,
+        -0.2869164047381848
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0012,
+      "seed": 137,
+      "source_mean_delta_z": 1.4114739814119401,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 0.8670041174998162,
+      "target_minus_source_delta_z": -0.5444698639121239,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.8166073886634232,
+        -0.2619262532999275
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0,
+      "seed": 137,
+      "source_mean_delta_z": 1.4114739814119401,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": 0.8981253850502942,
+      "target_minus_source_delta_z": -0.513348596361646,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.20992779324399538,
+        0.3084772853983388
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.6944,
+      "seed": 137,
+      "source_mean_delta_z": 1.4114739814119401,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 1.4624330832422054,
+      "target_minus_source_delta_z": 0.05095910183026531,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        0.005859864779895441,
+        0.4094524548123424
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.044,
+      "seed": 137,
+      "source_mean_delta_z": 1.4114739814119401,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 1.568324900504665,
+      "target_minus_source_delta_z": 0.15685091909272497,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.018129069098135896,
+        0.20601248557735782
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.096,
+      "seed": 2718,
+      "source_mean_delta_z": 1.4115281392380137,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 1.5117619720849305,
+      "target_minus_source_delta_z": 0.10023383284691678,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.7227685103563894,
+        -0.2964753915302888
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0012,
+      "seed": 2718,
+      "source_mean_delta_z": 1.4115281392380137,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 0.8681235510465228,
+      "target_minus_source_delta_z": -0.5434045881914908,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.8328287006615297,
+        -0.2536076328445421
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0,
+      "seed": 2718,
+      "source_mean_delta_z": 1.4115281392380137,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": 0.8947049643304275,
+      "target_minus_source_delta_z": -0.5168231749075862,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.2175548380285417,
+        0.3053019078235291
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.738,
+      "seed": 2718,
+      "source_mean_delta_z": 1.4115281392380137,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 1.4599062386430801,
+      "target_minus_source_delta_z": 0.04837809940506643,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        0.0036818917530854313,
+        0.4026084071961094
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0452,
+      "seed": 2718,
+      "source_mean_delta_z": 1.4115281392380137,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 1.5676929838639118,
+      "target_minus_source_delta_z": 0.15616484462589808,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.02313970570990711,
+        0.2072647895313507
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.1108,
+      "seed": 31415,
+      "source_mean_delta_z": 1.4119847283299456,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 1.5119050350475978,
+      "target_minus_source_delta_z": 0.09992030671765217,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.7303633950561184,
+        -0.2892404278368393
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0,
+      "seed": 31415,
+      "source_mean_delta_z": 1.4119847283299456,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 0.8671479534553477,
+      "target_minus_source_delta_z": -0.5448367748745979,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.841431276303004,
+        -0.2565953924860815
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0,
+      "seed": 31415,
+      "source_mean_delta_z": 1.4119847283299456,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": 0.8931186289970038,
+      "target_minus_source_delta_z": -0.5188660993329418,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.2070483091229318,
+        0.31081853975029927
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.7096,
+      "seed": 31415,
+      "source_mean_delta_z": 1.4119847283299456,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 1.460903348071257,
+      "target_minus_source_delta_z": 0.0489186197413114,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        0.0012709899842224496,
+        0.4050543460975692
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0488,
+      "seed": 31415,
+      "source_mean_delta_z": 1.4119847283299456,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 1.5680258200775747,
+      "target_minus_source_delta_z": 0.15604109174762915,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.019980574613942436,
+        0.2097636726632144
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0984,
+      "seed": 65537,
+      "source_mean_delta_z": 1.411582267465408,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 1.5123966643986866,
+      "target_minus_source_delta_z": 0.10081439693327865,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.7234094529818644,
+        -0.2833172549567291
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0008,
+      "seed": 65537,
+      "source_mean_delta_z": 1.411582267465408,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 0.8680892785213811,
+      "target_minus_source_delta_z": -0.5434929889440269,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.827507946691522,
+        -0.258562035580327
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0,
+      "seed": 65537,
+      "source_mean_delta_z": 1.411582267465408,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": 0.8994820744604156,
+      "target_minus_source_delta_z": -0.5121001930049923,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.21161898674941976,
+        0.3112240890182379
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.7272,
+      "seed": 65537,
+      "source_mean_delta_z": 1.411582267465408,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 1.4618992906345665,
+      "target_minus_source_delta_z": 0.05031702316915854,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        0.0016569702804471733,
+        0.40511534376550196
+      ],
+      "cue": "direct_address_imperative",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0468,
+      "seed": 65537,
+      "source_mean_delta_z": 1.411582267465408,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 1.5678078827745994,
+      "target_minus_source_delta_z": 0.15622561530919143,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.6463350694482384,
+        -0.10181277540654628
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0004,
+      "seed": 42,
+      "source_mean_delta_z": 0.7748365705843018,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 0.3101640979353884,
+      "target_minus_source_delta_z": -0.46467247264891337,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.5614554741518686,
+        -0.2396260172744932
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0,
+      "seed": 42,
+      "source_mean_delta_z": 0.7748365705843018,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 0.3703575363754752,
+      "target_minus_source_delta_z": -0.4044790342088266,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.23405714298905098,
+        0.3574973336577326
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.8544,
+      "seed": 42,
+      "source_mean_delta_z": 0.7748365705843018,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": 0.8090388819258264,
+      "target_minus_source_delta_z": 0.03420231134152463,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.7606175263908861,
+        -0.5678642688437993
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0,
+      "seed": 42,
+      "source_mean_delta_z": 0.7748365705843018,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 0.1099402558424377,
+      "target_minus_source_delta_z": -0.6648963147418641,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.7349912488768552,
+        -0.3464106278411478
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0,
+      "seed": 42,
+      "source_mean_delta_z": 0.7748365705843018,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 0.17477734246531396,
+      "target_minus_source_delta_z": -0.6000592281189878,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.5128922808515683,
+        -0.09669913859943746
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0016,
+      "seed": 137,
+      "source_mean_delta_z": 0.6850595228231507,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 0.3191245034171882,
+      "target_minus_source_delta_z": -0.36593501940596257,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.4000376814962763,
+        -0.06552150373438098
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.008,
+      "seed": 137,
+      "source_mean_delta_z": 0.6850595228231507,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 0.450578588281424,
+      "target_minus_source_delta_z": -0.23448093454172675,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.1183990961405857,
+        0.3434782947309219
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.3704,
+      "seed": 137,
+      "source_mean_delta_z": 0.6850595228231507,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": 0.7895764212342019,
+      "target_minus_source_delta_z": 0.10451689841105116,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.6163199994580061,
+        -0.43174774546546224
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0,
+      "seed": 137,
+      "source_mean_delta_z": 0.6850595228231507,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 0.15958478053965205,
+      "target_minus_source_delta_z": -0.5254747422834987,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.5772943079427965,
+        -0.27738231000055813
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0,
+      "seed": 137,
+      "source_mean_delta_z": 0.6850595228231507,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 0.2131668163829782,
+      "target_minus_source_delta_z": -0.47189270644017256,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.16901608793732814,
+        0.2614106089328569
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.9588,
+      "seed": 2718,
+      "source_mean_delta_z": 0.7168517104970912,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 0.6961423041450864,
+      "target_minus_source_delta_z": -0.0207094063520048,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.3661365362309868,
+        0.027116604221115163
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.09,
+      "seed": 2718,
+      "source_mean_delta_z": 0.7168517104970912,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 0.5501934007300733,
+      "target_minus_source_delta_z": -0.1666583097670179,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.1590060033541709,
+        0.4431632309811964
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.4132,
+      "seed": 2718,
+      "source_mean_delta_z": 0.7168517104970912,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": 0.8494446927562673,
+      "target_minus_source_delta_z": 0.13259298225917615,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.6207822224490077,
+        -0.427480180662402
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0,
+      "seed": 2718,
+      "source_mean_delta_z": 0.7168517104970912,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 0.1921586316311732,
+      "target_minus_source_delta_z": -0.524693078865918,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.24775819277341313,
+        0.12461961775515426
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.4268,
+      "seed": 2718,
+      "source_mean_delta_z": 0.7168517104970912,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 0.5980254933272587,
+      "target_minus_source_delta_z": -0.11882621716983244,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.45962616865340983,
+        -0.05624145421115756
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0044,
+      "seed": 31415,
+      "source_mean_delta_z": 0.7033861415555704,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 0.3843434024963075,
+      "target_minus_source_delta_z": -0.31904273905926295,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.3819712405891581,
+        -0.05468046358704054
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.01,
+      "seed": 31415,
+      "source_mean_delta_z": 0.7033861415555704,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 0.4964052092938023,
+      "target_minus_source_delta_z": -0.20698093226176817,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.04506762515419217,
+        0.5270677057130068
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.1148,
+      "seed": 31415,
+      "source_mean_delta_z": 0.7033861415555704,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": 0.9316640825981789,
+      "target_minus_source_delta_z": 0.22827794104260846,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.6211051442746879,
+        -0.43792390076952314
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0,
+      "seed": 31415,
+      "source_mean_delta_z": 0.7033861415555704,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 0.1707598245702684,
+      "target_minus_source_delta_z": -0.532626316985302,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.535766405927015,
+        -0.20836933592239668
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0016,
+      "seed": 31415,
+      "source_mean_delta_z": 0.7033861415555704,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 0.2785971320419121,
+      "target_minus_source_delta_z": -0.42478900951365833,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.2619912458930241,
+        0.3633249564646512
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.6744,
+      "seed": 65537,
+      "source_mean_delta_z": 0.6902201246022364,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 0.6288525427707177,
+      "target_minus_source_delta_z": -0.06136758183151869,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.37106342671529013,
+        -0.0022387744430974453
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0468,
+      "seed": 65537,
+      "source_mean_delta_z": 0.6902201246022364,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 0.5060851725088503,
+      "target_minus_source_delta_z": -0.18413495209338604,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.055981387250880935,
+        0.5175108438999553
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.1304,
+      "seed": 65537,
+      "source_mean_delta_z": 0.6902201246022364,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": 0.9096905935476435,
+      "target_minus_source_delta_z": 0.21947046894540712,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.5985093317056226,
+        -0.39775468370702827
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.0,
+      "seed": 65537,
+      "source_mean_delta_z": 0.6902201246022364,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 0.19196878870882625,
+      "target_minus_source_delta_z": -0.4982513358934101,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.3462490411402801,
+        0.13104138822424802
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "banglabert",
+      "p": 0.2692,
+      "seed": 65537,
+      "source_mean_delta_z": 0.6902201246022364,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 0.5080312974768274,
+      "target_minus_source_delta_z": -0.18218882712540896,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        0.010125788904391038,
+        0.29387860134136956
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0228,
+      "seed": 42,
+      "source_mean_delta_z": 0.8201914069366378,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 0.9120115978159743,
+      "target_minus_source_delta_z": 0.09182019087933646,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.002986994686913671,
+        0.16357284278257364
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.064,
+      "seed": 42,
+      "source_mean_delta_z": 0.8201914069366378,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 0.8997333721890584,
+      "target_minus_source_delta_z": 0.07954196525242052,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.18675531305638854,
+        0.06736865188229701
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.484,
+      "seed": 42,
+      "source_mean_delta_z": 0.8201914069366378,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": 0.7773278039728483,
+      "target_minus_source_delta_z": -0.04286360296378955,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.007031026556836672,
+        0.12884768525843698
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0808,
+      "seed": 42,
+      "source_mean_delta_z": 0.8201914069366378,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 0.8827324870490345,
+      "target_minus_source_delta_z": 0.06254108011239667,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.018265315539436326,
+        0.22962154121765052
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.1616,
+      "seed": 42,
+      "source_mean_delta_z": 0.8201914069366378,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 0.8856885232353277,
+      "target_minus_source_delta_z": 0.06549711629868982,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        0.010830599739548107,
+        0.2930718519260334
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0184,
+      "seed": 137,
+      "source_mean_delta_z": 0.8198447657195043,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 0.9116758923540899,
+      "target_minus_source_delta_z": 0.09183112663458559,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.0032692110871918195,
+        0.16302077239856144
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.058,
+      "seed": 137,
+      "source_mean_delta_z": 0.8198447657195043,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 0.8990997398410528,
+      "target_minus_source_delta_z": 0.07925497412154858,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.18613051677846135,
+        0.06601994613528173
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.4512,
+      "seed": 137,
+      "source_mean_delta_z": 0.8198447657195043,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": 0.7770185455833919,
+      "target_minus_source_delta_z": -0.04282622013611237,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.004958571946162237,
+        0.13138965928643653
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0676,
+      "seed": 137,
+      "source_mean_delta_z": 0.8198447657195043,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 0.8830239589712787,
+      "target_minus_source_delta_z": 0.06317919325177446,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.017866181535716025,
+        0.22896663265839343
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.152,
+      "seed": 137,
+      "source_mean_delta_z": 0.8198447657195043,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 0.8856776985566697,
+      "target_minus_source_delta_z": 0.0658329328371654,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        0.009937362839045049,
+        0.2940414003533273
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0204,
+      "seed": 2718,
+      "source_mean_delta_z": 0.8199622649251959,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 0.9097406161706083,
+      "target_minus_source_delta_z": 0.08977835124541245,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.0038707699207954443,
+        0.1601104059298283
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.066,
+      "seed": 2718,
+      "source_mean_delta_z": 0.8199622649251959,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 0.8978577394141248,
+      "target_minus_source_delta_z": 0.07789547448892897,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.1839610996506235,
+        0.06291533053244129
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.4716,
+      "seed": 2718,
+      "source_mean_delta_z": 0.8199622649251959,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": 0.7764374855265053,
+      "target_minus_source_delta_z": -0.043524779398690594,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.0046481369833013195,
+        0.12993343778204625
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.068,
+      "seed": 2718,
+      "source_mean_delta_z": 0.8199622649251959,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 0.881432658459963,
+      "target_minus_source_delta_z": 0.06147039353476713,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.018730365142414107,
+        0.2289303592170277
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.1676,
+      "seed": 2718,
+      "source_mean_delta_z": 0.8199622649251959,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 0.8832915604779827,
+      "target_minus_source_delta_z": 0.06332929555278688,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        0.010334794666800257,
+        0.29689420480057654
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0208,
+      "seed": 31415,
+      "source_mean_delta_z": 0.8201603360285776,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 0.9113746585138282,
+      "target_minus_source_delta_z": 0.09121432248525052,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.005180475264356879,
+        0.16045997420563293
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0736,
+      "seed": 31415,
+      "source_mean_delta_z": 0.8201603360285776,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 0.8981748449590385,
+      "target_minus_source_delta_z": 0.07801450893046091,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.17833331144334952,
+        0.062325630676559
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.4492,
+      "seed": 31415,
+      "source_mean_delta_z": 0.8201603360285776,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": 0.7769513139835139,
+      "target_minus_source_delta_z": -0.043209022045063716,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.005406009153594657,
+        0.1282098798874657
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0712,
+      "seed": 31415,
+      "source_mean_delta_z": 0.8201603360285776,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 0.8813964003384329,
+      "target_minus_source_delta_z": 0.06123606430985529,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.01849505763047979,
+        0.2312904239359332
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.1716,
+      "seed": 31415,
+      "source_mean_delta_z": 0.8201603360285776,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 0.8846977891429565,
+      "target_minus_source_delta_z": 0.06453745311437886,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        0.012935254587308053,
+        0.2936513321184269
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0128,
+      "seed": 65537,
+      "source_mean_delta_z": 0.8197250586653748,
+      "target": "baitbuster:youtube_human",
+      "target_mean_delta_z": 0.9093544457035814,
+      "target_minus_source_delta_z": 0.08962938703820655,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.0007872125893875078,
+        0.16188454534487687
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0536,
+      "seed": 65537,
+      "source_mean_delta_z": 0.8197250586653748,
+      "target": "banglaclick:facebook",
+      "target_mean_delta_z": 0.8980838801848132,
+      "target_minus_source_delta_z": 0.0783588215194384,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.18205299923078086,
+        0.0668180204910106
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.4712,
+      "seed": 65537,
+      "source_mean_delta_z": 0.8197250586653748,
+      "target": "banglaclick:news",
+      "target_mean_delta_z": 0.7767674417407979,
+      "target_minus_source_delta_z": -0.04295761692457689,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.004103109135928034,
+        0.12958045677791938
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.0704,
+      "seed": 65537,
+      "source_mean_delta_z": 0.8197250586653748,
+      "target": "banglaclick:twitter",
+      "target_mean_delta_z": 0.8814155695410761,
+      "target_minus_source_delta_z": 0.06169051087570132,
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "ci95": [
+        -0.018673604781215717,
+        0.22681291851683458
+      ],
+      "cue": "punctuation_intensity",
+      "inferential_status": "ESTIMABLE",
+      "invalid_replicates": 0,
+      "model": "ebm",
+      "p": 0.1728,
+      "seed": 65537,
+      "source_mean_delta_z": 0.8197250586653748,
+      "target": "banglaclick:youtube",
+      "target_mean_delta_z": 0.8829350009117781,
+      "target_minus_source_delta_z": 0.0632099422464033,
+      "valid_replicates": 5000
+    }
+  ],
+  "schema_version": 2
+}

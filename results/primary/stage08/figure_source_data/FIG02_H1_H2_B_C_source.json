@@ -1,0 +1,39 @@
+{
+  "covers_figure_ids": [
+    "FIG02_H1_H2"
+  ],
+  "deterministic_transformation": "One-to-one merge by domain/model/seed of canonical H1 point estimates, endpoint-specific estimability flags, and canonical locked-bootstrap intervals/statuses.",
+  "estimability_field": "nll_relative_change_estimable / balanced_brier_relative_change_estimable",
+  "exact_variables_used": [
+    "auroc_drop",
+    "auroc_estimable",
+    "balanced_brier_bootstrap_ci95",
+    "balanced_brier_relative_change",
+    "balanced_brier_relative_change_estimable",
+    "calibration_moved_further_from_ideal",
+    "descriptive_h1_condition",
+    "domain",
+    "inferential_status",
+    "model",
+    "nll_bootstrap_ci95",
+    "nll_relative_change",
+    "nll_relative_change_estimable",
+    "seed",
+    "setting_supported",
+    "target_auroc",
+    "auroc_drop_ci95",
+    "nll_relative_change_ci95",
+    "balanced_brier_relative_change_ci95",
+    "h2_inferential_status",
+    "h2_target_minus_source_gain_ci95"
+  ],
+  "figure_id": "FIG02_H1_H2",
+  "panel_id": "B_C",
+  "rows": 100,
+  "source_artifact": [
+    "Stage05/H1_RESULTS.json",
+    "Stage05/STATISTICAL_SUMMARY.json"
+  ],
+  "source_csv": "FIG02_H1_H2_B_C_source.csv",
+  "source_csv_sha256": "b88aa86e84e9b49810f07a091955736dc8291174c758c63e607c16454027327f"
+}

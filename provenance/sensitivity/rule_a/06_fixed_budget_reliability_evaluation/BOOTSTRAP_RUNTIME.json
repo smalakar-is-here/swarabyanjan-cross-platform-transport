@@ -1,0 +1,709 @@
+{
+  "bootstrap_replicates_per_setting": 5000,
+  "bootstrap_seed": 20260906,
+  "schema_version": 1,
+  "setting_runtime": [
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "baitbuster:youtube_human",
+      "elapsed_seconds": 2.6916204960002688,
+      "model": "ebm",
+      "seed": 42
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "baitbuster:youtube_human",
+      "elapsed_seconds": 2.729777265999928,
+      "model": "ebm",
+      "seed": 137
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "baitbuster:youtube_human",
+      "elapsed_seconds": 2.5063873419999254,
+      "model": "ebm",
+      "seed": 2718
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "baitbuster:youtube_human",
+      "elapsed_seconds": 2.7400126649999947,
+      "model": "ebm",
+      "seed": 31415
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "baitbuster:youtube_human",
+      "elapsed_seconds": 2.4641187510001146,
+      "model": "ebm",
+      "seed": 65537
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "baitbuster:youtube_human",
+      "elapsed_seconds": 2.718000311999731,
+      "model": "tfidf_lr",
+      "seed": 42
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "baitbuster:youtube_human",
+      "elapsed_seconds": 2.6749980589997904,
+      "model": "tfidf_lr",
+      "seed": 137
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "baitbuster:youtube_human",
+      "elapsed_seconds": 2.6284498630002417,
+      "model": "tfidf_lr",
+      "seed": 2718
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "baitbuster:youtube_human",
+      "elapsed_seconds": 2.4437313589996847,
+      "model": "tfidf_lr",
+      "seed": 31415
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "baitbuster:youtube_human",
+      "elapsed_seconds": 2.6421678339997925,
+      "model": "tfidf_lr",
+      "seed": 65537
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "baitbuster:youtube_human",
+      "elapsed_seconds": 2.5371811820000403,
+      "model": "banglabert",
+      "seed": 42
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "baitbuster:youtube_human",
+      "elapsed_seconds": 2.6396084459997837,
+      "model": "banglabert",
+      "seed": 137
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "baitbuster:youtube_human",
+      "elapsed_seconds": 2.575047593999898,
+      "model": "banglabert",
+      "seed": 2718
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "baitbuster:youtube_human",
+      "elapsed_seconds": 2.6649940730003436,
+      "model": "banglabert",
+      "seed": 31415
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "baitbuster:youtube_human",
+      "elapsed_seconds": 2.7798123939996913,
+      "model": "banglabert",
+      "seed": 65537
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "baitbuster:youtube_human",
+      "elapsed_seconds": 2.820486068000264,
+      "model": "xlmr",
+      "seed": 42
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "baitbuster:youtube_human",
+      "elapsed_seconds": 2.821735396999884,
+      "model": "xlmr",
+      "seed": 137
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "baitbuster:youtube_human",
+      "elapsed_seconds": 2.5275805440001022,
+      "model": "xlmr",
+      "seed": 2718
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "baitbuster:youtube_human",
+      "elapsed_seconds": 2.8900947610000003,
+      "model": "xlmr",
+      "seed": 31415
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "baitbuster:youtube_human",
+      "elapsed_seconds": 2.5925804499997867,
+      "model": "xlmr",
+      "seed": 65537
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:news",
+      "elapsed_seconds": 1.2807619019999947,
+      "model": "ebm",
+      "seed": 42
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:news",
+      "elapsed_seconds": 1.325743287000023,
+      "model": "ebm",
+      "seed": 137
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:news",
+      "elapsed_seconds": 1.2958328549998441,
+      "model": "ebm",
+      "seed": 2718
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:news",
+      "elapsed_seconds": 1.2495262259999436,
+      "model": "ebm",
+      "seed": 31415
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:news",
+      "elapsed_seconds": 1.3982338659998277,
+      "model": "ebm",
+      "seed": 65537
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:news",
+      "elapsed_seconds": 1.3310807160000877,
+      "model": "tfidf_lr",
+      "seed": 42
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:news",
+      "elapsed_seconds": 1.2093077639997318,
+      "model": "tfidf_lr",
+      "seed": 137
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:news",
+      "elapsed_seconds": 1.221804714999962,
+      "model": "tfidf_lr",
+      "seed": 2718
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:news",
+      "elapsed_seconds": 1.262867376000031,
+      "model": "tfidf_lr",
+      "seed": 31415
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:news",
+      "elapsed_seconds": 1.2896520310000597,
+      "model": "tfidf_lr",
+      "seed": 65537
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:news",
+      "elapsed_seconds": 1.3657836299998962,
+      "model": "banglabert",
+      "seed": 42
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:news",
+      "elapsed_seconds": 1.3142086650000238,
+      "model": "banglabert",
+      "seed": 137
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:news",
+      "elapsed_seconds": 1.2661959339998248,
+      "model": "banglabert",
+      "seed": 2718
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:news",
+      "elapsed_seconds": 1.248548676000155,
+      "model": "banglabert",
+      "seed": 31415
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:news",
+      "elapsed_seconds": 1.2220716229999198,
+      "model": "banglabert",
+      "seed": 65537
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:news",
+      "elapsed_seconds": 1.2044697469996208,
+      "model": "xlmr",
+      "seed": 42
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:news",
+      "elapsed_seconds": 1.2651852660001168,
+      "model": "xlmr",
+      "seed": 137
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:news",
+      "elapsed_seconds": 1.238037298999643,
+      "model": "xlmr",
+      "seed": 2718
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:news",
+      "elapsed_seconds": 1.243942473000061,
+      "model": "xlmr",
+      "seed": 31415
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:news",
+      "elapsed_seconds": 1.3134133100002146,
+      "model": "xlmr",
+      "seed": 65537
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:facebook",
+      "elapsed_seconds": 1.611307551000209,
+      "model": "ebm",
+      "seed": 42
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:facebook",
+      "elapsed_seconds": 1.4252280319997226,
+      "model": "ebm",
+      "seed": 137
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:facebook",
+      "elapsed_seconds": 1.513058344000001,
+      "model": "ebm",
+      "seed": 2718
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:facebook",
+      "elapsed_seconds": 1.5024447609998788,
+      "model": "ebm",
+      "seed": 31415
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:facebook",
+      "elapsed_seconds": 1.503530845000114,
+      "model": "ebm",
+      "seed": 65537
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:facebook",
+      "elapsed_seconds": 1.5737362859999848,
+      "model": "tfidf_lr",
+      "seed": 42
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:facebook",
+      "elapsed_seconds": 1.7137018200000966,
+      "model": "tfidf_lr",
+      "seed": 137
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:facebook",
+      "elapsed_seconds": 1.515557727000214,
+      "model": "tfidf_lr",
+      "seed": 2718
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:facebook",
+      "elapsed_seconds": 1.5138761420002993,
+      "model": "tfidf_lr",
+      "seed": 31415
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:facebook",
+      "elapsed_seconds": 1.5212313160000122,
+      "model": "tfidf_lr",
+      "seed": 65537
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:facebook",
+      "elapsed_seconds": 1.4790236520002509,
+      "model": "banglabert",
+      "seed": 42
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:facebook",
+      "elapsed_seconds": 1.3496724159999758,
+      "model": "banglabert",
+      "seed": 137
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:facebook",
+      "elapsed_seconds": 1.3364924980000978,
+      "model": "banglabert",
+      "seed": 2718
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:facebook",
+      "elapsed_seconds": 1.4287047689999781,
+      "model": "banglabert",
+      "seed": 31415
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:facebook",
+      "elapsed_seconds": 1.3940657339999234,
+      "model": "banglabert",
+      "seed": 65537
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:facebook",
+      "elapsed_seconds": 1.377666814999884,
+      "model": "xlmr",
+      "seed": 42
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:facebook",
+      "elapsed_seconds": 1.3902665109999361,
+      "model": "xlmr",
+      "seed": 137
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:facebook",
+      "elapsed_seconds": 1.468312597000022,
+      "model": "xlmr",
+      "seed": 2718
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:facebook",
+      "elapsed_seconds": 1.4932352770001671,
+      "model": "xlmr",
+      "seed": 31415
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:facebook",
+      "elapsed_seconds": 1.4438290889997916,
+      "model": "xlmr",
+      "seed": 65537
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:youtube",
+      "elapsed_seconds": 1.3027707629998986,
+      "model": "ebm",
+      "seed": 42
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:youtube",
+      "elapsed_seconds": 1.2820371129996602,
+      "model": "ebm",
+      "seed": 137
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:youtube",
+      "elapsed_seconds": 1.2632693890000155,
+      "model": "ebm",
+      "seed": 2718
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:youtube",
+      "elapsed_seconds": 1.343970863999857,
+      "model": "ebm",
+      "seed": 31415
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:youtube",
+      "elapsed_seconds": 1.340604735999932,
+      "model": "ebm",
+      "seed": 65537
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:youtube",
+      "elapsed_seconds": 1.2373125929998423,
+      "model": "tfidf_lr",
+      "seed": 42
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:youtube",
+      "elapsed_seconds": 1.3454661340001621,
+      "model": "tfidf_lr",
+      "seed": 137
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:youtube",
+      "elapsed_seconds": 1.3030838310000945,
+      "model": "tfidf_lr",
+      "seed": 2718
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:youtube",
+      "elapsed_seconds": 1.251747546000388,
+      "model": "tfidf_lr",
+      "seed": 31415
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:youtube",
+      "elapsed_seconds": 1.334605055999873,
+      "model": "tfidf_lr",
+      "seed": 65537
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:youtube",
+      "elapsed_seconds": 1.3677804630001447,
+      "model": "banglabert",
+      "seed": 42
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:youtube",
+      "elapsed_seconds": 1.4055411360000107,
+      "model": "banglabert",
+      "seed": 137
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:youtube",
+      "elapsed_seconds": 1.3120091159998992,
+      "model": "banglabert",
+      "seed": 2718
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:youtube",
+      "elapsed_seconds": 1.298910292999608,
+      "model": "banglabert",
+      "seed": 31415
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:youtube",
+      "elapsed_seconds": 1.3898614959998667,
+      "model": "banglabert",
+      "seed": 65537
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:youtube",
+      "elapsed_seconds": 1.4632876009995925,
+      "model": "xlmr",
+      "seed": 42
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:youtube",
+      "elapsed_seconds": 1.3965155370001412,
+      "model": "xlmr",
+      "seed": 137
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:youtube",
+      "elapsed_seconds": 1.3595108380000056,
+      "model": "xlmr",
+      "seed": 2718
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:youtube",
+      "elapsed_seconds": 1.3644576500000767,
+      "model": "xlmr",
+      "seed": 31415
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:youtube",
+      "elapsed_seconds": 1.3733838640000613,
+      "model": "xlmr",
+      "seed": 65537
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:twitter",
+      "elapsed_seconds": 1.213894818999961,
+      "model": "ebm",
+      "seed": 42
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:twitter",
+      "elapsed_seconds": 1.1778104400000302,
+      "model": "ebm",
+      "seed": 137
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:twitter",
+      "elapsed_seconds": 1.2019789269998,
+      "model": "ebm",
+      "seed": 2718
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:twitter",
+      "elapsed_seconds": 1.1977527740000369,
+      "model": "ebm",
+      "seed": 31415
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:twitter",
+      "elapsed_seconds": 1.17806185299969,
+      "model": "ebm",
+      "seed": 65537
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:twitter",
+      "elapsed_seconds": 1.214129301000412,
+      "model": "tfidf_lr",
+      "seed": 42
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:twitter",
+      "elapsed_seconds": 1.1725628599997435,
+      "model": "tfidf_lr",
+      "seed": 137
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:twitter",
+      "elapsed_seconds": 1.160270669000056,
+      "model": "tfidf_lr",
+      "seed": 2718
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:twitter",
+      "elapsed_seconds": 1.180606214999898,
+      "model": "tfidf_lr",
+      "seed": 31415
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:twitter",
+      "elapsed_seconds": 1.2421738529997128,
+      "model": "tfidf_lr",
+      "seed": 65537
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:twitter",
+      "elapsed_seconds": 1.2013953769996988,
+      "model": "banglabert",
+      "seed": 42
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:twitter",
+      "elapsed_seconds": 1.2211770899998555,
+      "model": "banglabert",
+      "seed": 137
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:twitter",
+      "elapsed_seconds": 1.3374993649999851,
+      "model": "banglabert",
+      "seed": 2718
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:twitter",
+      "elapsed_seconds": 1.2732211340003232,
+      "model": "banglabert",
+      "seed": 31415
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:twitter",
+      "elapsed_seconds": 1.2724615189999895,
+      "model": "banglabert",
+      "seed": 65537
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:twitter",
+      "elapsed_seconds": 1.2979132039999968,
+      "model": "xlmr",
+      "seed": 42
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:twitter",
+      "elapsed_seconds": 1.246808382999916,
+      "model": "xlmr",
+      "seed": 137
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:twitter",
+      "elapsed_seconds": 1.1707496490002995,
+      "model": "xlmr",
+      "seed": 2718
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:twitter",
+      "elapsed_seconds": 1.1524616480000986,
+      "model": "xlmr",
+      "seed": 31415
+    },
+    {
+      "bootstrap_replicates": 5000,
+      "domain": "banglaclick:twitter",
+      "elapsed_seconds": 1.2366106909998962,
+      "model": "xlmr",
+      "seed": 65537
+    }
+  ],
+  "settings": 100,
+  "total_elapsed_seconds": 159.3161774340001
+}

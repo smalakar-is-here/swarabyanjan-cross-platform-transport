@@ -1,0 +1,95 @@
+{
+  "input_integrity": {
+    "Rule A": {
+      "total_frozen_banglaclick_rows": 99220,
+      "total_branch_banglaclick_rows": 78340,
+      "frozen_item_rows_unique": 4961,
+      "branch_item_rows_unique": 3917,
+      "overlap_key_rows": 78340,
+      "changed_values_in_overlapping_rows": [],
+      "changed_value_count": 0,
+      "non_news_row_count_frozen": 69220,
+      "non_news_row_count_branch": 69220,
+      "non_news_index_equal": true,
+      "non_news_columns_equal": true,
+      "news_retained_items": 456,
+      "news_retained_prevalence": 0.6469298245614035,
+      "source_cache_exact": true,
+      "baitbuster_cache_exact": true
+    },
+    "Rule B": {
+      "total_frozen_banglaclick_rows": 99220,
+      "total_branch_banglaclick_rows": 77740,
+      "frozen_item_rows_unique": 4961,
+      "branch_item_rows_unique": 3887,
+      "overlap_key_rows": 77740,
+      "changed_values_in_overlapping_rows": [],
+      "changed_value_count": 0,
+      "non_news_row_count_frozen": 69220,
+      "non_news_row_count_branch": 69220,
+      "non_news_index_equal": true,
+      "non_news_columns_equal": true,
+      "news_retained_items": 426,
+      "news_retained_prevalence": 0.6338028169014085,
+      "source_cache_exact": true,
+      "baitbuster_cache_exact": true
+    }
+  },
+  "stage_status": {
+    "Rule A": {
+      "stage05": "PASS",
+      "stage06": "PASS",
+      "stage07": "PASS"
+    },
+    "Rule B": {
+      "stage05": "PASS",
+      "stage06": "PASS",
+      "stage07": "PASS"
+    }
+  },
+  "global_h3": {
+    "Rule A": {
+      "comparison": "Frozen v3.1 vs Rule A",
+      "status_frozen": "NON_ESTIMABLE",
+      "status_branch": "NON_ESTIMABLE",
+      "joint_valid_replicates_frozen": 2682,
+      "joint_valid_replicates_branch": 1908,
+      "joint_valid_abs_change": -774,
+      "joint_invalid_replicates_frozen": 2318,
+      "joint_invalid_replicates_branch": 3092,
+      "joint_invalid_abs_change": 774,
+      "covariance_rank_frozen": null,
+      "covariance_rank_branch": null,
+      "df_frozen": null,
+      "df_branch": null,
+      "p_frozen": null,
+      "p_branch": null
+    },
+    "Rule B": {
+      "comparison": "Frozen v3.1 vs Rule B",
+      "status_frozen": "NON_ESTIMABLE",
+      "status_branch": "NON_ESTIMABLE",
+      "joint_valid_replicates_frozen": 2682,
+      "joint_valid_replicates_branch": 1378,
+      "joint_valid_abs_change": -1304,
+      "joint_invalid_replicates_frozen": 2318,
+      "joint_invalid_replicates_branch": 3622,
+      "joint_invalid_abs_change": 1304,
+      "covariance_rank_frozen": null,
+      "covariance_rank_branch": null,
+      "df_frozen": null,
+      "df_branch": null,
+      "p_frozen": null,
+      "p_branch": null
+    }
+  },
+  "bridge_runtime_seconds": {
+    "Rule A": 25.46741707000001,
+    "Rule B": 20.666674363999846
+  },
+  "frozen_stage_status": {
+    "S5": "PASS",
+    "S6": "PASS",
+    "S7": "PASS"
+  }
+}

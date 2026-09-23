@@ -1,0 +1,4 @@
+source_split,raw_exact_shared_hash_classes,raw_exact_affected_news_rows,normalized_shared_hash_classes,normalized_affected_news_rows,normalization_only_hash_classes,same_label_shared_hash_classes,conflicting_label_shared_hash_classes,affected_target_id_set_size,previous_reported_normalized_classes,previous_reported_news_rows
+TRAIN,1025,1041,1028,1044,3,496,532,1044,1028,1044
+DEV,7,7,7,7,0,1,6,7,7,7
+TEST,23,23,23,23,0,5,18,23,23,23

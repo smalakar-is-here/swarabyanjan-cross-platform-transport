@@ -1,0 +1,39 @@
+{
+  "covers_figure_ids": [
+    "SUPP_H1_H2_MODEL_SEED"
+  ],
+  "deterministic_transformation": "Exact canonical H1 model×seed rows used by the per-model/per-seed NLL transport figure; no pooling.",
+  "estimability_field": "nll_relative_change_estimable",
+  "exact_variables_used": [
+    "auroc_drop",
+    "auroc_estimable",
+    "balanced_brier_bootstrap_ci95",
+    "balanced_brier_relative_change",
+    "balanced_brier_relative_change_estimable",
+    "calibration_moved_further_from_ideal",
+    "descriptive_h1_condition",
+    "domain",
+    "inferential_status",
+    "model",
+    "nll_bootstrap_ci95",
+    "nll_relative_change",
+    "nll_relative_change_estimable",
+    "seed",
+    "setting_supported",
+    "target_auroc",
+    "auroc_drop_ci95",
+    "nll_relative_change_ci95",
+    "balanced_brier_relative_change_ci95",
+    "h2_inferential_status",
+    "h2_target_minus_source_gain_ci95"
+  ],
+  "figure_id": "SUPP_H1_H2_MODEL_SEED",
+  "panel_id": "all",
+  "rows": 100,
+  "source_artifact": [
+    "Stage05/H1_RESULTS.json",
+    "Stage05/STATISTICAL_SUMMARY.json"
+  ],
+  "source_csv": "SUPP_H1_H2_MODEL_SEED_all_source.csv",
+  "source_csv_sha256": "b88aa86e84e9b49810f07a091955736dc8291174c758c63e607c16454027327f"
+}

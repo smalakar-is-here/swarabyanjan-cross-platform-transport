@@ -1,0 +1,16 @@
+2026-09-05T19:16:29.685109+00:00 | Accepted frozen input representation: extracted-root mode — /kaggle/input/datasets/smalakarishere/swarabyanjan-frozen-dataset-v1/EXTERNAL-DATASET-BYTES-v1/EXTERNAL-DATASET-BYTES-v1
+2026-09-05T19:16:29.685221+00:00 | Stage-01 Notebook SHA retained as historical provenance identifier only; no physical Notebook-01 runtime input is required.
+2026-09-05T19:16:29.685258+00:00 | Mandatory Kaggle preflight: PASS
+2026-09-05T19:16:30.061900+00:00 | Inspecting artifact: banglabait_train
+2026-09-05T19:16:46.367239+00:00 | Inspecting artifact: banglabait_dev
+2026-09-05T19:16:48.471946+00:00 | Inspecting artifact: banglabait_test
+2026-09-05T19:16:53.083939+00:00 | Inspecting artifact: banglabait_unlabelled
+2026-09-05T19:17:36.703806+00:00 | Inspecting artifact: banglaclick
+2026-09-05T19:17:38.945141+00:00 | Inspecting artifact: banmani
+2026-09-05T19:17:39.667178+00:00 | Inspecting artifact: banfakenews_main
+2026-09-05T19:18:25.421065+00:00 | Inspecting artifact: banfakenews_independent_test
+2026-09-05T19:18:26.450952+00:00 | Inspecting artifact: baitbuster_parquet
+2026-09-05T19:22:15.972313+00:00 | Inspecting artifact: baitbuster_xlsx_reference
+2026-09-05T20:09:32.491836+00:00 | Field-attributed schema, label, duplicate, and overlap inspection completed.
+2026-09-05T20:09:32.816386+00:00 | Core Stage 02 result artifacts written.
+2026-09-05T20:11:03.178563+00:00 | End-of-run read-only input verification: PASS

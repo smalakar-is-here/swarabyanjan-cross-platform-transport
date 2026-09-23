@@ -1,0 +1,2 @@
+comparison,status_frozen,status_branch,joint_valid_replicates_frozen,joint_valid_replicates_branch,joint_valid_abs_change,joint_invalid_replicates_frozen,joint_invalid_replicates_branch,joint_invalid_abs_change,covariance_rank_frozen,covariance_rank_branch,df_frozen,df_branch,p_frozen,p_branch
+Frozen v3.1 vs Rule B,NON_ESTIMABLE,NON_ESTIMABLE,2682,1378,-1304,2318,3622,1304,,,,,,

@@ -1,0 +1,65 @@
+{
+  "artifacts": {
+    "BOOTSTRAP_RUNTIME.json": "73010c40ab6f7543abf578a1ed40216cb81ae09b05c4266547a40d736508fd6b",
+    "ENVIRONMENT_PREFLIGHT.json": "4e05f1657ebca24afcf5b2da0d6449394767ec76451153dc56c7103318913188",
+    "FINAL_STATISTICAL_SUMMARY.json": "2953cf42362a1d2b2c7916eae02bd8f7a06e84af7101ad8cd539d1944e35d5b4",
+    "FIXED_BUDGET_TABLES.csv": "b01e7ab1cc5ab8763a0d68cee0dc63f97e3606c6eae4acd40a2a6683fed095a6",
+    "H4_RESULTS.json": "e5dfb218293f59c8b7395dc91c76ef69d2a747a2927b41111eb92e19b2ac597f",
+    "RISK_COVERAGE_DATA.csv": "9f938ced95c3cffd16226e6cffc4f318b7f773f681e0abfce4edf5c38dc2faec",
+    "UPSTREAM_PROVENANCE_GATE.json": "62353a8c8bbfc939044cbdabd48cf3d63f91e60b2e2eca9faf098afb4ebd1c81"
+  },
+  "manifest_payload_sha256": "efa81ea37665ae78dad318191a8e27ea248da873c4ef6f4d158aa1e91d1c4af0",
+  "protocol_version": "SWARABYANJAN-CROSSPLATFORM-v1.0.0",
+  "run_metadata_sha256": "0086424e14172418538160178f79cb6ec44868101c6e2aa95672730a1cce2fac",
+  "schema_version": 2,
+  "scientific_contract": {
+    "bootstrap_reps": 5000,
+    "bootstrap_seed": 20260906,
+    "budgets": [
+      0.05,
+      0.1,
+      0.2
+    ],
+    "conditional_valid_only_bootstrap_inference": false,
+    "models": [
+      "ebm",
+      "tfidf_lr",
+      "banglabert",
+      "xlmr"
+    ],
+    "positive_risk_and_uncertainty_review_separate": true,
+    "primary_budget": 0.1,
+    "rejection_resampling": false,
+    "seeds": [
+      42,
+      137,
+      2718,
+      31415,
+      65537
+    ]
+  },
+  "stage06_summary_sha256": "72e39552cf17beaabb8cd0eba9c374c8bbd7e09a632ecd12e88134931b67844d",
+  "stage_id": "06",
+  "upstream": {
+    "base_canonical_stage05_manifest_sha256": "7246bc3a49a5f8d8472005cea9f6062d118431cd67d5dd2c4fd8f2ee31f52c27",
+    "branch_rule": "RULE_A",
+    "branch_stage05_root": "/mnt/data/swarabyanjan_branch_exec/RULE_A/03_results/05_external_validation_and_H3_vFINAL",
+    "h3_statistics_consumed": false,
+    "mode": "BRANCH_STAGE05_OUTPUT",
+    "prediction_sha256": {
+      "BAITBUSTER_HUMAN_PREDICTIONS.parquet": "a3e95820c62de00984a189e2c250f7fffd223ad4b3954db04a5368c7a544b7b9",
+      "BANGLACLICK_PLATFORM_PREDICTIONS.parquet": "1a2496cc810e35a0082c1781af766a8a253b3d63340cb67fd709d1025d55cc54",
+      "LOCKED_SOURCE_TEST_PREDICTIONS.parquet": "df863d7a24f7d451451822890de58613c3295eb0bcc1aa882150137b0aa9880a"
+    },
+    "stage05_checksum_sha256": "537fdd2a86fd1c7a51a50b538a450de4d362eece145e78663b87a4c3609baf86",
+    "stage05_identity": {
+      "base_canonical_manifest_sha256": "7246bc3a49a5f8d8472005cea9f6062d118431cd67d5dd2c4fd8f2ee31f52c27",
+      "canonical_stage05": false,
+      "canonical_version": "SWARABYANJAN-STAGE05-CANONICAL-vFINAL-1.0.1",
+      "protocol_version": "SWARABYANJAN-CROSSPLATFORM-v1.0.0",
+      "stage_id": "05"
+    },
+    "stage05_manifest_sha256": "cab6758b6a3e892084a554b33f8baeab3b28c1c1f1fa3d164219a8423c502e44",
+    "stage05_status_sha256": "ecbd318af92fa31bdf8265151a8287bbce1e59832725cc29548a00c7404a8929"
+  }
+}

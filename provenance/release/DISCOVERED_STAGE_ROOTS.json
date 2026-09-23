@@ -1,0 +1,56 @@
+{
+  "01": {
+    "equivalent_candidates": [
+      "/kaggle/input/notebooks/smalakarishere/01-dataset-acquisition-and-freeze/EXTERNAL-DATASET-BYTES-v1"
+    ],
+    "selected": "/kaggle/input/notebooks/smalakarishere/01-dataset-acquisition-and-freeze/EXTERNAL-DATASET-BYTES-v1"
+  },
+  "02": {
+    "equivalent_candidates": [
+      "/kaggle/input/notebooks/smalakarishere/02-p0-integrity-provenance-leakage-audit/03_results/02_p0_integrity_provenance_leakage_audit/P0-20260905T191629Z-UNSPECIFIED-3630605b75-fcf658785c"
+    ],
+    "selected": "/kaggle/input/notebooks/smalakarishere/02-p0-integrity-provenance-leakage-audit/03_results/02_p0_integrity_provenance_leakage_audit/P0-20260905T191629Z-UNSPECIFIED-3630605b75-fcf658785c"
+  },
+  "03": {
+    "equivalent_candidates": [
+      "/kaggle/input/notebooks/smalakarishere/03-primary-model-development/03_results/03_primary_model_development"
+    ],
+    "selected": "/kaggle/input/notebooks/smalakarishere/03-primary-model-development/03_results/03_primary_model_development"
+  },
+  "04": {
+    "equivalent_candidates": [
+      "/kaggle/input/notebooks/smalakarishere/04-calibration/03_results/04_calibration"
+    ],
+    "selected": "/kaggle/input/notebooks/smalakarishere/04-calibration/03_results/04_calibration"
+  },
+  "05": {
+    "equivalent_candidates": [
+      "/kaggle/input/notebooks/smalakarishere/05-external-validation-and-h3-vfinal/03_results/05_external_validation_and_H3_vFINAL"
+    ],
+    "selected": "/kaggle/input/notebooks/smalakarishere/05-external-validation-and-h3-vfinal/03_results/05_external_validation_and_H3_vFINAL"
+  },
+  "06": {
+    "equivalent_candidates": [
+      "/kaggle/input/notebooks/smalakarishere/06-fixed-budget-reliability-evaluation-vfinal/03_results/06_fixed_budget_reliability_evaluation"
+    ],
+    "selected": "/kaggle/input/notebooks/smalakarishere/06-fixed-budget-reliability-evaluation-vfinal/03_results/06_fixed_budget_reliability_evaluation"
+  },
+  "07": {
+    "equivalent_candidates": [
+      "/kaggle/input/notebooks/smalakarishere/07-h3-h4-bridge-exploratory-vfinal/03_results/07_H3_H4_BRIDGE_EXPLORATORY_vFINAL"
+    ],
+    "selected": "/kaggle/input/notebooks/smalakarishere/07-h3-h4-bridge-exploratory-vfinal/03_results/07_H3_H4_BRIDGE_EXPLORATORY_vFINAL"
+  },
+  "08": {
+    "equivalent_candidates": [
+      "/kaggle/input/notebooks/smalakarishere/08-manuscript-figures-and-tables-vfinal/08_manuscript_outputs"
+    ],
+    "selected": "/kaggle/input/notebooks/smalakarishere/08-manuscript-figures-and-tables-vfinal/08_manuscript_outputs"
+  },
+  "09": {
+    "equivalent_candidates": [
+      "/kaggle/input/notebooks/smalakarishere/09-source-publisher-cluster-sensitivity-vfinal/09_results/09_SOURCE_PUBLISHER_CLUSTER_SENSITIVITY_vFINAL"
+    ],
+    "selected": "/kaggle/input/notebooks/smalakarishere/09-source-publisher-cluster-sensitivity-vfinal/09_results/09_SOURCE_PUBLISHER_CLUSTER_SENSITIVITY_vFINAL"
+  }
+}

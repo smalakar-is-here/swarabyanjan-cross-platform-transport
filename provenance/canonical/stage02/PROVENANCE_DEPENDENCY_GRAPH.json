@@ -1,0 +1,358 @@
+{
+  "edges": [
+    {
+      "from": "stage01_freeze",
+      "relationship": "contains_verified_snapshot",
+      "to": "dataset:BanglaBait"
+    },
+    {
+      "from": "dataset:BanglaBait",
+      "relationship": "read_only_audit_input",
+      "to": "stage02_p0"
+    },
+    {
+      "from": "stage01_freeze",
+      "relationship": "contains_verified_snapshot",
+      "to": "dataset:BanglaClick"
+    },
+    {
+      "from": "dataset:BanglaClick",
+      "relationship": "read_only_audit_input",
+      "to": "stage02_p0"
+    },
+    {
+      "from": "stage01_freeze",
+      "relationship": "contains_verified_snapshot",
+      "to": "dataset:BanMANI"
+    },
+    {
+      "from": "dataset:BanMANI",
+      "relationship": "read_only_audit_input",
+      "to": "stage02_p0"
+    },
+    {
+      "from": "stage01_freeze",
+      "relationship": "contains_verified_snapshot",
+      "to": "dataset:BanFakeNews-2.0"
+    },
+    {
+      "from": "dataset:BanFakeNews-2.0",
+      "relationship": "read_only_audit_input",
+      "to": "stage02_p0"
+    },
+    {
+      "from": "stage01_freeze",
+      "relationship": "contains_verified_snapshot",
+      "to": "dataset:BaitBuster-Bangla"
+    },
+    {
+      "from": "dataset:BaitBuster-Bangla",
+      "relationship": "read_only_audit_input",
+      "to": "stage02_p0"
+    },
+    {
+      "from": "dataset:BanglaBait",
+      "relationship": "contains_artifact",
+      "to": "artifact:banglabait_train"
+    },
+    {
+      "from": "dataset:BanglaBait",
+      "relationship": "contains_artifact",
+      "to": "artifact:banglabait_dev"
+    },
+    {
+      "from": "dataset:BanglaBait",
+      "relationship": "contains_artifact",
+      "to": "artifact:banglabait_test"
+    },
+    {
+      "from": "dataset:BanglaBait",
+      "relationship": "contains_artifact",
+      "to": "artifact:banglabait_unlabelled"
+    },
+    {
+      "from": "dataset:BanglaClick",
+      "relationship": "contains_artifact",
+      "to": "artifact:banglaclick"
+    },
+    {
+      "from": "dataset:BanMANI",
+      "relationship": "contains_artifact",
+      "to": "artifact:banmani"
+    },
+    {
+      "from": "dataset:BanFakeNews-2.0",
+      "relationship": "contains_artifact",
+      "to": "artifact:banfakenews_main"
+    },
+    {
+      "from": "dataset:BanFakeNews-2.0",
+      "relationship": "contains_artifact",
+      "to": "artifact:banfakenews_independent_test"
+    },
+    {
+      "from": "dataset:BaitBuster-Bangla",
+      "relationship": "contains_artifact",
+      "to": "artifact:baitbuster_parquet"
+    },
+    {
+      "from": "dataset:BaitBuster-Bangla",
+      "relationship": "contains_artifact",
+      "to": "artifact:baitbuster_xlsx_reference"
+    }
+  ],
+  "nodes": [
+    {
+      "freeze_id": "EXTERNAL-DATASET-BYTES-v1",
+      "id": "stage01_freeze",
+      "type": "frozen_package",
+      "zip_sha256": "e0de5c224f406fe22d8ad30804217465f789c49c70e1d3afbe00afd28deb7ccf"
+    },
+    {
+      "canonical_notebook": "02_p0_integrity_provenance_leakage_audit.ipynb",
+      "id": "stage02_p0",
+      "methodology_sha256": "fcf658785c8a91ffa31a08b7861dbed07aac26f06b52d133ce257f3610d3ce6b",
+      "stage_id": "02",
+      "type": "scientific_stage"
+    },
+    {
+      "id": "dataset:BanglaBait",
+      "source_lock": {
+        "expected_tree": {
+          ".gitattributes": {
+            "git_blob_sha1": "f0632c67bb7aa0706fca4150b4d813b0e3f983e5",
+            "size": 2608
+          },
+          "README.md": {
+            "git_blob_sha1": "9ba86c6c3de662c669383b0e0a3432678feb1fa5",
+            "size": 111
+          },
+          "dev.csv": {
+            "git_blob_sha1": "835fcc6576a33bcc66c400091383998ffd059680",
+            "size": 7969172
+          },
+          "test.csv": {
+            "sha256": "68176be61ba8dd01f9f78b6aea2b84c198236c89de5abc98db8c49c496ebd996",
+            "size": 19813408
+          },
+          "train.csv": {
+            "sha256": "97f4be47da54821904d57028b53d539dcb3cbf76942cf3ac530a8c313eec06f5",
+            "size": 72704138
+          },
+          "unlabelled_data.csv": {
+            "sha256": "66c6186e3e351c7703cc5d8a7061957e708e8c55ccaea9bf24f55875a7fed583",
+            "size": 329277343
+          }
+        },
+        "kind": "huggingface_snapshot",
+        "license_note": "Repository metadata identifies CC BY-NC 4.0.",
+        "repo_id": "Motahar/banglabait",
+        "repo_type": "dataset",
+        "required_files": [
+          "train.csv",
+          "dev.csv",
+          "test.csv",
+          "unlabelled_data.csv"
+        ],
+        "revision": "ff22fb3b423952959a80dc5d9c6c3345b21cd145",
+        "source_url": "https://huggingface.co/datasets/Motahar/banglabait"
+      },
+      "type": "dataset"
+    },
+    {
+      "id": "dataset:BanglaClick",
+      "source_lock": {
+        "commit": "2ba28763d8f80eaba7a649877eae1fbbcb78a0e7",
+        "kind": "github_commit",
+        "license_note": "Repository README identifies CC BY 4.0 for annotations and MIT for code; third-party text is not redistributed by the repository.",
+        "owner": "MBillahsust",
+        "repo": "BanglaClick",
+        "repo_url": "https://github.com/MBillahsust/BanglaClick.git",
+        "required_files": [
+          "Data/Final_4961_Dataset.xlsx",
+          "README.md",
+          "Data/README.md"
+        ],
+        "sha256_policy": "No independent pre-frozen SHA-256 was defined for these Git objects. The pinned commit and Git blob SHA-1 establish the expected bytes; SHA-256 is independently computed and frozen by this execution.",
+        "source_url": "https://github.com/MBillahsust/BanglaClick"
+      },
+      "type": "dataset"
+    },
+    {
+      "id": "dataset:BanMANI",
+      "source_lock": {
+        "commit": "483be9ac31f550ee252d1df99d090ffdbcccc63f",
+        "kind": "github_commit",
+        "license_note": "The repository LICENSE file is preserved verbatim in the frozen snapshot.",
+        "owner": "kamruzzaman15",
+        "repo": "BanMANI",
+        "repo_url": "https://github.com/kamruzzaman15/BanMANI.git",
+        "required_files": [
+          "BanMANI.csv",
+          "README.md",
+          "LICENSE"
+        ],
+        "sha256_policy": "No independent pre-frozen SHA-256 was defined for these Git objects. The pinned commit and Git blob SHA-1 establish the expected bytes; SHA-256 is independently computed and frozen by this execution.",
+        "source_url": "https://github.com/kamruzzaman15/BanMANI"
+      },
+      "type": "dataset"
+    },
+    {
+      "id": "dataset:BanFakeNews-2.0",
+      "source_lock": {
+        "author_kaggle": {
+          "owner": "hrithikmajumdar",
+          "slug": "bangla-fake-news",
+          "source_url": "https://www.kaggle.com/datasets/hrithikmajumdar/bangla-fake-news"
+        },
+        "authoritative": {
+          "doi": "10.17632/kjh887ct4j.1",
+          "platform": "Mendeley Data",
+          "source_url": "https://data.mendeley.com/datasets/kjh887ct4j/1",
+          "version": 1
+        },
+        "files": {
+          "All60Kdataset.csv": {
+            "sha256": "d9aed69b6019843a769bbcb045affd31c98cfa02f2b0bc821f551c54ba780c0a",
+            "size": 304586219
+          }
+        },
+        "kind": "authoritative_release_with_public_transport",
+        "new_test": {
+          "commit": "8736467eeea8a441a35508777fcf6c8cdd323df7",
+          "filename": "New_Test_Dataset.csv",
+          "raw_url": "https://raw.githubusercontent.com/Shibu4064/IndoNLP/8736467eeea8a441a35508777fcf6c8cdd323df7/New_Test_Dataset.csv",
+          "repo_url": "https://github.com/Shibu4064/IndoNLP.git",
+          "sha256": "ed4949762c1cdc1940bb5a1afe610ca1341a0803079888a35a812608f6351e7b",
+          "size": 6237141,
+          "source_url": "https://github.com/Shibu4064/IndoNLP"
+        },
+        "public_hf_candidate": {
+          "provenance_note": "Public transport candidate rather than authoritative publisher. Its pinned stored-object pointer equals the frozen authoritative target.",
+          "repo_id": "hrshihab/BanFakeNews-2.0",
+          "revision": "cef06ca5e2a90c408a28719d6d71c1e1388c3f7a",
+          "source_url": "https://huggingface.co/datasets/hrshihab/BanFakeNews-2.0"
+        }
+      },
+      "type": "dataset"
+    },
+    {
+      "id": "dataset:BaitBuster-Bangla",
+      "source_lock": {
+        "author_github": {
+          "source_url": "https://github.com/abdalimran/BaitBuster-Bangla"
+        },
+        "author_hf": {
+          "repo_id": "abdalimran/BaitBuster-Bangla",
+          "revision": "be1528ba40dd8828c5c06ee70b7574cca22b8ee1",
+          "source_url": "https://huggingface.co/datasets/abdalimran/BaitBuster-Bangla"
+        },
+        "authoritative": {
+          "doi": "10.17632/3c6ztw5nft.3",
+          "platform": "Mendeley Data",
+          "source_url": "https://data.mendeley.com/datasets/3c6ztw5nft/3",
+          "version": 3
+        },
+        "canonical_research_artifact": {
+          "filename": "BaitBuster-Bangla_253070_18c_HL10k_AIL.parquet",
+          "required_for_pass": true,
+          "serialization": "parquet",
+          "sha256": "7f1bb757c9c5ee1a2922efcd45fb829b89e96d4465995e538158c4225f3c12c9",
+          "size": 175950911,
+          "transport": "author_hf_pinned_commit"
+        },
+        "kind": "authoritative_release_with_canonical_public_serialization",
+        "license_note": "Original publisher/repository license terms remain controlling.",
+        "publisher_listed_unavailable_serialization": {
+          "filename": "BaitBuster-Bangla_253070_18c_HL10k_AIL.csv",
+          "public_recovery_status": "unavailable_in_verified_public_sources",
+          "reconstruction_prohibited": true,
+          "required_for_pass": false,
+          "serialization": "csv",
+          "sha256": "c94e1abd737fa53f983de2e3de2fc322757f5548024e463d8365c0e2a0e4ce63",
+          "size": 936567497
+        },
+        "secondary_reference_artifact": {
+          "filename": "BaitBuster-Bangla_253070_18c_HL10k_AIL.xlsx",
+          "required_for_pass": false,
+          "serialization": "xlsx",
+          "sha256": "a6d207d94ba0e4735a92478ce01c0080f79e9ce2d1557c78c304e5275b3d5286",
+          "size": 91845301,
+          "transport": "author_hf_pinned_commit"
+        }
+      },
+      "type": "dataset"
+    },
+    {
+      "dataset": "BanglaBait",
+      "id": "artifact:banglabait_train",
+      "relative_path": "BanglaBait/repository_snapshot/train.csv",
+      "role": "model_development_pool",
+      "type": "artifact"
+    },
+    {
+      "dataset": "BanglaBait",
+      "id": "artifact:banglabait_dev",
+      "relative_path": "BanglaBait/repository_snapshot/dev.csv",
+      "role": "calibration_only_holdout",
+      "type": "artifact"
+    },
+    {
+      "dataset": "BanglaBait",
+      "id": "artifact:banglabait_test",
+      "relative_path": "BanglaBait/repository_snapshot/test.csv",
+      "role": "locked_source_test",
+      "type": "artifact"
+    },
+    {
+      "dataset": "BanglaBait",
+      "id": "artifact:banglabait_unlabelled",
+      "relative_path": "BanglaBait/repository_snapshot/unlabelled_data.csv",
+      "role": "auxiliary_unlabelled",
+      "type": "artifact"
+    },
+    {
+      "dataset": "BanglaClick",
+      "id": "artifact:banglaclick",
+      "relative_path": "BanglaClick/repository_snapshot/Data/Final_4961_Dataset.xlsx",
+      "role": "external_cross_platform_diagnostic",
+      "type": "artifact"
+    },
+    {
+      "dataset": "BanMANI",
+      "id": "artifact:banmani",
+      "relative_path": "BanMANI/repository_snapshot/BanMANI.csv",
+      "role": "external_manipulation_boundary",
+      "type": "artifact"
+    },
+    {
+      "dataset": "BanFakeNews-2.0",
+      "id": "artifact:banfakenews_main",
+      "relative_path": "BanFakeNews-2.0/Mendeley_V1_byte_equivalent/All60Kdataset.csv",
+      "role": "external_fake_news_boundary",
+      "type": "artifact"
+    },
+    {
+      "dataset": "BanFakeNews-2.0",
+      "id": "artifact:banfakenews_independent_test",
+      "relative_path": "BanFakeNews-2.0/Independent_Test_Authors_GitHub/New_Test_Dataset.csv",
+      "role": "external_fake_news_independent_test_boundary",
+      "type": "artifact"
+    },
+    {
+      "dataset": "BaitBuster-Bangla",
+      "id": "artifact:baitbuster_parquet",
+      "relative_path": "BaitBuster-Bangla/Mendeley_V3_public_author_serializations/BaitBuster-Bangla_253070_18c_HL10k_AIL.parquet",
+      "role": "external_youtube_multimodal_clickbait_diagnostic",
+      "type": "artifact"
+    },
+    {
+      "dataset": "BaitBuster-Bangla",
+      "id": "artifact:baitbuster_xlsx_reference",
+      "relative_path": "BaitBuster-Bangla/Mendeley_V3_public_author_serializations/BaitBuster-Bangla_253070_18c_HL10k_AIL.xlsx",
+      "role": "secondary_provenance_reference",
+      "type": "artifact"
+    }
+  ],
+  "schema_version": 1
+}

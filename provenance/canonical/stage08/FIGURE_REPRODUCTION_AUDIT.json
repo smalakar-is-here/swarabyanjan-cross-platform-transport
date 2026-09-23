@@ -1,0 +1,327 @@
+{
+  "determinism": {
+    "every_generated_figure_has_source_data": true,
+    "figure_source_data_hashes_verified": true,
+    "main_figure_registry_complete": true,
+    "new_bootstrap": false,
+    "new_ci": false,
+    "new_hypothesis_test": false,
+    "new_model_or_calibration_fit": false,
+    "new_p_value": false,
+    "plotting_randomness_used": false,
+    "source_data_sorted_or_filtered_only_by_canonical_keys": true,
+    "supplementary_figure_registry_complete": true
+  },
+  "figures_generated": [
+    {
+      "figure_id": "FIG01_STUDY_DESIGN",
+      "files": {
+        "pdf": "figures/main/FIG01_STUDY_DESIGN.pdf",
+        "png": "figures/main/FIG01_STUDY_DESIGN.png",
+        "svg": "figures/main/FIG01_STUDY_DESIGN.svg"
+      },
+      "main": true,
+      "title": "Source-locked study design and evidence hierarchy"
+    },
+    {
+      "figure_id": "FIG02_H1_H2",
+      "files": {
+        "pdf": "figures/main/FIG02_H1_H2.pdf",
+        "png": "figures/main/FIG02_H1_H2.png",
+        "svg": "figures/main/FIG02_H1_H2.svg"
+      },
+      "main": true,
+      "title": "Cross-platform discrimination and probability reliability"
+    },
+    {
+      "figure_id": "FIG03_H3_CUE_TRANSPORT",
+      "files": {
+        "pdf": "figures/main/FIG03_H3_CUE_TRANSPORT.pdf",
+        "png": "figures/main/FIG03_H3_CUE_TRANSPORT.png",
+        "svg": "figures/main/FIG03_H3_CUE_TRANSPORT.svg"
+      },
+      "main": true,
+      "title": "Prespecified cue transport and estimability"
+    },
+    {
+      "figure_id": "FIG04_H4_FIXED_BUDGET",
+      "files": {
+        "pdf": "figures/main/FIG04_H4_FIXED_BUDGET.pdf",
+        "png": "figures/main/FIG04_H4_FIXED_BUDGET.png",
+        "svg": "figures/main/FIG04_H4_FIXED_BUDGET.svg"
+      },
+      "main": true,
+      "title": "Fixed-budget operational degradation"
+    },
+    {
+      "figure_id": "FIG05_H3_H4_BRIDGE",
+      "files": {
+        "pdf": "figures/main/FIG05_H3_H4_BRIDGE.pdf",
+        "png": "figures/main/FIG05_H3_H4_BRIDGE.png",
+        "svg": "figures/main/FIG05_H3_H4_BRIDGE.svg"
+      },
+      "main": true,
+      "title": "Exploratory H3→H4 bridge"
+    },
+    {
+      "figure_id": "SUPP_H3P_curiosity_information_withholding",
+      "files": {
+        "pdf": "figures/supplementary/SUPP_H3P_curiosity_information_withholding.pdf",
+        "png": "figures/supplementary/SUPP_H3P_curiosity_information_withholding.png",
+        "svg": "figures/supplementary/SUPP_H3P_curiosity_information_withholding.svg"
+      },
+      "main": false,
+      "title": "H3-P curiosity_information_withholding"
+    },
+    {
+      "figure_id": "SUPP_H3P_direct_address_imperative",
+      "files": {
+        "pdf": "figures/supplementary/SUPP_H3P_direct_address_imperative.pdf",
+        "png": "figures/supplementary/SUPP_H3P_direct_address_imperative.png",
+        "svg": "figures/supplementary/SUPP_H3P_direct_address_imperative.svg"
+      },
+      "main": false,
+      "title": "H3-P direct_address_imperative"
+    },
+    {
+      "figure_id": "SUPP_H3P_punctuation_intensity",
+      "files": {
+        "pdf": "figures/supplementary/SUPP_H3P_punctuation_intensity.pdf",
+        "png": "figures/supplementary/SUPP_H3P_punctuation_intensity.png",
+        "svg": "figures/supplementary/SUPP_H3P_punctuation_intensity.svg"
+      },
+      "main": false,
+      "title": "H3-P punctuation_intensity"
+    },
+    {
+      "figure_id": "SUPP_BAITBUSTER_H3",
+      "files": {
+        "pdf": "figures/supplementary/SUPP_BAITBUSTER_H3.pdf",
+        "png": "figures/supplementary/SUPP_BAITBUSTER_H3.png",
+        "svg": "figures/supplementary/SUPP_BAITBUSTER_H3.svg"
+      },
+      "main": false,
+      "title": "BaitBuster independent-collection H3 replication"
+    },
+    {
+      "figure_id": "SUPP_H3_SPARSITY",
+      "files": {
+        "pdf": "figures/supplementary/SUPP_H3_SPARSITY.pdf",
+        "png": "figures/supplementary/SUPP_H3_SPARSITY.png",
+        "svg": "figures/supplementary/SUPP_H3_SPARSITY.svg"
+      },
+      "main": false,
+      "title": "H3 sparsity and observed cue support"
+    },
+    {
+      "figure_id": "SUPP_H4_05PCT",
+      "files": {
+        "pdf": "figures/supplementary/SUPP_H4_05PCT.pdf",
+        "png": "figures/supplementary/SUPP_H4_05PCT.png",
+        "svg": "figures/supplementary/SUPP_H4_05PCT.svg"
+      },
+      "main": false,
+      "title": "H4 5% budget"
+    },
+    {
+      "figure_id": "SUPP_H4_20PCT",
+      "files": {
+        "pdf": "figures/supplementary/SUPP_H4_20PCT.pdf",
+        "png": "figures/supplementary/SUPP_H4_20PCT.png",
+        "svg": "figures/supplementary/SUPP_H4_20PCT.svg"
+      },
+      "main": false,
+      "title": "H4 20% budget"
+    },
+    {
+      "figure_id": "SUPP_RISK_COVERAGE",
+      "files": {
+        "pdf": "figures/supplementary/SUPP_RISK_COVERAGE.pdf",
+        "png": "figures/supplementary/SUPP_RISK_COVERAGE.png",
+        "svg": "figures/supplementary/SUPP_RISK_COVERAGE.svg"
+      },
+      "main": false,
+      "title": "Risk-coverage curves"
+    },
+    {
+      "figure_id": "SUPP_H1_H2_MODEL_SEED",
+      "files": {
+        "pdf": "figures/supplementary/SUPP_H1_H2_MODEL_SEED.pdf",
+        "png": "figures/supplementary/SUPP_H1_H2_MODEL_SEED.png",
+        "svg": "figures/supplementary/SUPP_H1_H2_MODEL_SEED.svg"
+      },
+      "main": false,
+      "title": "Per-model/per-seed H1/H2"
+    },
+    {
+      "figure_id": "SUPP_H4_MODEL_SEED",
+      "files": {
+        "pdf": "figures/supplementary/SUPP_H4_MODEL_SEED.pdf",
+        "png": "figures/supplementary/SUPP_H4_MODEL_SEED.png",
+        "svg": "figures/supplementary/SUPP_H4_MODEL_SEED.svg"
+      },
+      "main": false,
+      "title": "H4 model×seed primary-budget results"
+    },
+    {
+      "figure_id": "SUPP_BRIDGE_LOO",
+      "files": {
+        "pdf": "figures/supplementary/SUPP_BRIDGE_LOO.pdf",
+        "png": "figures/supplementary/SUPP_BRIDGE_LOO.png",
+        "svg": "figures/supplementary/SUPP_BRIDGE_LOO.svg"
+      },
+      "main": false,
+      "title": "H3→H4 LOO robustness"
+    },
+    {
+      "figure_id": "SUPP_SENSITIVITY",
+      "files": {
+        "pdf": "figures/supplementary/SUPP_SENSITIVITY.pdf",
+        "png": "figures/supplementary/SUPP_SENSITIVITY.png",
+        "svg": "figures/supplementary/SUPP_SENSITIVITY.svg"
+      },
+      "main": false,
+      "title": "Prevalence and structural sensitivity"
+    }
+  ],
+  "inputs_used": {
+    "input_hashes_file": "INPUT_HASHES.json",
+    "stage05_root": "/kaggle/input/notebooks/smalakarishere/05-external-validation-and-h3-vfinal/03_results/05_external_validation_and_H3_vFINAL",
+    "stage06_root": "/kaggle/input/notebooks/smalakarishere/06-fixed-budget-reliability-evaluation-vfinal/03_results/06_fixed_budget_reliability_evaluation",
+    "stage07_root": "/kaggle/input/notebooks/smalakarishere/07-h3-h4-bridge-exploratory-vfinal/03_results/07_H3_H4_BRIDGE_EXPLORATORY_vFINAL"
+  },
+  "intentionally_omitted_or_modified_visual_elements": [
+    {
+      "figure_id": "FIG05_H3_H4_BRIDGE",
+      "issue": "Canonical bridge artifacts store the platform-FE slope but no platform-specific intercepts. Therefore no regression line is drawn; only the stored descriptive slope is annotated.",
+      "scientific_effect": "None; avoids fitting a new statistical model in the reproduction layer."
+    }
+  ],
+  "missing_inputs": [],
+  "ne_cell_counts": {
+    "bridge_primary_inferential_status": {
+      "abs_delta_nll_gap__vs__error_capture_deterioration": "NON_ESTIMABLE_UNDER_LOCKED_JOINT_BOOTSTRAP",
+      "abs_delta_nll_gap__vs__lift_deterioration": "NON_ESTIMABLE_UNDER_LOCKED_JOINT_BOOTSTRAP",
+      "abs_delta_rd__vs__error_capture_deterioration": "NON_ESTIMABLE_UNDER_LOCKED_JOINT_BOOTSTRAP",
+      "abs_delta_rd__vs__lift_deterioration": "NON_ESTIMABLE_UNDER_LOCKED_JOINT_BOOTSTRAP"
+    },
+    "h3_banglaclick_ne_cells": 8,
+    "h3_total_cells": 32
+  },
+  "schema_version": 1,
+  "scientific_role": "PURE_DETERMINISTIC_REPRODUCTION",
+  "stage_id": "08",
+  "status": "PASS",
+  "tables_generated": [
+    {
+      "file": "tables/main/TABLE01_STUDY_DESIGN_MAP.csv",
+      "main": true,
+      "rows": 6,
+      "table_id": "TABLE01_STUDY_DESIGN_MAP",
+      "title": "Study design / hypothesis-to-analysis map"
+    },
+    {
+      "file": "tables/main/TABLE02_H1_H2_SUMMARY.csv",
+      "main": true,
+      "rows": 40,
+      "table_id": "TABLE02_H1_H2_SUMMARY",
+      "title": "H1/H2 canonical model×domain seed-consensus summary"
+    },
+    {
+      "file": "tables/main/TABLE03_H3_CUE_TRANSPORT.csv",
+      "main": true,
+      "rows": 32,
+      "table_id": "TABLE03_H3_CUE_TRANSPORT",
+      "title": "H3 cue transport summary with NE explicit"
+    },
+    {
+      "file": "tables/main/TABLE04_H4_PRIMARY_10PCT_SUMMARY.csv",
+      "main": true,
+      "rows": 15,
+      "table_id": "TABLE04_H4_PRIMARY_10PCT_SUMMARY",
+      "title": "H4 primary 10% status/significance summary"
+    },
+    {
+      "file": "tables/supplementary/SUPP_TABLE01_FULL_H3_32_CELL.csv",
+      "main": false,
+      "rows": 32,
+      "table_id": "SUPP_TABLE01_FULL_H3_32_CELL",
+      "title": "Full H3 32-cell table"
+    },
+    {
+      "file": "tables/supplementary/SUPP_TABLE02_H3_SPARSITY.csv",
+      "main": false,
+      "rows": 48,
+      "table_id": "SUPP_TABLE02_H3_SPARSITY",
+      "title": "H3 sparsity diagnostics"
+    },
+    {
+      "file": "tables/supplementary/SUPP_TABLE03_H3P.csv",
+      "main": false,
+      "rows": 150,
+      "table_id": "SUPP_TABLE03_H3P",
+      "title": "H3-P perturbation results"
+    },
+    {
+      "file": "tables/supplementary/SUPP_TABLE04_BAITBUSTER_H3.csv",
+      "main": false,
+      "rows": 8,
+      "table_id": "SUPP_TABLE04_BAITBUSTER_H3",
+      "title": "BaitBuster H3 replication"
+    },
+    {
+      "file": "tables/supplementary/SUPP_TABLE05_FULL_H4_BUDGET.csv",
+      "main": false,
+      "rows": 360,
+      "table_id": "SUPP_TABLE05_FULL_H4_BUDGET",
+      "title": "Full H4 fixed-budget point table"
+    },
+    {
+      "file": "tables/supplementary/SUPP_TABLE06_H4_MODEL_SEED.csv",
+      "main": false,
+      "rows": 300,
+      "table_id": "SUPP_TABLE06_H4_MODEL_SEED",
+      "title": "H4 model×seed bootstrap rows"
+    },
+    {
+      "file": "tables/supplementary/SUPP_TABLE07_LOO_POINT.csv",
+      "main": false,
+      "rows": 16,
+      "table_id": "SUPP_TABLE07_LOO_POINT",
+      "title": "LOO bridge point results"
+    },
+    {
+      "file": "tables/supplementary/SUPP_TABLE08_FULL_STATISTICAL_SUMMARY.csv",
+      "main": false,
+      "rows": 4,
+      "table_id": "SUPP_TABLE08_FULL_STATISTICAL_SUMMARY",
+      "title": "Canonical statistical-summary references"
+    },
+    {
+      "file": "tables/supplementary/SUPP_TABLE09_PROVENANCE.csv",
+      "main": false,
+      "rows": 3,
+      "table_id": "SUPP_TABLE09_PROVENANCE",
+      "title": "Provenance / reproducibility summary"
+    }
+  ],
+  "timestamp_utc": "2026-09-16T13:42:37.617092+00:00",
+  "validation_results": {
+    "all_5_main_figures_registered": true,
+    "all_supplementary_figures_registered": true,
+    "bridge_all_primary_inferences_nonestimable": true,
+    "bridge_exploratory_noncausal": true,
+    "canonical_provenance": true,
+    "canonical_schema": true,
+    "every_figure_has_source_data": true,
+    "figure_source_hash_match": true,
+    "h3_exactly_8_nonestimable_cells": true,
+    "h3_fixed_32_cells_preserved": true,
+    "h3_global_nonestimable": true,
+    "h4_primary_budget_10pct": true,
+    "h4_secondary_budgets_5_20": true,
+    "ne_ns_tokens_distinct": true,
+    "no_random_plotting_jitter": true,
+    "stage08_checksum_contract": true
+  }
+}

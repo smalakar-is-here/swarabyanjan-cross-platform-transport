@@ -1,0 +1,39 @@
+{
+  "accelerator_note": "GPU required for complete Stage 03",
+  "environment_id": "SWARABYANJAN-KAGGLE-ENV-v2.0.0",
+  "initial_versions": {
+    "accelerate": "1.13.0",
+    "interpret-core": null,
+    "joblib": "1.5.3",
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "pyarrow": "24.0.0",
+    "scikit-learn": "1.6.1",
+    "scipy": "1.16.3",
+    "sentencepiece": "0.2.1",
+    "statsmodels": "0.14.6",
+    "torch": "2.10.0+cu128",
+    "transformers": "5.0.0"
+  },
+  "installed_now": [
+    "interpret-core>=0.6,<0.8"
+  ],
+  "policy": "preserve Kaggle compiled scientific stack; install only missing application-level packages",
+  "probe_stdout": "{\"numpy\": \"2.0.2\", \"pandas\": \"2.3.3\", \"pyarrow\": \"24.0.0\", \"scipy\": \"1.16.3\", \"sklearn\": \"1.6.1\", \"statsmodels\": \"0.14.6\", \"torch\": \"2.10.0+cu128\"}",
+  "schema_version": 1,
+  "stage_id": "03",
+  "validated_versions": {
+    "accelerate": "1.13.0",
+    "interpret-core": "0.7.8",
+    "joblib": "1.5.3",
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "pyarrow": "24.0.0",
+    "scikit-learn": "1.6.1",
+    "scipy": "1.16.3",
+    "sentencepiece": "0.2.1",
+    "statsmodels": "0.14.6",
+    "torch": "2.10.0+cu128",
+    "transformers": "5.0.0"
+  }
+}

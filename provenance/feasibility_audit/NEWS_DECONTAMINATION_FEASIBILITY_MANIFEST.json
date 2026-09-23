@@ -1,0 +1,128 @@
+{
+  "audit_name": "NEWS DECONTAMINATION FEASIBILITY AUDIT",
+  "audit_type": "read-only deterministic feasibility diagnostic",
+  "input_bundle_path": "/mnt/data/NEWS_DECONTAMINATION_INPUTS.zip",
+  "input_bundle_sha256": "15bcae4daef5dd50ae79edde68686359c2111a0399dfe71b2e059d94e14fadae",
+  "upstream_stage10_sha256": "e229e6a6d88312cf1eb9067664ce422f63edca4bc89860313061aad71360caaa",
+  "reader_backend": "custom read-only Parquet decoder implemented in Python for this audit",
+  "reader_details": "Parquet footer via Compact Thrift, Snappy page decompression, PLAIN and RLE_DICTIONARY value decoding; audit fields decoded directly from the uploaded Parquet bytes.",
+  "scientific_computation_executed": false,
+  "model_rerun": false,
+  "inference_rerun": false,
+  "canonical_artifacts_modified": false,
+  "source_row_counts": {
+    "train": 10544,
+    "dev": 1100,
+    "test": 2784
+  },
+  "target_cache_counts": {
+    "banglaclick_physical_rows": 99220,
+    "banglaclick_unique_rows": 4961,
+    "baitbuster_physical_rows": 200000,
+    "baitbuster_unique_rows": 10000
+  },
+  "cache_repetition_contract": {
+    "banglaclick": 20,
+    "baitbuster": 20,
+    "models": [
+      "ebm",
+      "tfidf_lr",
+      "banglabert",
+      "xlmr"
+    ],
+    "seeds": [
+      42,
+      137,
+      2718,
+      31415,
+      65537
+    ]
+  },
+  "integrity": {
+    "source_hashes": {
+      "02_cleaning/CROSS_DATASET_OVERLAP_REPORT.csv": "7bc9458a83986d8ad3608ee36383068e56d103130a9c8a5e9dfa8fa79d094ca5",
+      "02_cleaning/DATASET_SCHEMA_REPORT.csv": "34a6352b96774e7b2f420364f8c20a7de923dcebd6c0abfaafbacb354badf520",
+      "02_cleaning/DUPLICATE_REPORT.csv": "880fdc46bbdacb5a5f1b9a9d5d02cc2ea193c97a64d46a374557ae8003e67367",
+      "02_cleaning/LABEL_DISTRIBUTION_REPORT.csv": "aa899e5687ceb53dfd245245f7f89cfb31c8a679c20cef8f172319f897953224",
+      "02_cleaning/PROTECTED_TITLE_QUALITY_REPORT.csv": "32fd5281447a57dcd937e4c95ce1fe03b077b6b4fa587097ce4a5fdf2bf81962",
+      "03_modeling/CLEAN_DATA_MANIFEST.json": "531afe103f022de7be88a6335dc9e1a340f6fbf9ee05cf45565d7efea2d03688",
+      "03_modeling/CUE_FEATURE_SCHEMA.json": "594b17a71c330e288c2d7a77fda320fa1ed581a13f81fbfa014498dfad8f8e0f",
+      "03_modeling/clean_splits/banglabait_dev_clean.parquet": "584533f179c3bef867ef93e9b431d24f063ee85ea010ed38ecc850dd041d4ef4",
+      "03_modeling/clean_splits/banglabait_test_clean.parquet": "3f033ca9479db97e1f11684b6ae223f095678e8fa6b1f2a7b9fa03ac51147e96",
+      "03_modeling/clean_splits/banglabait_train_clean.parquet": "a00c02c92a51eef1e5fb10f358909e5feceaaa3413cae83f080a952c206a3c89",
+      "05_external_validation_and_H3/BAITBUSTER_HUMAN_PREDICTIONS.parquet": "a3e95820c62de00984a189e2c250f7fffd223ad4b3954db04a5368c7a544b7b9",
+      "05_external_validation_and_H3/BANGLACLICK_PLATFORM_PREDICTIONS.parquet": "5685fd4142a0e8e7f85cd6040cf48042da2368d5f9596a7740c4f9f09c9519d5",
+      "05_external_validation_and_H3/CACHE_SCHEMA_VALIDATION.json": "ff5c7fbc84d3de947d45c9ede489b6f14d7c823afe77d9cb84077e52f2d2e747",
+      "05_external_validation_and_H3/INFERENCE_CACHE_PROVENANCE.json": "5502b15a2b289dd0c3017231c26adc8ccec5357e82868ea4b441381440aa213f",
+      "05_external_validation_and_H3/STAGE05_ARTIFACT_MANIFEST.json": "7246bc3a49a5f8d8472005cea9f6062d118431cd67d5dd2c4fd8f2ee31f52c27"
+    },
+    "hash_recomputation": {
+      "train_raw": 10544,
+      "train_norm": 10544,
+      "dev_raw": 1100,
+      "dev_norm": 1100,
+      "test_raw": 2784,
+      "test_norm": 2784,
+      "banglaclick_norm": 99220,
+      "baitbuster_norm_unique": 10000
+    }
+  },
+  "overlap_recheck": {
+    "train_raw_classes": 1025,
+    "train_norm_classes": 1028,
+    "train_norm_only_classes": 3,
+    "train_news_rows_norm": 1044,
+    "dev_norm_classes": 7,
+    "dev_news_rows_norm": 7,
+    "test_norm_classes": 23,
+    "test_news_rows_norm": 23,
+    "unique_union_news_rows": 1074,
+    "sum_source_split_news_rows": 1074,
+    "sum_equals_union": true,
+    "train_dev_intersection": 0,
+    "train_test_intersection": 0,
+    "dev_test_intersection": 0,
+    "triple_intersection": 0,
+    "youtube_baitbuster_shared_norm_classes": 544,
+    "youtube_affected_rows": 544,
+    "baitbuster_affected_rows": 544
+  },
+  "rules": {
+    "Rule A": {
+      "definition": "remove News rows matching CLEAN TRAIN normalized protected-title hash",
+      "original_n": 1500,
+      "removed_n": 1044,
+      "retained_n": 456,
+      "removed_pct": 0.696,
+      "classification": "FEASIBLE WITH SERIOUS SUPPORT/REPRESENTATIVENESS CAVEATS"
+    },
+    "Rule B": {
+      "definition": "remove News rows matching CLEAN TRAIN+DEV+TEST normalized protected-title hash",
+      "original_n": 1500,
+      "removed_n": 1074,
+      "retained_n": 426,
+      "removed_pct": 0.716,
+      "classification": "FEASIBLE WITH SERIOUS SUPPORT/REPRESENTATIVENESS CAVEATS"
+    }
+  },
+  "central_answer": "YES WITH CAVEATS",
+  "interpretation": "Both candidate rules can be represented as new versioned target analyses without changing the underlying estimand definitions. However, the retained News samples show large prevalence shifts, low support for several cue families, and much higher observable cluster concentration. Adoption would require a full rerun of all News-dependent scientific analyses and updated manuscript/supplement outputs; the current frozen results must not be silently edited.",
+  "h4_slot_formula_source": "Frozen Stage06 implementation uses take=max(1,int(np.ceil(float(k)*n))).",
+  "h4_slots": {
+    "Original": {
+      "5%": 75,
+      "10%": 150,
+      "20%": 300
+    },
+    "Rule A": {
+      "5%": 23,
+      "10%": 46,
+      "20%": 92
+    },
+    "Rule B": {
+      "5%": 22,
+      "10%": 43,
+      "20%": 86
+    }
+  }
+}

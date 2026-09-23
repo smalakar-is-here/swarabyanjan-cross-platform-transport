@@ -1,0 +1,734 @@
+{
+  "reproduction_version": "SWARABYANJAN-MANUSCRIPT-REPRO-vFINAL-1.0.0",
+  "rule": "Each generated figure must be explicitly covered by at least one registered exact deterministic source-data file; no source row is silently dropped for estimability.",
+  "schema_version": 1,
+  "source_files": [
+    {
+      "covers_figure_ids": [
+        "FIG01_STUDY_DESIGN"
+      ],
+      "deterministic_transformation": "Direct representation of the frozen analysis sequence and canonical inferential roles; line/fill styles encode predefined evidence classes only.",
+      "estimability_field": null,
+      "exact_variables_used": [
+        "node",
+        "role_or_status",
+        "evidence_class"
+      ],
+      "figure_id": "FIG01_STUDY_DESIGN",
+      "panel_id": "pipeline",
+      "rows": 10,
+      "source_artifact": [
+        "Stage-05/06/07 canonical manifests and final statuses"
+      ],
+      "source_csv": "FIG01_STUDY_DESIGN_pipeline_source.csv",
+      "source_csv_sha256": "6958cd83586423c75daea293c1ff98a5c60d8b1701e444702db63d23f3c54997"
+    },
+    {
+      "covers_figure_ids": [
+        "FIG02_H1_H2"
+      ],
+      "deterministic_transformation": "Direct calibrated AUROC point estimates; no pooling or new intervals.",
+      "estimability_field": null,
+      "exact_variables_used": [
+        "domain",
+        "model",
+        "seed",
+        "calibrated_auroc"
+      ],
+      "figure_id": "FIG02_H1_H2",
+      "panel_id": "A",
+      "rows": 120,
+      "source_artifact": [
+        "Stage05/H1_RESULTS.json"
+      ],
+      "source_csv": "FIG02_H1_H2_A_source.csv",
+      "source_csv_sha256": "f8e0b41e7c1c90b9ff314012759ad9a3715383a48c8912131455924567a781c3"
+    },
+    {
+      "covers_figure_ids": [
+        "FIG02_H1_H2"
+      ],
+      "deterministic_transformation": "One-to-one merge by domain/model/seed of canonical H1 point estimates, endpoint-specific estimability flags, and canonical locked-bootstrap intervals/statuses.",
+      "estimability_field": "nll_relative_change_estimable / balanced_brier_relative_change_estimable",
+      "exact_variables_used": [
+        "auroc_drop",
+        "auroc_estimable",
+        "balanced_brier_bootstrap_ci95",
+        "balanced_brier_relative_change",
+        "balanced_brier_relative_change_estimable",
+        "calibration_moved_further_from_ideal",
+        "descriptive_h1_condition",
+        "domain",
+        "inferential_status",
+        "model",
+        "nll_bootstrap_ci95",
+        "nll_relative_change",
+        "nll_relative_change_estimable",
+        "seed",
+        "setting_supported",
+        "target_auroc",
+        "auroc_drop_ci95",
+        "nll_relative_change_ci95",
+        "balanced_brier_relative_change_ci95",
+        "h2_inferential_status",
+        "h2_target_minus_source_gain_ci95"
+      ],
+      "figure_id": "FIG02_H1_H2",
+      "panel_id": "B_C",
+      "rows": 100,
+      "source_artifact": [
+        "Stage05/H1_RESULTS.json",
+        "Stage05/STATISTICAL_SUMMARY.json"
+      ],
+      "source_csv": "FIG02_H1_H2_B_C_source.csv",
+      "source_csv_sha256": "b88aa86e84e9b49810f07a091955736dc8291174c758c63e607c16454027327f"
+    },
+    {
+      "covers_figure_ids": [
+        "FIG02_H1_H2"
+      ],
+      "deterministic_transformation": "One-to-one merge by domain/model/seed of canonical H2 point estimates and canonical locked-bootstrap intervals/statuses.",
+      "estimability_field": "h2_inferential_status",
+      "exact_variables_used": [
+        "domain",
+        "inferential_status",
+        "model",
+        "seed",
+        "setting_supported",
+        "source_gain_ci95",
+        "source_nll_gain",
+        "target_gain_ci95",
+        "target_minus_source_gain",
+        "target_minus_source_gain_ci95",
+        "target_nll_gain",
+        "h2_inferential_status",
+        "h2_target_minus_source_gain_ci95"
+      ],
+      "figure_id": "FIG02_H1_H2",
+      "panel_id": "D",
+      "rows": 100,
+      "source_artifact": [
+        "Stage05/H2_RESULTS.json",
+        "Stage05/STATISTICAL_SUMMARY.json"
+      ],
+      "source_csv": "FIG02_H1_H2_D_source.csv",
+      "source_csv_sha256": "1dc032bfd713eaef5fb1dd071d46cef96d2e74db31a2e4f001a94e0c38b44590"
+    },
+    {
+      "covers_figure_ids": [
+        "FIG03_H3_CUE_TRANSPORT"
+      ],
+      "deterministic_transformation": "Exact fixed 32-cell table; marker shape encodes sign, marker size encodes absolute canonical point magnitude, NE cells retained explicitly; no imputation or reduced-dimensional analysis.",
+      "estimability_field": "inferential_status",
+      "exact_variables_used": [
+        "cue",
+        "target",
+        "source_rd",
+        "target_rd",
+        "delta_rd",
+        "delta_rd_ci95",
+        "delta_rd_p",
+        "ebm_delta_nll_gap_mean_5seeds",
+        "ebm_delta_nll_gap_ci95",
+        "ebm_delta_nll_gap_p",
+        "ebm_delta_nll_gap_by_seed",
+        "bootstrap_attempts",
+        "valid_replicates",
+        "invalid_replicates",
+        "invalid_rate",
+        "invalid_reason_counts",
+        "inferential_status",
+        "reason_for_nonestimability",
+        "source_support",
+        "target_support",
+        "platform"
+      ],
+      "figure_id": "FIG03_H3_CUE_TRANSPORT",
+      "panel_id": "A_B",
+      "rows": 32,
+      "source_artifact": [
+        "Stage05/H3_CUE_PLATFORM_CONTRASTS_CORRECTED.csv"
+      ],
+      "source_csv": "FIG03_H3_CUE_TRANSPORT_A_B_source.csv",
+      "source_csv_sha256": "de3b2f599a85bd115b2b0688bdbbb1e30cf5a830236ee71df3abc5ef4aa2535f"
+    },
+    {
+      "covers_figure_ids": [
+        "FIG04_H4_FIXED_BUDGET"
+      ],
+      "deterministic_transformation": "Direct canonical Stage-06 10% bootstrap rows for the four BanglaClick target domains; model is marker shape, canonical significance is marker fill, NE is x; no pooling.",
+      "estimability_field": "metric-specific *_estimability_status fields",
+      "exact_variables_used": [
+        "aurc_bootstrap_attempts",
+        "aurc_ci95",
+        "aurc_estimability_status",
+        "aurc_invalid_rate",
+        "aurc_invalid_reason_counts",
+        "aurc_invalid_replicates",
+        "aurc_p",
+        "aurc_valid_replicates",
+        "bootstrap_attempts",
+        "budget",
+        "domain",
+        "error_capture_bootstrap_attempts",
+        "error_capture_ci95",
+        "error_capture_estimability_status",
+        "error_capture_invalid_rate",
+        "error_capture_invalid_reason_counts",
+        "error_capture_invalid_replicates",
+        "error_capture_p",
+        "error_capture_valid_replicates",
+        "lift_bootstrap_attempts",
+        "lift_ci95",
+        "lift_estimability_status",
+        "lift_invalid_rate",
+        "lift_invalid_reason_counts",
+        "lift_invalid_replicates",
+        "lift_p",
+        "lift_valid_replicates",
+        "model",
+        "primary_budget",
+        "seed",
+        "source_aurc",
+        "source_error_capture",
+        "source_lift",
+        "target_aurc",
+        "target_error_capture",
+        "target_lift",
+        "target_minus_source_aurc",
+        "target_minus_source_error_capture",
+        "target_minus_source_lift"
+      ],
+      "figure_id": "FIG04_H4_FIXED_BUDGET",
+      "panel_id": "primary_10pct",
+      "rows": 80,
+      "source_artifact": [
+        "Stage06/H4_RESULTS.json"
+      ],
+      "source_csv": "FIG04_H4_FIXED_BUDGET_primary_10pct_source.csv",
+      "source_csv_sha256": "b8e4222ff2331af3c105171b2231c436fa265bf2430b09d16c17be557c4face3"
+    },
+    {
+      "covers_figure_ids": [
+        "FIG04_H4_FIXED_BUDGET"
+      ],
+      "deterministic_transformation": "Direct canonical 5/10/20% Stage-06 bootstrap rows; budget is major x-position, platform is deterministic within-budget x-offset, model marker semantics are unchanged, and all model×seed settings are retained.",
+      "estimability_field": null,
+      "exact_variables_used": [
+        "aurc_bootstrap_attempts",
+        "aurc_ci95",
+        "aurc_estimability_status",
+        "aurc_invalid_rate",
+        "aurc_invalid_reason_counts",
+        "aurc_invalid_replicates",
+        "aurc_p",
+        "aurc_valid_replicates",
+        "bootstrap_attempts",
+        "budget",
+        "domain",
+        "error_capture_bootstrap_attempts",
+        "error_capture_ci95",
+        "error_capture_estimability_status",
+        "error_capture_invalid_rate",
+        "error_capture_invalid_reason_counts",
+        "error_capture_invalid_replicates",
+        "error_capture_p",
+        "error_capture_valid_replicates",
+        "lift_bootstrap_attempts",
+        "lift_ci95",
+        "lift_estimability_status",
+        "lift_invalid_rate",
+        "lift_invalid_reason_counts",
+        "lift_invalid_replicates",
+        "lift_p",
+        "lift_valid_replicates",
+        "model",
+        "primary_budget",
+        "seed",
+        "source_aurc",
+        "source_error_capture",
+        "source_lift",
+        "target_aurc",
+        "target_error_capture",
+        "target_lift",
+        "target_minus_source_aurc",
+        "target_minus_source_error_capture",
+        "target_minus_source_lift"
+      ],
+      "figure_id": "FIG04_H4_FIXED_BUDGET",
+      "panel_id": "budget_sensitivity",
+      "rows": 240,
+      "source_artifact": [
+        "Stage06/H4_RESULTS.json"
+      ],
+      "source_csv": "FIG04_H4_FIXED_BUDGET_budget_sensitivity_source.csv",
+      "source_csv_sha256": "376d23031ec3b4485b8216c623dc1386c76e7cdf0df9fc62973decb197ad75e8"
+    },
+    {
+      "covers_figure_ids": [
+        "FIG05_H3_H4_BRIDGE"
+      ],
+      "deterministic_transformation": "Direct 32-cell descriptive scatter with canonical stored platform-FE slope annotation. No new line/intercept fit and no inferential interval.",
+      "estimability_field": "inferential_status",
+      "exact_variables_used": [
+        "cue",
+        "platform",
+        "abs_delta_rd",
+        "lift_deterioration_source_minus_target",
+        "canonical_platform_fe_slope",
+        "inferential_status"
+      ],
+      "figure_id": "FIG05_H3_H4_BRIDGE",
+      "panel_id": "abs_delta_rd__vs__lift_deterioration",
+      "rows": 32,
+      "source_artifact": [
+        "Stage07/BRIDGE_32_CELL_POINT_TABLE.csv",
+        "Stage07/H3_H4_BRIDGE_RESULTS.json"
+      ],
+      "source_csv": "FIG05_H3_H4_BRIDGE_abs_delta_rd__vs__lift_deterioration_source.csv",
+      "source_csv_sha256": "a0068984b8ab49d3fa62332dc53858af20b372f78f81387da2892d28ca1e38cb"
+    },
+    {
+      "covers_figure_ids": [
+        "FIG05_H3_H4_BRIDGE"
+      ],
+      "deterministic_transformation": "Direct 32-cell descriptive scatter with canonical stored platform-FE slope annotation. No new line/intercept fit and no inferential interval.",
+      "estimability_field": "inferential_status",
+      "exact_variables_used": [
+        "cue",
+        "platform",
+        "abs_delta_rd",
+        "error_capture_deterioration_source_minus_target",
+        "canonical_platform_fe_slope",
+        "inferential_status"
+      ],
+      "figure_id": "FIG05_H3_H4_BRIDGE",
+      "panel_id": "abs_delta_rd__vs__error_capture_deterioration",
+      "rows": 32,
+      "source_artifact": [
+        "Stage07/BRIDGE_32_CELL_POINT_TABLE.csv",
+        "Stage07/H3_H4_BRIDGE_RESULTS.json"
+      ],
+      "source_csv": "FIG05_H3_H4_BRIDGE_abs_delta_rd__vs__error_capture_deterioration_source.csv",
+      "source_csv_sha256": "0705f3df28b2e5fdb6ab2ca9bc77866009e3bcf8cb518fb2ba93c283f211324b"
+    },
+    {
+      "covers_figure_ids": [
+        "FIG05_H3_H4_BRIDGE"
+      ],
+      "deterministic_transformation": "Direct 32-cell descriptive scatter with canonical stored platform-FE slope annotation. No new line/intercept fit and no inferential interval.",
+      "estimability_field": "inferential_status",
+      "exact_variables_used": [
+        "cue",
+        "platform",
+        "abs_delta_nll_gap",
+        "lift_deterioration_source_minus_target",
+        "canonical_platform_fe_slope",
+        "inferential_status"
+      ],
+      "figure_id": "FIG05_H3_H4_BRIDGE",
+      "panel_id": "abs_delta_nll_gap__vs__lift_deterioration",
+      "rows": 32,
+      "source_artifact": [
+        "Stage07/BRIDGE_32_CELL_POINT_TABLE.csv",
+        "Stage07/H3_H4_BRIDGE_RESULTS.json"
+      ],
+      "source_csv": "FIG05_H3_H4_BRIDGE_abs_delta_nll_gap__vs__lift_deterioration_source.csv",
+      "source_csv_sha256": "5ab49bc3584fe3b40b246880fb82ad393d9568fa8ae02dc9df427fa80674abf6"
+    },
+    {
+      "covers_figure_ids": [
+        "FIG05_H3_H4_BRIDGE"
+      ],
+      "deterministic_transformation": "Direct 32-cell descriptive scatter with canonical stored platform-FE slope annotation. No new line/intercept fit and no inferential interval.",
+      "estimability_field": "inferential_status",
+      "exact_variables_used": [
+        "cue",
+        "platform",
+        "abs_delta_nll_gap",
+        "error_capture_deterioration_source_minus_target",
+        "canonical_platform_fe_slope",
+        "inferential_status"
+      ],
+      "figure_id": "FIG05_H3_H4_BRIDGE",
+      "panel_id": "abs_delta_nll_gap__vs__error_capture_deterioration",
+      "rows": 32,
+      "source_artifact": [
+        "Stage07/BRIDGE_32_CELL_POINT_TABLE.csv",
+        "Stage07/H3_H4_BRIDGE_RESULTS.json"
+      ],
+      "source_csv": "FIG05_H3_H4_BRIDGE_abs_delta_nll_gap__vs__error_capture_deterioration_source.csv",
+      "source_csv_sha256": "03da1e4f6f951fb950a3915b259b39f927d06472cc4467426a6db99294971abe"
+    },
+    {
+      "covers_figure_ids": [
+        "SUPP_H3P_curiosity_information_withholding",
+        "SUPP_H3P_direct_address_imperative",
+        "SUPP_H3P_punctuation_intensity"
+      ],
+      "deterministic_transformation": "Shared canonical H3-P rows covering all three cue-neutralization supplementary figures; no pooling or new inference.",
+      "estimability_field": "inferential_status",
+      "exact_variables_used": [
+        "bootstrap_attempts",
+        "ci95",
+        "cue",
+        "inferential_status",
+        "invalid_replicates",
+        "model",
+        "p",
+        "seed",
+        "source_mean_delta_z",
+        "target",
+        "target_mean_delta_z",
+        "target_minus_source_delta_z",
+        "valid_replicates"
+      ],
+      "figure_id": "SUPP_H3P_SHARED",
+      "panel_id": "all",
+      "rows": 150,
+      "source_artifact": [
+        "Stage05/H3_PERTURBATION_RESULTS.json"
+      ],
+      "source_csv": "SUPP_H3P_SHARED_all_source.csv",
+      "source_csv_sha256": "b74590e664f8218c949a8676c187b80c811765f0bc65f7f12595efd77fdb4b70"
+    },
+    {
+      "covers_figure_ids": [
+        "SUPP_BAITBUSTER_H3"
+      ],
+      "deterministic_transformation": "Direct canonical BaitBuster replication table; NE preserved.",
+      "estimability_field": "inferential_status",
+      "exact_variables_used": [
+        "cue",
+        "delta_rd",
+        "delta_rd_ci95",
+        "delta_rd_p",
+        "ebm_delta_nll_gap_mean_5seeds",
+        "ebm_delta_nll_gap_ci95",
+        "ebm_delta_nll_gap_p",
+        "ebm_delta_nll_gap_by_seed",
+        "bootstrap_attempts",
+        "valid_replicates",
+        "invalid_replicates",
+        "invalid_rate",
+        "invalid_reason_counts",
+        "inferential_status",
+        "reason_for_nonestimability",
+        "source_support",
+        "target_support"
+      ],
+      "figure_id": "SUPP_BAITBUSTER_H3",
+      "panel_id": "A_B",
+      "rows": 8,
+      "source_artifact": [
+        "Stage05/H3_BAITBUSTER_REPLICATION_CORRECTED.csv"
+      ],
+      "source_csv": "SUPP_BAITBUSTER_H3_A_B_source.csv",
+      "source_csv_sha256": "4b92f8dd3f762cf39216c5290e2db0e406c32a498cef6e24109c8ad74cb9b57c"
+    },
+    {
+      "covers_figure_ids": [
+        "SUPP_H3_SPARSITY"
+      ],
+      "deterministic_transformation": "Direct canonical support diagnostics; no inferential recomputation.",
+      "estimability_field": null,
+      "exact_variables_used": [
+        "domain",
+        "cue",
+        "rows",
+        "clusters",
+        "cue_present_rows",
+        "cue_absent_rows",
+        "clusters_with_cue_present",
+        "clusters_with_cue_absent",
+        "analytical_p_resample_missing_cue_present",
+        "analytical_p_resample_missing_cue_absent"
+      ],
+      "figure_id": "SUPP_H3_SPARSITY",
+      "panel_id": "support",
+      "rows": 48,
+      "source_artifact": [
+        "Stage05/H3_SPARSITY_REPORT.csv"
+      ],
+      "source_csv": "SUPP_H3_SPARSITY_support_source.csv",
+      "source_csv_sha256": "6aad2c616a0e4afe110e3245f091ef2bb67465d340e0e29cdf46b90f47a22d60"
+    },
+    {
+      "covers_figure_ids": [
+        "SUPP_H4_05PCT"
+      ],
+      "deterministic_transformation": "Direct canonical Stage-06 bootstrap rows filtered to budget=0.05; no pooling.",
+      "estimability_field": null,
+      "exact_variables_used": [
+        "aurc_bootstrap_attempts",
+        "aurc_ci95",
+        "aurc_estimability_status",
+        "aurc_invalid_rate",
+        "aurc_invalid_reason_counts",
+        "aurc_invalid_replicates",
+        "aurc_p",
+        "aurc_valid_replicates",
+        "bootstrap_attempts",
+        "budget",
+        "domain",
+        "error_capture_bootstrap_attempts",
+        "error_capture_ci95",
+        "error_capture_estimability_status",
+        "error_capture_invalid_rate",
+        "error_capture_invalid_reason_counts",
+        "error_capture_invalid_replicates",
+        "error_capture_p",
+        "error_capture_valid_replicates",
+        "lift_bootstrap_attempts",
+        "lift_ci95",
+        "lift_estimability_status",
+        "lift_invalid_rate",
+        "lift_invalid_reason_counts",
+        "lift_invalid_replicates",
+        "lift_p",
+        "lift_valid_replicates",
+        "model",
+        "primary_budget",
+        "seed",
+        "source_aurc",
+        "source_error_capture",
+        "source_lift",
+        "target_aurc",
+        "target_error_capture",
+        "target_lift",
+        "target_minus_source_aurc",
+        "target_minus_source_error_capture",
+        "target_minus_source_lift"
+      ],
+      "figure_id": "SUPP_H4_05PCT",
+      "panel_id": "A_C",
+      "rows": 80,
+      "source_artifact": [
+        "Stage06/H4_RESULTS.json"
+      ],
+      "source_csv": "SUPP_H4_05PCT_A_C_source.csv",
+      "source_csv_sha256": "d0afb00937fc5ca78c7cc468c738409cbddb62589564c0bfbc3063fc1f4ad04a"
+    },
+    {
+      "covers_figure_ids": [
+        "SUPP_H4_20PCT"
+      ],
+      "deterministic_transformation": "Direct canonical Stage-06 bootstrap rows filtered to budget=0.2; no pooling.",
+      "estimability_field": null,
+      "exact_variables_used": [
+        "aurc_bootstrap_attempts",
+        "aurc_ci95",
+        "aurc_estimability_status",
+        "aurc_invalid_rate",
+        "aurc_invalid_reason_counts",
+        "aurc_invalid_replicates",
+        "aurc_p",
+        "aurc_valid_replicates",
+        "bootstrap_attempts",
+        "budget",
+        "domain",
+        "error_capture_bootstrap_attempts",
+        "error_capture_ci95",
+        "error_capture_estimability_status",
+        "error_capture_invalid_rate",
+        "error_capture_invalid_reason_counts",
+        "error_capture_invalid_replicates",
+        "error_capture_p",
+        "error_capture_valid_replicates",
+        "lift_bootstrap_attempts",
+        "lift_ci95",
+        "lift_estimability_status",
+        "lift_invalid_rate",
+        "lift_invalid_reason_counts",
+        "lift_invalid_replicates",
+        "lift_p",
+        "lift_valid_replicates",
+        "model",
+        "primary_budget",
+        "seed",
+        "source_aurc",
+        "source_error_capture",
+        "source_lift",
+        "target_aurc",
+        "target_error_capture",
+        "target_lift",
+        "target_minus_source_aurc",
+        "target_minus_source_error_capture",
+        "target_minus_source_lift"
+      ],
+      "figure_id": "SUPP_H4_20PCT",
+      "panel_id": "A_C",
+      "rows": 80,
+      "source_artifact": [
+        "Stage06/H4_RESULTS.json"
+      ],
+      "source_csv": "SUPP_H4_20PCT_A_C_source.csv",
+      "source_csv_sha256": "1e0ff1b23f7434160311eced872f984c16cb6fc59401a116b816d392fa198987"
+    },
+    {
+      "covers_figure_ids": [
+        "SUPP_RISK_COVERAGE"
+      ],
+      "deterministic_transformation": "Direct canonical risk-coverage rows; each model×seed curve retained.",
+      "estimability_field": null,
+      "exact_variables_used": [
+        "coverage",
+        "risk",
+        "domain",
+        "model",
+        "seed"
+      ],
+      "figure_id": "SUPP_RISK_COVERAGE",
+      "panel_id": "all",
+      "rows": 24120,
+      "source_artifact": [
+        "Stage06/RISK_COVERAGE_DATA.csv"
+      ],
+      "source_csv": "SUPP_RISK_COVERAGE_all_source.csv",
+      "source_csv_sha256": "37170dc9daba351504d4c13d112fcfddfc57dde802036c8810624201eae086b8"
+    },
+    {
+      "covers_figure_ids": [
+        "SUPP_H1_H2_MODEL_SEED"
+      ],
+      "deterministic_transformation": "Exact canonical H1 model×seed rows used by the per-model/per-seed NLL transport figure; no pooling.",
+      "estimability_field": "nll_relative_change_estimable",
+      "exact_variables_used": [
+        "auroc_drop",
+        "auroc_estimable",
+        "balanced_brier_bootstrap_ci95",
+        "balanced_brier_relative_change",
+        "balanced_brier_relative_change_estimable",
+        "calibration_moved_further_from_ideal",
+        "descriptive_h1_condition",
+        "domain",
+        "inferential_status",
+        "model",
+        "nll_bootstrap_ci95",
+        "nll_relative_change",
+        "nll_relative_change_estimable",
+        "seed",
+        "setting_supported",
+        "target_auroc",
+        "auroc_drop_ci95",
+        "nll_relative_change_ci95",
+        "balanced_brier_relative_change_ci95",
+        "h2_inferential_status",
+        "h2_target_minus_source_gain_ci95"
+      ],
+      "figure_id": "SUPP_H1_H2_MODEL_SEED",
+      "panel_id": "all",
+      "rows": 100,
+      "source_artifact": [
+        "Stage05/H1_RESULTS.json",
+        "Stage05/STATISTICAL_SUMMARY.json"
+      ],
+      "source_csv": "SUPP_H1_H2_MODEL_SEED_all_source.csv",
+      "source_csv_sha256": "b88aa86e84e9b49810f07a091955736dc8291174c758c63e607c16454027327f"
+    },
+    {
+      "covers_figure_ids": [
+        "SUPP_H4_MODEL_SEED"
+      ],
+      "deterministic_transformation": "Exact canonical 10% H4 model×seed rows. Domain is facet row, seed is the y-axis, model is marker shape, canonical significance is fill, and NE is x; no aggregation.",
+      "estimability_field": "metric-specific *_estimability_status fields",
+      "exact_variables_used": [
+        "aurc_bootstrap_attempts",
+        "aurc_ci95",
+        "aurc_estimability_status",
+        "aurc_invalid_rate",
+        "aurc_invalid_reason_counts",
+        "aurc_invalid_replicates",
+        "aurc_p",
+        "aurc_valid_replicates",
+        "bootstrap_attempts",
+        "budget",
+        "domain",
+        "error_capture_bootstrap_attempts",
+        "error_capture_ci95",
+        "error_capture_estimability_status",
+        "error_capture_invalid_rate",
+        "error_capture_invalid_reason_counts",
+        "error_capture_invalid_replicates",
+        "error_capture_p",
+        "error_capture_valid_replicates",
+        "lift_bootstrap_attempts",
+        "lift_ci95",
+        "lift_estimability_status",
+        "lift_invalid_rate",
+        "lift_invalid_reason_counts",
+        "lift_invalid_replicates",
+        "lift_p",
+        "lift_valid_replicates",
+        "model",
+        "primary_budget",
+        "seed",
+        "source_aurc",
+        "source_error_capture",
+        "source_lift",
+        "target_aurc",
+        "target_error_capture",
+        "target_lift",
+        "target_minus_source_aurc",
+        "target_minus_source_error_capture",
+        "target_minus_source_lift"
+      ],
+      "figure_id": "SUPP_H4_MODEL_SEED",
+      "panel_id": "all",
+      "rows": 100,
+      "source_artifact": [
+        "Stage06/H4_RESULTS.json"
+      ],
+      "source_csv": "SUPP_H4_MODEL_SEED_all_source.csv",
+      "source_csv_sha256": "7b502ab987ac84c4e1d3cd582561f4a2e7ee432e807a9383739d1ee3357d4a26"
+    },
+    {
+      "covers_figure_ids": [
+        "SUPP_BRIDGE_LOO"
+      ],
+      "deterministic_transformation": "Direct canonical LOO point slopes; no CI/p because every LOO inferential result is non-estimable.",
+      "estimability_field": null,
+      "exact_variables_used": [
+        "pair",
+        "omitted_platform",
+        "retained_platforms",
+        "retained_cells",
+        "point_platform_fe_slope",
+        "secondary_robustness_only"
+      ],
+      "figure_id": "SUPP_BRIDGE_LOO",
+      "panel_id": "all",
+      "rows": 16,
+      "source_artifact": [
+        "Stage07/LEAVE_ONE_PLATFORM_OUT_POINT_TABLE.csv",
+        "Stage07/LEAVE_ONE_PLATFORM_OUT_ROBUSTNESS.json"
+      ],
+      "source_csv": "SUPP_BRIDGE_LOO_all_source.csv",
+      "source_csv_sha256": "ec99d5bc95d8c5edaf330e61e5a137a741e357fb469774d1f687d9b17fd15af4"
+    },
+    {
+      "covers_figure_ids": [
+        "SUPP_SENSITIVITY"
+      ],
+      "deterministic_transformation": "Direct canonical unadjusted/source-prior/structural metric values. Domain is facet row, model is marker shape, seed is line style; no aggregation or new effect calculation.",
+      "estimability_field": null,
+      "exact_variables_used": [
+        "domain",
+        "model",
+        "seed",
+        "adjustment",
+        "auroc",
+        "nll",
+        "balanced_brier"
+      ],
+      "figure_id": "SUPP_SENSITIVITY",
+      "panel_id": "A_B",
+      "rows": 300,
+      "source_artifact": [
+        "Stage05/SENSITIVITY_RESULTS.json"
+      ],
+      "source_csv": "SUPP_SENSITIVITY_A_B_source.csv",
+      "source_csv_sha256": "2e336246204b038513f212b793e2aed195d8b1416729f84ea21e67be2f09df98"
+    }
+  ]
+}

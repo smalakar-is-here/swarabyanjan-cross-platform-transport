@@ -1,0 +1,152 @@
+{
+  "cue_schema_sha256": "200e3ccee3dd6e11b57728b8d6d5ac91bd88cc2e8c3c5e8986d9daa145d73556",
+  "cue_version": "BANGLA-CLICKBAIT-CUES-v1.0.0",
+  "families": {
+    "curiosity_information_withholding": {
+      "terms": [
+        "রহস্য",
+        "গোপন",
+        "ফাঁস",
+        "অজানা",
+        "আসল কারণ",
+        "শেষ পর্যন্ত",
+        "অবশেষে",
+        "কি ঘটল",
+        "কী ঘটল",
+        "কি হলো",
+        "কী হলো",
+        "জানলে",
+        "চমক"
+      ],
+      "type": "lexical_phrase_count"
+    },
+    "direct_address_imperative": {
+      "terms": [
+        "আপনি",
+        "আপনার",
+        "আপনাকে",
+        "তুমি",
+        "তোমার",
+        "তোমাকে",
+        "দেখুন",
+        "জানুন",
+        "জেনে নিন",
+        "দেখে নিন",
+        "পড়ুন",
+        "পড়ুন",
+        "শুনুন",
+        "ভাবুন",
+        "বলুন"
+      ],
+      "type": "lexical_syntactic_count"
+    },
+    "exaggeration_superlative": {
+      "terms": [
+        "সবচেয়ে",
+        "সবচেয়ে",
+        "সেরা",
+        "একমাত্র",
+        "সর্বোচ্চ",
+        "সর্বনিম্ন",
+        "বিশ্বসেরা",
+        "ইতিহাসে",
+        "জীবনে",
+        "কখনও",
+        "কখনো",
+        "শতভাগ",
+        "নিশ্চিত",
+        "অসাধারণ"
+      ],
+      "type": "lexical_count"
+    },
+    "interrogative_structure": {
+      "punctuation": [
+        "?"
+      ],
+      "terms": [
+        "কি",
+        "কী",
+        "কে",
+        "কেন",
+        "কবে",
+        "কোথায়",
+        "কোথায়",
+        "কিভাবে",
+        "কীভাবে",
+        "কোন",
+        "কত",
+        "কার",
+        "কাকে",
+        "কারা"
+      ],
+      "type": "lexical_syntactic_count"
+    },
+    "punctuation_intensity": {
+      "punctuation": [
+        "!",
+        "?",
+        "…"
+      ],
+      "repeated_pattern": "[!?…]{2,}",
+      "type": "surface_count"
+    },
+    "sensational_emotional_loading": {
+      "terms": [
+        "চাঞ্চল্যকর",
+        "অবিশ্বাস্য",
+        "ভয়ংকর",
+        "ভয়ংকর",
+        "বিস্ময়কর",
+        "বিস্ময়কর",
+        "হতবাক",
+        "তোলপাড়",
+        "তোলপাড়",
+        "হইচই",
+        "ভাইরাল",
+        "শিউরে",
+        "মর্মান্তিক",
+        "উত্তাল"
+      ],
+      "type": "lexical_count"
+    },
+    "specificity_numerals": {
+      "patterns": [
+        "[0-9০-৯]+",
+        "[0-9০-৯]+(?:[.,][0-9০-৯]+)?%",
+        "(?:৳|টাকা|tk|bdt)\\s*[0-9০-৯]+"
+      ],
+      "type": "surface_count"
+    },
+    "vague_deictic_reference": {
+      "terms": [
+        "এই",
+        "ওই",
+        "সেই",
+        "এটা",
+        "ওটা",
+        "সেটা",
+        "এমন",
+        "তেমন",
+        "এভাবে",
+        "ওভাবে",
+        "সেভাবে",
+        "যা",
+        "যেটা"
+      ],
+      "type": "lexical_referential_count"
+    }
+  },
+  "normalization": "P0-v1.1.1 NFKC + remove U+200B/U+200C/U+200D/U+FEFF + casefold + trim + collapse whitespace; punctuation retained",
+  "perturbable_families": [
+    "curiosity_information_withholding",
+    "direct_address_imperative",
+    "punctuation_intensity"
+  ],
+  "schema_version": 1,
+  "structural_controls": [
+    "token_count",
+    "character_count",
+    "mean_token_length",
+    "latin_code_mixing_proportion"
+  ]
+}

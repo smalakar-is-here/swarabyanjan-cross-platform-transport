@@ -1,0 +1,32 @@
+{
+  "covers_figure_ids": [
+    "SUPP_H3P_curiosity_information_withholding",
+    "SUPP_H3P_direct_address_imperative",
+    "SUPP_H3P_punctuation_intensity"
+  ],
+  "deterministic_transformation": "Shared canonical H3-P rows covering all three cue-neutralization supplementary figures; no pooling or new inference.",
+  "estimability_field": "inferential_status",
+  "exact_variables_used": [
+    "bootstrap_attempts",
+    "ci95",
+    "cue",
+    "inferential_status",
+    "invalid_replicates",
+    "model",
+    "p",
+    "seed",
+    "source_mean_delta_z",
+    "target",
+    "target_mean_delta_z",
+    "target_minus_source_delta_z",
+    "valid_replicates"
+  ],
+  "figure_id": "SUPP_H3P_SHARED",
+  "panel_id": "all",
+  "rows": 150,
+  "source_artifact": [
+    "Stage05/H3_PERTURBATION_RESULTS.json"
+  ],
+  "source_csv": "SUPP_H3P_SHARED_all_source.csv",
+  "source_csv_sha256": "b74590e664f8218c949a8676c187b80c811765f0bc65f7f12595efd77fdb4b70"
+}

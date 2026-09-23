@@ -1,0 +1,31 @@
+{
+  "covers_figure_ids": [
+    "FIG02_H1_H2"
+  ],
+  "deterministic_transformation": "One-to-one merge by domain/model/seed of canonical H2 point estimates and canonical locked-bootstrap intervals/statuses.",
+  "estimability_field": "h2_inferential_status",
+  "exact_variables_used": [
+    "domain",
+    "inferential_status",
+    "model",
+    "seed",
+    "setting_supported",
+    "source_gain_ci95",
+    "source_nll_gain",
+    "target_gain_ci95",
+    "target_minus_source_gain",
+    "target_minus_source_gain_ci95",
+    "target_nll_gain",
+    "h2_inferential_status",
+    "h2_target_minus_source_gain_ci95"
+  ],
+  "figure_id": "FIG02_H1_H2",
+  "panel_id": "D",
+  "rows": 100,
+  "source_artifact": [
+    "Stage05/H2_RESULTS.json",
+    "Stage05/STATISTICAL_SUMMARY.json"
+  ],
+  "source_csv": "FIG02_H1_H2_D_source.csv",
+  "source_csv_sha256": "1dc032bfd713eaef5fb1dd071d46cef96d2e74db31a2e4f001a94e0c38b44590"
+}

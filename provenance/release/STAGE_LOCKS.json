@@ -1,0 +1,74 @@
+{
+  "01": {
+    "checksum_sha256": "3630605b75b593e3f6a5927a34e168de71ad6b6f5091a59b02f71e28b3a05ffa",
+    "manifest_sha256": "e09b083a38698648f0fe435bb8ff83f5c89896e37538de767549d9f05f72e455",
+    "notes": "Canonical frozen ZIP provenance SHA256=e0de5c224f406fe22d8ad30804217465f789c49c70e1d3afbe00afd28deb7ccf",
+    "protocol_version": "EXTERNAL-DATASET-BYTES-v1",
+    "scientific_role": "frozen external dataset acquisition and byte identity",
+    "status_sha256": "96a79231563344688eb35f1bf3a4e55b17a0d6dff6f9f9fa6f9784417cefac18"
+  },
+  "02": {
+    "checksum_sha256": "d3111248dae423fdac5d2361ddb154b1d0928374151aee13f99ab2f8fdd822f2",
+    "manifest_sha256": "59a4b6be556af89de26768202dc252cb92e2394dea20e26a1024c58548c233cd",
+    "notes": "Canonical Stage-02 decision may be P0_NO_GO; Stage-03 records the decontamination response and authoritative methodology identity.",
+    "protocol_version": "P0-v1.1.1",
+    "scientific_role": "P0 integrity/provenance/leakage audit",
+    "status_sha256": null
+  },
+  "03": {
+    "checksum_sha256": "e40f3c9ac69cb9f23e080e6070a1cd3b28969f43e3592d7b52a04f02a8dbafb2",
+    "manifest_sha256": "184f3eabd32ab6f0d56da72cdb2b6a908b32b4d662c47eb40a6597acf9acad52",
+    "notes": "Transformer checkpoints may be released separately; locked Stage-05 predictions are the downstream analysis interface.",
+    "protocol_version": "SWARABYANJAN-CROSSPLATFORM-v1.0.0",
+    "scientific_role": "primary model development on clean source splits",
+    "status_sha256": "3595786df6ea2218662e019371c19cfa853f032aa2e99fbe7c44dd2298234ae6"
+  },
+  "04": {
+    "checksum_sha256": "75811e378257d905152d25b584bbbfc707a9cc36abe890eb5c12eb0f9ec9ab10",
+    "manifest_sha256": "26b9c68be2312a38ac65eda8f7462e32cbe1d7d288693d58e929cfe0c5f059bd",
+    "notes": "",
+    "protocol_version": "SWARABYANJAN-CROSSPLATFORM-v1.0.0",
+    "scientific_role": "source DEV scalar temperature calibration",
+    "status_sha256": "cb3a7c9e3c0a744224a709102773828afa4f0e4eabfbc3fd4bca6694165dce60"
+  },
+  "05": {
+    "checksum_sha256": "7171a0e581d8fb4bde2a630f4de631d74962954ee3890b8123d78a720823450a",
+    "manifest_sha256": "7246bc3a49a5f8d8472005cea9f6062d118431cd67d5dd2c4fd8f2ee31f52c27",
+    "notes": "SWARABYANJAN-STAGE05-CANONICAL-vFINAL-1.0.1",
+    "protocol_version": "SWARABYANJAN-CROSSPLATFORM-v1.0.0",
+    "scientific_role": "canonical external validation and H1/H2/H3/H3-P inference",
+    "status_sha256": "005399d829bb66870810faa3f140757a7ee3d82eac4bae394fbbe79e701db8e6"
+  },
+  "06": {
+    "checksum_sha256": "5f8d0f7fc9cde5e0f159bf4c5f4ca8387441675407b4c43ab87a8063afac3beb",
+    "manifest_sha256": "5a2962014445c723379b07fcf02e601644818c36e6c15fb7ee9478ca34711285",
+    "notes": "",
+    "protocol_version": "SWARABYANJAN-CROSSPLATFORM-v1.0.0",
+    "scientific_role": "canonical fixed-budget reliability evaluation",
+    "status_sha256": "769f33b4771f3ec55700384ae6db7e9e2feb115d23717b27cbd9c17e4983538d"
+  },
+  "07": {
+    "checksum_sha256": "86c8aeb1c4c0062303b44d397fece5908c315ff8860fca59afc624bfdde39f8d",
+    "manifest_sha256": "fa8651ff00a3306dfd48ed55d21df3ab2eef2fbd365db33657f5c2413822e714",
+    "notes": "Exploratory/non-causal; does not replace confirmatory inference.",
+    "protocol_version": "SWARABYANJAN-CROSSPLATFORM-v1.0.0",
+    "scientific_role": "secondary/exploratory H3→H4 bridge",
+    "status_sha256": "566f063f1bef265c6d377565ee6a22ccc1cbbbaa083f7bad7a89423ec6222280"
+  },
+  "08": {
+    "checksum_sha256": "ccd850d3dbe144651bb52e8277308e6438e3e3d869b2cfc232b39db96fed3af6",
+    "manifest_sha256": "b0ac3b392b2e3d1b5136fda5dbdbcf498e1b89c44cc1d920ff597d6c2967523f",
+    "notes": "Generic filename retained; identity is established by embedded manifest/checksum/status hashes.",
+    "protocol_version": "SWARABYANJAN-CROSSPLATFORM-v1.0.0",
+    "scientific_role": "audited FINAL2 manuscript figure/table reproduction",
+    "status_sha256": "d64ee2649a348bad4fd36ee3c4df79fd071b60807b248f0a7a575f5795bf9f33"
+  },
+  "09": {
+    "checksum_sha256": "c2c2e1c576a94b1efb8aa0072078dca7795375de386f0082666a2966eeb7f285",
+    "manifest_sha256": "445b9bd3bfccbf55af63c92c3e6e966eaf38959641b6507493cb6c249a7035db",
+    "notes": "Final source-site host-cluster sensitivity execution. Source manifest role string: sensitivity only; never replaces canonical Stages05/06/07/08",
+    "protocol_version": "SWARABYANJAN-CROSSPLATFORM-v1.0.0",
+    "scientific_role": "sensitivity only; never replaces canonical Stages 05/06/07/08",
+    "status_sha256": "c57fb1178ecdcb9e4525a9abaf8b55e62b7e6eabbc0050817aa1df76970937a3"
+  }
+}

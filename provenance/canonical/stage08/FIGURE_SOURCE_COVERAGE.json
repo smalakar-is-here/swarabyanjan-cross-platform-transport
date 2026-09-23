@@ -1,0 +1,43 @@
+{
+  "covered_figure_ids": [
+    "FIG01_STUDY_DESIGN",
+    "FIG02_H1_H2",
+    "FIG03_H3_CUE_TRANSPORT",
+    "FIG04_H4_FIXED_BUDGET",
+    "FIG05_H3_H4_BRIDGE",
+    "SUPP_BAITBUSTER_H3",
+    "SUPP_BRIDGE_LOO",
+    "SUPP_H1_H2_MODEL_SEED",
+    "SUPP_H3P_curiosity_information_withholding",
+    "SUPP_H3P_direct_address_imperative",
+    "SUPP_H3P_punctuation_intensity",
+    "SUPP_H3_SPARSITY",
+    "SUPP_H4_05PCT",
+    "SUPP_H4_20PCT",
+    "SUPP_H4_MODEL_SEED",
+    "SUPP_RISK_COVERAGE",
+    "SUPP_SENSITIVITY"
+  ],
+  "extra_source_coverage": [],
+  "generated_figure_ids": [
+    "FIG01_STUDY_DESIGN",
+    "FIG02_H1_H2",
+    "FIG03_H3_CUE_TRANSPORT",
+    "FIG04_H4_FIXED_BUDGET",
+    "FIG05_H3_H4_BRIDGE",
+    "SUPP_BAITBUSTER_H3",
+    "SUPP_BRIDGE_LOO",
+    "SUPP_H1_H2_MODEL_SEED",
+    "SUPP_H3P_curiosity_information_withholding",
+    "SUPP_H3P_direct_address_imperative",
+    "SUPP_H3P_punctuation_intensity",
+    "SUPP_H3_SPARSITY",
+    "SUPP_H4_05PCT",
+    "SUPP_H4_20PCT",
+    "SUPP_H4_MODEL_SEED",
+    "SUPP_RISK_COVERAGE",
+    "SUPP_SENSITIVITY"
+  ],
+  "missing_source_coverage": [],
+  "status": "PASS"
+}

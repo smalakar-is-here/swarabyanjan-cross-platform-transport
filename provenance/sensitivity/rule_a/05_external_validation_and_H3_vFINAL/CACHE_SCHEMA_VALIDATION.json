@@ -1,0 +1,35 @@
+{
+  "baitbuster_items_per_model_seed": 10000,
+  "banglaclick_items_per_model_seed": 3917,
+  "cue_families": [
+    "curiosity_information_withholding",
+    "direct_address_imperative",
+    "exaggeration_superlative",
+    "interrogative_structure",
+    "punctuation_intensity",
+    "sensational_emotional_loading",
+    "specificity_numerals",
+    "vague_deictic_reference"
+  ],
+  "h3p_families": [
+    "curiosity_information_withholding",
+    "direct_address_imperative",
+    "punctuation_intensity"
+  ],
+  "h3p_unique_pairs_per_model_seed": 7867,
+  "models": [
+    "ebm",
+    "tfidf_lr",
+    "banglabert",
+    "xlmr"
+  ],
+  "seeds": [
+    42,
+    137,
+    2718,
+    31415,
+    65537
+  ],
+  "source_items_per_model_seed": 2784,
+  "status": "PASS"
+}

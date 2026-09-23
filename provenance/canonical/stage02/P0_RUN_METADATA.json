@@ -1,0 +1,77 @@
+{
+  "canonical_environment_spec": {
+    "packages": {
+      "numpy": "2.5.2",
+      "openpyxl": "3.1.5",
+      "pandas": "2.3.3",
+      "pyarrow": "23.0.1"
+    },
+    "python": "3.12.13"
+  },
+  "canonical_notebook": "02_p0_integrity_provenance_leakage_audit.ipynb",
+  "cpu_count": 4,
+  "determinism": {
+    "model_training": false,
+    "near_duplicate_sample_order": "norm_hash,row_id with sorted capped candidate traversal",
+    "output_sorting": "stable deterministic sort",
+    "random_sampling": false,
+    "serialized_list_policy": "all persisted lists deterministically ordered"
+  },
+  "environment_verification": {
+    "packages": {
+      "numpy": "2.5.2",
+      "openpyxl": "3.1.5",
+      "pandas": "2.3.3",
+      "pyarrow": "23.0.1"
+    },
+    "python": "3.12.13",
+    "status": "PASS"
+  },
+  "execution_id": "P0-20260905T191629Z-UNSPECIFIED-3630605b75-fcf658785c",
+  "execution_replica_id": "UNSPECIFIED",
+  "execution_utc": "2026-09-05T20:11:03.184303+00:00",
+  "expected_zip_sha256": "e0de5c224f406fe22d8ad30804217465f789c49c70e1d3afbe00afd28deb7ccf",
+  "gpu_status": {
+    "cuda_visible_devices": null,
+    "nvidia_smi_available": false,
+    "nvidia_smi_summary": null
+  },
+  "input_content_tree_fingerprint": "3630605b75b593e3f6a5927a34e168de71ad6b6f5091a59b02f71e28b3a05ffa",
+  "input_mode": "EXTRACTED_ROOT_MODE",
+  "methodology_sha256": "fcf658785c8a91ffa31a08b7861dbed07aac26f06b52d133ce257f3610d3ce6b",
+  "methodology_version": "P0-v1.1.1",
+  "p0_decision": "P0_NO_GO",
+  "packages": {
+    "numpy": "2.5.2",
+    "openpyxl": "3.1.5",
+    "pandas": "2.3.3",
+    "pyarrow": "23.0.1"
+  },
+  "physical_stage01_notebook_input_required": false,
+  "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+  "previous_stage02_outputs_used_as_input": false,
+  "python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+  "required_kaggle_dataset_inputs": 1,
+  "run_directory": "/kaggle/working/03_results/02_p0_integrity_provenance_leakage_audit/P0-20260905T191629Z-UNSPECIFIED-3630605b75-fcf658785c",
+  "schema_version": 1,
+  "split_firewall_sha256": "3cc7e0fe8f6d78d928d1ff9339f5ad4360278bb1f10d819498bd0faaf9170a6d",
+  "stage01_provenance": {
+    "stage01_notebook": {
+      "runtime_input_required": false,
+      "runtime_physical_verification": false,
+      "sha256": "627e38c7fd99c53b483bc109404b03e781b060c58215e639121838cb63abe8cf",
+      "status": "historical_provenance_identifier_only"
+    },
+    "tree_anchor": {
+      "anchored_content_tree_fingerprint": "3630605b75b593e3f6a5927a34e168de71ad6b6f5091a59b02f71e28b3a05ffa",
+      "expected_zip_sha256": "e0de5c224f406fe22d8ad30804217465f789c49c70e1d3afbe00afd28deb7ccf",
+      "member_count": 26,
+      "method": "deterministic_reconstruction_matches_canonical_zip_sha256",
+      "status": "PASS",
+      "verified_reconstructed_zip_sha256": "e0de5c224f406fe22d8ad30804217465f789c49c70e1d3afbe00afd28deb7ccf"
+    },
+    "tree_fingerprint_algorithm": "sha256sum_sorted_posix_v1",
+    "verified_tree_fingerprint": "3630605b75b593e3f6a5927a34e168de71ad6b6f5091a59b02f71e28b3a05ffa"
+  },
+  "stage_id": "02"
+}

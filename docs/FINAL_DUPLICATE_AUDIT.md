@@ -1,0 +1,25 @@
+# Final Duplicate Audit — Public-Safe Build
+
+Exact SHA-256 duplicate groups: **21**
+
+- `1941cdfc518eaf7a60abd7802ed70f3e08ffca34f1c6f2d267234341feae83c3` — 2 occurrences — `results/sensitivity/rule_a/05_external_validation_and_H3_vFINAL/H3P_STATISTICAL_PARITY.json`; `results/sensitivity/rule_b/05_external_validation_and_H3_vFINAL/H3P_STATISTICAL_PARITY.json`
+- `32fd5281447a57dcd937e4c95ce1fe03b077b6b4fa587097ce4a5fdf2bf81962` — 2 occurrences — `provenance/canonical/stage02/PROTECTED_TITLE_QUALITY_REPORT.csv`; `provenance/rowlevel_audit/02_cleaning/PROTECTED_TITLE_QUALITY_REPORT.csv`
+- `34a6352b96774e7b2f420364f8c20a7de923dcebd6c0abfaafbacb354badf520` — 2 occurrences — `provenance/canonical/stage02/DATASET_SCHEMA_REPORT.csv`; `provenance/rowlevel_audit/02_cleaning/DATASET_SCHEMA_REPORT.csv`
+- `4e05f1657ebca24afcf5b2da0d6449394767ec76451153dc56c7103318913188` — 2 occurrences — `provenance/sensitivity/rule_a/06_fixed_budget_reliability_evaluation/ENVIRONMENT_PREFLIGHT.json`; `provenance/sensitivity/rule_b/06_fixed_budget_reliability_evaluation/ENVIRONMENT_PREFLIGHT.json`
+- `531afe103f022de7be88a6335dc9e1a340f6fbf9ee05cf45565d7efea2d03688` — 2 occurrences — `provenance/canonical/stage03/CLEAN_DATA_MANIFEST.json`; `provenance/rowlevel_audit/03_modeling/CLEAN_DATA_MANIFEST.json`
+- `5502b15a2b289dd0c3017231c26adc8ccec5357e82868ea4b441381440aa213f` — 2 occurrences — `provenance/canonical/stage05/INFERENCE_CACHE_PROVENANCE.json`; `provenance/rowlevel_audit/05_external_validation_and_H3/INFERENCE_CACHE_PROVENANCE.json`
+- `594b17a71c330e288c2d7a77fda320fa1ed581a13f81fbfa014498dfad8f8e0f` — 2 occurrences — `configs/CUE_FEATURE_SCHEMA.json`; `provenance/rowlevel_audit/03_modeling/CUE_FEATURE_SCHEMA.json`
+- `5e00798ee4cc0a1a9d56d4540242dc32345bb99210e790282ec25a3a0555332e` — 2 occurrences — `results/sensitivity/rule_a/07_H3_H4_BRIDGE_EXPLORATORY_vFINAL/H4_POLICY_POINT_PARITY.json`; `results/sensitivity/rule_b/07_H3_H4_BRIDGE_EXPLORATORY_vFINAL/H4_POLICY_POINT_PARITY.json`
+- `6aad2c616a0e4afe110e3245f091ef2bb67465d340e0e29cdf46b90f47a22d60` — 2 occurrences — `results/primary/stage08/figure_source_data/SUPP_H3_SPARSITY_support_source.csv`; `results/primary/stage08/tables/supplementary/SUPP_TABLE02_H3_SPARSITY.csv`
+- `7246bc3a49a5f8d8472005cea9f6062d118431cd67d5dd2c4fd8f2ee31f52c27` — 2 occurrences — `provenance/canonical/stage05/STAGE05_ARTIFACT_MANIFEST.json`; `provenance/rowlevel_audit/05_external_validation_and_H3/STAGE05_ARTIFACT_MANIFEST.json`
+- `72e39552cf17beaabb8cd0eba9c374c8bbd7e09a632ecd12e88134931b67844d` — 2 occurrences — `provenance/sensitivity/rule_a/06_fixed_budget_reliability_evaluation/STAGE06_SUMMARY.md`; `provenance/sensitivity/rule_b/06_fixed_budget_reliability_evaluation/STAGE06_SUMMARY.md`
+- `765491b32f02d49927031a1f7574eb4446cd93a3734bc119f2d7dc475d367746` — 2 occurrences — `results/sensitivity/rule_a/05_external_validation_and_H3_vFINAL/H3P_POINT_PARITY.json`; `results/sensitivity/rule_b/05_external_validation_and_H3_vFINAL/H3P_POINT_PARITY.json`
+- `7bc9458a83986d8ad3608ee36383068e56d103130a9c8a5e9dfa8fa79d094ca5` — 2 occurrences — `provenance/canonical/stage02/CROSS_DATASET_OVERLAP_REPORT.csv`; `provenance/rowlevel_audit/02_cleaning/CROSS_DATASET_OVERLAP_REPORT.csv`
+- `880fdc46bbdacb5a5f1b9a9d5d02cc2ea193c97a64d46a374557ae8003e67367` — 2 occurrences — `provenance/canonical/stage02/DUPLICATE_REPORT.csv`; `provenance/rowlevel_audit/02_cleaning/DUPLICATE_REPORT.csv`
+- `93d6dc6e8465d5e546b23e0eb596dfa73a60b9e5b1f3c4a0bbb07b15a7d909f7` — 2 occurrences — `experiments/sensitivity/rule_a/notebooks/source/07_H3_H4_BRIDGE_EXPLORATORY_vFINAL.ipynb`; `experiments/sensitivity/rule_b/notebooks/source/07_H3_H4_BRIDGE_EXPLORATORY_vFINAL.ipynb`
+- `aa899e5687ceb53dfd245245f7f89cfb31c8a679c20cef8f172319f897953224` — 2 occurrences — `provenance/canonical/stage02/LABEL_DISTRIBUTION_REPORT.csv`; `provenance/rowlevel_audit/02_cleaning/LABEL_DISTRIBUTION_REPORT.csv`
+- `b74590e664f8218c949a8676c187b80c811765f0bc65f7f12595efd77fdb4b70` — 2 occurrences — `results/primary/stage08/figure_source_data/SUPP_H3P_SHARED_all_source.csv`; `results/primary/stage08/tables/supplementary/SUPP_TABLE03_H3P.csv`
+- `b88aa86e84e9b49810f07a091955736dc8291174c758c63e607c16454027327f` — 2 occurrences — `results/primary/stage08/figure_source_data/SUPP_H1_H2_MODEL_SEED_all_source.csv`; `results/primary/stage08/figure_source_data/FIG02_H1_H2_B_C_source.csv`
+- `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` — 2 occurrences — `provenance/canonical/stage08/figures`; `provenance/canonical/stage08/tables`
+- `ec99d5bc95d8c5edaf330e61e5a137a741e357fb469774d1f687d9b17fd15af4` — 2 occurrences — `results/primary/stage08/figure_source_data/SUPP_BRIDGE_LOO_all_source.csv`; `results/primary/stage08/tables/supplementary/SUPP_TABLE07_LOO_POINT.csv`
+- `ff5c7fbc84d3de947d45c9ede489b6f14d7c823afe77d9cb84077e52f2d2e747` — 2 occurrences — `provenance/canonical/stage05/CACHE_SCHEMA_VALIDATION.json`; `provenance/rowlevel_audit/05_external_validation_and_H3/CACHE_SCHEMA_VALIDATION.json`

@@ -1,0 +1,46 @@
+{
+  "restricted_removed_count": 26,
+  "remaining_restricted_paths": [],
+  "remaining_restricted_hash_copies": [],
+  "remaining_joblibs": [],
+  "parquet_literal_title_schema_hits": [],
+  "provenance_literal_scan_findings": [
+    {
+      "path": "provenance/external_restricted/RESTRICTED_ARTIFACT_MANIFEST.json",
+      "bengali_chars": 0,
+      "literal_sensitive_keys": 0,
+      "title_keys": 0,
+      "raw_domain_mentions": 2
+    },
+    {
+      "path": "provenance/external_restricted/RESTRICTED_ARTIFACT_MANIFEST.csv",
+      "bengali_chars": 0,
+      "literal_sensitive_keys": 0,
+      "title_keys": 0,
+      "raw_domain_mentions": 2
+    },
+    {
+      "path": "provenance/rowlevel_audit/03_modeling/CUE_FEATURE_SCHEMA.json",
+      "bengali_chars": 442,
+      "literal_sensitive_keys": 0,
+      "title_keys": 0,
+      "raw_domain_mentions": 0
+    }
+  ],
+  "provenance_unsafe_findings_after_allowlist": [],
+  "notebook_output_bengali_literal_findings": [],
+  "secret_findings": [],
+  "canonical_notebooks": 9,
+  "stage10_notebooks": 1,
+  "legacy_notebooks": 3,
+  "rule_a_notebooks": 6,
+  "rule_b_notebooks": 4,
+  "changed_scientific_artifacts": [],
+  "manuscript_crosscheck_all_pass": true,
+  "largest_file": {
+    "path": "provenance/rowlevel_audit/03_modeling/CLEAN_DATA_MANIFEST.json",
+    "size_bytes": 9841445
+  },
+  "file_over_100mb": false,
+  "errors": []
+}

@@ -1,0 +1,65 @@
+{
+  "config_split_seed": 20260906,
+  "environment": {
+    "cpu_count": 4,
+    "cuda_visible_devices": null,
+    "git": {
+      "available": false,
+      "dirty": null,
+      "head": null,
+      "status_porcelain": null
+    },
+    "packages": {
+      "accelerate": "1.13.0",
+      "huggingface-hub": "1.11.0",
+      "interpret-core": "0.7.8",
+      "joblib": "1.5.3",
+      "numpy": "2.0.2",
+      "openpyxl": "3.1.5",
+      "pandas": "2.3.3",
+      "pyarrow": "24.0.0",
+      "scikit-learn": "1.6.1",
+      "scipy": "1.16.3",
+      "statsmodels": "0.14.6",
+      "torch": "2.10.0+cu128",
+      "transformers": "5.0.0"
+    },
+    "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+    "python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+    "timestamp_utc": "2026-09-07T06:29:52.087485+00:00"
+  },
+  "execution_utc": "2026-09-07T06:29:52.087467+00:00",
+  "firewall": {
+    "D0_dev_test_read": "integrity/decontamination only",
+    "DEV": "not used after D0; reserved Stage 04 calibration",
+    "TEST": "not used after D0; reserved Stage 05",
+    "external": "not read in Stage 03",
+    "model_development": "CLEAN TRAIN only"
+  },
+  "input_identity": {
+    "authoritative_stage02_decision": "P0_NO_GO",
+    "authoritative_stage02_methodology_sha256": "fcf658785c8a91ffa31a08b7861dbed07aac26f06b52d133ce257f3610d3ce6b",
+    "authoritative_stage02_notebook_sha256": "be59c43013c20e052bc9475954303a75fed8807dfed689ef517590b382b0214b",
+    "canonical_zip_sha256_provenance": "e0de5c224f406fe22d8ad30804217465f789c49c70e1d3afbe00afd28deb7ccf",
+    "content_identity_sha256": "161b6e091b3db55a9616c943693ad456a175c19330b4297b5e068910b47c2b8f",
+    "duplicate_equivalent_candidates": [],
+    "freeze_id": "EXTERNAL-DATASET-BYTES-v1",
+    "frozen_root": "/kaggle/input/datasets/smalakarishere/swarabyanjan-frozen-dataset-v1/EXTERNAL-DATASET-BYTES-v1/EXTERNAL-DATASET-BYTES-v1",
+    "input_mode": "EXTRACTED_DIRECTORY",
+    "input_source_path": "/kaggle/input/datasets/smalakarishere/swarabyanjan-frozen-dataset-v1/EXTERNAL-DATASET-BYTES-v1/EXTERNAL-DATASET-BYTES-v1",
+    "observed_zip_sha256": null,
+    "sha256sum_entry_count": 25,
+    "stage01_notebook_sha256_historical": "627e38c7fd99c53b483bc109404b03e781b060c58215e639121838cb63abe8cf"
+  },
+  "protocol_version": "SWARABYANJAN-CROSSPLATFORM-v1.0.0",
+  "schema_version": 1,
+  "seeds": [
+    42,
+    137,
+    2718,
+    31415,
+    65537
+  ],
+  "stage_id": "03",
+  "stage_name": "03_primary_model_development"
+}

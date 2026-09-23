@@ -1,0 +1,25 @@
+view,cue_family,support_n,support_pct,zero_n,null_n,levels
+Original,curiosity_information_withholding,27,0.018,1473,0,3
+Original,direct_address_imperative,48,0.032,1452,0,3
+Original,exaggeration_superlative,29,0.019333333333333334,1471,0,3
+Original,interrogative_structure,111,0.074,1389,0,4
+Original,punctuation_intensity,262,0.17466666666666666,1238,0,5
+Original,sensational_emotional_loading,40,0.02666666666666667,1460,0,4
+Original,specificity_numerals,360,0.24,1140,0,5
+Original,vague_deictic_reference,85,0.056666666666666664,1415,0,4
+Rule A,curiosity_information_withholding,2,0.0043859649122807015,454,0,2
+Rule A,direct_address_imperative,7,0.015350877192982455,449,0,3
+Rule A,exaggeration_superlative,5,0.010964912280701754,451,0,3
+Rule A,interrogative_structure,23,0.05043859649122807,433,0,4
+Rule A,punctuation_intensity,47,0.10307017543859649,409,0,3
+Rule A,sensational_emotional_loading,2,0.0043859649122807015,454,0,3
+Rule A,specificity_numerals,112,0.24561403508771928,344,0,4
+Rule A,vague_deictic_reference,11,0.02412280701754386,445,0,3
+Rule B,curiosity_information_withholding,1,0.002347417840375587,425,0,2
+Rule B,direct_address_imperative,4,0.009389671361502348,422,0,2
+Rule B,exaggeration_superlative,4,0.009389671361502348,422,0,3
+Rule B,interrogative_structure,18,0.04225352112676056,408,0,4
+Rule B,punctuation_intensity,37,0.08685446009389672,389,0,2
+Rule B,sensational_emotional_loading,2,0.004694835680751174,424,0,3
+Rule B,specificity_numerals,109,0.25586854460093894,317,0,4
+Rule B,vague_deictic_reference,9,0.02112676056338028,417,0,2

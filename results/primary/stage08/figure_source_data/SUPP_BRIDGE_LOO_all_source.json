@@ -1,0 +1,24 @@
+{
+  "covers_figure_ids": [
+    "SUPP_BRIDGE_LOO"
+  ],
+  "deterministic_transformation": "Direct canonical LOO point slopes; no CI/p because every LOO inferential result is non-estimable.",
+  "estimability_field": null,
+  "exact_variables_used": [
+    "pair",
+    "omitted_platform",
+    "retained_platforms",
+    "retained_cells",
+    "point_platform_fe_slope",
+    "secondary_robustness_only"
+  ],
+  "figure_id": "SUPP_BRIDGE_LOO",
+  "panel_id": "all",
+  "rows": 16,
+  "source_artifact": [
+    "Stage07/LEAVE_ONE_PLATFORM_OUT_POINT_TABLE.csv",
+    "Stage07/LEAVE_ONE_PLATFORM_OUT_ROBUSTNESS.json"
+  ],
+  "source_csv": "SUPP_BRIDGE_LOO_all_source.csv",
+  "source_csv_sha256": "ec99d5bc95d8c5edaf330e61e5a137a741e357fb469774d1f687d9b17fd15af4"
+}

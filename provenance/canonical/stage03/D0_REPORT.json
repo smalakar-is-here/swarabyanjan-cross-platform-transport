@@ -1,0 +1,131 @@
+{
+  "checks": [
+    {
+      "check": "train_row_retention_ge_0.80",
+      "pass": true,
+      "value": 0.9727834671095119
+    },
+    {
+      "check": "train_prevalence_change_le_5pp",
+      "pass": true,
+      "value": 0.004807762980335306
+    },
+    {
+      "check": "train_class_0_retention_ge_0.80",
+      "pass": true,
+      "value": 0.9799435028248588
+    },
+    {
+      "check": "train_class_0_count_ge_2000",
+      "pass": true,
+      "value": 6938
+    },
+    {
+      "check": "train_class_1_retention_ge_0.80",
+      "pass": true,
+      "value": 0.9592976855546688
+    },
+    {
+      "check": "train_class_1_count_ge_2000",
+      "pass": true,
+      "value": 3606
+    },
+    {
+      "check": "dev_row_retention_ge_0.80",
+      "pass": true,
+      "value": 0.9128630705394191
+    },
+    {
+      "check": "dev_prevalence_change_le_5pp",
+      "pass": true,
+      "value": 0.01961523953225197
+    },
+    {
+      "check": "dev_class_0_retention_ge_0.80",
+      "pass": true,
+      "value": 0.940279542566709
+    },
+    {
+      "check": "dev_class_0_count_ge_250",
+      "pass": true,
+      "value": 740
+    },
+    {
+      "check": "dev_class_1_retention_ge_0.80",
+      "pass": true,
+      "value": 0.861244019138756
+    },
+    {
+      "check": "dev_class_1_count_ge_250",
+      "pass": true,
+      "value": 360
+    },
+    {
+      "check": "test_row_retention_ge_0.80",
+      "pass": true,
+      "value": 0.9243027888446215
+    },
+    {
+      "check": "test_prevalence_change_le_5pp",
+      "pass": true,
+      "value": 0.010689998626184916
+    },
+    {
+      "check": "test_class_0_retention_ge_0.80",
+      "pass": true,
+      "value": 0.9395491803278688
+    },
+    {
+      "check": "test_class_0_count_ge_500",
+      "pass": true,
+      "value": 1834
+    },
+    {
+      "check": "test_class_1_retention_ge_0.80",
+      "pass": true,
+      "value": 0.8962264150943396
+    },
+    {
+      "check": "test_class_1_count_ge_500",
+      "pass": true,
+      "value": 950
+    },
+    {
+      "check": "clean_train_dev_normalized_overlap_zero",
+      "pass": true,
+      "value": 0
+    },
+    {
+      "check": "clean_train_test_normalized_overlap_zero",
+      "pass": true,
+      "value": 0
+    },
+    {
+      "check": "clean_dev_test_normalized_overlap_zero",
+      "pass": true,
+      "value": 0
+    },
+    {
+      "check": "clean_train_conflicting_title_groups_zero",
+      "pass": true,
+      "value": 0
+    },
+    {
+      "check": "clean_dev_conflicting_title_groups_zero",
+      "pass": true,
+      "value": 0
+    },
+    {
+      "check": "clean_test_conflicting_title_groups_zero",
+      "pass": true,
+      "value": 0
+    }
+  ],
+  "clean_split_summary_csv": "CLEAN_SPLIT_SUMMARY.csv",
+  "decontamination_rule_version": "BANGLABAIT-PROTECTED-TITLE-DECONTAM-v1.0.0",
+  "derived_manifest_sha256": "6924c4d65b64fb0c3660e7d7b2816d671af4e9f075feba5ebafe5e28d15a62dd",
+  "gate": "D0",
+  "schema_version": 1,
+  "scientific_firewall_note": "DEV/TEST labels were read only for D0 integrity/support auditing; no DEV/TEST value may enter model development.",
+  "status": "PASS"
+}

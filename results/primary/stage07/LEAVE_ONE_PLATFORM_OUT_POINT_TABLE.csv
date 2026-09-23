@@ -1,0 +1,17 @@
+pair,omitted_platform,retained_platforms,retained_cells,point_platform_fe_slope,secondary_robustness_only
+abs_delta_rd__vs__lift_deterioration,news,facebook|youtube|twitter,24,0.2513146680974863,True
+abs_delta_rd__vs__lift_deterioration,facebook,news|youtube|twitter,24,0.2507062010805864,True
+abs_delta_rd__vs__lift_deterioration,youtube,news|facebook|twitter,24,0.2875230985714485,True
+abs_delta_rd__vs__lift_deterioration,twitter,news|facebook|youtube,24,-0.03050166644214523,True
+abs_delta_rd__vs__error_capture_deterioration,news,facebook|youtube|twitter,24,-0.013504039725412828,True
+abs_delta_rd__vs__error_capture_deterioration,facebook,news|youtube|twitter,24,-0.008330423805684625,True
+abs_delta_rd__vs__error_capture_deterioration,youtube,news|facebook|twitter,24,-0.015324834307120129,True
+abs_delta_rd__vs__error_capture_deterioration,twitter,news|facebook|youtube,24,-0.04001004501917183,True
+abs_delta_nll_gap__vs__lift_deterioration,news,facebook|youtube|twitter,24,0.12806692485690876,True
+abs_delta_nll_gap__vs__lift_deterioration,facebook,news|youtube|twitter,24,0.22991682547200457,True
+abs_delta_nll_gap__vs__lift_deterioration,youtube,news|facebook|twitter,24,0.18516076666068407,True
+abs_delta_nll_gap__vs__lift_deterioration,twitter,news|facebook|youtube,24,0.0046690724417487025,True
+abs_delta_nll_gap__vs__error_capture_deterioration,news,facebook|youtube|twitter,24,-0.0060562089945278424,True
+abs_delta_nll_gap__vs__error_capture_deterioration,facebook,news|youtube|twitter,24,-0.0004396473888171606,True
+abs_delta_nll_gap__vs__error_capture_deterioration,youtube,news|facebook|twitter,24,-0.005163575862071825,True
+abs_delta_nll_gap__vs__error_capture_deterioration,twitter,news|facebook|youtube,24,-0.009863922365628271,True

@@ -1,0 +1,10 @@
+{
+  "details": {
+    "checksum_entries": 7,
+    "output_root": "/kaggle/working/03_results/04_calibration"
+  },
+  "message": "Scalar temperature calibration completed on CLEAN DEV only",
+  "stage_id": "04",
+  "status": "PASS",
+  "timestamp_utc": "2026-09-08T07:41:13.979652+00:00"
+}

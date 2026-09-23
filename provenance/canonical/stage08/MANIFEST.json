@@ -1,0 +1,393 @@
+{
+  "artifacts": {
+    "FIGURE_SOURCE_COVERAGE.json": "c5ea11bfe0da33f36ac3347deb110013cee00b8570b14bce2b1cd8a4e4d3a9f7",
+    "INPUT_HASHES.json": "1269918fb9e9d72ee4b652c1cd532f2990ecc232a1e0ea1d1cb5176d6054f5be",
+    "PROVENANCE_REPORT.json": "1ac786426624f92fe02798cae3852ee839b46f28e674e30d1753f1b579e275d8",
+    "SCHEMA_VALIDATION.json": "cc295fd6572b731f50fd70bd6fef12074a320a4605be6a2047f9105bb807d7a3",
+    "figure_source_data/FIG01_STUDY_DESIGN_pipeline_source.csv": "6958cd83586423c75daea293c1ff98a5c60d8b1701e444702db63d23f3c54997",
+    "figure_source_data/FIG01_STUDY_DESIGN_pipeline_source.json": "7a068950d801b98959dad6e72d1ec2efe5a43a572b37dbdbbf14c59492943113",
+    "figure_source_data/FIG02_H1_H2_A_source.csv": "f8e0b41e7c1c90b9ff314012759ad9a3715383a48c8912131455924567a781c3",
+    "figure_source_data/FIG02_H1_H2_A_source.json": "8d970e74d6e35f39256fbe4c1167b74c8d91c1d0091ca989f16a6413add708a9",
+    "figure_source_data/FIG02_H1_H2_B_C_source.csv": "b88aa86e84e9b49810f07a091955736dc8291174c758c63e607c16454027327f",
+    "figure_source_data/FIG02_H1_H2_B_C_source.json": "6fea171118b065db5b9260bfc4eababad7a1a0e10ddf0f0442b1df38bfa98553",
+    "figure_source_data/FIG02_H1_H2_D_source.csv": "1dc032bfd713eaef5fb1dd071d46cef96d2e74db31a2e4f001a94e0c38b44590",
+    "figure_source_data/FIG02_H1_H2_D_source.json": "2a20fb5d9e2a9662244ca2400267988612b68772e5529522d802f845d9f3d56e",
+    "figure_source_data/FIG03_H3_CUE_TRANSPORT_A_B_source.csv": "de3b2f599a85bd115b2b0688bdbbb1e30cf5a830236ee71df3abc5ef4aa2535f",
+    "figure_source_data/FIG03_H3_CUE_TRANSPORT_A_B_source.json": "d6d5403cd3a0aefcd23805806fd0ab7ac13906fc1195afd6cded736c42646da2",
+    "figure_source_data/FIG04_H4_FIXED_BUDGET_budget_sensitivity_source.csv": "376d23031ec3b4485b8216c623dc1386c76e7cdf0df9fc62973decb197ad75e8",
+    "figure_source_data/FIG04_H4_FIXED_BUDGET_budget_sensitivity_source.json": "b7f50eacdf7189887360f8e45e687290796f3d3b8ae55deb79f09af0ca097bfd",
+    "figure_source_data/FIG04_H4_FIXED_BUDGET_primary_10pct_source.csv": "b8e4222ff2331af3c105171b2231c436fa265bf2430b09d16c17be557c4face3",
+    "figure_source_data/FIG04_H4_FIXED_BUDGET_primary_10pct_source.json": "7638ae0871ac5cc47a9c74e59769a4f64e4d6d50cc7ffb2cf11778cc8691c5bb",
+    "figure_source_data/FIG05_H3_H4_BRIDGE_abs_delta_nll_gap__vs__error_capture_deterioration_source.csv": "03da1e4f6f951fb950a3915b259b39f927d06472cc4467426a6db99294971abe",
+    "figure_source_data/FIG05_H3_H4_BRIDGE_abs_delta_nll_gap__vs__error_capture_deterioration_source.json": "00a6cfc77bfc4486b1ecf020ebc71f74fc9db05567282711bf39d9d4e3d85a7a",
+    "figure_source_data/FIG05_H3_H4_BRIDGE_abs_delta_nll_gap__vs__lift_deterioration_source.csv": "5ab49bc3584fe3b40b246880fb82ad393d9568fa8ae02dc9df427fa80674abf6",
+    "figure_source_data/FIG05_H3_H4_BRIDGE_abs_delta_nll_gap__vs__lift_deterioration_source.json": "4639b4fe06c21c5358684109ab607992943ecc6021ecc7b73733b77c1e24f5dd",
+    "figure_source_data/FIG05_H3_H4_BRIDGE_abs_delta_rd__vs__error_capture_deterioration_source.csv": "0705f3df28b2e5fdb6ab2ca9bc77866009e3bcf8cb518fb2ba93c283f211324b",
+    "figure_source_data/FIG05_H3_H4_BRIDGE_abs_delta_rd__vs__error_capture_deterioration_source.json": "655fb532a81fa92eecf6074b8c9bc8efa191038d95b74ab7893ffd43e08accfd",
+    "figure_source_data/FIG05_H3_H4_BRIDGE_abs_delta_rd__vs__lift_deterioration_source.csv": "a0068984b8ab49d3fa62332dc53858af20b372f78f81387da2892d28ca1e38cb",
+    "figure_source_data/FIG05_H3_H4_BRIDGE_abs_delta_rd__vs__lift_deterioration_source.json": "2063c4a973f6ee529763fcab40f8e0d89e42869249cd51ed1302d83477ded252",
+    "figure_source_data/FIGURE_SOURCE_DATA_INDEX.json": "04085ae059e2fa98eeaa2e59ac377d93cf0e6da7333d696e7a3f9d1502122bfb",
+    "figure_source_data/SUPP_BAITBUSTER_H3_A_B_source.csv": "4b92f8dd3f762cf39216c5290e2db0e406c32a498cef6e24109c8ad74cb9b57c",
+    "figure_source_data/SUPP_BAITBUSTER_H3_A_B_source.json": "595efbe092f14b1d7e6713de7904d888058da6f13c0895b8a58b4273cee8f18c",
+    "figure_source_data/SUPP_BRIDGE_LOO_all_source.csv": "ec99d5bc95d8c5edaf330e61e5a137a741e357fb469774d1f687d9b17fd15af4",
+    "figure_source_data/SUPP_BRIDGE_LOO_all_source.json": "b187c025a8dfde3ff8cc84a7afbebf832d2650d51b3b956e2c3d38ebdae91d88",
+    "figure_source_data/SUPP_H1_H2_MODEL_SEED_all_source.csv": "b88aa86e84e9b49810f07a091955736dc8291174c758c63e607c16454027327f",
+    "figure_source_data/SUPP_H1_H2_MODEL_SEED_all_source.json": "17478d2574a49e11e6c24dc916f527ee315d0c0d163f58da50e75a13e4b76964",
+    "figure_source_data/SUPP_H3P_SHARED_all_source.csv": "b74590e664f8218c949a8676c187b80c811765f0bc65f7f12595efd77fdb4b70",
+    "figure_source_data/SUPP_H3P_SHARED_all_source.json": "43c1871e6ca07290280281288d401e405c4643bb254b758ce6fdafc3880b1556",
+    "figure_source_data/SUPP_H3_SPARSITY_support_source.csv": "6aad2c616a0e4afe110e3245f091ef2bb67465d340e0e29cdf46b90f47a22d60",
+    "figure_source_data/SUPP_H3_SPARSITY_support_source.json": "75eaba6aac35b1f8338ff79512471fa7c5d48b9674ef8d4857b0256487f66ba1",
+    "figure_source_data/SUPP_H4_05PCT_A_C_source.csv": "d0afb00937fc5ca78c7cc468c738409cbddb62589564c0bfbc3063fc1f4ad04a",
+    "figure_source_data/SUPP_H4_05PCT_A_C_source.json": "e05c1a8b72a3f369ae01e6fe4f5aad90236085bd29c32676ffda17ef9ba6b691",
+    "figure_source_data/SUPP_H4_20PCT_A_C_source.csv": "1e0ff1b23f7434160311eced872f984c16cb6fc59401a116b816d392fa198987",
+    "figure_source_data/SUPP_H4_20PCT_A_C_source.json": "6996bdec6d21d7cc2fcff890fe18aa12da31153326e46a5b99bc9f75918bf9fd",
+    "figure_source_data/SUPP_H4_MODEL_SEED_all_source.csv": "7b502ab987ac84c4e1d3cd582561f4a2e7ee432e807a9383739d1ee3357d4a26",
+    "figure_source_data/SUPP_H4_MODEL_SEED_all_source.json": "e066f944b7ed304d0bb338755138b432b523ce1728e33d20eb2bbcf53a961a04",
+    "figure_source_data/SUPP_RISK_COVERAGE_all_source.csv": "37170dc9daba351504d4c13d112fcfddfc57dde802036c8810624201eae086b8",
+    "figure_source_data/SUPP_RISK_COVERAGE_all_source.json": "a56bc790514c5cf0ff5378714b0dfac1b77cb11fd84b0825b19011cf259dfbf4",
+    "figure_source_data/SUPP_SENSITIVITY_A_B_source.csv": "2e336246204b038513f212b793e2aed195d8b1416729f84ea21e67be2f09df98",
+    "figure_source_data/SUPP_SENSITIVITY_A_B_source.json": "03cc3b8a38e9e6a5c0b9bf2949852b132edc573ef77670d977e4e3b4cb8c82d4",
+    "figures/main/FIG01_STUDY_DESIGN.pdf": "16b9c6f5b23e5cee3cd203009ac969d84f875fc8367fc8e847eb1604f8347eb1",
+    "figures/main/FIG01_STUDY_DESIGN.png": "9f57e6c33848e0854df8351eb5aa0f25ad6a4f28859c039bb286dd430556857b",
+    "figures/main/FIG01_STUDY_DESIGN.svg": "dadd351cd164fbb07ba1c78c301cc64ac24f56490d2ae9f4e2bb64578ac5b7e6",
+    "figures/main/FIG02_H1_H2.pdf": "40827c924a196f62bf97add5a891b0c3f8f3b4161c4c83ab0d12de88aa308c72",
+    "figures/main/FIG02_H1_H2.png": "74652dc92c9dc2133ac4ffc5f9570717c365e6884624f290acaee577425f759a",
+    "figures/main/FIG02_H1_H2.svg": "c82df1bc1faded5e88c74c6681c356ead9a407a29fe873ca9c308d674a0a1c0e",
+    "figures/main/FIG03_H3_CUE_TRANSPORT.pdf": "055070b27e047a21e1db04d4cb41a948ed3e8c986d4c96279c8d9a23daa78460",
+    "figures/main/FIG03_H3_CUE_TRANSPORT.png": "1000442bb01b8884209db6b1275b9f679a1150b5d4843ba295ad762f7ae08a99",
+    "figures/main/FIG03_H3_CUE_TRANSPORT.svg": "83fa34500d4f45506f8b8923dc030794e6ab2ba5e14b248ff3042d83955773a8",
+    "figures/main/FIG04_H4_FIXED_BUDGET.pdf": "55eed12ddae9270de85b17b85b41040a94377c220a583d0da564f3a22f958a16",
+    "figures/main/FIG04_H4_FIXED_BUDGET.png": "d4b6428b82b57a83d3dde2336f2fb8397de78c5b914a97c25bc4314c83de3383",
+    "figures/main/FIG04_H4_FIXED_BUDGET.svg": "cedab28de6abdd9c7860b0365ee446399a9fb583795ebd1d28ff64ad89cebb7e",
+    "figures/main/FIG05_H3_H4_BRIDGE.pdf": "b82431421d371ac55748df35260653396544893b975d6ba6d99a6164e6279a51",
+    "figures/main/FIG05_H3_H4_BRIDGE.png": "ba6df6f95fae06ea870a4820f080d2b492cf79747e0191234533e8b4d13846c2",
+    "figures/main/FIG05_H3_H4_BRIDGE.svg": "af5c3cf18804f487e36a7b71a0d0c4eb3f51064201381563523557d1e5352028",
+    "figures/supplementary/SUPP_BAITBUSTER_H3.pdf": "577d4ae00997f570aefd78040e2b736ff03d42a4927a2db69d71aa51cdb20f52",
+    "figures/supplementary/SUPP_BAITBUSTER_H3.png": "b0279ddde7a7d0f11bb6c902924c3120a8d9044e236739ac98b090635937a2d2",
+    "figures/supplementary/SUPP_BAITBUSTER_H3.svg": "e43c5496a1056e3968249bf23166e6646799fd0503c6b05149c32dc4028c707e",
+    "figures/supplementary/SUPP_BRIDGE_LOO.pdf": "e4db1a3a4d6c9238f48cce249616af8a718a6276e6af29c24621cd0c8ed1667a",
+    "figures/supplementary/SUPP_BRIDGE_LOO.png": "79738e83206689ae6fde4a7f82e0d8a745e8852b3d536705a95268a5c0d19a3b",
+    "figures/supplementary/SUPP_BRIDGE_LOO.svg": "3c0dcca870596cad7cdc7106f55e5dfc8f11d9cf449b2a48b4d6af597176ceda",
+    "figures/supplementary/SUPP_H1_H2_MODEL_SEED.pdf": "9ef7a5c6c73bc865d73be6228f08926639747aadc37d705071f2c7195496b44e",
+    "figures/supplementary/SUPP_H1_H2_MODEL_SEED.png": "f2ba5fe2bbe617fc94355e95bd6fab399e36b757a934bf0766e4b5ad130880b9",
+    "figures/supplementary/SUPP_H1_H2_MODEL_SEED.svg": "d25c7eacdcf77538bbc40ae7855211d65cc38bac423b3cf3e786e9ffce0bcfac",
+    "figures/supplementary/SUPP_H3P_curiosity_information_withholding.pdf": "22c46eac0a330cff09fa642ac40dd50de98672f6d04a73d6aa78ad4ade26f23d",
+    "figures/supplementary/SUPP_H3P_curiosity_information_withholding.png": "a959abeb92205bbd486424abcc858c3d4c32de3433b6d343399cc62a6dcb040e",
+    "figures/supplementary/SUPP_H3P_curiosity_information_withholding.svg": "8496121cf173c0b86ed05b2689b15e9c60f2eaabd0d8a681295a5ff30bbd7f56",
+    "figures/supplementary/SUPP_H3P_direct_address_imperative.pdf": "013c2b4820cce4cbb52e4763d933afaf40418a56b7ae82858eb0f9ccc0b714c6",
+    "figures/supplementary/SUPP_H3P_direct_address_imperative.png": "a5cced76b4bec7f9da25797751abfc1a605e6ba4a9c3fab6ab5b7fb87c7710f4",
+    "figures/supplementary/SUPP_H3P_direct_address_imperative.svg": "99d6d38639dae659694c0e2c7a6eeb4880cbe5bcac22c019dfce6a68708941ea",
+    "figures/supplementary/SUPP_H3P_punctuation_intensity.pdf": "11b1832973c5ae98ea0743090e164fe1eebf3c4907bb056e1b504a2715a2cb73",
+    "figures/supplementary/SUPP_H3P_punctuation_intensity.png": "2365f5b40cd4e740c935a03f9a10932aa9b0c2e93456486fb363cd474791987b",
+    "figures/supplementary/SUPP_H3P_punctuation_intensity.svg": "0926da40a65434db731c8c046ef7d105c213783a1b00eb9cf9e4aba7d47191f3",
+    "figures/supplementary/SUPP_H3_SPARSITY.pdf": "4188749431cdd65ca19a4ee204c99f9c0c4039c24a4af7b0f6fbf06aaf94d7e9",
+    "figures/supplementary/SUPP_H3_SPARSITY.png": "e15cefe9b166d4395dca6445d11a307ce33ca1b71b4f82e32b67c988eeaa8b57",
+    "figures/supplementary/SUPP_H3_SPARSITY.svg": "c21e9bb4e528821591ffad09b89541a282cd51d86206e178778eba38239c8346",
+    "figures/supplementary/SUPP_H4_05PCT.pdf": "3432fca1046d9631107925a17b456c92783f336aed443d09b2ca639cc894ef5a",
+    "figures/supplementary/SUPP_H4_05PCT.png": "a3430c1a409721403726c9142f7c6bab723fceaa1cfc7ad3a1f6380a97538599",
+    "figures/supplementary/SUPP_H4_05PCT.svg": "b86c7d100f7cb00e2dbf2069615941ce97dcdd4a9f0616720211713d1641afbd",
+    "figures/supplementary/SUPP_H4_20PCT.pdf": "926b4e2ac04ff11d82289d7d891fa53b24f537998e0df5f5284a7c7b1fc8faa1",
+    "figures/supplementary/SUPP_H4_20PCT.png": "cd634515c1228693ef9f3a361a622b40cebceae40b47f5b71f51386dcbcf57a7",
+    "figures/supplementary/SUPP_H4_20PCT.svg": "d0a99648c9c44f7dbec8e6e6529f9242e8f4d3da84410004c40a591c9a898e08",
+    "figures/supplementary/SUPP_H4_MODEL_SEED.pdf": "a9dc30a96874ef0694efbed3599459fc5d031a9e38021de79f7fff39f852eee3",
+    "figures/supplementary/SUPP_H4_MODEL_SEED.png": "fd34d6167abf5fc64b4de70bc62977113dd169fb6c05bea899a9df339806a6bb",
+    "figures/supplementary/SUPP_H4_MODEL_SEED.svg": "2b3be2ec3765ae7275cbe066c368312721006aa533e0cd1783aa191a49dc54be",
+    "figures/supplementary/SUPP_RISK_COVERAGE.pdf": "8282b77c1d41851d43036e538bda358593a10217459e77b2ac06ad8bf0c7c015",
+    "figures/supplementary/SUPP_RISK_COVERAGE.png": "bee4de2a7eb51b8cceeef04a3cef2cdf2f6dcf8729f11e0ebe25d013b80a8f12",
+    "figures/supplementary/SUPP_RISK_COVERAGE.svg": "5b7c52ed25d68f173c01ecb7592645a733e10ac4bfdcdcc05acd51cd40105d91",
+    "figures/supplementary/SUPP_SENSITIVITY.pdf": "df6ee7158f1eac977630aef69a21abb01744f8df1ac944786750aacc2971f887",
+    "figures/supplementary/SUPP_SENSITIVITY.png": "1c4dde00a38f63bac74cfaabe13fe191f65fa3dce4140cbb815f222560afb8ac",
+    "figures/supplementary/SUPP_SENSITIVITY.svg": "ea313f7d02ce7ac0956e0ad37ee02319afbad64166aef6a905ffb2b196795c54",
+    "tables/main/TABLE01_STUDY_DESIGN_MAP.csv": "080f63c4ea620370604db82bdfb64a66a2742d4c3daa749f9247918ff4b50ee0",
+    "tables/main/TABLE02_H1_H2_SUMMARY.csv": "59626d4f448d7ec72958ce396413e90e955947e2f5c86c3360e5aed00f2890ea",
+    "tables/main/TABLE03_H3_CUE_TRANSPORT.csv": "80952c2f4dd859c711499d0f2d9b13d2b44523aa5af9860d78985e9dde793085",
+    "tables/main/TABLE04_H4_PRIMARY_10PCT_SUMMARY.csv": "97ed0f3ce2062c5b37a1b2d9fefd06ca6ce5b70a51e8b9c80e296bc29d8275c0",
+    "tables/supplementary/SUPP_TABLE01_FULL_H3_32_CELL.csv": "584551acb3add85f4feed90067b255926e3e174806bbd96d90fbaafc236ed1b9",
+    "tables/supplementary/SUPP_TABLE02_H3_SPARSITY.csv": "6aad2c616a0e4afe110e3245f091ef2bb67465d340e0e29cdf46b90f47a22d60",
+    "tables/supplementary/SUPP_TABLE03_H3P.csv": "b74590e664f8218c949a8676c187b80c811765f0bc65f7f12595efd77fdb4b70",
+    "tables/supplementary/SUPP_TABLE04_BAITBUSTER_H3.csv": "325f5924b0c3b7a4e3c1ec6afd314603913bc62e5d7995a00d5afbe055264c63",
+    "tables/supplementary/SUPP_TABLE05_FULL_H4_BUDGET.csv": "fc933b852271c8c5b5d62debb0362fb0227673272b6a936b5c02730ebfa09c11",
+    "tables/supplementary/SUPP_TABLE06_H4_MODEL_SEED.csv": "eb0f2d777be722e36ea7d027a40e5f1a2f7ca2cfc113b9a70d5dd7be2ad03aac",
+    "tables/supplementary/SUPP_TABLE07_LOO_POINT.csv": "ec99d5bc95d8c5edaf330e61e5a137a741e357fb469774d1f687d9b17fd15af4",
+    "tables/supplementary/SUPP_TABLE08_FULL_STATISTICAL_SUMMARY.csv": "0a1e07d73cf35d604960a29e0eb4ddf75bc61b05a9709fc70d52e72089840268",
+    "tables/supplementary/SUPP_TABLE09_PROVENANCE.csv": "6706e41b35ba3889ba621cc9c236054170f31d1ced2c325fc176479bc57f2458"
+  },
+  "canonical_upstream": {
+    "stage05_manifest_sha256": "7246bc3a49a5f8d8472005cea9f6062d118431cd67d5dd2c4fd8f2ee31f52c27",
+    "stage06_manifest_sha256": "5a2962014445c723379b07fcf02e601644818c36e6c15fb7ee9478ca34711285",
+    "stage07_manifest_sha256": "fa8651ff00a3306dfd48ed55d21df3ab2eef2fbd365db33657f5c2413822e714"
+  },
+  "figure_source_data_count": 21,
+  "figures": [
+    {
+      "figure_id": "FIG01_STUDY_DESIGN",
+      "files": {
+        "pdf": "figures/main/FIG01_STUDY_DESIGN.pdf",
+        "png": "figures/main/FIG01_STUDY_DESIGN.png",
+        "svg": "figures/main/FIG01_STUDY_DESIGN.svg"
+      },
+      "main": true,
+      "title": "Source-locked study design and evidence hierarchy"
+    },
+    {
+      "figure_id": "FIG02_H1_H2",
+      "files": {
+        "pdf": "figures/main/FIG02_H1_H2.pdf",
+        "png": "figures/main/FIG02_H1_H2.png",
+        "svg": "figures/main/FIG02_H1_H2.svg"
+      },
+      "main": true,
+      "title": "Cross-platform discrimination and probability reliability"
+    },
+    {
+      "figure_id": "FIG03_H3_CUE_TRANSPORT",
+      "files": {
+        "pdf": "figures/main/FIG03_H3_CUE_TRANSPORT.pdf",
+        "png": "figures/main/FIG03_H3_CUE_TRANSPORT.png",
+        "svg": "figures/main/FIG03_H3_CUE_TRANSPORT.svg"
+      },
+      "main": true,
+      "title": "Prespecified cue transport and estimability"
+    },
+    {
+      "figure_id": "FIG04_H4_FIXED_BUDGET",
+      "files": {
+        "pdf": "figures/main/FIG04_H4_FIXED_BUDGET.pdf",
+        "png": "figures/main/FIG04_H4_FIXED_BUDGET.png",
+        "svg": "figures/main/FIG04_H4_FIXED_BUDGET.svg"
+      },
+      "main": true,
+      "title": "Fixed-budget operational degradation"
+    },
+    {
+      "figure_id": "FIG05_H3_H4_BRIDGE",
+      "files": {
+        "pdf": "figures/main/FIG05_H3_H4_BRIDGE.pdf",
+        "png": "figures/main/FIG05_H3_H4_BRIDGE.png",
+        "svg": "figures/main/FIG05_H3_H4_BRIDGE.svg"
+      },
+      "main": true,
+      "title": "Exploratory H3→H4 bridge"
+    },
+    {
+      "figure_id": "SUPP_H3P_curiosity_information_withholding",
+      "files": {
+        "pdf": "figures/supplementary/SUPP_H3P_curiosity_information_withholding.pdf",
+        "png": "figures/supplementary/SUPP_H3P_curiosity_information_withholding.png",
+        "svg": "figures/supplementary/SUPP_H3P_curiosity_information_withholding.svg"
+      },
+      "main": false,
+      "title": "H3-P curiosity_information_withholding"
+    },
+    {
+      "figure_id": "SUPP_H3P_direct_address_imperative",
+      "files": {
+        "pdf": "figures/supplementary/SUPP_H3P_direct_address_imperative.pdf",
+        "png": "figures/supplementary/SUPP_H3P_direct_address_imperative.png",
+        "svg": "figures/supplementary/SUPP_H3P_direct_address_imperative.svg"
+      },
+      "main": false,
+      "title": "H3-P direct_address_imperative"
+    },
+    {
+      "figure_id": "SUPP_H3P_punctuation_intensity",
+      "files": {
+        "pdf": "figures/supplementary/SUPP_H3P_punctuation_intensity.pdf",
+        "png": "figures/supplementary/SUPP_H3P_punctuation_intensity.png",
+        "svg": "figures/supplementary/SUPP_H3P_punctuation_intensity.svg"
+      },
+      "main": false,
+      "title": "H3-P punctuation_intensity"
+    },
+    {
+      "figure_id": "SUPP_BAITBUSTER_H3",
+      "files": {
+        "pdf": "figures/supplementary/SUPP_BAITBUSTER_H3.pdf",
+        "png": "figures/supplementary/SUPP_BAITBUSTER_H3.png",
+        "svg": "figures/supplementary/SUPP_BAITBUSTER_H3.svg"
+      },
+      "main": false,
+      "title": "BaitBuster independent-collection H3 replication"
+    },
+    {
+      "figure_id": "SUPP_H3_SPARSITY",
+      "files": {
+        "pdf": "figures/supplementary/SUPP_H3_SPARSITY.pdf",
+        "png": "figures/supplementary/SUPP_H3_SPARSITY.png",
+        "svg": "figures/supplementary/SUPP_H3_SPARSITY.svg"
+      },
+      "main": false,
+      "title": "H3 sparsity and observed cue support"
+    },
+    {
+      "figure_id": "SUPP_H4_05PCT",
+      "files": {
+        "pdf": "figures/supplementary/SUPP_H4_05PCT.pdf",
+        "png": "figures/supplementary/SUPP_H4_05PCT.png",
+        "svg": "figures/supplementary/SUPP_H4_05PCT.svg"
+      },
+      "main": false,
+      "title": "H4 5% budget"
+    },
+    {
+      "figure_id": "SUPP_H4_20PCT",
+      "files": {
+        "pdf": "figures/supplementary/SUPP_H4_20PCT.pdf",
+        "png": "figures/supplementary/SUPP_H4_20PCT.png",
+        "svg": "figures/supplementary/SUPP_H4_20PCT.svg"
+      },
+      "main": false,
+      "title": "H4 20% budget"
+    },
+    {
+      "figure_id": "SUPP_RISK_COVERAGE",
+      "files": {
+        "pdf": "figures/supplementary/SUPP_RISK_COVERAGE.pdf",
+        "png": "figures/supplementary/SUPP_RISK_COVERAGE.png",
+        "svg": "figures/supplementary/SUPP_RISK_COVERAGE.svg"
+      },
+      "main": false,
+      "title": "Risk-coverage curves"
+    },
+    {
+      "figure_id": "SUPP_H1_H2_MODEL_SEED",
+      "files": {
+        "pdf": "figures/supplementary/SUPP_H1_H2_MODEL_SEED.pdf",
+        "png": "figures/supplementary/SUPP_H1_H2_MODEL_SEED.png",
+        "svg": "figures/supplementary/SUPP_H1_H2_MODEL_SEED.svg"
+      },
+      "main": false,
+      "title": "Per-model/per-seed H1/H2"
+    },
+    {
+      "figure_id": "SUPP_H4_MODEL_SEED",
+      "files": {
+        "pdf": "figures/supplementary/SUPP_H4_MODEL_SEED.pdf",
+        "png": "figures/supplementary/SUPP_H4_MODEL_SEED.png",
+        "svg": "figures/supplementary/SUPP_H4_MODEL_SEED.svg"
+      },
+      "main": false,
+      "title": "H4 model×seed primary-budget results"
+    },
+    {
+      "figure_id": "SUPP_BRIDGE_LOO",
+      "files": {
+        "pdf": "figures/supplementary/SUPP_BRIDGE_LOO.pdf",
+        "png": "figures/supplementary/SUPP_BRIDGE_LOO.png",
+        "svg": "figures/supplementary/SUPP_BRIDGE_LOO.svg"
+      },
+      "main": false,
+      "title": "H3→H4 LOO robustness"
+    },
+    {
+      "figure_id": "SUPP_SENSITIVITY",
+      "files": {
+        "pdf": "figures/supplementary/SUPP_SENSITIVITY.pdf",
+        "png": "figures/supplementary/SUPP_SENSITIVITY.png",
+        "svg": "figures/supplementary/SUPP_SENSITIVITY.svg"
+      },
+      "main": false,
+      "title": "Prevalence and structural sensitivity"
+    }
+  ],
+  "manifest_payload_sha256": "b31a22e5bc820404cb9750d87a704f600bd7be4c3b37bdf75f50cdedd7b1998e",
+  "omissions": [],
+  "protocol_version": "SWARABYANJAN-CROSSPLATFORM-v1.0.0",
+  "reproduction_version": "SWARABYANJAN-MANUSCRIPT-REPRO-vFINAL-1.0.0",
+  "schema_version": 1,
+  "scientific_role": "PURE_DETERMINISTIC_REPRODUCTION_NO_NEW_INFERENCE",
+  "stage_id": "08",
+  "tables": [
+    {
+      "file": "tables/main/TABLE01_STUDY_DESIGN_MAP.csv",
+      "main": true,
+      "rows": 6,
+      "table_id": "TABLE01_STUDY_DESIGN_MAP",
+      "title": "Study design / hypothesis-to-analysis map"
+    },
+    {
+      "file": "tables/main/TABLE02_H1_H2_SUMMARY.csv",
+      "main": true,
+      "rows": 40,
+      "table_id": "TABLE02_H1_H2_SUMMARY",
+      "title": "H1/H2 canonical model×domain seed-consensus summary"
+    },
+    {
+      "file": "tables/main/TABLE03_H3_CUE_TRANSPORT.csv",
+      "main": true,
+      "rows": 32,
+      "table_id": "TABLE03_H3_CUE_TRANSPORT",
+      "title": "H3 cue transport summary with NE explicit"
+    },
+    {
+      "file": "tables/main/TABLE04_H4_PRIMARY_10PCT_SUMMARY.csv",
+      "main": true,
+      "rows": 15,
+      "table_id": "TABLE04_H4_PRIMARY_10PCT_SUMMARY",
+      "title": "H4 primary 10% status/significance summary"
+    },
+    {
+      "file": "tables/supplementary/SUPP_TABLE01_FULL_H3_32_CELL.csv",
+      "main": false,
+      "rows": 32,
+      "table_id": "SUPP_TABLE01_FULL_H3_32_CELL",
+      "title": "Full H3 32-cell table"
+    },
+    {
+      "file": "tables/supplementary/SUPP_TABLE02_H3_SPARSITY.csv",
+      "main": false,
+      "rows": 48,
+      "table_id": "SUPP_TABLE02_H3_SPARSITY",
+      "title": "H3 sparsity diagnostics"
+    },
+    {
+      "file": "tables/supplementary/SUPP_TABLE03_H3P.csv",
+      "main": false,
+      "rows": 150,
+      "table_id": "SUPP_TABLE03_H3P",
+      "title": "H3-P perturbation results"
+    },
+    {
+      "file": "tables/supplementary/SUPP_TABLE04_BAITBUSTER_H3.csv",
+      "main": false,
+      "rows": 8,
+      "table_id": "SUPP_TABLE04_BAITBUSTER_H3",
+      "title": "BaitBuster H3 replication"
+    },
+    {
+      "file": "tables/supplementary/SUPP_TABLE05_FULL_H4_BUDGET.csv",
+      "main": false,
+      "rows": 360,
+      "table_id": "SUPP_TABLE05_FULL_H4_BUDGET",
+      "title": "Full H4 fixed-budget point table"
+    },
+    {
+      "file": "tables/supplementary/SUPP_TABLE06_H4_MODEL_SEED.csv",
+      "main": false,
+      "rows": 300,
+      "table_id": "SUPP_TABLE06_H4_MODEL_SEED",
+      "title": "H4 model×seed bootstrap rows"
+    },
+    {
+      "file": "tables/supplementary/SUPP_TABLE07_LOO_POINT.csv",
+      "main": false,
+      "rows": 16,
+      "table_id": "SUPP_TABLE07_LOO_POINT",
+      "title": "LOO bridge point results"
+    },
+    {
+      "file": "tables/supplementary/SUPP_TABLE08_FULL_STATISTICAL_SUMMARY.csv",
+      "main": false,
+      "rows": 4,
+      "table_id": "SUPP_TABLE08_FULL_STATISTICAL_SUMMARY",
+      "title": "Canonical statistical-summary references"
+    },
+    {
+      "file": "tables/supplementary/SUPP_TABLE09_PROVENANCE.csv",
+      "main": false,
+      "rows": 3,
+      "table_id": "SUPP_TABLE09_PROVENANCE",
+      "title": "Provenance / reproducibility summary"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "artifacts": {
+    "BOOTSTRAP_RUNTIME.json": "9a25abe5ce302a89db56f5c3bb02e527a1f6a962bccb3236c4757ba376bdd735",
+    "BRIDGE_32_CELL_POINT_TABLE.csv": "f5ddf38886284fee0b9dea36d023e72118a6d483b228d260db2469d6072f6917",
+    "BRIDGE_POINT_ASSOCIATIONS.json": "12b2fb8d037c390c6ceec34e76e07eb099fc731d1ebe736bf92d8f25b2deb41d",
+    "FROZEN_INPUT_SUMMARY.json": "877f243bbbea5af2cd21fb5eb4099c2726f37f26c956a5a1242e7b83ea8b44cc",
+    "H3_H4_BRIDGE_RESULTS.json": "c5f5a7f3d8536bb93e11e0dd3215dd34bce79649c5e05ffb4198e75121b7a513",
+    "H3_POINT_PARITY.json": "630635e8e0faf224a6513074a9cfa4ea5e1c162856df7d2939a11678d15fec76",
+    "H4_POLICY_POINT_PARITY.json": "5e00798ee4cc0a1a9d56d4540242dc32345bb99210e790282ec25a3a0555332e",
+    "LEAVE_ONE_PLATFORM_OUT_POINT_TABLE.csv": "33c708e1c0b893c4ed6402767681d25f6d6168fe1d1a3afd71c597febee478f9",
+    "LEAVE_ONE_PLATFORM_OUT_ROBUSTNESS.json": "f97fbdfc917e21c803fe030ab5cee3e5d91200f62c534d4f34a41cea9ede606e",
+    "UPSTREAM_PROVENANCE_GATE.json": "a528a597c00c2581cbb21a7eb3da6f125856d1b93e020a2cc6114add3389403e"
+  },
+  "bridge_version": "H3-H4-BRIDGE-vFINAL-1.0.1",
+  "execution_utc": "2026-09-22T19:23:42.695834+00:00",
+  "manifest_payload_sha256": "6b9ec8e08a3c26d13cb93354aadc47d93aa95072ebec36632a729a9b391ceaac",
+  "protocol_version": "SWARABYANJAN-CROSSPLATFORM-v1.0.0",
+  "schema_version": 1,
+  "scientific_contract": {
+    "bootstrap_reps": 5000,
+    "bootstrap_seed": 20260912,
+    "causal": false,
+    "conditional_valid_only_inference": false,
+    "cue_specific_reranking": false,
+    "cues": [
+      "curiosity_information_withholding",
+      "direct_address_imperative",
+      "exaggeration_superlative",
+      "interrogative_structure",
+      "punctuation_intensity",
+      "sensational_emotional_loading",
+      "specificity_numerals",
+      "vague_deictic_reference"
+    ],
+    "exploratory_secondary": true,
+    "loo_modifies_primary_bridge": false,
+    "loo_secondary_robustness": true,
+    "models": [
+      "ebm",
+      "tfidf_lr",
+      "banglabert",
+      "xlmr"
+    ],
+    "platforms": [
+      "news",
+      "facebook",
+      "youtube",
+      "twitter"
+    ],
+    "posthoc_cell_deletion": false,
+    "primary_budget": 0.1,
+    "seeds": [
+      42,
+      137,
+      2718,
+      31415,
+      65537
+    ]
+  },
+  "stage_id": "07",
+  "stage_name": "07_H3_H4_BRIDGE_EXPLORATORY_vFINAL",
+  "summary_sha256": "2cff0fbf14cf76ef6341d6c39abe003bfa41090923e6c539f98d3b9465733514",
+  "upstream": {
+    "corrected_h3_sha256": "f78201c14e91a3169afa03e03c17a2c80dea419b9a2ce9fcd6e4b40af9443787",
+    "mode": "EXACT_CANONICAL_STAGE05_TO_STAGE06_CHAIN",
+    "prediction_sha256": {
+      "BAITBUSTER_HUMAN_PREDICTIONS.parquet": "a3e95820c62de00984a189e2c250f7fffd223ad4b3954db04a5368c7a544b7b9",
+      "BANGLACLICK_PLATFORM_PREDICTIONS.parquet": "a93e45a8fd37a8ee1938dc606c08fa450b2cb73d520a78e8e81595b1c26b587f",
+      "LOCKED_SOURCE_TEST_PREDICTIONS.parquet": "df863d7a24f7d451451822890de58613c3295eb0bcc1aa882150137b0aa9880a"
+    },
+    "stage05_checksum_sha256": "7171a0e581d8fb4bde2a630f4de631d74962954ee3890b8123d78a720823450a",
+    "stage05_manifest_sha256": "7246bc3a49a5f8d8472005cea9f6062d118431cd67d5dd2c4fd8f2ee31f52c27",
+    "stage05_status_sha256": "005399d829bb66870810faa3f140757a7ee3d82eac4bae394fbbe79e701db8e6",
+    "stage06_checksum_sha256": "5f8d0f7fc9cde5e0f159bf4c5f4ca8387441675407b4c43ab87a8063afac3beb",
+    "stage06_h4_sha256": "d6c1ab53287c7d21f8741316f8aff20d1cb572789a51bc14991ddcc23b381655",
+    "stage06_manifest_sha256": "5a2962014445c723379b07fcf02e601644818c36e6c15fb7ee9478ca34711285",
+    "stage06_status_sha256": "769f33b4771f3ec55700384ae6db7e9e2feb115d23717b27cbd9c17e4983538d"
+  }
+}

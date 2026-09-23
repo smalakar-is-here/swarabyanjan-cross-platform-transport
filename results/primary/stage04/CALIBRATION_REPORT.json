@@ -1,0 +1,408 @@
+{
+  "method": "scalar_temperature_scaling",
+  "rows": [
+    {
+      "model": "banglabert",
+      "nll_gain": 0.018257563920956565,
+      "seed": 42,
+      "temperature": 1.369973494426225,
+      "temperature_scaled": {
+        "balanced_brier": 0.15411582372293398,
+        "brier": 0.1308593951995656,
+        "calibration_intercept": -0.07969425363420879,
+        "calibration_slope": 0.9852359069607415,
+        "nll": 0.41143079399136756
+      },
+      "uncalibrated": {
+        "balanced_brier": 0.16099512630135873,
+        "brier": 0.13561390072115015,
+        "calibration_intercept": -0.07969425363420908,
+        "calibration_slope": 0.7191642108180927,
+        "nll": 0.4296883579123241
+      }
+    },
+    {
+      "model": "banglabert",
+      "nll_gain": 0.025532228221956776,
+      "seed": 137,
+      "temperature": 1.441680411687764,
+      "temperature_scaled": {
+        "balanced_brier": 0.16144261769206175,
+        "brier": 0.1320673856226461,
+        "calibration_intercept": 0.0816373152823388,
+        "calibration_slope": 1.0193555381999089,
+        "nll": 0.41386766243539747
+      },
+      "uncalibrated": {
+        "balanced_brier": 0.17177058321499425,
+        "brier": 0.13893721956964405,
+        "calibration_intercept": 0.08163731528233956,
+        "calibration_slope": 0.7070606841405005,
+        "nll": 0.43939989065735424
+      }
+    },
+    {
+      "model": "banglabert",
+      "nll_gain": 0.03125282600730073,
+      "seed": 2718,
+      "temperature": 1.4994507376330983,
+      "temperature_scaled": {
+        "balanced_brier": 0.1614325331464077,
+        "brier": 0.13194615212484548,
+        "calibration_intercept": 0.0869432955475665,
+        "calibration_slope": 1.0206670737649581,
+        "nll": 0.4163740667717687
+      },
+      "uncalibrated": {
+        "balanced_brier": 0.17133470190900882,
+        "brier": 0.13854994894808695,
+        "calibration_intercept": 0.08694329554756661,
+        "calibration_slope": 0.6806939688969671,
+        "nll": 0.4476268927790694
+      }
+    },
+    {
+      "model": "banglabert",
+      "nll_gain": 0.02033940207361279,
+      "seed": 31415,
+      "temperature": 1.3887987758466096,
+      "temperature_scaled": {
+        "balanced_brier": 0.1583638763261664,
+        "brier": 0.13274973718585792,
+        "calibration_intercept": -0.041807062052235756,
+        "calibration_slope": 0.9912996816136118,
+        "nll": 0.41756008938678674
+      },
+      "uncalibrated": {
+        "balanced_brier": 0.16641818976135883,
+        "brier": 0.13809056144270593,
+        "calibration_intercept": -0.041807062052236166,
+        "calibration_slope": 0.7137820819357487,
+        "nll": 0.4378994914603995
+      }
+    },
+    {
+      "model": "banglabert",
+      "nll_gain": 0.02268838225473857,
+      "seed": 65537,
+      "temperature": 1.4157469619606533,
+      "temperature_scaled": {
+        "balanced_brier": 0.15581692626888938,
+        "brier": 0.1289868282319389,
+        "calibration_intercept": 0.039041826870769895,
+        "calibration_slope": 1.0083760377596709,
+        "nll": 0.4083793454111535
+      },
+      "uncalibrated": {
+        "balanced_brier": 0.1634577132309892,
+        "brier": 0.13416570519903423,
+        "calibration_intercept": 0.0390418268707696,
+        "calibration_slope": 0.712257249956009,
+        "nll": 0.4310677276658921
+      }
+    },
+    {
+      "model": "ebm",
+      "nll_gain": 0.0014359846123290776,
+      "seed": 42,
+      "temperature": 0.8922615302414745,
+      "temperature_scaled": {
+        "balanced_brier": 0.22184295933074438,
+        "brier": 0.1747775050011396,
+        "calibration_intercept": 0.04064041822384343,
+        "calibration_slope": 1.02228912495073,
+        "nll": 0.5299317009034813
+      },
+      "uncalibrated": {
+        "balanced_brier": 0.21867046683224942,
+        "brier": 0.1753707839977125,
+        "calibration_intercept": 0.04064041822384394,
+        "calibration_slope": 1.1457281192814253,
+        "nll": 0.5313676855158104
+      }
+    },
+    {
+      "model": "ebm",
+      "nll_gain": 0.0014385554112469334,
+      "seed": 137,
+      "temperature": 0.8921729127996891,
+      "temperature_scaled": {
+        "balanced_brier": 0.22181937522029666,
+        "brier": 0.1747664170050043,
+        "calibration_intercept": 0.040321870718887404,
+        "calibration_slope": 1.0221073946883856,
+        "nll": 0.5299105527226661
+      },
+      "uncalibrated": {
+        "balanced_brier": 0.21864611886534246,
+        "brier": 0.17536120025633437,
+        "calibration_intercept": 0.04032187071888678,
+        "calibration_slope": 1.1456382277746533,
+        "nll": 0.531349108133913
+      }
+    },
+    {
+      "model": "ebm",
+      "nll_gain": 0.0014476980416284757,
+      "seed": 2718,
+      "temperature": 0.8918531585780363,
+      "temperature_scaled": {
+        "balanced_brier": 0.2218052811616327,
+        "brier": 0.17473946541321272,
+        "calibration_intercept": 0.04101786787486073,
+        "calibration_slope": 1.0224883701393983,
+        "nll": 0.5298418512241401
+      },
+      "uncalibrated": {
+        "balanced_brier": 0.21862343651716273,
+        "brier": 0.17533723862391837,
+        "calibration_intercept": 0.04101786787486044,
+        "calibration_slope": 1.1464761438639135,
+        "nll": 0.5312895492657685
+      }
+    },
+    {
+      "model": "ebm",
+      "nll_gain": 0.001446026125520472,
+      "seed": 31415,
+      "temperature": 0.8919100517809176,
+      "temperature_scaled": {
+        "balanced_brier": 0.22179045905622896,
+        "brier": 0.1747363214944955,
+        "calibration_intercept": 0.04062092858461705,
+        "calibration_slope": 1.0222669728987084,
+        "nll": 0.5298502789832787
+      },
+      "uncalibrated": {
+        "balanced_brier": 0.2186125335379873,
+        "brier": 0.17533508157418906,
+        "calibration_intercept": 0.040620928584617286,
+        "calibration_slope": 1.1461547841707822,
+        "nll": 0.5312963051087992
+      }
+    },
+    {
+      "model": "ebm",
+      "nll_gain": 0.0014327176040567213,
+      "seed": 65537,
+      "temperature": 0.8923753289277996,
+      "temperature_scaled": {
+        "balanced_brier": 0.2218261691860605,
+        "brier": 0.17478444703535456,
+        "calibration_intercept": 0.03984122110881003,
+        "calibration_slope": 1.0218426949486195,
+        "nll": 0.5299549412195598
+      },
+      "uncalibrated": {
+        "balanced_brier": 0.2186592937324409,
+        "brier": 0.17537774581590793,
+        "calibration_intercept": 0.03984122110881099,
+        "calibration_slope": 1.1450817406352733,
+        "nll": 0.5313876588236165
+      }
+    },
+    {
+      "model": "tfidf_lr",
+      "nll_gain": 0.007315078512699302,
+      "seed": 42,
+      "temperature": 0.7770896335394305,
+      "temperature_scaled": {
+        "balanced_brier": 0.19131920755111917,
+        "brier": 0.15148225279667865,
+        "calibration_intercept": 0.15077273333619864,
+        "calibration_slope": 1.0605496552766902,
+        "nll": 0.46657909286415217
+      },
+      "uncalibrated": {
+        "balanced_brier": 0.1881393206745719,
+        "brier": 0.15350488586666233,
+        "calibration_intercept": 0.15077273333619867,
+        "calibration_slope": 1.3647713333224867,
+        "nll": 0.47389417137685147
+      }
+    },
+    {
+      "model": "tfidf_lr",
+      "nll_gain": 0.007315078512699302,
+      "seed": 137,
+      "temperature": 0.7770896335394305,
+      "temperature_scaled": {
+        "balanced_brier": 0.19131920755111917,
+        "brier": 0.15148225279667865,
+        "calibration_intercept": 0.15077273333619864,
+        "calibration_slope": 1.0605496552766902,
+        "nll": 0.46657909286415217
+      },
+      "uncalibrated": {
+        "balanced_brier": 0.1881393206745719,
+        "brier": 0.15350488586666233,
+        "calibration_intercept": 0.15077273333619867,
+        "calibration_slope": 1.3647713333224867,
+        "nll": 0.47389417137685147
+      }
+    },
+    {
+      "model": "tfidf_lr",
+      "nll_gain": 0.007315078512699302,
+      "seed": 2718,
+      "temperature": 0.7770896335394305,
+      "temperature_scaled": {
+        "balanced_brier": 0.19131920755111917,
+        "brier": 0.15148225279667865,
+        "calibration_intercept": 0.15077273333619864,
+        "calibration_slope": 1.0605496552766902,
+        "nll": 0.46657909286415217
+      },
+      "uncalibrated": {
+        "balanced_brier": 0.1881393206745719,
+        "brier": 0.15350488586666233,
+        "calibration_intercept": 0.15077273333619867,
+        "calibration_slope": 1.3647713333224867,
+        "nll": 0.47389417137685147
+      }
+    },
+    {
+      "model": "tfidf_lr",
+      "nll_gain": 0.007315078512699302,
+      "seed": 31415,
+      "temperature": 0.7770896335394305,
+      "temperature_scaled": {
+        "balanced_brier": 0.19131920755111917,
+        "brier": 0.15148225279667865,
+        "calibration_intercept": 0.15077273333619864,
+        "calibration_slope": 1.0605496552766902,
+        "nll": 0.46657909286415217
+      },
+      "uncalibrated": {
+        "balanced_brier": 0.1881393206745719,
+        "brier": 0.15350488586666233,
+        "calibration_intercept": 0.15077273333619867,
+        "calibration_slope": 1.3647713333224867,
+        "nll": 0.47389417137685147
+      }
+    },
+    {
+      "model": "tfidf_lr",
+      "nll_gain": 0.007315078512699302,
+      "seed": 65537,
+      "temperature": 0.7770896335394305,
+      "temperature_scaled": {
+        "balanced_brier": 0.19131920755111917,
+        "brier": 0.15148225279667865,
+        "calibration_intercept": 0.15077273333619864,
+        "calibration_slope": 1.0605496552766902,
+        "nll": 0.46657909286415217
+      },
+      "uncalibrated": {
+        "balanced_brier": 0.1881393206745719,
+        "brier": 0.15350488586666233,
+        "calibration_intercept": 0.15077273333619867,
+        "calibration_slope": 1.3647713333224867,
+        "nll": 0.47389417137685147
+      }
+    },
+    {
+      "model": "xlmr",
+      "nll_gain": 0.02501474811252835,
+      "seed": 42,
+      "temperature": 1.4374819108454246,
+      "temperature_scaled": {
+        "balanced_brier": 0.16447732674505075,
+        "brier": 0.13263613470521704,
+        "calibration_intercept": 0.07364681768898754,
+        "calibration_slope": 1.020205130948181,
+        "nll": 0.41741528084241325
+      },
+      "uncalibrated": {
+        "balanced_brier": 0.1753375006082839,
+        "brier": 0.13882699979608906,
+        "calibration_intercept": 0.07364681768898759,
+        "calibration_slope": 0.7097168480876173,
+        "nll": 0.4424300289549416
+      }
+    },
+    {
+      "model": "xlmr",
+      "nll_gain": 0.019073063498909637,
+      "seed": 137,
+      "temperature": 1.3858083932067293,
+      "temperature_scaled": {
+        "balanced_brier": 0.16060793786069952,
+        "brier": 0.13110693190646702,
+        "calibration_intercept": 0.023317731505803636,
+        "calibration_slope": 1.005899464401297,
+        "nll": 0.41269433615521744
+      },
+      "uncalibrated": {
+        "balanced_brier": 0.16862481664971646,
+        "brier": 0.13532423066499383,
+        "calibration_intercept": 0.023317731505803442,
+        "calibration_slope": 0.7258575350908862,
+        "nll": 0.4317673996541271
+      }
+    },
+    {
+      "model": "xlmr",
+      "nll_gain": 0.01188028675457753,
+      "seed": 2718,
+      "temperature": 1.2983125335336567,
+      "temperature_scaled": {
+        "balanced_brier": 0.1623971122378759,
+        "brier": 0.1355220947663746,
+        "calibration_intercept": -0.071224739024664,
+        "calibration_slope": 0.9835431718688377,
+        "nll": 0.42634477216989425
+      },
+      "uncalibrated": {
+        "balanced_brier": 0.16792552353514134,
+        "brier": 0.1383219650863389,
+        "calibration_intercept": -0.0712247390246637,
+        "calibration_slope": 0.7575550158110995,
+        "nll": 0.4382250589244718
+      }
+    },
+    {
+      "model": "xlmr",
+      "nll_gain": 0.026917567443142443,
+      "seed": 31415,
+      "temperature": 1.4532351791982228,
+      "temperature_scaled": {
+        "balanced_brier": 0.16523743189750764,
+        "brier": 0.1354339127733156,
+        "calibration_intercept": 0.004641134942037814,
+        "calibration_slope": 1.0011938145933998,
+        "nll": 0.42530904020756555
+      },
+      "uncalibrated": {
+        "balanced_brier": 0.1763861316137939,
+        "brier": 0.1421307156660326,
+        "calibration_intercept": 0.004641134942038071,
+        "calibration_slope": 0.6889413557589328,
+        "nll": 0.452226607650708
+      }
+    },
+    {
+      "model": "xlmr",
+      "nll_gain": 0.027065015965462735,
+      "seed": 65537,
+      "temperature": 1.469430563622429,
+      "temperature_scaled": {
+        "balanced_brier": 0.1620961797227641,
+        "brier": 0.13610836008454597,
+        "calibration_intercept": -0.11026449360071004,
+        "calibration_slope": 0.9744513455212095,
+        "nll": 0.424111967936355
+      },
+      "uncalibrated": {
+        "balanced_brier": 0.17278185044956662,
+        "brier": 0.14252161608657377,
+        "calibration_intercept": -0.1102644936007098,
+        "calibration_slope": 0.6631489569122606,
+        "nll": 0.45117698390181776
+      }
+    }
+  ],
+  "schema_version": 1,
+  "target_recalibration": false,
+  "threshold_tuning": false
+}

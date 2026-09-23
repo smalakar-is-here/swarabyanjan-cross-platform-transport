@@ -1,0 +1,654 @@
+{
+  "canonical_manifest_hashes": {
+    "Stage05_ARTIFACT_MANIFEST.json": "7246bc3a49a5f8d8472005cea9f6062d118431cd67d5dd2c4fd8f2ee31f52c27",
+    "Stage06_REPRODUCIBILITY_MANIFEST.json": "5a2962014445c723379b07fcf02e601644818c36e6c15fb7ee9478ca34711285",
+    "Stage07_REPRODUCIBILITY_MANIFEST.json": "fa8651ff00a3306dfd48ed55d21df3ab2eef2fbd365db33657f5c2413822e714"
+  },
+  "canonical_manifest_hashes_match_expected": true,
+  "input_integrity": {
+    "Rule A": {
+      "canonical_bc_rows": 99220,
+      "branch_bc_rows": 78340,
+      "canonical_items": 4961,
+      "branch_items": 3917,
+      "non_news_item_count": 3461,
+      "non_news_full_row_equality": true,
+      "overlap_scientific_columns_equal": true,
+      "news_retained_n": 456,
+      "news_retained_prevalence": 0.6469298245614035,
+      "expected_n": 456,
+      "source_cache_exact": true,
+      "baitbuster_cache_exact": true,
+      "news_mask_exact": true
+    },
+    "Rule B": {
+      "canonical_bc_rows": 99220,
+      "branch_bc_rows": 77740,
+      "canonical_items": 4961,
+      "branch_items": 3887,
+      "non_news_item_count": 3461,
+      "non_news_full_row_equality": true,
+      "overlap_scientific_columns_equal": true,
+      "news_retained_n": 426,
+      "news_retained_prevalence": 0.6338028169014085,
+      "expected_n": 426,
+      "source_cache_exact": true,
+      "baitbuster_cache_exact": true,
+      "news_mask_exact": true
+    }
+  },
+  "result_non_news_exact": {
+    "Rule A": {
+      "H3_non_news_point_estimates_exact": true,
+      "H4_banglaclick_non_news_point_estimates_exact": true
+    },
+    "Rule B": {
+      "H3_non_news_point_estimates_exact": true,
+      "H4_banglaclick_non_news_point_estimates_exact": true
+    }
+  },
+  "rules": {
+    "Rule A": {
+      "stage_status": {
+        "Stage05": "PASS",
+        "Stage06": "PASS",
+        "Stage07": "PASS"
+      },
+      "h3_global": {
+        "status": "NON_ESTIMABLE",
+        "joint_valid": 1908,
+        "joint_invalid": 3092,
+        "dim": 32
+      },
+      "h3_estimability_counts": {
+        "ESTIMABLE": 20,
+        "NON_ESTIMABLE_UNDER_LOCKED_BOOTSTRAP": 12
+      },
+      "h3_nonestimable_cells": [
+        {
+          "cue": "curiosity_information_withholding",
+          "platform": "news"
+        },
+        {
+          "cue": "curiosity_information_withholding",
+          "platform": "twitter"
+        },
+        {
+          "cue": "curiosity_information_withholding",
+          "platform": "youtube"
+        },
+        {
+          "cue": "direct_address_imperative",
+          "platform": "news"
+        },
+        {
+          "cue": "direct_address_imperative",
+          "platform": "youtube"
+        },
+        {
+          "cue": "exaggeration_superlative",
+          "platform": "news"
+        },
+        {
+          "cue": "exaggeration_superlative",
+          "platform": "youtube"
+        },
+        {
+          "cue": "interrogative_structure",
+          "platform": "youtube"
+        },
+        {
+          "cue": "sensational_emotional_loading",
+          "platform": "news"
+        },
+        {
+          "cue": "sensational_emotional_loading",
+          "platform": "twitter"
+        },
+        {
+          "cue": "sensational_emotional_loading",
+          "platform": "youtube"
+        },
+        {
+          "cue": "vague_deictic_reference",
+          "platform": "youtube"
+        }
+      ],
+      "h3p_150_rows_status_counts": {
+        "BRANCH_EXPECTED_DIFFERENCE": 150
+      },
+      "h4_primary_10_all_estimable": true,
+      "h4_primary_10_max_abs_change": {
+        "lift_abs_change": 0.2445130842440304,
+        "error_capture_abs_change": 0.0309639160663164,
+        "aurc_abs_change": 0.114146995546373
+      },
+      "h4_primary_10_mean_abs_change": {
+        "lift_abs_change": 0.1991263582056791,
+        "error_capture_abs_change": 0.013522853029590548,
+        "aurc_abs_change": 0.05092384730984558
+      },
+      "h3_max_abs_change": {
+        "delta_rd_abs_change": 0.2927833986134497,
+        "delta_nll_gap_abs_change": 0.4334560298923395
+      },
+      "bridge_max_abs_point_change": 0.1092375366568915,
+      "bridge_invalid_delta": 614,
+      "bridge_all_nonestimable": true,
+      "h1_news_all_estimable": true,
+      "h2_news_all_estimable": true,
+      "h1_news_mean_abs_auroc_change": 0.02958058223374014,
+      "h2_news_mean_abs_nll_gain_change": 0.025147391491325704
+    },
+    "Rule B": {
+      "stage_status": {
+        "Stage05": "PASS",
+        "Stage06": "PASS",
+        "Stage07": "PASS"
+      },
+      "h3_global": {
+        "status": "NON_ESTIMABLE",
+        "joint_valid": 1378,
+        "joint_invalid": 3622,
+        "dim": 32
+      },
+      "h3_estimability_counts": {
+        "ESTIMABLE": 18,
+        "NON_ESTIMABLE_UNDER_LOCKED_BOOTSTRAP": 14
+      },
+      "h3_nonestimable_cells": [
+        {
+          "cue": "curiosity_information_withholding",
+          "platform": "news"
+        },
+        {
+          "cue": "curiosity_information_withholding",
+          "platform": "twitter"
+        },
+        {
+          "cue": "curiosity_information_withholding",
+          "platform": "youtube"
+        },
+        {
+          "cue": "direct_address_imperative",
+          "platform": "news"
+        },
+        {
+          "cue": "direct_address_imperative",
+          "platform": "youtube"
+        },
+        {
+          "cue": "exaggeration_superlative",
+          "platform": "news"
+        },
+        {
+          "cue": "exaggeration_superlative",
+          "platform": "youtube"
+        },
+        {
+          "cue": "interrogative_structure",
+          "platform": "youtube"
+        },
+        {
+          "cue": "sensational_emotional_loading",
+          "platform": "facebook"
+        },
+        {
+          "cue": "sensational_emotional_loading",
+          "platform": "news"
+        },
+        {
+          "cue": "sensational_emotional_loading",
+          "platform": "twitter"
+        },
+        {
+          "cue": "sensational_emotional_loading",
+          "platform": "youtube"
+        },
+        {
+          "cue": "vague_deictic_reference",
+          "platform": "news"
+        },
+        {
+          "cue": "vague_deictic_reference",
+          "platform": "youtube"
+        }
+      ],
+      "h3p_150_rows_status_counts": {
+        "BRANCH_EXPECTED_DIFFERENCE": 150
+      },
+      "h4_primary_10_all_estimable": true,
+      "h4_primary_10_max_abs_change": {
+        "lift_abs_change": 0.3437352245862883,
+        "error_capture_abs_change": 0.0293527452822133,
+        "aurc_abs_change": 0.1291527806535365
+      },
+      "h4_primary_10_mean_abs_change": {
+        "lift_abs_change": 0.2649788333608222,
+        "error_capture_abs_change": 0.013609753122745894,
+        "aurc_abs_change": 0.06294657252587563
+      },
+      "h3_max_abs_change": {
+        "delta_rd_abs_change": 0.7805004237494952,
+        "delta_nll_gap_abs_change": 0.5055624046059977
+      },
+      "bridge_max_abs_point_change": 0.1399892009977329,
+      "bridge_invalid_delta": 1258,
+      "bridge_all_nonestimable": true,
+      "h1_news_all_estimable": true,
+      "h2_news_all_estimable": true,
+      "h1_news_mean_abs_auroc_change": 0.02603325776403783,
+      "h2_news_mean_abs_nll_gain_change": 0.019624670901511578
+    }
+  },
+  "family_procedures": [
+    {
+      "rule": "Rule A",
+      "procedure": "family_simes_outcome",
+      "cue": "curiosity_information_withholding",
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY",
+      "simes_p": null
+    },
+    {
+      "rule": "Rule A",
+      "procedure": "family_simes_outcome",
+      "cue": "direct_address_imperative",
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY",
+      "simes_p": null
+    },
+    {
+      "rule": "Rule A",
+      "procedure": "family_simes_outcome",
+      "cue": "exaggeration_superlative",
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY",
+      "simes_p": null
+    },
+    {
+      "rule": "Rule A",
+      "procedure": "family_simes_outcome",
+      "cue": "interrogative_structure",
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY",
+      "simes_p": null
+    },
+    {
+      "rule": "Rule A",
+      "procedure": "family_simes_outcome",
+      "cue": "punctuation_intensity",
+      "status": "ESTIMABLE",
+      "simes_p": 0.0448
+    },
+    {
+      "rule": "Rule A",
+      "procedure": "family_simes_outcome",
+      "cue": "sensational_emotional_loading",
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY",
+      "simes_p": null
+    },
+    {
+      "rule": "Rule A",
+      "procedure": "family_simes_outcome",
+      "cue": "specificity_numerals",
+      "status": "ESTIMABLE",
+      "simes_p": 0.0
+    },
+    {
+      "rule": "Rule A",
+      "procedure": "family_simes_outcome",
+      "cue": "vague_deictic_reference",
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY",
+      "simes_p": null
+    },
+    {
+      "rule": "Rule A",
+      "procedure": "family_simes_reliability",
+      "cue": "curiosity_information_withholding",
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY",
+      "simes_p": null
+    },
+    {
+      "rule": "Rule A",
+      "procedure": "family_simes_reliability",
+      "cue": "direct_address_imperative",
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY",
+      "simes_p": null
+    },
+    {
+      "rule": "Rule A",
+      "procedure": "family_simes_reliability",
+      "cue": "exaggeration_superlative",
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY",
+      "simes_p": null
+    },
+    {
+      "rule": "Rule A",
+      "procedure": "family_simes_reliability",
+      "cue": "interrogative_structure",
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY",
+      "simes_p": null
+    },
+    {
+      "rule": "Rule A",
+      "procedure": "family_simes_reliability",
+      "cue": "punctuation_intensity",
+      "status": "ESTIMABLE",
+      "simes_p": 0.0
+    },
+    {
+      "rule": "Rule A",
+      "procedure": "family_simes_reliability",
+      "cue": "sensational_emotional_loading",
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY",
+      "simes_p": null
+    },
+    {
+      "rule": "Rule A",
+      "procedure": "family_simes_reliability",
+      "cue": "specificity_numerals",
+      "status": "ESTIMABLE",
+      "simes_p": 0.0016
+    },
+    {
+      "rule": "Rule A",
+      "procedure": "family_simes_reliability",
+      "cue": "vague_deictic_reference",
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY",
+      "simes_p": null
+    },
+    {
+      "rule": "Rule A",
+      "procedure": "family_fdr_outcome_full",
+      "status": "NON_ESTIMABLE_FULL_8_FAMILY_BH",
+      "estimable_family_p_values": 2,
+      "prespecified_families": 8
+    },
+    {
+      "rule": "Rule A",
+      "procedure": "family_fdr_reliability_full",
+      "status": "NON_ESTIMABLE_FULL_8_FAMILY_BH",
+      "estimable_family_p_values": 2,
+      "prespecified_families": 8
+    },
+    {
+      "rule": "Rule B",
+      "procedure": "family_simes_outcome",
+      "cue": "curiosity_information_withholding",
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY",
+      "simes_p": null
+    },
+    {
+      "rule": "Rule B",
+      "procedure": "family_simes_outcome",
+      "cue": "direct_address_imperative",
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY",
+      "simes_p": null
+    },
+    {
+      "rule": "Rule B",
+      "procedure": "family_simes_outcome",
+      "cue": "exaggeration_superlative",
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY",
+      "simes_p": null
+    },
+    {
+      "rule": "Rule B",
+      "procedure": "family_simes_outcome",
+      "cue": "interrogative_structure",
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY",
+      "simes_p": null
+    },
+    {
+      "rule": "Rule B",
+      "procedure": "family_simes_outcome",
+      "cue": "punctuation_intensity",
+      "status": "ESTIMABLE",
+      "simes_p": 0.0592
+    },
+    {
+      "rule": "Rule B",
+      "procedure": "family_simes_outcome",
+      "cue": "sensational_emotional_loading",
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY",
+      "simes_p": null
+    },
+    {
+      "rule": "Rule B",
+      "procedure": "family_simes_outcome",
+      "cue": "specificity_numerals",
+      "status": "ESTIMABLE",
+      "simes_p": 0.0
+    },
+    {
+      "rule": "Rule B",
+      "procedure": "family_simes_outcome",
+      "cue": "vague_deictic_reference",
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY",
+      "simes_p": null
+    },
+    {
+      "rule": "Rule B",
+      "procedure": "family_simes_reliability",
+      "cue": "curiosity_information_withholding",
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY",
+      "simes_p": null
+    },
+    {
+      "rule": "Rule B",
+      "procedure": "family_simes_reliability",
+      "cue": "direct_address_imperative",
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY",
+      "simes_p": null
+    },
+    {
+      "rule": "Rule B",
+      "procedure": "family_simes_reliability",
+      "cue": "exaggeration_superlative",
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY",
+      "simes_p": null
+    },
+    {
+      "rule": "Rule B",
+      "procedure": "family_simes_reliability",
+      "cue": "interrogative_structure",
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY",
+      "simes_p": null
+    },
+    {
+      "rule": "Rule B",
+      "procedure": "family_simes_reliability",
+      "cue": "punctuation_intensity",
+      "status": "ESTIMABLE",
+      "simes_p": 0.0
+    },
+    {
+      "rule": "Rule B",
+      "procedure": "family_simes_reliability",
+      "cue": "sensational_emotional_loading",
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY",
+      "simes_p": null
+    },
+    {
+      "rule": "Rule B",
+      "procedure": "family_simes_reliability",
+      "cue": "specificity_numerals",
+      "status": "ESTIMABLE",
+      "simes_p": 0.0016
+    },
+    {
+      "rule": "Rule B",
+      "procedure": "family_simes_reliability",
+      "cue": "vague_deictic_reference",
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY",
+      "simes_p": null
+    },
+    {
+      "rule": "Rule B",
+      "procedure": "family_fdr_outcome_full",
+      "status": "NON_ESTIMABLE_FULL_8_FAMILY_BH",
+      "estimable_family_p_values": 2,
+      "prespecified_families": 8
+    },
+    {
+      "rule": "Rule B",
+      "procedure": "family_fdr_reliability_full",
+      "status": "NON_ESTIMABLE_FULL_8_FAMILY_BH",
+      "estimable_family_p_values": 2,
+      "prespecified_families": 8
+    }
+  ],
+  "A_vs_B": {
+    "H1_News": {},
+    "H2_News": {},
+    "H3_32": {},
+    "H4_10_news": {},
+    "BRIDGE": {}
+  },
+  "A_vs_B_direct": {
+    "H1_News": {
+      "target_auroc_branch": {
+        "max_abs": 0.011487121601344241,
+        "min": 0.0001348919919297309,
+        "max": 0.011487121601344241,
+        "mean_abs": 0.00354732446970229,
+        "example": {
+          "domain": "banglaclick:news",
+          "model": "xlmr",
+          "seed": 42,
+          "A": 0.7222023370881145,
+          "B": 0.7336894586894588,
+          "B_minus_A": 0.011487121601344241
+        }
+      },
+      "nll_relative_change_branch": {
+        "max_abs": 0.07430940017511367,
+        "min": -0.07430940017511367,
+        "max": -0.01061802989032401,
+        "mean_abs": 0.04109125974973259,
+        "example": {
+          "domain": "banglaclick:news",
+          "model": "banglabert",
+          "seed": 137,
+          "A": 2.0641092375593173,
+          "B": 1.9897998373842036,
+          "B_minus_A": -0.07430940017511367
+        }
+      },
+      "balanced_brier_relative_change_branch": {
+        "max_abs": 0.027491128258143815,
+        "min": -0.027491128258143815,
+        "max": 0.008646169546182692,
+        "mean_abs": 0.01277961417673969,
+        "example": {
+          "domain": "banglaclick:news",
+          "model": "banglabert",
+          "seed": 42,
+          "A": 1.1458149920292515,
+          "B": 1.1183238637711077,
+          "B_minus_A": -0.027491128258143815
+        }
+      }
+    },
+    "H2_News": {
+      "target_minus_source_gain_branch": {
+        "max_abs": 0.013580001081850535,
+        "min": -0.013580001081850535,
+        "max": 0.0028011338940721053,
+        "mean_abs": 0.005748804630172201,
+        "example": {
+          "domain": "banglaclick:news",
+          "model": "banglabert",
+          "seed": 2718,
+          "A": 0.5049325819504102,
+          "B": 0.4913525808685597,
+          "B_minus_A": -0.013580001081850535
+        }
+      }
+    },
+    "H3_32": {
+      "delta_rd_branch": {
+        "max_abs": 0.4877170251360455,
+        "min": -0.4877170251360455,
+        "max": 0.30126226489920416,
+        "mean_abs": 0.02710235531767957,
+        "example": {
+          "cue": "curiosity_information_withholding",
+          "platform": "news",
+          "A": -0.4344441603484907,
+          "B": -0.9221611854845362,
+          "B_minus_A": -0.4877170251360455
+        }
+      },
+      "delta_nll_gap_branch": {
+        "max_abs": 0.25874684137199244,
+        "min": -0.032575526080530604,
+        "max": 0.25874684137199244,
+        "mean_abs": 0.013876705259194488,
+        "example": {
+          "cue": "curiosity_information_withholding",
+          "platform": "news",
+          "A": -0.8297804001472187,
+          "B": -0.5710335587752262,
+          "B_minus_A": 0.25874684137199244
+        }
+      }
+    },
+    "H4_10_news": {
+      "lift_branch": {
+        "max_abs": 0.09922214034225796,
+        "min": 0.022748158176856492,
+        "max": 0.09922214034225796,
+        "mean_abs": 0.06585247515514317,
+        "example": {
+          "platform": "news",
+          "model": "xlmr",
+          "seed": 2718,
+          "A": -1.1053492861638008,
+          "B": -1.0061271458215428,
+          "B_minus_A": 0.09922214034225796
+        }
+      },
+      "error_capture_branch": {
+        "max_abs": 0.009581881533100994,
+        "min": -0.0057651890557816055,
+        "max": 0.009581881533100994,
+        "mean_abs": 0.002550191402271675,
+        "example": {
+          "platform": "news",
+          "model": "banglabert",
+          "seed": 65537,
+          "A": -0.1267037302725968,
+          "B": -0.1171218487394958,
+          "B_minus_A": 0.009581881533100994
+        }
+      },
+      "aurc_branch": {
+        "max_abs": 0.02493581103604292,
+        "min": -0.02493581103604292,
+        "max": -0.00409634032101347,
+        "mean_abs": 0.012022725216030034,
+        "example": {
+          "platform": "news",
+          "model": "xlmr",
+          "seed": 42,
+          "A": 0.3848288851991048,
+          "B": 0.3598930741630619,
+          "B_minus_A": -0.02493581103604292
+        }
+      }
+    },
+    "BRIDGE": {
+      "point_branch": {
+        "max_abs": 0.07917888563049849,
+        "min": -0.07917888563049849,
+        "max": 0.02146488420956022,
+        "mean_abs": 0.02146866618403642,
+        "example": {
+          "pair": "abs_delta_nll_gap__vs__error_capture_deterioration",
+          "statistic": "spearman_rho",
+          "A": -0.2008797653958944,
+          "B": -0.2800586510263929,
+          "B_minus_A": -0.07917888563049849
+        }
+      }
+    }
+  }
+}

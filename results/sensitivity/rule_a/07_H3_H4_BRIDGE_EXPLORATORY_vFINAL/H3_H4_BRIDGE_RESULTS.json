@@ -1,0 +1,195 @@
+{
+  "bootstrap_replicates": 5000,
+  "bootstrap_seed": 20260912,
+  "bridge_version": "H3-H4-BRIDGE-vFINAL-1.0.1",
+  "causal": false,
+  "cells": 32,
+  "exploratory_secondary": true,
+  "global_review_policy": "10% global; no cue-specific reranking or quota",
+  "nonestimability_policy": "any invalid prespecified component in a replicate invalidates that association replicate; no NaN filtering, rejection resampling, or cell deletion",
+  "pairs": {
+    "abs_delta_nll_gap__vs__error_capture_deterioration": {
+      "bootstrap": {
+        "platform_fe_slope": {
+          "bootstrap_attempts": 5000,
+          "ci95": null,
+          "estimability_status": "NON_ESTIMABLE_UNDER_LOCKED_JOINT_BOOTSTRAP",
+          "invalid_rate": 0.595,
+          "invalid_reason_counts": {
+            "h3_nonfinite_in_prespecified_32_cells": 2975
+          },
+          "invalid_replicates": 2975,
+          "p_two_sided": null,
+          "valid_replicates": 2025
+        },
+        "raw_ols_slope": {
+          "bootstrap_attempts": 5000,
+          "ci95": null,
+          "estimability_status": "NON_ESTIMABLE_UNDER_LOCKED_JOINT_BOOTSTRAP",
+          "invalid_rate": 0.595,
+          "invalid_reason_counts": {
+            "h3_nonfinite_in_prespecified_32_cells": 2975
+          },
+          "invalid_replicates": 2975,
+          "p_two_sided": null,
+          "valid_replicates": 2025
+        },
+        "spearman_rho": {
+          "bootstrap_attempts": 5000,
+          "ci95": null,
+          "estimability_status": "NON_ESTIMABLE_UNDER_LOCKED_JOINT_BOOTSTRAP",
+          "invalid_rate": 0.595,
+          "invalid_reason_counts": {
+            "h3_nonfinite_in_prespecified_32_cells": 2975
+          },
+          "invalid_replicates": 2975,
+          "p_two_sided": null,
+          "valid_replicates": 2025
+        }
+      },
+      "point": {
+        "platform_fe_slope": -0.005126268204106463,
+        "raw_ols_slope": -0.007792041209010679,
+        "spearman_rho": -0.20087976539589442
+      }
+    },
+    "abs_delta_nll_gap__vs__lift_deterioration": {
+      "bootstrap": {
+        "platform_fe_slope": {
+          "bootstrap_attempts": 5000,
+          "ci95": null,
+          "estimability_status": "NON_ESTIMABLE_UNDER_LOCKED_JOINT_BOOTSTRAP",
+          "invalid_rate": 0.595,
+          "invalid_reason_counts": {
+            "h3_nonfinite_in_prespecified_32_cells": 2975
+          },
+          "invalid_replicates": 2975,
+          "p_two_sided": null,
+          "valid_replicates": 2025
+        },
+        "raw_ols_slope": {
+          "bootstrap_attempts": 5000,
+          "ci95": null,
+          "estimability_status": "NON_ESTIMABLE_UNDER_LOCKED_JOINT_BOOTSTRAP",
+          "invalid_rate": 0.595,
+          "invalid_reason_counts": {
+            "h3_nonfinite_in_prespecified_32_cells": 2975
+          },
+          "invalid_replicates": 2975,
+          "p_two_sided": null,
+          "valid_replicates": 2025
+        },
+        "spearman_rho": {
+          "bootstrap_attempts": 5000,
+          "ci95": null,
+          "estimability_status": "NON_ESTIMABLE_UNDER_LOCKED_JOINT_BOOTSTRAP",
+          "invalid_rate": 0.595,
+          "invalid_reason_counts": {
+            "h3_nonfinite_in_prespecified_32_cells": 2975
+          },
+          "invalid_replicates": 2975,
+          "p_two_sided": null,
+          "valid_replicates": 2025
+        }
+      },
+      "point": {
+        "platform_fe_slope": 0.13543233903273477,
+        "raw_ols_slope": 0.06334873039485422,
+        "spearman_rho": 0.0505865102639296
+      }
+    },
+    "abs_delta_rd__vs__error_capture_deterioration": {
+      "bootstrap": {
+        "platform_fe_slope": {
+          "bootstrap_attempts": 5000,
+          "ci95": null,
+          "estimability_status": "NON_ESTIMABLE_UNDER_LOCKED_JOINT_BOOTSTRAP",
+          "invalid_rate": 0.595,
+          "invalid_reason_counts": {
+            "h3_nonfinite_in_prespecified_32_cells": 2975
+          },
+          "invalid_replicates": 2975,
+          "p_two_sided": null,
+          "valid_replicates": 2025
+        },
+        "raw_ols_slope": {
+          "bootstrap_attempts": 5000,
+          "ci95": null,
+          "estimability_status": "NON_ESTIMABLE_UNDER_LOCKED_JOINT_BOOTSTRAP",
+          "invalid_rate": 0.595,
+          "invalid_reason_counts": {
+            "h3_nonfinite_in_prespecified_32_cells": 2975
+          },
+          "invalid_replicates": 2975,
+          "p_two_sided": null,
+          "valid_replicates": 2025
+        },
+        "spearman_rho": {
+          "bootstrap_attempts": 5000,
+          "ci95": null,
+          "estimability_status": "NON_ESTIMABLE_UNDER_LOCKED_JOINT_BOOTSTRAP",
+          "invalid_rate": 0.595,
+          "invalid_reason_counts": {
+            "h3_nonfinite_in_prespecified_32_cells": 2975
+          },
+          "invalid_replicates": 2975,
+          "p_two_sided": null,
+          "valid_replicates": 2025
+        }
+      },
+      "point": {
+        "platform_fe_slope": -0.015087441569084639,
+        "raw_ols_slope": -0.013790340058669063,
+        "spearman_rho": -0.282258064516129
+      }
+    },
+    "abs_delta_rd__vs__lift_deterioration": {
+      "bootstrap": {
+        "platform_fe_slope": {
+          "bootstrap_attempts": 5000,
+          "ci95": null,
+          "estimability_status": "NON_ESTIMABLE_UNDER_LOCKED_JOINT_BOOTSTRAP",
+          "invalid_rate": 0.595,
+          "invalid_reason_counts": {
+            "h3_nonfinite_in_prespecified_32_cells": 2975
+          },
+          "invalid_replicates": 2975,
+          "p_two_sided": null,
+          "valid_replicates": 2025
+        },
+        "raw_ols_slope": {
+          "bootstrap_attempts": 5000,
+          "ci95": null,
+          "estimability_status": "NON_ESTIMABLE_UNDER_LOCKED_JOINT_BOOTSTRAP",
+          "invalid_rate": 0.595,
+          "invalid_reason_counts": {
+            "h3_nonfinite_in_prespecified_32_cells": 2975
+          },
+          "invalid_replicates": 2975,
+          "p_two_sided": null,
+          "valid_replicates": 2025
+        },
+        "spearman_rho": {
+          "bootstrap_attempts": 5000,
+          "ci95": null,
+          "estimability_status": "NON_ESTIMABLE_UNDER_LOCKED_JOINT_BOOTSTRAP",
+          "invalid_rate": 0.595,
+          "invalid_reason_counts": {
+            "h3_nonfinite_in_prespecified_32_cells": 2975
+          },
+          "invalid_replicates": 2975,
+          "p_two_sided": null,
+          "valid_replicates": 2025
+        }
+      },
+      "point": {
+        "platform_fe_slope": 0.14830564775820373,
+        "raw_ols_slope": 0.14909909372509147,
+        "spearman_rho": -0.06671554252199419
+      }
+    }
+  },
+  "runtime_seconds": 25.46741707000001,
+  "schema_version": 2,
+  "seed_handling": "five seeds averaged within model; four locked model families equally weighted"
+}

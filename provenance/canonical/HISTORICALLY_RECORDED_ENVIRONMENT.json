@@ -1,0 +1,415 @@
+{
+  "01": {},
+  "02": {
+    "P0_RUN_METADATA.json": {
+      "canonical_environment_spec": {
+        "packages": {
+          "numpy": "2.5.2",
+          "openpyxl": "3.1.5",
+          "pandas": "2.3.3",
+          "pyarrow": "23.0.1"
+        },
+        "python": "3.12.13"
+      },
+      "canonical_notebook": "02_p0_integrity_provenance_leakage_audit.ipynb",
+      "cpu_count": 4,
+      "determinism": {
+        "model_training": false,
+        "near_duplicate_sample_order": "norm_hash,row_id with sorted capped candidate traversal",
+        "output_sorting": "stable deterministic sort",
+        "random_sampling": false,
+        "serialized_list_policy": "all persisted lists deterministically ordered"
+      },
+      "environment_verification": {
+        "packages": {
+          "numpy": "2.5.2",
+          "openpyxl": "3.1.5",
+          "pandas": "2.3.3",
+          "pyarrow": "23.0.1"
+        },
+        "python": "3.12.13",
+        "status": "PASS"
+      },
+      "execution_id": "P0-20260905T191629Z-UNSPECIFIED-3630605b75-fcf658785c",
+      "execution_replica_id": "UNSPECIFIED",
+      "execution_utc": "2026-09-05T20:11:03.184303+00:00",
+      "expected_zip_sha256": "e0de5c224f406fe22d8ad30804217465f789c49c70e1d3afbe00afd28deb7ccf",
+      "gpu_status": {
+        "cuda_visible_devices": null,
+        "nvidia_smi_available": false,
+        "nvidia_smi_summary": null
+      },
+      "input_content_tree_fingerprint": "3630605b75b593e3f6a5927a34e168de71ad6b6f5091a59b02f71e28b3a05ffa",
+      "input_mode": "EXTRACTED_ROOT_MODE",
+      "methodology_sha256": "fcf658785c8a91ffa31a08b7861dbed07aac26f06b52d133ce257f3610d3ce6b",
+      "methodology_version": "P0-v1.1.1",
+      "p0_decision": "P0_NO_GO",
+      "packages": {
+        "numpy": "2.5.2",
+        "openpyxl": "3.1.5",
+        "pandas": "2.3.3",
+        "pyarrow": "23.0.1"
+      },
+      "physical_stage01_notebook_input_required": false,
+      "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+      "previous_stage02_outputs_used_as_input": false,
+      "python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+      "required_kaggle_dataset_inputs": 1,
+      "run_directory": "/kaggle/working/03_results/02_p0_integrity_provenance_leakage_audit/P0-20260905T191629Z-UNSPECIFIED-3630605b75-fcf658785c",
+      "schema_version": 1,
+      "split_firewall_sha256": "3cc7e0fe8f6d78d928d1ff9339f5ad4360278bb1f10d819498bd0faaf9170a6d",
+      "stage01_provenance": {
+        "stage01_notebook": {
+          "runtime_input_required": false,
+          "runtime_physical_verification": false,
+          "sha256": "627e38c7fd99c53b483bc109404b03e781b060c58215e639121838cb63abe8cf",
+          "status": "historical_provenance_identifier_only"
+        },
+        "tree_anchor": {
+          "anchored_content_tree_fingerprint": "3630605b75b593e3f6a5927a34e168de71ad6b6f5091a59b02f71e28b3a05ffa",
+          "expected_zip_sha256": "e0de5c224f406fe22d8ad30804217465f789c49c70e1d3afbe00afd28deb7ccf",
+          "member_count": 26,
+          "method": "deterministic_reconstruction_matches_canonical_zip_sha256",
+          "status": "PASS",
+          "verified_reconstructed_zip_sha256": "e0de5c224f406fe22d8ad30804217465f789c49c70e1d3afbe00afd28deb7ccf"
+        },
+        "tree_fingerprint_algorithm": "sha256sum_sorted_posix_v1",
+        "verified_tree_fingerprint": "3630605b75b593e3f6a5927a34e168de71ad6b6f5091a59b02f71e28b3a05ffa"
+      },
+      "stage_id": "02"
+    }
+  },
+  "03": {
+    "ENVIRONMENT_PREFLIGHT.json": {
+      "accelerator_note": "GPU required for complete Stage 03",
+      "environment_id": "SWARABYANJAN-KAGGLE-ENV-v2.0.0",
+      "initial_versions": {
+        "accelerate": "1.13.0",
+        "interpret-core": null,
+        "joblib": "1.5.3",
+        "numpy": "2.0.2",
+        "pandas": "2.3.3",
+        "pyarrow": "24.0.0",
+        "scikit-learn": "1.6.1",
+        "scipy": "1.16.3",
+        "sentencepiece": "0.2.1",
+        "statsmodels": "0.14.6",
+        "torch": "2.10.0+cu128",
+        "transformers": "5.0.0"
+      },
+      "installed_now": [
+        "interpret-core>=0.6,<0.8"
+      ],
+      "policy": "preserve Kaggle compiled scientific stack; install only missing application-level packages",
+      "probe_stdout": "{\"numpy\": \"2.0.2\", \"pandas\": \"2.3.3\", \"pyarrow\": \"24.0.0\", \"scipy\": \"1.16.3\", \"sklearn\": \"1.6.1\", \"statsmodels\": \"0.14.6\", \"torch\": \"2.10.0+cu128\"}",
+      "schema_version": 1,
+      "stage_id": "03",
+      "validated_versions": {
+        "accelerate": "1.13.0",
+        "interpret-core": "0.7.8",
+        "joblib": "1.5.3",
+        "numpy": "2.0.2",
+        "pandas": "2.3.3",
+        "pyarrow": "24.0.0",
+        "scikit-learn": "1.6.1",
+        "scipy": "1.16.3",
+        "sentencepiece": "0.2.1",
+        "statsmodels": "0.14.6",
+        "torch": "2.10.0+cu128",
+        "transformers": "5.0.0"
+      }
+    },
+    "RUN_METADATA.json": {
+      "config_split_seed": 20260906,
+      "environment": {
+        "cpu_count": 4,
+        "cuda_visible_devices": null,
+        "git": {
+          "available": false,
+          "dirty": null,
+          "head": null,
+          "status_porcelain": null
+        },
+        "packages": {
+          "accelerate": "1.13.0",
+          "huggingface-hub": "1.11.0",
+          "interpret-core": "0.7.8",
+          "joblib": "1.5.3",
+          "numpy": "2.0.2",
+          "openpyxl": "3.1.5",
+          "pandas": "2.3.3",
+          "pyarrow": "24.0.0",
+          "scikit-learn": "1.6.1",
+          "scipy": "1.16.3",
+          "statsmodels": "0.14.6",
+          "torch": "2.10.0+cu128",
+          "transformers": "5.0.0"
+        },
+        "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+        "python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+        "timestamp_utc": "2026-09-07T06:29:52.087485+00:00"
+      },
+      "execution_utc": "2026-09-07T06:29:52.087467+00:00",
+      "firewall": {
+        "D0_dev_test_read": "integrity/decontamination only",
+        "DEV": "not used after D0; reserved Stage 04 calibration",
+        "TEST": "not used after D0; reserved Stage 05",
+        "external": "not read in Stage 03",
+        "model_development": "CLEAN TRAIN only"
+      },
+      "input_identity": {
+        "authoritative_stage02_decision": "P0_NO_GO",
+        "authoritative_stage02_methodology_sha256": "fcf658785c8a91ffa31a08b7861dbed07aac26f06b52d133ce257f3610d3ce6b",
+        "authoritative_stage02_notebook_sha256": "be59c43013c20e052bc9475954303a75fed8807dfed689ef517590b382b0214b",
+        "canonical_zip_sha256_provenance": "e0de5c224f406fe22d8ad30804217465f789c49c70e1d3afbe00afd28deb7ccf",
+        "content_identity_sha256": "161b6e091b3db55a9616c943693ad456a175c19330b4297b5e068910b47c2b8f",
+        "duplicate_equivalent_candidates": [],
+        "freeze_id": "EXTERNAL-DATASET-BYTES-v1",
+        "frozen_root": "/kaggle/input/datasets/smalakarishere/swarabyanjan-frozen-dataset-v1/EXTERNAL-DATASET-BYTES-v1/EXTERNAL-DATASET-BYTES-v1",
+        "input_mode": "EXTRACTED_DIRECTORY",
+        "input_source_path": "/kaggle/input/datasets/smalakarishere/swarabyanjan-frozen-dataset-v1/EXTERNAL-DATASET-BYTES-v1/EXTERNAL-DATASET-BYTES-v1",
+        "observed_zip_sha256": null,
+        "sha256sum_entry_count": 25,
+        "stage01_notebook_sha256_historical": "627e38c7fd99c53b483bc109404b03e781b060c58215e639121838cb63abe8cf"
+      },
+      "protocol_version": "SWARABYANJAN-CROSSPLATFORM-v1.0.0",
+      "schema_version": 1,
+      "seeds": [
+        42,
+        137,
+        2718,
+        31415,
+        65537
+      ],
+      "stage_id": "03",
+      "stage_name": "03_primary_model_development"
+    }
+  },
+  "04": {
+    "ENVIRONMENT_PREFLIGHT.json": {
+      "accelerator_note": "GPU optional; recommended for transformer DEV inference",
+      "environment_id": "SWARABYANJAN-KAGGLE-ENV-v2.0.0",
+      "initial_versions": {
+        "interpret-core": null,
+        "joblib": "1.5.3",
+        "numpy": "2.0.2",
+        "pandas": "2.3.3",
+        "pyarrow": "24.0.0",
+        "scikit-learn": "1.6.1",
+        "scipy": "1.16.3",
+        "sentencepiece": "0.2.1",
+        "statsmodels": "0.14.6",
+        "torch": "2.10.0+cu128",
+        "transformers": "5.0.0"
+      },
+      "installed_now": [
+        "interpret-core>=0.6,<0.8"
+      ],
+      "policy": "preserve Kaggle compiled scientific stack; install only missing application-level packages",
+      "probe_stdout": "{\"numpy\": \"2.0.2\", \"pandas\": \"2.3.3\", \"pyarrow\": \"24.0.0\", \"scipy\": \"1.16.3\", \"sklearn\": \"1.6.1\", \"statsmodels\": \"0.14.6\", \"torch\": \"2.10.0+cu128\"}",
+      "schema_version": 1,
+      "stage_id": "04",
+      "validated_versions": {
+        "interpret-core": "0.7.8",
+        "joblib": "1.5.3",
+        "numpy": "2.0.2",
+        "pandas": "2.3.3",
+        "pyarrow": "24.0.0",
+        "scikit-learn": "1.6.1",
+        "scipy": "1.16.3",
+        "sentencepiece": "0.2.1",
+        "statsmodels": "0.14.6",
+        "torch": "2.10.0+cu128",
+        "transformers": "5.0.0"
+      }
+    },
+    "RUN_METADATA.json": {
+      "boundary": {
+        "DEV": "calibration only",
+        "TEST": "not accessed",
+        "external": "not accessed"
+      },
+      "execution_utc": "2026-09-08T07:41:13.946289+00:00",
+      "git": {
+        "available": false,
+        "dirty": null,
+        "head": null,
+        "status_porcelain": null
+      },
+      "input_hashes": {
+        "stage03_checksums": "e40f3c9ac69cb9f23e080e6070a1cd3b28969f43e3592d7b52a04f02a8dbafb2"
+      },
+      "packages": {
+        "interpret": null,
+        "joblib": "1.5.3",
+        "numpy": "2.0.2",
+        "pandas": "2.3.3",
+        "pyarrow": "24.0.0",
+        "scikit-learn": "1.6.1",
+        "scipy": "1.16.3",
+        "statsmodels": "0.14.6",
+        "torch": "2.10.0+cu128",
+        "transformers": "5.0.0"
+      },
+      "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+      "python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+      "schema_version": 1,
+      "seeds": [
+        42,
+        137,
+        2718,
+        31415,
+        65537
+      ],
+      "stage_id": "04"
+    }
+  },
+  "05": {
+    "ENVIRONMENT_PREFLIGHT.json": {
+      "calibration_refit_permitted": false,
+      "cpu_count": 4,
+      "mode": "CPU_ONLY_VERIFIED_IMMUTABLE_INFERENCE_CACHE",
+      "model_inference_permitted": false,
+      "packages": {
+        "numpy": "2.0.2",
+        "pandas": "2.3.3",
+        "pyarrow": "24.0.0",
+        "scikit-learn": "1.6.1",
+        "scipy": "1.16.3",
+        "statsmodels": "0.14.6"
+      },
+      "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+      "python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+      "timestamp_utc": "2026-09-12T18:22:03.156888+00:00"
+    },
+    "RUN_METADATA.json": {
+      "bootstrap_reps": 5000,
+      "cache_identity": {
+        "BAITBUSTER_HUMAN_PREDICTIONS.parquet": "a3e95820c62de00984a189e2c250f7fffd223ad4b3954db04a5368c7a544b7b9",
+        "BANGLACLICK_PLATFORM_PREDICTIONS.parquet": "5685fd4142a0e8e7f85cd6040cf48042da2368d5f9596a7740c4f9f09c9519d5",
+        "H3_PERTURBATION_EXCLUSIONS.csv": "23a55bf1da181f4b7f6ae4284572ae1fda5085f052b140eff731c2efda3fd8da",
+        "H3_PERTURBATION_PAIRS.parquet": "aa43d73922dbd9ab7b7d753a6aef8e25ad7e6438836fd13394b7925514ed5bb1",
+        "LOCKED_SOURCE_TEST_PREDICTIONS.parquet": "df863d7a24f7d451451822890de58613c3295eb0bcc1aa882150137b0aa9880a"
+      },
+      "cache_source_manifest_sha256": "2f0c503f0bb2a535172cc3f5e2f5a47cd42024db2ba865322276ff1c6fee6c00",
+      "calibration_refit": false,
+      "canonical_version": "SWARABYANJAN-STAGE05-CANONICAL-vFINAL-1.0.1",
+      "execution_utc": "2026-09-12T18:30:45.162613+00:00",
+      "git": {
+        "available": false,
+        "dirty": null,
+        "head": null
+      },
+      "model_inference_rerun": false,
+      "packages": {
+        "numpy": "2.0.2",
+        "pandas": "2.3.3",
+        "pyarrow": "24.0.0",
+        "scikit-learn": "1.6.1",
+        "scipy": "1.16.3",
+        "statsmodels": "0.14.6"
+      },
+      "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+      "python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+      "runtime": {
+        "cpu_count": 4,
+        "gpu_required": false
+      },
+      "schema_version": 2,
+      "seeds": [
+        42,
+        137,
+        2718,
+        31415,
+        65537
+      ],
+      "stage_id": "05",
+      "target_tuning": false
+    }
+  },
+  "06": {
+    "ENVIRONMENT_PREFLIGHT.json": {
+      "accelerator_note": "CPU sufficient",
+      "environment_id": "SWARABYANJAN-KAGGLE-ENV-v2.0.0",
+      "initial_versions": {
+        "matplotlib": "3.10.0",
+        "numpy": "2.0.2",
+        "pandas": "2.3.3",
+        "pyarrow": "24.0.0"
+      },
+      "installed_now": [],
+      "policy": "preserve Kaggle compiled scientific stack; install only missing application-level packages",
+      "probe_stdout": "{\"matplotlib\": \"3.10.0\", \"numpy\": \"2.0.2\", \"pandas\": \"2.3.3\", \"pyarrow\": \"24.0.0\"}",
+      "schema_version": 1,
+      "stage_id": "06",
+      "validated_versions": {
+        "matplotlib": "3.10.0",
+        "numpy": "2.0.2",
+        "pandas": "2.3.3",
+        "pyarrow": "24.0.0"
+      }
+    },
+    "RUN_METADATA.json": {
+      "bootstrap_reps": 5000,
+      "bootstrap_seed": 20260906,
+      "budgets": [
+        0.05,
+        0.1,
+        0.2
+      ],
+      "estimability_policy": {
+        "aurc_invalid_when": "any non-finite AURC endpoint",
+        "bootstrap_attempts_required": 5000,
+        "conditional_surviving_draw_inference": false,
+        "confirmatory_rule": "CI and two-sided bootstrap p-value are reported only when all 5,000 locked replicates are valid for that metric.",
+        "error_capture_invalid_when": "source_total_err==0 or target_total_err==0, or any other non-finite error-capture endpoint",
+        "lift_invalid_when": "source_total_pos==0 or target_total_pos==0, or any other non-finite lift endpoint",
+        "rejection_resampling": false
+      },
+      "execution_utc": "2026-09-15T13:13:10.099505+00:00",
+      "git": {
+        "available": false,
+        "dirty": null,
+        "head": null,
+        "status_porcelain": null
+      },
+      "h3_statistics_consumed": false,
+      "input": "Immutable predictions from the directly mounted canonical final Stage-05 output",
+      "packages": {
+        "matplotlib": "3.10.0",
+        "numpy": "2.0.2",
+        "pandas": "2.3.3",
+        "pyarrow": "24.0.0",
+        "scikit-learn": "1.6.1"
+      },
+      "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+      "prediction_sha256": {
+        "BAITBUSTER_HUMAN_PREDICTIONS.parquet": "a3e95820c62de00984a189e2c250f7fffd223ad4b3954db04a5368c7a544b7b9",
+        "BANGLACLICK_PLATFORM_PREDICTIONS.parquet": "5685fd4142a0e8e7f85cd6040cf48042da2368d5f9596a7740c4f9f09c9519d5",
+        "LOCKED_SOURCE_TEST_PREDICTIONS.parquet": "df863d7a24f7d451451822890de58613c3295eb0bcc1aa882150137b0aa9880a"
+      },
+      "primary_budget": 0.1,
+      "python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+      "runtime": {
+        "accelerator_required": false,
+        "bootstrap_total_seconds": 339.22281071099997,
+        "cpu_count": 4
+      },
+      "schema_version": 2,
+      "stage05_checksum_sha256": "7171a0e581d8fb4bde2a630f4de631d74962954ee3890b8123d78a720823450a",
+      "stage05_identity": {
+        "canonical_stage05": true,
+        "canonical_version": "SWARABYANJAN-STAGE05-CANONICAL-vFINAL-1.0.1",
+        "protocol_version": "SWARABYANJAN-CROSSPLATFORM-v1.0.0",
+        "stage_id": "05"
+      },
+      "stage05_manifest_sha256": "7246bc3a49a5f8d8472005cea9f6062d118431cd67d5dd2c4fd8f2ee31f52c27",
+      "stage05_status_sha256": "005399d829bb66870810faa3f140757a7ee3d82eac4bae394fbbe79e701db8e6",
+      "stage_id": "06",
+      "temperature_monotonic_ranking_validated": true
+    }
+  },
+  "07": {},
+  "08": {},
+  "09": {}
+}

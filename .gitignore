@@ -1,0 +1,56 @@
+# Python / notebook caches
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*~
+
+# Temporary extraction / packaging
+_tmp/
+tmp/
+*_extract/
+*.tmp
+*.bak
+
+# LaTeX build products
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.toc
+
+# Stale package builds
+dist/
+build/
+# Public-safety restricted artifacts (restore locally only when authorised)
+data/derived/primary/stage03/clean_splits/*.parquet
+data/derived/primary/stage05/LOCKED_SOURCE_TEST_PREDICTIONS.parquet
+data/derived/primary/stage05/BANGLACLICK_PLATFORM_PREDICTIONS.parquet
+data/derived/primary/stage05/BAITBUSTER_HUMAN_PREDICTIONS.parquet
+data/derived/primary/stage05/H3_PERTURBATION_PAIRS.parquet
+data/derived/sensitivity/*/05_external_validation_and_H3_vFINAL/BANGLACLICK_PLATFORM_PREDICTIONS.parquet
+data/derived/sensitivity/*/05_external_validation_and_H3_vFINAL/H3_PERTURBATION_PAIRS.parquet
+results/primary/stage03/models/*.joblib
+provenance/canonical/stage02/P0_AUDIT_REPORT.json
+provenance/canonical/stage02/P0_BLOCKER_FORENSICS.json
+provenance/canonical/stage03/DECONTAMINATION_FORENSICS.json
+data/derived/primary/stage09/SOURCE_PUBLISHER_MAPPING.csv
+results/primary/stage09/SOURCE_CLUSTER_DIAGNOSTICS.json

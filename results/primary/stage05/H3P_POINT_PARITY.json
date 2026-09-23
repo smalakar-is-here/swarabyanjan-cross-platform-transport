@@ -1,0 +1,1056 @@
+{
+  "contrasts": 150,
+  "rows": [
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 42,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 42,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 42,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 42,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 42,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 137,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 137,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 137,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 137,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 137,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 42,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 42,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 42,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 42,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 42,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 137,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 137,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 137,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 137,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 137,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "curiosity_information_withholding",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 42,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 42,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 42,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 42,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 42,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 137,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 137,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 137,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 137,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 137,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 42,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 42,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 42,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 42,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 42,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 137,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 137,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 137,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 137,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 137,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "direct_address_imperative",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 42,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 42,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 42,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 42,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 42,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 137,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 137,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 137,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 137,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 137,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "banglabert",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 42,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 42,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 42,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 42,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 42,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 137,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 137,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 137,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 137,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 137,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 2718,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 31415,
+      "target": "banglaclick:youtube"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "baitbuster:youtube_human"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "banglaclick:facebook"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "banglaclick:news"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "banglaclick:twitter"
+    },
+    {
+      "cue": "punctuation_intensity",
+      "model": "ebm",
+      "point_parity": true,
+      "seed": 65537,
+      "target": "banglaclick:youtube"
+    }
+  ],
+  "status": "PASS"
+}

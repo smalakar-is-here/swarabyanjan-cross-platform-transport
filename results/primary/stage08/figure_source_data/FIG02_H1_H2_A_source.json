@@ -1,0 +1,21 @@
+{
+  "covers_figure_ids": [
+    "FIG02_H1_H2"
+  ],
+  "deterministic_transformation": "Direct calibrated AUROC point estimates; no pooling or new intervals.",
+  "estimability_field": null,
+  "exact_variables_used": [
+    "domain",
+    "model",
+    "seed",
+    "calibrated_auroc"
+  ],
+  "figure_id": "FIG02_H1_H2",
+  "panel_id": "A",
+  "rows": 120,
+  "source_artifact": [
+    "Stage05/H1_RESULTS.json"
+  ],
+  "source_csv": "FIG02_H1_H2_A_source.csv",
+  "source_csv_sha256": "f8e0b41e7c1c90b9ff314012759ad9a3715383a48c8912131455924567a781c3"
+}

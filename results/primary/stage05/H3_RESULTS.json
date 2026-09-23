@@ -1,0 +1,3156 @@
+{
+  "baitbuster_replication": [
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "curiosity_information_withholding",
+      "delta_rd": 0.16122600021330707,
+      "delta_rd_ci95": null,
+      "delta_rd_p": null,
+      "ebm_delta_nll_gap_by_seed": [
+        -0.267373013271805,
+        -0.2679806379167377,
+        -0.2683272799536044,
+        -0.2682557130586795,
+        -0.2680451144193431
+      ],
+      "ebm_delta_nll_gap_ci95": null,
+      "ebm_delta_nll_gap_mean_5seeds": -0.2679963517240339,
+      "ebm_delta_nll_gap_p": null,
+      "inferential_status": "NON_ESTIMABLE_UNDER_LOCKED_BOOTSTRAP",
+      "invalid_rate": 0.0008,
+      "invalid_reason_counts": {
+        "target_missing_cue_present": 4
+      },
+      "invalid_replicates": 4,
+      "reason_for_nonestimability": "At least one ordinary locked cluster-bootstrap replicate contained zero total multiplicity in the cue-present or cue-absent group in source and/or target. The difference-of-group-means statistic is undefined for that replicate. The locked protocol did not prespecify rejection resampling or conditioning on valid draws, so confirmatory CI/p are not computed from a post-hoc subset.",
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 5.760686697120517e-24,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2731,
+        "clusters_with_cue_present": 53,
+        "cue_absent_rows": 2731,
+        "cue_present_rows": 53,
+        "rows": 2784
+      },
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 0.0003198975693219886,
+        "clusters": 13,
+        "clusters_with_cue_absent": 13,
+        "clusters_with_cue_present": 6,
+        "cue_absent_rows": 9247,
+        "cue_present_rows": 753,
+        "rows": 10000
+      },
+      "valid_replicates": 4996
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "direct_address_imperative",
+      "delta_rd": 0.12254255335288694,
+      "delta_rd_ci95": [
+        -0.4062491529742265,
+        0.5442601000045753
+      ],
+      "delta_rd_p": 0.83,
+      "ebm_delta_nll_gap_by_seed": [
+        -0.2698230824824966,
+        -0.2703037590396585,
+        -0.27014234691700434,
+        -0.2702058445577644,
+        -0.2704536857944616
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        -0.7045382026952158,
+        0.1675064283863251
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": -0.27018574375827703,
+      "ebm_delta_nll_gap_p": 0.2404,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 4.3796027868989467e-35,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2706,
+        "clusters_with_cue_present": 78,
+        "cue_absent_rows": 2706,
+        "cue_present_rows": 78,
+        "rows": 2784
+      },
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 4.0303844668336445e-06,
+        "clusters": 13,
+        "clusters_with_cue_absent": 13,
+        "clusters_with_cue_present": 8,
+        "cue_absent_rows": 8844,
+        "cue_present_rows": 1156,
+        "rows": 10000
+      },
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "exaggeration_superlative",
+      "delta_rd": 0.2048014252335401,
+      "delta_rd_ci95": [
+        -0.14931344749021402,
+        0.34568694099325104
+      ],
+      "delta_rd_p": 0.5908,
+      "ebm_delta_nll_gap_by_seed": [
+        0.22850356162077518,
+        0.22771694730042802,
+        0.22722214660299472,
+        0.22724368120828664,
+        0.22686008954222509
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        -0.2519165798989938,
+        0.3813823516643952
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": 0.22750928525494193,
+      "ebm_delta_nll_gap_p": 0.3584,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 2.7295747417925814e-29,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2719,
+        "clusters_with_cue_present": 65,
+        "cue_absent_rows": 2719,
+        "cue_present_rows": 65,
+        "rows": 2784
+      },
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 2.7047452305245158e-11,
+        "clusters": 13,
+        "clusters_with_cue_absent": 13,
+        "clusters_with_cue_present": 11,
+        "cue_absent_rows": 9564,
+        "cue_present_rows": 436,
+        "rows": 10000
+      },
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "interrogative_structure",
+      "delta_rd": 0.052730114991038024,
+      "delta_rd_ci95": [
+        -0.4314562856745488,
+        0.34914676467285977
+      ],
+      "delta_rd_p": 0.9408,
+      "ebm_delta_nll_gap_by_seed": [
+        -0.24528670980383382,
+        -0.24522649955688114,
+        -0.24502707253813055,
+        -0.24470706688677274,
+        -0.2451161559683943
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        -0.7121541865730857,
+        0.24666318080968316
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": -0.24507270095080252,
+      "ebm_delta_nll_gap_p": 0.32,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 3.7800003476130715e-80,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2607,
+        "clusters_with_cue_present": 177,
+        "cue_absent_rows": 2607,
+        "cue_present_rows": 177,
+        "rows": 2784
+      },
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 2.7047452305245158e-11,
+        "clusters": 13,
+        "clusters_with_cue_absent": 13,
+        "clusters_with_cue_present": 11,
+        "cue_absent_rows": 8488,
+        "cue_present_rows": 1512,
+        "rows": 10000
+      },
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "punctuation_intensity",
+      "delta_rd": 0.4015767012517409,
+      "delta_rd_ci95": [
+        -0.23861438186780914,
+        0.6155311284144744
+      ],
+      "delta_rd_p": 0.6708,
+      "ebm_delta_nll_gap_by_seed": [
+        0.01798010837047348,
+        0.018019042534010876,
+        0.019239523492529775,
+        0.018541829219532457,
+        0.019237878800693275
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        -0.6483317990397631,
+        0.45687779657996214
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": 0.018603676483447972,
+      "ebm_delta_nll_gap_p": 0.9284,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 6.389792664222996e-268,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2232,
+        "clusters_with_cue_present": 552,
+        "cue_absent_rows": 2232,
+        "cue_present_rows": 552,
+        "rows": 2784
+      },
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 2.7047452305245158e-11,
+        "clusters": 13,
+        "clusters_with_cue_absent": 13,
+        "clusters_with_cue_present": 11,
+        "cue_absent_rows": 6284,
+        "cue_present_rows": 3716,
+        "rows": 10000
+      },
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "sensational_emotional_loading",
+      "delta_rd": -0.01535817090221242,
+      "delta_rd_ci95": null,
+      "delta_rd_p": null,
+      "ebm_delta_nll_gap_by_seed": [
+        -0.2284245539687107,
+        -0.22845923710542948,
+        -0.22896762838292956,
+        -0.22847569716194766,
+        -0.22873006832035442
+      ],
+      "ebm_delta_nll_gap_ci95": null,
+      "ebm_delta_nll_gap_mean_5seeds": -0.22861143698787437,
+      "ebm_delta_nll_gap_p": null,
+      "inferential_status": "NON_ESTIMABLE_UNDER_LOCKED_BOOTSTRAP",
+      "invalid_rate": 0.0018,
+      "invalid_reason_counts": {
+        "target_missing_cue_present": 9
+      },
+      "invalid_replicates": 9,
+      "reason_for_nonestimability": "At least one ordinary locked cluster-bootstrap replicate contained zero total multiplicity in the cue-present or cue-absent group in source and/or target. The difference-of-group-means statistic is undefined for that replicate. The locked protocol did not prespecify rejection resampling or conditioning on valid draws, so confirmatory CI/p are not computed from a post-hoc subset.",
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 9.069440287122328e-38,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2700,
+        "clusters_with_cue_present": 84,
+        "cue_absent_rows": 2700,
+        "cue_present_rows": 84,
+        "rows": 2784
+      },
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 0.0018151237982991838,
+        "clusters": 13,
+        "clusters_with_cue_absent": 13,
+        "clusters_with_cue_present": 5,
+        "cue_absent_rows": 9650,
+        "cue_present_rows": 350,
+        "rows": 10000
+      },
+      "valid_replicates": 4991
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "specificity_numerals",
+      "delta_rd": -0.19848108495806166,
+      "delta_rd_ci95": [
+        -0.29916581264578795,
+        0.021635874168168753
+      ],
+      "delta_rd_p": 0.1536,
+      "ebm_delta_nll_gap_by_seed": [
+        -0.024206627484524845,
+        -0.024240651192048435,
+        -0.024685775211261307,
+        -0.024411010006395617,
+        -0.024567813508293956
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        -0.16870500454174886,
+        0.21451613042181775
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": -0.024422375480504833,
+      "ebm_delta_nll_gap_p": 0.8608,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 5.6151677473387476e-247,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2271,
+        "clusters_with_cue_present": 513,
+        "cue_absent_rows": 2271,
+        "cue_present_rows": 513,
+        "rows": 2784
+      },
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 0.0,
+        "clusters": 13,
+        "clusters_with_cue_absent": 13,
+        "clusters_with_cue_present": 13,
+        "cue_absent_rows": 7300,
+        "cue_present_rows": 2700,
+        "rows": 10000
+      },
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "vague_deictic_reference",
+      "delta_rd": -0.020702659597350237,
+      "delta_rd_ci95": null,
+      "delta_rd_p": null,
+      "ebm_delta_nll_gap_by_seed": [
+        -0.34290126205273297,
+        -0.34300923796451466,
+        -0.34353950210417017,
+        -0.34337182721827597,
+        -0.3435145013497938
+      ],
+      "ebm_delta_nll_gap_ci95": null,
+      "ebm_delta_nll_gap_mean_5seeds": -0.34326726613789754,
+      "ebm_delta_nll_gap_p": null,
+      "inferential_status": "NON_ESTIMABLE_UNDER_LOCKED_BOOTSTRAP",
+      "invalid_rate": 0.0004,
+      "invalid_reason_counts": {
+        "target_missing_cue_present": 2
+      },
+      "invalid_replicates": 2,
+      "reason_for_nonestimability": "At least one ordinary locked cluster-bootstrap replicate contained zero total multiplicity in the cue-present or cue-absent group in source and/or target. The difference-of-group-means statistic is undefined for that replicate. The locked protocol did not prespecify rejection resampling or conditioning on valid draws, so confirmatory CI/p are not computed from a post-hoc subset.",
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 8.711593655067555e-100,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2565,
+        "clusters_with_cue_present": 219,
+        "cue_absent_rows": 2565,
+        "cue_present_rows": 219,
+        "rows": 2784
+      },
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 0.0003198975693219886,
+        "clusters": 13,
+        "clusters_with_cue_absent": 13,
+        "clusters_with_cue_present": 6,
+        "cue_absent_rows": 9127,
+        "cue_present_rows": 873,
+        "rows": 10000
+      },
+      "valid_replicates": 4998
+    }
+  ],
+  "banglaclick_cue_platform_contrasts": [
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "curiosity_information_withholding",
+      "delta_rd": -0.141660761735041,
+      "delta_rd_ci95": [
+        -0.32857984398723317,
+        0.026811073323805494
+      ],
+      "delta_rd_p": 0.1028,
+      "ebm_delta_nll_gap_by_seed": [
+        -0.6992386480233186,
+        -0.7003958951299672,
+        -0.7003561258431493,
+        -0.7003378420117988,
+        -0.6999609836641274
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        -0.9019517255694913,
+        -0.4801005887000192
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": -0.7000578989344722,
+      "ebm_delta_nll_gap_p": 0.0,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_rd": 0.28686706783747745,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 5.760686697120517e-24,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2731,
+        "clusters_with_cue_present": 53,
+        "cue_absent_rows": 2731,
+        "cue_present_rows": 53,
+        "rows": 2784
+      },
+      "target": "banglaclick:news",
+      "target_rd": 0.14520630610243646,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 7.716048265047869e-11,
+        "clusters": 943,
+        "clusters_with_cue_absent": 925,
+        "clusters_with_cue_present": 23,
+        "cue_absent_rows": 1473,
+        "cue_present_rows": 27,
+        "rows": 1500
+      },
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "curiosity_information_withholding",
+      "delta_rd": -0.23316307162834776,
+      "delta_rd_ci95": [
+        -0.48790277622076295,
+        0.02050251470726657
+      ],
+      "delta_rd_p": 0.0696,
+      "ebm_delta_nll_gap_by_seed": [
+        0.4604201803607544,
+        0.46778947199815235,
+        0.46113387063424327,
+        0.4559918839258702,
+        0.4472870580753038
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        -0.7906669631159947,
+        1.4999169549082192
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": 0.45852449299886483,
+      "ebm_delta_nll_gap_p": 0.436,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_rd": 0.28686706783747745,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 5.760686697120517e-24,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2731,
+        "clusters_with_cue_present": 53,
+        "cue_absent_rows": 2731,
+        "cue_present_rows": 53,
+        "rows": 2784
+      },
+      "target": "banglaclick:facebook",
+      "target_rd": 0.05370399620912969,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 1.5935471157079395e-05,
+        "clusters": 26,
+        "clusters_with_cue_absent": 26,
+        "clusters_with_cue_present": 9,
+        "cue_absent_rows": 1948,
+        "cue_present_rows": 13,
+        "rows": 1961
+      },
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "curiosity_information_withholding",
+      "delta_rd": -0.23328898856107422,
+      "delta_rd_ci95": null,
+      "delta_rd_p": null,
+      "ebm_delta_nll_gap_by_seed": [
+        -0.6686013603388643,
+        -0.66873715703581,
+        -0.6697258926989692,
+        -0.6694964913048118,
+        -0.668988649292786
+      ],
+      "ebm_delta_nll_gap_ci95": null,
+      "ebm_delta_nll_gap_mean_5seeds": -0.6691099101342484,
+      "ebm_delta_nll_gap_p": null,
+      "inferential_status": "NON_ESTIMABLE_UNDER_LOCKED_BOOTSTRAP",
+      "invalid_rate": 0.0016,
+      "invalid_reason_counts": {
+        "target_missing_cue_present": 8
+      },
+      "invalid_replicates": 8,
+      "reason_for_nonestimability": "At least one ordinary locked cluster-bootstrap replicate contained zero total multiplicity in the cue-present or cue-absent group in source and/or target. The difference-of-group-means statistic is undefined for that replicate. The locked protocol did not prespecify rejection resampling or conditioning on valid draws, so confirmatory CI/p are not computed from a post-hoc subset.",
+      "source_rd": 0.28686706783747745,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 5.760686697120517e-24,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2731,
+        "clusters_with_cue_present": 53,
+        "cue_absent_rows": 2731,
+        "cue_present_rows": 53,
+        "rows": 2784
+      },
+      "target": "banglaclick:youtube",
+      "target_rd": 0.053578079276403234,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 0.0009765625,
+        "clusters": 10,
+        "clusters_with_cue_absent": 10,
+        "clusters_with_cue_present": 5,
+        "cue_absent_rows": 895,
+        "cue_present_rows": 105,
+        "rows": 1000
+      },
+      "valid_replicates": 4992
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "curiosity_information_withholding",
+      "delta_rd": -0.007750601974023608,
+      "delta_rd_ci95": null,
+      "delta_rd_p": null,
+      "ebm_delta_nll_gap_by_seed": [
+        -0.6653112633116364,
+        -0.6663761940823912,
+        -0.6659834402277883,
+        -0.6671640389853477,
+        -0.668039442798423
+      ],
+      "ebm_delta_nll_gap_ci95": null,
+      "ebm_delta_nll_gap_mean_5seeds": -0.6665748758811173,
+      "ebm_delta_nll_gap_p": null,
+      "inferential_status": "NON_ESTIMABLE_UNDER_LOCKED_BOOTSTRAP",
+      "invalid_rate": 0.1358,
+      "invalid_reason_counts": {
+        "target_missing_cue_present": 679
+      },
+      "invalid_replicates": 679,
+      "reason_for_nonestimability": "At least one ordinary locked cluster-bootstrap replicate contained zero total multiplicity in the cue-present or cue-absent group in source and/or target. The difference-of-group-means statistic is undefined for that replicate. The locked protocol did not prespecify rejection resampling or conditioning on valid draws, so confirmatory CI/p are not computed from a post-hoc subset.",
+      "source_rd": 0.28686706783747745,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 5.760686697120517e-24,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2731,
+        "clusters_with_cue_present": 53,
+        "cue_absent_rows": 2731,
+        "cue_present_rows": 53,
+        "rows": 2784
+      },
+      "target": "banglaclick:twitter",
+      "target_rd": 0.27911646586345384,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 0.13447235998699417,
+        "clusters": 314,
+        "clusters_with_cue_absent": 312,
+        "clusters_with_cue_present": 2,
+        "cue_absent_rows": 498,
+        "cue_present_rows": 2,
+        "rows": 500
+      },
+      "valid_replicates": 4321
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "direct_address_imperative",
+      "delta_rd": -0.24497264561011783,
+      "delta_rd_ci95": [
+        -0.3957450535500349,
+        -0.10668591469082216
+      ],
+      "delta_rd_p": 0.0016,
+      "ebm_delta_nll_gap_by_seed": [
+        -0.6747531494770309,
+        -0.6750474316446543,
+        -0.6750160612295697,
+        -0.6751532626938661,
+        -0.6748548508767928
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        -0.8490792710744685,
+        -0.5169575632399741
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": -0.6749649511843827,
+      "ebm_delta_nll_gap_p": 0.0,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_rd": 0.3611916538745807,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 4.3796027868989467e-35,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2706,
+        "clusters_with_cue_present": 78,
+        "cue_absent_rows": 2706,
+        "cue_present_rows": 78,
+        "rows": 2784
+      },
+      "target": "banglaclick:news",
+      "target_rd": 0.11621900826446285,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 2.192560783377252e-19,
+        "clusters": 943,
+        "clusters_with_cue_absent": 907,
+        "clusters_with_cue_present": 42,
+        "cue_absent_rows": 1452,
+        "cue_present_rows": 48,
+        "rows": 1500
+      },
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "direct_address_imperative",
+      "delta_rd": -0.42820306080621967,
+      "delta_rd_ci95": [
+        -0.6305209221844766,
+        -0.21457066966166458
+      ],
+      "delta_rd_p": 0.0,
+      "ebm_delta_nll_gap_by_seed": [
+        0.3244955769553801,
+        0.32997373541651676,
+        0.3255155539821841,
+        0.32184431076364195,
+        0.3157646777414146
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        -0.3038006817378235,
+        1.2459829846731056
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": 0.3235187709718275,
+      "ebm_delta_nll_gap_p": 0.4028,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_rd": 0.3611916538745807,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 4.3796027868989467e-35,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2706,
+        "clusters_with_cue_present": 78,
+        "cue_absent_rows": 2706,
+        "cue_present_rows": 78,
+        "rows": 2784
+      },
+      "target": "banglaclick:facebook",
+      "target_rd": -0.06701140693163898,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 1.9359884717064175e-10,
+        "clusters": 26,
+        "clusters_with_cue_absent": 26,
+        "clusters_with_cue_present": 15,
+        "cue_absent_rows": 1764,
+        "cue_present_rows": 197,
+        "rows": 1961
+      },
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "direct_address_imperative",
+      "delta_rd": -0.2931930964538035,
+      "delta_rd_ci95": null,
+      "delta_rd_p": null,
+      "ebm_delta_nll_gap_by_seed": [
+        -0.7259813916798746,
+        -0.7259836512379053,
+        -0.7263789054413752,
+        -0.7262292889650072,
+        -0.726149437550002
+      ],
+      "ebm_delta_nll_gap_ci95": null,
+      "ebm_delta_nll_gap_mean_5seeds": -0.7261445349748328,
+      "ebm_delta_nll_gap_p": null,
+      "inferential_status": "NON_ESTIMABLE_UNDER_LOCKED_BOOTSTRAP",
+      "invalid_rate": 0.0062,
+      "invalid_reason_counts": {
+        "target_missing_cue_present": 31
+      },
+      "invalid_replicates": 31,
+      "reason_for_nonestimability": "At least one ordinary locked cluster-bootstrap replicate contained zero total multiplicity in the cue-present or cue-absent group in source and/or target. The difference-of-group-means statistic is undefined for that replicate. The locked protocol did not prespecify rejection resampling or conditioning on valid draws, so confirmatory CI/p are not computed from a post-hoc subset.",
+      "source_rd": 0.3611916538745807,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 4.3796027868989467e-35,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2706,
+        "clusters_with_cue_present": 78,
+        "cue_absent_rows": 2706,
+        "cue_present_rows": 78,
+        "rows": 2784
+      },
+      "target": "banglaclick:youtube",
+      "target_rd": 0.0679985574207772,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 0.006046617599999997,
+        "clusters": 10,
+        "clusters_with_cue_absent": 10,
+        "clusters_with_cue_present": 4,
+        "cue_absent_rows": 821,
+        "cue_present_rows": 179,
+        "rows": 1000
+      },
+      "valid_replicates": 4969
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "direct_address_imperative",
+      "delta_rd": -0.27994165387458064,
+      "delta_rd_ci95": [
+        -0.531050649148096,
+        -0.05299826860512916
+      ],
+      "delta_rd_p": 0.0156,
+      "ebm_delta_nll_gap_by_seed": [
+        -0.40655719496486764,
+        -0.40812095788057123,
+        -0.40801027899865705,
+        -0.40810681417671346,
+        -0.4079429442021888
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        -0.8682704903412759,
+        0.15923699083732923
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": -0.4077476380445996,
+      "ebm_delta_nll_gap_p": 0.1396,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_rd": 0.3611916538745807,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 4.3796027868989467e-35,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2706,
+        "clusters_with_cue_present": 78,
+        "cue_absent_rows": 2706,
+        "cue_present_rows": 78,
+        "rows": 2784
+      },
+      "target": "banglaclick:twitter",
+      "target_rd": 0.08125000000000004,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 8.906104313118261e-09,
+        "clusters": 314,
+        "clusters_with_cue_absent": 302,
+        "clusters_with_cue_present": 18,
+        "cue_absent_rows": 480,
+        "cue_present_rows": 20,
+        "rows": 500
+      },
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "exaggeration_superlative",
+      "delta_rd": 0.07103365031156811,
+      "delta_rd_ci95": [
+        -0.11352475803577425,
+        0.23345516030039792
+      ],
+      "delta_rd_p": 0.4104,
+      "ebm_delta_nll_gap_by_seed": [
+        -0.19710366347797692,
+        -0.19785168429012423,
+        -0.1981970688337269,
+        -0.19786927347039251,
+        -0.1976064057991458
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        -0.460494480153679,
+        0.047794508826583745
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": -0.19772561917427328,
+      "ebm_delta_nll_gap_p": 0.1324,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_rd": 0.04441678218802164,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 2.7295747417925814e-29,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2719,
+        "clusters_with_cue_present": 65,
+        "cue_absent_rows": 2719,
+        "cue_present_rows": 65,
+        "rows": 2784
+      },
+      "target": "banglaclick:news",
+      "target_rd": 0.11545043249958975,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 1.2673758212495478e-12,
+        "clusters": 943,
+        "clusters_with_cue_absent": 922,
+        "clusters_with_cue_present": 27,
+        "cue_absent_rows": 1471,
+        "cue_present_rows": 29,
+        "rows": 1500
+      },
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "exaggeration_superlative",
+      "delta_rd": -0.30906270171791306,
+      "delta_rd_ci95": [
+        -0.4951285102892373,
+        0.01675629002758678
+      ],
+      "delta_rd_p": 0.064,
+      "ebm_delta_nll_gap_by_seed": [
+        1.3067520199286766,
+        1.3249101370890675,
+        1.3100094689623423,
+        1.2993967114225664,
+        1.2807628311198096
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        0.08314816903072256,
+        2.041904760160774
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": 1.3043662337044926,
+      "ebm_delta_nll_gap_p": 0.0264,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_rd": 0.04441678218802164,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 2.7295747417925814e-29,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2719,
+        "clusters_with_cue_present": 65,
+        "cue_absent_rows": 2719,
+        "cue_present_rows": 65,
+        "rows": 2784
+      },
+      "target": "banglaclick:facebook",
+      "target_rd": -0.2646459195298914,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 1.624399895049392e-11,
+        "clusters": 26,
+        "clusters_with_cue_absent": 26,
+        "clusters_with_cue_present": 16,
+        "cue_absent_rows": 1853,
+        "cue_present_rows": 108,
+        "rows": 1961
+      },
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "exaggeration_superlative",
+      "delta_rd": -0.010575551327200394,
+      "delta_rd_ci95": null,
+      "delta_rd_p": null,
+      "ebm_delta_nll_gap_by_seed": [
+        -0.08412410321957953,
+        -0.08517259632895602,
+        -0.08528903991001258,
+        -0.08549452974825122,
+        -0.08559703494465731
+      ],
+      "ebm_delta_nll_gap_ci95": null,
+      "ebm_delta_nll_gap_mean_5seeds": -0.08513546083029133,
+      "ebm_delta_nll_gap_p": null,
+      "inferential_status": "NON_ESTIMABLE_UNDER_LOCKED_BOOTSTRAP",
+      "invalid_rate": 0.001,
+      "invalid_reason_counts": {
+        "target_missing_cue_present": 5
+      },
+      "invalid_replicates": 5,
+      "reason_for_nonestimability": "At least one ordinary locked cluster-bootstrap replicate contained zero total multiplicity in the cue-present or cue-absent group in source and/or target. The difference-of-group-means statistic is undefined for that replicate. The locked protocol did not prespecify rejection resampling or conditioning on valid draws, so confirmatory CI/p are not computed from a post-hoc subset.",
+      "source_rd": 0.04441678218802164,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 2.7295747417925814e-29,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2719,
+        "clusters_with_cue_present": 65,
+        "cue_absent_rows": 2719,
+        "cue_present_rows": 65,
+        "rows": 2784
+      },
+      "target": "banglaclick:youtube",
+      "target_rd": 0.03384123086082125,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 0.0009765625,
+        "clusters": 10,
+        "clusters_with_cue_absent": 10,
+        "clusters_with_cue_present": 5,
+        "cue_absent_rows": 943,
+        "cue_present_rows": 57,
+        "rows": 1000
+      },
+      "valid_replicates": 4995
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "exaggeration_superlative",
+      "delta_rd": -0.24512600204617768,
+      "delta_rd_ci95": [
+        -0.4910471932509098,
+        -0.01464260230818684
+      ],
+      "delta_rd_p": 0.0384,
+      "ebm_delta_nll_gap_by_seed": [
+        -0.5848053269510528,
+        -0.586528245503275,
+        -0.5869791363174733,
+        -0.5871748186584337,
+        -0.5863338300138082
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        -0.8276578120070246,
+        -0.3349832665313674
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": -0.5863642714888085,
+      "ebm_delta_nll_gap_p": 0.0,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_rd": 0.04441678218802164,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 2.7295747417925814e-29,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2719,
+        "clusters_with_cue_present": 65,
+        "cue_absent_rows": 2719,
+        "cue_present_rows": 65,
+        "rows": 2784
+      },
+      "target": "banglaclick:twitter",
+      "target_rd": -0.20070921985815604,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 5.48284640045826e-13,
+        "clusters": 314,
+        "clusters_with_cue_absent": 298,
+        "clusters_with_cue_present": 27,
+        "cue_absent_rows": 470,
+        "cue_present_rows": 30,
+        "rows": 500
+      },
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "interrogative_structure",
+      "delta_rd": -0.2882873801187292,
+      "delta_rd_ci95": [
+        -0.3936455377808432,
+        -0.18071694612122693
+      ],
+      "delta_rd_p": 0.0,
+      "ebm_delta_nll_gap_by_seed": [
+        -0.6172154780258392,
+        -0.6172769857937439,
+        -0.6172778331542272,
+        -0.6172517778645454,
+        -0.6170875384511312
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        -0.7524851632165943,
+        -0.48232875036388867
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": -0.6172219226578974,
+      "ebm_delta_nll_gap_p": 0.0,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_rd": 0.395792293239193,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 3.7800003476130715e-80,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2607,
+        "clusters_with_cue_present": 177,
+        "cue_absent_rows": 2607,
+        "cue_present_rows": 177,
+        "rows": 2784
+      },
+      "target": "banglaclick:news",
+      "target_rd": 0.10750491312046384,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 2.2815702180962065e-40,
+        "clusters": 943,
+        "clusters_with_cue_absent": 870,
+        "clusters_with_cue_present": 87,
+        "cue_absent_rows": 1389,
+        "cue_present_rows": 111,
+        "rows": 1500
+      },
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "interrogative_structure",
+      "delta_rd": -0.3222881349081919,
+      "delta_rd_ci95": [
+        -0.47141296350117995,
+        -0.1894213835847788
+      ],
+      "delta_rd_p": 0.0,
+      "ebm_delta_nll_gap_by_seed": [
+        0.12382419358924124,
+        0.12957788259199154,
+        0.1248489663820127,
+        0.12162853954916997,
+        0.11554413562341048
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        -0.46517322869389893,
+        0.9317504344193673
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": 0.12308474354716518,
+      "ebm_delta_nll_gap_p": 0.806,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_rd": 0.395792293239193,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 3.7800003476130715e-80,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2607,
+        "clusters_with_cue_present": 177,
+        "cue_absent_rows": 2607,
+        "cue_present_rows": 177,
+        "rows": 2784
+      },
+      "target": "banglaclick:facebook",
+      "target_rd": 0.0735041583310011,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 7.315646762045115e-22,
+        "clusters": 26,
+        "clusters_with_cue_absent": 26,
+        "clusters_with_cue_present": 22,
+        "cue_absent_rows": 1599,
+        "cue_present_rows": 362,
+        "rows": 1961
+      },
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "interrogative_structure",
+      "delta_rd": -0.32181243214274163,
+      "delta_rd_ci95": null,
+      "delta_rd_p": null,
+      "ebm_delta_nll_gap_by_seed": [
+        -0.736737627812658,
+        -0.7361248226778706,
+        -0.7363218859080978,
+        -0.7356044545378274,
+        -0.7358529228389988
+      ],
+      "ebm_delta_nll_gap_ci95": null,
+      "ebm_delta_nll_gap_mean_5seeds": -0.7361283427550905,
+      "ebm_delta_nll_gap_p": null,
+      "inferential_status": "NON_ESTIMABLE_UNDER_LOCKED_BOOTSTRAP",
+      "invalid_rate": 0.0002,
+      "invalid_reason_counts": {
+        "target_missing_cue_present": 1
+      },
+      "invalid_replicates": 1,
+      "reason_for_nonestimability": "At least one ordinary locked cluster-bootstrap replicate contained zero total multiplicity in the cue-present or cue-absent group in source and/or target. The difference-of-group-means statistic is undefined for that replicate. The locked protocol did not prespecify rejection resampling or conditioning on valid draws, so confirmatory CI/p are not computed from a post-hoc subset.",
+      "source_rd": 0.395792293239193,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 3.7800003476130715e-80,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2607,
+        "clusters_with_cue_present": 177,
+        "cue_absent_rows": 2607,
+        "cue_present_rows": 177,
+        "rows": 2784
+      },
+      "target": "banglaclick:youtube",
+      "target_rd": 0.07397986109645138,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 1.0000000000000006e-10,
+        "analytical_p_resample_missing_cue_present": 0.00010485760000000006,
+        "clusters": 10,
+        "clusters_with_cue_absent": 9,
+        "clusters_with_cue_present": 6,
+        "cue_absent_rows": 746,
+        "cue_present_rows": 254,
+        "rows": 1000
+      },
+      "valid_replicates": 4999
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "interrogative_structure",
+      "delta_rd": -0.16516898700613075,
+      "delta_rd_ci95": [
+        -0.2832663356570157,
+        -0.04692336211606128
+      ],
+      "delta_rd_p": 0.006,
+      "ebm_delta_nll_gap_by_seed": [
+        -0.7628035731255578,
+        -0.7629095777913013,
+        -0.7630340745013862,
+        -0.7625078768790803,
+        -0.7624807629701494
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        -0.9464723164601649,
+        -0.5788966159786902
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": -0.7627471730534949,
+      "ebm_delta_nll_gap_p": 0.0,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_rd": 0.395792293239193,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 3.7800003476130715e-80,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2607,
+        "clusters_with_cue_present": 177,
+        "cue_absent_rows": 2607,
+        "cue_present_rows": 177,
+        "rows": 2784
+      },
+      "target": "banglaclick:twitter",
+      "target_rd": 0.23062330623306226,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 2.741416397930579e-238,
+        "analytical_p_resample_missing_cue_present": 1.14408801892517e-39,
+        "clusters": 314,
+        "clusters_with_cue_absent": 259,
+        "clusters_with_cue_present": 78,
+        "cue_absent_rows": 410,
+        "cue_present_rows": 90,
+        "rows": 500
+      },
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "punctuation_intensity",
+      "delta_rd": -0.026946420866524823,
+      "delta_rd_ci95": [
+        -0.10323141465599636,
+        0.04755679492520814
+      ],
+      "delta_rd_p": 0.4644,
+      "ebm_delta_nll_gap_by_seed": [
+        -0.5215373682899052,
+        -0.5216688430572327,
+        -0.5216180278793492,
+        -0.5216889825514839,
+        -0.5214142205029945
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        -0.6178449218009844,
+        -0.43528785705464285
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": -0.5215854884561931,
+      "ebm_delta_nll_gap_p": 0.0,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_rd": 0.243221131369799,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 6.389792664222996e-268,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2232,
+        "clusters_with_cue_present": 552,
+        "cue_absent_rows": 2232,
+        "cue_present_rows": 552,
+        "rows": 2784
+      },
+      "target": "banglaclick:news",
+      "target_rd": 0.21627471050327418,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 2.0365610178925614e-93,
+        "clusters": 943,
+        "clusters_with_cue_absent": 769,
+        "clusters_with_cue_present": 191,
+        "cue_absent_rows": 1238,
+        "cue_present_rows": 262,
+        "rows": 1500
+      },
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "punctuation_intensity",
+      "delta_rd": -0.12685496477194919,
+      "delta_rd_ci95": [
+        -0.25288550606662136,
+        -0.015533714457829587
+      ],
+      "delta_rd_p": 0.0264,
+      "ebm_delta_nll_gap_by_seed": [
+        -0.20932009638448257,
+        -0.2082619749103528,
+        -0.2096070359504485,
+        -0.21029925232059177,
+        -0.21143494743734148
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        -0.5982990572889841,
+        0.3691893432440295
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": -0.20978466140064342,
+      "ebm_delta_nll_gap_p": 0.4192,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_rd": 0.243221131369799,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 6.389792664222996e-268,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2232,
+        "clusters_with_cue_present": 552,
+        "cue_absent_rows": 2232,
+        "cue_present_rows": 552,
+        "rows": 2784
+      },
+      "target": "banglaclick:facebook",
+      "target_rd": 0.11636616659784982,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 7.315646762045115e-22,
+        "clusters": 26,
+        "clusters_with_cue_absent": 26,
+        "clusters_with_cue_present": 22,
+        "cue_absent_rows": 1535,
+        "cue_present_rows": 426,
+        "rows": 1961
+      },
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "punctuation_intensity",
+      "delta_rd": -0.13008078550556107,
+      "delta_rd_ci95": [
+        -0.22302963907779783,
+        -0.024092358092033167
+      ],
+      "delta_rd_p": 0.016,
+      "ebm_delta_nll_gap_by_seed": [
+        -0.7571083188713328,
+        -0.7565283103317814,
+        -0.7557660890104835,
+        -0.7562061446170496,
+        -0.7548594627376447
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        -1.2797910378463628,
+        -0.36650053125651055
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": -0.7560936651136584,
+      "ebm_delta_nll_gap_p": 0.0012,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_rd": 0.243221131369799,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 6.389792664222996e-268,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2232,
+        "clusters_with_cue_present": 552,
+        "cue_absent_rows": 2232,
+        "cue_present_rows": 552,
+        "rows": 2784
+      },
+      "target": "banglaclick:youtube",
+      "target_rd": 0.11314034586423793,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 1.0240000000000006e-07,
+        "analytical_p_resample_missing_cue_present": 5.9048999999999975e-06,
+        "clusters": 10,
+        "clusters_with_cue_absent": 8,
+        "clusters_with_cue_present": 7,
+        "cue_absent_rows": 461,
+        "cue_present_rows": 539,
+        "rows": 1000
+      },
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "punctuation_intensity",
+      "delta_rd": -3.2618851389554226e-05,
+      "delta_rd_ci95": [
+        -0.10029481168146198,
+        0.10165122712229419
+      ],
+      "delta_rd_p": 0.9672,
+      "ebm_delta_nll_gap_by_seed": [
+        -0.5894921113741581,
+        -0.5896256760313604,
+        -0.5895901271777145,
+        -0.589374196490469,
+        -0.5890367922308667
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        -0.7854401447947381,
+        -0.38786591747020305
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": -0.5894237806609138,
+      "ebm_delta_nll_gap_p": 0.0,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_rd": 0.243221131369799,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 6.389792664222996e-268,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2232,
+        "clusters_with_cue_present": 552,
+        "cue_absent_rows": 2232,
+        "cue_present_rows": 552,
+        "rows": 2784
+      },
+      "target": "banglaclick:twitter",
+      "target_rd": 0.24318851251840945,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 2.246873142707295e-211,
+        "analytical_p_resample_missing_cue_present": 5.2350939800653984e-48,
+        "clusters": 314,
+        "clusters_with_cue_absent": 247,
+        "clusters_with_cue_present": 92,
+        "cue_absent_rows": 388,
+        "cue_present_rows": 112,
+        "rows": 500
+      },
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "sensational_emotional_loading",
+      "delta_rd": -0.22342900630571866,
+      "delta_rd_ci95": [
+        -0.3326971029600772,
+        -0.12074268724356019
+      ],
+      "delta_rd_p": 0.0,
+      "ebm_delta_nll_gap_by_seed": [
+        -0.8034455294202051,
+        -0.8037735330740007,
+        -0.8041041334603685,
+        -0.8039858990784683,
+        -0.803611529963421
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        -0.9476355922280079,
+        -0.671956291428881
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": -0.8037841249992926,
+      "ebm_delta_nll_gap_p": 0.0,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_rd": 0.44603174603174606,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 9.069440287122328e-38,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2700,
+        "clusters_with_cue_present": 84,
+        "cue_absent_rows": 2700,
+        "cue_present_rows": 84,
+        "rows": 2784
+      },
+      "target": "banglaclick:news",
+      "target_rd": 0.2226027397260274,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 1.7742805605425424e-18,
+        "clusters": 943,
+        "clusters_with_cue_absent": 905,
+        "clusters_with_cue_present": 40,
+        "cue_absent_rows": 1460,
+        "cue_present_rows": 40,
+        "rows": 1500
+      },
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "sensational_emotional_loading",
+      "delta_rd": -0.4181542019920676,
+      "delta_rd_ci95": [
+        -0.7309567008283833,
+        -0.12187458316753415
+      ],
+      "delta_rd_p": 0.0024,
+      "ebm_delta_nll_gap_by_seed": [
+        0.6373169814503256,
+        0.6466528691928867,
+        0.6423614411648599,
+        0.6390266688644397,
+        0.6282357567781409
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        -0.6806216639850002,
+        2.4496659244767334
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": 0.6387187434901305,
+      "ebm_delta_nll_gap_p": 0.4992,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_rd": 0.44603174603174606,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 9.069440287122328e-38,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2700,
+        "clusters_with_cue_present": 84,
+        "cue_absent_rows": 2700,
+        "cue_present_rows": 84,
+        "rows": 2784
+      },
+      "target": "banglaclick:facebook",
+      "target_rd": 0.02787754403967846,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 7.043330788944565e-05,
+        "clusters": 26,
+        "clusters_with_cue_absent": 26,
+        "clusters_with_cue_present": 8,
+        "cue_absent_rows": 1949,
+        "cue_present_rows": 12,
+        "rows": 1961
+      },
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "sensational_emotional_loading",
+      "delta_rd": -0.3755054302422724,
+      "delta_rd_ci95": null,
+      "delta_rd_p": null,
+      "ebm_delta_nll_gap_by_seed": [
+        -0.6116844053197155,
+        -0.6112888649504886,
+        -0.6123938543715761,
+        -0.6117805716996676,
+        -0.6118818814347047
+      ],
+      "ebm_delta_nll_gap_ci95": null,
+      "ebm_delta_nll_gap_mean_5seeds": -0.6118059155552305,
+      "ebm_delta_nll_gap_p": null,
+      "inferential_status": "NON_ESTIMABLE_UNDER_LOCKED_BOOTSTRAP",
+      "invalid_rate": 0.0306,
+      "invalid_reason_counts": {
+        "target_missing_cue_present": 153
+      },
+      "invalid_replicates": 153,
+      "reason_for_nonestimability": "At least one ordinary locked cluster-bootstrap replicate contained zero total multiplicity in the cue-present or cue-absent group in source and/or target. The difference-of-group-means statistic is undefined for that replicate. The locked protocol did not prespecify rejection resampling or conditioning on valid draws, so confirmatory CI/p are not computed from a post-hoc subset.",
+      "source_rd": 0.44603174603174606,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 9.069440287122328e-38,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2700,
+        "clusters_with_cue_present": 84,
+        "cue_absent_rows": 2700,
+        "cue_present_rows": 84,
+        "rows": 2784
+      },
+      "target": "banglaclick:youtube",
+      "target_rd": 0.07052631578947366,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 0.028247524899999984,
+        "clusters": 10,
+        "clusters_with_cue_absent": 10,
+        "clusters_with_cue_present": 3,
+        "cue_absent_rows": 950,
+        "cue_present_rows": 50,
+        "rows": 1000
+      },
+      "valid_replicates": 4847
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "sensational_emotional_loading",
+      "delta_rd": -1.169478639819321,
+      "delta_rd_ci95": null,
+      "delta_rd_p": null,
+      "ebm_delta_nll_gap_by_seed": [
+        1.4692713176179248,
+        1.4606678613828823,
+        1.4725009833923555,
+        1.4631400166963155,
+        1.4620184458152978
+      ],
+      "ebm_delta_nll_gap_ci95": null,
+      "ebm_delta_nll_gap_mean_5seeds": 1.4655197249809553,
+      "ebm_delta_nll_gap_p": null,
+      "inferential_status": "NON_ESTIMABLE_UNDER_LOCKED_BOOTSTRAP",
+      "invalid_rate": 0.3714,
+      "invalid_reason_counts": {
+        "target_missing_cue_present": 1857
+      },
+      "invalid_replicates": 1857,
+      "reason_for_nonestimability": "At least one ordinary locked cluster-bootstrap replicate contained zero total multiplicity in the cue-present or cue-absent group in source and/or target. The difference-of-group-means statistic is undefined for that replicate. The locked protocol did not prespecify rejection resampling or conditioning on valid draws, so confirmatory CI/p are not computed from a post-hoc subset.",
+      "source_rd": 0.44603174603174606,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 9.069440287122328e-38,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2700,
+        "clusters_with_cue_present": 84,
+        "cue_absent_rows": 2700,
+        "cue_present_rows": 84,
+        "rows": 2784
+      },
+      "target": "banglaclick:twitter",
+      "target_rd": -0.7234468937875751,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 0.3672928673137446,
+        "clusters": 314,
+        "clusters_with_cue_absent": 313,
+        "clusters_with_cue_present": 1,
+        "cue_absent_rows": 499,
+        "cue_present_rows": 1,
+        "rows": 500
+      },
+      "valid_replicates": 3143
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "specificity_numerals",
+      "delta_rd": -0.020676737712474413,
+      "delta_rd_ci95": [
+        -0.08783784450483952,
+        0.052688252688228104
+      ],
+      "delta_rd_p": 0.6096,
+      "ebm_delta_nll_gap_by_seed": [
+        0.05833505872657374,
+        0.058363090581296295,
+        0.05838584117473877,
+        0.058090888810089614,
+        0.058336593108883505
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        -0.03418960846594458,
+        0.1613116465432003
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": 0.05830229448031639,
+      "ebm_delta_nll_gap_p": 0.2156,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_rd": -0.0049080576091630745,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 5.6151677473387476e-247,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2271,
+        "clusters_with_cue_present": 513,
+        "cue_absent_rows": 2271,
+        "cue_present_rows": 513,
+        "rows": 2784
+      },
+      "target": "banglaclick:news",
+      "target_rd": -0.025584795321637488,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 9.181750390913811e-123,
+        "clusters": 943,
+        "clusters_with_cue_absent": 720,
+        "clusters_with_cue_present": 243,
+        "cue_absent_rows": 1140,
+        "cue_present_rows": 360,
+        "rows": 1500
+      },
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "specificity_numerals",
+      "delta_rd": -0.25023302147090803,
+      "delta_rd_ci95": [
+        -0.37156841810404884,
+        -0.12555017792843606
+      ],
+      "delta_rd_p": 0.0,
+      "ebm_delta_nll_gap_by_seed": [
+        0.4532600931806495,
+        0.4583547028793419,
+        0.4544874385509242,
+        0.451347524239312,
+        0.4454139340543235
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        0.0069197110343398975,
+        0.892818269335472
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": 0.4525727385809103,
+      "ebm_delta_nll_gap_p": 0.044,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_rd": -0.0049080576091630745,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 5.6151677473387476e-247,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2271,
+        "clusters_with_cue_present": 513,
+        "cue_absent_rows": 2271,
+        "cue_present_rows": 513,
+        "rows": 2784
+      },
+      "target": "banglaclick:facebook",
+      "target_rd": -0.2551410790800711,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 1.624399895049392e-37,
+        "clusters": 26,
+        "clusters_with_cue_absent": 26,
+        "clusters_with_cue_present": 25,
+        "cue_absent_rows": 1352,
+        "cue_present_rows": 609,
+        "rows": 1961
+      },
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "specificity_numerals",
+      "delta_rd": -0.004886506521370515,
+      "delta_rd_ci95": [
+        -0.06811550898907856,
+        0.05806978434627626
+      ],
+      "delta_rd_p": 0.9416,
+      "ebm_delta_nll_gap_by_seed": [
+        0.19482699687066118,
+        0.19504305953505263,
+        0.19467615876428068,
+        0.19511656260222965,
+        0.19453791384269592
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        -0.05365723010954976,
+        0.3413959337774342
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": 0.19484013832298402,
+      "ebm_delta_nll_gap_p": 0.0916,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_rd": -0.0049080576091630745,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 5.6151677473387476e-247,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2271,
+        "clusters_with_cue_present": 513,
+        "cue_absent_rows": 2271,
+        "cue_present_rows": 513,
+        "rows": 2784
+      },
+      "target": "banglaclick:youtube",
+      "target_rd": -0.00979456413053359,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 1.0000000000000006e-10,
+        "analytical_p_resample_missing_cue_present": 1.0000000000000006e-10,
+        "clusters": 10,
+        "clusters_with_cue_absent": 9,
+        "clusters_with_cue_present": 9,
+        "cue_absent_rows": 772,
+        "cue_present_rows": 228,
+        "rows": 1000
+      },
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "specificity_numerals",
+      "delta_rd": -0.13971121201010656,
+      "delta_rd_ci95": [
+        -0.23375932391617033,
+        -0.0420003870581296
+      ],
+      "delta_rd_p": 0.0052,
+      "ebm_delta_nll_gap_by_seed": [
+        0.39585301353777436,
+        0.39614571586285297,
+        0.39665624128666266,
+        0.39645548543992215,
+        0.39644960986419076
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        0.1731742971514733,
+        0.6036481018778286
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": 0.3963120131982806,
+      "ebm_delta_nll_gap_p": 0.0012,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_rd": -0.0049080576091630745,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 5.6151677473387476e-247,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2271,
+        "clusters_with_cue_present": 513,
+        "cue_absent_rows": 2271,
+        "cue_present_rows": 513,
+        "rows": 2784
+      },
+      "target": "banglaclick:twitter",
+      "target_rd": -0.14461926961926963,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 8.962557599053113e-44,
+        "analytical_p_resample_missing_cue_present": 9.057806390088688e-220,
+        "clusters": 314,
+        "clusters_with_cue_absent": 85,
+        "clusters_with_cue_present": 251,
+        "cue_absent_rows": 104,
+        "cue_present_rows": 396,
+        "rows": 500
+      },
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "vague_deictic_reference",
+      "delta_rd": -0.275263289827786,
+      "delta_rd_ci95": [
+        -0.38061966123433955,
+        -0.17687220563768488
+      ],
+      "delta_rd_p": 0.0,
+      "ebm_delta_nll_gap_by_seed": [
+        -0.7225602435258354,
+        -0.7227800773220447,
+        -0.7230639222247137,
+        -0.7230574463628081,
+        -0.7226994192549621
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        -0.8641370299995454,
+        -0.5677107745524841
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": -0.7228322217380727,
+      "ebm_delta_nll_gap_p": 0.0,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_rd": 0.41764533098347084,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 8.711593655067555e-100,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2565,
+        "clusters_with_cue_present": 219,
+        "cue_absent_rows": 2565,
+        "cue_present_rows": 219,
+        "rows": 2784
+      },
+      "target": "banglaclick:news",
+      "target_rd": 0.14238204115568487,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 4.9391715223145655e-37,
+        "clusters": 943,
+        "clusters_with_cue_absent": 872,
+        "clusters_with_cue_present": 80,
+        "cue_absent_rows": 1415,
+        "cue_present_rows": 85,
+        "rows": 1500
+      },
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "vague_deictic_reference",
+      "delta_rd": -0.6042914824917149,
+      "delta_rd_ci95": [
+        -0.7577602200055595,
+        -0.3618802961766951
+      ],
+      "delta_rd_p": 0.0,
+      "ebm_delta_nll_gap_by_seed": [
+        0.7985435976498239,
+        0.8111432691548468,
+        0.8015712703938964,
+        0.7945371816185569,
+        0.7809361219594145
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        -0.19109160240781226,
+        1.470047094087707
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": 0.7973462881553077,
+      "ebm_delta_nll_gap_p": 0.1608,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_rd": 0.41764533098347084,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 8.711593655067555e-100,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2565,
+        "clusters_with_cue_present": 219,
+        "cue_absent_rows": 2565,
+        "cue_present_rows": 219,
+        "rows": 2784
+      },
+      "target": "banglaclick:facebook",
+      "target_rd": -0.1866461515082441,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 4.129006584767264e-25,
+        "clusters": 26,
+        "clusters_with_cue_absent": 26,
+        "clusters_with_cue_present": 23,
+        "cue_absent_rows": 1640,
+        "cue_present_rows": 321,
+        "rows": 1961
+      },
+      "valid_replicates": 5000
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "vague_deictic_reference",
+      "delta_rd": -0.3392480016951936,
+      "delta_rd_ci95": null,
+      "delta_rd_p": null,
+      "ebm_delta_nll_gap_by_seed": [
+        -0.786694654383946,
+        -0.7864946319764332,
+        -0.7876427176218431,
+        -0.7873069017021266,
+        -0.7870646132564642
+      ],
+      "ebm_delta_nll_gap_ci95": null,
+      "ebm_delta_nll_gap_mean_5seeds": -0.7870407037881627,
+      "ebm_delta_nll_gap_p": null,
+      "inferential_status": "NON_ESTIMABLE_UNDER_LOCKED_BOOTSTRAP",
+      "invalid_rate": 0.0008,
+      "invalid_reason_counts": {
+        "target_missing_cue_present": 4
+      },
+      "invalid_replicates": 4,
+      "reason_for_nonestimability": "At least one ordinary locked cluster-bootstrap replicate contained zero total multiplicity in the cue-present or cue-absent group in source and/or target. The difference-of-group-means statistic is undefined for that replicate. The locked protocol did not prespecify rejection resampling or conditioning on valid draws, so confirmatory CI/p are not computed from a post-hoc subset.",
+      "source_rd": 0.41764533098347084,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 8.711593655067555e-100,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2565,
+        "clusters_with_cue_present": 219,
+        "cue_absent_rows": 2565,
+        "cue_present_rows": 219,
+        "rows": 2784
+      },
+      "target": "banglaclick:youtube",
+      "target_rd": 0.07839732928827725,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 0.0009765625,
+        "clusters": 10,
+        "clusters_with_cue_absent": 10,
+        "clusters_with_cue_present": 5,
+        "cue_absent_rows": 793,
+        "cue_present_rows": 207,
+        "rows": 1000
+      },
+      "valid_replicates": 4996
+    },
+    {
+      "bootstrap_attempts": 5000,
+      "cue": "vague_deictic_reference",
+      "delta_rd": -0.32251243950593195,
+      "delta_rd_ci95": [
+        -0.42500567573626746,
+        -0.2248856436619795
+      ],
+      "delta_rd_p": 0.0,
+      "ebm_delta_nll_gap_by_seed": [
+        -0.7938828201162259,
+        -0.7949238822049978,
+        -0.7956852240482659,
+        -0.7954587870582972,
+        -0.7946627729827428
+      ],
+      "ebm_delta_nll_gap_ci95": [
+        -0.9868452166168612,
+        -0.6073661402315131
+      ],
+      "ebm_delta_nll_gap_mean_5seeds": -0.794922697282106,
+      "ebm_delta_nll_gap_p": 0.0,
+      "inferential_status": "ESTIMABLE",
+      "invalid_rate": 0.0,
+      "invalid_reason_counts": {},
+      "invalid_replicates": 0,
+      "reason_for_nonestimability": null,
+      "source_rd": 0.41764533098347084,
+      "source_support": {
+        "analytical_p_resample_missing_cue_absent": 0.0,
+        "analytical_p_resample_missing_cue_present": 8.711593655067555e-100,
+        "clusters": 2784,
+        "clusters_with_cue_absent": 2565,
+        "clusters_with_cue_present": 219,
+        "cue_absent_rows": 2565,
+        "cue_present_rows": 219,
+        "rows": 2784
+      },
+      "target": "banglaclick:twitter",
+      "target_rd": 0.0951328914775389,
+      "target_support": {
+        "analytical_p_resample_missing_cue_absent": 1.655329637541712e-215,
+        "analytical_p_resample_missing_cue_present": 9.60657032595667e-52,
+        "clusters": 314,
+        "clusters_with_cue_absent": 249,
+        "clusters_with_cue_present": 98,
+        "cue_absent_rows": 383,
+        "cue_present_rows": 117,
+        "rows": 500
+      },
+      "valid_replicates": 5000
+    }
+  ],
+  "bootstrap_replicates": 5000,
+  "bootstrap_seed": 20260906,
+  "causal_language": false,
+  "ci": "95% percentile; confirmatory only when all 5,000 locked replicates are finite",
+  "cluster_rule": "unchanged from Stage 05: strongest available source entity; source TEST=row; BanglaClick=stored SOURCE_URL-derived cluster_id; BaitBuster=stored channel_id-derived cluster_id",
+  "estimability_policy": {
+    "bh_rule": "BH-FDR is not run on a post-hoc subset of the eight prespecified cue families.",
+    "conditional_valid_only_bootstrap_used": false,
+    "contrast_rule": "Any invalid locked replicate => confirmatory CI/p NON_ESTIMABLE.",
+    "global_rule": "All 32 dimensions and all 5,000 joint replicates plus full-rank 32×32 covariance are required.",
+    "posthoc_dimension_reduction_used": false,
+    "rejection_resampling_used": false
+  },
+  "family_fdr": {
+    "curiosity_information_withholding": {
+      "bh_q": null,
+      "reject_q_0_05": null,
+      "simes_p": null,
+      "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+    },
+    "direct_address_imperative": {
+      "bh_q": null,
+      "reject_q_0_05": null,
+      "simes_p": null,
+      "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+    },
+    "exaggeration_superlative": {
+      "bh_q": null,
+      "reject_q_0_05": null,
+      "simes_p": null,
+      "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+    },
+    "interrogative_structure": {
+      "bh_q": null,
+      "reject_q_0_05": null,
+      "simes_p": null,
+      "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+    },
+    "punctuation_intensity": {
+      "bh_q": null,
+      "reject_q_0_05": null,
+      "simes_p": 0.0528,
+      "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+    },
+    "sensational_emotional_loading": {
+      "bh_q": null,
+      "reject_q_0_05": null,
+      "simes_p": null,
+      "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+    },
+    "specificity_numerals": {
+      "bh_q": null,
+      "reject_q_0_05": null,
+      "simes_p": 0.0,
+      "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+    },
+    "vague_deictic_reference": {
+      "bh_q": null,
+      "reject_q_0_05": null,
+      "simes_p": null,
+      "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+    }
+  },
+  "family_fdr_outcome": {
+    "curiosity_information_withholding": {
+      "bh_q": null,
+      "reject_q_0_05": null,
+      "simes_p": null,
+      "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+    },
+    "direct_address_imperative": {
+      "bh_q": null,
+      "reject_q_0_05": null,
+      "simes_p": null,
+      "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+    },
+    "exaggeration_superlative": {
+      "bh_q": null,
+      "reject_q_0_05": null,
+      "simes_p": null,
+      "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+    },
+    "interrogative_structure": {
+      "bh_q": null,
+      "reject_q_0_05": null,
+      "simes_p": null,
+      "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+    },
+    "punctuation_intensity": {
+      "bh_q": null,
+      "reject_q_0_05": null,
+      "simes_p": 0.0528,
+      "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+    },
+    "sensational_emotional_loading": {
+      "bh_q": null,
+      "reject_q_0_05": null,
+      "simes_p": null,
+      "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+    },
+    "specificity_numerals": {
+      "bh_q": null,
+      "reject_q_0_05": null,
+      "simes_p": 0.0,
+      "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+    },
+    "vague_deictic_reference": {
+      "bh_q": null,
+      "reject_q_0_05": null,
+      "simes_p": null,
+      "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+    }
+  },
+  "family_fdr_outcome_full": {
+    "number_estimable_family_p_values": 2,
+    "number_prespecified_families": 8,
+    "q": 0.05,
+    "reason": "BH-FDR was not run on a post-hoc subset; at least one prespecified cue-family Simes p-value is unavailable.",
+    "rows": {
+      "curiosity_information_withholding": {
+        "bh_q": null,
+        "reject_q_0_05": null,
+        "simes_p": null,
+        "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+      },
+      "direct_address_imperative": {
+        "bh_q": null,
+        "reject_q_0_05": null,
+        "simes_p": null,
+        "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+      },
+      "exaggeration_superlative": {
+        "bh_q": null,
+        "reject_q_0_05": null,
+        "simes_p": null,
+        "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+      },
+      "interrogative_structure": {
+        "bh_q": null,
+        "reject_q_0_05": null,
+        "simes_p": null,
+        "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+      },
+      "punctuation_intensity": {
+        "bh_q": null,
+        "reject_q_0_05": null,
+        "simes_p": 0.0528,
+        "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+      },
+      "sensational_emotional_loading": {
+        "bh_q": null,
+        "reject_q_0_05": null,
+        "simes_p": null,
+        "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+      },
+      "specificity_numerals": {
+        "bh_q": null,
+        "reject_q_0_05": null,
+        "simes_p": 0.0,
+        "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+      },
+      "vague_deictic_reference": {
+        "bh_q": null,
+        "reject_q_0_05": null,
+        "simes_p": null,
+        "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+      }
+    },
+    "status": "NON_ESTIMABLE_FULL_8_FAMILY_BH"
+  },
+  "family_fdr_reliability": {
+    "curiosity_information_withholding": {
+      "bh_q": null,
+      "reject_q_0_05": null,
+      "simes_p": null,
+      "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+    },
+    "direct_address_imperative": {
+      "bh_q": null,
+      "reject_q_0_05": null,
+      "simes_p": null,
+      "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+    },
+    "exaggeration_superlative": {
+      "bh_q": null,
+      "reject_q_0_05": null,
+      "simes_p": null,
+      "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+    },
+    "interrogative_structure": {
+      "bh_q": null,
+      "reject_q_0_05": null,
+      "simes_p": null,
+      "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+    },
+    "punctuation_intensity": {
+      "bh_q": null,
+      "reject_q_0_05": null,
+      "simes_p": 0.0,
+      "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+    },
+    "sensational_emotional_loading": {
+      "bh_q": null,
+      "reject_q_0_05": null,
+      "simes_p": null,
+      "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+    },
+    "specificity_numerals": {
+      "bh_q": null,
+      "reject_q_0_05": null,
+      "simes_p": 0.0048,
+      "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+    },
+    "vague_deictic_reference": {
+      "bh_q": null,
+      "reject_q_0_05": null,
+      "simes_p": null,
+      "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+    }
+  },
+  "family_fdr_reliability_full": {
+    "number_estimable_family_p_values": 2,
+    "number_prespecified_families": 8,
+    "q": 0.05,
+    "reason": "BH-FDR was not run on a post-hoc subset; at least one prespecified cue-family Simes p-value is unavailable.",
+    "rows": {
+      "curiosity_information_withholding": {
+        "bh_q": null,
+        "reject_q_0_05": null,
+        "simes_p": null,
+        "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+      },
+      "direct_address_imperative": {
+        "bh_q": null,
+        "reject_q_0_05": null,
+        "simes_p": null,
+        "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+      },
+      "exaggeration_superlative": {
+        "bh_q": null,
+        "reject_q_0_05": null,
+        "simes_p": null,
+        "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+      },
+      "interrogative_structure": {
+        "bh_q": null,
+        "reject_q_0_05": null,
+        "simes_p": null,
+        "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+      },
+      "punctuation_intensity": {
+        "bh_q": null,
+        "reject_q_0_05": null,
+        "simes_p": 0.0,
+        "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+      },
+      "sensational_emotional_loading": {
+        "bh_q": null,
+        "reject_q_0_05": null,
+        "simes_p": null,
+        "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+      },
+      "specificity_numerals": {
+        "bh_q": null,
+        "reject_q_0_05": null,
+        "simes_p": 0.0048,
+        "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+      },
+      "vague_deictic_reference": {
+        "bh_q": null,
+        "reject_q_0_05": null,
+        "simes_p": null,
+        "status": "BH_NOT_RUN_FULL_PRESPECIFIED_FAMILY_INCOMPLETE"
+      }
+    },
+    "status": "NON_ESTIMABLE_FULL_8_FAMILY_BH"
+  },
+  "family_simes_outcome": {
+    "curiosity_information_withholding": {
+      "component_p_values": [
+        0.1028,
+        0.0696,
+        null,
+        null
+      ],
+      "nonestimable_platforms": [
+        "banglaclick:youtube",
+        "banglaclick:twitter"
+      ],
+      "simes_p": null,
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY"
+    },
+    "direct_address_imperative": {
+      "component_p_values": [
+        0.0016,
+        0.0,
+        null,
+        0.0156
+      ],
+      "nonestimable_platforms": [
+        "banglaclick:youtube"
+      ],
+      "simes_p": null,
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY"
+    },
+    "exaggeration_superlative": {
+      "component_p_values": [
+        0.4104,
+        0.064,
+        null,
+        0.0384
+      ],
+      "nonestimable_platforms": [
+        "banglaclick:youtube"
+      ],
+      "simes_p": null,
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY"
+    },
+    "interrogative_structure": {
+      "component_p_values": [
+        0.0,
+        0.0,
+        null,
+        0.006
+      ],
+      "nonestimable_platforms": [
+        "banglaclick:youtube"
+      ],
+      "simes_p": null,
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY"
+    },
+    "punctuation_intensity": {
+      "component_p_values": [
+        0.4644,
+        0.0264,
+        0.016,
+        0.9672
+      ],
+      "nonestimable_platforms": [],
+      "simes_p": 0.0528,
+      "status": "ESTIMABLE"
+    },
+    "sensational_emotional_loading": {
+      "component_p_values": [
+        0.0,
+        0.0024,
+        null,
+        null
+      ],
+      "nonestimable_platforms": [
+        "banglaclick:youtube",
+        "banglaclick:twitter"
+      ],
+      "simes_p": null,
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY"
+    },
+    "specificity_numerals": {
+      "component_p_values": [
+        0.6096,
+        0.0,
+        0.9416,
+        0.0052
+      ],
+      "nonestimable_platforms": [],
+      "simes_p": 0.0,
+      "status": "ESTIMABLE"
+    },
+    "vague_deictic_reference": {
+      "component_p_values": [
+        0.0,
+        0.0,
+        null,
+        0.0
+      ],
+      "nonestimable_platforms": [
+        "banglaclick:youtube"
+      ],
+      "simes_p": null,
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY"
+    }
+  },
+  "family_simes_reliability": {
+    "curiosity_information_withholding": {
+      "component_p_values": [
+        0.0,
+        0.436,
+        null,
+        null
+      ],
+      "nonestimable_platforms": [
+        "banglaclick:youtube",
+        "banglaclick:twitter"
+      ],
+      "simes_p": null,
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY"
+    },
+    "direct_address_imperative": {
+      "component_p_values": [
+        0.0,
+        0.4028,
+        null,
+        0.1396
+      ],
+      "nonestimable_platforms": [
+        "banglaclick:youtube"
+      ],
+      "simes_p": null,
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY"
+    },
+    "exaggeration_superlative": {
+      "component_p_values": [
+        0.1324,
+        0.0264,
+        null,
+        0.0
+      ],
+      "nonestimable_platforms": [
+        "banglaclick:youtube"
+      ],
+      "simes_p": null,
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY"
+    },
+    "interrogative_structure": {
+      "component_p_values": [
+        0.0,
+        0.806,
+        null,
+        0.0
+      ],
+      "nonestimable_platforms": [
+        "banglaclick:youtube"
+      ],
+      "simes_p": null,
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY"
+    },
+    "punctuation_intensity": {
+      "component_p_values": [
+        0.0,
+        0.4192,
+        0.0012,
+        0.0
+      ],
+      "nonestimable_platforms": [],
+      "simes_p": 0.0,
+      "status": "ESTIMABLE"
+    },
+    "sensational_emotional_loading": {
+      "component_p_values": [
+        0.0,
+        0.4992,
+        null,
+        null
+      ],
+      "nonestimable_platforms": [
+        "banglaclick:youtube",
+        "banglaclick:twitter"
+      ],
+      "simes_p": null,
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY"
+    },
+    "specificity_numerals": {
+      "component_p_values": [
+        0.2156,
+        0.044,
+        0.0916,
+        0.0012
+      ],
+      "nonestimable_platforms": [],
+      "simes_p": 0.0048,
+      "status": "ESTIMABLE"
+    },
+    "vague_deictic_reference": {
+      "component_p_values": [
+        0.0,
+        0.1608,
+        null,
+        0.0
+      ],
+      "nonestimable_platforms": [
+        "banglaclick:youtube"
+      ],
+      "simes_p": null,
+      "status": "NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY"
+    }
+  },
+  "global_banglaclick_outcome_wald": {
+    "bootstrap_attempts": 5000,
+    "covariance_rank": null,
+    "df": null,
+    "dimension_estimability": [
+      {
+        "cue": "curiosity_information_withholding",
+        "dimension_index": 0,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "news",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "curiosity_information_withholding",
+        "dimension_index": 1,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "facebook",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "curiosity_information_withholding",
+        "dimension_index": 2,
+        "invalid_rate": 0.0012,
+        "invalid_reason_counts": {
+          "target_missing_cue_present": 6
+        },
+        "invalid_replicates": 6,
+        "platform": "youtube",
+        "valid_replicates": 4994
+      },
+      {
+        "cue": "curiosity_information_withholding",
+        "dimension_index": 3,
+        "invalid_rate": 0.1316,
+        "invalid_reason_counts": {
+          "target_missing_cue_present": 658
+        },
+        "invalid_replicates": 658,
+        "platform": "twitter",
+        "valid_replicates": 4342
+      },
+      {
+        "cue": "direct_address_imperative",
+        "dimension_index": 4,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "news",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "direct_address_imperative",
+        "dimension_index": 5,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "facebook",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "direct_address_imperative",
+        "dimension_index": 6,
+        "invalid_rate": 0.0074,
+        "invalid_reason_counts": {
+          "target_missing_cue_present": 37
+        },
+        "invalid_replicates": 37,
+        "platform": "youtube",
+        "valid_replicates": 4963
+      },
+      {
+        "cue": "direct_address_imperative",
+        "dimension_index": 7,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "twitter",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "exaggeration_superlative",
+        "dimension_index": 8,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "news",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "exaggeration_superlative",
+        "dimension_index": 9,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "facebook",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "exaggeration_superlative",
+        "dimension_index": 10,
+        "invalid_rate": 0.0012,
+        "invalid_reason_counts": {
+          "target_missing_cue_present": 6
+        },
+        "invalid_replicates": 6,
+        "platform": "youtube",
+        "valid_replicates": 4994
+      },
+      {
+        "cue": "exaggeration_superlative",
+        "dimension_index": 11,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "twitter",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "interrogative_structure",
+        "dimension_index": 12,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "news",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "interrogative_structure",
+        "dimension_index": 13,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "facebook",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "interrogative_structure",
+        "dimension_index": 14,
+        "invalid_rate": 0.0002,
+        "invalid_reason_counts": {
+          "target_missing_cue_present": 1
+        },
+        "invalid_replicates": 1,
+        "platform": "youtube",
+        "valid_replicates": 4999
+      },
+      {
+        "cue": "interrogative_structure",
+        "dimension_index": 15,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "twitter",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "punctuation_intensity",
+        "dimension_index": 16,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "news",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "punctuation_intensity",
+        "dimension_index": 17,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "facebook",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "punctuation_intensity",
+        "dimension_index": 18,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "youtube",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "punctuation_intensity",
+        "dimension_index": 19,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "twitter",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "sensational_emotional_loading",
+        "dimension_index": 20,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "news",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "sensational_emotional_loading",
+        "dimension_index": 21,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "facebook",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "sensational_emotional_loading",
+        "dimension_index": 22,
+        "invalid_rate": 0.0276,
+        "invalid_reason_counts": {
+          "target_missing_cue_present": 138
+        },
+        "invalid_replicates": 138,
+        "platform": "youtube",
+        "valid_replicates": 4862
+      },
+      {
+        "cue": "sensational_emotional_loading",
+        "dimension_index": 23,
+        "invalid_rate": 0.3662,
+        "invalid_reason_counts": {
+          "target_missing_cue_present": 1831
+        },
+        "invalid_replicates": 1831,
+        "platform": "twitter",
+        "valid_replicates": 3169
+      },
+      {
+        "cue": "specificity_numerals",
+        "dimension_index": 24,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "news",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "specificity_numerals",
+        "dimension_index": 25,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "facebook",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "specificity_numerals",
+        "dimension_index": 26,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "youtube",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "specificity_numerals",
+        "dimension_index": 27,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "twitter",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "vague_deictic_reference",
+        "dimension_index": 28,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "news",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "vague_deictic_reference",
+        "dimension_index": 29,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "facebook",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "vague_deictic_reference",
+        "dimension_index": 30,
+        "invalid_rate": 0.0012,
+        "invalid_reason_counts": {
+          "target_missing_cue_present": 6
+        },
+        "invalid_replicates": 6,
+        "platform": "youtube",
+        "valid_replicates": 4994
+      },
+      {
+        "cue": "vague_deictic_reference",
+        "dimension_index": 31,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "twitter",
+        "valid_replicates": 5000
+      }
+    ],
+    "dimension_reduction_performed": false,
+    "expected_dimension": 32,
+    "joint_invalid_replicates": 2318,
+    "joint_valid_replicates": 2682,
+    "p": null,
+    "reason": "At least one of the 5,000 locked joint cluster-bootstrap vectors contains an undefined prespecified dimension. No dimensions were dropped and no reduced post-hoc Wald test was run.",
+    "statistic": null,
+    "status": "NON_ESTIMABLE"
+  },
+  "global_banglaclick_wald": {
+    "bootstrap_attempts": 5000,
+    "covariance_rank": null,
+    "df": null,
+    "dimension_estimability": [
+      {
+        "cue": "curiosity_information_withholding",
+        "dimension_index": 0,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "news",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "curiosity_information_withholding",
+        "dimension_index": 1,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "facebook",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "curiosity_information_withholding",
+        "dimension_index": 2,
+        "invalid_rate": 0.0012,
+        "invalid_reason_counts": {
+          "target_missing_cue_present": 6
+        },
+        "invalid_replicates": 6,
+        "platform": "youtube",
+        "valid_replicates": 4994
+      },
+      {
+        "cue": "curiosity_information_withholding",
+        "dimension_index": 3,
+        "invalid_rate": 0.1316,
+        "invalid_reason_counts": {
+          "target_missing_cue_present": 658
+        },
+        "invalid_replicates": 658,
+        "platform": "twitter",
+        "valid_replicates": 4342
+      },
+      {
+        "cue": "direct_address_imperative",
+        "dimension_index": 4,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "news",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "direct_address_imperative",
+        "dimension_index": 5,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "facebook",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "direct_address_imperative",
+        "dimension_index": 6,
+        "invalid_rate": 0.0074,
+        "invalid_reason_counts": {
+          "target_missing_cue_present": 37
+        },
+        "invalid_replicates": 37,
+        "platform": "youtube",
+        "valid_replicates": 4963
+      },
+      {
+        "cue": "direct_address_imperative",
+        "dimension_index": 7,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "twitter",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "exaggeration_superlative",
+        "dimension_index": 8,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "news",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "exaggeration_superlative",
+        "dimension_index": 9,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "facebook",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "exaggeration_superlative",
+        "dimension_index": 10,
+        "invalid_rate": 0.0012,
+        "invalid_reason_counts": {
+          "target_missing_cue_present": 6
+        },
+        "invalid_replicates": 6,
+        "platform": "youtube",
+        "valid_replicates": 4994
+      },
+      {
+        "cue": "exaggeration_superlative",
+        "dimension_index": 11,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "twitter",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "interrogative_structure",
+        "dimension_index": 12,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "news",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "interrogative_structure",
+        "dimension_index": 13,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "facebook",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "interrogative_structure",
+        "dimension_index": 14,
+        "invalid_rate": 0.0002,
+        "invalid_reason_counts": {
+          "target_missing_cue_present": 1
+        },
+        "invalid_replicates": 1,
+        "platform": "youtube",
+        "valid_replicates": 4999
+      },
+      {
+        "cue": "interrogative_structure",
+        "dimension_index": 15,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "twitter",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "punctuation_intensity",
+        "dimension_index": 16,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "news",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "punctuation_intensity",
+        "dimension_index": 17,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "facebook",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "punctuation_intensity",
+        "dimension_index": 18,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "youtube",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "punctuation_intensity",
+        "dimension_index": 19,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "twitter",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "sensational_emotional_loading",
+        "dimension_index": 20,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "news",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "sensational_emotional_loading",
+        "dimension_index": 21,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "facebook",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "sensational_emotional_loading",
+        "dimension_index": 22,
+        "invalid_rate": 0.0276,
+        "invalid_reason_counts": {
+          "target_missing_cue_present": 138
+        },
+        "invalid_replicates": 138,
+        "platform": "youtube",
+        "valid_replicates": 4862
+      },
+      {
+        "cue": "sensational_emotional_loading",
+        "dimension_index": 23,
+        "invalid_rate": 0.3662,
+        "invalid_reason_counts": {
+          "target_missing_cue_present": 1831
+        },
+        "invalid_replicates": 1831,
+        "platform": "twitter",
+        "valid_replicates": 3169
+      },
+      {
+        "cue": "specificity_numerals",
+        "dimension_index": 24,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "news",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "specificity_numerals",
+        "dimension_index": 25,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "facebook",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "specificity_numerals",
+        "dimension_index": 26,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "youtube",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "specificity_numerals",
+        "dimension_index": 27,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "twitter",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "vague_deictic_reference",
+        "dimension_index": 28,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "news",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "vague_deictic_reference",
+        "dimension_index": 29,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "facebook",
+        "valid_replicates": 5000
+      },
+      {
+        "cue": "vague_deictic_reference",
+        "dimension_index": 30,
+        "invalid_rate": 0.0012,
+        "invalid_reason_counts": {
+          "target_missing_cue_present": 6
+        },
+        "invalid_replicates": 6,
+        "platform": "youtube",
+        "valid_replicates": 4994
+      },
+      {
+        "cue": "vague_deictic_reference",
+        "dimension_index": 31,
+        "invalid_rate": 0.0,
+        "invalid_reason_counts": {},
+        "invalid_replicates": 0,
+        "platform": "twitter",
+        "valid_replicates": 5000
+      }
+    ],
+    "dimension_reduction_performed": false,
+    "expected_dimension": 32,
+    "joint_invalid_replicates": 2318,
+    "joint_valid_replicates": 2682,
+    "p": null,
+    "reason": "At least one of the 5,000 locked joint cluster-bootstrap vectors contains an undefined prespecified dimension. No dimensions were dropped and no reduced post-hoc Wald test was run.",
+    "statistic": null,
+    "status": "NON_ESTIMABLE"
+  },
+  "interpretation": "association/transport of predictive outcome and proper-loss relationships under observed distribution shift",
+  "nonestimable_baitbuster_replication_count": 3,
+  "nonestimable_banglaclick_contrast_count": 8,
+  "prediction_artifact_sha256": {
+    "baitbuster_predictions": "a3e95820c62de00984a189e2c250f7fffd223ad4b3954db04a5368c7a544b7b9",
+    "banglaclick_predictions": "5685fd4142a0e8e7f85cd6040cf48042da2368d5f9596a7740c4f9f09c9519d5",
+    "manifest": "2f0c503f0bb2a535172cc3f5e2f5a47cd42024db2ba865322276ff1c6fee6c00",
+    "source_predictions": "df863d7a24f7d451451822890de58613c3295eb0bcc1aa882150137b0aa9880a"
+  },
+  "primary": "prespecified cue–outcome and cue-conditioned proper-loss transport",
+  "proper_loss": "NLL on frozen temperature-scaled deployment probabilities",
+  "repair_scope": "H3 statistical layer only; immutable Stage-05 predictions consumed read-only",
+  "repair_version": "SWARABYANJAN-H3-ESTIMABILITY-REPAIR-v1.0.0",
+  "schema_version": 3,
+  "source_stage05_manifest_sha256": "2f0c503f0bb2a535172cc3f5e2f5a47cd42024db2ba865322276ff1c6fee6c00"
+}

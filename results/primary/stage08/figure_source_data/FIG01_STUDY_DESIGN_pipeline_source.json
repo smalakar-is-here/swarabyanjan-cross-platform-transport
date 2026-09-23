@@ -1,0 +1,20 @@
+{
+  "covers_figure_ids": [
+    "FIG01_STUDY_DESIGN"
+  ],
+  "deterministic_transformation": "Direct representation of the frozen analysis sequence and canonical inferential roles; line/fill styles encode predefined evidence classes only.",
+  "estimability_field": null,
+  "exact_variables_used": [
+    "node",
+    "role_or_status",
+    "evidence_class"
+  ],
+  "figure_id": "FIG01_STUDY_DESIGN",
+  "panel_id": "pipeline",
+  "rows": 10,
+  "source_artifact": [
+    "Stage-05/06/07 canonical manifests and final statuses"
+  ],
+  "source_csv": "FIG01_STUDY_DESIGN_pipeline_source.csv",
+  "source_csv_sha256": "6958cd83586423c75daea293c1ff98a5c60d8b1701e444702db63d23f3c54997"
+}

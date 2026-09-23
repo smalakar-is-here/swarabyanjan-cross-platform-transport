@@ -1,0 +1,34 @@
+{
+  "covers_figure_ids": [
+    "SUPP_BAITBUSTER_H3"
+  ],
+  "deterministic_transformation": "Direct canonical BaitBuster replication table; NE preserved.",
+  "estimability_field": "inferential_status",
+  "exact_variables_used": [
+    "cue",
+    "delta_rd",
+    "delta_rd_ci95",
+    "delta_rd_p",
+    "ebm_delta_nll_gap_mean_5seeds",
+    "ebm_delta_nll_gap_ci95",
+    "ebm_delta_nll_gap_p",
+    "ebm_delta_nll_gap_by_seed",
+    "bootstrap_attempts",
+    "valid_replicates",
+    "invalid_replicates",
+    "invalid_rate",
+    "invalid_reason_counts",
+    "inferential_status",
+    "reason_for_nonestimability",
+    "source_support",
+    "target_support"
+  ],
+  "figure_id": "SUPP_BAITBUSTER_H3",
+  "panel_id": "A_B",
+  "rows": 8,
+  "source_artifact": [
+    "Stage05/H3_BAITBUSTER_REPLICATION_CORRECTED.csv"
+  ],
+  "source_csv": "SUPP_BAITBUSTER_H3_A_B_source.csv",
+  "source_csv_sha256": "4b92f8dd3f762cf39216c5290e2db0e406c32a498cef6e24109c8ad74cb9b57c"
+}

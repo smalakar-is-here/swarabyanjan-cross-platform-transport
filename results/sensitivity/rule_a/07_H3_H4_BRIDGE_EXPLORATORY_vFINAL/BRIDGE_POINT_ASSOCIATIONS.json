@@ -1,0 +1,26 @@
+{
+  "exploratory": true,
+  "pairs": {
+    "abs_delta_nll_gap__vs__error_capture_deterioration": {
+      "platform_fe_slope": -0.005126268204106463,
+      "raw_ols_slope": -0.007792041209010679,
+      "spearman_rho": -0.20087976539589442
+    },
+    "abs_delta_nll_gap__vs__lift_deterioration": {
+      "platform_fe_slope": 0.13543233903273477,
+      "raw_ols_slope": 0.06334873039485422,
+      "spearman_rho": 0.0505865102639296
+    },
+    "abs_delta_rd__vs__error_capture_deterioration": {
+      "platform_fe_slope": -0.015087441569084639,
+      "raw_ols_slope": -0.013790340058669063,
+      "spearman_rho": -0.282258064516129
+    },
+    "abs_delta_rd__vs__lift_deterioration": {
+      "platform_fe_slope": 0.14830564775820373,
+      "raw_ols_slope": 0.14909909372509147,
+      "spearman_rho": -0.06671554252199419
+    }
+  },
+  "schema_version": 1
+}

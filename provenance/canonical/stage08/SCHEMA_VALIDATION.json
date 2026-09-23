@@ -1,0 +1,14 @@
+{
+  "bridge_cells": 32,
+  "bridge_pairs": 4,
+  "h1_metric_rows": 120,
+  "h1_target_settings": 100,
+  "h2_target_settings": 100,
+  "h3_banglaclick_cells": 32,
+  "h3_nonestimable_cells": 8,
+  "h3p_contrasts": 150,
+  "h4_inference_rows": 300,
+  "h4_point_rows": 360,
+  "loo_rows": 16,
+  "status": "PASS"
+}

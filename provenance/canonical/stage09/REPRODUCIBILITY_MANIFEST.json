@@ -1,0 +1,77 @@
+{
+  "artifacts": {
+    "CLAIM_CONCORDANCE_TABLE.csv": "081ef151d20ff71c96c6a0feac944ffe4fb160aa11964c015b938c55ead6d357",
+    "H1_H2_SOURCE_CLUSTER_SENSITIVITY.json": "c6644238f0399425feeb389a268ae96618461e16500dcf6bfb53ac93186b20aa",
+    "H3P_SOURCE_CLUSTER_SENSITIVITY.json": "a1c56ab6b259fdafe4826c5d98956ab18378a2a01336ed42ae6b0efbde7279ea",
+    "H3_SOURCE_CLUSTER_SENSITIVITY.json": "23e5727c3d3b843dee9757c97140a057f2dfa7dba008fb845e734425ad0ae60b",
+    "H4_SOURCE_CLUSTER_SENSITIVITY.json": "d39a2f6a967ed51cf75a71d3221f4c1c892d8efd7354bd82f66b6f9cf4a47c0f",
+    "SENSITIVITY_SUMMARY.md": "691b9e568afe7e4b66de338fb433d3a2849daa1eb92752af1e053e1f25ec87d6",
+    "SOURCE_CLUSTER_DIAGNOSTICS.json": "385f2d80680f75cfe835f5cf004a356b27f8243164de3e7860c823e287783735",
+    "SOURCE_PUBLISHER_MAPPING.csv": "dcb97621c92b32c422cfdaded4f3c1b43c6885281af88399a8e3cd2efb4b1e58"
+  },
+  "cluster_rule_version": "BANGLABAIT-SOURCE-SITE-HOST-CLUSTER-v1.0.0",
+  "frozen_banglabait": {
+    "frozen_zip_sha256_provenance": "e0de5c224f406fe22d8ad30804217465f789c49c70e1d3afbe00afd28deb7ccf",
+    "repo_id": "Motahar/banglabait",
+    "revision": "ff22fb3b423952959a80dc5d9c6c3345b21cd145",
+    "test_sha256": "68176be61ba8dd01f9f78b6aea2b84c198236c89de5abc98db8c49c496ebd996"
+  },
+  "manifest_payload_sha256": "b0f0843ccc61512185c9e093999d8beff7ecd62c26d5d63fcbef1951523e7be3",
+  "protocol_version": "SWARABYANJAN-CROSSPLATFORM-v1.0.0",
+  "schema_version": 1,
+  "scientific_contract": {
+    "bootstrap_replicates": 5000,
+    "bootstrap_seed": 20260906,
+    "bridge_analysis": false,
+    "calibration_fitting": false,
+    "canonical_nonestimability_upgrade_allowed": false,
+    "h3_cells": 32,
+    "h3_reduced_dimension_test": false,
+    "h4_budgets": [
+      0.05,
+      0.1,
+      0.2
+    ],
+    "h4_primary_budget": 0.1,
+    "model_training": false,
+    "models": [
+      "ebm",
+      "tfidf_lr",
+      "banglabert",
+      "xlmr"
+    ],
+    "new_hypothesis": false,
+    "prediction_generation": false,
+    "rejection_resampling": false,
+    "seeds": [
+      42,
+      137,
+      2718,
+      31415,
+      65537
+    ],
+    "subset_bh": false,
+    "survivor_filtering": false,
+    "target_recalibration": false,
+    "target_training": false
+  },
+  "scientific_role": "sensitivity only; never replaces canonical Stages05/06/07/08",
+  "sensitivity_version": "SWARABYANJAN-SOURCE-SITE-CLUSTER-SENSITIVITY-v1.0.0",
+  "stage_id": "09",
+  "stage_name": "09_SOURCE_PUBLISHER_CLUSTER_SENSITIVITY_vFINAL",
+  "upstream_identities": {
+    "stage03_checksum_sha256": "e40f3c9ac69cb9f23e080e6070a1cd3b28969f43e3592d7b52a04f02a8dbafb2",
+    "stage05_checksum_sha256": "7171a0e581d8fb4bde2a630f4de631d74962954ee3890b8123d78a720823450a",
+    "stage05_manifest_sha256": "7246bc3a49a5f8d8472005cea9f6062d118431cd67d5dd2c4fd8f2ee31f52c27",
+    "stage05_status_sha256": "005399d829bb66870810faa3f140757a7ee3d82eac4bae394fbbe79e701db8e6",
+    "stage06_checksum_sha256": "5f8d0f7fc9cde5e0f159bf4c5f4ca8387441675407b4c43ab87a8063afac3beb",
+    "stage06_manifest_sha256": "5a2962014445c723379b07fcf02e601644818c36e6c15fb7ee9478ca34711285",
+    "stage06_status_sha256": "769f33b4771f3ec55700384ae6db7e9e2feb115d23717b27cbd9c17e4983538d",
+    "stage07_checksum_sha256": "86c8aeb1c4c0062303b44d397fece5908c315ff8860fca59afc624bfdde39f8d",
+    "stage07_manifest_sha256": "fa8651ff00a3306dfd48ed55d21df3ab2eef2fbd365db33657f5c2413822e714",
+    "stage07_status_sha256": "566f063f1bef265c6d377565ee6a22ccc1cbbbaa083f7bad7a89423ec6222280",
+    "stage08_checksum_sha256": "ccd850d3dbe144651bb52e8277308e6438e3e3d869b2cfc232b39db96fed3af6",
+    "stage08_manifest_sha256": "b0ac3b392b2e3d1b5136fda5dbdbcf498e1b89c44cc1d920ff597d6c2967523f",
+    "stage08_status_sha256": "d64ee2649a348bad4fd36ee3c4df79fd071b60807b248f0a7a575f5795bf9f33"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "dev_test_firewall": "No BanglaBait DEV/TEST observation was used to construct this split.",
+  "development_ratio_target": "90/10",
+  "group": "normalized_title_sha256",
+  "internal_dev_positive_prevalence": 0.3449905482041588,
+  "internal_dev_rows": 1058,
+  "internal_train_positive_prevalence": 0.3416613957410921,
+  "internal_train_rows": 9486,
+  "method": "StratifiedGroupKFold(n_splits=10, shuffle=True), fold_index=0",
+  "rows_manifest": "TRAIN_DEV_SPLIT_ROWS.parquet",
+  "rows_manifest_sha256": "fc1cc2f049e84be3dcb66dd08c373fd2d09a465af10372f0d3f508600475a827",
+  "schema_version": 1,
+  "split_seed": 20260906
+}

@@ -1,0 +1,38 @@
+{
+  "covers_figure_ids": [
+    "FIG03_H3_CUE_TRANSPORT"
+  ],
+  "deterministic_transformation": "Exact fixed 32-cell table; marker shape encodes sign, marker size encodes absolute canonical point magnitude, NE cells retained explicitly; no imputation or reduced-dimensional analysis.",
+  "estimability_field": "inferential_status",
+  "exact_variables_used": [
+    "cue",
+    "target",
+    "source_rd",
+    "target_rd",
+    "delta_rd",
+    "delta_rd_ci95",
+    "delta_rd_p",
+    "ebm_delta_nll_gap_mean_5seeds",
+    "ebm_delta_nll_gap_ci95",
+    "ebm_delta_nll_gap_p",
+    "ebm_delta_nll_gap_by_seed",
+    "bootstrap_attempts",
+    "valid_replicates",
+    "invalid_replicates",
+    "invalid_rate",
+    "invalid_reason_counts",
+    "inferential_status",
+    "reason_for_nonestimability",
+    "source_support",
+    "target_support",
+    "platform"
+  ],
+  "figure_id": "FIG03_H3_CUE_TRANSPORT",
+  "panel_id": "A_B",
+  "rows": 32,
+  "source_artifact": [
+    "Stage05/H3_CUE_PLATFORM_CONTRASTS_CORRECTED.csv"
+  ],
+  "source_csv": "FIG03_H3_CUE_TRANSPORT_A_B_source.csv",
+  "source_csv_sha256": "de3b2f599a85bd115b2b0688bdbbb1e30cf5a830236ee71df3abc5ef4aa2535f"
+}

@@ -1,0 +1,39 @@
+{
+  "baitbuster_rows": 10000,
+  "banglaclick_rows": {
+    "facebook": 1961,
+    "news": 456,
+    "twitter": 500,
+    "youtube": 1000
+  },
+  "cues": [
+    "curiosity_information_withholding",
+    "direct_address_imperative",
+    "exaggeration_superlative",
+    "interrogative_structure",
+    "punctuation_intensity",
+    "sensational_emotional_loading",
+    "specificity_numerals",
+    "vague_deictic_reference"
+  ],
+  "models": [
+    "ebm",
+    "tfidf_lr",
+    "banglabert",
+    "xlmr"
+  ],
+  "platforms": [
+    "news",
+    "facebook",
+    "youtube",
+    "twitter"
+  ],
+  "seeds": [
+    42,
+    137,
+    2718,
+    31415,
+    65537
+  ],
+  "source_rows": 2784
+}

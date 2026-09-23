@@ -1,0 +1,4 @@
+view,n,unique_clusters,singleton_clusters,dominant_cluster,dominant_n,dominant_share,top5_share,top10_share,hhi,cluster_nulls,url_field_present,publication_date_field_present
+Original News,1500,943,918,bc:news:jugantor.com,112,0.07466666666666667,0.216,0.306,0.013635555555555555,0,False,False
+Rule A,456,54,31,bc:news:jugantor.com,112,0.24561403508771928,0.5877192982456141,0.7741228070175439,0.10686942136041859,0,False,False
+Rule B,426,47,28,bc:news:jugantor.com,112,0.26291079812206575,0.6291079812206573,0.823943661971831,0.12108488174744868,0,False,False

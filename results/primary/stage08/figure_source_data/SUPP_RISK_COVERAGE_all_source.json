@@ -1,0 +1,22 @@
+{
+  "covers_figure_ids": [
+    "SUPP_RISK_COVERAGE"
+  ],
+  "deterministic_transformation": "Direct canonical risk-coverage rows; each model×seed curve retained.",
+  "estimability_field": null,
+  "exact_variables_used": [
+    "coverage",
+    "risk",
+    "domain",
+    "model",
+    "seed"
+  ],
+  "figure_id": "SUPP_RISK_COVERAGE",
+  "panel_id": "all",
+  "rows": 24120,
+  "source_artifact": [
+    "Stage06/RISK_COVERAGE_DATA.csv"
+  ],
+  "source_csv": "SUPP_RISK_COVERAGE_all_source.csv",
+  "source_csv_sha256": "37170dc9daba351504d4c13d112fcfddfc57dde802036c8810624201eae086b8"
+}

@@ -1,0 +1,11 @@
+order,node,role_or_status,evidence_class
+1,Frozen external data,provenance,pipeline
+2,Scientific decontamination,data integrity,pipeline
+3,Source-locked training,model development,pipeline
+4,DEV-only calibration,calibration,pipeline
+5,Real-platform transfer evaluation,external evaluation,pipeline
+6,H1 / H2,supporting hypotheses,supporting
+7,H3 cue transport,primary; global NON_ESTIMABLE,primary
+8,H3-P controlled perturbation,controlled model-sensitivity evidence; non-causal,controlled
+9,H4 fixed-budget utility,operational consequence,operational
+10,H3→H4 exploratory bridge,exploratory/non-causal; NON_ESTIMABLE_UNDER_LOCKED_JOINT_BOOTSTRAP,exploratory

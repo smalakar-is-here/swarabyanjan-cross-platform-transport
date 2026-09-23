@@ -1,0 +1,7 @@
+Hypothesis,Role,Question,Canonical artifact
+H1,Supporting,Discrimination / reliability decoupling under shift,H1_RESULTS.json + STATISTICAL_SUMMARY.json
+H2,Supporting,Source-trained calibration-gain transport / attenuation,H2_RESULTS.json + STATISTICAL_SUMMARY.json
+H3,Primary,Prespecified cue outcome/proper-loss transport,H3_RESULTS.json + corrected H3 CSVs
+H3-P,Controlled corroboration,Cue-neutralization model sensitivity,H3_PERTURBATION_RESULTS.json
+H4,Operational consequence,Fixed-budget review degradation,H4_RESULTS.json
+H3→H4,Exploratory/non-causal,Descriptive bridge from cue instability to operational deterioration,Stage-07 bridge artifacts

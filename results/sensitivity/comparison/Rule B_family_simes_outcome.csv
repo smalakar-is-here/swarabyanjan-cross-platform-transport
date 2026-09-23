@@ -1,0 +1,9 @@
+comparison,family_kind,cue,simes_p_frozen,simes_p_branch,status_frozen,status_branch,simes_p_abs_change
+Frozen v3.1 vs Rule B,outcome,curiosity_information_withholding,,,NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY,NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY,
+Frozen v3.1 vs Rule B,outcome,direct_address_imperative,,,NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY,NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY,
+Frozen v3.1 vs Rule B,outcome,exaggeration_superlative,,,NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY,NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY,
+Frozen v3.1 vs Rule B,outcome,interrogative_structure,,,NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY,NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY,
+Frozen v3.1 vs Rule B,outcome,punctuation_intensity,0.0528,0.0592,ESTIMABLE,ESTIMABLE,0.006400000000000003
+Frozen v3.1 vs Rule B,outcome,sensational_emotional_loading,,,NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY,NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY,
+Frozen v3.1 vs Rule B,outcome,specificity_numerals,0.0,0.0,ESTIMABLE,ESTIMABLE,0.0
+Frozen v3.1 vs Rule B,outcome,vague_deictic_reference,,,NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY,NON_ESTIMABLE_INCOMPLETE_FOUR_PLATFORM_FAMILY,

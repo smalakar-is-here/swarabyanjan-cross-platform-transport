@@ -1,0 +1,907 @@
+{
+  "baitbuster_settings_repaired": 20,
+  "banglaclick_settings_checked": 80,
+  "rows": [
+    {
+      "domain": "banglaclick:news",
+      "model": "ebm",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 42,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "ebm",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 137,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "ebm",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 2718,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "ebm",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 31415,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "ebm",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 65537,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "tfidf_lr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 42,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "tfidf_lr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 137,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "tfidf_lr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 2718,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "tfidf_lr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 31415,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "tfidf_lr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 65537,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "banglabert",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 42,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "banglabert",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 137,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "banglabert",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 2718,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "banglabert",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 31415,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "banglabert",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 65537,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "xlmr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 42,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "xlmr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 137,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "xlmr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 2718,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "xlmr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 31415,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "xlmr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 65537,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "ebm",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 42,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "ebm",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 137,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "ebm",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 2718,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "ebm",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 31415,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "ebm",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 65537,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "tfidf_lr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 42,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "tfidf_lr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 137,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "tfidf_lr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 2718,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "tfidf_lr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 31415,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "tfidf_lr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 65537,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "banglabert",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 42,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "banglabert",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 137,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "banglabert",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 2718,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "banglabert",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 31415,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "banglabert",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 65537,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "xlmr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 42,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "xlmr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 137,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "xlmr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 2718,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "xlmr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 31415,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "xlmr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 65537,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "ebm",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 42,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "ebm",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 137,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "ebm",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 2718,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "ebm",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 31415,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "ebm",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 65537,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "tfidf_lr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 42,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "tfidf_lr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 137,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "tfidf_lr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 2718,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "tfidf_lr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 31415,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "tfidf_lr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 65537,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "banglabert",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 42,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "banglabert",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 137,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "banglabert",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 2718,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "banglabert",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 31415,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "banglabert",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 65537,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "xlmr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 42,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "xlmr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 137,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "xlmr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 2718,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "xlmr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 31415,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "xlmr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 65537,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "ebm",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 42,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "ebm",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 137,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "ebm",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 2718,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "ebm",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 31415,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "ebm",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 65537,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "tfidf_lr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 42,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "tfidf_lr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 137,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "tfidf_lr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 2718,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "tfidf_lr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 31415,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "tfidf_lr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 65537,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "banglabert",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 42,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "banglabert",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 137,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "banglabert",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 2718,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "banglabert",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 31415,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "banglabert",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 65537,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "xlmr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 42,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "xlmr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 137,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "xlmr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 2718,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "xlmr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 31415,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "xlmr",
+      "new_h1_valid": 5000,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 5000,
+      "seed": 65537,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "ebm",
+      "new_h1_valid": 4955,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 4955,
+      "seed": 42,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "ebm",
+      "new_h1_valid": 4956,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 4944,
+      "seed": 137,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "ebm",
+      "new_h1_valid": 4963,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 4965,
+      "seed": 2718,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "ebm",
+      "new_h1_valid": 4961,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 4961,
+      "seed": 31415,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "ebm",
+      "new_h1_valid": 4952,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 4954,
+      "seed": 65537,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "tfidf_lr",
+      "new_h1_valid": 4953,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 4958,
+      "seed": 42,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "tfidf_lr",
+      "new_h1_valid": 4952,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 4958,
+      "seed": 137,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "tfidf_lr",
+      "new_h1_valid": 4959,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 4970,
+      "seed": 2718,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "tfidf_lr",
+      "new_h1_valid": 4947,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 4956,
+      "seed": 31415,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "tfidf_lr",
+      "new_h1_valid": 4950,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 4941,
+      "seed": 65537,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "banglabert",
+      "new_h1_valid": 4958,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 4951,
+      "seed": 42,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "banglabert",
+      "new_h1_valid": 4961,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 4966,
+      "seed": 137,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "banglabert",
+      "new_h1_valid": 4950,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 4958,
+      "seed": 2718,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "banglabert",
+      "new_h1_valid": 4957,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 4965,
+      "seed": 31415,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "banglabert",
+      "new_h1_valid": 4958,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 4952,
+      "seed": 65537,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "xlmr",
+      "new_h1_valid": 4951,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 4961,
+      "seed": 42,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "xlmr",
+      "new_h1_valid": 4958,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 4950,
+      "seed": 137,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "xlmr",
+      "new_h1_valid": 4950,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 4960,
+      "seed": 2718,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "xlmr",
+      "new_h1_valid": 4962,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 4963,
+      "seed": 31415,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "xlmr",
+      "new_h1_valid": 4958,
+      "new_h2_valid": 5000,
+      "old_two_class_valid": 4960,
+      "seed": 65537,
+      "status": "BRANCH_EXPECTED_DIFFERENCE"
+    }
+  ],
+  "status": "PASS"
+}

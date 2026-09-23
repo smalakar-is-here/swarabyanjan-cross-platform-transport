@@ -1,0 +1,21 @@
+{
+  "canonical_version": "SWARABYANJAN-STAGE05-CANONICAL-vFINAL-1.0.1",
+  "details": {
+    "h1_endpoint_nonestimable_settings": {
+      "auroc": 20,
+      "balanced_brier_relative_change": 20,
+      "nll_relative_change": 0
+    },
+    "h1_nonestimable_settings": 20,
+    "h2_nonestimable_settings": 0,
+    "h3_global_status": "NON_ESTIMABLE",
+    "h3_nonestimable_banglaclick_contrasts": 14,
+    "h3p_nonestimable_contrasts": 0,
+    "model_inference_rerun": false,
+    "output_root": "/mnt/data/swarabyanjan_branch_exec/RULE_B/notebooks/03_results/05_external_validation_and_H3_vFINAL"
+  },
+  "message": "Stage-05 branch external validation/H1/H2/H3/H3-P finalization completed",
+  "stage_id": "05",
+  "status": "PASS",
+  "timestamp_utc": "2026-09-22T19:18:23.946816+00:00"
+}

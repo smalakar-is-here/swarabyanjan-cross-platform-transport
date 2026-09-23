@@ -1,0 +1,2393 @@
+{
+  "copied": [
+    {
+      "release_relative": "01_frozen_banglabait/ACQUISITION_MANIFEST.json",
+      "role": "frozen input control/provenance",
+      "sha256": "e09b083a38698648f0fe435bb8ff83f5c89896e37538de767549d9f05f72e455",
+      "size_bytes": 15254,
+      "source_relative": "ACQUISITION_MANIFEST.json",
+      "stage": "01"
+    },
+    {
+      "release_relative": "01_frozen_banglabait/ACQUISITION_STATUS.json",
+      "role": "frozen input control/provenance",
+      "sha256": "96a79231563344688eb35f1bf3a4e55b17a0d6dff6f9f9fa6f9784417cefac18",
+      "size_bytes": 9986,
+      "source_relative": "ACQUISITION_STATUS.json",
+      "stage": "01"
+    },
+    {
+      "release_relative": "01_frozen_banglabait/SOURCES_LOCK.json",
+      "role": "frozen input control/provenance",
+      "sha256": "435d3c4e812b47065669b7b58ebc3da00e7b8abcdedc73b3080b0ac074154634",
+      "size_bytes": 6569,
+      "source_relative": "SOURCES_LOCK.json",
+      "stage": "01"
+    },
+    {
+      "release_relative": "01_frozen_banglabait/SHA256SUMS.txt",
+      "role": "frozen input control/provenance",
+      "sha256": "3630605b75b593e3f6a5927a34e168de71ad6b6f5091a59b02f71e28b3a05ffa",
+      "size_bytes": 2769,
+      "source_relative": "SHA256SUMS.txt",
+      "stage": "01"
+    },
+    {
+      "release_relative": "01_frozen_banglabait/README_HANDOFF.txt",
+      "role": "frozen input control/provenance",
+      "sha256": "50813e4ebfcdf88965c667973d3fd8c61fa417500fae98c491a2ae5da791f124",
+      "size_bytes": 1391,
+      "source_relative": "README_HANDOFF.txt",
+      "stage": "01"
+    },
+    {
+      "release_relative": "02_cleaning/02_p0_integrity_provenance_leakage_audit.ipynb",
+      "role": "Stage-02 audit/provenance output",
+      "sha256": "2f41695de0d16a44bfbbae55fca67b8fb620cae92397ac6088ae8d93320ce4ba",
+      "size_bytes": 258879,
+      "source_relative": "02_p0_integrity_provenance_leakage_audit.ipynb",
+      "stage": "02"
+    },
+    {
+      "release_relative": "02_cleaning/CONSTRUCT_ALIGNMENT_MATRIX.csv",
+      "role": "Stage-02 audit/provenance output",
+      "sha256": "13931034a287d0148d99e5d80ff951542ce8dacc2ea35d514da50781e7ed4ddf",
+      "size_bytes": 1402,
+      "source_relative": "CONSTRUCT_ALIGNMENT_MATRIX.csv",
+      "stage": "02"
+    },
+    {
+      "release_relative": "02_cleaning/CROSS_DATASET_OVERLAP_REPORT.csv",
+      "role": "Stage-02 audit/provenance output",
+      "sha256": "7bc9458a83986d8ad3608ee36383068e56d103130a9c8a5e9dfa8fa79d094ca5",
+      "size_bytes": 23335,
+      "source_relative": "CROSS_DATASET_OVERLAP_REPORT.csv",
+      "stage": "02"
+    },
+    {
+      "release_relative": "02_cleaning/DATASET_SCHEMA_REPORT.csv",
+      "role": "Stage-02 audit/provenance output",
+      "sha256": "34a6352b96774e7b2f420364f8c20a7de923dcebd6c0abfaafbacb354badf520",
+      "size_bytes": 19977,
+      "source_relative": "DATASET_SCHEMA_REPORT.csv",
+      "stage": "02"
+    },
+    {
+      "release_relative": "02_cleaning/DUPLICATE_REPORT.csv",
+      "role": "Stage-02 audit/provenance output",
+      "sha256": "880fdc46bbdacb5a5f1b9a9d5d02cc2ea193c97a64d46a374557ae8003e67367",
+      "size_bytes": 3278,
+      "source_relative": "DUPLICATE_REPORT.csv",
+      "stage": "02"
+    },
+    {
+      "release_relative": "02_cleaning/EXECUTED_NOTEBOOK_CAPTURE_STATUS.json",
+      "role": "Stage-02 audit/provenance output",
+      "sha256": "97bc4c0d358aac80a247b56a69f106938afadbbcae09b9681b9d9982a845c531",
+      "size_bytes": 311,
+      "source_relative": "EXECUTED_NOTEBOOK_CAPTURE_STATUS.json",
+      "stage": "02"
+    },
+    {
+      "release_relative": "02_cleaning/LABEL_DISTRIBUTION_REPORT.csv",
+      "role": "Stage-02 audit/provenance output",
+      "sha256": "aa899e5687ceb53dfd245245f7f89cfb31c8a679c20cef8f172319f897953224",
+      "size_bytes": 2463,
+      "source_relative": "LABEL_DISTRIBUTION_REPORT.csv",
+      "stage": "02"
+    },
+    {
+      "release_relative": "02_cleaning/P0_AUDIT_REPORT.json",
+      "role": "Stage-02 audit/provenance output",
+      "sha256": "59a4b6be556af89de26768202dc252cb92e2394dea20e26a1024c58548c233cd",
+      "size_bytes": 292961,
+      "source_relative": "P0_AUDIT_REPORT.json",
+      "stage": "02"
+    },
+    {
+      "release_relative": "02_cleaning/P0_AUDIT_SUMMARY.md",
+      "role": "Stage-02 audit/provenance output",
+      "sha256": "6ef24330d18debc667395e8c902bc57f74c906a77947950c8964d773c8926093",
+      "size_bytes": 1730,
+      "source_relative": "P0_AUDIT_SUMMARY.md",
+      "stage": "02"
+    },
+    {
+      "release_relative": "02_cleaning/P0_BLOCKER_FORENSICS.json",
+      "role": "Stage-02 audit/provenance output",
+      "sha256": "d24c412ae58143685dfa6978b7a5849f35796141ea770805f781b111c2506ded",
+      "size_bytes": 128706,
+      "source_relative": "P0_BLOCKER_FORENSICS.json",
+      "stage": "02"
+    },
+    {
+      "release_relative": "02_cleaning/P0_DETERMINISTIC_OUTPUT_SHA256SUMS.txt",
+      "role": "Stage-02 audit/provenance output",
+      "sha256": "b8495b804c813692b766266c73764bcba186f9a6d849dab37bc00f4b11d8e81d",
+      "size_bytes": 1022,
+      "source_relative": "P0_DETERMINISTIC_OUTPUT_SHA256SUMS.txt",
+      "stage": "02"
+    },
+    {
+      "release_relative": "02_cleaning/P0_HASH_VERIFICATION.txt",
+      "role": "Stage-02 audit/provenance output",
+      "sha256": "ca65d5863c4c64e4dea59fe3fea6f3318b840cf5807634f184fb9adb6c8b1e94",
+      "size_bytes": 1143,
+      "source_relative": "P0_HASH_VERIFICATION.txt",
+      "stage": "02"
+    },
+    {
+      "release_relative": "02_cleaning/P0_RUN_METADATA.json",
+      "role": "Stage-02 audit/provenance output",
+      "sha256": "1737539c088f06dad77e6141f403f7902cfcba768d5060a2dd3a7f305391daa0",
+      "size_bytes": 3075,
+      "source_relative": "P0_RUN_METADATA.json",
+      "stage": "02"
+    },
+    {
+      "release_relative": "02_cleaning/PROTECTED_TITLE_QUALITY_REPORT.csv",
+      "role": "Stage-02 audit/provenance output",
+      "sha256": "32fd5281447a57dcd937e4c95ce1fe03b077b6b4fa587097ce4a5fdf2bf81962",
+      "size_bytes": 689,
+      "source_relative": "PROTECTED_TITLE_QUALITY_REPORT.csv",
+      "stage": "02"
+    },
+    {
+      "release_relative": "02_cleaning/PROVENANCE_DEPENDENCY_GRAPH.json",
+      "role": "Stage-02 audit/provenance output",
+      "sha256": "0fb2583bd76544ba321548117839e0a6fe6b6d4b2050e3aff38e2a8d69162923",
+      "size_bytes": 12625,
+      "source_relative": "PROVENANCE_DEPENDENCY_GRAPH.json",
+      "stage": "02"
+    },
+    {
+      "release_relative": "02_cleaning/SPLIT_FIREWALL.json",
+      "role": "Stage-02 audit/provenance output",
+      "sha256": "8640abf888c22894785b77598cdd39b7282426039dd695b04c748010d4a8db6b",
+      "size_bytes": 3244,
+      "source_relative": "SPLIT_FIREWALL.json",
+      "stage": "02"
+    },
+    {
+      "release_relative": "02_cleaning/execution.log",
+      "role": "Stage-02 audit/provenance output",
+      "sha256": "0da25615082371b86ed7463d6dd4f97368fc8429e85b131005354527d040ee0b",
+      "size_bytes": 1454,
+      "source_relative": "execution.log",
+      "stage": "02"
+    },
+    {
+      "release_relative": "02_cleaning/P0_OUTPUT_SHA256SUMS.txt",
+      "role": "Stage-02 outer checksum contract",
+      "sha256": "d3111248dae423fdac5d2361ddb154b1d0928374151aee13f99ab2f8fdd822f2",
+      "size_bytes": 1602,
+      "source_relative": "P0_OUTPUT_SHA256SUMS.txt",
+      "stage": "02"
+    },
+    {
+      "release_relative": "03_modeling/CLEAN_DATA_MANIFEST.json",
+      "role": "Stage-03 required core or small model artifact",
+      "sha256": "531afe103f022de7be88a6335dc9e1a340f6fbf9ee05cf45565d7efea2d03688",
+      "size_bytes": 9841445,
+      "source_relative": "CLEAN_DATA_MANIFEST.json",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/CLEAN_ROW_MANIFEST.parquet",
+      "role": "Stage-03 required core or small model artifact",
+      "sha256": "db3274dbe23ac30ee9e2572b60b7804dcfd461aecf13e1300a388cd62e60cef5",
+      "size_bytes": 2030699,
+      "source_relative": "CLEAN_ROW_MANIFEST.parquet",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/CLEAN_SPLIT_SUMMARY.csv",
+      "role": "Stage-03 required core or small model artifact",
+      "sha256": "3c7910f9945b1b7e96f9f82738a8df5fec163ac93bd96ece80a00761303a702f",
+      "size_bytes": 814,
+      "source_relative": "CLEAN_SPLIT_SUMMARY.csv",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/CUE_FEATURE_SCHEMA.json",
+      "role": "Stage-03 required core or small model artifact",
+      "sha256": "594b17a71c330e288c2d7a77fda320fa1ed581a13f81fbfa014498dfad8f8e0f",
+      "size_bytes": 3959,
+      "source_relative": "CUE_FEATURE_SCHEMA.json",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/D0_REPORT.json",
+      "role": "Stage-03 required core or small model artifact",
+      "sha256": "bbfeb8302ab3fa1ba9262fd2fd342df475d6a6469d4eb22e88c77a29737188f6",
+      "size_bytes": 3071,
+      "source_relative": "D0_REPORT.json",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/DECONTAMINATION_FORENSICS.json",
+      "role": "Stage-03 required core or small model artifact",
+      "sha256": "46e439c949d74940382aaa6de35424733a5b6c9a0fbaf4866db69d5d3aef8f7f",
+      "size_bytes": 34391,
+      "source_relative": "DECONTAMINATION_FORENSICS.json",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/ENVIRONMENT_PREFLIGHT.json",
+      "role": "Stage-03 required core or small model artifact",
+      "sha256": "83833e3849d4431886ebcc47eecb33e93974e07160ef43c561687d9da3a2ff44",
+      "size_bytes": 1217,
+      "source_relative": "ENVIRONMENT_PREFLIGHT.json",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/FROZEN_INPUT_DISCOVERY.json",
+      "role": "Stage-03 required core or small model artifact",
+      "sha256": "ff16ad40411597fa841d3edfc537ba3cd9f83f77a6fa15c78b20d747f5906860",
+      "size_bytes": 636,
+      "source_relative": "FROZEN_INPUT_DISCOVERY.json",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/INPUT_IDENTITY.json",
+      "role": "Stage-03 required core or small model artifact",
+      "sha256": "bf8f2517eca9c0979ffd1f417c1b06c8567263495191822ba6679d8950a046a8",
+      "size_bytes": 1060,
+      "source_relative": "INPUT_IDENTITY.json",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/MODEL_ARTIFACT_MANIFEST.json",
+      "role": "Stage-03 required core or small model artifact",
+      "sha256": "184f3eabd32ab6f0d56da72cdb2b6a908b32b4d662c47eb40a6597acf9acad52",
+      "size_bytes": 15705,
+      "source_relative": "MODEL_ARTIFACT_MANIFEST.json",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/MODEL_CONFIG_LOCK.json",
+      "role": "Stage-03 required core or small model artifact",
+      "sha256": "9f483d4e82d36d2f9a992089f79597fbd4f691da12596db7ded23bc47a3911a3",
+      "size_bytes": 4992,
+      "source_relative": "MODEL_CONFIG_LOCK.json",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/RUN_METADATA.json",
+      "role": "Stage-03 required core or small model artifact",
+      "sha256": "b43678999b2a0da832ffff0e987598ba56f1d5c6cb84c69636473666a1cfc6e9",
+      "size_bytes": 2469,
+      "source_relative": "RUN_METADATA.json",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/STAGE03_SUMMARY.md",
+      "role": "Stage-03 required core or small model artifact",
+      "sha256": "dac8b54e9ef157ebcdf24d75f51e96de2c10e16b7f6d9b2ff917c908b9397a4a",
+      "size_bytes": 429,
+      "source_relative": "STAGE03_SUMMARY.md",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/TRAIN_DEV_SPLIT_MANIFEST.json",
+      "role": "Stage-03 required core or small model artifact",
+      "sha256": "b72f6a055215c5ff6ace81bd9196191a94cf1b7c63605cbf421948a461fcbae4",
+      "size_bytes": 624,
+      "source_relative": "TRAIN_DEV_SPLIT_MANIFEST.json",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/TRAIN_DEV_SPLIT_ROWS.parquet",
+      "role": "Stage-03 required core or small model artifact",
+      "sha256": "fc1cc2f049e84be3dcb66dd08c373fd2d09a465af10372f0d3f508600475a827",
+      "size_bytes": 749525,
+      "source_relative": "TRAIN_DEV_SPLIT_ROWS.parquet",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/clean_splits/banglabait_dev_clean.parquet",
+      "role": "Stage-03 required core or small model artifact",
+      "sha256": "584533f179c3bef867ef93e9b431d24f063ee85ea010ed38ecc850dd041d4ef4",
+      "size_bytes": 227702,
+      "source_relative": "clean_splits/banglabait_dev_clean.parquet",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/clean_splits/banglabait_test_clean.parquet",
+      "role": "Stage-03 required core or small model artifact",
+      "sha256": "3f033ca9479db97e1f11684b6ae223f095678e8fa6b1f2a7b9fa03ac51147e96",
+      "size_bytes": 571585,
+      "source_relative": "clean_splits/banglabait_test_clean.parquet",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/clean_splits/banglabait_train_clean.parquet",
+      "role": "Stage-03 required core or small model artifact",
+      "sha256": "a00c02c92a51eef1e5fb10f358909e5feceaaa3413cae83f080a952c206a3c89",
+      "size_bytes": 2104360,
+      "source_relative": "clean_splits/banglabait_train_clean.parquet",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/models/ebm_seed137.joblib",
+      "role": "Stage-03 required core or small model artifact",
+      "sha256": "0e420c3e7a29be6e2fe4195685ab36984701dedf9ac723b3f7f05f4785590577",
+      "size_bytes": 21426,
+      "source_relative": "models/ebm_seed137.joblib",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/models/ebm_seed2718.joblib",
+      "role": "Stage-03 required core or small model artifact",
+      "sha256": "49028e420b290d2a8d5eeafe882d6b4ef2209b4bd276514ad9148931010f4419",
+      "size_bytes": 21385,
+      "source_relative": "models/ebm_seed2718.joblib",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/models/ebm_seed31415.joblib",
+      "role": "Stage-03 required core or small model artifact",
+      "sha256": "f46e18631ec4bd1c781986920f1774d649c419e703c0589c445e9764d8788768",
+      "size_bytes": 21405,
+      "source_relative": "models/ebm_seed31415.joblib",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/models/ebm_seed42.joblib",
+      "role": "Stage-03 required core or small model artifact",
+      "sha256": "7b3bd07b386e8ab32a91b253cb043fb2f2901be1b13a800edc4eb7be8638e2b1",
+      "size_bytes": 21394,
+      "source_relative": "models/ebm_seed42.joblib",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/models/ebm_seed65537.joblib",
+      "role": "Stage-03 required core or small model artifact",
+      "sha256": "2a530d2bbcdb70334967a90d7dc8de7d1552d1ebe7b7c1b08e8fed58eb58a15a",
+      "size_bytes": 21414,
+      "source_relative": "models/ebm_seed65537.joblib",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/models/tfidf_lr_seed137.joblib",
+      "role": "Stage-03 required core or small model artifact",
+      "sha256": "33682958995021ed62cd7fe00561c69c63fcf7678ef4b251f984fe626d691444",
+      "size_bytes": 1806907,
+      "source_relative": "models/tfidf_lr_seed137.joblib",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/models/tfidf_lr_seed2718.joblib",
+      "role": "Stage-03 required core or small model artifact",
+      "sha256": "26ea76e64c8a995809b2990320152eeab9169319557a1970a7715850947c2766",
+      "size_bytes": 1806909,
+      "source_relative": "models/tfidf_lr_seed2718.joblib",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/models/tfidf_lr_seed31415.joblib",
+      "role": "Stage-03 required core or small model artifact",
+      "sha256": "0ce702f21924bd6840953d6b5351d245638ded1ec71513d2cf36040f31868ff8",
+      "size_bytes": 1806911,
+      "source_relative": "models/tfidf_lr_seed31415.joblib",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/models/tfidf_lr_seed42.joblib",
+      "role": "Stage-03 required core or small model artifact",
+      "sha256": "a3a302540bcc4c404c30a3ca865a9cd51d72daf2f51952f8faef363948f153fc",
+      "size_bytes": 1806906,
+      "source_relative": "models/tfidf_lr_seed42.joblib",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/models/tfidf_lr_seed65537.joblib",
+      "role": "Stage-03 required core or small model artifact",
+      "sha256": "05a7da63ee6caa1d2e871d39d809ad1aa95b15585fe53e93165406331268c974",
+      "size_bytes": 1806907,
+      "source_relative": "models/tfidf_lr_seed65537.joblib",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/STAGE03_SHA256SUMS.txt",
+      "role": "Stage-03 checksum contract",
+      "sha256": "e40f3c9ac69cb9f23e080e6070a1cd3b28969f43e3592d7b52a04f02a8dbafb2",
+      "size_bytes": 6901,
+      "source_relative": "STAGE03_SHA256SUMS.txt",
+      "stage": "03"
+    },
+    {
+      "release_relative": "03_modeling/STAGE_STATUS.json",
+      "role": "Stage-03 status",
+      "sha256": "3595786df6ea2218662e019371c19cfa853f032aa2e99fbe7c44dd2298234ae6",
+      "size_bytes": 379,
+      "source_relative": "STAGE_STATUS.json",
+      "stage": "03"
+    },
+    {
+      "release_relative": "04_calibration/CALIBRATION_ARTIFACT_MANIFEST.json",
+      "role": "Stage-04 checksum-contracted output",
+      "sha256": "26b9c68be2312a38ac65eda8f7462e32cbe1d7d288693d58e929cfe0c5f059bd",
+      "size_bytes": 1022,
+      "source_relative": "CALIBRATION_ARTIFACT_MANIFEST.json",
+      "stage": "04"
+    },
+    {
+      "release_relative": "04_calibration/CALIBRATION_REPORT.json",
+      "role": "Stage-04 checksum-contracted output",
+      "sha256": "1238029c025fc977f47fd0c8349e19a97621e45f502076ba2905032657897d4d",
+      "size_bytes": 13217,
+      "source_relative": "CALIBRATION_REPORT.json",
+      "stage": "04"
+    },
+    {
+      "release_relative": "04_calibration/DEV_PREDICTIONS.parquet",
+      "role": "Stage-04 checksum-contracted output",
+      "sha256": "e0d82db394fa7579fbea17b8e95dea9309fcb9628405daa23c67d10ea87c16ac",
+      "size_bytes": 480272,
+      "source_relative": "DEV_PREDICTIONS.parquet",
+      "stage": "04"
+    },
+    {
+      "release_relative": "04_calibration/ENVIRONMENT_PREFLIGHT.json",
+      "role": "Stage-04 checksum-contracted output",
+      "sha256": "6655c1819e1edd5b66b331e345d7562dc4954a5e7c60d789282252de12cc8f0b",
+      "size_bytes": 1182,
+      "source_relative": "ENVIRONMENT_PREFLIGHT.json",
+      "stage": "04"
+    },
+    {
+      "release_relative": "04_calibration/RUN_METADATA.json",
+      "role": "Stage-04 checksum-contracted output",
+      "sha256": "1771e124676debf94a43f9c43319fcbdf670bedfe4fb8969cf913e07bc2629e1",
+      "size_bytes": 896,
+      "source_relative": "RUN_METADATA.json",
+      "stage": "04"
+    },
+    {
+      "release_relative": "04_calibration/STAGE04_SUMMARY.md",
+      "role": "Stage-04 checksum-contracted output",
+      "sha256": "16f75cf69cd962d809bb225db4bbc08baf2936a67babcdae38f075bee7587514",
+      "size_bytes": 183,
+      "source_relative": "STAGE04_SUMMARY.md",
+      "stage": "04"
+    },
+    {
+      "release_relative": "04_calibration/TEMPERATURES.json",
+      "role": "Stage-04 checksum-contracted output",
+      "sha256": "ec6a9bf460e97b488d7a729299bfa66bbab33c8fcf5fd2c136871c2bb4fec011",
+      "size_bytes": 925,
+      "source_relative": "TEMPERATURES.json",
+      "stage": "04"
+    },
+    {
+      "release_relative": "04_calibration/STAGE04_SHA256SUMS.txt",
+      "role": "Stage-04 checksum contract",
+      "sha256": "75811e378257d905152d25b584bbbfc707a9cc36abe890eb5c12eb0f9ec9ab10",
+      "size_bytes": 627,
+      "source_relative": "STAGE04_SHA256SUMS.txt",
+      "stage": "04"
+    },
+    {
+      "release_relative": "04_calibration/STAGE_STATUS.json",
+      "role": "Stage-04 status",
+      "sha256": "cb3a7c9e3c0a744224a709102773828afa4f0e4eabfbc3fd4bca6694165dce60",
+      "size_bytes": 283,
+      "source_relative": "STAGE_STATUS.json",
+      "stage": "04"
+    },
+    {
+      "release_relative": "05_external_validation_and_H3/BAITBUSTER_HUMAN_PREDICTIONS.parquet",
+      "role": "Stage-05 checksum-contracted output",
+      "sha256": "a3e95820c62de00984a189e2c250f7fffd223ad4b3954db04a5368c7a544b7b9",
+      "size_bytes": 22941908,
+      "source_relative": "BAITBUSTER_HUMAN_PREDICTIONS.parquet",
+      "stage": "05"
+    },
+    {
+      "release_relative": "05_external_validation_and_H3/BANGLACLICK_PLATFORM_PREDICTIONS.parquet",
+      "role": "Stage-05 checksum-contracted output",
+      "sha256": "5685fd4142a0e8e7f85cd6040cf48042da2368d5f9596a7740c4f9f09c9519d5",
+      "size_bytes": 18359666,
+      "source_relative": "BANGLACLICK_PLATFORM_PREDICTIONS.parquet",
+      "stage": "05"
+    },
+    {
+      "release_relative": "05_external_validation_and_H3/CACHE_SCHEMA_VALIDATION.json",
+      "role": "Stage-05 checksum-contracted output",
+      "sha256": "ff5c7fbc84d3de947d45c9ede489b6f14d7c823afe77d9cb84077e52f2d2e747",
+      "size_bytes": 747,
+      "source_relative": "CACHE_SCHEMA_VALIDATION.json",
+      "stage": "05"
+    },
+    {
+      "release_relative": "05_external_validation_and_H3/ENVIRONMENT_PREFLIGHT.json",
+      "role": "Stage-05 checksum-contracted output",
+      "sha256": "68c0249f139c90a60cb0b7900f385045927e62457240ecb0f16ecc5117086b2f",
+      "size_bytes": 502,
+      "source_relative": "ENVIRONMENT_PREFLIGHT.json",
+      "stage": "05"
+    },
+    {
+      "release_relative": "05_external_validation_and_H3/H1_H2_PARITY_REPORT.json",
+      "role": "Stage-05 checksum-contracted output",
+      "sha256": "2acbb54627bda0fbe3c0f58bdddeb8572d50a9d146bf9c40b5c13d90ed62805b",
+      "size_bytes": 23380,
+      "source_relative": "H1_H2_PARITY_REPORT.json",
+      "stage": "05"
+    },
+    {
+      "release_relative": "05_external_validation_and_H3/H1_RESULTS.json",
+      "role": "Stage-05 checksum-contracted output",
+      "sha256": "e6801e7092385f50edd19f41b5f2a3b57ae1eb15e09e573381e5e5076dcce6b3",
+      "size_bytes": 385239,
+      "source_relative": "H1_RESULTS.json",
+      "stage": "05"
+    },
+    {
+      "release_relative": "05_external_validation_and_H3/H2_RESULTS.json",
+      "role": "Stage-05 checksum-contracted output",
+      "sha256": "f6c3f1fec5cc60748e96e01493689721130ff73bc9f7203eb7d4b2c5a04bc26d",
+      "size_bytes": 91543,
+      "source_relative": "H2_RESULTS.json",
+      "stage": "05"
+    },
+    {
+      "release_relative": "05_external_validation_and_H3/H3P_POINT_PARITY.json",
+      "role": "Stage-05 checksum-contracted output",
+      "sha256": "2ef957f5665d8198c78cff2f4d0434fad36a3647e2b4988980f7704c204bf7f0",
+      "size_bytes": 25294,
+      "source_relative": "H3P_POINT_PARITY.json",
+      "stage": "05"
+    },
+    {
+      "release_relative": "05_external_validation_and_H3/H3P_STATISTICAL_PARITY.json",
+      "role": "Stage-05 checksum-contracted output",
+      "sha256": "6431a6263cc5b938265261f271bdf2056527e6800cd759c7166cb578100c21c4",
+      "size_bytes": 27394,
+      "source_relative": "H3P_STATISTICAL_PARITY.json",
+      "stage": "05"
+    },
+    {
+      "release_relative": "05_external_validation_and_H3/H3_BAITBUSTER_REPLICATION_CORRECTED.csv",
+      "role": "Stage-05 checksum-contracted output",
+      "sha256": "21edf57be9a4bd152d4e63a3df6a5de189851f82f02cb6dd1bafb14e1199c963",
+      "size_bytes": 8103,
+      "source_relative": "H3_BAITBUSTER_REPLICATION_CORRECTED.csv",
+      "stage": "05"
+    },
+    {
+      "release_relative": "05_external_validation_and_H3/H3_CUE_PLATFORM_CONTRASTS_CORRECTED.csv",
+      "role": "Stage-05 checksum-contracted output",
+      "sha256": "4f0ccab8a083ffda3818a21294d3ec031cb52ca96d7e4f61b6784649381e0aad",
+      "size_bytes": 32006,
+      "source_relative": "H3_CUE_PLATFORM_CONTRASTS_CORRECTED.csv",
+      "stage": "05"
+    },
+    {
+      "release_relative": "05_external_validation_and_H3/H3_PERTURBATION_EXCLUSIONS.csv",
+      "role": "Stage-05 checksum-contracted output",
+      "sha256": "23a55bf1da181f4b7f6ae4284572ae1fda5085f052b140eff731c2efda3fd8da",
+      "size_bytes": 7840,
+      "source_relative": "H3_PERTURBATION_EXCLUSIONS.csv",
+      "stage": "05"
+    },
+    {
+      "release_relative": "05_external_validation_and_H3/H3_PERTURBATION_PAIRS.parquet",
+      "role": "Stage-05 checksum-contracted output",
+      "sha256": "aa43d73922dbd9ab7b7d753a6aef8e25ad7e6438836fd13394b7925514ed5bb1",
+      "size_bytes": 12545189,
+      "source_relative": "H3_PERTURBATION_PAIRS.parquet",
+      "stage": "05"
+    },
+    {
+      "release_relative": "05_external_validation_and_H3/H3_PERTURBATION_RESULTS.json",
+      "role": "Stage-05 checksum-contracted output",
+      "sha256": "f480dfd1cd3960c8fd93fed9c3beb1b5249e0d8ac37565d622b59d7bef55e74c",
+      "size_bytes": 81214,
+      "source_relative": "H3_PERTURBATION_RESULTS.json",
+      "stage": "05"
+    },
+    {
+      "release_relative": "05_external_validation_and_H3/H3_RESULTS.json",
+      "role": "Stage-05 checksum-contracted output",
+      "sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22",
+      "size_bytes": 103179,
+      "source_relative": "H3_RESULTS.json",
+      "stage": "05"
+    },
+    {
+      "release_relative": "05_external_validation_and_H3/H3_SPARSITY_REPORT.csv",
+      "role": "Stage-05 checksum-contracted output",
+      "sha256": "7eec63c257f9651fba6fcec51407f33d224e0c976fbfa894be16efe50619ad80",
+      "size_bytes": 4820,
+      "source_relative": "H3_SPARSITY_REPORT.csv",
+      "stage": "05"
+    },
+    {
+      "release_relative": "05_external_validation_and_H3/INFERENCE_CACHE_PROVENANCE.json",
+      "role": "Stage-05 checksum-contracted output",
+      "sha256": "5502b15a2b289dd0c3017231c26adc8ccec5357e82868ea4b441381440aa213f",
+      "size_bytes": 1539,
+      "source_relative": "INFERENCE_CACHE_PROVENANCE.json",
+      "stage": "05"
+    },
+    {
+      "release_relative": "05_external_validation_and_H3/LOCKED_SOURCE_TEST_PREDICTIONS.parquet",
+      "role": "Stage-05 checksum-contracted output",
+      "sha256": "df863d7a24f7d451451822890de58613c3295eb0bcc1aa882150137b0aa9880a",
+      "size_bytes": 1716919,
+      "source_relative": "LOCKED_SOURCE_TEST_PREDICTIONS.parquet",
+      "stage": "05"
+    },
+    {
+      "release_relative": "05_external_validation_and_H3/RUN_METADATA.json",
+      "role": "Stage-05 checksum-contracted output",
+      "sha256": "586d61290e750e8883de277285615910e4400d6349309fc1d5e54bd8b9438baf",
+      "size_bytes": 1467,
+      "source_relative": "RUN_METADATA.json",
+      "stage": "05"
+    },
+    {
+      "release_relative": "05_external_validation_and_H3/SENSITIVITY_RESULTS.json",
+      "role": "Stage-05 checksum-contracted output",
+      "sha256": "af25b3d80c4784c7d73502ab6451dadba1561e25557000713dd5f1f18b7ef2d3",
+      "size_bytes": 269291,
+      "source_relative": "SENSITIVITY_RESULTS.json",
+      "stage": "05"
+    },
+    {
+      "release_relative": "05_external_validation_and_H3/STAGE05_ARTIFACT_MANIFEST.json",
+      "role": "Stage-05 checksum-contracted output",
+      "sha256": "7246bc3a49a5f8d8472005cea9f6062d118431cd67d5dd2c4fd8f2ee31f52c27",
+      "size_bytes": 3955,
+      "source_relative": "STAGE05_ARTIFACT_MANIFEST.json",
+      "stage": "05"
+    },
+    {
+      "release_relative": "05_external_validation_and_H3/STAGE05_SUMMARY.md",
+      "role": "Stage-05 checksum-contracted output",
+      "sha256": "4f589edc474ec4e4be9f77772c947290b5f86534be1ce47e6fd2ba72b8ed90ff",
+      "size_bytes": 639,
+      "source_relative": "STAGE05_SUMMARY.md",
+      "stage": "05"
+    },
+    {
+      "release_relative": "05_external_validation_and_H3/STATISTICAL_SUMMARY.json",
+      "role": "Stage-05 checksum-contracted output",
+      "sha256": "3b53670796e7970434d365adb84599a8bf2ee9f7edf822c33b5be38945334572",
+      "size_bytes": 192046,
+      "source_relative": "STATISTICAL_SUMMARY.json",
+      "stage": "05"
+    },
+    {
+      "release_relative": "05_external_validation_and_H3/STAGE05_SHA256SUMS.txt",
+      "role": "Stage-05 checksum contract",
+      "sha256": "7171a0e581d8fb4bde2a630f4de631d74962954ee3890b8123d78a720823450a",
+      "size_bytes": 2157,
+      "source_relative": "STAGE05_SHA256SUMS.txt",
+      "stage": "05"
+    },
+    {
+      "release_relative": "05_external_validation_and_H3/STAGE_STATUS.json",
+      "role": "Stage-05 status",
+      "sha256": "005399d829bb66870810faa3f140757a7ee3d82eac4bae394fbbe79e701db8e6",
+      "size_bytes": 742,
+      "source_relative": "STAGE_STATUS.json",
+      "stage": "05"
+    },
+    {
+      "release_relative": "06_fixed_budget_reliability/BOOTSTRAP_RUNTIME.json",
+      "role": "Stage-06 checksum-contracted output",
+      "sha256": "b9ff280b6eef366c1f74d63cd8aa4db0cecd23b9a6d07124f304a21e5a5b0785",
+      "size_bytes": 17904,
+      "source_relative": "BOOTSTRAP_RUNTIME.json",
+      "stage": "06"
+    },
+    {
+      "release_relative": "06_fixed_budget_reliability/ENVIRONMENT_PREFLIGHT.json",
+      "role": "Stage-06 checksum-contracted output",
+      "sha256": "0872dedb58989612d98a2fd21940ac61c5c64b69104a3bc36b3e9d94b71ba3fa",
+      "size_bytes": 643,
+      "source_relative": "ENVIRONMENT_PREFLIGHT.json",
+      "stage": "06"
+    },
+    {
+      "release_relative": "06_fixed_budget_reliability/FINAL_STATISTICAL_SUMMARY.json",
+      "role": "Stage-06 checksum-contracted output",
+      "sha256": "7da3348041074eb524fbdd7d9b8932779ffd69cf54d4b5a1af747b55acbe9f64",
+      "size_bytes": 515774,
+      "source_relative": "FINAL_STATISTICAL_SUMMARY.json",
+      "stage": "06"
+    },
+    {
+      "release_relative": "06_fixed_budget_reliability/FIXED_BUDGET_TABLES.csv",
+      "role": "Stage-06 checksum-contracted output",
+      "sha256": "3df30404ce1bcb8693b8cbabc0038bcc723aa2be3957c0c8b4ead9e93b19287b",
+      "size_bytes": 65342,
+      "source_relative": "FIXED_BUDGET_TABLES.csv",
+      "stage": "06"
+    },
+    {
+      "release_relative": "06_fixed_budget_reliability/H4_RESULTS.json",
+      "role": "Stage-06 checksum-contracted output",
+      "sha256": "299fc2e1394c80e1a090ac14d632e0f502b5b779c459e47dcb4e96130b621462",
+      "size_bytes": 714531,
+      "source_relative": "H4_RESULTS.json",
+      "stage": "06"
+    },
+    {
+      "release_relative": "06_fixed_budget_reliability/REPRODUCIBILITY_MANIFEST.json",
+      "role": "Stage-06 checksum-contracted output",
+      "sha256": "5a2962014445c723379b07fcf02e601644818c36e6c15fb7ee9478ca34711285",
+      "size_bytes": 2610,
+      "source_relative": "REPRODUCIBILITY_MANIFEST.json",
+      "stage": "06"
+    },
+    {
+      "release_relative": "06_fixed_budget_reliability/RISK_COVERAGE_DATA.csv",
+      "role": "Stage-06 checksum-contracted output",
+      "sha256": "cd2f4ef94c06addf9207dfcab94e5c19c94586767f47409760a5e64a3b0f2797",
+      "size_bytes": 1455294,
+      "source_relative": "RISK_COVERAGE_DATA.csv",
+      "stage": "06"
+    },
+    {
+      "release_relative": "06_fixed_budget_reliability/RUN_METADATA.json",
+      "role": "Stage-06 checksum-contracted output",
+      "sha256": "897d2563cbc3ad7b13cec2737bb2668a7086cc3902267cd18c92ce72b65977cd",
+      "size_bytes": 2375,
+      "source_relative": "RUN_METADATA.json",
+      "stage": "06"
+    },
+    {
+      "release_relative": "06_fixed_budget_reliability/STAGE06_SUMMARY.md",
+      "role": "Stage-06 checksum-contracted output",
+      "sha256": "38747d3cbd12e7e659e4ed51ff4d9bfa82e36eb90dd045b835c58bfe458e2195",
+      "size_bytes": 609,
+      "source_relative": "STAGE06_SUMMARY.md",
+      "stage": "06"
+    },
+    {
+      "release_relative": "06_fixed_budget_reliability/UPSTREAM_PROVENANCE_GATE.json",
+      "role": "Stage-06 checksum-contracted output",
+      "sha256": "0f98d1a2ac5cab5c692f6b35fd76af79dd72bf07f48ddfea26ab019cc89a12e7",
+      "size_bytes": 1333,
+      "source_relative": "UPSTREAM_PROVENANCE_GATE.json",
+      "stage": "06"
+    },
+    {
+      "release_relative": "06_fixed_budget_reliability/figures/risk_coverage_banglabert.png",
+      "role": "Stage-06 checksum-contracted output",
+      "sha256": "b52b586ae13539bebf990af4619a4f060069db624f4d94c26577ab3d8685b3a0",
+      "size_bytes": 130077,
+      "source_relative": "figures/risk_coverage_banglabert.png",
+      "stage": "06"
+    },
+    {
+      "release_relative": "06_fixed_budget_reliability/figures/risk_coverage_ebm.png",
+      "role": "Stage-06 checksum-contracted output",
+      "sha256": "c5b5abb3ae5dfcc9fc69a2942ed479d4c94fc08da62f2666aae84fc63025c6d9",
+      "size_bytes": 124328,
+      "source_relative": "figures/risk_coverage_ebm.png",
+      "stage": "06"
+    },
+    {
+      "release_relative": "06_fixed_budget_reliability/figures/risk_coverage_tfidf_lr.png",
+      "role": "Stage-06 checksum-contracted output",
+      "sha256": "733b618b098680d43324f9f5911f6726998f2352f7f2a08fab8177bdb6a152b3",
+      "size_bytes": 130836,
+      "source_relative": "figures/risk_coverage_tfidf_lr.png",
+      "stage": "06"
+    },
+    {
+      "release_relative": "06_fixed_budget_reliability/figures/risk_coverage_xlmr.png",
+      "role": "Stage-06 checksum-contracted output",
+      "sha256": "1b2d70f90eea0b9750f3b2d030d1497772bcee52b259398d95aae7622e77a7be",
+      "size_bytes": 129703,
+      "source_relative": "figures/risk_coverage_xlmr.png",
+      "stage": "06"
+    },
+    {
+      "release_relative": "06_fixed_budget_reliability/tables/H4_PRIMARY_10_PERCENT_BY_SEED.csv",
+      "role": "Stage-06 checksum-contracted output",
+      "sha256": "d8e67ac45c31c6ef687539785f3e41a37c70ccffd8dc49660afd3a0bf67fa796",
+      "size_bytes": 21878,
+      "source_relative": "tables/H4_PRIMARY_10_PERCENT_BY_SEED.csv",
+      "stage": "06"
+    },
+    {
+      "release_relative": "06_fixed_budget_reliability/tables/H4_PRIMARY_10_PERCENT_SEED_SUMMARY.csv",
+      "role": "Stage-06 checksum-contracted output",
+      "sha256": "343b677932be0342298e958ac38cc2721cb5f2ba10f0396a91185505ff312529",
+      "size_bytes": 5108,
+      "source_relative": "tables/H4_PRIMARY_10_PERCENT_SEED_SUMMARY.csv",
+      "stage": "06"
+    },
+    {
+      "release_relative": "06_fixed_budget_reliability/STAGE06_SHA256SUMS.txt",
+      "role": "Stage-06 checksum contract",
+      "sha256": "5f8d0f7fc9cde5e0f159bf4c5f4ca8387441675407b4c43ab87a8063afac3beb",
+      "size_bytes": 1517,
+      "source_relative": "STAGE06_SHA256SUMS.txt",
+      "stage": "06"
+    },
+    {
+      "release_relative": "06_fixed_budget_reliability/STAGE_STATUS.json",
+      "role": "Stage-06 status",
+      "sha256": "769f33b4771f3ec55700384ae6db7e9e2feb115d23717b27cbd9c17e4983538d",
+      "size_bytes": 497,
+      "source_relative": "STAGE_STATUS.json",
+      "stage": "06"
+    },
+    {
+      "release_relative": "07_h3_h4_bridge_exploratory/BOOTSTRAP_RUNTIME.json",
+      "role": "Stage-07 checksum-contracted output",
+      "sha256": "6257078d2fe9a6b56876544a50de4e8a6182c741b68222c25d0d020951872eb2",
+      "size_bytes": 59,
+      "source_relative": "BOOTSTRAP_RUNTIME.json",
+      "stage": "07"
+    },
+    {
+      "release_relative": "07_h3_h4_bridge_exploratory/BRIDGE_32_CELL_POINT_TABLE.csv",
+      "role": "Stage-07 checksum-contracted output",
+      "sha256": "f653117ee2a2fd826e5f015eb7ab4c7a28b5520c5f508b9158c87caa47ddd1da",
+      "size_bytes": 6399,
+      "source_relative": "BRIDGE_32_CELL_POINT_TABLE.csv",
+      "stage": "07"
+    },
+    {
+      "release_relative": "07_h3_h4_bridge_exploratory/BRIDGE_POINT_ASSOCIATIONS.json",
+      "role": "Stage-07 checksum-contracted output",
+      "sha256": "0b97ee5566b19e55d82ae194b3f611152e0a45f465b2b0d44114c559673f0a14",
+      "size_bytes": 852,
+      "source_relative": "BRIDGE_POINT_ASSOCIATIONS.json",
+      "stage": "07"
+    },
+    {
+      "release_relative": "07_h3_h4_bridge_exploratory/FROZEN_INPUT_SUMMARY.json",
+      "role": "Stage-07 checksum-contracted output",
+      "sha256": "abc562a8b1a950346307e9bafc6b329ca16a9e59532d74e02f78d28a9dc8c44f",
+      "size_bytes": 661,
+      "source_relative": "FROZEN_INPUT_SUMMARY.json",
+      "stage": "07"
+    },
+    {
+      "release_relative": "07_h3_h4_bridge_exploratory/H3_H4_BRIDGE_RESULTS.json",
+      "role": "Stage-07 checksum-contracted output",
+      "sha256": "90ae9bc50b42640d3ca03c4e8697ea2b910e3c53de56e4b3c1df0a158f002deb",
+      "size_bytes": 6753,
+      "source_relative": "H3_H4_BRIDGE_RESULTS.json",
+      "stage": "07"
+    },
+    {
+      "release_relative": "07_h3_h4_bridge_exploratory/H3_POINT_PARITY.json",
+      "role": "Stage-07 checksum-contracted output",
+      "sha256": "fc871d2a4e514cc957ab28bc4989a401fe04f4d1d6429ea5781de809536ccf63",
+      "size_bytes": 11930,
+      "source_relative": "H3_POINT_PARITY.json",
+      "stage": "07"
+    },
+    {
+      "release_relative": "07_h3_h4_bridge_exploratory/H4_POLICY_POINT_PARITY.json",
+      "role": "Stage-07 checksum-contracted output",
+      "sha256": "723ebef5b8ca8db0467b14c5484882b3f3269819963ece7d29432fc8b25d0be6",
+      "size_bytes": 24608,
+      "source_relative": "H4_POLICY_POINT_PARITY.json",
+      "stage": "07"
+    },
+    {
+      "release_relative": "07_h3_h4_bridge_exploratory/LEAVE_ONE_PLATFORM_OUT_POINT_TABLE.csv",
+      "role": "Stage-07 checksum-contracted output",
+      "sha256": "5c993233075b012347b16e1337966ffa7bbfee1098bb0a0ecd7ddd0b9a40b5b8",
+      "size_bytes": 1755,
+      "source_relative": "LEAVE_ONE_PLATFORM_OUT_POINT_TABLE.csv",
+      "stage": "07"
+    },
+    {
+      "release_relative": "07_h3_h4_bridge_exploratory/LEAVE_ONE_PLATFORM_OUT_ROBUSTNESS.json",
+      "role": "Stage-07 checksum-contracted output",
+      "sha256": "613c6eb8e2725070ac1a2c65dbe6aa6cff2f76c34857e1f9b7e47e13bd41dc11",
+      "size_bytes": 9031,
+      "source_relative": "LEAVE_ONE_PLATFORM_OUT_ROBUSTNESS.json",
+      "stage": "07"
+    },
+    {
+      "release_relative": "07_h3_h4_bridge_exploratory/REPRODUCIBILITY_MANIFEST.json",
+      "role": "Stage-07 checksum-contracted output",
+      "sha256": "fa8651ff00a3306dfd48ed55d21df3ab2eef2fbd365db33657f5c2413822e714",
+      "size_bytes": 3678,
+      "source_relative": "REPRODUCIBILITY_MANIFEST.json",
+      "stage": "07"
+    },
+    {
+      "release_relative": "07_h3_h4_bridge_exploratory/STAGE07_SUMMARY.md",
+      "role": "Stage-07 checksum-contracted output",
+      "sha256": "023f6ba8ef3f34c4c521b26963b88f1ab122b9ac6d3e81e90c1cf77d36f2ce64",
+      "size_bytes": 1402,
+      "source_relative": "STAGE07_SUMMARY.md",
+      "stage": "07"
+    },
+    {
+      "release_relative": "07_h3_h4_bridge_exploratory/UPSTREAM_PROVENANCE_GATE.json",
+      "role": "Stage-07 checksum-contracted output",
+      "sha256": "2486543472b9d4667f9f28eb2a84d879ce64d598fe0e6f7ce26e01e8648f6e47",
+      "size_bytes": 2271,
+      "source_relative": "UPSTREAM_PROVENANCE_GATE.json",
+      "stage": "07"
+    },
+    {
+      "release_relative": "07_h3_h4_bridge_exploratory/STAGE07_SHA256SUMS.txt",
+      "role": "Stage-07 checksum contract",
+      "sha256": "86c8aeb1c4c0062303b44d397fece5908c315ff8860fca59afc624bfdde39f8d",
+      "size_bytes": 1135,
+      "source_relative": "STAGE07_SHA256SUMS.txt",
+      "stage": "07"
+    },
+    {
+      "release_relative": "07_h3_h4_bridge_exploratory/STAGE_STATUS.json",
+      "role": "Stage-07 status",
+      "sha256": "566f063f1bef265c6d377565ee6a22ccc1cbbbaa083f7bad7a89423ec6222280",
+      "size_bytes": 389,
+      "source_relative": "STAGE_STATUS.json",
+      "stage": "07"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/FIGURE_REPRODUCTION_AUDIT.json",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "169aeb39e7e2e0767db29a9e0987ceff7e270d038747a7b0eb66a85c1df22788",
+      "size_bytes": 11461,
+      "source_relative": "FIGURE_REPRODUCTION_AUDIT.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/FIGURE_SOURCE_COVERAGE.json",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "c5ea11bfe0da33f36ac3347deb110013cee00b8570b14bce2b1cd8a4e4d3a9f7",
+      "size_bytes": 1109,
+      "source_relative": "FIGURE_SOURCE_COVERAGE.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/INPUT_HASHES.json",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "1269918fb9e9d72ee4b652c1cd532f2990ecc232a1e0ea1d1cb5176d6054f5be",
+      "size_bytes": 2999,
+      "source_relative": "INPUT_HASHES.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/MANIFEST.json",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "b0ac3b392b2e3d1b5136fda5dbdbcf498e1b89c44cc1d920ff597d6c2967523f",
+      "size_bytes": 23318,
+      "source_relative": "MANIFEST.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/PROVENANCE_REPORT.json",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "1ac786426624f92fe02798cae3852ee839b46f28e674e30d1753f1b579e275d8",
+      "size_bytes": 859,
+      "source_relative": "PROVENANCE_REPORT.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/SCHEMA_VALIDATION.json",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "cc295fd6572b731f50fd70bd6fef12074a320a4605be6a2047f9105bb807d7a3",
+      "size_bytes": 303,
+      "source_relative": "SCHEMA_VALIDATION.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/FIG01_STUDY_DESIGN_pipeline_source.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "6958cd83586423c75daea293c1ff98a5c60d8b1701e444702db63d23f3c54997",
+      "size_bytes": 661,
+      "source_relative": "figure_source_data/FIG01_STUDY_DESIGN_pipeline_source.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/FIG01_STUDY_DESIGN_pipeline_source.json",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "7a068950d801b98959dad6e72d1ec2efe5a43a572b37dbdbbf14c59492943113",
+      "size_bytes": 672,
+      "source_relative": "figure_source_data/FIG01_STUDY_DESIGN_pipeline_source.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/FIG02_H1_H2_A_source.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "f8e0b41e7c1c90b9ff314012759ad9a3715383a48c8912131455924567a781c3",
+      "size_bytes": 6049,
+      "source_relative": "figure_source_data/FIG02_H1_H2_A_source.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/FIG02_H1_H2_A_source.json",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "8d970e74d6e35f39256fbe4c1167b74c8d91c1d0091ca989f16a6413add708a9",
+      "size_bytes": 540,
+      "source_relative": "figure_source_data/FIG02_H1_H2_A_source.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/FIG02_H1_H2_B_C_source.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "b88aa86e84e9b49810f07a091955736dc8291174c758c63e607c16454027327f",
+      "size_bytes": 40815,
+      "source_relative": "figure_source_data/FIG02_H1_H2_B_C_source.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/FIG02_H1_H2_B_C_source.json",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "6fea171118b065db5b9260bfc4eababad7a1a0e10ddf0f0442b1df38bfa98553",
+      "size_bytes": 1288,
+      "source_relative": "figure_source_data/FIG02_H1_H2_B_C_source.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/FIG02_H1_H2_D_source.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "1dc032bfd713eaef5fb1dd071d46cef96d2e74db31a2e4f001a94e0c38b44590",
+      "size_bytes": 30745,
+      "source_relative": "figure_source_data/FIG02_H1_H2_D_source.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/FIG02_H1_H2_D_source.json",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "2a20fb5d9e2a9662244ca2400267988612b68772e5529522d802f845d9f3d56e",
+      "size_bytes": 909,
+      "source_relative": "figure_source_data/FIG02_H1_H2_D_source.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/FIG03_H3_CUE_TRANSPORT_A_B_source.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "de3b2f599a85bd115b2b0688bdbbb1e30cf5a830236ee71df3abc5ef4aa2535f",
+      "size_bytes": 32144,
+      "source_relative": "figure_source_data/FIG03_H3_CUE_TRANSPORT_A_B_source.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/FIG03_H3_CUE_TRANSPORT_A_B_source.json",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "d6d5403cd3a0aefcd23805806fd0ab7ac13906fc1195afd6cded736c42646da2",
+      "size_bytes": 1156,
+      "source_relative": "figure_source_data/FIG03_H3_CUE_TRANSPORT_A_B_source.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/FIG04_H4_FIXED_BUDGET_budget_sensitivity_source.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "376d23031ec3b4485b8216c623dc1386c76e7cdf0df9fc62973decb197ad75e8",
+      "size_bytes": 110292,
+      "source_relative": "figure_source_data/FIG04_H4_FIXED_BUDGET_budget_sensitivity_source.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/FIG04_H4_FIXED_BUDGET_budget_sensitivity_source.json",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "b7f50eacdf7189887360f8e45e687290796f3d3b8ae55deb79f09af0ca097bfd",
+      "size_bytes": 1730,
+      "source_relative": "figure_source_data/FIG04_H4_FIXED_BUDGET_budget_sensitivity_source.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/FIG04_H4_FIXED_BUDGET_primary_10pct_source.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "b8e4222ff2331af3c105171b2231c436fa265bf2430b09d16c17be557c4face3",
+      "size_bytes": 37164,
+      "source_relative": "figure_source_data/FIG04_H4_FIXED_BUDGET_primary_10pct_source.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/FIG04_H4_FIXED_BUDGET_primary_10pct_source.json",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "7638ae0871ac5cc47a9c74e59769a4f64e4d6d50cc7ffb2cf11778cc8691c5bb",
+      "size_bytes": 1720,
+      "source_relative": "figure_source_data/FIG04_H4_FIXED_BUDGET_primary_10pct_source.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/FIG05_H3_H4_BRIDGE_abs_delta_nll_gap__vs__error_capture_deterioration_source.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "03da1e4f6f951fb950a3915b259b39f927d06472cc4467426a6db99294971abe",
+      "size_bytes": 4530,
+      "source_relative": "figure_source_data/FIG05_H3_H4_BRIDGE_abs_delta_nll_gap__vs__error_capture_deterioration_source.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/FIG05_H3_H4_BRIDGE_abs_delta_nll_gap__vs__error_capture_deterioration_source.json",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "00a6cfc77bfc4486b1ecf020ebc71f74fc9db05567282711bf39d9d4e3d85a7a",
+      "size_bytes": 907,
+      "source_relative": "figure_source_data/FIG05_H3_H4_BRIDGE_abs_delta_nll_gap__vs__error_capture_deterioration_source.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/FIG05_H3_H4_BRIDGE_abs_delta_nll_gap__vs__lift_deterioration_source.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "5ab49bc3584fe3b40b246880fb82ad393d9568fa8ae02dc9df427fa80674abf6",
+      "size_bytes": 4413,
+      "source_relative": "figure_source_data/FIG05_H3_H4_BRIDGE_abs_delta_nll_gap__vs__lift_deterioration_source.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/FIG05_H3_H4_BRIDGE_abs_delta_nll_gap__vs__lift_deterioration_source.json",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "4639b4fe06c21c5358684109ab607992943ecc6021ecc7b73733b77c1e24f5dd",
+      "size_bytes": 880,
+      "source_relative": "figure_source_data/FIG05_H3_H4_BRIDGE_abs_delta_nll_gap__vs__lift_deterioration_source.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/FIG05_H3_H4_BRIDGE_abs_delta_rd__vs__error_capture_deterioration_source.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "0705f3df28b2e5fdb6ab2ca9bc77866009e3bcf8cb518fb2ba93c283f211324b",
+      "size_bytes": 4493,
+      "source_relative": "figure_source_data/FIG05_H3_H4_BRIDGE_abs_delta_rd__vs__error_capture_deterioration_source.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/FIG05_H3_H4_BRIDGE_abs_delta_rd__vs__error_capture_deterioration_source.json",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "655fb532a81fa92eecf6074b8c9bc8efa191038d95b74ab7893ffd43e08accfd",
+      "size_bytes": 892,
+      "source_relative": "figure_source_data/FIG05_H3_H4_BRIDGE_abs_delta_rd__vs__error_capture_deterioration_source.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/FIG05_H3_H4_BRIDGE_abs_delta_rd__vs__lift_deterioration_source.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "a0068984b8ab49d3fa62332dc53858af20b372f78f81387da2892d28ca1e38cb",
+      "size_bytes": 4408,
+      "source_relative": "figure_source_data/FIG05_H3_H4_BRIDGE_abs_delta_rd__vs__lift_deterioration_source.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/FIG05_H3_H4_BRIDGE_abs_delta_rd__vs__lift_deterioration_source.json",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "2063c4a973f6ee529763fcab40f8e0d89e42869249cd51ed1302d83477ded252",
+      "size_bytes": 865,
+      "source_relative": "figure_source_data/FIG05_H3_H4_BRIDGE_abs_delta_rd__vs__lift_deterioration_source.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/FIGURE_SOURCE_DATA_INDEX.json",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "04085ae059e2fa98eeaa2e59ac377d93cf0e6da7333d696e7a3f9d1502122bfb",
+      "size_bytes": 25474,
+      "source_relative": "figure_source_data/FIGURE_SOURCE_DATA_INDEX.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/SUPP_BAITBUSTER_H3_A_B_source.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "4b92f8dd3f762cf39216c5290e2db0e406c32a498cef6e24109c8ad74cb9b57c",
+      "size_bytes": 8083,
+      "source_relative": "figure_source_data/SUPP_BAITBUSTER_H3_A_B_source.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/SUPP_BAITBUSTER_H3_A_B_source.json",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "595efbe092f14b1d7e6713de7904d888058da6f13c0895b8a58b4273cee8f18c",
+      "size_bytes": 953,
+      "source_relative": "figure_source_data/SUPP_BAITBUSTER_H3_A_B_source.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/SUPP_BRIDGE_LOO_all_source.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "ec99d5bc95d8c5edaf330e61e5a137a741e357fb469774d1f687d9b17fd15af4",
+      "size_bytes": 1730,
+      "source_relative": "figure_source_data/SUPP_BRIDGE_LOO_all_source.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/SUPP_BRIDGE_LOO_all_source.json",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "b187c025a8dfde3ff8cc84a7afbebf832d2650d51b3b956e2c3d38ebdae91d88",
+      "size_bytes": 745,
+      "source_relative": "figure_source_data/SUPP_BRIDGE_LOO_all_source.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/SUPP_H1_H2_MODEL_SEED_all_source.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "b88aa86e84e9b49810f07a091955736dc8291174c758c63e607c16454027327f",
+      "size_bytes": 40815,
+      "source_relative": "figure_source_data/SUPP_H1_H2_MODEL_SEED_all_source.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/SUPP_H1_H2_MODEL_SEED_all_source.json",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "17478d2574a49e11e6c24dc916f527ee315d0c0d163f58da50e75a13e4b76964",
+      "size_bytes": 1216,
+      "source_relative": "figure_source_data/SUPP_H1_H2_MODEL_SEED_all_source.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/SUPP_H3P_SHARED_all_source.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "b74590e664f8218c949a8676c187b80c811765f0bc65f7f12595efd77fdb4b70",
+      "size_bytes": 29086,
+      "source_relative": "figure_source_data/SUPP_H3P_SHARED_all_source.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/SUPP_H3P_SHARED_all_source.json",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "43c1871e6ca07290280281288d401e405c4643bb254b758ce6fdafc3880b1556",
+      "size_bytes": 938,
+      "source_relative": "figure_source_data/SUPP_H3P_SHARED_all_source.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/SUPP_H3_SPARSITY_support_source.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "6aad2c616a0e4afe110e3245f091ef2bb67465d340e0e29cdf46b90f47a22d60",
+      "size_bytes": 4793,
+      "source_relative": "figure_source_data/SUPP_H3_SPARSITY_support_source.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/SUPP_H3_SPARSITY_support_source.json",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "75eaba6aac35b1f8338ff79512471fa7c5d48b9674ef8d4857b0256487f66ba1",
+      "size_bytes": 770,
+      "source_relative": "figure_source_data/SUPP_H3_SPARSITY_support_source.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/SUPP_H4_05PCT_A_C_source.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "d0afb00937fc5ca78c7cc468c738409cbddb62589564c0bfbc3063fc1f4ad04a",
+      "size_bytes": 37464,
+      "source_relative": "figure_source_data/SUPP_H4_05PCT_A_C_source.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/SUPP_H4_05PCT_A_C_source.json",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "e05c1a8b72a3f369ae01e6fe4f5aad90236085bd29c32676ffda17ef9ba6b691",
+      "size_bytes": 1543,
+      "source_relative": "figure_source_data/SUPP_H4_05PCT_A_C_source.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/SUPP_H4_20PCT_A_C_source.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "1e0ff1b23f7434160311eced872f984c16cb6fc59401a116b816d392fa198987",
+      "size_bytes": 37216,
+      "source_relative": "figure_source_data/SUPP_H4_20PCT_A_C_source.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/SUPP_H4_20PCT_A_C_source.json",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "6996bdec6d21d7cc2fcff890fe18aa12da31153326e46a5b99bc9f75918bf9fd",
+      "size_bytes": 1542,
+      "source_relative": "figure_source_data/SUPP_H4_20PCT_A_C_source.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/SUPP_H4_MODEL_SEED_all_source.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "7b502ab987ac84c4e1d3cd582561f4a2e7ee432e807a9383739d1ee3357d4a26",
+      "size_bytes": 46739,
+      "source_relative": "figure_source_data/SUPP_H4_MODEL_SEED_all_source.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/SUPP_H4_MODEL_SEED_all_source.json",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "e066f944b7ed304d0bb338755138b432b523ce1728e33d20eb2bbcf53a961a04",
+      "size_bytes": 1689,
+      "source_relative": "figure_source_data/SUPP_H4_MODEL_SEED_all_source.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/SUPP_RISK_COVERAGE_all_source.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "37170dc9daba351504d4c13d112fcfddfc57dde802036c8810624201eae086b8",
+      "size_bytes": 1441741,
+      "source_relative": "figure_source_data/SUPP_RISK_COVERAGE_all_source.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/SUPP_RISK_COVERAGE_all_source.json",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "a56bc790514c5cf0ff5378714b0dfac1b77cb11fd84b0825b19011cf259dfbf4",
+      "size_bytes": 578,
+      "source_relative": "figure_source_data/SUPP_RISK_COVERAGE_all_source.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/SUPP_SENSITIVITY_A_B_source.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "2e336246204b038513f212b793e2aed195d8b1416729f84ea21e67be2f09df98",
+      "size_bytes": 34331,
+      "source_relative": "figure_source_data/SUPP_SENSITIVITY_A_B_source.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figure_source_data/SUPP_SENSITIVITY_A_B_source.json",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "03cc3b8a38e9e6a5c0b9bf2949852b132edc573ef77670d977e4e3b4cb8c82d4",
+      "size_bytes": 711,
+      "source_relative": "figure_source_data/SUPP_SENSITIVITY_A_B_source.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/main/FIG01_STUDY_DESIGN.pdf",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "16b9c6f5b23e5cee3cd203009ac969d84f875fc8367fc8e847eb1604f8347eb1",
+      "size_bytes": 29542,
+      "source_relative": "figures/main/FIG01_STUDY_DESIGN.pdf",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/main/FIG01_STUDY_DESIGN.png",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "9f57e6c33848e0854df8351eb5aa0f25ad6a4f28859c039bb286dd430556857b",
+      "size_bytes": 390396,
+      "source_relative": "figures/main/FIG01_STUDY_DESIGN.png",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/main/FIG01_STUDY_DESIGN.svg",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "dadd351cd164fbb07ba1c78c301cc64ac24f56490d2ae9f4e2bb64578ac5b7e6",
+      "size_bytes": 96290,
+      "source_relative": "figures/main/FIG01_STUDY_DESIGN.svg",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/main/FIG02_H1_H2.pdf",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "40827c924a196f62bf97add5a891b0c3f8f3b4161c4c83ab0d12de88aa308c72",
+      "size_bytes": 50879,
+      "source_relative": "figures/main/FIG02_H1_H2.pdf",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/main/FIG02_H1_H2.png",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "74652dc92c9dc2133ac4ffc5f9570717c365e6884624f290acaee577425f759a",
+      "size_bytes": 686613,
+      "source_relative": "figures/main/FIG02_H1_H2.png",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/main/FIG02_H1_H2.svg",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "c82df1bc1faded5e88c74c6681c356ead9a407a29fe873ca9c308d674a0a1c0e",
+      "size_bytes": 340277,
+      "source_relative": "figures/main/FIG02_H1_H2.svg",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/main/FIG03_H3_CUE_TRANSPORT.pdf",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "055070b27e047a21e1db04d4cb41a948ed3e8c986d4c96279c8d9a23daa78460",
+      "size_bytes": 26936,
+      "source_relative": "figures/main/FIG03_H3_CUE_TRANSPORT.pdf",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/main/FIG03_H3_CUE_TRANSPORT.png",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "1000442bb01b8884209db6b1275b9f679a1150b5d4843ba295ad762f7ae08a99",
+      "size_bytes": 634366,
+      "source_relative": "figures/main/FIG03_H3_CUE_TRANSPORT.png",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/main/FIG03_H3_CUE_TRANSPORT.svg",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "83fa34500d4f45506f8b8923dc030794e6ab2ba5e14b248ff3042d83955773a8",
+      "size_bytes": 183341,
+      "source_relative": "figures/main/FIG03_H3_CUE_TRANSPORT.svg",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/main/FIG04_H4_FIXED_BUDGET.pdf",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "55eed12ddae9270de85b17b85b41040a94377c220a583d0da564f3a22f958a16",
+      "size_bytes": 68584,
+      "source_relative": "figures/main/FIG04_H4_FIXED_BUDGET.pdf",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/main/FIG04_H4_FIXED_BUDGET.png",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "d4b6428b82b57a83d3dde2336f2fb8397de78c5b914a97c25bc4314c83de3383",
+      "size_bytes": 658117,
+      "source_relative": "figures/main/FIG04_H4_FIXED_BUDGET.png",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/main/FIG04_H4_FIXED_BUDGET.svg",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "cedab28de6abdd9c7860b0365ee446399a9fb583795ebd1d28ff64ad89cebb7e",
+      "size_bytes": 439360,
+      "source_relative": "figures/main/FIG04_H4_FIXED_BUDGET.svg",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/main/FIG05_H3_H4_BRIDGE.pdf",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "b82431421d371ac55748df35260653396544893b975d6ba6d99a6164e6279a51",
+      "size_bytes": 27702,
+      "source_relative": "figures/main/FIG05_H3_H4_BRIDGE.pdf",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/main/FIG05_H3_H4_BRIDGE.png",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "ba6df6f95fae06ea870a4820f080d2b492cf79747e0191234533e8b4d13846c2",
+      "size_bytes": 683458,
+      "source_relative": "figures/main/FIG05_H3_H4_BRIDGE.png",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/main/FIG05_H3_H4_BRIDGE.svg",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "af5c3cf18804f487e36a7b71a0d0c4eb3f51064201381563523557d1e5352028",
+      "size_bytes": 155939,
+      "source_relative": "figures/main/FIG05_H3_H4_BRIDGE.svg",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_BAITBUSTER_H3.pdf",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "577d4ae00997f570aefd78040e2b736ff03d42a4927a2db69d71aa51cdb20f52",
+      "size_bytes": 17602,
+      "source_relative": "figures/supplementary/SUPP_BAITBUSTER_H3.pdf",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_BAITBUSTER_H3.png",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "b0279ddde7a7d0f11bb6c902924c3120a8d9044e236739ac98b090635937a2d2",
+      "size_bytes": 230090,
+      "source_relative": "figures/supplementary/SUPP_BAITBUSTER_H3.png",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_BAITBUSTER_H3.svg",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "e43c5496a1056e3968249bf23166e6646799fd0503c6b05149c32dc4028c707e",
+      "size_bytes": 61131,
+      "source_relative": "figures/supplementary/SUPP_BAITBUSTER_H3.svg",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_BRIDGE_LOO.pdf",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "e4db1a3a4d6c9238f48cce249616af8a718a6276e6af29c24621cd0c8ed1667a",
+      "size_bytes": 19271,
+      "source_relative": "figures/supplementary/SUPP_BRIDGE_LOO.pdf",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_BRIDGE_LOO.png",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "79738e83206689ae6fde4a7f82e0d8a745e8852b3d536705a95268a5c0d19a3b",
+      "size_bytes": 425463,
+      "source_relative": "figures/supplementary/SUPP_BRIDGE_LOO.png",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_BRIDGE_LOO.svg",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "3c0dcca870596cad7cdc7106f55e5dfc8f11d9cf449b2a48b4d6af597176ceda",
+      "size_bytes": 85382,
+      "source_relative": "figures/supplementary/SUPP_BRIDGE_LOO.svg",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_H1_H2_MODEL_SEED.pdf",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "9ef7a5c6c73bc865d73be6228f08926639747aadc37d705071f2c7195496b44e",
+      "size_bytes": 26620,
+      "source_relative": "figures/supplementary/SUPP_H1_H2_MODEL_SEED.pdf",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_H1_H2_MODEL_SEED.png",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "f2ba5fe2bbe617fc94355e95bd6fab399e36b757a934bf0766e4b5ad130880b9",
+      "size_bytes": 810595,
+      "source_relative": "figures/supplementary/SUPP_H1_H2_MODEL_SEED.png",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_H1_H2_MODEL_SEED.svg",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "d25c7eacdcf77538bbc40ae7855211d65cc38bac423b3cf3e786e9ffce0bcfac",
+      "size_bytes": 85666,
+      "source_relative": "figures/supplementary/SUPP_H1_H2_MODEL_SEED.svg",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_H3P_curiosity_information_withholding.pdf",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "22c46eac0a330cff09fa642ac40dd50de98672f6d04a73d6aa78ad4ade26f23d",
+      "size_bytes": 27835,
+      "source_relative": "figures/supplementary/SUPP_H3P_curiosity_information_withholding.pdf",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_H3P_curiosity_information_withholding.png",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "a959abeb92205bbd486424abcc858c3d4c32de3433b6d343399cc62a6dcb040e",
+      "size_bytes": 203238,
+      "source_relative": "figures/supplementary/SUPP_H3P_curiosity_information_withholding.png",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_H3P_curiosity_information_withholding.svg",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "8496121cf173c0b86ed05b2689b15e9c60f2eaabd0d8a681295a5ff30bbd7f56",
+      "size_bytes": 86151,
+      "source_relative": "figures/supplementary/SUPP_H3P_curiosity_information_withholding.svg",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_H3P_direct_address_imperative.pdf",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "013c2b4820cce4cbb52e4763d933afaf40418a56b7ae82858eb0f9ccc0b714c6",
+      "size_bytes": 26489,
+      "source_relative": "figures/supplementary/SUPP_H3P_direct_address_imperative.pdf",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_H3P_direct_address_imperative.png",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "a5cced76b4bec7f9da25797751abfc1a605e6ba4a9c3fab6ab5b7fb87c7710f4",
+      "size_bytes": 199732,
+      "source_relative": "figures/supplementary/SUPP_H3P_direct_address_imperative.png",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_H3P_direct_address_imperative.svg",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "99d6d38639dae659694c0e2c7a6eeb4880cbe5bcac22c019dfce6a68708941ea",
+      "size_bytes": 81238,
+      "source_relative": "figures/supplementary/SUPP_H3P_direct_address_imperative.svg",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_H3P_punctuation_intensity.pdf",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "11b1832973c5ae98ea0743090e164fe1eebf3c4907bb056e1b504a2715a2cb73",
+      "size_bytes": 27714,
+      "source_relative": "figures/supplementary/SUPP_H3P_punctuation_intensity.pdf",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_H3P_punctuation_intensity.png",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "2365f5b40cd4e740c935a03f9a10932aa9b0c2e93456486fb363cd474791987b",
+      "size_bytes": 202398,
+      "source_relative": "figures/supplementary/SUPP_H3P_punctuation_intensity.png",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_H3P_punctuation_intensity.svg",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "0926da40a65434db731c8c046ef7d105c213783a1b00eb9cf9e4aba7d47191f3",
+      "size_bytes": 85869,
+      "source_relative": "figures/supplementary/SUPP_H3P_punctuation_intensity.svg",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_H3_SPARSITY.pdf",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "4188749431cdd65ca19a4ee204c99f9c0c4039c24a4af7b0f6fbf06aaf94d7e9",
+      "size_bytes": 17520,
+      "source_relative": "figures/supplementary/SUPP_H3_SPARSITY.pdf",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_H3_SPARSITY.png",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "e15cefe9b166d4395dca6445d11a307ce33ca1b71b4f82e32b67c988eeaa8b57",
+      "size_bytes": 358832,
+      "source_relative": "figures/supplementary/SUPP_H3_SPARSITY.png",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_H3_SPARSITY.svg",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "c21e9bb4e528821591ffad09b89541a282cd51d86206e178778eba38239c8346",
+      "size_bytes": 65005,
+      "source_relative": "figures/supplementary/SUPP_H3_SPARSITY.svg",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_H4_05PCT.pdf",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "3432fca1046d9631107925a17b456c92783f336aed443d09b2ca639cc894ef5a",
+      "size_bytes": 36488,
+      "source_relative": "figures/supplementary/SUPP_H4_05PCT.pdf",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_H4_05PCT.png",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "a3430c1a409721403726c9142f7c6bab723fceaa1cfc7ad3a1f6380a97538599",
+      "size_bytes": 323969,
+      "source_relative": "figures/supplementary/SUPP_H4_05PCT.png",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_H4_05PCT.svg",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "b86c7d100f7cb00e2dbf2069615941ce97dcdd4a9f0616720211713d1641afbd",
+      "size_bytes": 239441,
+      "source_relative": "figures/supplementary/SUPP_H4_05PCT.svg",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_H4_20PCT.pdf",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "926b4e2ac04ff11d82289d7d891fa53b24f537998e0df5f5284a7c7b1fc8faa1",
+      "size_bytes": 37415,
+      "source_relative": "figures/supplementary/SUPP_H4_20PCT.pdf",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_H4_20PCT.png",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "cd634515c1228693ef9f3a361a622b40cebceae40b47f5b71f51386dcbcf57a7",
+      "size_bytes": 304595,
+      "source_relative": "figures/supplementary/SUPP_H4_20PCT.png",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_H4_20PCT.svg",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "d0a99648c9c44f7dbec8e6e6529f9242e8f4d3da84410004c40a591c9a898e08",
+      "size_bytes": 239727,
+      "source_relative": "figures/supplementary/SUPP_H4_20PCT.svg",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_H4_MODEL_SEED.pdf",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "a9dc30a96874ef0694efbed3599459fc5d031a9e38021de79f7fff39f852eee3",
+      "size_bytes": 40087,
+      "source_relative": "figures/supplementary/SUPP_H4_MODEL_SEED.pdf",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_H4_MODEL_SEED.png",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "fd34d6167abf5fc64b4de70bc62977113dd169fb6c05bea899a9df339806a6bb",
+      "size_bytes": 650983,
+      "source_relative": "figures/supplementary/SUPP_H4_MODEL_SEED.png",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_H4_MODEL_SEED.svg",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "2b3be2ec3765ae7275cbe066c368312721006aa533e0cd1783aa191a49dc54be",
+      "size_bytes": 242895,
+      "source_relative": "figures/supplementary/SUPP_H4_MODEL_SEED.svg",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_RISK_COVERAGE.pdf",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "8282b77c1d41851d43036e538bda358593a10217459e77b2ac06ad8bf0c7c015",
+      "size_bytes": 131657,
+      "source_relative": "figures/supplementary/SUPP_RISK_COVERAGE.pdf",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_RISK_COVERAGE.png",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "bee4de2a7eb51b8cceeef04a3cef2cdf2f6dcf8729f11e0ebe25d013b80a8f12",
+      "size_bytes": 2102328,
+      "source_relative": "figures/supplementary/SUPP_RISK_COVERAGE.png",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_RISK_COVERAGE.svg",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "5b7c52ed25d68f173c01ecb7592645a733e10ac4bfdcdcc05acd51cd40105d91",
+      "size_bytes": 719039,
+      "source_relative": "figures/supplementary/SUPP_RISK_COVERAGE.svg",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_SENSITIVITY.pdf",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "df6ee7158f1eac977630aef69a21abb01744f8df1ac944786750aacc2971f887",
+      "size_bytes": 78759,
+      "source_relative": "figures/supplementary/SUPP_SENSITIVITY.pdf",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_SENSITIVITY.png",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "1c4dde00a38f63bac74cfaabe13fe191f65fa3dce4140cbb815f222560afb8ac",
+      "size_bytes": 3206473,
+      "source_relative": "figures/supplementary/SUPP_SENSITIVITY.png",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/figures/supplementary/SUPP_SENSITIVITY.svg",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "ea313f7d02ce7ac0956e0ad37ee02319afbad64166aef6a905ffb2b196795c54",
+      "size_bytes": 274777,
+      "source_relative": "figures/supplementary/SUPP_SENSITIVITY.svg",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/tables/main/TABLE01_STUDY_DESIGN_MAP.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "080f63c4ea620370604db82bdfb64a66a2742d4c3daa749f9247918ff4b50ee0",
+      "size_bytes": 657,
+      "source_relative": "tables/main/TABLE01_STUDY_DESIGN_MAP.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/tables/main/TABLE02_H1_H2_SUMMARY.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "59626d4f448d7ec72958ce396413e90e955947e2f5c86c3360e5aed00f2890ea",
+      "size_bytes": 1889,
+      "source_relative": "tables/main/TABLE02_H1_H2_SUMMARY.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/tables/main/TABLE03_H3_CUE_TRANSPORT.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "80952c2f4dd859c711499d0f2d9b13d2b44523aa5af9860d78985e9dde793085",
+      "size_bytes": 6208,
+      "source_relative": "tables/main/TABLE03_H3_CUE_TRANSPORT.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/tables/main/TABLE04_H4_PRIMARY_10PCT_SUMMARY.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "97ed0f3ce2062c5b37a1b2d9fefd06ca6ce5b70a51e8b9c80e296bc29d8275c0",
+      "size_bytes": 718,
+      "source_relative": "tables/main/TABLE04_H4_PRIMARY_10PCT_SUMMARY.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/tables/supplementary/SUPP_TABLE01_FULL_H3_32_CELL.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "584551acb3add85f4feed90067b255926e3e174806bbd96d90fbaafc236ed1b9",
+      "size_bytes": 31959,
+      "source_relative": "tables/supplementary/SUPP_TABLE01_FULL_H3_32_CELL.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/tables/supplementary/SUPP_TABLE02_H3_SPARSITY.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "6aad2c616a0e4afe110e3245f091ef2bb67465d340e0e29cdf46b90f47a22d60",
+      "size_bytes": 4793,
+      "source_relative": "tables/supplementary/SUPP_TABLE02_H3_SPARSITY.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/tables/supplementary/SUPP_TABLE03_H3P.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "b74590e664f8218c949a8676c187b80c811765f0bc65f7f12595efd77fdb4b70",
+      "size_bytes": 29086,
+      "source_relative": "tables/supplementary/SUPP_TABLE03_H3P.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/tables/supplementary/SUPP_TABLE04_BAITBUSTER_H3.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "325f5924b0c3b7a4e3c1ec6afd314603913bc62e5d7995a00d5afbe055264c63",
+      "size_bytes": 8107,
+      "source_relative": "tables/supplementary/SUPP_TABLE04_BAITBUSTER_H3.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/tables/supplementary/SUPP_TABLE05_FULL_H4_BUDGET.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "fc933b852271c8c5b5d62debb0362fb0227673272b6a936b5c02730ebfa09c11",
+      "size_bytes": 64422,
+      "source_relative": "tables/supplementary/SUPP_TABLE05_FULL_H4_BUDGET.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/tables/supplementary/SUPP_TABLE06_H4_MODEL_SEED.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "eb0f2d777be722e36ea7d027a40e5f1a2f7ca2cfc113b9a70d5dd7be2ad03aac",
+      "size_bytes": 139335,
+      "source_relative": "tables/supplementary/SUPP_TABLE06_H4_MODEL_SEED.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/tables/supplementary/SUPP_TABLE07_LOO_POINT.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "ec99d5bc95d8c5edaf330e61e5a137a741e357fb469774d1f687d9b17fd15af4",
+      "size_bytes": 1730,
+      "source_relative": "tables/supplementary/SUPP_TABLE07_LOO_POINT.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/tables/supplementary/SUPP_TABLE08_FULL_STATISTICAL_SUMMARY.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "0a1e07d73cf35d604960a29e0eb4ddf75bc61b05a9709fc70d52e72089840268",
+      "size_bytes": 615539,
+      "source_relative": "tables/supplementary/SUPP_TABLE08_FULL_STATISTICAL_SUMMARY.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/tables/supplementary/SUPP_TABLE09_PROVENANCE.csv",
+      "role": "Stage-08 checksum-contracted output",
+      "sha256": "6706e41b35ba3889ba621cc9c236054170f31d1ced2c325fc176479bc57f2458",
+      "size_bytes": 1030,
+      "source_relative": "tables/supplementary/SUPP_TABLE09_PROVENANCE.csv",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/STAGE08_SHA256SUMS.txt",
+      "role": "Stage-08 checksum contract",
+      "sha256": "ccd850d3dbe144651bb52e8277308e6438e3e3d869b2cfc232b39db96fed3af6",
+      "size_bytes": 13121,
+      "source_relative": "STAGE08_SHA256SUMS.txt",
+      "stage": "08"
+    },
+    {
+      "release_relative": "08_manuscript_figures_and_tables/STAGE08_STATUS.json",
+      "role": "Stage-08 status",
+      "sha256": "d64ee2649a348bad4fd36ee3c4df79fd071b60807b248f0a7a575f5795bf9f33",
+      "size_bytes": 222,
+      "source_relative": "STAGE08_STATUS.json",
+      "stage": "08"
+    },
+    {
+      "release_relative": "09_source_site_cluster_sensitivity/CLAIM_CONCORDANCE_TABLE.csv",
+      "role": "Stage-09 checksum-contracted output",
+      "sha256": "081ef151d20ff71c96c6a0feac944ffe4fb160aa11964c015b938c55ead6d357",
+      "size_bytes": 488352,
+      "source_relative": "CLAIM_CONCORDANCE_TABLE.csv",
+      "stage": "09"
+    },
+    {
+      "release_relative": "09_source_site_cluster_sensitivity/H1_H2_SOURCE_CLUSTER_SENSITIVITY.json",
+      "role": "Stage-09 checksum-contracted output",
+      "sha256": "c6644238f0399425feeb389a268ae96618461e16500dcf6bfb53ac93186b20aa",
+      "size_bytes": 309545,
+      "source_relative": "H1_H2_SOURCE_CLUSTER_SENSITIVITY.json",
+      "stage": "09"
+    },
+    {
+      "release_relative": "09_source_site_cluster_sensitivity/H3P_SOURCE_CLUSTER_SENSITIVITY.json",
+      "role": "Stage-09 checksum-contracted output",
+      "sha256": "a1c56ab6b259fdafe4826c5d98956ab18378a2a01336ed42ae6b0efbde7279ea",
+      "size_bytes": 86163,
+      "source_relative": "H3P_SOURCE_CLUSTER_SENSITIVITY.json",
+      "stage": "09"
+    },
+    {
+      "release_relative": "09_source_site_cluster_sensitivity/H3_SOURCE_CLUSTER_SENSITIVITY.json",
+      "role": "Stage-09 checksum-contracted output",
+      "sha256": "23e5727c3d3b843dee9757c97140a057f2dfa7dba008fb845e734425ad0ae60b",
+      "size_bytes": 66721,
+      "source_relative": "H3_SOURCE_CLUSTER_SENSITIVITY.json",
+      "stage": "09"
+    },
+    {
+      "release_relative": "09_source_site_cluster_sensitivity/H4_SOURCE_CLUSTER_SENSITIVITY.json",
+      "role": "Stage-09 checksum-contracted output",
+      "sha256": "d39a2f6a967ed51cf75a71d3221f4c1c892d8efd7354bd82f66b6f9cf4a47c0f",
+      "size_bytes": 356672,
+      "source_relative": "H4_SOURCE_CLUSTER_SENSITIVITY.json",
+      "stage": "09"
+    },
+    {
+      "release_relative": "09_source_site_cluster_sensitivity/REPRODUCIBILITY_MANIFEST.json",
+      "role": "Stage-09 checksum-contracted output",
+      "sha256": "445b9bd3bfccbf55af63c92c3e6e966eaf38959641b6507493cb6c249a7035db",
+      "size_bytes": 3794,
+      "source_relative": "REPRODUCIBILITY_MANIFEST.json",
+      "stage": "09"
+    },
+    {
+      "release_relative": "09_source_site_cluster_sensitivity/SENSITIVITY_SUMMARY.md",
+      "role": "Stage-09 checksum-contracted output",
+      "sha256": "691b9e568afe7e4b66de338fb433d3a2849daa1eb92752af1e053e1f25ec87d6",
+      "size_bytes": 881,
+      "source_relative": "SENSITIVITY_SUMMARY.md",
+      "stage": "09"
+    },
+    {
+      "release_relative": "09_source_site_cluster_sensitivity/SOURCE_CLUSTER_DIAGNOSTICS.json",
+      "role": "Stage-09 checksum-contracted output",
+      "sha256": "385f2d80680f75cfe835f5cf004a356b27f8243164de3e7860c823e287783735",
+      "size_bytes": 9152,
+      "source_relative": "SOURCE_CLUSTER_DIAGNOSTICS.json",
+      "stage": "09"
+    },
+    {
+      "release_relative": "09_source_site_cluster_sensitivity/SOURCE_PUBLISHER_MAPPING.csv",
+      "role": "Stage-09 checksum-contracted output",
+      "sha256": "dcb97621c92b32c422cfdaded4f3c1b43c6885281af88399a8e3cd2efb4b1e58",
+      "size_bytes": 687813,
+      "source_relative": "SOURCE_PUBLISHER_MAPPING.csv",
+      "stage": "09"
+    },
+    {
+      "release_relative": "09_source_site_cluster_sensitivity/STAGE09_SHA256SUMS.txt",
+      "role": "Stage-09 checksum contract",
+      "sha256": "c2c2e1c576a94b1efb8aa0072078dca7795375de386f0082666a2966eeb7f285",
+      "size_bytes": 880,
+      "source_relative": "STAGE09_SHA256SUMS.txt",
+      "stage": "09"
+    },
+    {
+      "release_relative": "09_source_site_cluster_sensitivity/STAGE_STATUS.json",
+      "role": "Stage-09 status",
+      "sha256": "c57fb1178ecdcb9e4525a9abaf8b55e62b7e6eabbc0050817aa1df76970937a3",
+      "size_bytes": 610,
+      "source_relative": "STAGE_STATUS.json",
+      "stage": "09"
+    }
+  ],
+  "not_copied": [
+    {
+      "path": "BaitBuster-Bangla/Mendeley_V3_public_author_serializations/BaitBuster-Bangla_253070_18c_HL10k_AIL.parquet",
+      "reason": "RAW_DATA_REDISTRIBUTION_NOT_AUTHOR_VERIFIED",
+      "sha256": "7f1bb757c9c5ee1a2922efcd45fb829b89e96d4465995e538158c4225f3c12c9",
+      "size_bytes": 175950911,
+      "stage": "01"
+    },
+    {
+      "path": "BaitBuster-Bangla/Mendeley_V3_public_author_serializations/BaitBuster-Bangla_253070_18c_HL10k_AIL.xlsx",
+      "reason": "RAW_DATA_REDISTRIBUTION_NOT_AUTHOR_VERIFIED",
+      "sha256": "a6d207d94ba0e4735a92478ce01c0080f79e9ce2d1557c78c304e5275b3d5286",
+      "size_bytes": 91845301,
+      "stage": "01"
+    },
+    {
+      "path": "BaitBuster-Bangla/SOURCE_METADATA.json",
+      "reason": "RAW_DATA_REDISTRIBUTION_NOT_AUTHOR_VERIFIED",
+      "sha256": "6bd3edfc67ea2e5b4a56558eb2ac1492b7ecd6c2a1b070f875f17200eba49ce3",
+      "size_bytes": 6231,
+      "stage": "01"
+    },
+    {
+      "path": "BanFakeNews-2.0/Independent_Test_Authors_GitHub/New_Test_Dataset.csv",
+      "reason": "RAW_DATA_REDISTRIBUTION_NOT_AUTHOR_VERIFIED",
+      "sha256": "ed4949762c1cdc1940bb5a1afe610ca1341a0803079888a35a812608f6351e7b",
+      "size_bytes": 6237141,
+      "stage": "01"
+    },
+    {
+      "path": "BanFakeNews-2.0/Mendeley_V1_byte_equivalent/All60Kdataset.csv",
+      "reason": "RAW_DATA_REDISTRIBUTION_NOT_AUTHOR_VERIFIED",
+      "sha256": "d9aed69b6019843a769bbcb045affd31c98cfa02f2b0bc821f551c54ba780c0a",
+      "size_bytes": 304586219,
+      "stage": "01"
+    },
+    {
+      "path": "BanFakeNews-2.0/SOURCE_METADATA.json",
+      "reason": "RAW_DATA_REDISTRIBUTION_NOT_AUTHOR_VERIFIED",
+      "sha256": "b02cc88033e25ac00ba3cf9f9d43f9fb31e8b0515f132aad1e118bed25d24708",
+      "size_bytes": 3775,
+      "stage": "01"
+    },
+    {
+      "path": "BanMANI/SOURCE_METADATA.json",
+      "reason": "RAW_DATA_REDISTRIBUTION_NOT_AUTHOR_VERIFIED",
+      "sha256": "464de918b544cfa4a3a637c35f55a6f46d89f8ec08a261a480699f71b924bb1c",
+      "size_bytes": 2539,
+      "stage": "01"
+    },
+    {
+      "path": "BanMANI/repository_snapshot/BanMANI.csv",
+      "reason": "RAW_DATA_REDISTRIBUTION_NOT_AUTHOR_VERIFIED",
+      "sha256": "0883c40d313a782570f22fe1e4429102372b8113db737e8c2f09916cfe8ac09b",
+      "size_bytes": 4226621,
+      "stage": "01"
+    },
+    {
+      "path": "BanMANI/repository_snapshot/LICENSE",
+      "reason": "RAW_DATA_REDISTRIBUTION_NOT_AUTHOR_VERIFIED",
+      "sha256": "37d8b69e00a950ffeb545c2f254b2595dfb800f22fd83e08ae145c73bf628da0",
+      "size_bytes": 1065,
+      "stage": "01"
+    },
+    {
+      "path": "BanMANI/repository_snapshot/README.md",
+      "reason": "RAW_DATA_REDISTRIBUTION_NOT_AUTHOR_VERIFIED",
+      "sha256": "9e74d4c74521cdaa8af74b2d62a3c4adacba02ea5e55edf49e63ae8489e73526",
+      "size_bytes": 786,
+      "stage": "01"
+    },
+    {
+      "path": "BanglaBait/SOURCE_METADATA.json",
+      "reason": "RAW_DATA_REDISTRIBUTION_NOT_AUTHOR_VERIFIED",
+      "sha256": "ed49e4a09d71c503bea120129453cd2cb98ff73ed127230d012cbc84566d713d",
+      "size_bytes": 9724,
+      "stage": "01"
+    },
+    {
+      "path": "BanglaBait/repository_snapshot/.gitattributes",
+      "reason": "RAW_DATA_REDISTRIBUTION_NOT_AUTHOR_VERIFIED",
+      "sha256": "ec757f34279651ac37beacb52a8fca37089c2d4032ddfe441c6a1558dc61b9d0",
+      "size_bytes": 2608,
+      "stage": "01"
+    },
+    {
+      "path": "BanglaBait/repository_snapshot/README.md",
+      "reason": "RAW_DATA_REDISTRIBUTION_NOT_AUTHOR_VERIFIED",
+      "sha256": "7e558ef1504fce7a1d4847f3060dda10f688b175f2971a2a2e92d0ecc83c770e",
+      "size_bytes": 111,
+      "stage": "01"
+    },
+    {
+      "path": "BanglaBait/repository_snapshot/dev.csv",
+      "reason": "RAW_DATA_REDISTRIBUTION_NOT_AUTHOR_VERIFIED",
+      "sha256": "b018b189dc05dc1d5975fee282a4eb052826e862ee54b7f7360cad82dbc31110",
+      "size_bytes": 7969172,
+      "stage": "01"
+    },
+    {
+      "path": "BanglaBait/repository_snapshot/test.csv",
+      "reason": "RAW_DATA_REDISTRIBUTION_NOT_AUTHOR_VERIFIED",
+      "sha256": "68176be61ba8dd01f9f78b6aea2b84c198236c89de5abc98db8c49c496ebd996",
+      "size_bytes": 19813408,
+      "stage": "01"
+    },
+    {
+      "path": "BanglaBait/repository_snapshot/train.csv",
+      "reason": "RAW_DATA_REDISTRIBUTION_NOT_AUTHOR_VERIFIED",
+      "sha256": "97f4be47da54821904d57028b53d539dcb3cbf76942cf3ac530a8c313eec06f5",
+      "size_bytes": 72704138,
+      "stage": "01"
+    },
+    {
+      "path": "BanglaBait/repository_snapshot/unlabelled_data.csv",
+      "reason": "RAW_DATA_REDISTRIBUTION_NOT_AUTHOR_VERIFIED",
+      "sha256": "66c6186e3e351c7703cc5d8a7061957e708e8c55ccaea9bf24f55875a7fed583",
+      "size_bytes": 329277343,
+      "stage": "01"
+    },
+    {
+      "path": "BanglaClick/SOURCE_METADATA.json",
+      "reason": "RAW_DATA_REDISTRIBUTION_NOT_AUTHOR_VERIFIED",
+      "sha256": "70c57eb2baf7655975bb58f315eb76d42c3cda100d0047ae8376069856e9a53e",
+      "size_bytes": 2664,
+      "stage": "01"
+    },
+    {
+      "path": "BanglaClick/repository_snapshot/Data/Final_4961_Dataset.xlsx",
+      "reason": "RAW_DATA_REDISTRIBUTION_NOT_AUTHOR_VERIFIED",
+      "sha256": "2202f89445fa12f1880854edb50f10d37293bd006758fe1901c69213f058e060",
+      "size_bytes": 1277552,
+      "stage": "01"
+    },
+    {
+      "path": "BanglaClick/repository_snapshot/Data/README.md",
+      "reason": "RAW_DATA_REDISTRIBUTION_NOT_AUTHOR_VERIFIED",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "size_bytes": 1,
+      "stage": "01"
+    },
+    {
+      "path": "BanglaClick/repository_snapshot/README.md",
+      "reason": "RAW_DATA_REDISTRIBUTION_NOT_AUTHOR_VERIFIED",
+      "sha256": "c2abd4799fcee01c369a4505a7901cb8505f00b972c3467d9074884a2e2b3dad",
+      "size_bytes": 2435,
+      "stage": "01"
+    },
+    {
+      "path": "models/banglabert_seed137/config.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "9be40e4eb31eccfffc09d307f098be1a75c63ce61b3a54aebf140e10232142c4",
+      "size_bytes": 887,
+      "stage": "03"
+    },
+    {
+      "path": "models/banglabert_seed137/model.safetensors",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "bba965aaf2b4e6459e18f66a8faee009d71877aa2da2e6320695a315dd5a7140",
+      "size_bytes": 442499648,
+      "stage": "03"
+    },
+    {
+      "path": "models/banglabert_seed137/tokenizer.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "04137253024e722415332f9b3fddd9f2578ae19b94d303424644ffc994f47b8a",
+      "size_bytes": 1031938,
+      "stage": "03"
+    },
+    {
+      "path": "models/banglabert_seed137/tokenizer_config.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "88dbffe3c8f3fb5c2d92fbf75474632d2d21c3b14b09faf857cce20b1edc6117",
+      "size_bytes": 383,
+      "stage": "03"
+    },
+    {
+      "path": "models/banglabert_seed2718/config.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "9be40e4eb31eccfffc09d307f098be1a75c63ce61b3a54aebf140e10232142c4",
+      "size_bytes": 887,
+      "stage": "03"
+    },
+    {
+      "path": "models/banglabert_seed2718/model.safetensors",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "9b6256f29e1ab534a2ed17b0362cb7d1d94e4b016ce0228eee3d7323152905b3",
+      "size_bytes": 442499648,
+      "stage": "03"
+    },
+    {
+      "path": "models/banglabert_seed2718/tokenizer.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "04137253024e722415332f9b3fddd9f2578ae19b94d303424644ffc994f47b8a",
+      "size_bytes": 1031938,
+      "stage": "03"
+    },
+    {
+      "path": "models/banglabert_seed2718/tokenizer_config.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "88dbffe3c8f3fb5c2d92fbf75474632d2d21c3b14b09faf857cce20b1edc6117",
+      "size_bytes": 383,
+      "stage": "03"
+    },
+    {
+      "path": "models/banglabert_seed31415/config.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "9be40e4eb31eccfffc09d307f098be1a75c63ce61b3a54aebf140e10232142c4",
+      "size_bytes": 887,
+      "stage": "03"
+    },
+    {
+      "path": "models/banglabert_seed31415/model.safetensors",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "a95c9f9f9a705623e7ae67884df760f1b3af1a60efabbf2f3a7b77af2cbc91a8",
+      "size_bytes": 442499648,
+      "stage": "03"
+    },
+    {
+      "path": "models/banglabert_seed31415/tokenizer.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "04137253024e722415332f9b3fddd9f2578ae19b94d303424644ffc994f47b8a",
+      "size_bytes": 1031938,
+      "stage": "03"
+    },
+    {
+      "path": "models/banglabert_seed31415/tokenizer_config.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "88dbffe3c8f3fb5c2d92fbf75474632d2d21c3b14b09faf857cce20b1edc6117",
+      "size_bytes": 383,
+      "stage": "03"
+    },
+    {
+      "path": "models/banglabert_seed42/config.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "9be40e4eb31eccfffc09d307f098be1a75c63ce61b3a54aebf140e10232142c4",
+      "size_bytes": 887,
+      "stage": "03"
+    },
+    {
+      "path": "models/banglabert_seed42/model.safetensors",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "2abc4bd97f37490b9c61aa32de7b7b8bbcf990d948447f35501c9790b32e8da7",
+      "size_bytes": 442499648,
+      "stage": "03"
+    },
+    {
+      "path": "models/banglabert_seed42/tokenizer.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "04137253024e722415332f9b3fddd9f2578ae19b94d303424644ffc994f47b8a",
+      "size_bytes": 1031938,
+      "stage": "03"
+    },
+    {
+      "path": "models/banglabert_seed42/tokenizer_config.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "88dbffe3c8f3fb5c2d92fbf75474632d2d21c3b14b09faf857cce20b1edc6117",
+      "size_bytes": 383,
+      "stage": "03"
+    },
+    {
+      "path": "models/banglabert_seed65537/config.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "9be40e4eb31eccfffc09d307f098be1a75c63ce61b3a54aebf140e10232142c4",
+      "size_bytes": 887,
+      "stage": "03"
+    },
+    {
+      "path": "models/banglabert_seed65537/model.safetensors",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "c05957f1ad686268bab5ae5a94c3c90ec2502222e9ca9dd0dbd99bda8214b63b",
+      "size_bytes": 442499648,
+      "stage": "03"
+    },
+    {
+      "path": "models/banglabert_seed65537/tokenizer.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "04137253024e722415332f9b3fddd9f2578ae19b94d303424644ffc994f47b8a",
+      "size_bytes": 1031938,
+      "stage": "03"
+    },
+    {
+      "path": "models/banglabert_seed65537/tokenizer_config.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "88dbffe3c8f3fb5c2d92fbf75474632d2d21c3b14b09faf857cce20b1edc6117",
+      "size_bytes": 383,
+      "stage": "03"
+    },
+    {
+      "path": "models/xlmr_seed137/config.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "134139344a7b77f69c547f0c09eb05e72c9388facb0265616682d5e7c6c7f1ab",
+      "size_bytes": 810,
+      "stage": "03"
+    },
+    {
+      "path": "models/xlmr_seed137/model.safetensors",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "a5a3bed1358825514a2c3f0bd07986484b223a10f846ea14e13f3cb7a330662d",
+      "size_bytes": 1112204984,
+      "stage": "03"
+    },
+    {
+      "path": "models/xlmr_seed137/tokenizer.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "9ce77ba8b4c297b974086f177384cc0ce96d6d08158072cc9cdc0e9f16c48dea",
+      "size_bytes": 16781584,
+      "stage": "03"
+    },
+    {
+      "path": "models/xlmr_seed137/tokenizer_config.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "c019e3e4f7f901adf680dde303c7d964de86675a13e089bcc0f614d3fce75333",
+      "size_bytes": 314,
+      "stage": "03"
+    },
+    {
+      "path": "models/xlmr_seed2718/config.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "134139344a7b77f69c547f0c09eb05e72c9388facb0265616682d5e7c6c7f1ab",
+      "size_bytes": 810,
+      "stage": "03"
+    },
+    {
+      "path": "models/xlmr_seed2718/model.safetensors",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "6805664180ba3ca707618966cb87e72531c519aabf4f89e36cd1b43fb8d27d06",
+      "size_bytes": 1112204984,
+      "stage": "03"
+    },
+    {
+      "path": "models/xlmr_seed2718/tokenizer.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "9ce77ba8b4c297b974086f177384cc0ce96d6d08158072cc9cdc0e9f16c48dea",
+      "size_bytes": 16781584,
+      "stage": "03"
+    },
+    {
+      "path": "models/xlmr_seed2718/tokenizer_config.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "c019e3e4f7f901adf680dde303c7d964de86675a13e089bcc0f614d3fce75333",
+      "size_bytes": 314,
+      "stage": "03"
+    },
+    {
+      "path": "models/xlmr_seed31415/config.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "134139344a7b77f69c547f0c09eb05e72c9388facb0265616682d5e7c6c7f1ab",
+      "size_bytes": 810,
+      "stage": "03"
+    },
+    {
+      "path": "models/xlmr_seed31415/model.safetensors",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "e4e92096658c460a4797bb2af93b4f71ef71404310d463fedbc6d4385c323650",
+      "size_bytes": 1112204984,
+      "stage": "03"
+    },
+    {
+      "path": "models/xlmr_seed31415/tokenizer.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "9ce77ba8b4c297b974086f177384cc0ce96d6d08158072cc9cdc0e9f16c48dea",
+      "size_bytes": 16781584,
+      "stage": "03"
+    },
+    {
+      "path": "models/xlmr_seed31415/tokenizer_config.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "c019e3e4f7f901adf680dde303c7d964de86675a13e089bcc0f614d3fce75333",
+      "size_bytes": 314,
+      "stage": "03"
+    },
+    {
+      "path": "models/xlmr_seed42/config.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "134139344a7b77f69c547f0c09eb05e72c9388facb0265616682d5e7c6c7f1ab",
+      "size_bytes": 810,
+      "stage": "03"
+    },
+    {
+      "path": "models/xlmr_seed42/model.safetensors",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "0e185b58b210eb06189d2a3fe8eaa11ddb80edfb2f81e3133c0e24c96f656217",
+      "size_bytes": 1112204984,
+      "stage": "03"
+    },
+    {
+      "path": "models/xlmr_seed42/tokenizer.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "9ce77ba8b4c297b974086f177384cc0ce96d6d08158072cc9cdc0e9f16c48dea",
+      "size_bytes": 16781584,
+      "stage": "03"
+    },
+    {
+      "path": "models/xlmr_seed42/tokenizer_config.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "c019e3e4f7f901adf680dde303c7d964de86675a13e089bcc0f614d3fce75333",
+      "size_bytes": 314,
+      "stage": "03"
+    },
+    {
+      "path": "models/xlmr_seed65537/config.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "134139344a7b77f69c547f0c09eb05e72c9388facb0265616682d5e7c6c7f1ab",
+      "size_bytes": 810,
+      "stage": "03"
+    },
+    {
+      "path": "models/xlmr_seed65537/model.safetensors",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "2952bfb3021b89b91b41ccbd254b5dcf4e256a01bf9a51dfade83581e8e640ea",
+      "size_bytes": 1112204984,
+      "stage": "03"
+    },
+    {
+      "path": "models/xlmr_seed65537/tokenizer.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "9ce77ba8b4c297b974086f177384cc0ce96d6d08158072cc9cdc0e9f16c48dea",
+      "size_bytes": 16781584,
+      "stage": "03"
+    },
+    {
+      "path": "models/xlmr_seed65537/tokenizer_config.json",
+      "reason": "OPTIONAL_LARGE_TRAINING_ARTIFACT",
+      "sha256": "c019e3e4f7f901adf680dde303c7d964de86675a13e089bcc0f614d3fce75333",
+      "size_bytes": 314,
+      "stage": "03"
+    }
+  ]
+}

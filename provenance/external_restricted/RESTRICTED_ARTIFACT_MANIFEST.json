@@ -1,0 +1,567 @@
+{
+  "schema_version": 1,
+  "policy": "public-safe exclusion of unresolved redistribution bytes",
+  "artifact_count": 26,
+  "artifacts": [
+    {
+      "path": "data/derived/primary/stage03/clean_splits/banglabait_train_clean.parquet",
+      "filename": "banglabait_train_clean.parquet",
+      "size_bytes": 2104360,
+      "sha256": "a00c02c92a51eef1e5fb10f358909e5feceaaa3413cae83f080a952c206a3c89",
+      "role": "Stage03 clean BanglaBait split",
+      "reason_excluded": "Contains the literal third-party `title` field; public redistribution permission is unresolved.",
+      "authorised_access": "Obtain BanglaBait from the recorded source/revision in data/access/DATA_LICENSE.md and provenance/canonical/stage01/SOURCES_LOCK.json; verify Stage01 hashes; then run the frozen Stage02/Stage03 path.",
+      "identity_records": [
+        "provenance/canonical/stage03/CLEAN_DATA_MANIFEST.json",
+        "provenance/canonical/stage03/STAGE03_SHA256SUMS.txt",
+        "provenance/rowlevel_audit/INPUT_SHA256SUMS.txt"
+      ],
+      "dependent_notebooks_results": [
+        "notebooks/03-primary-model-development.ipynb",
+        "notebooks/04-calibration.ipynb",
+        "notebooks/05-external-validation-and-h3-vfinal.ipynb",
+        "notebooks/09-source-publisher-cluster-sensitivity-vfinal.ipynb"
+      ],
+      "verification_instructions": "Obtain or reproduce the authorised frozen artifact, place it at `data/derived/primary/stage03/clean_splits/banglabait_train_clean.parquet`, compute SHA-256, and require exact equality to `a00c02c92a51eef1e5fb10f358909e5feceaaa3413cae83f080a952c206a3c89` before executing dependent stages. Do not commit the bytes publicly unless redistribution permission is separately verified.",
+      "inspection_basis": "Actual Parquet footer metadata was inspected and contains a `title` column.",
+      "redistribution_status": "UNRESOLVED_PUBLIC_REDISTRIBUTION__EXCLUDED"
+    },
+    {
+      "path": "data/derived/primary/stage03/clean_splits/banglabait_dev_clean.parquet",
+      "filename": "banglabait_dev_clean.parquet",
+      "size_bytes": 227702,
+      "sha256": "584533f179c3bef867ef93e9b431d24f063ee85ea010ed38ecc850dd041d4ef4",
+      "role": "Stage03 clean BanglaBait split",
+      "reason_excluded": "Contains the literal third-party `title` field; public redistribution permission is unresolved.",
+      "authorised_access": "Obtain BanglaBait from the recorded source/revision in data/access/DATA_LICENSE.md and provenance/canonical/stage01/SOURCES_LOCK.json; verify Stage01 hashes; then run the frozen Stage02/Stage03 path.",
+      "identity_records": [
+        "provenance/canonical/stage03/CLEAN_DATA_MANIFEST.json",
+        "provenance/canonical/stage03/STAGE03_SHA256SUMS.txt",
+        "provenance/rowlevel_audit/INPUT_SHA256SUMS.txt"
+      ],
+      "dependent_notebooks_results": [
+        "notebooks/03-primary-model-development.ipynb",
+        "notebooks/04-calibration.ipynb",
+        "notebooks/05-external-validation-and-h3-vfinal.ipynb",
+        "notebooks/09-source-publisher-cluster-sensitivity-vfinal.ipynb"
+      ],
+      "verification_instructions": "Obtain or reproduce the authorised frozen artifact, place it at `data/derived/primary/stage03/clean_splits/banglabait_dev_clean.parquet`, compute SHA-256, and require exact equality to `584533f179c3bef867ef93e9b431d24f063ee85ea010ed38ecc850dd041d4ef4` before executing dependent stages. Do not commit the bytes publicly unless redistribution permission is separately verified.",
+      "inspection_basis": "Actual Parquet footer metadata was inspected and contains a `title` column.",
+      "redistribution_status": "UNRESOLVED_PUBLIC_REDISTRIBUTION__EXCLUDED"
+    },
+    {
+      "path": "data/derived/primary/stage03/clean_splits/banglabait_test_clean.parquet",
+      "filename": "banglabait_test_clean.parquet",
+      "size_bytes": 571585,
+      "sha256": "3f033ca9479db97e1f11684b6ae223f095678e8fa6b1f2a7b9fa03ac51147e96",
+      "role": "Stage03 clean BanglaBait split",
+      "reason_excluded": "Contains the literal third-party `title` field; public redistribution permission is unresolved.",
+      "authorised_access": "Obtain BanglaBait from the recorded source/revision in data/access/DATA_LICENSE.md and provenance/canonical/stage01/SOURCES_LOCK.json; verify Stage01 hashes; then run the frozen Stage02/Stage03 path.",
+      "identity_records": [
+        "provenance/canonical/stage03/CLEAN_DATA_MANIFEST.json",
+        "provenance/canonical/stage03/STAGE03_SHA256SUMS.txt",
+        "provenance/rowlevel_audit/INPUT_SHA256SUMS.txt"
+      ],
+      "dependent_notebooks_results": [
+        "notebooks/03-primary-model-development.ipynb",
+        "notebooks/04-calibration.ipynb",
+        "notebooks/05-external-validation-and-h3-vfinal.ipynb",
+        "notebooks/09-source-publisher-cluster-sensitivity-vfinal.ipynb"
+      ],
+      "verification_instructions": "Obtain or reproduce the authorised frozen artifact, place it at `data/derived/primary/stage03/clean_splits/banglabait_test_clean.parquet`, compute SHA-256, and require exact equality to `3f033ca9479db97e1f11684b6ae223f095678e8fa6b1f2a7b9fa03ac51147e96` before executing dependent stages. Do not commit the bytes publicly unless redistribution permission is separately verified.",
+      "inspection_basis": "Actual Parquet footer metadata was inspected and contains a `title` column.",
+      "redistribution_status": "UNRESOLVED_PUBLIC_REDISTRIBUTION__EXCLUDED"
+    },
+    {
+      "path": "data/derived/primary/stage05/LOCKED_SOURCE_TEST_PREDICTIONS.parquet",
+      "filename": "LOCKED_SOURCE_TEST_PREDICTIONS.parquet",
+      "size_bytes": 1716919,
+      "sha256": "df863d7a24f7d451451822890de58613c3295eb0bcc1aa882150137b0aa9880a",
+      "role": "Stage05 BanglaBait source prediction cache",
+      "reason_excluded": "Contains literal third-party `title` values. Public redistribution permission is unresolved.",
+      "authorised_access": "Obtain BanglaBait from the recorded source/revision in data/access/DATA_LICENSE.md and provenance/canonical/stage01/SOURCES_LOCK.json; verify Stage01 hashes; then run the frozen Stage02/Stage03 path.",
+      "identity_records": [
+        "provenance/canonical/stage05/STAGE05_ARTIFACT_MANIFEST.json",
+        "provenance/canonical/stage05/STAGE05_SHA256SUMS.txt",
+        "provenance/canonical/stage05/INFERENCE_CACHE_PROVENANCE.json"
+      ],
+      "dependent_notebooks_results": [
+        "notebooks/05-external-validation-and-h3-vfinal.ipynb",
+        "notebooks/06-fixed-budget-reliability-evaluation-vfinal.ipynb",
+        "notebooks/07-h3-h4-bridge-exploratory-vfinal.ipynb",
+        "notebooks/09-source-publisher-cluster-sensitivity-vfinal.ipynb"
+      ],
+      "verification_instructions": "Obtain or reproduce the authorised frozen artifact, place it at `data/derived/primary/stage05/LOCKED_SOURCE_TEST_PREDICTIONS.parquet`, compute SHA-256, and require exact equality to `df863d7a24f7d451451822890de58613c3295eb0bcc1aa882150137b0aa9880a` before executing dependent stages. Do not commit the bytes publicly unless redistribution permission is separately verified.",
+      "inspection_basis": "Actual Parquet footer metadata was inspected; prediction caches expose `title`, and H3-P pairs expose `original_title`/`neutralized_title`.",
+      "redistribution_status": "UNRESOLVED_PUBLIC_REDISTRIBUTION__EXCLUDED"
+    },
+    {
+      "path": "data/derived/primary/stage05/BANGLACLICK_PLATFORM_PREDICTIONS.parquet",
+      "filename": "BANGLACLICK_PLATFORM_PREDICTIONS.parquet",
+      "size_bytes": 18359666,
+      "sha256": "5685fd4142a0e8e7f85cd6040cf48042da2368d5f9596a7740c4f9f09c9519d5",
+      "role": "Stage05 BanglaClick prediction cache",
+      "reason_excluded": "Contains literal third-party `title` values. Public redistribution permission is unresolved.",
+      "authorised_access": "Obtain BanglaClick from the recorded repository/revision in data/access/DATA_LICENSE.md and Stage01 source locks; verify source identity, then use the frozen Stage03–Stage05 workflow.",
+      "identity_records": [
+        "provenance/canonical/stage05/STAGE05_ARTIFACT_MANIFEST.json",
+        "provenance/canonical/stage05/STAGE05_SHA256SUMS.txt",
+        "provenance/canonical/stage05/INFERENCE_CACHE_PROVENANCE.json"
+      ],
+      "dependent_notebooks_results": [
+        "notebooks/05-external-validation-and-h3-vfinal.ipynb",
+        "notebooks/06-fixed-budget-reliability-evaluation-vfinal.ipynb",
+        "notebooks/07-h3-h4-bridge-exploratory-vfinal.ipynb",
+        "notebooks/09-source-publisher-cluster-sensitivity-vfinal.ipynb"
+      ],
+      "verification_instructions": "Obtain or reproduce the authorised frozen artifact, place it at `data/derived/primary/stage05/BANGLACLICK_PLATFORM_PREDICTIONS.parquet`, compute SHA-256, and require exact equality to `5685fd4142a0e8e7f85cd6040cf48042da2368d5f9596a7740c4f9f09c9519d5` before executing dependent stages. Do not commit the bytes publicly unless redistribution permission is separately verified.",
+      "inspection_basis": "Actual Parquet footer metadata was inspected; prediction caches expose `title`, and H3-P pairs expose `original_title`/`neutralized_title`.",
+      "redistribution_status": "UNRESOLVED_PUBLIC_REDISTRIBUTION__EXCLUDED"
+    },
+    {
+      "path": "data/derived/primary/stage05/BAITBUSTER_HUMAN_PREDICTIONS.parquet",
+      "filename": "BAITBUSTER_HUMAN_PREDICTIONS.parquet",
+      "size_bytes": 22941908,
+      "sha256": "a3e95820c62de00984a189e2c250f7fffd223ad4b3954db04a5368c7a544b7b9",
+      "role": "Stage05 BaitBuster prediction cache",
+      "reason_excluded": "Contains literal third-party `title` values. Public redistribution permission is unresolved.",
+      "authorised_access": "Obtain BaitBuster-Bangla from the recorded Mendeley source/version in data/access/DATA_LICENSE.md and Stage01 source locks; verify source identity, then use the frozen Stage03–Stage05 workflow.",
+      "identity_records": [
+        "provenance/canonical/stage05/STAGE05_ARTIFACT_MANIFEST.json",
+        "provenance/canonical/stage05/STAGE05_SHA256SUMS.txt",
+        "provenance/canonical/stage05/INFERENCE_CACHE_PROVENANCE.json"
+      ],
+      "dependent_notebooks_results": [
+        "notebooks/05-external-validation-and-h3-vfinal.ipynb",
+        "notebooks/06-fixed-budget-reliability-evaluation-vfinal.ipynb",
+        "notebooks/07-h3-h4-bridge-exploratory-vfinal.ipynb",
+        "notebooks/09-source-publisher-cluster-sensitivity-vfinal.ipynb"
+      ],
+      "verification_instructions": "Obtain or reproduce the authorised frozen artifact, place it at `data/derived/primary/stage05/BAITBUSTER_HUMAN_PREDICTIONS.parquet`, compute SHA-256, and require exact equality to `a3e95820c62de00984a189e2c250f7fffd223ad4b3954db04a5368c7a544b7b9` before executing dependent stages. Do not commit the bytes publicly unless redistribution permission is separately verified.",
+      "inspection_basis": "Actual Parquet footer metadata was inspected; prediction caches expose `title`, and H3-P pairs expose `original_title`/`neutralized_title`.",
+      "redistribution_status": "UNRESOLVED_PUBLIC_REDISTRIBUTION__EXCLUDED"
+    },
+    {
+      "path": "data/derived/primary/stage05/H3_PERTURBATION_PAIRS.parquet",
+      "filename": "H3_PERTURBATION_PAIRS.parquet",
+      "size_bytes": 12545189,
+      "sha256": "aa43d73922dbd9ab7b7d753a6aef8e25ad7e6438836fd13394b7925514ed5bb1",
+      "role": "Stage05 H3-P pair cache",
+      "reason_excluded": "Contains literal `original_title` and `neutralized_title` values derived from third-party text. Public redistribution permission is unresolved.",
+      "authorised_access": "Authorised BanglaBait/BanglaClick/BaitBuster acquisition plus the frozen Stage05 workflow.",
+      "identity_records": [
+        "provenance/canonical/stage05/STAGE05_ARTIFACT_MANIFEST.json",
+        "provenance/canonical/stage05/STAGE05_SHA256SUMS.txt",
+        "provenance/canonical/stage05/INFERENCE_CACHE_PROVENANCE.json"
+      ],
+      "dependent_notebooks_results": [
+        "notebooks/05-external-validation-and-h3-vfinal.ipynb",
+        "notebooks/06-fixed-budget-reliability-evaluation-vfinal.ipynb",
+        "notebooks/07-h3-h4-bridge-exploratory-vfinal.ipynb",
+        "notebooks/09-source-publisher-cluster-sensitivity-vfinal.ipynb"
+      ],
+      "verification_instructions": "Obtain or reproduce the authorised frozen artifact, place it at `data/derived/primary/stage05/H3_PERTURBATION_PAIRS.parquet`, compute SHA-256, and require exact equality to `aa43d73922dbd9ab7b7d753a6aef8e25ad7e6438836fd13394b7925514ed5bb1` before executing dependent stages. Do not commit the bytes publicly unless redistribution permission is separately verified.",
+      "inspection_basis": "Actual Parquet footer metadata was inspected; prediction caches expose `title`, and H3-P pairs expose `original_title`/`neutralized_title`.",
+      "redistribution_status": "UNRESOLVED_PUBLIC_REDISTRIBUTION__EXCLUDED"
+    },
+    {
+      "path": "data/derived/sensitivity/rule_a/05_external_validation_and_H3_vFINAL/BANGLACLICK_PLATFORM_PREDICTIONS.parquet",
+      "filename": "BANGLACLICK_PLATFORM_PREDICTIONS.parquet",
+      "size_bytes": 11083967,
+      "sha256": "1a2496cc810e35a0082c1781af766a8a253b3d63340cb67fd709d1025d55cc54",
+      "role": "BanglaClick Rule sensitivity prediction cache (rule_a)",
+      "reason_excluded": "Contains third-party text-bearing rows carried into the isolated sensitivity branch; public redistribution permission is unresolved.",
+      "authorised_access": "Obtain BanglaClick from the recorded repository/revision in data/access/DATA_LICENSE.md and Stage01 source locks; verify source identity, then use the frozen Stage03–Stage05 workflow. For H3-P pairs, the authorised source/target inputs required by the frozen branch are also needed.",
+      "identity_records": [
+        "provenance/sensitivity/rule_a/05_external_validation_and_H3_vFINAL/STAGE05_SHA256SUMS.txt",
+        "provenance/sensitivity/rule_a/05_external_validation_and_H3_vFINAL/STAGE05_ARTIFACT_MANIFEST.json"
+      ],
+      "dependent_notebooks_results": [
+        "experiments/sensitivity/rule_a/notebooks/source/05-external-validation-and-h3-vfinal.ipynb",
+        "experiments/sensitivity/rule_a/notebooks/executed/05-external-validation-and-h3-vfinal.ipynb"
+      ],
+      "verification_instructions": "Obtain or reproduce the authorised frozen artifact, place it at `data/derived/sensitivity/rule_a/05_external_validation_and_H3_vFINAL/BANGLACLICK_PLATFORM_PREDICTIONS.parquet`, compute SHA-256, and require exact equality to `1a2496cc810e35a0082c1781af766a8a253b3d63340cb67fd709d1025d55cc54` before executing dependent stages. Do not commit the bytes publicly unless redistribution permission is separately verified.",
+      "inspection_basis": "Actual branch artifact identity was verified; schema is inherited from the text-bearing Stage05 cache contract.",
+      "redistribution_status": "UNRESOLVED_PUBLIC_REDISTRIBUTION__EXCLUDED"
+    },
+    {
+      "path": "data/derived/sensitivity/rule_a/05_external_validation_and_H3_vFINAL/H3_PERTURBATION_PAIRS.parquet",
+      "filename": "H3_PERTURBATION_PAIRS.parquet",
+      "size_bytes": 4262313,
+      "sha256": "7b8dd09ed22b177c461a6137c706ff64120d4f071601e0708cd8f6477229eb94",
+      "role": "Rule sensitivity H3-P pair cache (rule_a)",
+      "reason_excluded": "Contains third-party text-bearing rows carried into the isolated sensitivity branch; public redistribution permission is unresolved.",
+      "authorised_access": "Obtain BanglaClick from the recorded repository/revision in data/access/DATA_LICENSE.md and Stage01 source locks; verify source identity, then use the frozen Stage03–Stage05 workflow. For H3-P pairs, the authorised source/target inputs required by the frozen branch are also needed.",
+      "identity_records": [
+        "provenance/sensitivity/rule_a/05_external_validation_and_H3_vFINAL/STAGE05_SHA256SUMS.txt",
+        "provenance/sensitivity/rule_a/05_external_validation_and_H3_vFINAL/STAGE05_ARTIFACT_MANIFEST.json"
+      ],
+      "dependent_notebooks_results": [
+        "experiments/sensitivity/rule_a/notebooks/source/05-external-validation-and-h3-vfinal.ipynb",
+        "experiments/sensitivity/rule_a/notebooks/executed/05-external-validation-and-h3-vfinal.ipynb"
+      ],
+      "verification_instructions": "Obtain or reproduce the authorised frozen artifact, place it at `data/derived/sensitivity/rule_a/05_external_validation_and_H3_vFINAL/H3_PERTURBATION_PAIRS.parquet`, compute SHA-256, and require exact equality to `7b8dd09ed22b177c461a6137c706ff64120d4f071601e0708cd8f6477229eb94` before executing dependent stages. Do not commit the bytes publicly unless redistribution permission is separately verified.",
+      "inspection_basis": "Actual branch artifact identity was verified; schema is inherited from the text-bearing Stage05 cache contract.",
+      "redistribution_status": "UNRESOLVED_PUBLIC_REDISTRIBUTION__EXCLUDED"
+    },
+    {
+      "path": "data/derived/sensitivity/rule_b/05_external_validation_and_H3_vFINAL/BANGLACLICK_PLATFORM_PREDICTIONS.parquet",
+      "filename": "BANGLACLICK_PLATFORM_PREDICTIONS.parquet",
+      "size_bytes": 11036020,
+      "sha256": "a93e45a8fd37a8ee1938dc606c08fa450b2cb73d520a78e8e81595b1c26b587f",
+      "role": "BanglaClick Rule sensitivity prediction cache (rule_b)",
+      "reason_excluded": "Contains third-party text-bearing rows carried into the isolated sensitivity branch; public redistribution permission is unresolved.",
+      "authorised_access": "Obtain BanglaClick from the recorded repository/revision in data/access/DATA_LICENSE.md and Stage01 source locks; verify source identity, then use the frozen Stage03–Stage05 workflow. For H3-P pairs, the authorised source/target inputs required by the frozen branch are also needed.",
+      "identity_records": [
+        "provenance/sensitivity/rule_b/05_external_validation_and_H3_vFINAL/STAGE05_SHA256SUMS.txt",
+        "provenance/sensitivity/rule_b/05_external_validation_and_H3_vFINAL/STAGE05_ARTIFACT_MANIFEST.json"
+      ],
+      "dependent_notebooks_results": [
+        "experiments/sensitivity/rule_b/notebooks/source/05-external-validation-and-h3-vfinal.ipynb",
+        "experiments/sensitivity/rule_b/notebooks/executed/05-external-validation-and-h3-vfinal.ipynb"
+      ],
+      "verification_instructions": "Obtain or reproduce the authorised frozen artifact, place it at `data/derived/sensitivity/rule_b/05_external_validation_and_H3_vFINAL/BANGLACLICK_PLATFORM_PREDICTIONS.parquet`, compute SHA-256, and require exact equality to `a93e45a8fd37a8ee1938dc606c08fa450b2cb73d520a78e8e81595b1c26b587f` before executing dependent stages. Do not commit the bytes publicly unless redistribution permission is separately verified.",
+      "inspection_basis": "Actual branch artifact identity was verified; schema is inherited from the text-bearing Stage05 cache contract.",
+      "redistribution_status": "UNRESOLVED_PUBLIC_REDISTRIBUTION__EXCLUDED"
+    },
+    {
+      "path": "data/derived/sensitivity/rule_b/05_external_validation_and_H3_vFINAL/H3_PERTURBATION_PAIRS.parquet",
+      "filename": "H3_PERTURBATION_PAIRS.parquet",
+      "size_bytes": 4255538,
+      "sha256": "87b551728737d6db302bba9d4b6df6144cdadb2eb7925aa82bcaca35130f7f15",
+      "role": "Rule sensitivity H3-P pair cache (rule_b)",
+      "reason_excluded": "Contains third-party text-bearing rows carried into the isolated sensitivity branch; public redistribution permission is unresolved.",
+      "authorised_access": "Obtain BanglaClick from the recorded repository/revision in data/access/DATA_LICENSE.md and Stage01 source locks; verify source identity, then use the frozen Stage03–Stage05 workflow. For H3-P pairs, the authorised source/target inputs required by the frozen branch are also needed.",
+      "identity_records": [
+        "provenance/sensitivity/rule_b/05_external_validation_and_H3_vFINAL/STAGE05_SHA256SUMS.txt",
+        "provenance/sensitivity/rule_b/05_external_validation_and_H3_vFINAL/STAGE05_ARTIFACT_MANIFEST.json"
+      ],
+      "dependent_notebooks_results": [
+        "experiments/sensitivity/rule_b/notebooks/source/05-external-validation-and-h3-vfinal.ipynb",
+        "experiments/sensitivity/rule_b/notebooks/executed/05-external-validation-and-h3-vfinal.ipynb"
+      ],
+      "verification_instructions": "Obtain or reproduce the authorised frozen artifact, place it at `data/derived/sensitivity/rule_b/05_external_validation_and_H3_vFINAL/H3_PERTURBATION_PAIRS.parquet`, compute SHA-256, and require exact equality to `87b551728737d6db302bba9d4b6df6144cdadb2eb7925aa82bcaca35130f7f15` before executing dependent stages. Do not commit the bytes publicly unless redistribution permission is separately verified.",
+      "inspection_basis": "Actual branch artifact identity was verified; schema is inherited from the text-bearing Stage05 cache contract.",
+      "redistribution_status": "UNRESOLVED_PUBLIC_REDISTRIBUTION__EXCLUDED"
+    },
+    {
+      "path": "provenance/canonical/stage02/P0_AUDIT_REPORT.json",
+      "filename": "P0_AUDIT_REPORT.json",
+      "size_bytes": 292961,
+      "sha256": "59a4b6be556af89de26768202dc252cb92e2394dea20e26a1024c58548c233cd",
+      "role": "Stage02 P0 audit report",
+      "reason_excluded": "Contains literal third-party title/excerpt examples; public redistribution permission is unresolved.",
+      "authorised_access": "Recreate from authorised frozen Stage01 inputs using the corresponding canonical notebook and verify against the preserved checksum/manifest identity.",
+      "identity_records": [
+        "provenance/canonical/stage02/P0_OUTPUT_SHA256SUMS.txt",
+        "provenance/canonical/stage02/P0_DETERMINISTIC_OUTPUT_SHA256SUMS.txt"
+      ],
+      "dependent_notebooks_results": [
+        "notebooks/02-p0-integrity-provenance-leakage-audit.ipynb"
+      ],
+      "verification_instructions": "Obtain or reproduce the authorised frozen artifact, place it at `provenance/canonical/stage02/P0_AUDIT_REPORT.json`, compute SHA-256, and require exact equality to `59a4b6be556af89de26768202dc252cb92e2394dea20e26a1024c58548c233cd` before executing dependent stages. Do not commit the bytes publicly unless redistribution permission is separately verified.",
+      "inspection_basis": "Actual JSON was parsed: literal `excerpt`/`title` fields with third-party Bengali headline text are present.",
+      "redistribution_status": "UNRESOLVED_PUBLIC_REDISTRIBUTION__EXCLUDED"
+    },
+    {
+      "path": "provenance/canonical/stage02/P0_BLOCKER_FORENSICS.json",
+      "filename": "P0_BLOCKER_FORENSICS.json",
+      "size_bytes": 128706,
+      "sha256": "d24c412ae58143685dfa6978b7a5849f35796141ea770805f781b111c2506ded",
+      "role": "Stage02 blocker forensics",
+      "reason_excluded": "Contains literal third-party title/excerpt examples; public redistribution permission is unresolved.",
+      "authorised_access": "Recreate from authorised frozen Stage01 inputs using the corresponding canonical notebook and verify against the preserved checksum/manifest identity.",
+      "identity_records": [
+        "provenance/canonical/stage02/P0_OUTPUT_SHA256SUMS.txt",
+        "provenance/canonical/stage02/P0_DETERMINISTIC_OUTPUT_SHA256SUMS.txt"
+      ],
+      "dependent_notebooks_results": [
+        "notebooks/02-p0-integrity-provenance-leakage-audit.ipynb"
+      ],
+      "verification_instructions": "Obtain or reproduce the authorised frozen artifact, place it at `provenance/canonical/stage02/P0_BLOCKER_FORENSICS.json`, compute SHA-256, and require exact equality to `d24c412ae58143685dfa6978b7a5849f35796141ea770805f781b111c2506ded` before executing dependent stages. Do not commit the bytes publicly unless redistribution permission is separately verified.",
+      "inspection_basis": "Actual JSON was parsed: literal `excerpt`/`title` fields with third-party Bengali headline text are present.",
+      "redistribution_status": "UNRESOLVED_PUBLIC_REDISTRIBUTION__EXCLUDED"
+    },
+    {
+      "path": "provenance/canonical/stage03/DECONTAMINATION_FORENSICS.json",
+      "filename": "DECONTAMINATION_FORENSICS.json",
+      "size_bytes": 34391,
+      "sha256": "46e439c949d74940382aaa6de35424733a5b6c9a0fbaf4866db69d5d3aef8f7f",
+      "role": "Stage03 decontamination forensics",
+      "reason_excluded": "Contains literal third-party title/excerpt examples; public redistribution permission is unresolved.",
+      "authorised_access": "Recreate from authorised frozen Stage01 inputs using the corresponding canonical notebook and verify against the preserved checksum/manifest identity.",
+      "identity_records": [
+        "provenance/canonical/stage03/STAGE03_SHA256SUMS.txt",
+        "provenance/canonical/stage03/STAGE03_CORE_SHA256SUMS.txt"
+      ],
+      "dependent_notebooks_results": [
+        "notebooks/03-primary-model-development.ipynb"
+      ],
+      "verification_instructions": "Obtain or reproduce the authorised frozen artifact, place it at `provenance/canonical/stage03/DECONTAMINATION_FORENSICS.json`, compute SHA-256, and require exact equality to `46e439c949d74940382aaa6de35424733a5b6c9a0fbaf4866db69d5d3aef8f7f` before executing dependent stages. Do not commit the bytes publicly unless redistribution permission is separately verified.",
+      "inspection_basis": "Actual JSON was parsed: literal `excerpt`/`title` fields with third-party Bengali headline text are present.",
+      "redistribution_status": "UNRESOLVED_PUBLIC_REDISTRIBUTION__EXCLUDED"
+    },
+    {
+      "path": "data/derived/primary/stage09/SOURCE_PUBLISHER_MAPPING.csv",
+      "filename": "SOURCE_PUBLISHER_MAPPING.csv",
+      "size_bytes": 687813,
+      "sha256": "dcb97621c92b32c422cfdaded4f3c1b43c6885281af88399a8e3cd2efb4b1e58",
+      "role": "Stage09 source/publisher row mapping",
+      "reason_excluded": "Contains row-level raw source URLs from the third-party BanglaBait data interface; public redistribution permission is unresolved.",
+      "authorised_access": "Obtain BanglaBait from the recorded source/revision in data/access/DATA_LICENSE.md and provenance/canonical/stage01/SOURCES_LOCK.json; verify Stage01 hashes; then run the frozen Stage02/Stage03 path. Reproduce with the canonical Stage09 notebook.",
+      "identity_records": [
+        "provenance/canonical/stage09/STAGE09_SHA256SUMS.txt",
+        "provenance/canonical/stage09/REPRODUCIBILITY_MANIFEST.json"
+      ],
+      "dependent_notebooks_results": [
+        "notebooks/09-source-publisher-cluster-sensitivity-vfinal.ipynb",
+        "results/primary/stage09/H1_H2_SOURCE_CLUSTER_SENSITIVITY.json",
+        "results/primary/stage09/H3_SOURCE_CLUSTER_SENSITIVITY.json",
+        "results/primary/stage09/H3P_SOURCE_CLUSTER_SENSITIVITY.json",
+        "results/primary/stage09/H4_SOURCE_CLUSTER_SENSITIVITY.json"
+      ],
+      "verification_instructions": "Obtain or reproduce the authorised frozen artifact, place it at `data/derived/primary/stage09/SOURCE_PUBLISHER_MAPPING.csv`, compute SHA-256, and require exact equality to `dcb97621c92b32c422cfdaded4f3c1b43c6885281af88399a8e3cd2efb4b1e58` before executing dependent stages. Do not commit the bytes publicly unless redistribution permission is separately verified.",
+      "inspection_basis": "Actual CSV was inspected and contains a row-level `raw_domain` URL column.",
+      "redistribution_status": "UNRESOLVED_PUBLIC_REDISTRIBUTION__EXCLUDED"
+    },
+    {
+      "path": "results/primary/stage09/SOURCE_CLUSTER_DIAGNOSTICS.json",
+      "filename": "SOURCE_CLUSTER_DIAGNOSTICS.json",
+      "size_bytes": 9152,
+      "sha256": "385f2d80680f75cfe835f5cf004a356b27f8243164de3e7860c823e287783735",
+      "role": "Stage09 source-cluster diagnostics",
+      "reason_excluded": "Contains representative row-level raw source URLs from the third-party BanglaBait data interface; aggregate Stage09 results remain public.",
+      "authorised_access": "Obtain BanglaBait from the recorded source/revision in data/access/DATA_LICENSE.md and provenance/canonical/stage01/SOURCES_LOCK.json; verify Stage01 hashes; then run the frozen Stage02/Stage03 path. Reproduce with the canonical Stage09 notebook.",
+      "identity_records": [
+        "provenance/canonical/stage09/STAGE09_SHA256SUMS.txt",
+        "provenance/canonical/stage09/REPRODUCIBILITY_MANIFEST.json"
+      ],
+      "dependent_notebooks_results": [
+        "notebooks/09-source-publisher-cluster-sensitivity-vfinal.ipynb"
+      ],
+      "verification_instructions": "Obtain or reproduce the authorised frozen artifact, place it at `results/primary/stage09/SOURCE_CLUSTER_DIAGNOSTICS.json`, compute SHA-256, and require exact equality to `385f2d80680f75cfe835f5cf004a356b27f8243164de3e7860c823e287783735` before executing dependent stages. Do not commit the bytes publicly unless redistribution permission is separately verified.",
+      "inspection_basis": "Actual JSON was parsed and contains `representative_mapping_rows` with `raw_domain` URLs.",
+      "redistribution_status": "UNRESOLVED_PUBLIC_REDISTRIBUTION__EXCLUDED"
+    },
+    {
+      "path": "results/primary/stage03/models/ebm_seed137.joblib",
+      "filename": "ebm_seed137.joblib",
+      "size_bytes": 21426,
+      "sha256": "0e420c3e7a29be6e2fe4195685ab36984701dedf9ac723b3f7f05f4785590577",
+      "role": "Stage03 locally trained model binary",
+      "reason_excluded": "Model artifact redistribution permission is explicitly unresolved in data/access/MODEL_LICENSES.md; binary excluded from the public core.",
+      "authorised_access": "Reproduce the locally trained Stage03 artifact using the authorised frozen BanglaBait inputs, canonical Stage03 notebook, MODEL_CONFIG_LOCK.json and MODEL_ARTIFACT_MANIFEST.json; verify the recorded artifact hash/state identity.",
+      "identity_records": [
+        "provenance/canonical/stage03/MODEL_ARTIFACT_MANIFEST.json",
+        "provenance/canonical/stage03/STAGE03_SHA256SUMS.txt",
+        "data/access/MODEL_LICENSES.md"
+      ],
+      "dependent_notebooks_results": [
+        "notebooks/03-primary-model-development.ipynb",
+        "notebooks/04-calibration.ipynb",
+        "notebooks/05-external-validation-and-h3-vfinal.ipynb"
+      ],
+      "verification_instructions": "Obtain or reproduce the authorised frozen artifact, place it at `results/primary/stage03/models/ebm_seed137.joblib`, compute SHA-256, and require exact equality to `0e420c3e7a29be6e2fe4195685ab36984701dedf9ac723b3f7f05f4785590577` before executing dependent stages. Do not commit the bytes publicly unless redistribution permission is separately verified.",
+      "inspection_basis": "Binary identity and license status were inspected; exclusion follows the unresolved redistribution gate, not a content-based claim.",
+      "redistribution_status": "UNRESOLVED_PUBLIC_REDISTRIBUTION__EXCLUDED"
+    },
+    {
+      "path": "results/primary/stage03/models/ebm_seed2718.joblib",
+      "filename": "ebm_seed2718.joblib",
+      "size_bytes": 21385,
+      "sha256": "49028e420b290d2a8d5eeafe882d6b4ef2209b4bd276514ad9148931010f4419",
+      "role": "Stage03 locally trained model binary",
+      "reason_excluded": "Model artifact redistribution permission is explicitly unresolved in data/access/MODEL_LICENSES.md; binary excluded from the public core.",
+      "authorised_access": "Reproduce the locally trained Stage03 artifact using the authorised frozen BanglaBait inputs, canonical Stage03 notebook, MODEL_CONFIG_LOCK.json and MODEL_ARTIFACT_MANIFEST.json; verify the recorded artifact hash/state identity.",
+      "identity_records": [
+        "provenance/canonical/stage03/MODEL_ARTIFACT_MANIFEST.json",
+        "provenance/canonical/stage03/STAGE03_SHA256SUMS.txt",
+        "data/access/MODEL_LICENSES.md"
+      ],
+      "dependent_notebooks_results": [
+        "notebooks/03-primary-model-development.ipynb",
+        "notebooks/04-calibration.ipynb",
+        "notebooks/05-external-validation-and-h3-vfinal.ipynb"
+      ],
+      "verification_instructions": "Obtain or reproduce the authorised frozen artifact, place it at `results/primary/stage03/models/ebm_seed2718.joblib`, compute SHA-256, and require exact equality to `49028e420b290d2a8d5eeafe882d6b4ef2209b4bd276514ad9148931010f4419` before executing dependent stages. Do not commit the bytes publicly unless redistribution permission is separately verified.",
+      "inspection_basis": "Binary identity and license status were inspected; exclusion follows the unresolved redistribution gate, not a content-based claim.",
+      "redistribution_status": "UNRESOLVED_PUBLIC_REDISTRIBUTION__EXCLUDED"
+    },
+    {
+      "path": "results/primary/stage03/models/ebm_seed31415.joblib",
+      "filename": "ebm_seed31415.joblib",
+      "size_bytes": 21405,
+      "sha256": "f46e18631ec4bd1c781986920f1774d649c419e703c0589c445e9764d8788768",
+      "role": "Stage03 locally trained model binary",
+      "reason_excluded": "Model artifact redistribution permission is explicitly unresolved in data/access/MODEL_LICENSES.md; binary excluded from the public core.",
+      "authorised_access": "Reproduce the locally trained Stage03 artifact using the authorised frozen BanglaBait inputs, canonical Stage03 notebook, MODEL_CONFIG_LOCK.json and MODEL_ARTIFACT_MANIFEST.json; verify the recorded artifact hash/state identity.",
+      "identity_records": [
+        "provenance/canonical/stage03/MODEL_ARTIFACT_MANIFEST.json",
+        "provenance/canonical/stage03/STAGE03_SHA256SUMS.txt",
+        "data/access/MODEL_LICENSES.md"
+      ],
+      "dependent_notebooks_results": [
+        "notebooks/03-primary-model-development.ipynb",
+        "notebooks/04-calibration.ipynb",
+        "notebooks/05-external-validation-and-h3-vfinal.ipynb"
+      ],
+      "verification_instructions": "Obtain or reproduce the authorised frozen artifact, place it at `results/primary/stage03/models/ebm_seed31415.joblib`, compute SHA-256, and require exact equality to `f46e18631ec4bd1c781986920f1774d649c419e703c0589c445e9764d8788768` before executing dependent stages. Do not commit the bytes publicly unless redistribution permission is separately verified.",
+      "inspection_basis": "Binary identity and license status were inspected; exclusion follows the unresolved redistribution gate, not a content-based claim.",
+      "redistribution_status": "UNRESOLVED_PUBLIC_REDISTRIBUTION__EXCLUDED"
+    },
+    {
+      "path": "results/primary/stage03/models/ebm_seed42.joblib",
+      "filename": "ebm_seed42.joblib",
+      "size_bytes": 21394,
+      "sha256": "7b3bd07b386e8ab32a91b253cb043fb2f2901be1b13a800edc4eb7be8638e2b1",
+      "role": "Stage03 locally trained model binary",
+      "reason_excluded": "Model artifact redistribution permission is explicitly unresolved in data/access/MODEL_LICENSES.md; binary excluded from the public core.",
+      "authorised_access": "Reproduce the locally trained Stage03 artifact using the authorised frozen BanglaBait inputs, canonical Stage03 notebook, MODEL_CONFIG_LOCK.json and MODEL_ARTIFACT_MANIFEST.json; verify the recorded artifact hash/state identity.",
+      "identity_records": [
+        "provenance/canonical/stage03/MODEL_ARTIFACT_MANIFEST.json",
+        "provenance/canonical/stage03/STAGE03_SHA256SUMS.txt",
+        "data/access/MODEL_LICENSES.md"
+      ],
+      "dependent_notebooks_results": [
+        "notebooks/03-primary-model-development.ipynb",
+        "notebooks/04-calibration.ipynb",
+        "notebooks/05-external-validation-and-h3-vfinal.ipynb"
+      ],
+      "verification_instructions": "Obtain or reproduce the authorised frozen artifact, place it at `results/primary/stage03/models/ebm_seed42.joblib`, compute SHA-256, and require exact equality to `7b3bd07b386e8ab32a91b253cb043fb2f2901be1b13a800edc4eb7be8638e2b1` before executing dependent stages. Do not commit the bytes publicly unless redistribution permission is separately verified.",
+      "inspection_basis": "Binary identity and license status were inspected; exclusion follows the unresolved redistribution gate, not a content-based claim.",
+      "redistribution_status": "UNRESOLVED_PUBLIC_REDISTRIBUTION__EXCLUDED"
+    },
+    {
+      "path": "results/primary/stage03/models/ebm_seed65537.joblib",
+      "filename": "ebm_seed65537.joblib",
+      "size_bytes": 21414,
+      "sha256": "2a530d2bbcdb70334967a90d7dc8de7d1552d1ebe7b7c1b08e8fed58eb58a15a",
+      "role": "Stage03 locally trained model binary",
+      "reason_excluded": "Model artifact redistribution permission is explicitly unresolved in data/access/MODEL_LICENSES.md; binary excluded from the public core.",
+      "authorised_access": "Reproduce the locally trained Stage03 artifact using the authorised frozen BanglaBait inputs, canonical Stage03 notebook, MODEL_CONFIG_LOCK.json and MODEL_ARTIFACT_MANIFEST.json; verify the recorded artifact hash/state identity.",
+      "identity_records": [
+        "provenance/canonical/stage03/MODEL_ARTIFACT_MANIFEST.json",
+        "provenance/canonical/stage03/STAGE03_SHA256SUMS.txt",
+        "data/access/MODEL_LICENSES.md"
+      ],
+      "dependent_notebooks_results": [
+        "notebooks/03-primary-model-development.ipynb",
+        "notebooks/04-calibration.ipynb",
+        "notebooks/05-external-validation-and-h3-vfinal.ipynb"
+      ],
+      "verification_instructions": "Obtain or reproduce the authorised frozen artifact, place it at `results/primary/stage03/models/ebm_seed65537.joblib`, compute SHA-256, and require exact equality to `2a530d2bbcdb70334967a90d7dc8de7d1552d1ebe7b7c1b08e8fed58eb58a15a` before executing dependent stages. Do not commit the bytes publicly unless redistribution permission is separately verified.",
+      "inspection_basis": "Binary identity and license status were inspected; exclusion follows the unresolved redistribution gate, not a content-based claim.",
+      "redistribution_status": "UNRESOLVED_PUBLIC_REDISTRIBUTION__EXCLUDED"
+    },
+    {
+      "path": "results/primary/stage03/models/tfidf_lr_seed137.joblib",
+      "filename": "tfidf_lr_seed137.joblib",
+      "size_bytes": 1806907,
+      "sha256": "33682958995021ed62cd7fe00561c69c63fcf7678ef4b251f984fe626d691444",
+      "role": "Stage03 locally trained model binary",
+      "reason_excluded": "Model artifact redistribution permission is explicitly unresolved in data/access/MODEL_LICENSES.md; binary excluded from the public core.",
+      "authorised_access": "Reproduce the locally trained Stage03 artifact using the authorised frozen BanglaBait inputs, canonical Stage03 notebook, MODEL_CONFIG_LOCK.json and MODEL_ARTIFACT_MANIFEST.json; verify the recorded artifact hash/state identity.",
+      "identity_records": [
+        "provenance/canonical/stage03/MODEL_ARTIFACT_MANIFEST.json",
+        "provenance/canonical/stage03/STAGE03_SHA256SUMS.txt",
+        "data/access/MODEL_LICENSES.md"
+      ],
+      "dependent_notebooks_results": [
+        "notebooks/03-primary-model-development.ipynb",
+        "notebooks/04-calibration.ipynb",
+        "notebooks/05-external-validation-and-h3-vfinal.ipynb"
+      ],
+      "verification_instructions": "Obtain or reproduce the authorised frozen artifact, place it at `results/primary/stage03/models/tfidf_lr_seed137.joblib`, compute SHA-256, and require exact equality to `33682958995021ed62cd7fe00561c69c63fcf7678ef4b251f984fe626d691444` before executing dependent stages. Do not commit the bytes publicly unless redistribution permission is separately verified.",
+      "inspection_basis": "Binary identity and license status were inspected; exclusion follows the unresolved redistribution gate, not a content-based claim.",
+      "redistribution_status": "UNRESOLVED_PUBLIC_REDISTRIBUTION__EXCLUDED"
+    },
+    {
+      "path": "results/primary/stage03/models/tfidf_lr_seed2718.joblib",
+      "filename": "tfidf_lr_seed2718.joblib",
+      "size_bytes": 1806909,
+      "sha256": "26ea76e64c8a995809b2990320152eeab9169319557a1970a7715850947c2766",
+      "role": "Stage03 locally trained model binary",
+      "reason_excluded": "Model artifact redistribution permission is explicitly unresolved in data/access/MODEL_LICENSES.md; binary excluded from the public core.",
+      "authorised_access": "Reproduce the locally trained Stage03 artifact using the authorised frozen BanglaBait inputs, canonical Stage03 notebook, MODEL_CONFIG_LOCK.json and MODEL_ARTIFACT_MANIFEST.json; verify the recorded artifact hash/state identity.",
+      "identity_records": [
+        "provenance/canonical/stage03/MODEL_ARTIFACT_MANIFEST.json",
+        "provenance/canonical/stage03/STAGE03_SHA256SUMS.txt",
+        "data/access/MODEL_LICENSES.md"
+      ],
+      "dependent_notebooks_results": [
+        "notebooks/03-primary-model-development.ipynb",
+        "notebooks/04-calibration.ipynb",
+        "notebooks/05-external-validation-and-h3-vfinal.ipynb"
+      ],
+      "verification_instructions": "Obtain or reproduce the authorised frozen artifact, place it at `results/primary/stage03/models/tfidf_lr_seed2718.joblib`, compute SHA-256, and require exact equality to `26ea76e64c8a995809b2990320152eeab9169319557a1970a7715850947c2766` before executing dependent stages. Do not commit the bytes publicly unless redistribution permission is separately verified.",
+      "inspection_basis": "Binary identity and license status were inspected; exclusion follows the unresolved redistribution gate, not a content-based claim.",
+      "redistribution_status": "UNRESOLVED_PUBLIC_REDISTRIBUTION__EXCLUDED"
+    },
+    {
+      "path": "results/primary/stage03/models/tfidf_lr_seed31415.joblib",
+      "filename": "tfidf_lr_seed31415.joblib",
+      "size_bytes": 1806911,
+      "sha256": "0ce702f21924bd6840953d6b5351d245638ded1ec71513d2cf36040f31868ff8",
+      "role": "Stage03 locally trained model binary",
+      "reason_excluded": "Model artifact redistribution permission is explicitly unresolved in data/access/MODEL_LICENSES.md; binary excluded from the public core.",
+      "authorised_access": "Reproduce the locally trained Stage03 artifact using the authorised frozen BanglaBait inputs, canonical Stage03 notebook, MODEL_CONFIG_LOCK.json and MODEL_ARTIFACT_MANIFEST.json; verify the recorded artifact hash/state identity.",
+      "identity_records": [
+        "provenance/canonical/stage03/MODEL_ARTIFACT_MANIFEST.json",
+        "provenance/canonical/stage03/STAGE03_SHA256SUMS.txt",
+        "data/access/MODEL_LICENSES.md"
+      ],
+      "dependent_notebooks_results": [
+        "notebooks/03-primary-model-development.ipynb",
+        "notebooks/04-calibration.ipynb",
+        "notebooks/05-external-validation-and-h3-vfinal.ipynb"
+      ],
+      "verification_instructions": "Obtain or reproduce the authorised frozen artifact, place it at `results/primary/stage03/models/tfidf_lr_seed31415.joblib`, compute SHA-256, and require exact equality to `0ce702f21924bd6840953d6b5351d245638ded1ec71513d2cf36040f31868ff8` before executing dependent stages. Do not commit the bytes publicly unless redistribution permission is separately verified.",
+      "inspection_basis": "Binary identity and license status were inspected; exclusion follows the unresolved redistribution gate, not a content-based claim.",
+      "redistribution_status": "UNRESOLVED_PUBLIC_REDISTRIBUTION__EXCLUDED"
+    },
+    {
+      "path": "results/primary/stage03/models/tfidf_lr_seed42.joblib",
+      "filename": "tfidf_lr_seed42.joblib",
+      "size_bytes": 1806906,
+      "sha256": "a3a302540bcc4c404c30a3ca865a9cd51d72daf2f51952f8faef363948f153fc",
+      "role": "Stage03 locally trained model binary",
+      "reason_excluded": "Model artifact redistribution permission is explicitly unresolved in data/access/MODEL_LICENSES.md; binary excluded from the public core.",
+      "authorised_access": "Reproduce the locally trained Stage03 artifact using the authorised frozen BanglaBait inputs, canonical Stage03 notebook, MODEL_CONFIG_LOCK.json and MODEL_ARTIFACT_MANIFEST.json; verify the recorded artifact hash/state identity.",
+      "identity_records": [
+        "provenance/canonical/stage03/MODEL_ARTIFACT_MANIFEST.json",
+        "provenance/canonical/stage03/STAGE03_SHA256SUMS.txt",
+        "data/access/MODEL_LICENSES.md"
+      ],
+      "dependent_notebooks_results": [
+        "notebooks/03-primary-model-development.ipynb",
+        "notebooks/04-calibration.ipynb",
+        "notebooks/05-external-validation-and-h3-vfinal.ipynb"
+      ],
+      "verification_instructions": "Obtain or reproduce the authorised frozen artifact, place it at `results/primary/stage03/models/tfidf_lr_seed42.joblib`, compute SHA-256, and require exact equality to `a3a302540bcc4c404c30a3ca865a9cd51d72daf2f51952f8faef363948f153fc` before executing dependent stages. Do not commit the bytes publicly unless redistribution permission is separately verified.",
+      "inspection_basis": "Binary identity and license status were inspected; exclusion follows the unresolved redistribution gate, not a content-based claim.",
+      "redistribution_status": "UNRESOLVED_PUBLIC_REDISTRIBUTION__EXCLUDED"
+    },
+    {
+      "path": "results/primary/stage03/models/tfidf_lr_seed65537.joblib",
+      "filename": "tfidf_lr_seed65537.joblib",
+      "size_bytes": 1806907,
+      "sha256": "05a7da63ee6caa1d2e871d39d809ad1aa95b15585fe53e93165406331268c974",
+      "role": "Stage03 locally trained model binary",
+      "reason_excluded": "Model artifact redistribution permission is explicitly unresolved in data/access/MODEL_LICENSES.md; binary excluded from the public core.",
+      "authorised_access": "Reproduce the locally trained Stage03 artifact using the authorised frozen BanglaBait inputs, canonical Stage03 notebook, MODEL_CONFIG_LOCK.json and MODEL_ARTIFACT_MANIFEST.json; verify the recorded artifact hash/state identity.",
+      "identity_records": [
+        "provenance/canonical/stage03/MODEL_ARTIFACT_MANIFEST.json",
+        "provenance/canonical/stage03/STAGE03_SHA256SUMS.txt",
+        "data/access/MODEL_LICENSES.md"
+      ],
+      "dependent_notebooks_results": [
+        "notebooks/03-primary-model-development.ipynb",
+        "notebooks/04-calibration.ipynb",
+        "notebooks/05-external-validation-and-h3-vfinal.ipynb"
+      ],
+      "verification_instructions": "Obtain or reproduce the authorised frozen artifact, place it at `results/primary/stage03/models/tfidf_lr_seed65537.joblib`, compute SHA-256, and require exact equality to `05a7da63ee6caa1d2e871d39d809ad1aa95b15585fe53e93165406331268c974` before executing dependent stages. Do not commit the bytes publicly unless redistribution permission is separately verified.",
+      "inspection_basis": "Binary identity and license status were inspected; exclusion follows the unresolved redistribution gate, not a content-based claim.",
+      "redistribution_status": "UNRESOLVED_PUBLIC_REDISTRIBUTION__EXCLUDED"
+    }
+  ]
+}

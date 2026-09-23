@@ -1,0 +1,24 @@
+{
+  "covers_figure_ids": [
+    "SUPP_SENSITIVITY"
+  ],
+  "deterministic_transformation": "Direct canonical unadjusted/source-prior/structural metric values. Domain is facet row, model is marker shape, seed is line style; no aggregation or new effect calculation.",
+  "estimability_field": null,
+  "exact_variables_used": [
+    "domain",
+    "model",
+    "seed",
+    "adjustment",
+    "auroc",
+    "nll",
+    "balanced_brier"
+  ],
+  "figure_id": "SUPP_SENSITIVITY",
+  "panel_id": "A_B",
+  "rows": 300,
+  "source_artifact": [
+    "Stage05/SENSITIVITY_RESULTS.json"
+  ],
+  "source_csv": "SUPP_SENSITIVITY_A_B_source.csv",
+  "source_csv_sha256": "2e336246204b038513f212b793e2aed195d8b1416729f84ea21e67be2f09df98"
+}

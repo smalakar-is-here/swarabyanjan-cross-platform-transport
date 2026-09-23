@@ -1,0 +1,570 @@
+SWARABYANJAN_GITHUB_PUBLIC_SAFE_FINAL_2026-09-24/
+├── configs/
+│   ├── CUE_FEATURE_SCHEMA.json
+│   ├── MODEL_CONFIG_LOCK.json
+│   └── README.md
+├── data/
+│   ├── access/
+│   │   ├── DATA_AVAILABILITY.md
+│   │   ├── DATA_LICENSE.md
+│   │   ├── MODEL_LICENSES.md
+│   │   ├── RAW_DATA_NOT_REDISTRIBUTED.md
+│   │   └── README.md
+│   ├── derived/
+│   │   ├── primary/
+│   │   │   ├── stage03/
+│   │   │   │   ├── CLEAN_ROW_MANIFEST.parquet
+│   │   │   │   ├── CLEAN_SPLIT_SUMMARY.csv
+│   │   │   │   └── TRAIN_DEV_SPLIT_ROWS.parquet
+│   │   │   ├── stage04/
+│   │   │   │   └── DEV_PREDICTIONS.parquet
+│   │   │   ├── stage05/
+│   │   │   └── stage09/
+│   │   └── sensitivity/
+│   │       ├── rule_a/
+│   │       │   └── 05_external_validation_and_H3_vFINAL/
+│   │       └── rule_b/
+│   │           └── 05_external_validation_and_H3_vFINAL/
+│   └── README.md
+├── docs/
+│   ├── discovery/
+│   │   ├── COMPLETE_NOTEBOOK_INVENTORY.csv
+│   │   ├── COMPLETE_NOTEBOOK_INVENTORY.md
+│   │   ├── COMPLETE_PROJECT_ARTIFACT_MAP.md
+│   │   ├── FINAL_DISCOVERY_COUNTS.json
+│   │   ├── INACCESSIBLE_REFERENCED_ARTIFACTS.md
+│   │   ├── MASTER_PROJECT_FILE_INVENTORY.csv
+│   │   ├── MASTER_PROJECT_FILE_INVENTORY.md
+│   │   ├── PROJECT_ARTIFACT_LINEAGE.md
+│   │   └── SOURCE_CODE_RECONCILIATION.md
+│   ├── CANONICAL_NOTEBOOK_MAP.md
+│   ├── EVIDENCE_TRACEABILITY.md
+│   ├── FINAL_DUPLICATE_AUDIT.md
+│   ├── FINAL_REPOSITORY_TREE.txt
+│   ├── FINAL_VALIDATION_REPORT.md
+│   ├── INACCESSIBLE_REFERENCED_ARTIFACTS.md
+│   ├── LICENSE_STATUS.md
+│   ├── MANUSCRIPT_REPOSITORY_CROSSCHECK_PUBLIC_SAFE.md
+│   ├── NOTEBOOK_AUDIT.md
+│   ├── PUBLIC_REDISTRIBUTION_SAFETY_AUDIT.md
+│   ├── PUBLIC_SAFE_VALIDATION.json
+│   ├── README.md
+│   ├── RELEASE_NOTES.md
+│   ├── REPOSITORY_README_AUDIT.md
+│   └── REPRODUCIBILITY.md
+├── experiments/
+│   ├── sensitivity/
+│   │   ├── rule_a/
+│   │   │   ├── notebooks/
+│   │   │   │   ├── executed/
+│   │   │   │   │   ├── 05_EXTERNAL_VALIDATION_H3_vFINAL_executed.ipynb
+│   │   │   │   │   ├── 06_FIXED_BUDGET_RELIABILITY_EVALUATION_vFINAL_executed.ipynb
+│   │   │   │   │   └── 07_H3_H4_BRIDGE_EXPLORATORY_vFINAL_executed.ipynb
+│   │   │   │   └── source/
+│   │   │   │       ├── 05_EXTERNAL_VALIDATION_H3_vFINAL.ipynb
+│   │   │   │       ├── 06_FIXED_BUDGET_RELIABILITY_EVALUATION_vFINAL.ipynb
+│   │   │   │       └── 07_H3_H4_BRIDGE_EXPLORATORY_vFINAL.ipynb
+│   │   │   └── README.md
+│   │   ├── rule_b/
+│   │   │   ├── notebooks/
+│   │   │   │   ├── executed/
+│   │   │   │   │   └── 07_H3_H4_BRIDGE_EXPLORATORY_vFINAL_executed.ipynb
+│   │   │   │   └── source/
+│   │   │   │       ├── 05_EXTERNAL_VALIDATION_H3_vFINAL.ipynb
+│   │   │   │       ├── 06_FIXED_BUDGET_RELIABILITY_EVALUATION_vFINAL.ipynb
+│   │   │   │       └── 07_H3_H4_BRIDGE_EXPLORATORY_vFINAL.ipynb
+│   │   │   └── README.md
+│   │   └── README.md
+│   └── README.md
+├── notebooks/
+│   ├── 01-dataset-acquisition-and-freeze.ipynb
+│   ├── 02-p0-integrity-provenance-leakage-audit.ipynb
+│   ├── 03-primary-model-development.ipynb
+│   ├── 04-calibration.ipynb
+│   ├── 05-external-validation-and-h3-vfinal.ipynb
+│   ├── 06-fixed-budget-reliability-evaluation-vfinal.ipynb
+│   ├── 07-h3-h4-bridge-exploratory-vfinal.ipynb
+│   ├── 08-manuscript-figures-and-tables-vfinal.ipynb
+│   ├── 09-source-publisher-cluster-sensitivity-vfinal.ipynb
+│   └── README.md
+├── provenance/
+│   ├── archive/
+│   │   ├── notebooks/
+│   │   │   ├── 05-external-validation.ipynb
+│   │   │   ├── 05-h3-statistical-repair-only.ipynb
+│   │   │   ├── 06-fixed-budget-reliability-evaluation.ipynb
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── canonical/
+│   │   ├── stage01/
+│   │   │   ├── ACQUISITION_MANIFEST.json
+│   │   │   ├── ACQUISITION_STATUS.json
+│   │   │   ├── README_HANDOFF.txt
+│   │   │   ├── SHA256SUMS.txt
+│   │   │   └── SOURCES_LOCK.json
+│   │   ├── stage02/
+│   │   │   ├── CONSTRUCT_ALIGNMENT_MATRIX.csv
+│   │   │   ├── CROSS_DATASET_OVERLAP_REPORT.csv
+│   │   │   ├── DATASET_SCHEMA_REPORT.csv
+│   │   │   ├── DUPLICATE_REPORT.csv
+│   │   │   ├── EXECUTED_NOTEBOOK_CAPTURE_STATUS.json
+│   │   │   ├── execution.log
+│   │   │   ├── LABEL_DISTRIBUTION_REPORT.csv
+│   │   │   ├── P0_AUDIT_SUMMARY.md
+│   │   │   ├── P0_DETERMINISTIC_OUTPUT_SHA256SUMS.txt
+│   │   │   ├── P0_HASH_VERIFICATION.txt
+│   │   │   ├── P0_OUTPUT_SHA256SUMS.txt
+│   │   │   ├── P0_RUN_METADATA.json
+│   │   │   ├── PROTECTED_TITLE_QUALITY_REPORT.csv
+│   │   │   ├── PROVENANCE_DEPENDENCY_GRAPH.json
+│   │   │   └── SPLIT_FIREWALL.json
+│   │   ├── stage03/
+│   │   │   ├── CLEAN_DATA_MANIFEST.json
+│   │   │   ├── D0_REPORT.json
+│   │   │   ├── ENVIRONMENT_PREFLIGHT.json
+│   │   │   ├── FROZEN_INPUT_DISCOVERY.json
+│   │   │   ├── INPUT_IDENTITY.json
+│   │   │   ├── MODEL_ARTIFACT_MANIFEST.json
+│   │   │   ├── RUN_METADATA.json
+│   │   │   ├── STAGE03_CORE_SHA256SUMS.txt
+│   │   │   ├── STAGE03_SHA256SUMS.txt
+│   │   │   ├── STAGE03_SUMMARY.md
+│   │   │   ├── STAGE_STATUS.json
+│   │   │   └── TRAIN_DEV_SPLIT_MANIFEST.json
+│   │   ├── stage04/
+│   │   │   ├── CALIBRATION_ARTIFACT_MANIFEST.json
+│   │   │   ├── ENVIRONMENT_PREFLIGHT.json
+│   │   │   ├── RUN_METADATA.json
+│   │   │   ├── STAGE04_SHA256SUMS.txt
+│   │   │   ├── STAGE04_SUMMARY.md
+│   │   │   └── STAGE_STATUS.json
+│   │   ├── stage05/
+│   │   │   ├── CACHE_SCHEMA_VALIDATION.json
+│   │   │   ├── ENVIRONMENT_PREFLIGHT.json
+│   │   │   ├── INFERENCE_CACHE_PROVENANCE.json
+│   │   │   ├── RUN_METADATA.json
+│   │   │   ├── STAGE05_ARTIFACT_MANIFEST.json
+│   │   │   ├── STAGE05_SHA256SUMS.txt
+│   │   │   ├── STAGE05_SUMMARY.md
+│   │   │   ├── STAGE_STATUS.json
+│   │   │   └── STATISTICAL_SUMMARY.json
+│   │   ├── stage06/
+│   │   │   ├── BOOTSTRAP_RUNTIME.json
+│   │   │   ├── ENVIRONMENT_PREFLIGHT.json
+│   │   │   ├── FINAL_STATISTICAL_SUMMARY.json
+│   │   │   ├── REPRODUCIBILITY_MANIFEST.json
+│   │   │   ├── RUN_METADATA.json
+│   │   │   ├── STAGE06_SHA256SUMS.txt
+│   │   │   ├── STAGE06_SUMMARY.md
+│   │   │   ├── STAGE_STATUS.json
+│   │   │   └── UPSTREAM_PROVENANCE_GATE.json
+│   │   ├── stage07/
+│   │   │   ├── BOOTSTRAP_RUNTIME.json
+│   │   │   ├── FROZEN_INPUT_SUMMARY.json
+│   │   │   ├── REPRODUCIBILITY_MANIFEST.json
+│   │   │   ├── STAGE07_SHA256SUMS.txt
+│   │   │   ├── STAGE07_SUMMARY.md
+│   │   │   ├── STAGE_STATUS.json
+│   │   │   └── UPSTREAM_PROVENANCE_GATE.json
+│   │   ├── stage08/
+│   │   │   ├── FIGURE_REPRODUCTION_AUDIT.json
+│   │   │   ├── FIGURE_SOURCE_COVERAGE.json
+│   │   │   ├── figures
+│   │   │   ├── INPUT_HASHES.json
+│   │   │   ├── MANIFEST.json
+│   │   │   ├── PROVENANCE_REPORT.json
+│   │   │   ├── SCHEMA_VALIDATION.json
+│   │   │   ├── STAGE08_SHA256SUMS.txt
+│   │   │   ├── STAGE08_STATUS.json
+│   │   │   └── tables
+│   │   ├── stage09/
+│   │   │   ├── REPRODUCIBILITY_MANIFEST.json
+│   │   │   ├── STAGE09_SHA256SUMS.txt
+│   │   │   └── STAGE_STATUS.json
+│   │   ├── ANNOTATION_PROVENANCE.md
+│   │   ├── ENVIRONMENT.md
+│   │   ├── ENVIRONMENT_GAP.md
+│   │   ├── HARDWARE.md
+│   │   ├── HISTORICALLY_RECORDED_ENVIRONMENT.json
+│   │   ├── MANUSCRIPT_EVIDENCE_MATRIX.csv
+│   │   ├── OPTIONAL_LARGE_TRAINING_ARTIFACTS.csv
+│   │   ├── PRIVACY_PII.md
+│   │   ├── PROTOCOL.md
+│   │   └── README.md
+│   ├── external_restricted/
+│   │   ├── README.md
+│   │   ├── RESTRICTED_ARTIFACT_MANIFEST.csv
+│   │   └── RESTRICTED_ARTIFACT_MANIFEST.json
+│   ├── feasibility_audit/
+│   │   ├── NEWS_DECONTAMINATION_CUE_SUPPORT.csv
+│   │   ├── NEWS_DECONTAMINATION_FEASIBILITY.csv
+│   │   ├── NEWS_DECONTAMINATION_FEASIBILITY.md
+│   │   ├── NEWS_DECONTAMINATION_FEASIBILITY_MANIFEST.json
+│   │   ├── NEWS_DECONTAMINATION_OVERLAP_DETAILS.csv
+│   │   ├── NEWS_DECONTAMINATION_STRUCTURE.csv
+│   │   ├── README.md
+│   │   └── SHA256SUMS.txt
+│   ├── release/
+│   │   ├── COPY_LEDGER.json
+│   │   ├── CORE_BUILD_COPY_LEDGER_REPOSITORY.csv
+│   │   ├── DISCOVERED_STAGE_ROOTS.json
+│   │   ├── NOTEBOOK_IDENTITY_AUDIT.json
+│   │   ├── NOTEBOOK_STATIC_CONTRACT_SCAN.json
+│   │   ├── README.md
+│   │   ├── RELEASE_MANIFEST.json
+│   │   ├── RELEASE_SHA256SUMS.txt
+│   │   ├── RELEASE_STATUS.json
+│   │   ├── STAGE01_INPUT_FORM_DIAGNOSTIC.json
+│   │   ├── STAGE10_ASSEMBLY_ENVIRONMENT.json
+│   │   ├── STAGE_ARTIFACT_DEPENDENCY_MAP.json
+│   │   └── STAGE_LOCKS.json
+│   ├── rowlevel_audit/
+│   │   ├── 02_cleaning/
+│   │   │   ├── CROSS_DATASET_OVERLAP_REPORT.csv
+│   │   │   ├── DATASET_SCHEMA_REPORT.csv
+│   │   │   ├── DUPLICATE_REPORT.csv
+│   │   │   ├── LABEL_DISTRIBUTION_REPORT.csv
+│   │   │   └── PROTECTED_TITLE_QUALITY_REPORT.csv
+│   │   ├── 03_modeling/
+│   │   │   ├── CLEAN_DATA_MANIFEST.json
+│   │   │   └── CUE_FEATURE_SCHEMA.json
+│   │   ├── 05_external_validation_and_H3/
+│   │   │   ├── CACHE_SCHEMA_VALIDATION.json
+│   │   │   ├── INFERENCE_CACHE_PROVENANCE.json
+│   │   │   └── STAGE05_ARTIFACT_MANIFEST.json
+│   │   ├── INPUT_SHA256SUMS.txt
+│   │   └── README.md
+│   ├── sensitivity/
+│   │   ├── rule_a/
+│   │   │   ├── 05_external_validation_and_H3_vFINAL/
+│   │   │   │   ├── CACHE_SCHEMA_VALIDATION.json
+│   │   │   │   ├── ENVIRONMENT_PREFLIGHT.json
+│   │   │   │   ├── INFERENCE_CACHE_PROVENANCE.json
+│   │   │   │   ├── RUN_METADATA.json
+│   │   │   │   ├── STAGE05_ARTIFACT_MANIFEST.json
+│   │   │   │   ├── STAGE05_SHA256SUMS.txt
+│   │   │   │   ├── STAGE05_SUMMARY.md
+│   │   │   │   ├── STAGE_STATUS.json
+│   │   │   │   └── STATISTICAL_SUMMARY.json
+│   │   │   ├── 06_fixed_budget_reliability_evaluation/
+│   │   │   │   ├── tables/
+│   │   │   │   │   └── H4_PRIMARY_10_PERCENT_SEED_SUMMARY.csv
+│   │   │   │   ├── BOOTSTRAP_RUNTIME.json
+│   │   │   │   ├── ENVIRONMENT_PREFLIGHT.json
+│   │   │   │   ├── FINAL_STATISTICAL_SUMMARY.json
+│   │   │   │   ├── REPRODUCIBILITY_MANIFEST.json
+│   │   │   │   ├── RUN_METADATA.json
+│   │   │   │   ├── STAGE06_SHA256SUMS.txt
+│   │   │   │   ├── STAGE06_SUMMARY.md
+│   │   │   │   ├── STAGE_STATUS.json
+│   │   │   │   └── UPSTREAM_PROVENANCE_GATE.json
+│   │   │   ├── 07_H3_H4_BRIDGE_EXPLORATORY_vFINAL/
+│   │   │   │   ├── BOOTSTRAP_RUNTIME.json
+│   │   │   │   ├── FROZEN_INPUT_SUMMARY.json
+│   │   │   │   ├── REPRODUCIBILITY_MANIFEST.json
+│   │   │   │   ├── STAGE07_SHA256SUMS.txt
+│   │   │   │   ├── STAGE07_SUMMARY.md
+│   │   │   │   ├── STAGE_STATUS.json
+│   │   │   │   └── UPSTREAM_PROVENANCE_GATE.json
+│   │   │   └── README.md
+│   │   ├── rule_b/
+│   │   │   ├── 05_external_validation_and_H3_vFINAL/
+│   │   │   │   ├── CACHE_SCHEMA_VALIDATION.json
+│   │   │   │   ├── ENVIRONMENT_PREFLIGHT.json
+│   │   │   │   ├── INFERENCE_CACHE_PROVENANCE.json
+│   │   │   │   ├── RUN_METADATA.json
+│   │   │   │   ├── STAGE05_ARTIFACT_MANIFEST.json
+│   │   │   │   ├── STAGE05_SHA256SUMS.txt
+│   │   │   │   ├── STAGE05_SUMMARY.md
+│   │   │   │   ├── STAGE_STATUS.json
+│   │   │   │   └── STATISTICAL_SUMMARY.json
+│   │   │   ├── 06_fixed_budget_reliability_evaluation/
+│   │   │   │   ├── tables/
+│   │   │   │   │   └── H4_PRIMARY_10_PERCENT_SEED_SUMMARY.csv
+│   │   │   │   ├── BOOTSTRAP_RUNTIME.json
+│   │   │   │   ├── ENVIRONMENT_PREFLIGHT.json
+│   │   │   │   ├── FINAL_STATISTICAL_SUMMARY.json
+│   │   │   │   ├── REPRODUCIBILITY_MANIFEST.json
+│   │   │   │   ├── RUN_METADATA.json
+│   │   │   │   ├── STAGE06_SHA256SUMS.txt
+│   │   │   │   ├── STAGE06_SUMMARY.md
+│   │   │   │   ├── STAGE_STATUS.json
+│   │   │   │   └── UPSTREAM_PROVENANCE_GATE.json
+│   │   │   ├── 07_H3_H4_BRIDGE_EXPLORATORY_vFINAL/
+│   │   │   │   ├── BOOTSTRAP_RUNTIME.json
+│   │   │   │   ├── FROZEN_INPUT_SUMMARY.json
+│   │   │   │   ├── REPRODUCIBILITY_MANIFEST.json
+│   │   │   │   ├── STAGE07_SHA256SUMS.txt
+│   │   │   │   ├── STAGE07_SUMMARY.md
+│   │   │   │   ├── STAGE_STATUS.json
+│   │   │   │   └── UPSTREAM_PROVENANCE_GATE.json
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── PUBLIC_REPACKAGING_LEDGER.csv
+│   ├── PUBLIC_REPOSITORY_SHA256SUMS.txt
+│   └── README.md
+├── results/
+│   ├── primary/
+│   │   ├── stage03/
+│   │   ├── stage04/
+│   │   │   ├── CALIBRATION_REPORT.json
+│   │   │   └── TEMPERATURES.json
+│   │   ├── stage05/
+│   │   │   ├── H1_H2_PARITY_REPORT.json
+│   │   │   ├── H1_RESULTS.json
+│   │   │   ├── H2_RESULTS.json
+│   │   │   ├── H3_BAITBUSTER_REPLICATION_CORRECTED.csv
+│   │   │   ├── H3_CUE_PLATFORM_CONTRASTS_CORRECTED.csv
+│   │   │   ├── H3_PERTURBATION_EXCLUSIONS.csv
+│   │   │   ├── H3_PERTURBATION_RESULTS.json
+│   │   │   ├── H3_RESULTS.json
+│   │   │   ├── H3_SPARSITY_REPORT.csv
+│   │   │   ├── H3P_POINT_PARITY.json
+│   │   │   ├── H3P_STATISTICAL_PARITY.json
+│   │   │   └── SENSITIVITY_RESULTS.json
+│   │   ├── stage06/
+│   │   │   ├── figures/
+│   │   │   │   ├── risk_coverage_banglabert.png
+│   │   │   │   ├── risk_coverage_ebm.png
+│   │   │   │   ├── risk_coverage_tfidf_lr.png
+│   │   │   │   └── risk_coverage_xlmr.png
+│   │   │   ├── tables/
+│   │   │   │   ├── H4_PRIMARY_10_PERCENT_BY_SEED.csv
+│   │   │   │   └── H4_PRIMARY_10_PERCENT_SEED_SUMMARY.csv
+│   │   │   ├── FIXED_BUDGET_TABLES.csv
+│   │   │   ├── H4_RESULTS.json
+│   │   │   └── RISK_COVERAGE_DATA.csv
+│   │   ├── stage07/
+│   │   │   ├── BRIDGE_32_CELL_POINT_TABLE.csv
+│   │   │   ├── BRIDGE_POINT_ASSOCIATIONS.json
+│   │   │   ├── H3_H4_BRIDGE_RESULTS.json
+│   │   │   ├── H3_POINT_PARITY.json
+│   │   │   ├── H4_POLICY_POINT_PARITY.json
+│   │   │   ├── LEAVE_ONE_PLATFORM_OUT_POINT_TABLE.csv
+│   │   │   └── LEAVE_ONE_PLATFORM_OUT_ROBUSTNESS.json
+│   │   ├── stage08/
+│   │   │   ├── figure_source_data/
+│   │   │   │   ├── FIG01_STUDY_DESIGN_pipeline_source.csv
+│   │   │   │   ├── FIG01_STUDY_DESIGN_pipeline_source.json
+│   │   │   │   ├── FIG02_H1_H2_A_source.csv
+│   │   │   │   ├── FIG02_H1_H2_A_source.json
+│   │   │   │   ├── FIG02_H1_H2_B_C_source.csv
+│   │   │   │   ├── FIG02_H1_H2_B_C_source.json
+│   │   │   │   ├── FIG02_H1_H2_D_source.csv
+│   │   │   │   ├── FIG02_H1_H2_D_source.json
+│   │   │   │   ├── FIG03_H3_CUE_TRANSPORT_A_B_source.csv
+│   │   │   │   ├── FIG03_H3_CUE_TRANSPORT_A_B_source.json
+│   │   │   │   ├── FIG04_H4_FIXED_BUDGET_budget_sensitivity_source.csv
+│   │   │   │   ├── FIG04_H4_FIXED_BUDGET_budget_sensitivity_source.json
+│   │   │   │   ├── FIG04_H4_FIXED_BUDGET_primary_10pct_source.csv
+│   │   │   │   ├── FIG04_H4_FIXED_BUDGET_primary_10pct_source.json
+│   │   │   │   ├── FIG05_H3_H4_BRIDGE_abs_delta_nll_gap__vs__error_capture_deterioration_source.csv
+│   │   │   │   ├── FIG05_H3_H4_BRIDGE_abs_delta_nll_gap__vs__error_capture_deterioration_source.json
+│   │   │   │   ├── FIG05_H3_H4_BRIDGE_abs_delta_nll_gap__vs__lift_deterioration_source.csv
+│   │   │   │   ├── FIG05_H3_H4_BRIDGE_abs_delta_nll_gap__vs__lift_deterioration_source.json
+│   │   │   │   ├── FIG05_H3_H4_BRIDGE_abs_delta_rd__vs__error_capture_deterioration_source.csv
+│   │   │   │   ├── FIG05_H3_H4_BRIDGE_abs_delta_rd__vs__error_capture_deterioration_source.json
+│   │   │   │   ├── FIG05_H3_H4_BRIDGE_abs_delta_rd__vs__lift_deterioration_source.csv
+│   │   │   │   ├── FIG05_H3_H4_BRIDGE_abs_delta_rd__vs__lift_deterioration_source.json
+│   │   │   │   ├── FIGURE_SOURCE_DATA_INDEX.json
+│   │   │   │   ├── SUPP_BAITBUSTER_H3_A_B_source.csv
+│   │   │   │   ├── SUPP_BAITBUSTER_H3_A_B_source.json
+│   │   │   │   ├── SUPP_BRIDGE_LOO_all_source.csv
+│   │   │   │   ├── SUPP_BRIDGE_LOO_all_source.json
+│   │   │   │   ├── SUPP_H1_H2_MODEL_SEED_all_source.csv
+│   │   │   │   ├── SUPP_H1_H2_MODEL_SEED_all_source.json
+│   │   │   │   ├── SUPP_H3_SPARSITY_support_source.csv
+│   │   │   │   ├── SUPP_H3_SPARSITY_support_source.json
+│   │   │   │   ├── SUPP_H3P_SHARED_all_source.csv
+│   │   │   │   ├── SUPP_H3P_SHARED_all_source.json
+│   │   │   │   ├── SUPP_H4_05PCT_A_C_source.csv
+│   │   │   │   ├── SUPP_H4_05PCT_A_C_source.json
+│   │   │   │   ├── SUPP_H4_20PCT_A_C_source.csv
+│   │   │   │   ├── SUPP_H4_20PCT_A_C_source.json
+│   │   │   │   ├── SUPP_H4_MODEL_SEED_all_source.csv
+│   │   │   │   ├── SUPP_H4_MODEL_SEED_all_source.json
+│   │   │   │   ├── SUPP_RISK_COVERAGE_all_source.csv
+│   │   │   │   ├── SUPP_RISK_COVERAGE_all_source.json
+│   │   │   │   ├── SUPP_SENSITIVITY_A_B_source.csv
+│   │   │   │   └── SUPP_SENSITIVITY_A_B_source.json
+│   │   │   ├── figures/
+│   │   │   │   ├── main/
+│   │   │   │   │   ├── FIG01_STUDY_DESIGN.pdf
+│   │   │   │   │   ├── FIG01_STUDY_DESIGN.png
+│   │   │   │   │   ├── FIG01_STUDY_DESIGN.svg
+│   │   │   │   │   ├── FIG02_H1_H2.pdf
+│   │   │   │   │   ├── FIG02_H1_H2.png
+│   │   │   │   │   ├── FIG02_H1_H2.svg
+│   │   │   │   │   ├── FIG03_H3_CUE_TRANSPORT.pdf
+│   │   │   │   │   ├── FIG03_H3_CUE_TRANSPORT.png
+│   │   │   │   │   ├── FIG03_H3_CUE_TRANSPORT.svg
+│   │   │   │   │   ├── FIG04_H4_FIXED_BUDGET.pdf
+│   │   │   │   │   ├── FIG04_H4_FIXED_BUDGET.png
+│   │   │   │   │   ├── FIG04_H4_FIXED_BUDGET.svg
+│   │   │   │   │   ├── FIG05_H3_H4_BRIDGE.pdf
+│   │   │   │   │   ├── FIG05_H3_H4_BRIDGE.png
+│   │   │   │   │   └── FIG05_H3_H4_BRIDGE.svg
+│   │   │   │   └── supplementary/
+│   │   │   │       ├── SUPP_BAITBUSTER_H3.pdf
+│   │   │   │       ├── SUPP_BAITBUSTER_H3.png
+│   │   │   │       ├── SUPP_BAITBUSTER_H3.svg
+│   │   │   │       ├── SUPP_BRIDGE_LOO.pdf
+│   │   │   │       ├── SUPP_BRIDGE_LOO.png
+│   │   │   │       ├── SUPP_BRIDGE_LOO.svg
+│   │   │   │       ├── SUPP_H1_H2_MODEL_SEED.pdf
+│   │   │   │       ├── SUPP_H1_H2_MODEL_SEED.png
+│   │   │   │       ├── SUPP_H1_H2_MODEL_SEED.svg
+│   │   │   │       ├── SUPP_H3_SPARSITY.pdf
+│   │   │   │       ├── SUPP_H3_SPARSITY.png
+│   │   │   │       ├── SUPP_H3_SPARSITY.svg
+│   │   │   │       ├── SUPP_H3P_curiosity_information_withholding.pdf
+│   │   │   │       ├── SUPP_H3P_curiosity_information_withholding.png
+│   │   │   │       ├── SUPP_H3P_curiosity_information_withholding.svg
+│   │   │   │       ├── SUPP_H3P_direct_address_imperative.pdf
+│   │   │   │       ├── SUPP_H3P_direct_address_imperative.png
+│   │   │   │       ├── SUPP_H3P_direct_address_imperative.svg
+│   │   │   │       ├── SUPP_H3P_punctuation_intensity.pdf
+│   │   │   │       ├── SUPP_H3P_punctuation_intensity.png
+│   │   │   │       ├── SUPP_H3P_punctuation_intensity.svg
+│   │   │   │       ├── SUPP_H4_05PCT.pdf
+│   │   │   │       ├── SUPP_H4_05PCT.png
+│   │   │   │       ├── SUPP_H4_05PCT.svg
+│   │   │   │       ├── SUPP_H4_20PCT.pdf
+│   │   │   │       ├── SUPP_H4_20PCT.png
+│   │   │   │       ├── SUPP_H4_20PCT.svg
+│   │   │   │       ├── SUPP_H4_MODEL_SEED.pdf
+│   │   │   │       ├── SUPP_H4_MODEL_SEED.png
+│   │   │   │       ├── SUPP_H4_MODEL_SEED.svg
+│   │   │   │       ├── SUPP_RISK_COVERAGE.pdf
+│   │   │   │       ├── SUPP_RISK_COVERAGE.png
+│   │   │   │       ├── SUPP_RISK_COVERAGE.svg
+│   │   │   │       ├── SUPP_SENSITIVITY.pdf
+│   │   │   │       ├── SUPP_SENSITIVITY.png
+│   │   │   │       └── SUPP_SENSITIVITY.svg
+│   │   │   └── tables/
+│   │   │       ├── main/
+│   │   │       │   ├── TABLE01_STUDY_DESIGN_MAP.csv
+│   │   │       │   ├── TABLE02_H1_H2_SUMMARY.csv
+│   │   │       │   ├── TABLE03_H3_CUE_TRANSPORT.csv
+│   │   │       │   └── TABLE04_H4_PRIMARY_10PCT_SUMMARY.csv
+│   │   │       └── supplementary/
+│   │   │           ├── SUPP_TABLE01_FULL_H3_32_CELL.csv
+│   │   │           ├── SUPP_TABLE02_H3_SPARSITY.csv
+│   │   │           ├── SUPP_TABLE03_H3P.csv
+│   │   │           ├── SUPP_TABLE04_BAITBUSTER_H3.csv
+│   │   │           ├── SUPP_TABLE05_FULL_H4_BUDGET.csv
+│   │   │           ├── SUPP_TABLE06_H4_MODEL_SEED.csv
+│   │   │           ├── SUPP_TABLE07_LOO_POINT.csv
+│   │   │           ├── SUPP_TABLE08_FULL_STATISTICAL_SUMMARY.csv
+│   │   │           └── SUPP_TABLE09_PROVENANCE.csv
+│   │   ├── stage09/
+│   │   │   ├── CLAIM_CONCORDANCE_TABLE.csv
+│   │   │   ├── H1_H2_SOURCE_CLUSTER_SENSITIVITY.json
+│   │   │   ├── H3_SOURCE_CLUSTER_SENSITIVITY.json
+│   │   │   ├── H3P_SOURCE_CLUSTER_SENSITIVITY.json
+│   │   │   ├── H4_SOURCE_CLUSTER_SENSITIVITY.json
+│   │   │   └── SENSITIVITY_SUMMARY.md
+│   │   └── README.md
+│   ├── sensitivity/
+│   │   ├── comparison/
+│   │   │   ├── A_vs_B_BRIDGE.csv
+│   │   │   ├── A_vs_B_H1_News.csv
+│   │   │   ├── A_vs_B_H2_News.csv
+│   │   │   ├── A_vs_B_H3_32.csv
+│   │   │   ├── A_vs_B_H4_10_news.csv
+│   │   │   ├── FINAL_VALIDATION_REPORT.md
+│   │   │   ├── FINAL_VALIDATION_SUMMARY.json
+│   │   │   ├── README.md
+│   │   │   ├── Rule A_BRIDGE.csv
+│   │   │   ├── Rule A_family_simes_outcome.csv
+│   │   │   ├── Rule A_family_simes_reliability.csv
+│   │   │   ├── Rule A_H1_News.csv
+│   │   │   ├── Rule A_H2_News.csv
+│   │   │   ├── Rule A_H3_32.csv
+│   │   │   ├── Rule A_H3_global.csv
+│   │   │   ├── Rule A_H4_10_news.csv
+│   │   │   ├── Rule B_BRIDGE.csv
+│   │   │   ├── Rule B_family_simes_outcome.csv
+│   │   │   ├── Rule B_family_simes_reliability.csv
+│   │   │   ├── Rule B_H1_News.csv
+│   │   │   ├── Rule B_H2_News.csv
+│   │   │   ├── Rule B_H3_32.csv
+│   │   │   ├── Rule B_H3_global.csv
+│   │   │   ├── Rule B_H4_10_news.csv
+│   │   │   └── VALIDATION_SUMMARY.json
+│   │   ├── rule_a/
+│   │   │   ├── 05_external_validation_and_H3_vFINAL/
+│   │   │   │   ├── H1_H2_PARITY_REPORT.json
+│   │   │   │   ├── H1_RESULTS.json
+│   │   │   │   ├── H2_RESULTS.json
+│   │   │   │   ├── H3_CUE_PLATFORM_CONTRASTS_CORRECTED.csv
+│   │   │   │   ├── H3_PERTURBATION_RESULTS.json
+│   │   │   │   ├── H3_RESULTS.json
+│   │   │   │   ├── H3_SPARSITY_REPORT.csv
+│   │   │   │   ├── H3P_POINT_PARITY.json
+│   │   │   │   ├── H3P_STATISTICAL_PARITY.json
+│   │   │   │   └── SENSITIVITY_RESULTS.json
+│   │   │   ├── 06_fixed_budget_reliability_evaluation/
+│   │   │   │   ├── figures/
+│   │   │   │   │   ├── risk_coverage_banglabert.png
+│   │   │   │   │   ├── risk_coverage_ebm.png
+│   │   │   │   │   ├── risk_coverage_tfidf_lr.png
+│   │   │   │   │   └── risk_coverage_xlmr.png
+│   │   │   │   ├── tables/
+│   │   │   │   │   └── H4_PRIMARY_10_PERCENT_BY_SEED.csv
+│   │   │   │   ├── FIXED_BUDGET_TABLES.csv
+│   │   │   │   ├── H4_RESULTS.json
+│   │   │   │   └── RISK_COVERAGE_DATA.csv
+│   │   │   ├── 07_H3_H4_BRIDGE_EXPLORATORY_vFINAL/
+│   │   │   │   ├── BRIDGE_32_CELL_POINT_TABLE.csv
+│   │   │   │   ├── BRIDGE_POINT_ASSOCIATIONS.json
+│   │   │   │   ├── H3_H4_BRIDGE_RESULTS.json
+│   │   │   │   ├── H3_POINT_PARITY.json
+│   │   │   │   ├── H4_POLICY_POINT_PARITY.json
+│   │   │   │   ├── LEAVE_ONE_PLATFORM_OUT_POINT_TABLE.csv
+│   │   │   │   └── LEAVE_ONE_PLATFORM_OUT_ROBUSTNESS.json
+│   │   │   └── README.md
+│   │   ├── rule_b/
+│   │   │   ├── 05_external_validation_and_H3_vFINAL/
+│   │   │   │   ├── H1_H2_PARITY_REPORT.json
+│   │   │   │   ├── H1_RESULTS.json
+│   │   │   │   ├── H2_RESULTS.json
+│   │   │   │   ├── H3_CUE_PLATFORM_CONTRASTS_CORRECTED.csv
+│   │   │   │   ├── H3_PERTURBATION_RESULTS.json
+│   │   │   │   ├── H3_RESULTS.json
+│   │   │   │   ├── H3_SPARSITY_REPORT.csv
+│   │   │   │   ├── H3P_POINT_PARITY.json
+│   │   │   │   ├── H3P_STATISTICAL_PARITY.json
+│   │   │   │   └── SENSITIVITY_RESULTS.json
+│   │   │   ├── 06_fixed_budget_reliability_evaluation/
+│   │   │   │   ├── figures/
+│   │   │   │   │   ├── risk_coverage_banglabert.png
+│   │   │   │   │   ├── risk_coverage_ebm.png
+│   │   │   │   │   ├── risk_coverage_tfidf_lr.png
+│   │   │   │   │   └── risk_coverage_xlmr.png
+│   │   │   │   ├── tables/
+│   │   │   │   │   └── H4_PRIMARY_10_PERCENT_BY_SEED.csv
+│   │   │   │   ├── FIXED_BUDGET_TABLES.csv
+│   │   │   │   ├── H4_RESULTS.json
+│   │   │   │   └── RISK_COVERAGE_DATA.csv
+│   │   │   ├── 07_H3_H4_BRIDGE_EXPLORATORY_vFINAL/
+│   │   │   │   ├── BRIDGE_32_CELL_POINT_TABLE.csv
+│   │   │   │   ├── BRIDGE_POINT_ASSOCIATIONS.json
+│   │   │   │   ├── H3_H4_BRIDGE_RESULTS.json
+│   │   │   │   ├── H3_POINT_PARITY.json
+│   │   │   │   ├── H4_POLICY_POINT_PARITY.json
+│   │   │   │   ├── LEAVE_ONE_PLATFORM_OUT_POINT_TABLE.csv
+│   │   │   │   └── LEAVE_ONE_PLATFORM_OUT_ROBUSTNESS.json
+│   │   │   └── README.md
+│   │   ├── README.md
+│   │   └── TABLE_S10_S11_TRACEABILITY.md
+│   └── README.md
+├── scripts/
+│   ├── release/
+│   │   ├── 10-release-package-assembly-vfinal.ipynb
+│   │   └── README.md
+│   └── README.md
+├── .gitattributes
+├── .gitignore
+├── README.md
+└── requirements.txt

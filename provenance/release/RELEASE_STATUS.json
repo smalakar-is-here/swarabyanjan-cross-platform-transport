@@ -1,0 +1,28 @@
+{
+  "failed_checks": [],
+  "qa": {
+    "all_required_stage_roots_found": true,
+    "all_stage_controls_present": true,
+    "all_stage_prediction_parquets_present": true,
+    "canonical_notebook_source_identity_preserved": true,
+    "copied_artifacts_hash_verified": true,
+    "environment_gap_documented": true,
+    "exactly_9_canonical_stages": true,
+    "figure_table_source_mapping_preserved": true,
+    "historical_notebooks_not_canonical": true,
+    "license_gaps_documented": true,
+    "manuscript_evidence_matrix_present": true,
+    "no_canonical_notebook_modified": true,
+    "no_scientific_computation_executed": true,
+    "stage03_optional_large_artifacts_documented": true,
+    "stage05_hashes_unchanged": true,
+    "stage06_hashes_unchanged": true,
+    "stage07_hashes_unchanged": true,
+    "stage08_hashes_unchanged": true,
+    "stage09_identity_preserved": true,
+    "stage09_sensitivity_only": true
+  },
+  "scientific_computation_executed": false,
+  "status": "PASS",
+  "timestamp_utc": "2026-09-17T13:50:21.034595+00:00"
+}

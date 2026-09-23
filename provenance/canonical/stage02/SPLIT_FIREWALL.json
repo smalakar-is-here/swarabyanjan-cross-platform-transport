@@ -1,0 +1,115 @@
+{
+  "protected_scientific_fields": {
+    "audited_text_fields": [
+      "title",
+      "content",
+      "translated_title",
+      "translated_content"
+    ],
+    "dataset": "BanglaBait",
+    "gate_scope": "exact_or_normalized_primary_title_overlap_and_primary_title_label_conflict",
+    "primary_label_column": "label",
+    "primary_text_column": "title",
+    "secondary_field_rule": "Secondary-field overlap is audited but is not automatically treated as primary-title leakage. Any future Stage 03 use of a secondary field requires an explicit pre-training firewall amendment.",
+    "secondary_fields": [
+      "content",
+      "translated_title",
+      "translated_content"
+    ]
+  },
+  "rules": [
+    {
+      "allowed_from_stage": "03",
+      "allowed_uses": [
+        "model fitting",
+        "training-only feature computation",
+        "internal cross-validation generated only after P0_GO"
+      ],
+      "artifact_id": "banglabait_train",
+      "prohibited_uses_before_p0_go": [
+        "all model-development operations"
+      ],
+      "role": "MODEL_DEVELOPMENT_POOL"
+    },
+    {
+      "allowed_from_stage": "04",
+      "allowed_uses": [
+        "calibration fitting after Stage 03 model/configuration lock"
+      ],
+      "artifact_id": "banglabait_dev",
+      "prohibited_uses": [
+        "Stage 03 feature selection",
+        "Stage 03 hyperparameter selection",
+        "Stage 03 model selection"
+      ],
+      "role": "CALIBRATION_ONLY_HOLDOUT"
+    },
+    {
+      "allowed_uses": [
+        "final locked source-domain evaluation after model and calibration lock"
+      ],
+      "artifact_id": "banglabait_test",
+      "prohibited_uses": [
+        "training",
+        "feature selection",
+        "hyperparameter selection",
+        "model selection",
+        "calibration fitting",
+        "threshold selection",
+        "ranking-policy optimization"
+      ],
+      "role": "LOCKED_SOURCE_TEST"
+    },
+    {
+      "allowed_uses": [
+        "none by default"
+      ],
+      "artifact_id": "banglabait_unlabelled",
+      "note": "Any future use requires an explicit versioned protocol decision.",
+      "prohibited_uses": [
+        "supervised target construction",
+        "test-set inference for tuning"
+      ],
+      "role": "AUXILIARY_UNLABELLED"
+    },
+    {
+      "artifact_id": "all_external_diagnostics",
+      "artifacts": [
+        "banglaclick",
+        "banmani",
+        "banfakenews_main",
+        "banfakenews_independent_test",
+        "baitbuster_parquet"
+      ],
+      "prohibited_uses": [
+        "training",
+        "feature selection",
+        "hyperparameter selection",
+        "model selection",
+        "calibration fitting",
+        "threshold selection",
+        "ranking-policy optimization",
+        "external-test tuning"
+      ],
+      "role": "EXTERNAL_DIAGNOSTIC_ONLY"
+    }
+  ],
+  "schema_version": 2,
+  "stage03_model_input_contract": {
+    "allowed_target_fields": [
+      "label"
+    ],
+    "allowed_text_fields": [
+      "title"
+    ],
+    "dataset": "BanglaBait",
+    "forbidden_without_versioned_firewall_revision": [
+      "content",
+      "translated_title",
+      "translated_content"
+    ],
+    "require_exact_firewall_hash_match": true,
+    "strict": true
+  },
+  "stage_id": "02"
+}

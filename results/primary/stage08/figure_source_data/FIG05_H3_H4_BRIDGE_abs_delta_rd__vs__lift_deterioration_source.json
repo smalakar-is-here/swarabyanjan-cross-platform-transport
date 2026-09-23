@@ -1,0 +1,24 @@
+{
+  "covers_figure_ids": [
+    "FIG05_H3_H4_BRIDGE"
+  ],
+  "deterministic_transformation": "Direct 32-cell descriptive scatter with canonical stored platform-FE slope annotation. No new line/intercept fit and no inferential interval.",
+  "estimability_field": "inferential_status",
+  "exact_variables_used": [
+    "cue",
+    "platform",
+    "abs_delta_rd",
+    "lift_deterioration_source_minus_target",
+    "canonical_platform_fe_slope",
+    "inferential_status"
+  ],
+  "figure_id": "FIG05_H3_H4_BRIDGE",
+  "panel_id": "abs_delta_rd__vs__lift_deterioration",
+  "rows": 32,
+  "source_artifact": [
+    "Stage07/BRIDGE_32_CELL_POINT_TABLE.csv",
+    "Stage07/H3_H4_BRIDGE_RESULTS.json"
+  ],
+  "source_csv": "FIG05_H3_H4_BRIDGE_abs_delta_rd__vs__lift_deterioration_source.csv",
+  "source_csv_sha256": "a0068984b8ab49d3fa62332dc53858af20b372f78f81387da2892d28ca1e38cb"
+}

@@ -1,0 +1,41 @@
+{
+  "ACTUAL_CONTENT_IDENTITY": "161b6e091b3db55a9616c943693ad456a175c19330b4297b5e068910b47c2b8f",
+  "ACTUAL_ZIP_SHA256": [
+    "e0de5c224f406fe22d8ad30804217465f789c49c70e1d3afbe00afd28deb7ccf"
+  ],
+  "EXPECTED_CONTENT_IDENTITY": "161b6e091b3db55a9616c943693ad456a175c19330b4297b5e068910b47c2b8f",
+  "EXPECTED_ZIP_SHA256": "e0de5c224f406fe22d8ad30804217465f789c49c70e1d3afbe00afd28deb7ccf",
+  "EXTRACTED_ROOT_ALIASES": [
+    "/kaggle/input/notebooks/smalakarishere/01-dataset-acquisition-and-freeze/EXTERNAL-DATASET-BYTES-v1"
+  ],
+  "EXTRACTED_ROOT_CANDIDATES": [
+    {
+      "actual_content_identity": "161b6e091b3db55a9616c943693ad456a175c19330b4297b5e068910b47c2b8f",
+      "candidate_source": "/kaggle/input/notebooks/smalakarishere/01-dataset-acquisition-and-freeze/EXTERNAL-DATASET-BYTES-v1/ACQUISITION_MANIFEST.json",
+      "checksum_valid": true,
+      "complete_required_tree": true,
+      "input_form": "EXTRACTED_DIRECTORY",
+      "reason": null,
+      "root": "/kaggle/input/notebooks/smalakarishere/01-dataset-acquisition-and-freeze/EXTERNAL-DATASET-BYTES-v1"
+    }
+  ],
+  "SELECTED_STAGE01_ROOT": "/kaggle/input/notebooks/smalakarishere/01-dataset-acquisition-and-freeze/EXTERNAL-DATASET-BYTES-v1",
+  "SELECTION_RULE": "Authenticate extracted roots by complete tree + checksum contract + exact Stage-03 content identity; authenticate ZIPs by exact frozen ZIP SHA-256, safe extraction, complete tree, checksum contract, and exact Stage-03 content identity. When both forms authenticate to the same identity, prefer the already-extracted root.",
+  "STAGE01_INPUT_FORM": "EXTRACTED_DIRECTORY",
+  "VERIFIED_ZIP_ALIASES": [
+    "/kaggle/input/notebooks/smalakarishere/01-dataset-acquisition-and-freeze/EXTERNAL-DATASET-BYTES-v1.zip"
+  ],
+  "ZIP_CANDIDATES": [
+    {
+      "actual_content_identity": "161b6e091b3db55a9616c943693ad456a175c19330b4297b5e068910b47c2b8f",
+      "actual_zip_sha256": "e0de5c224f406fe22d8ad30804217465f789c49c70e1d3afbe00afd28deb7ccf",
+      "complete_required_tree": true,
+      "content_identity_match": true,
+      "expected_zip_sha256": "e0de5c224f406fe22d8ad30804217465f789c49c70e1d3afbe00afd28deb7ccf",
+      "extracted_root": "/kaggle/working/.stage10_stage01_input/zip_000_e0de5c224f406fe2/EXTERNAL-DATASET-BYTES-v1",
+      "path": "/kaggle/input/notebooks/smalakarishere/01-dataset-acquisition-and-freeze/EXTERNAL-DATASET-BYTES-v1.zip",
+      "reason": null,
+      "zip_hash_match": true
+    }
+  ]
+}

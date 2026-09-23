@@ -1,0 +1,14 @@
+{
+  "boundary": "DEV only. TEST and external datasets were not read.",
+  "calibration_report_sha256": "1238029c025fc977f47fd0c8349e19a97621e45f502076ba2905032657897d4d",
+  "dev_predictions_sha256": "e0d82db394fa7579fbea17b8e95dea9309fcb9628405daa23c67d10ea87c16ac",
+  "manifest_payload_sha256": "d928c572e43c7978f07f7b2d84ec508e7b2ece938f8e9128ac5963c7c7c11eb9",
+  "model_artifact_manifest_payload_sha256": "968452e50e35bddce213921244e678927e6e0d74d21ce89a2a968b4d45f1a03b",
+  "model_config_lock_sha256": "af6f73a7b839c70f2d9f592b6091f35c8ad24c5e8af5ae227812d6452128fa0a",
+  "protocol_version": "SWARABYANJAN-CROSSPLATFORM-v1.0.0",
+  "schema_version": 1,
+  "stage_id": "04",
+  "temperatures_sha256": "ec6a9bf460e97b488d7a729299bfa66bbab33c8fcf5fd2c136871c2bb4fec011",
+  "upstream_stage03_checksum_manifest_sha256": "e40f3c9ac69cb9f23e080e6070a1cd3b28969f43e3592d7b52a04f02a8dbafb2",
+  "upstream_stage03_root": "/kaggle/input/notebooks/smalakarishere/03-primary-model-development/03_results/03_primary_model_development"
+}

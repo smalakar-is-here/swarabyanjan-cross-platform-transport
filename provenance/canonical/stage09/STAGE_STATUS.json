@@ -1,0 +1,17 @@
+{
+  "details": {
+    "concordance_class_counts": {
+      "CONCORDANT": 318,
+      "UNCERTAINTY_WIDENED_INTERPRETATION_UNCHANGED": 1299
+    },
+    "global_h3_sensitivity_status": "NON_ESTIMABLE",
+    "output_root": "/kaggle/working/09_results/09_SOURCE_PUBLISHER_CLUSTER_SENSITIVITY_vFINAL",
+    "source_clusters": 40,
+    "source_rows": 2784
+  },
+  "message": "Source-site host cluster sensitivity completed without modifying canonical inference",
+  "stage_id": "09",
+  "stage_name": "09_SOURCE_PUBLISHER_CLUSTER_SENSITIVITY_vFINAL",
+  "status": "PASS",
+  "timestamp_utc": "2026-09-16T17:30:54.001494+00:00"
+}

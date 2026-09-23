@@ -1,0 +1,27 @@
+{
+  "covers_figure_ids": [
+    "SUPP_H3_SPARSITY"
+  ],
+  "deterministic_transformation": "Direct canonical support diagnostics; no inferential recomputation.",
+  "estimability_field": null,
+  "exact_variables_used": [
+    "domain",
+    "cue",
+    "rows",
+    "clusters",
+    "cue_present_rows",
+    "cue_absent_rows",
+    "clusters_with_cue_present",
+    "clusters_with_cue_absent",
+    "analytical_p_resample_missing_cue_present",
+    "analytical_p_resample_missing_cue_absent"
+  ],
+  "figure_id": "SUPP_H3_SPARSITY",
+  "panel_id": "support",
+  "rows": 48,
+  "source_artifact": [
+    "Stage05/H3_SPARSITY_REPORT.csv"
+  ],
+  "source_csv": "SUPP_H3_SPARSITY_support_source.csv",
+  "source_csv_sha256": "6aad2c616a0e4afe110e3245f091ef2bb67465d340e0e29cdf46b90f47a22d60"
+}

@@ -1,0 +1,12 @@
+{
+  "details": {
+    "bootstrap_total_seconds": null,
+    "checksum_entries": 16,
+    "output_root": "/mnt/data/swarabyanjan_branch_exec/RULE_B/03_results/06_fixed_budget_reliability_evaluation",
+    "stage05_manifest_sha256": "5e4297489d242470aee56b89d881584c2cefe5a04bf41c06aa48dab1eebfe4d7"
+  },
+  "message": "H4 fixed-budget and selective-risk evaluation completed from isolated Stage-05 branch",
+  "stage_id": "06",
+  "status": "PASS",
+  "timestamp_utc": "2026-09-22T19:22:28+00:00"
+}

@@ -1,0 +1,61 @@
+{
+  "artifacts": {
+    "BOOTSTRAP_RUNTIME.json": "b9ff280b6eef366c1f74d63cd8aa4db0cecd23b9a6d07124f304a21e5a5b0785",
+    "ENVIRONMENT_PREFLIGHT.json": "0872dedb58989612d98a2fd21940ac61c5c64b69104a3bc36b3e9d94b71ba3fa",
+    "FINAL_STATISTICAL_SUMMARY.json": "7da3348041074eb524fbdd7d9b8932779ffd69cf54d4b5a1af747b55acbe9f64",
+    "FIXED_BUDGET_TABLES.csv": "3df30404ce1bcb8693b8cbabc0038bcc723aa2be3957c0c8b4ead9e93b19287b",
+    "H4_RESULTS.json": "299fc2e1394c80e1a090ac14d632e0f502b5b779c459e47dcb4e96130b621462",
+    "RISK_COVERAGE_DATA.csv": "cd2f4ef94c06addf9207dfcab94e5c19c94586767f47409760a5e64a3b0f2797",
+    "UPSTREAM_PROVENANCE_GATE.json": "0f98d1a2ac5cab5c692f6b35fd76af79dd72bf07f48ddfea26ab019cc89a12e7"
+  },
+  "manifest_payload_sha256": "727c8937054f313af95bf2b2d35280d8700a3be535e121ece277cb9d210c9129",
+  "protocol_version": "SWARABYANJAN-CROSSPLATFORM-v1.0.0",
+  "run_metadata_sha256": "897d2563cbc3ad7b13cec2737bb2668a7086cc3902267cd18c92ce72b65977cd",
+  "schema_version": 2,
+  "scientific_contract": {
+    "bootstrap_reps": 5000,
+    "bootstrap_seed": 20260906,
+    "budgets": [
+      0.05,
+      0.1,
+      0.2
+    ],
+    "conditional_valid_only_bootstrap_inference": false,
+    "models": [
+      "ebm",
+      "tfidf_lr",
+      "banglabert",
+      "xlmr"
+    ],
+    "positive_risk_and_uncertainty_review_separate": true,
+    "primary_budget": 0.1,
+    "rejection_resampling": false,
+    "seeds": [
+      42,
+      137,
+      2718,
+      31415,
+      65537
+    ]
+  },
+  "stage06_summary_sha256": "38747d3cbd12e7e659e4ed51ff4d9bfa82e36eb90dd045b835c58bfe458e2195",
+  "stage_id": "06",
+  "upstream": {
+    "h3_statistics_consumed": false,
+    "mode": "DIRECT_CANONICAL_STAGE05_OUTPUT",
+    "prediction_sha256": {
+      "BAITBUSTER_HUMAN_PREDICTIONS.parquet": "a3e95820c62de00984a189e2c250f7fffd223ad4b3954db04a5368c7a544b7b9",
+      "BANGLACLICK_PLATFORM_PREDICTIONS.parquet": "5685fd4142a0e8e7f85cd6040cf48042da2368d5f9596a7740c4f9f09c9519d5",
+      "LOCKED_SOURCE_TEST_PREDICTIONS.parquet": "df863d7a24f7d451451822890de58613c3295eb0bcc1aa882150137b0aa9880a"
+    },
+    "stage05_checksum_sha256": "7171a0e581d8fb4bde2a630f4de631d74962954ee3890b8123d78a720823450a",
+    "stage05_identity": {
+      "canonical_stage05": true,
+      "canonical_version": "SWARABYANJAN-STAGE05-CANONICAL-vFINAL-1.0.1",
+      "protocol_version": "SWARABYANJAN-CROSSPLATFORM-v1.0.0",
+      "stage_id": "05"
+    },
+    "stage05_manifest_sha256": "7246bc3a49a5f8d8472005cea9f6062d118431cd67d5dd2c4fd8f2ee31f52c27",
+    "stage05_status_sha256": "005399d829bb66870810faa3f140757a7ee3d82eac4bae394fbbe79e701db8e6"
+  }
+}

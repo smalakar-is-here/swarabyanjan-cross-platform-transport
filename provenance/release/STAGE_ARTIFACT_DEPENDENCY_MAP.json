@@ -1,0 +1,2302 @@
+[
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "02",
+      "03",
+      "09"
+    ],
+    "notebook": "01-dataset-acquisition-and-freeze.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "EXTERNAL-DATASET-BYTES-v1",
+    "required_artifact": "ACQUISITION_MANIFEST.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "01"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "02",
+      "03",
+      "09"
+    ],
+    "notebook": "01-dataset-acquisition-and-freeze.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "EXTERNAL-DATASET-BYTES-v1",
+    "required_artifact": "ACQUISITION_STATUS.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "01"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "02",
+      "03",
+      "09"
+    ],
+    "notebook": "01-dataset-acquisition-and-freeze.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "EXTERNAL-DATASET-BYTES-v1",
+    "required_artifact": "SOURCES_LOCK.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "01"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "02",
+      "03",
+      "09"
+    ],
+    "notebook": "01-dataset-acquisition-and-freeze.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "EXTERNAL-DATASET-BYTES-v1",
+    "required_artifact": "SHA256SUMS.txt",
+    "required_for_scientific_reproduction": true,
+    "stage": "01"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "02",
+      "03",
+      "09"
+    ],
+    "notebook": "01-dataset-acquisition-and-freeze.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "EXTERNAL-DATASET-BYTES-v1",
+    "required_artifact": "README_HANDOFF.txt",
+    "required_for_scientific_reproduction": true,
+    "stage": "01"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "02",
+      "03",
+      "09"
+    ],
+    "notebook": "01-dataset-acquisition-and-freeze.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "EXTERNAL-DATASET-BYTES-v1",
+    "required_artifact": "BanglaBait/repository_snapshot/test.csv",
+    "required_for_scientific_reproduction": true,
+    "stage": "01"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "03"
+    ],
+    "notebook": "02-p0-integrity-provenance-leakage-audit.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/02_p0_integrity_provenance_leakage_audit/<execution_id>",
+    "required_artifact": "P0_AUDIT_REPORT.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "02"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "03"
+    ],
+    "notebook": "02-p0-integrity-provenance-leakage-audit.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/02_p0_integrity_provenance_leakage_audit/<execution_id>",
+    "required_artifact": "P0_AUDIT_SUMMARY.md",
+    "required_for_scientific_reproduction": true,
+    "stage": "02"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "03"
+    ],
+    "notebook": "02-p0-integrity-provenance-leakage-audit.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/02_p0_integrity_provenance_leakage_audit/<execution_id>",
+    "required_artifact": "P0_BLOCKER_FORENSICS.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "02"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "03"
+    ],
+    "notebook": "02-p0-integrity-provenance-leakage-audit.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/02_p0_integrity_provenance_leakage_audit/<execution_id>",
+    "required_artifact": "PROVENANCE_DEPENDENCY_GRAPH.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "02"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "03"
+    ],
+    "notebook": "02-p0-integrity-provenance-leakage-audit.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/02_p0_integrity_provenance_leakage_audit/<execution_id>",
+    "required_artifact": "SPLIT_FIREWALL.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "02"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "03"
+    ],
+    "notebook": "02-p0-integrity-provenance-leakage-audit.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/02_p0_integrity_provenance_leakage_audit/<execution_id>",
+    "required_artifact": "DATASET_SCHEMA_REPORT.csv",
+    "required_for_scientific_reproduction": true,
+    "stage": "02"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "03"
+    ],
+    "notebook": "02-p0-integrity-provenance-leakage-audit.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/02_p0_integrity_provenance_leakage_audit/<execution_id>",
+    "required_artifact": "LABEL_DISTRIBUTION_REPORT.csv",
+    "required_for_scientific_reproduction": true,
+    "stage": "02"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "03"
+    ],
+    "notebook": "02-p0-integrity-provenance-leakage-audit.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/02_p0_integrity_provenance_leakage_audit/<execution_id>",
+    "required_artifact": "DUPLICATE_REPORT.csv",
+    "required_for_scientific_reproduction": true,
+    "stage": "02"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "03"
+    ],
+    "notebook": "02-p0-integrity-provenance-leakage-audit.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/02_p0_integrity_provenance_leakage_audit/<execution_id>",
+    "required_artifact": "CROSS_DATASET_OVERLAP_REPORT.csv",
+    "required_for_scientific_reproduction": true,
+    "stage": "02"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "03"
+    ],
+    "notebook": "02-p0-integrity-provenance-leakage-audit.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/02_p0_integrity_provenance_leakage_audit/<execution_id>",
+    "required_artifact": "CONSTRUCT_ALIGNMENT_MATRIX.csv",
+    "required_for_scientific_reproduction": true,
+    "stage": "02"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "03"
+    ],
+    "notebook": "02-p0-integrity-provenance-leakage-audit.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/02_p0_integrity_provenance_leakage_audit/<execution_id>",
+    "required_artifact": "PROTECTED_TITLE_QUALITY_REPORT.csv",
+    "required_for_scientific_reproduction": true,
+    "stage": "02"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "03"
+    ],
+    "notebook": "02-p0-integrity-provenance-leakage-audit.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/02_p0_integrity_provenance_leakage_audit/<execution_id>",
+    "required_artifact": "P0_HASH_VERIFICATION.txt",
+    "required_for_scientific_reproduction": true,
+    "stage": "02"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "03"
+    ],
+    "notebook": "02-p0-integrity-provenance-leakage-audit.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/02_p0_integrity_provenance_leakage_audit/<execution_id>",
+    "required_artifact": "P0_RUN_METADATA.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "02"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "03"
+    ],
+    "notebook": "02-p0-integrity-provenance-leakage-audit.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/02_p0_integrity_provenance_leakage_audit/<execution_id>",
+    "required_artifact": "EXECUTED_NOTEBOOK_CAPTURE_STATUS.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "02"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "03"
+    ],
+    "notebook": "02-p0-integrity-provenance-leakage-audit.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/02_p0_integrity_provenance_leakage_audit/<execution_id>",
+    "required_artifact": "P0_DETERMINISTIC_OUTPUT_SHA256SUMS.txt",
+    "required_for_scientific_reproduction": true,
+    "stage": "02"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "03"
+    ],
+    "notebook": "02-p0-integrity-provenance-leakage-audit.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/02_p0_integrity_provenance_leakage_audit/<execution_id>",
+    "required_artifact": "P0_OUTPUT_SHA256SUMS.txt",
+    "required_for_scientific_reproduction": true,
+    "stage": "02"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "04",
+      "05",
+      "09"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "ENVIRONMENT_PREFLIGHT.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "04",
+      "05",
+      "09"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "INPUT_IDENTITY.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "04",
+      "05",
+      "09"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "FROZEN_INPUT_DISCOVERY.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "Stage-03 decontaminated split inventory and hashes",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "04",
+      "05",
+      "09"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "CLEAN_DATA_MANIFEST.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "04",
+      "05",
+      "09"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "CLEAN_ROW_MANIFEST.parquet",
+    "required_for_scientific_reproduction": true,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "04",
+      "05",
+      "09"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "CLEAN_SPLIT_SUMMARY.csv",
+    "required_for_scientific_reproduction": true,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "04",
+      "05",
+      "09"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "D0_REPORT.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "04",
+      "05",
+      "09"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "DECONTAMINATION_FORENSICS.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "04",
+      "05",
+      "09"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "CUE_FEATURE_SCHEMA.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "04",
+      "05",
+      "09"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "TRAIN_DEV_SPLIT_ROWS.parquet",
+    "required_for_scientific_reproduction": true,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "04",
+      "05",
+      "09"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "TRAIN_DEV_SPLIT_MANIFEST.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "locked model/configuration specification",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "04",
+      "05",
+      "09"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "MODEL_CONFIG_LOCK.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "Stage-03 model artifact inventory and hashes",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "04",
+      "05",
+      "09"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "MODEL_ARTIFACT_MANIFEST.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "04",
+      "05",
+      "09"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "RUN_METADATA.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "04",
+      "05",
+      "09"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "STAGE03_SUMMARY.md",
+    "required_for_scientific_reproduction": true,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "04",
+      "05",
+      "09"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "STAGE03_SHA256SUMS.txt",
+    "required_for_scientific_reproduction": true,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "04",
+      "05",
+      "09"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "STAGE_STATUS.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "04",
+      "05",
+      "09"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "clean_splits/banglabait_train_clean.parquet",
+    "required_for_scientific_reproduction": true,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "04",
+      "05",
+      "09"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "clean_splits/banglabait_dev_clean.parquet",
+    "required_for_scientific_reproduction": true,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "04",
+      "05",
+      "09"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "clean_splits/banglabait_test_clean.parquet",
+    "required_for_scientific_reproduction": true,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "05"
+    ],
+    "notebook": "04-calibration.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/04_calibration",
+    "required_artifact": "ENVIRONMENT_PREFLIGHT.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "04"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "05"
+    ],
+    "notebook": "04-calibration.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/04_calibration",
+    "required_artifact": "CALIBRATION_REPORT.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "04"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "05"
+    ],
+    "notebook": "04-calibration.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/04_calibration",
+    "required_artifact": "TEMPERATURES.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "04"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "05"
+    ],
+    "notebook": "04-calibration.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/04_calibration",
+    "required_artifact": "CALIBRATION_ARTIFACT_MANIFEST.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "04"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "05"
+    ],
+    "notebook": "04-calibration.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/04_calibration",
+    "required_artifact": "DEV_PREDICTIONS.parquet",
+    "required_for_scientific_reproduction": true,
+    "stage": "04"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "05"
+    ],
+    "notebook": "04-calibration.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/04_calibration",
+    "required_artifact": "RUN_METADATA.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "04"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "05"
+    ],
+    "notebook": "04-calibration.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/04_calibration",
+    "required_artifact": "STAGE04_SUMMARY.md",
+    "required_for_scientific_reproduction": true,
+    "stage": "04"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "05"
+    ],
+    "notebook": "04-calibration.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/04_calibration",
+    "required_artifact": "STAGE04_SHA256SUMS.txt",
+    "required_for_scientific_reproduction": true,
+    "stage": "04"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "05"
+    ],
+    "notebook": "04-calibration.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/04_calibration",
+    "required_artifact": "STAGE_STATUS.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "04"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "05-external-validation-and-h3-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/05_external_validation_and_H3_vFINAL",
+    "required_artifact": "ENVIRONMENT_PREFLIGHT.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "05"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "05-external-validation-and-h3-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/05_external_validation_and_H3_vFINAL",
+    "required_artifact": "INFERENCE_CACHE_PROVENANCE.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "05"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "05-external-validation-and-h3-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/05_external_validation_and_H3_vFINAL",
+    "required_artifact": "CACHE_SCHEMA_VALIDATION.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "05"
+  },
+  {
+    "artifact_role": "locked downstream analysis interface: source TEST predictions",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "05-external-validation-and-h3-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/05_external_validation_and_H3_vFINAL",
+    "required_artifact": "LOCKED_SOURCE_TEST_PREDICTIONS.parquet",
+    "required_for_scientific_reproduction": true,
+    "stage": "05"
+  },
+  {
+    "artifact_role": "locked downstream analysis interface: BanglaClick predictions",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "05-external-validation-and-h3-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/05_external_validation_and_H3_vFINAL",
+    "required_artifact": "BANGLACLICK_PLATFORM_PREDICTIONS.parquet",
+    "required_for_scientific_reproduction": true,
+    "stage": "05"
+  },
+  {
+    "artifact_role": "locked downstream analysis interface: BaitBuster human predictions",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "05-external-validation-and-h3-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/05_external_validation_and_H3_vFINAL",
+    "required_artifact": "BAITBUSTER_HUMAN_PREDICTIONS.parquet",
+    "required_for_scientific_reproduction": true,
+    "stage": "05"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "05-external-validation-and-h3-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/05_external_validation_and_H3_vFINAL",
+    "required_artifact": "H1_H2_PARITY_REPORT.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "05"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "05-external-validation-and-h3-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/05_external_validation_and_H3_vFINAL",
+    "required_artifact": "H1_RESULTS.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "05"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "05-external-validation-and-h3-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/05_external_validation_and_H3_vFINAL",
+    "required_artifact": "H2_RESULTS.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "05"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "05-external-validation-and-h3-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/05_external_validation_and_H3_vFINAL",
+    "required_artifact": "SENSITIVITY_RESULTS.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "05"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "05-external-validation-and-h3-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/05_external_validation_and_H3_vFINAL",
+    "required_artifact": "H3_RESULTS.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "05"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "05-external-validation-and-h3-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/05_external_validation_and_H3_vFINAL",
+    "required_artifact": "H3_SPARSITY_REPORT.csv",
+    "required_for_scientific_reproduction": true,
+    "stage": "05"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "05-external-validation-and-h3-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/05_external_validation_and_H3_vFINAL",
+    "required_artifact": "H3_CUE_PLATFORM_CONTRASTS_CORRECTED.csv",
+    "required_for_scientific_reproduction": true,
+    "stage": "05"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "05-external-validation-and-h3-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/05_external_validation_and_H3_vFINAL",
+    "required_artifact": "H3_BAITBUSTER_REPLICATION_CORRECTED.csv",
+    "required_for_scientific_reproduction": true,
+    "stage": "05"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "05-external-validation-and-h3-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/05_external_validation_and_H3_vFINAL",
+    "required_artifact": "H3_PERTURBATION_PAIRS.parquet",
+    "required_for_scientific_reproduction": true,
+    "stage": "05"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "05-external-validation-and-h3-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/05_external_validation_and_H3_vFINAL",
+    "required_artifact": "H3_PERTURBATION_EXCLUSIONS.csv",
+    "required_for_scientific_reproduction": true,
+    "stage": "05"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "05-external-validation-and-h3-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/05_external_validation_and_H3_vFINAL",
+    "required_artifact": "H3P_POINT_PARITY.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "05"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "05-external-validation-and-h3-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/05_external_validation_and_H3_vFINAL",
+    "required_artifact": "H3P_STATISTICAL_PARITY.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "05"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "05-external-validation-and-h3-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/05_external_validation_and_H3_vFINAL",
+    "required_artifact": "H3_PERTURBATION_RESULTS.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "05"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "05-external-validation-and-h3-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/05_external_validation_and_H3_vFINAL",
+    "required_artifact": "STATISTICAL_SUMMARY.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "05"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "05-external-validation-and-h3-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/05_external_validation_and_H3_vFINAL",
+    "required_artifact": "RUN_METADATA.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "05"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "05-external-validation-and-h3-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/05_external_validation_and_H3_vFINAL",
+    "required_artifact": "STAGE05_SUMMARY.md",
+    "required_for_scientific_reproduction": true,
+    "stage": "05"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "05-external-validation-and-h3-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/05_external_validation_and_H3_vFINAL",
+    "required_artifact": "STAGE05_ARTIFACT_MANIFEST.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "05"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "05-external-validation-and-h3-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/05_external_validation_and_H3_vFINAL",
+    "required_artifact": "STAGE05_SHA256SUMS.txt",
+    "required_for_scientific_reproduction": true,
+    "stage": "05"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "05-external-validation-and-h3-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/05_external_validation_and_H3_vFINAL",
+    "required_artifact": "STAGE_STATUS.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "05"
+  },
+  {
+    "artifact_role": "locked downstream analysis interface: source TEST predictions",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "05-external-validation-and-h3-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/05_external_validation_and_H3_vFINAL",
+    "required_artifact": "LOCKED_SOURCE_TEST_PREDICTIONS.parquet",
+    "required_for_scientific_reproduction": true,
+    "stage": "05"
+  },
+  {
+    "artifact_role": "locked downstream analysis interface: BanglaClick predictions",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "05-external-validation-and-h3-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/05_external_validation_and_H3_vFINAL",
+    "required_artifact": "BANGLACLICK_PLATFORM_PREDICTIONS.parquet",
+    "required_for_scientific_reproduction": true,
+    "stage": "05"
+  },
+  {
+    "artifact_role": "locked downstream analysis interface: BaitBuster human predictions",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "05-external-validation-and-h3-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/05_external_validation_and_H3_vFINAL",
+    "required_artifact": "BAITBUSTER_HUMAN_PREDICTIONS.parquet",
+    "required_for_scientific_reproduction": true,
+    "stage": "05"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "06-fixed-budget-reliability-evaluation-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/06_fixed_budget_reliability_evaluation",
+    "required_artifact": "ENVIRONMENT_PREFLIGHT.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "06"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "06-fixed-budget-reliability-evaluation-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/06_fixed_budget_reliability_evaluation",
+    "required_artifact": "UPSTREAM_PROVENANCE_GATE.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "06"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "06-fixed-budget-reliability-evaluation-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/06_fixed_budget_reliability_evaluation",
+    "required_artifact": "H4_RESULTS.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "06"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "06-fixed-budget-reliability-evaluation-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/06_fixed_budget_reliability_evaluation",
+    "required_artifact": "FIXED_BUDGET_TABLES.csv",
+    "required_for_scientific_reproduction": true,
+    "stage": "06"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "06-fixed-budget-reliability-evaluation-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/06_fixed_budget_reliability_evaluation",
+    "required_artifact": "RISK_COVERAGE_DATA.csv",
+    "required_for_scientific_reproduction": true,
+    "stage": "06"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "06-fixed-budget-reliability-evaluation-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/06_fixed_budget_reliability_evaluation",
+    "required_artifact": "BOOTSTRAP_RUNTIME.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "06"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "06-fixed-budget-reliability-evaluation-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/06_fixed_budget_reliability_evaluation",
+    "required_artifact": "FINAL_STATISTICAL_SUMMARY.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "06"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "06-fixed-budget-reliability-evaluation-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/06_fixed_budget_reliability_evaluation",
+    "required_artifact": "RUN_METADATA.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "06"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "06-fixed-budget-reliability-evaluation-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/06_fixed_budget_reliability_evaluation",
+    "required_artifact": "STAGE06_SUMMARY.md",
+    "required_for_scientific_reproduction": true,
+    "stage": "06"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "06-fixed-budget-reliability-evaluation-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/06_fixed_budget_reliability_evaluation",
+    "required_artifact": "REPRODUCIBILITY_MANIFEST.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "06"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "06-fixed-budget-reliability-evaluation-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/06_fixed_budget_reliability_evaluation",
+    "required_artifact": "STAGE06_SHA256SUMS.txt",
+    "required_for_scientific_reproduction": true,
+    "stage": "06"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "07",
+      "08",
+      "09"
+    ],
+    "notebook": "06-fixed-budget-reliability-evaluation-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/06_fixed_budget_reliability_evaluation",
+    "required_artifact": "STAGE_STATUS.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "06"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "08",
+      "09"
+    ],
+    "notebook": "07-h3-h4-bridge-exploratory-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/07_H3_H4_BRIDGE_EXPLORATORY_vFINAL",
+    "required_artifact": "UPSTREAM_PROVENANCE_GATE.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "07"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "08",
+      "09"
+    ],
+    "notebook": "07-h3-h4-bridge-exploratory-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/07_H3_H4_BRIDGE_EXPLORATORY_vFINAL",
+    "required_artifact": "FROZEN_INPUT_SUMMARY.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "07"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "08",
+      "09"
+    ],
+    "notebook": "07-h3-h4-bridge-exploratory-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/07_H3_H4_BRIDGE_EXPLORATORY_vFINAL",
+    "required_artifact": "H3_POINT_PARITY.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "07"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "08",
+      "09"
+    ],
+    "notebook": "07-h3-h4-bridge-exploratory-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/07_H3_H4_BRIDGE_EXPLORATORY_vFINAL",
+    "required_artifact": "H4_POLICY_POINT_PARITY.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "07"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "08",
+      "09"
+    ],
+    "notebook": "07-h3-h4-bridge-exploratory-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/07_H3_H4_BRIDGE_EXPLORATORY_vFINAL",
+    "required_artifact": "BRIDGE_32_CELL_POINT_TABLE.csv",
+    "required_for_scientific_reproduction": true,
+    "stage": "07"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "08",
+      "09"
+    ],
+    "notebook": "07-h3-h4-bridge-exploratory-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/07_H3_H4_BRIDGE_EXPLORATORY_vFINAL",
+    "required_artifact": "BRIDGE_POINT_ASSOCIATIONS.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "07"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "08",
+      "09"
+    ],
+    "notebook": "07-h3-h4-bridge-exploratory-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/07_H3_H4_BRIDGE_EXPLORATORY_vFINAL",
+    "required_artifact": "H3_H4_BRIDGE_RESULTS.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "07"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "08",
+      "09"
+    ],
+    "notebook": "07-h3-h4-bridge-exploratory-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/07_H3_H4_BRIDGE_EXPLORATORY_vFINAL",
+    "required_artifact": "BOOTSTRAP_RUNTIME.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "07"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "08",
+      "09"
+    ],
+    "notebook": "07-h3-h4-bridge-exploratory-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/07_H3_H4_BRIDGE_EXPLORATORY_vFINAL",
+    "required_artifact": "LEAVE_ONE_PLATFORM_OUT_POINT_TABLE.csv",
+    "required_for_scientific_reproduction": true,
+    "stage": "07"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "08",
+      "09"
+    ],
+    "notebook": "07-h3-h4-bridge-exploratory-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/07_H3_H4_BRIDGE_EXPLORATORY_vFINAL",
+    "required_artifact": "LEAVE_ONE_PLATFORM_OUT_ROBUSTNESS.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "07"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "08",
+      "09"
+    ],
+    "notebook": "07-h3-h4-bridge-exploratory-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/07_H3_H4_BRIDGE_EXPLORATORY_vFINAL",
+    "required_artifact": "STAGE07_SUMMARY.md",
+    "required_for_scientific_reproduction": true,
+    "stage": "07"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "08",
+      "09"
+    ],
+    "notebook": "07-h3-h4-bridge-exploratory-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/07_H3_H4_BRIDGE_EXPLORATORY_vFINAL",
+    "required_artifact": "REPRODUCIBILITY_MANIFEST.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "07"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "08",
+      "09"
+    ],
+    "notebook": "07-h3-h4-bridge-exploratory-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/07_H3_H4_BRIDGE_EXPLORATORY_vFINAL",
+    "required_artifact": "STAGE07_SHA256SUMS.txt",
+    "required_for_scientific_reproduction": true,
+    "stage": "07"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "08",
+      "09"
+    ],
+    "notebook": "07-h3-h4-bridge-exploratory-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "03_results/07_H3_H4_BRIDGE_EXPLORATORY_vFINAL",
+    "required_artifact": "STAGE_STATUS.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "07"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "09",
+      "manuscript"
+    ],
+    "notebook": "08-manuscript-figures-and-tables-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "08_manuscript_outputs",
+    "required_artifact": "PROVENANCE_REPORT.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "08"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "09",
+      "manuscript"
+    ],
+    "notebook": "08-manuscript-figures-and-tables-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "08_manuscript_outputs",
+    "required_artifact": "INPUT_HASHES.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "08"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "09",
+      "manuscript"
+    ],
+    "notebook": "08-manuscript-figures-and-tables-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "08_manuscript_outputs",
+    "required_artifact": "SCHEMA_VALIDATION.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "08"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "09",
+      "manuscript"
+    ],
+    "notebook": "08-manuscript-figures-and-tables-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "08_manuscript_outputs",
+    "required_artifact": "FIGURE_SOURCE_COVERAGE.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "08"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "09",
+      "manuscript"
+    ],
+    "notebook": "08-manuscript-figures-and-tables-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "08_manuscript_outputs",
+    "required_artifact": "MANIFEST.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "08"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "09",
+      "manuscript"
+    ],
+    "notebook": "08-manuscript-figures-and-tables-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "08_manuscript_outputs",
+    "required_artifact": "STAGE08_SHA256SUMS.txt",
+    "required_for_scientific_reproduction": true,
+    "stage": "08"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL",
+    "downstream_consumers": [
+      "09",
+      "manuscript"
+    ],
+    "notebook": "08-manuscript-figures-and-tables-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "08_manuscript_outputs",
+    "required_artifact": "STAGE08_STATUS.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "08"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL_SENSITIVITY_ONLY",
+    "downstream_consumers": [
+      "manuscript_sensitivity_only"
+    ],
+    "notebook": "09-source-publisher-cluster-sensitivity-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "09_results/09_SOURCE_PUBLISHER_CLUSTER_SENSITIVITY_vFINAL",
+    "required_artifact": "SOURCE_PUBLISHER_MAPPING.csv",
+    "required_for_scientific_reproduction": true,
+    "stage": "09"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL_SENSITIVITY_ONLY",
+    "downstream_consumers": [
+      "manuscript_sensitivity_only"
+    ],
+    "notebook": "09-source-publisher-cluster-sensitivity-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "09_results/09_SOURCE_PUBLISHER_CLUSTER_SENSITIVITY_vFINAL",
+    "required_artifact": "SOURCE_CLUSTER_DIAGNOSTICS.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "09"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL_SENSITIVITY_ONLY",
+    "downstream_consumers": [
+      "manuscript_sensitivity_only"
+    ],
+    "notebook": "09-source-publisher-cluster-sensitivity-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "09_results/09_SOURCE_PUBLISHER_CLUSTER_SENSITIVITY_vFINAL",
+    "required_artifact": "H1_H2_SOURCE_CLUSTER_SENSITIVITY.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "09"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL_SENSITIVITY_ONLY",
+    "downstream_consumers": [
+      "manuscript_sensitivity_only"
+    ],
+    "notebook": "09-source-publisher-cluster-sensitivity-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "09_results/09_SOURCE_PUBLISHER_CLUSTER_SENSITIVITY_vFINAL",
+    "required_artifact": "H3_SOURCE_CLUSTER_SENSITIVITY.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "09"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL_SENSITIVITY_ONLY",
+    "downstream_consumers": [
+      "manuscript_sensitivity_only"
+    ],
+    "notebook": "09-source-publisher-cluster-sensitivity-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "09_results/09_SOURCE_PUBLISHER_CLUSTER_SENSITIVITY_vFINAL",
+    "required_artifact": "H3P_SOURCE_CLUSTER_SENSITIVITY.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "09"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL_SENSITIVITY_ONLY",
+    "downstream_consumers": [
+      "manuscript_sensitivity_only"
+    ],
+    "notebook": "09-source-publisher-cluster-sensitivity-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "09_results/09_SOURCE_PUBLISHER_CLUSTER_SENSITIVITY_vFINAL",
+    "required_artifact": "H4_SOURCE_CLUSTER_SENSITIVITY.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "09"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL_SENSITIVITY_ONLY",
+    "downstream_consumers": [
+      "manuscript_sensitivity_only"
+    ],
+    "notebook": "09-source-publisher-cluster-sensitivity-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "09_results/09_SOURCE_PUBLISHER_CLUSTER_SENSITIVITY_vFINAL",
+    "required_artifact": "CLAIM_CONCORDANCE_TABLE.csv",
+    "required_for_scientific_reproduction": true,
+    "stage": "09"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL_SENSITIVITY_ONLY",
+    "downstream_consumers": [
+      "manuscript_sensitivity_only"
+    ],
+    "notebook": "09-source-publisher-cluster-sensitivity-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "09_results/09_SOURCE_PUBLISHER_CLUSTER_SENSITIVITY_vFINAL",
+    "required_artifact": "SENSITIVITY_SUMMARY.md",
+    "required_for_scientific_reproduction": true,
+    "stage": "09"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL_SENSITIVITY_ONLY",
+    "downstream_consumers": [
+      "manuscript_sensitivity_only"
+    ],
+    "notebook": "09-source-publisher-cluster-sensitivity-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "09_results/09_SOURCE_PUBLISHER_CLUSTER_SENSITIVITY_vFINAL",
+    "required_artifact": "REPRODUCIBILITY_MANIFEST.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "09"
+  },
+  {
+    "artifact_role": "Stage-09 sensitivity checksum contract",
+    "canonical_status": "CANONICAL_SENSITIVITY_ONLY",
+    "downstream_consumers": [
+      "manuscript_sensitivity_only"
+    ],
+    "notebook": "09-source-publisher-cluster-sensitivity-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "09_results/09_SOURCE_PUBLISHER_CLUSTER_SENSITIVITY_vFINAL",
+    "required_artifact": "STAGE09_SHA256SUMS.txt",
+    "required_for_scientific_reproduction": true,
+    "stage": "09"
+  },
+  {
+    "artifact_role": "canonical stage release artifact",
+    "canonical_status": "CANONICAL_SENSITIVITY_ONLY",
+    "downstream_consumers": [
+      "manuscript_sensitivity_only"
+    ],
+    "notebook": "09-source-publisher-cluster-sensitivity-vfinal.ipynb",
+    "optional_large_artifact": false,
+    "output_root": "09_results/09_SOURCE_PUBLISHER_CLUSTER_SENSITIVITY_vFINAL",
+    "required_artifact": "STAGE_STATUS.json",
+    "required_for_scientific_reproduction": true,
+    "stage": "09"
+  },
+  {
+    "artifact_role": "banglabert_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/banglabert_seed42/config.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "banglabert_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/banglabert_seed42/model.safetensors",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "banglabert_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/banglabert_seed42/tokenizer.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "banglabert_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/banglabert_seed42/tokenizer_config.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "banglabert_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/banglabert_seed137/config.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "banglabert_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/banglabert_seed137/model.safetensors",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "banglabert_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/banglabert_seed137/tokenizer.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "banglabert_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/banglabert_seed137/tokenizer_config.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "banglabert_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/banglabert_seed2718/config.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "banglabert_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/banglabert_seed2718/model.safetensors",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "banglabert_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/banglabert_seed2718/tokenizer.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "banglabert_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/banglabert_seed2718/tokenizer_config.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "banglabert_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/banglabert_seed31415/config.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "banglabert_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/banglabert_seed31415/model.safetensors",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "banglabert_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/banglabert_seed31415/tokenizer.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "banglabert_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/banglabert_seed31415/tokenizer_config.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "banglabert_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/banglabert_seed65537/config.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "banglabert_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/banglabert_seed65537/model.safetensors",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "banglabert_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/banglabert_seed65537/tokenizer.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "banglabert_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/banglabert_seed65537/tokenizer_config.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "xlmr_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/xlmr_seed42/config.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "xlmr_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/xlmr_seed42/model.safetensors",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "xlmr_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/xlmr_seed42/tokenizer.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "xlmr_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/xlmr_seed42/tokenizer_config.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "xlmr_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/xlmr_seed137/config.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "xlmr_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/xlmr_seed137/model.safetensors",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "xlmr_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/xlmr_seed137/tokenizer.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "xlmr_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/xlmr_seed137/tokenizer_config.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "xlmr_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/xlmr_seed2718/config.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "xlmr_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/xlmr_seed2718/model.safetensors",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "xlmr_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/xlmr_seed2718/tokenizer.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "xlmr_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/xlmr_seed2718/tokenizer_config.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "xlmr_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/xlmr_seed31415/config.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "xlmr_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/xlmr_seed31415/model.safetensors",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "xlmr_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/xlmr_seed31415/tokenizer.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "xlmr_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/xlmr_seed31415/tokenizer_config.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "xlmr_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/xlmr_seed65537/config.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "xlmr_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/xlmr_seed65537/model.safetensors",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "xlmr_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/xlmr_seed65537/tokenizer.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  },
+  {
+    "artifact_role": "xlmr_checkpoint_or_tokenizer_artifact",
+    "canonical_status": "CANONICAL_OPTIONAL_LARGE_TRAINING_ARTIFACT",
+    "downstream_consumers": [
+      "full_training_reproduction_only"
+    ],
+    "notebook": "03-primary-model-development.ipynb",
+    "optional_large_artifact": true,
+    "output_root": "03_results/03_primary_model_development",
+    "required_artifact": "models/xlmr_seed65537/tokenizer_config.json",
+    "required_for_scientific_reproduction": false,
+    "stage": "03"
+  }
+]

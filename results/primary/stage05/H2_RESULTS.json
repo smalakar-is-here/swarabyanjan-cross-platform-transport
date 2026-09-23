@@ -1,0 +1,3193 @@
+{
+  "confirmatory_assessment_rows": [
+    {
+      "domain": "banglaclick:news",
+      "inferential_status": "ESTIMABLE",
+      "model": "banglabert",
+      "seed": 42,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.016805669584553963,
+        0.031865294683439835
+      ],
+      "source_nll_gain": 0.024250512941474123,
+      "target_gain_ci95": [
+        0.33243195297715444,
+        0.3955950905334595
+      ],
+      "target_minus_source_gain": 0.3408839333742128,
+      "target_minus_source_gain_ci95": [
+        0.307479988176827,
+        0.37199274951920236
+      ],
+      "target_nll_gain": 0.3651344463156869
+    },
+    {
+      "domain": "banglaclick:news",
+      "inferential_status": "ESTIMABLE",
+      "model": "banglabert",
+      "seed": 137,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.02136265196297983,
+        0.039085153440391776
+      ],
+      "source_nll_gain": 0.02998302427299271,
+      "target_gain_ci95": [
+        0.3991969553553443,
+        0.47634271371544123
+      ],
+      "target_minus_source_gain": 0.40931808460772234,
+      "target_minus_source_gain_ci95": [
+        0.36805308853227614,
+        0.44840737290353494
+      ],
+      "target_nll_gain": 0.43930110888071505
+    },
+    {
+      "domain": "banglaclick:news",
+      "inferential_status": "ESTIMABLE",
+      "model": "banglabert",
+      "seed": 2718,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.02576184578722796,
+        0.04604254800828275
+      ],
+      "source_nll_gain": 0.035761074051914254,
+      "target_gain_ci95": [
+        0.4604289921098909,
+        0.548098369052955
+      ],
+      "target_minus_source_gain": 0.47053511353924155,
+      "target_minus_source_gain_ci95": [
+        0.424113280771795,
+        0.5137826682665206
+      ],
+      "target_nll_gain": 0.5062961875911558
+    },
+    {
+      "domain": "banglaclick:news",
+      "inferential_status": "ESTIMABLE",
+      "model": "banglabert",
+      "seed": 31415,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.014212544118569719,
+        0.0296379163872151
+      ],
+      "source_nll_gain": 0.02183938590052914,
+      "target_gain_ci95": [
+        0.33109261807718293,
+        0.393834529606092
+      ],
+      "target_minus_source_gain": 0.3418944236534941,
+      "target_minus_source_gain_ci95": [
+        0.30802352539036343,
+        0.3726703413201539
+      ],
+      "target_nll_gain": 0.36373380955402324
+    },
+    {
+      "domain": "banglaclick:news",
+      "inferential_status": "ESTIMABLE",
+      "model": "banglabert",
+      "seed": 65537,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.02169863844177296,
+        0.038626706754042665
+      ],
+      "source_nll_gain": 0.030076798120321324,
+      "target_gain_ci95": [
+        0.38952654372569673,
+        0.4635295168953679
+      ],
+      "target_minus_source_gain": 0.3978431441802393,
+      "target_minus_source_gain_ci95": [
+        0.3580126956144774,
+        0.43439845688969925
+      ],
+      "target_nll_gain": 0.42791994230056063
+    },
+    {
+      "domain": "banglaclick:news",
+      "inferential_status": "ESTIMABLE",
+      "model": "ebm",
+      "seed": 42,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.004203653041586358,
+        -1.752236968589366e-05
+      ],
+      "source_nll_gain": -0.002078293391242658,
+      "target_gain_ci95": [
+        -0.060621208071673,
+        -0.05129821976460521
+      ],
+      "target_minus_source_gain": -0.05380986405319954,
+      "target_minus_source_gain_ci95": [
+        -0.05892372354534042,
+        -0.04885406938867794
+      ],
+      "target_nll_gain": -0.0558881574444422
+    },
+    {
+      "domain": "banglaclick:news",
+      "inferential_status": "ESTIMABLE",
+      "model": "ebm",
+      "seed": 137,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.0042391580652297225,
+        5.2526892187468054e-05
+      ],
+      "source_nll_gain": -0.0020782994516593822,
+      "target_gain_ci95": [
+        -0.06081872099357844,
+        -0.05117775649877663
+      ],
+      "target_minus_source_gain": -0.05386723641159408,
+      "target_minus_source_gain_ci95": [
+        -0.05921107002112008,
+        -0.0486862641611618
+      ],
+      "target_nll_gain": -0.05594553586325346
+    },
+    {
+      "domain": "banglaclick:news",
+      "inferential_status": "ESTIMABLE",
+      "model": "ebm",
+      "seed": 2718,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.00419613611878609,
+        7.504370829038035e-05
+      ],
+      "source_nll_gain": -0.002085837181716621,
+      "target_gain_ci95": [
+        -0.06098151299820042,
+        -0.051344963519127096
+      ],
+      "target_minus_source_gain": -0.05404552840353283,
+      "target_minus_source_gain_ci95": [
+        -0.05929645067049952,
+        -0.04883580746188077
+      ],
+      "target_nll_gain": -0.05613136558524945
+    },
+    {
+      "domain": "banglaclick:news",
+      "inferential_status": "ESTIMABLE",
+      "model": "ebm",
+      "seed": 31415,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.004160988210164321,
+        3.669763326058005e-05
+      ],
+      "source_nll_gain": -0.002092009226473346,
+      "target_gain_ci95": [
+        -0.0608825461627792,
+        -0.051365073665208254
+      ],
+      "target_minus_source_gain": -0.054006828545033136,
+      "target_minus_source_gain_ci95": [
+        -0.05921017240793855,
+        -0.048826307842189186
+      ],
+      "target_nll_gain": -0.05609883777150648
+    },
+    {
+      "domain": "banglaclick:news",
+      "inferential_status": "ESTIMABLE",
+      "model": "ebm",
+      "seed": 65537,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.0041998651427430115,
+        9.067231774381992e-05
+      ],
+      "source_nll_gain": -0.0020699279191634945,
+      "target_gain_ci95": [
+        -0.0605799713956565,
+        -0.05088258168042463
+      ],
+      "target_minus_source_gain": -0.0537546899244965,
+      "target_minus_source_gain_ci95": [
+        -0.058969313586238754,
+        -0.0484011985188708
+      ],
+      "target_nll_gain": -0.055824617843659996
+    },
+    {
+      "domain": "banglaclick:news",
+      "inferential_status": "ESTIMABLE",
+      "model": "tfidf_lr",
+      "seed": 42,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.006935617833531329,
+        0.002624005657526419
+      ],
+      "source_nll_gain": -0.002148680358100785,
+      "target_gain_ci95": [
+        -0.20107883169227916,
+        -0.16710690360164107
+      ],
+      "target_minus_source_gain": -0.18265776028525682,
+      "target_minus_source_gain_ci95": [
+        -0.19948508946204593,
+        -0.16463267602548665
+      ],
+      "target_nll_gain": -0.1848064406433576
+    },
+    {
+      "domain": "banglaclick:news",
+      "inferential_status": "ESTIMABLE",
+      "model": "tfidf_lr",
+      "seed": 137,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.006773176381881204,
+        0.0025375799602254602
+      ],
+      "source_nll_gain": -0.002148680358100785,
+      "target_gain_ci95": [
+        -0.20136934671440698,
+        -0.16674438412418902
+      ],
+      "target_minus_source_gain": -0.18265776028525682,
+      "target_minus_source_gain_ci95": [
+        -0.1999539833258958,
+        -0.16388046134314518
+      ],
+      "target_nll_gain": -0.1848064406433576
+    },
+    {
+      "domain": "banglaclick:news",
+      "inferential_status": "ESTIMABLE",
+      "model": "tfidf_lr",
+      "seed": 2718,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.006710803235809734,
+        0.0026679649462796186
+      ],
+      "source_nll_gain": -0.002148680358100785,
+      "target_gain_ci95": [
+        -0.20109869969035546,
+        -0.1681397312976896
+      ],
+      "target_minus_source_gain": -0.18265776028525682,
+      "target_minus_source_gain_ci95": [
+        -0.1995462367204603,
+        -0.1652329213999182
+      ],
+      "target_nll_gain": -0.1848064406433576
+    },
+    {
+      "domain": "banglaclick:news",
+      "inferential_status": "ESTIMABLE",
+      "model": "tfidf_lr",
+      "seed": 31415,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.006871513692930342,
+        0.002631436929841631
+      ],
+      "source_nll_gain": -0.002148680358100785,
+      "target_gain_ci95": [
+        -0.20110738791687788,
+        -0.16629154314212644
+      ],
+      "target_minus_source_gain": -0.18265776028525682,
+      "target_minus_source_gain_ci95": [
+        -0.19979088201896197,
+        -0.1639037962488329
+      ],
+      "target_nll_gain": -0.1848064406433576
+    },
+    {
+      "domain": "banglaclick:news",
+      "inferential_status": "ESTIMABLE",
+      "model": "tfidf_lr",
+      "seed": 65537,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.007009463166468966,
+        0.002705384858085329
+      ],
+      "source_nll_gain": -0.002148680358100785,
+      "target_gain_ci95": [
+        -0.20127543790172808,
+        -0.16640006792812012
+      ],
+      "target_minus_source_gain": -0.18265776028525682,
+      "target_minus_source_gain_ci95": [
+        -0.20022538865677797,
+        -0.16406927353371004
+      ],
+      "target_nll_gain": -0.1848064406433576
+    },
+    {
+      "domain": "banglaclick:news",
+      "inferential_status": "ESTIMABLE",
+      "model": "xlmr",
+      "seed": 42,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.028608833861452805,
+        0.04764621929869271
+      ],
+      "source_nll_gain": 0.03792146409725777,
+      "target_gain_ci95": [
+        0.36105127578992546,
+        0.4282941288202429
+      ],
+      "target_minus_source_gain": 0.3572986552964131,
+      "target_minus_source_gain_ci95": [
+        0.3215320491063382,
+        0.3913894641944956
+      ],
+      "target_nll_gain": 0.39522011939367085
+    },
+    {
+      "domain": "banglaclick:news",
+      "inferential_status": "ESTIMABLE",
+      "model": "xlmr",
+      "seed": 137,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.018627188790048328,
+        0.03523771657765501
+      ],
+      "source_nll_gain": 0.026776576853729972,
+      "target_gain_ci95": [
+        0.32337479849721323,
+        0.3940238680380925
+      ],
+      "target_minus_source_gain": 0.33294727693172016,
+      "target_minus_source_gain_ci95": [
+        0.29583909268655983,
+        0.3677607838885765
+      ],
+      "target_nll_gain": 0.35972385378545013
+    },
+    {
+      "domain": "banglaclick:news",
+      "inferential_status": "ESTIMABLE",
+      "model": "xlmr",
+      "seed": 2718,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.00854434906277146,
+        0.020728564453482368
+      ],
+      "source_nll_gain": 0.014625208811107238,
+      "target_gain_ci95": [
+        0.24425333441636346,
+        0.29318614331117726
+      ],
+      "target_minus_source_gain": 0.25460673122147254,
+      "target_minus_source_gain_ci95": [
+        0.22899098226654643,
+        0.2793129238269195
+      ],
+      "target_nll_gain": 0.2692319400325798
+    },
+    {
+      "domain": "banglaclick:news",
+      "inferential_status": "ESTIMABLE",
+      "model": "xlmr",
+      "seed": 31415,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.02871046267477203,
+        0.048065659065809965
+      ],
+      "source_nll_gain": 0.03818966065819579,
+      "target_gain_ci95": [
+        0.36980000133633584,
+        0.4411128615089327
+      ],
+      "target_minus_source_gain": 0.36830684433209665,
+      "target_minus_source_gain_ci95": [
+        0.3304189374233648,
+        0.403968664538556
+      ],
+      "target_nll_gain": 0.40649650499029244
+    },
+    {
+      "domain": "banglaclick:news",
+      "inferential_status": "ESTIMABLE",
+      "model": "xlmr",
+      "seed": 65537,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.020305310093673947,
+        0.038699267739122245
+      ],
+      "source_nll_gain": 0.029520752174899023,
+      "target_gain_ci95": [
+        0.3840201433900602,
+        0.45940622626814903
+      ],
+      "target_minus_source_gain": 0.3937168420920991,
+      "target_minus_source_gain_ci95": [
+        0.3534148046547037,
+        0.4311155686064504
+      ],
+      "target_nll_gain": 0.42323759426699814
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "inferential_status": "ESTIMABLE",
+      "model": "banglabert",
+      "seed": 42,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.016977980217388822,
+        0.03191488862436863
+      ],
+      "source_nll_gain": 0.024250512941474123,
+      "target_gain_ci95": [
+        0.15207068163943563,
+        0.3052938569020452
+      ],
+      "target_minus_source_gain": 0.20185864350791788,
+      "target_minus_source_gain_ci95": [
+        0.12705022767710714,
+        0.28099057904297814
+      ],
+      "target_nll_gain": 0.226109156449392
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "inferential_status": "ESTIMABLE",
+      "model": "banglabert",
+      "seed": 137,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.021048210887735883,
+        0.03893438308262876
+      ],
+      "source_nll_gain": 0.02998302427299271,
+      "target_gain_ci95": [
+        0.17215631121363092,
+        0.34551321344133845
+      ],
+      "target_minus_source_gain": 0.22547787666249386,
+      "target_minus_source_gain_ci95": [
+        0.14228500164313546,
+        0.3163746723204042
+      ],
+      "target_nll_gain": 0.25546090093548657
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "inferential_status": "ESTIMABLE",
+      "model": "banglabert",
+      "seed": 2718,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.02572423446617524,
+        0.04600726200821255
+      ],
+      "source_nll_gain": 0.035761074051914254,
+      "target_gain_ci95": [
+        0.23409569333126506,
+        0.44868334400353055
+      ],
+      "target_minus_source_gain": 0.2980253214129139,
+      "target_minus_source_gain_ci95": [
+        0.19747703359600344,
+        0.4133271140498979
+      ],
+      "target_nll_gain": 0.33378639546482813
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "inferential_status": "ESTIMABLE",
+      "model": "banglabert",
+      "seed": 31415,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.014435651707387764,
+        0.02976653966626799
+      ],
+      "source_nll_gain": 0.02183938590052914,
+      "target_gain_ci95": [
+        0.1439853353875505,
+        0.2915337563765546
+      ],
+      "target_minus_source_gain": 0.19040423840372778,
+      "target_minus_source_gain_ci95": [
+        0.12171901122765484,
+        0.2704929962527018
+      ],
+      "target_nll_gain": 0.21224362430425692
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "inferential_status": "ESTIMABLE",
+      "model": "banglabert",
+      "seed": 65537,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.02133197648538934,
+        0.0387401450621197
+      ],
+      "source_nll_gain": 0.030076798120321324,
+      "target_gain_ci95": [
+        0.15193282832662386,
+        0.3205625810819041
+      ],
+      "target_minus_source_gain": 0.19879131821100587,
+      "target_minus_source_gain_ci95": [
+        0.12127327288941923,
+        0.29042848661909326
+      ],
+      "target_nll_gain": 0.2288681163313272
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "inferential_status": "ESTIMABLE",
+      "model": "ebm",
+      "seed": 42,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.004224389538027151,
+        -2.3668331969433518e-05
+      ],
+      "source_nll_gain": -0.002078293391242658,
+      "target_gain_ci95": [
+        -0.10989235642755107,
+        -0.05494405242840811
+      ],
+      "target_minus_source_gain": -0.07694930538959177,
+      "target_minus_source_gain_ci95": [
+        -0.10759156064285061,
+        -0.05289216126917925
+      ],
+      "target_nll_gain": -0.07902759878083443
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "inferential_status": "ESTIMABLE",
+      "model": "ebm",
+      "seed": 137,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.0041870843068053335,
+        -4.1342006100520484e-05
+      ],
+      "source_nll_gain": -0.0020782994516593822,
+      "target_gain_ci95": [
+        -0.1096227576724752,
+        -0.055244217681903116
+      ],
+      "target_minus_source_gain": -0.07722545986312779,
+      "target_minus_source_gain_ci95": [
+        -0.10783759322449427,
+        -0.05271480407787404
+      ],
+      "target_nll_gain": -0.07930375931478717
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "inferential_status": "ESTIMABLE",
+      "model": "ebm",
+      "seed": 2718,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.004221607426383572,
+        -2.545592237199935e-05
+      ],
+      "source_nll_gain": -0.002085837181716621,
+      "target_gain_ci95": [
+        -0.1105445107038302,
+        -0.05576959542392229
+      ],
+      "target_minus_source_gain": -0.07729525878865384,
+      "target_minus_source_gain_ci95": [
+        -0.10884678610615364,
+        -0.05362584147556443
+      ],
+      "target_nll_gain": -0.07938109597037046
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "inferential_status": "ESTIMABLE",
+      "model": "ebm",
+      "seed": 31415,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.0042224765208707105,
+        -6.973809997352305e-06
+      ],
+      "source_nll_gain": -0.002092009226473346,
+      "target_gain_ci95": [
+        -0.11022587184213145,
+        -0.05480172381823571
+      ],
+      "target_minus_source_gain": -0.07712615692807767,
+      "target_minus_source_gain_ci95": [
+        -0.10770721557479379,
+        -0.052874779341659774
+      ],
+      "target_nll_gain": -0.07921816615455102
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "inferential_status": "ESTIMABLE",
+      "model": "ebm",
+      "seed": 65537,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.004146397833470469,
+        3.439238983191036e-05
+      ],
+      "source_nll_gain": -0.0020699279191634945,
+      "target_gain_ci95": [
+        -0.10891934386192523,
+        -0.055170957302281214
+      ],
+      "target_minus_source_gain": -0.07649008522947509,
+      "target_minus_source_gain_ci95": [
+        -0.10697659350613667,
+        -0.05301728093522293
+      ],
+      "target_nll_gain": -0.07856001314863859
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "inferential_status": "ESTIMABLE",
+      "model": "tfidf_lr",
+      "seed": 42,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.0069568723371405215,
+        0.002488145305078953
+      ],
+      "source_nll_gain": -0.002148680358100785,
+      "target_gain_ci95": [
+        -0.20405866030838363,
+        -0.13558149416166043
+      ],
+      "target_minus_source_gain": -0.16746861410913128,
+      "target_minus_source_gain_ci95": [
+        -0.20225141479867753,
+        -0.13295044266535913
+      ],
+      "target_nll_gain": -0.16961729446723206
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "inferential_status": "ESTIMABLE",
+      "model": "tfidf_lr",
+      "seed": 137,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.006812532158126003,
+        0.0025374117561827083
+      ],
+      "source_nll_gain": -0.002148680358100785,
+      "target_gain_ci95": [
+        -0.20639610624949462,
+        -0.13510544417597994
+      ],
+      "target_minus_source_gain": -0.16746861410913128,
+      "target_minus_source_gain_ci95": [
+        -0.20465618274930808,
+        -0.13289556980082076
+      ],
+      "target_nll_gain": -0.16961729446723206
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "inferential_status": "ESTIMABLE",
+      "model": "tfidf_lr",
+      "seed": 2718,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.00703120143978051,
+        0.002442946171882306
+      ],
+      "source_nll_gain": -0.002148680358100785,
+      "target_gain_ci95": [
+        -0.20566409556288728,
+        -0.136051522505067
+      ],
+      "target_minus_source_gain": -0.16746861410913128,
+      "target_minus_source_gain_ci95": [
+        -0.20407020693627387,
+        -0.133749151682989
+      ],
+      "target_nll_gain": -0.16961729446723206
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "inferential_status": "ESTIMABLE",
+      "model": "tfidf_lr",
+      "seed": 31415,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.006905284750208199,
+        0.0024687513206220653
+      ],
+      "source_nll_gain": -0.002148680358100785,
+      "target_gain_ci95": [
+        -0.20551855127170704,
+        -0.13614966426805308
+      ],
+      "target_minus_source_gain": -0.16746861410913128,
+      "target_minus_source_gain_ci95": [
+        -0.20357060737738233,
+        -0.13353119873790875
+      ],
+      "target_nll_gain": -0.16961729446723206
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "inferential_status": "ESTIMABLE",
+      "model": "tfidf_lr",
+      "seed": 65537,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.006892952098848345,
+        0.002522952924386894
+      ],
+      "source_nll_gain": -0.002148680358100785,
+      "target_gain_ci95": [
+        -0.2060631499365741,
+        -0.13491769814989066
+      ],
+      "target_minus_source_gain": -0.16746861410913128,
+      "target_minus_source_gain_ci95": [
+        -0.2040882714812005,
+        -0.13283675134569348
+      ],
+      "target_nll_gain": -0.16961729446723206
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "inferential_status": "ESTIMABLE",
+      "model": "xlmr",
+      "seed": 42,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.028529794933205496,
+        0.04734623034285898
+      ],
+      "source_nll_gain": 0.03792146409725777,
+      "target_gain_ci95": [
+        0.21367231865322248,
+        0.3781191067737442
+      ],
+      "target_minus_source_gain": 0.25813135870118803,
+      "target_minus_source_gain_ci95": [
+        0.17627874012950315,
+        0.34098066927619014
+      ],
+      "target_nll_gain": 0.2960528227984458
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "inferential_status": "ESTIMABLE",
+      "model": "xlmr",
+      "seed": 137,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.018664426681105538,
+        0.03508621414585704
+      ],
+      "source_nll_gain": 0.026776576853729972,
+      "target_gain_ci95": [
+        0.19474454637336552,
+        0.35803569555281717
+      ],
+      "target_minus_source_gain": 0.24840029273745295,
+      "target_minus_source_gain_ci95": [
+        0.1681033546839903,
+        0.33173223484640724
+      ],
+      "target_nll_gain": 0.2751768695911829
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "inferential_status": "ESTIMABLE",
+      "model": "xlmr",
+      "seed": 2718,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.008522852559624485,
+        0.02083618675077623
+      ],
+      "source_nll_gain": 0.014625208811107238,
+      "target_gain_ci95": [
+        0.13601450067901605,
+        0.2521332981421794
+      ],
+      "target_minus_source_gain": 0.17689541189453845,
+      "target_minus_source_gain_ci95": [
+        0.12113365581698719,
+        0.2368369655580576
+      ],
+      "target_nll_gain": 0.19152062070564568
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "inferential_status": "ESTIMABLE",
+      "model": "xlmr",
+      "seed": 31415,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.028751298477606275,
+        0.04796611898381841
+      ],
+      "source_nll_gain": 0.03818966065819579,
+      "target_gain_ci95": [
+        0.2156791388643607,
+        0.37432940582896895
+      ],
+      "target_minus_source_gain": 0.25585636391179006,
+      "target_minus_source_gain_ci95": [
+        0.17736954823388182,
+        0.3371663040673745
+      ],
+      "target_nll_gain": 0.29404602456998585
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "inferential_status": "ESTIMABLE",
+      "model": "xlmr",
+      "seed": 65537,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.020544315874648136,
+        0.039029258600438765
+      ],
+      "source_nll_gain": 0.029520752174899023,
+      "target_gain_ci95": [
+        0.20289171213153842,
+        0.3680171572408036
+      ],
+      "target_minus_source_gain": 0.2527152747329189,
+      "target_minus_source_gain_ci95": [
+        0.17209363054009535,
+        0.3380899443082348
+      ],
+      "target_nll_gain": 0.2822360269078179
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "inferential_status": "ESTIMABLE",
+      "model": "banglabert",
+      "seed": 42,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.016775466356552082,
+        0.03205368806634564
+      ],
+      "source_nll_gain": 0.024250512941474123,
+      "target_gain_ci95": [
+        0.10698894644003772,
+        0.46423063967068295
+      ],
+      "target_minus_source_gain": 0.19832103396965411,
+      "target_minus_source_gain_ci95": [
+        0.08186377057647523,
+        0.43925435075818897
+      ],
+      "target_nll_gain": 0.22257154691112824
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "inferential_status": "ESTIMABLE",
+      "model": "banglabert",
+      "seed": 137,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.021266117949668324,
+        0.03888624700603999
+      ],
+      "source_nll_gain": 0.02998302427299271,
+      "target_gain_ci95": [
+        0.15042690786975363,
+        0.5592174505166128
+      ],
+      "target_minus_source_gain": 0.2655550823985665,
+      "target_minus_source_gain_ci95": [
+        0.11761490967571712,
+        0.5280980972559579
+      ],
+      "target_nll_gain": 0.2955381066715592
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "inferential_status": "ESTIMABLE",
+      "model": "banglabert",
+      "seed": 2718,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.025945120565300447,
+        0.04621440623304415
+      ],
+      "source_nll_gain": 0.035761074051914254,
+      "target_gain_ci95": [
+        0.1859039105337254,
+        0.6423343548374575
+      ],
+      "target_minus_source_gain": 0.29227682192508336,
+      "target_minus_source_gain_ci95": [
+        0.1495628554778222,
+        0.6093545309702393
+      ],
+      "target_nll_gain": 0.3280378959769976
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "inferential_status": "ESTIMABLE",
+      "model": "banglabert",
+      "seed": 31415,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.014285656841518755,
+        0.029625771791983058
+      ],
+      "source_nll_gain": 0.02183938590052914,
+      "target_gain_ci95": [
+        0.10749368654855854,
+        0.48022349506705236
+      ],
+      "target_minus_source_gain": 0.1984512854598548,
+      "target_minus_source_gain_ci95": [
+        0.08415644614616534,
+        0.4597734879671668
+      ],
+      "target_nll_gain": 0.22029067136038394
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "inferential_status": "ESTIMABLE",
+      "model": "banglabert",
+      "seed": 65537,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.021526926347104923,
+        0.038672872996938154
+      ],
+      "source_nll_gain": 0.030076798120321324,
+      "target_gain_ci95": [
+        0.07652985287913981,
+        0.4726442083668636
+      ],
+      "target_minus_source_gain": 0.18398304439393115,
+      "target_minus_source_gain_ci95": [
+        0.04827241491783562,
+        0.4449261216246488
+      ],
+      "target_nll_gain": 0.21405984251425247
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "inferential_status": "ESTIMABLE",
+      "model": "ebm",
+      "seed": 42,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.004249354808295411,
+        -1.825170869320517e-05
+      ],
+      "source_nll_gain": -0.002078293391242658,
+      "target_gain_ci95": [
+        -0.10125120555110077,
+        -0.008305572029089044
+      ],
+      "target_minus_source_gain": -0.033370852107554305,
+      "target_minus_source_gain_ci95": [
+        -0.10019415734790135,
+        -0.005975079122409425
+      ],
+      "target_nll_gain": -0.03544914549879696
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "inferential_status": "ESTIMABLE",
+      "model": "ebm",
+      "seed": 137,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.004225276230720079,
+        1.1031939692245544e-05
+      ],
+      "source_nll_gain": -0.0020782994516593822,
+      "target_gain_ci95": [
+        -0.10122227611685702,
+        -0.009233392703927172
+      ],
+      "target_minus_source_gain": -0.03335175076931929,
+      "target_minus_source_gain_ci95": [
+        -0.09900899883804307,
+        -0.006902100657584772
+      ],
+      "target_nll_gain": -0.03543005022097867
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "inferential_status": "ESTIMABLE",
+      "model": "ebm",
+      "seed": 2718,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.004166992713508485,
+        6.699755236770483e-05
+      ],
+      "source_nll_gain": -0.002085837181716621,
+      "target_gain_ci95": [
+        -0.1016381107199367,
+        -0.008660042176744626
+      ],
+      "target_minus_source_gain": -0.03354124905995093,
+      "target_minus_source_gain_ci95": [
+        -0.09954869109616563,
+        -0.006328942863724361
+      ],
+      "target_nll_gain": -0.03562708624166755
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "inferential_status": "ESTIMABLE",
+      "model": "ebm",
+      "seed": 31415,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.0041555221553201795,
+        -1.278700508278569e-05
+      ],
+      "source_nll_gain": -0.002092009226473346,
+      "target_gain_ci95": [
+        -0.1016821873071163,
+        -0.008776353218496145
+      ],
+      "target_minus_source_gain": -0.033461530000160056,
+      "target_minus_source_gain_ci95": [
+        -0.09940974294289907,
+        -0.006583432532271472
+      ],
+      "target_nll_gain": -0.0355535392266334
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "inferential_status": "ESTIMABLE",
+      "model": "ebm",
+      "seed": 65537,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.00420503632874202,
+        -3.3568000631910632e-06
+      ],
+      "source_nll_gain": -0.0020699279191634945,
+      "target_gain_ci95": [
+        -0.09930059483744813,
+        -0.009097011101516606
+      ],
+      "target_minus_source_gain": -0.03331866842600695,
+      "target_minus_source_gain_ci95": [
+        -0.09685488507356568,
+        -0.006840169200282698
+      ],
+      "target_nll_gain": -0.03538859634517044
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "inferential_status": "ESTIMABLE",
+      "model": "tfidf_lr",
+      "seed": 42,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.006984218869942133,
+        0.0026415671145912077
+      ],
+      "source_nll_gain": -0.002148680358100785,
+      "target_gain_ci95": [
+        -0.2545460936064385,
+        -0.08401149647020562
+      ],
+      "target_minus_source_gain": -0.14037563883462512,
+      "target_minus_source_gain_ci95": [
+        -0.25140697225264225,
+        -0.08030205703500994
+      ],
+      "target_nll_gain": -0.1425243191927259
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "inferential_status": "ESTIMABLE",
+      "model": "tfidf_lr",
+      "seed": 137,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.007076368247925157,
+        0.0024324557714752166
+      ],
+      "source_nll_gain": -0.002148680358100785,
+      "target_gain_ci95": [
+        -0.2560806334942796,
+        -0.08232874879372466
+      ],
+      "target_minus_source_gain": -0.14037563883462512,
+      "target_minus_source_gain_ci95": [
+        -0.25340582278973817,
+        -0.08018521646903587
+      ],
+      "target_nll_gain": -0.1425243191927259
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "inferential_status": "ESTIMABLE",
+      "model": "tfidf_lr",
+      "seed": 2718,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.0070156076596017995,
+        0.0023817426030835727
+      ],
+      "source_nll_gain": -0.002148680358100785,
+      "target_gain_ci95": [
+        -0.2547643668050807,
+        -0.08572690855641249
+      ],
+      "target_minus_source_gain": -0.14037563883462512,
+      "target_minus_source_gain_ci95": [
+        -0.2513699457957135,
+        -0.08296102561785418
+      ],
+      "target_nll_gain": -0.1425243191927259
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "inferential_status": "ESTIMABLE",
+      "model": "tfidf_lr",
+      "seed": 31415,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.007118354475788907,
+        0.0024710962024230357
+      ],
+      "source_nll_gain": -0.002148680358100785,
+      "target_gain_ci95": [
+        -0.2558332948104058,
+        -0.08549188750972733
+      ],
+      "target_minus_source_gain": -0.14037563883462512,
+      "target_minus_source_gain_ci95": [
+        -0.2532204926655106,
+        -0.08342597286301907
+      ],
+      "target_nll_gain": -0.1425243191927259
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "inferential_status": "ESTIMABLE",
+      "model": "tfidf_lr",
+      "seed": 65537,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.007102467966233261,
+        0.002498161368018368
+      ],
+      "source_nll_gain": -0.002148680358100785,
+      "target_gain_ci95": [
+        -0.25641738532949054,
+        -0.08689055948606496
+      ],
+      "target_minus_source_gain": -0.14037563883462512,
+      "target_minus_source_gain_ci95": [
+        -0.2538614721776754,
+        -0.08381766282287872
+      ],
+      "target_nll_gain": -0.1425243191927259
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "inferential_status": "ESTIMABLE",
+      "model": "xlmr",
+      "seed": 42,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.028645917390820674,
+        0.047497071428697704
+      ],
+      "source_nll_gain": 0.03792146409725777,
+      "target_gain_ci95": [
+        0.17980696094440035,
+        0.5098924809145509
+      ],
+      "target_minus_source_gain": 0.28190187598392874,
+      "target_minus_source_gain_ci95": [
+        0.14133830580181686,
+        0.4708269997395984
+      ],
+      "target_nll_gain": 0.3198233400811865
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "inferential_status": "ESTIMABLE",
+      "model": "xlmr",
+      "seed": 137,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.018811186105351447,
+        0.03477015040955266
+      ],
+      "source_nll_gain": 0.026776576853729972,
+      "target_gain_ci95": [
+        0.14077098547617523,
+        0.4746628941017749
+      ],
+      "target_minus_source_gain": 0.24413540545877727,
+      "target_minus_source_gain_ci95": [
+        0.11290007242237637,
+        0.44788337128168026
+      ],
+      "target_nll_gain": 0.27091198231250724
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "inferential_status": "ESTIMABLE",
+      "model": "xlmr",
+      "seed": 2718,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.008658527306691283,
+        0.020684886625062925
+      ],
+      "source_nll_gain": 0.014625208811107238,
+      "target_gain_ci95": [
+        0.08665712887795271,
+        0.3625737912022892
+      ],
+      "target_minus_source_gain": 0.17617881048943634,
+      "target_minus_source_gain_ci95": [
+        0.07273670153815515,
+        0.34904721268002187
+      ],
+      "target_nll_gain": 0.19080401930054358
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "inferential_status": "ESTIMABLE",
+      "model": "xlmr",
+      "seed": 31415,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.028245087184908986,
+        0.04807275958237193
+      ],
+      "source_nll_gain": 0.03818966065819579,
+      "target_gain_ci95": [
+        0.14521270855974347,
+        0.5016983173772548
+      ],
+      "target_minus_source_gain": 0.25944055053846243,
+      "target_minus_source_gain_ci95": [
+        0.10784976190294203,
+        0.4655782080251558
+      ],
+      "target_nll_gain": 0.2976302111966582
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "inferential_status": "ESTIMABLE",
+      "model": "xlmr",
+      "seed": 65537,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.02046243856432212,
+        0.03898059000648881
+      ],
+      "source_nll_gain": 0.029520752174899023,
+      "target_gain_ci95": [
+        0.09037935076713574,
+        0.5337879559964998
+      ],
+      "target_minus_source_gain": 0.23303708610702523,
+      "target_minus_source_gain_ci95": [
+        0.06280994624746492,
+        0.5041186643879786
+      ],
+      "target_nll_gain": 0.26255783828192425
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "inferential_status": "ESTIMABLE",
+      "model": "banglabert",
+      "seed": 42,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.016885120881449812,
+        0.03183172650774241
+      ],
+      "source_nll_gain": 0.024250512941474123,
+      "target_gain_ci95": [
+        0.182847322017058,
+        0.2559581383574987
+      ],
+      "target_minus_source_gain": 0.19513963263020723,
+      "target_minus_source_gain_ci95": [
+        0.15698059000458423,
+        0.23276193351618416
+      ],
+      "target_nll_gain": 0.21939014557168135
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "inferential_status": "ESTIMABLE",
+      "model": "banglabert",
+      "seed": 137,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.02083156006294945,
+        0.0388920346810671
+      ],
+      "source_nll_gain": 0.02998302427299271,
+      "target_gain_ci95": [
+        0.24267156246506097,
+        0.33314727427839863
+      ],
+      "target_minus_source_gain": 0.2574546171695119,
+      "target_minus_source_gain_ci95": [
+        0.21137512997486899,
+        0.3039722467628864
+      ],
+      "target_nll_gain": 0.2874376414425046
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "inferential_status": "ESTIMABLE",
+      "model": "banglabert",
+      "seed": 2718,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.026069184020505478,
+        0.04603401434881297
+      ],
+      "source_nll_gain": 0.035761074051914254,
+      "target_gain_ci95": [
+        0.23114388656971083,
+        0.32060207659691387
+      ],
+      "target_minus_source_gain": 0.23988242503158258,
+      "target_minus_source_gain_ci95": [
+        0.19395593448858853,
+        0.286308907241863
+      ],
+      "target_nll_gain": 0.27564349908349683
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "inferential_status": "ESTIMABLE",
+      "model": "banglabert",
+      "seed": 31415,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.014339056234217126,
+        0.029634207731727626
+      ],
+      "source_nll_gain": 0.02183938590052914,
+      "target_gain_ci95": [
+        0.14474908852232957,
+        0.2147407761496842
+      ],
+      "target_minus_source_gain": 0.15843230472472491,
+      "target_minus_source_gain_ci95": [
+        0.12220263721905625,
+        0.19386523569123268
+      ],
+      "target_nll_gain": 0.18027169062525406
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "inferential_status": "ESTIMABLE",
+      "model": "banglabert",
+      "seed": 65537,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.021521243511647362,
+        0.03892085854719326
+      ],
+      "source_nll_gain": 0.030076798120321324,
+      "target_gain_ci95": [
+        0.13737284832438199,
+        0.2139571513257696
+      ],
+      "target_minus_source_gain": 0.14508156355058494,
+      "target_minus_source_gain_ci95": [
+        0.1066578721720334,
+        0.18455622281416015
+      ],
+      "target_nll_gain": 0.17515836167090626
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "inferential_status": "ESTIMABLE",
+      "model": "ebm",
+      "seed": 42,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.004218666051878031,
+        -1.653055426181443e-07
+      ],
+      "source_nll_gain": -0.002078293391242658,
+      "target_gain_ci95": [
+        -0.07375394835726908,
+        -0.05024836702599343
+      ],
+      "target_minus_source_gain": -0.059556930540073716,
+      "target_minus_source_gain_ci95": [
+        -0.07173786669563072,
+        -0.048026911553900674
+      ],
+      "target_nll_gain": -0.061635223931316374
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "inferential_status": "ESTIMABLE",
+      "model": "ebm",
+      "seed": 137,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.004237767336798049,
+        -9.814349606655355e-06
+      ],
+      "source_nll_gain": -0.0020782994516593822,
+      "target_gain_ci95": [
+        -0.07369089861354552,
+        -0.05003245673156171
+      ],
+      "target_minus_source_gain": -0.05971465569769885,
+      "target_minus_source_gain_ci95": [
+        -0.07153704458392869,
+        -0.047638507237179696
+      ],
+      "target_nll_gain": -0.06179295514935823
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "inferential_status": "ESTIMABLE",
+      "model": "ebm",
+      "seed": 2718,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.004197470886155133,
+        -4.270515362870906e-05
+      ],
+      "source_nll_gain": -0.002085837181716621,
+      "target_gain_ci95": [
+        -0.07440329194454581,
+        -0.05039685140537928
+      ],
+      "target_minus_source_gain": -0.059942721928861076,
+      "target_minus_source_gain_ci95": [
+        -0.0725846845936628,
+        -0.04828497689738845
+      ],
+      "target_nll_gain": -0.0620285591105777
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "inferential_status": "ESTIMABLE",
+      "model": "ebm",
+      "seed": 31415,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.004218937010568677,
+        3.624961611782129e-06
+      ],
+      "source_nll_gain": -0.002092009226473346,
+      "target_gain_ci95": [
+        -0.07404749510004564,
+        -0.05058572452934132
+      ],
+      "target_minus_source_gain": -0.05988109114246598,
+      "target_minus_source_gain_ci95": [
+        -0.07206878380280297,
+        -0.047924889838363356
+      ],
+      "target_nll_gain": -0.06197310036893933
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "inferential_status": "ESTIMABLE",
+      "model": "ebm",
+      "seed": 65537,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.004210716724175315,
+        7.11059807224075e-06
+      ],
+      "source_nll_gain": -0.0020699279191634945,
+      "target_gain_ci95": [
+        -0.07347392514043602,
+        -0.04987763587187401
+      ],
+      "target_minus_source_gain": -0.05956912774055212,
+      "target_minus_source_gain_ci95": [
+        -0.07175031374713926,
+        -0.04753195798312327
+      ],
+      "target_nll_gain": -0.061639055659715614
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "inferential_status": "ESTIMABLE",
+      "model": "tfidf_lr",
+      "seed": 42,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.007054323362813153,
+        0.0023818259541517183
+      ],
+      "source_nll_gain": -0.002148680358100785,
+      "target_gain_ci95": [
+        -0.24436565263732998,
+        -0.1849186970303132
+      ],
+      "target_minus_source_gain": -0.21306579620604515,
+      "target_minus_source_gain_ci95": [
+        -0.24283532901730626,
+        -0.18246975002972038
+      ],
+      "target_nll_gain": -0.21521447656414594
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "inferential_status": "ESTIMABLE",
+      "model": "tfidf_lr",
+      "seed": 137,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.006877218312138292,
+        0.0025660419157688156
+      ],
+      "source_nll_gain": -0.002148680358100785,
+      "target_gain_ci95": [
+        -0.24616552291651814,
+        -0.18460435662187713
+      ],
+      "target_minus_source_gain": -0.21306579620604515,
+      "target_minus_source_gain_ci95": [
+        -0.24437374542261922,
+        -0.18205308363752776
+      ],
+      "target_nll_gain": -0.21521447656414594
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "inferential_status": "ESTIMABLE",
+      "model": "tfidf_lr",
+      "seed": 2718,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.006843286466326421,
+        0.0025818733972702724
+      ],
+      "source_nll_gain": -0.002148680358100785,
+      "target_gain_ci95": [
+        -0.24634632336543985,
+        -0.18497867651066624
+      ],
+      "target_minus_source_gain": -0.21306579620604515,
+      "target_minus_source_gain_ci95": [
+        -0.24446617610115828,
+        -0.1823264370611049
+      ],
+      "target_nll_gain": -0.21521447656414594
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "inferential_status": "ESTIMABLE",
+      "model": "tfidf_lr",
+      "seed": 31415,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.006833692200171223,
+        0.0025501325113700068
+      ],
+      "source_nll_gain": -0.002148680358100785,
+      "target_gain_ci95": [
+        -0.24610277289606858,
+        -0.18463998977123217
+      ],
+      "target_minus_source_gain": -0.21306579620604515,
+      "target_minus_source_gain_ci95": [
+        -0.24436317595809176,
+        -0.182135080872534
+      ],
+      "target_nll_gain": -0.21521447656414594
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "inferential_status": "ESTIMABLE",
+      "model": "tfidf_lr",
+      "seed": 65537,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.007223587383849997,
+        0.0026690341285057033
+      ],
+      "source_nll_gain": -0.002148680358100785,
+      "target_gain_ci95": [
+        -0.24555613175394095,
+        -0.1837492131156911
+      ],
+      "target_minus_source_gain": -0.21306579620604515,
+      "target_minus_source_gain_ci95": [
+        -0.24410091217208568,
+        -0.18065982494017255
+      ],
+      "target_nll_gain": -0.21521447656414594
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "inferential_status": "ESTIMABLE",
+      "model": "xlmr",
+      "seed": 42,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.028531860926340528,
+        0.0472514413032795
+      ],
+      "source_nll_gain": 0.03792146409725777,
+      "target_gain_ci95": [
+        0.33317192227281756,
+        0.44257362081484775
+      ],
+      "target_minus_source_gain": 0.3497168738965702,
+      "target_minus_source_gain_ci95": [
+        0.29377508299666905,
+        0.405729658032098
+      ],
+      "target_nll_gain": 0.38763833799382796
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "inferential_status": "ESTIMABLE",
+      "model": "xlmr",
+      "seed": 137,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.01880966678581651,
+        0.03493146798372758
+      ],
+      "source_nll_gain": 0.026776576853729972,
+      "target_gain_ci95": [
+        0.327374395096849,
+        0.42986517046992173
+      ],
+      "target_minus_source_gain": 0.3519807225190435,
+      "target_minus_source_gain_ci95": [
+        0.2997462082963365,
+        0.4038926589560587
+      ],
+      "target_nll_gain": 0.37875729937277347
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "inferential_status": "ESTIMABLE",
+      "model": "xlmr",
+      "seed": 2718,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.008529879359172763,
+        0.020739469206864175
+      ],
+      "source_nll_gain": 0.014625208811107238,
+      "target_gain_ci95": [
+        0.21426680187538538,
+        0.29094974416450053
+      ],
+      "target_minus_source_gain": 0.2376792992951275,
+      "target_minus_source_gain_ci95": [
+        0.19933305376471747,
+        0.2768836277872809
+      ],
+      "target_nll_gain": 0.2523045081062347
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "inferential_status": "ESTIMABLE",
+      "model": "xlmr",
+      "seed": 31415,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.028694708527144654,
+        0.048098861215030896
+      ],
+      "source_nll_gain": 0.03818966065819579,
+      "target_gain_ci95": [
+        0.34303892033869887,
+        0.4511410613363656
+      ],
+      "target_minus_source_gain": 0.3588820935968084,
+      "target_minus_source_gain_ci95": [
+        0.30399172235725125,
+        0.4130027367646071
+      ],
+      "target_nll_gain": 0.3970717542550042
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "inferential_status": "ESTIMABLE",
+      "model": "xlmr",
+      "seed": 65537,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.020472793924584863,
+        0.03870302505974581
+      ],
+      "source_nll_gain": 0.029520752174899023,
+      "target_gain_ci95": [
+        0.3152385306923367,
+        0.4299521293090255
+      ],
+      "target_minus_source_gain": 0.3422685228439333,
+      "target_minus_source_gain_ci95": [
+        0.2848063392649237,
+        0.40087496172753906
+      ],
+      "target_nll_gain": 0.3717892750188323
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "inferential_status": "ESTIMABLE",
+      "model": "banglabert",
+      "seed": 42,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.016689463387895655,
+        0.0317015406931025
+      ],
+      "source_nll_gain": 0.024250512941474123,
+      "target_gain_ci95": [
+        -0.0291293789371342,
+        0.2011157462453459
+      ],
+      "target_minus_source_gain": 0.05023698521474246,
+      "target_minus_source_gain_ci95": [
+        -0.05355658964204459,
+        0.17512924946062927
+      ],
+      "target_nll_gain": 0.07448749815621658
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "inferential_status": "ESTIMABLE",
+      "model": "banglabert",
+      "seed": 137,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.02096663508931124,
+        0.03945477132058182
+      ],
+      "source_nll_gain": 0.02998302427299271,
+      "target_gain_ci95": [
+        -0.03020237562505777,
+        0.2731936423447392
+      ],
+      "target_minus_source_gain": 0.08469151799785679,
+      "target_minus_source_gain_ci95": [
+        -0.05979906525261289,
+        0.24324366005909445
+      ],
+      "target_nll_gain": 0.1146745422708495
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "inferential_status": "ESTIMABLE",
+      "model": "banglabert",
+      "seed": 2718,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.025879768919749267,
+        0.046189130252262844
+      ],
+      "source_nll_gain": 0.035761074051914254,
+      "target_gain_ci95": [
+        -0.03185657620911399,
+        0.3082669539041768
+      ],
+      "target_minus_source_gain": 0.08452674629350027,
+      "target_minus_source_gain_ci95": [
+        -0.06755342565211954,
+        0.27332121523975034
+      ],
+      "target_nll_gain": 0.12028782034541452
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "inferential_status": "ESTIMABLE",
+      "model": "banglabert",
+      "seed": 31415,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.014030820826315848,
+        0.02966811008537696
+      ],
+      "source_nll_gain": 0.02183938590052914,
+      "target_gain_ci95": [
+        -0.029067693848064187,
+        0.19649759332668182
+      ],
+      "target_minus_source_gain": 0.05006679754174925,
+      "target_minus_source_gain_ci95": [
+        -0.05185089551536299,
+        0.17519303593805532
+      ],
+      "target_nll_gain": 0.07190618344227839
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "inferential_status": "ESTIMABLE",
+      "model": "banglabert",
+      "seed": 65537,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.021735445955932006,
+        0.038539801432260566
+      ],
+      "source_nll_gain": 0.030076798120321324,
+      "target_gain_ci95": [
+        -0.03722637170314689,
+        0.16100221884660115
+      ],
+      "target_minus_source_gain": 0.030900475618605927,
+      "target_minus_source_gain_ci95": [
+        -0.06653811988601703,
+        0.1310014174726223
+      ],
+      "target_nll_gain": 0.06097727373892725
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "inferential_status": "ESTIMABLE",
+      "model": "ebm",
+      "seed": 42,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.004155265105111073,
+        -5.811862013247594e-05
+      ],
+      "source_nll_gain": -0.002078293391242658,
+      "target_gain_ci95": [
+        -0.03783844857418235,
+        0.019633536776141432
+      ],
+      "target_minus_source_gain": -0.0021778732438806903,
+      "target_minus_source_gain_ci95": [
+        -0.035732554856751315,
+        0.02148412131141319
+      ],
+      "target_nll_gain": -0.0042561666351233485
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "inferential_status": "ESTIMABLE",
+      "model": "ebm",
+      "seed": 137,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.0041916284579851274,
+        -3.5350914353546374e-05
+      ],
+      "source_nll_gain": -0.0020782994516593822,
+      "target_gain_ci95": [
+        -0.037778394854744865,
+        0.019826560278587545
+      ],
+      "target_minus_source_gain": -0.0021820882365471417,
+      "target_minus_source_gain_ci95": [
+        -0.03551166790837136,
+        0.021822133308330712
+      ],
+      "target_nll_gain": -0.004260387688206524
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "inferential_status": "ESTIMABLE",
+      "model": "ebm",
+      "seed": 2718,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.0041608996358250385,
+        -4.7142686574195626e-05
+      ],
+      "source_nll_gain": -0.002085837181716621,
+      "target_gain_ci95": [
+        -0.03780876918675946,
+        0.019291693343155676
+      ],
+      "target_minus_source_gain": -0.0022292579894913622,
+      "target_minus_source_gain_ci95": [
+        -0.03590264285510476,
+        0.021623330169575055
+      ],
+      "target_nll_gain": -0.004315095171207983
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "inferential_status": "ESTIMABLE",
+      "model": "ebm",
+      "seed": 31415,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.004168941024380038,
+        1.5071347197742352e-05
+      ],
+      "source_nll_gain": -0.002092009226473346,
+      "target_gain_ci95": [
+        -0.037874777686154965,
+        0.019157091775481572
+      ],
+      "target_minus_source_gain": -0.0021897533273464442,
+      "target_minus_source_gain_ci95": [
+        -0.035568097476092984,
+        0.021252876123105918
+      ],
+      "target_nll_gain": -0.00428176255381979
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "inferential_status": "ESTIMABLE",
+      "model": "ebm",
+      "seed": 65537,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.004248087623993621,
+        -5.289858682300012e-05
+      ],
+      "source_nll_gain": -0.0020699279191634945,
+      "target_gain_ci95": [
+        -0.038423239585396105,
+        0.020240272953512155
+      ],
+      "target_minus_source_gain": -0.0022078116396354597,
+      "target_minus_source_gain_ci95": [
+        -0.03639567341343506,
+        0.022319141631470977
+      ],
+      "target_nll_gain": -0.004277739558798954
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "inferential_status": "ESTIMABLE",
+      "model": "tfidf_lr",
+      "seed": 42,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.006946294493690735,
+        0.0025442528607684542
+      ],
+      "source_nll_gain": -0.002148680358100785,
+      "target_gain_ci95": [
+        -0.15985395997560864,
+        0.04294658477639651
+      ],
+      "target_minus_source_gain": -0.0481818200616565,
+      "target_minus_source_gain_ci95": [
+        -0.1580723280624482,
+        0.04476777075572362
+      ],
+      "target_nll_gain": -0.050330500419757285
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "inferential_status": "ESTIMABLE",
+      "model": "tfidf_lr",
+      "seed": 137,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.007022332486342761,
+        0.0024631095143979953
+      ],
+      "source_nll_gain": -0.002148680358100785,
+      "target_gain_ci95": [
+        -0.1602140910413714,
+        0.03907371484819933
+      ],
+      "target_minus_source_gain": -0.0481818200616565,
+      "target_minus_source_gain_ci95": [
+        -0.15806368679110516,
+        0.040926519578717846
+      ],
+      "target_nll_gain": -0.050330500419757285
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "inferential_status": "ESTIMABLE",
+      "model": "tfidf_lr",
+      "seed": 2718,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.006939065013825968,
+        0.0026370519242770413
+      ],
+      "source_nll_gain": -0.002148680358100785,
+      "target_gain_ci95": [
+        -0.1603027988181778,
+        0.03360707436754032
+      ],
+      "target_minus_source_gain": -0.0481818200616565,
+      "target_minus_source_gain_ci95": [
+        -0.15767575473187795,
+        0.036743085392761915
+      ],
+      "target_nll_gain": -0.050330500419757285
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "inferential_status": "ESTIMABLE",
+      "model": "tfidf_lr",
+      "seed": 31415,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.007056463842928129,
+        0.0026732587894068207
+      ],
+      "source_nll_gain": -0.002148680358100785,
+      "target_gain_ci95": [
+        -0.16446797180310296,
+        0.04248571643823581
+      ],
+      "target_minus_source_gain": -0.0481818200616565,
+      "target_minus_source_gain_ci95": [
+        -0.16257677236517407,
+        0.04396413313705662
+      ],
+      "target_nll_gain": -0.050330500419757285
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "inferential_status": "ESTIMABLE",
+      "model": "tfidf_lr",
+      "seed": 65537,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        -0.00690262487191578,
+        0.002492508475009132
+      ],
+      "source_nll_gain": -0.002148680358100785,
+      "target_gain_ci95": [
+        -0.16164870857012978,
+        0.04418967810184008
+      ],
+      "target_minus_source_gain": -0.0481818200616565,
+      "target_minus_source_gain_ci95": [
+        -0.15982870305936867,
+        0.04581357588325529
+      ],
+      "target_nll_gain": -0.050330500419757285
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "inferential_status": "ESTIMABLE",
+      "model": "xlmr",
+      "seed": 42,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.028767948287796042,
+        0.047043982147010145
+      ],
+      "source_nll_gain": 0.03792146409725777,
+      "target_gain_ci95": [
+        -0.042536241000269225,
+        0.3420248654396121
+      ],
+      "target_minus_source_gain": 0.11017587553731184,
+      "target_minus_source_gain_ci95": [
+        -0.0794671061398503,
+        0.304074828906068
+      ],
+      "target_nll_gain": 0.1480973396345696
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "inferential_status": "ESTIMABLE",
+      "model": "xlmr",
+      "seed": 137,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.0188669431782541,
+        0.03503433366614234
+      ],
+      "source_nll_gain": 0.026776576853729972,
+      "target_gain_ci95": [
+        -0.039953441610461576,
+        0.2550374478385385
+      ],
+      "target_minus_source_gain": 0.08560519739479627,
+      "target_minus_source_gain_ci95": [
+        -0.06458654873936573,
+        0.22843360681715866
+      ],
+      "target_nll_gain": 0.11238177424852624
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "inferential_status": "ESTIMABLE",
+      "model": "xlmr",
+      "seed": 2718,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.008701526609448739,
+        0.02056486248040454
+      ],
+      "source_nll_gain": 0.014625208811107238,
+      "target_gain_ci95": [
+        -0.021774482267293716,
+        0.17490741164755752
+      ],
+      "target_minus_source_gain": 0.06091896787639667,
+      "target_minus_source_gain_ci95": [
+        -0.03707650259103697,
+        0.16039880968708067
+      ],
+      "target_nll_gain": 0.0755441766875039
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "inferential_status": "ESTIMABLE",
+      "model": "xlmr",
+      "seed": 31415,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.0288050787040744,
+        0.047916146966924617
+      ],
+      "source_nll_gain": 0.03818966065819579,
+      "target_gain_ci95": [
+        -0.043759161199387844,
+        0.30598835836018784
+      ],
+      "target_minus_source_gain": 0.09966407944014438,
+      "target_minus_source_gain_ci95": [
+        -0.07854167000247368,
+        0.26843231535553796
+      ],
+      "target_nll_gain": 0.13785374009834017
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "inferential_status": "ESTIMABLE",
+      "model": "xlmr",
+      "seed": 65537,
+      "setting_supported": false,
+      "source_gain_ci95": [
+        0.020282787346836223,
+        0.03895860121081152
+      ],
+      "source_nll_gain": 0.029520752174899023,
+      "target_gain_ci95": [
+        -0.04477795980890711,
+        0.22842394961138457
+      ],
+      "target_minus_source_gain": 0.06588591801332455,
+      "target_minus_source_gain_ci95": [
+        -0.07183231579414788,
+        0.1997350024472569
+      ],
+      "target_nll_gain": 0.09540667018822357
+    }
+  ],
+  "definition": "NLL gain = NLL_uncalibrated - NLL_temperature_scaled",
+  "domain_model_seed_consensus": [
+    {
+      "consensus_ge_4_of_5": false,
+      "domain": "baitbuster:youtube_human",
+      "estimable_seeds": 5,
+      "model": "banglabert",
+      "nonestimable_seeds": 0,
+      "supporting_seeds": 0,
+      "total_seeds": 5
+    },
+    {
+      "consensus_ge_4_of_5": false,
+      "domain": "baitbuster:youtube_human",
+      "estimable_seeds": 5,
+      "model": "ebm",
+      "nonestimable_seeds": 0,
+      "supporting_seeds": 0,
+      "total_seeds": 5
+    },
+    {
+      "consensus_ge_4_of_5": false,
+      "domain": "baitbuster:youtube_human",
+      "estimable_seeds": 5,
+      "model": "tfidf_lr",
+      "nonestimable_seeds": 0,
+      "supporting_seeds": 0,
+      "total_seeds": 5
+    },
+    {
+      "consensus_ge_4_of_5": false,
+      "domain": "baitbuster:youtube_human",
+      "estimable_seeds": 5,
+      "model": "xlmr",
+      "nonestimable_seeds": 0,
+      "supporting_seeds": 0,
+      "total_seeds": 5
+    },
+    {
+      "consensus_ge_4_of_5": false,
+      "domain": "banglaclick:facebook",
+      "estimable_seeds": 5,
+      "model": "banglabert",
+      "nonestimable_seeds": 0,
+      "supporting_seeds": 0,
+      "total_seeds": 5
+    },
+    {
+      "consensus_ge_4_of_5": false,
+      "domain": "banglaclick:facebook",
+      "estimable_seeds": 5,
+      "model": "ebm",
+      "nonestimable_seeds": 0,
+      "supporting_seeds": 0,
+      "total_seeds": 5
+    },
+    {
+      "consensus_ge_4_of_5": false,
+      "domain": "banglaclick:facebook",
+      "estimable_seeds": 5,
+      "model": "tfidf_lr",
+      "nonestimable_seeds": 0,
+      "supporting_seeds": 0,
+      "total_seeds": 5
+    },
+    {
+      "consensus_ge_4_of_5": false,
+      "domain": "banglaclick:facebook",
+      "estimable_seeds": 5,
+      "model": "xlmr",
+      "nonestimable_seeds": 0,
+      "supporting_seeds": 0,
+      "total_seeds": 5
+    },
+    {
+      "consensus_ge_4_of_5": false,
+      "domain": "banglaclick:news",
+      "estimable_seeds": 5,
+      "model": "banglabert",
+      "nonestimable_seeds": 0,
+      "supporting_seeds": 0,
+      "total_seeds": 5
+    },
+    {
+      "consensus_ge_4_of_5": false,
+      "domain": "banglaclick:news",
+      "estimable_seeds": 5,
+      "model": "ebm",
+      "nonestimable_seeds": 0,
+      "supporting_seeds": 0,
+      "total_seeds": 5
+    },
+    {
+      "consensus_ge_4_of_5": false,
+      "domain": "banglaclick:news",
+      "estimable_seeds": 5,
+      "model": "tfidf_lr",
+      "nonestimable_seeds": 0,
+      "supporting_seeds": 0,
+      "total_seeds": 5
+    },
+    {
+      "consensus_ge_4_of_5": false,
+      "domain": "banglaclick:news",
+      "estimable_seeds": 5,
+      "model": "xlmr",
+      "nonestimable_seeds": 0,
+      "supporting_seeds": 0,
+      "total_seeds": 5
+    },
+    {
+      "consensus_ge_4_of_5": false,
+      "domain": "banglaclick:twitter",
+      "estimable_seeds": 5,
+      "model": "banglabert",
+      "nonestimable_seeds": 0,
+      "supporting_seeds": 0,
+      "total_seeds": 5
+    },
+    {
+      "consensus_ge_4_of_5": false,
+      "domain": "banglaclick:twitter",
+      "estimable_seeds": 5,
+      "model": "ebm",
+      "nonestimable_seeds": 0,
+      "supporting_seeds": 0,
+      "total_seeds": 5
+    },
+    {
+      "consensus_ge_4_of_5": false,
+      "domain": "banglaclick:twitter",
+      "estimable_seeds": 5,
+      "model": "tfidf_lr",
+      "nonestimable_seeds": 0,
+      "supporting_seeds": 0,
+      "total_seeds": 5
+    },
+    {
+      "consensus_ge_4_of_5": false,
+      "domain": "banglaclick:twitter",
+      "estimable_seeds": 5,
+      "model": "xlmr",
+      "nonestimable_seeds": 0,
+      "supporting_seeds": 0,
+      "total_seeds": 5
+    },
+    {
+      "consensus_ge_4_of_5": false,
+      "domain": "banglaclick:youtube",
+      "estimable_seeds": 5,
+      "model": "banglabert",
+      "nonestimable_seeds": 0,
+      "supporting_seeds": 0,
+      "total_seeds": 5
+    },
+    {
+      "consensus_ge_4_of_5": false,
+      "domain": "banglaclick:youtube",
+      "estimable_seeds": 5,
+      "model": "ebm",
+      "nonestimable_seeds": 0,
+      "supporting_seeds": 0,
+      "total_seeds": 5
+    },
+    {
+      "consensus_ge_4_of_5": false,
+      "domain": "banglaclick:youtube",
+      "estimable_seeds": 5,
+      "model": "tfidf_lr",
+      "nonestimable_seeds": 0,
+      "supporting_seeds": 0,
+      "total_seeds": 5
+    },
+    {
+      "consensus_ge_4_of_5": false,
+      "domain": "banglaclick:youtube",
+      "estimable_seeds": 5,
+      "model": "xlmr",
+      "nonestimable_seeds": 0,
+      "supporting_seeds": 0,
+      "total_seeds": 5
+    }
+  ],
+  "estimability_policy": "H2 NLL gain is evaluated on all 5,000 ordinary cluster-bootstrap draws; single-class draws are not undefined for this proper-loss statistic.",
+  "repair_version": "SWARABYANJAN-H1H2-ESTIMABILITY-REPAIR-v1.0.1",
+  "rows": [
+    {
+      "domain": "banglaclick:news",
+      "model": "banglabert",
+      "seed": 42,
+      "source_nll_gain": 0.024250512941474123,
+      "target_minus_source_gain": 0.3408839333742128,
+      "target_nll_gain": 0.3651344463156869
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "banglabert",
+      "seed": 137,
+      "source_nll_gain": 0.02998302427299271,
+      "target_minus_source_gain": 0.40931808460772234,
+      "target_nll_gain": 0.43930110888071505
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "banglabert",
+      "seed": 2718,
+      "source_nll_gain": 0.035761074051914254,
+      "target_minus_source_gain": 0.47053511353924155,
+      "target_nll_gain": 0.5062961875911558
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "banglabert",
+      "seed": 31415,
+      "source_nll_gain": 0.02183938590052914,
+      "target_minus_source_gain": 0.3418944236534941,
+      "target_nll_gain": 0.36373380955402324
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "banglabert",
+      "seed": 65537,
+      "source_nll_gain": 0.030076798120321324,
+      "target_minus_source_gain": 0.3978431441802393,
+      "target_nll_gain": 0.42791994230056063
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "ebm",
+      "seed": 42,
+      "source_nll_gain": -0.002078293391242658,
+      "target_minus_source_gain": -0.05380986405319954,
+      "target_nll_gain": -0.0558881574444422
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "ebm",
+      "seed": 137,
+      "source_nll_gain": -0.0020782994516593822,
+      "target_minus_source_gain": -0.05386723641159408,
+      "target_nll_gain": -0.05594553586325346
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "ebm",
+      "seed": 2718,
+      "source_nll_gain": -0.002085837181716621,
+      "target_minus_source_gain": -0.05404552840353283,
+      "target_nll_gain": -0.05613136558524945
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "ebm",
+      "seed": 31415,
+      "source_nll_gain": -0.002092009226473346,
+      "target_minus_source_gain": -0.054006828545033136,
+      "target_nll_gain": -0.05609883777150648
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "ebm",
+      "seed": 65537,
+      "source_nll_gain": -0.0020699279191634945,
+      "target_minus_source_gain": -0.0537546899244965,
+      "target_nll_gain": -0.055824617843659996
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "tfidf_lr",
+      "seed": 42,
+      "source_nll_gain": -0.002148680358100785,
+      "target_minus_source_gain": -0.18265776028525682,
+      "target_nll_gain": -0.1848064406433576
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "tfidf_lr",
+      "seed": 137,
+      "source_nll_gain": -0.002148680358100785,
+      "target_minus_source_gain": -0.18265776028525682,
+      "target_nll_gain": -0.1848064406433576
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "tfidf_lr",
+      "seed": 2718,
+      "source_nll_gain": -0.002148680358100785,
+      "target_minus_source_gain": -0.18265776028525682,
+      "target_nll_gain": -0.1848064406433576
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "tfidf_lr",
+      "seed": 31415,
+      "source_nll_gain": -0.002148680358100785,
+      "target_minus_source_gain": -0.18265776028525682,
+      "target_nll_gain": -0.1848064406433576
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "tfidf_lr",
+      "seed": 65537,
+      "source_nll_gain": -0.002148680358100785,
+      "target_minus_source_gain": -0.18265776028525682,
+      "target_nll_gain": -0.1848064406433576
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "xlmr",
+      "seed": 42,
+      "source_nll_gain": 0.03792146409725777,
+      "target_minus_source_gain": 0.3572986552964131,
+      "target_nll_gain": 0.39522011939367085
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "xlmr",
+      "seed": 137,
+      "source_nll_gain": 0.026776576853729972,
+      "target_minus_source_gain": 0.33294727693172016,
+      "target_nll_gain": 0.35972385378545013
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "xlmr",
+      "seed": 2718,
+      "source_nll_gain": 0.014625208811107238,
+      "target_minus_source_gain": 0.25460673122147254,
+      "target_nll_gain": 0.2692319400325798
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "xlmr",
+      "seed": 31415,
+      "source_nll_gain": 0.03818966065819579,
+      "target_minus_source_gain": 0.36830684433209665,
+      "target_nll_gain": 0.40649650499029244
+    },
+    {
+      "domain": "banglaclick:news",
+      "model": "xlmr",
+      "seed": 65537,
+      "source_nll_gain": 0.029520752174899023,
+      "target_minus_source_gain": 0.3937168420920991,
+      "target_nll_gain": 0.42323759426699814
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "banglabert",
+      "seed": 42,
+      "source_nll_gain": 0.024250512941474123,
+      "target_minus_source_gain": 0.20185864350791788,
+      "target_nll_gain": 0.226109156449392
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "banglabert",
+      "seed": 137,
+      "source_nll_gain": 0.02998302427299271,
+      "target_minus_source_gain": 0.22547787666249386,
+      "target_nll_gain": 0.25546090093548657
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "banglabert",
+      "seed": 2718,
+      "source_nll_gain": 0.035761074051914254,
+      "target_minus_source_gain": 0.2980253214129139,
+      "target_nll_gain": 0.33378639546482813
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "banglabert",
+      "seed": 31415,
+      "source_nll_gain": 0.02183938590052914,
+      "target_minus_source_gain": 0.19040423840372778,
+      "target_nll_gain": 0.21224362430425692
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "banglabert",
+      "seed": 65537,
+      "source_nll_gain": 0.030076798120321324,
+      "target_minus_source_gain": 0.19879131821100587,
+      "target_nll_gain": 0.2288681163313272
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "ebm",
+      "seed": 42,
+      "source_nll_gain": -0.002078293391242658,
+      "target_minus_source_gain": -0.07694930538959177,
+      "target_nll_gain": -0.07902759878083443
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "ebm",
+      "seed": 137,
+      "source_nll_gain": -0.0020782994516593822,
+      "target_minus_source_gain": -0.07722545986312779,
+      "target_nll_gain": -0.07930375931478717
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "ebm",
+      "seed": 2718,
+      "source_nll_gain": -0.002085837181716621,
+      "target_minus_source_gain": -0.07729525878865384,
+      "target_nll_gain": -0.07938109597037046
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "ebm",
+      "seed": 31415,
+      "source_nll_gain": -0.002092009226473346,
+      "target_minus_source_gain": -0.07712615692807767,
+      "target_nll_gain": -0.07921816615455102
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "ebm",
+      "seed": 65537,
+      "source_nll_gain": -0.0020699279191634945,
+      "target_minus_source_gain": -0.07649008522947509,
+      "target_nll_gain": -0.07856001314863859
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "tfidf_lr",
+      "seed": 42,
+      "source_nll_gain": -0.002148680358100785,
+      "target_minus_source_gain": -0.16746861410913128,
+      "target_nll_gain": -0.16961729446723206
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "tfidf_lr",
+      "seed": 137,
+      "source_nll_gain": -0.002148680358100785,
+      "target_minus_source_gain": -0.16746861410913128,
+      "target_nll_gain": -0.16961729446723206
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "tfidf_lr",
+      "seed": 2718,
+      "source_nll_gain": -0.002148680358100785,
+      "target_minus_source_gain": -0.16746861410913128,
+      "target_nll_gain": -0.16961729446723206
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "tfidf_lr",
+      "seed": 31415,
+      "source_nll_gain": -0.002148680358100785,
+      "target_minus_source_gain": -0.16746861410913128,
+      "target_nll_gain": -0.16961729446723206
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "tfidf_lr",
+      "seed": 65537,
+      "source_nll_gain": -0.002148680358100785,
+      "target_minus_source_gain": -0.16746861410913128,
+      "target_nll_gain": -0.16961729446723206
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "xlmr",
+      "seed": 42,
+      "source_nll_gain": 0.03792146409725777,
+      "target_minus_source_gain": 0.25813135870118803,
+      "target_nll_gain": 0.2960528227984458
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "xlmr",
+      "seed": 137,
+      "source_nll_gain": 0.026776576853729972,
+      "target_minus_source_gain": 0.24840029273745295,
+      "target_nll_gain": 0.2751768695911829
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "xlmr",
+      "seed": 2718,
+      "source_nll_gain": 0.014625208811107238,
+      "target_minus_source_gain": 0.17689541189453845,
+      "target_nll_gain": 0.19152062070564568
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "xlmr",
+      "seed": 31415,
+      "source_nll_gain": 0.03818966065819579,
+      "target_minus_source_gain": 0.25585636391179006,
+      "target_nll_gain": 0.29404602456998585
+    },
+    {
+      "domain": "banglaclick:facebook",
+      "model": "xlmr",
+      "seed": 65537,
+      "source_nll_gain": 0.029520752174899023,
+      "target_minus_source_gain": 0.2527152747329189,
+      "target_nll_gain": 0.2822360269078179
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "banglabert",
+      "seed": 42,
+      "source_nll_gain": 0.024250512941474123,
+      "target_minus_source_gain": 0.19832103396965411,
+      "target_nll_gain": 0.22257154691112824
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "banglabert",
+      "seed": 137,
+      "source_nll_gain": 0.02998302427299271,
+      "target_minus_source_gain": 0.2655550823985665,
+      "target_nll_gain": 0.2955381066715592
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "banglabert",
+      "seed": 2718,
+      "source_nll_gain": 0.035761074051914254,
+      "target_minus_source_gain": 0.29227682192508336,
+      "target_nll_gain": 0.3280378959769976
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "banglabert",
+      "seed": 31415,
+      "source_nll_gain": 0.02183938590052914,
+      "target_minus_source_gain": 0.1984512854598548,
+      "target_nll_gain": 0.22029067136038394
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "banglabert",
+      "seed": 65537,
+      "source_nll_gain": 0.030076798120321324,
+      "target_minus_source_gain": 0.18398304439393115,
+      "target_nll_gain": 0.21405984251425247
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "ebm",
+      "seed": 42,
+      "source_nll_gain": -0.002078293391242658,
+      "target_minus_source_gain": -0.033370852107554305,
+      "target_nll_gain": -0.03544914549879696
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "ebm",
+      "seed": 137,
+      "source_nll_gain": -0.0020782994516593822,
+      "target_minus_source_gain": -0.03335175076931929,
+      "target_nll_gain": -0.03543005022097867
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "ebm",
+      "seed": 2718,
+      "source_nll_gain": -0.002085837181716621,
+      "target_minus_source_gain": -0.03354124905995093,
+      "target_nll_gain": -0.03562708624166755
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "ebm",
+      "seed": 31415,
+      "source_nll_gain": -0.002092009226473346,
+      "target_minus_source_gain": -0.033461530000160056,
+      "target_nll_gain": -0.0355535392266334
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "ebm",
+      "seed": 65537,
+      "source_nll_gain": -0.0020699279191634945,
+      "target_minus_source_gain": -0.03331866842600695,
+      "target_nll_gain": -0.03538859634517044
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "tfidf_lr",
+      "seed": 42,
+      "source_nll_gain": -0.002148680358100785,
+      "target_minus_source_gain": -0.14037563883462512,
+      "target_nll_gain": -0.1425243191927259
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "tfidf_lr",
+      "seed": 137,
+      "source_nll_gain": -0.002148680358100785,
+      "target_minus_source_gain": -0.14037563883462512,
+      "target_nll_gain": -0.1425243191927259
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "tfidf_lr",
+      "seed": 2718,
+      "source_nll_gain": -0.002148680358100785,
+      "target_minus_source_gain": -0.14037563883462512,
+      "target_nll_gain": -0.1425243191927259
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "tfidf_lr",
+      "seed": 31415,
+      "source_nll_gain": -0.002148680358100785,
+      "target_minus_source_gain": -0.14037563883462512,
+      "target_nll_gain": -0.1425243191927259
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "tfidf_lr",
+      "seed": 65537,
+      "source_nll_gain": -0.002148680358100785,
+      "target_minus_source_gain": -0.14037563883462512,
+      "target_nll_gain": -0.1425243191927259
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "xlmr",
+      "seed": 42,
+      "source_nll_gain": 0.03792146409725777,
+      "target_minus_source_gain": 0.28190187598392874,
+      "target_nll_gain": 0.3198233400811865
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "xlmr",
+      "seed": 137,
+      "source_nll_gain": 0.026776576853729972,
+      "target_minus_source_gain": 0.24413540545877727,
+      "target_nll_gain": 0.27091198231250724
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "xlmr",
+      "seed": 2718,
+      "source_nll_gain": 0.014625208811107238,
+      "target_minus_source_gain": 0.17617881048943634,
+      "target_nll_gain": 0.19080401930054358
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "xlmr",
+      "seed": 31415,
+      "source_nll_gain": 0.03818966065819579,
+      "target_minus_source_gain": 0.25944055053846243,
+      "target_nll_gain": 0.2976302111966582
+    },
+    {
+      "domain": "banglaclick:youtube",
+      "model": "xlmr",
+      "seed": 65537,
+      "source_nll_gain": 0.029520752174899023,
+      "target_minus_source_gain": 0.23303708610702523,
+      "target_nll_gain": 0.26255783828192425
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "banglabert",
+      "seed": 42,
+      "source_nll_gain": 0.024250512941474123,
+      "target_minus_source_gain": 0.19513963263020723,
+      "target_nll_gain": 0.21939014557168135
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "banglabert",
+      "seed": 137,
+      "source_nll_gain": 0.02998302427299271,
+      "target_minus_source_gain": 0.2574546171695119,
+      "target_nll_gain": 0.2874376414425046
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "banglabert",
+      "seed": 2718,
+      "source_nll_gain": 0.035761074051914254,
+      "target_minus_source_gain": 0.23988242503158258,
+      "target_nll_gain": 0.27564349908349683
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "banglabert",
+      "seed": 31415,
+      "source_nll_gain": 0.02183938590052914,
+      "target_minus_source_gain": 0.15843230472472491,
+      "target_nll_gain": 0.18027169062525406
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "banglabert",
+      "seed": 65537,
+      "source_nll_gain": 0.030076798120321324,
+      "target_minus_source_gain": 0.14508156355058494,
+      "target_nll_gain": 0.17515836167090626
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "ebm",
+      "seed": 42,
+      "source_nll_gain": -0.002078293391242658,
+      "target_minus_source_gain": -0.059556930540073716,
+      "target_nll_gain": -0.061635223931316374
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "ebm",
+      "seed": 137,
+      "source_nll_gain": -0.0020782994516593822,
+      "target_minus_source_gain": -0.05971465569769885,
+      "target_nll_gain": -0.06179295514935823
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "ebm",
+      "seed": 2718,
+      "source_nll_gain": -0.002085837181716621,
+      "target_minus_source_gain": -0.059942721928861076,
+      "target_nll_gain": -0.0620285591105777
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "ebm",
+      "seed": 31415,
+      "source_nll_gain": -0.002092009226473346,
+      "target_minus_source_gain": -0.05988109114246598,
+      "target_nll_gain": -0.06197310036893933
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "ebm",
+      "seed": 65537,
+      "source_nll_gain": -0.0020699279191634945,
+      "target_minus_source_gain": -0.05956912774055212,
+      "target_nll_gain": -0.061639055659715614
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "tfidf_lr",
+      "seed": 42,
+      "source_nll_gain": -0.002148680358100785,
+      "target_minus_source_gain": -0.21306579620604515,
+      "target_nll_gain": -0.21521447656414594
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "tfidf_lr",
+      "seed": 137,
+      "source_nll_gain": -0.002148680358100785,
+      "target_minus_source_gain": -0.21306579620604515,
+      "target_nll_gain": -0.21521447656414594
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "tfidf_lr",
+      "seed": 2718,
+      "source_nll_gain": -0.002148680358100785,
+      "target_minus_source_gain": -0.21306579620604515,
+      "target_nll_gain": -0.21521447656414594
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "tfidf_lr",
+      "seed": 31415,
+      "source_nll_gain": -0.002148680358100785,
+      "target_minus_source_gain": -0.21306579620604515,
+      "target_nll_gain": -0.21521447656414594
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "tfidf_lr",
+      "seed": 65537,
+      "source_nll_gain": -0.002148680358100785,
+      "target_minus_source_gain": -0.21306579620604515,
+      "target_nll_gain": -0.21521447656414594
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "xlmr",
+      "seed": 42,
+      "source_nll_gain": 0.03792146409725777,
+      "target_minus_source_gain": 0.3497168738965702,
+      "target_nll_gain": 0.38763833799382796
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "xlmr",
+      "seed": 137,
+      "source_nll_gain": 0.026776576853729972,
+      "target_minus_source_gain": 0.3519807225190435,
+      "target_nll_gain": 0.37875729937277347
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "xlmr",
+      "seed": 2718,
+      "source_nll_gain": 0.014625208811107238,
+      "target_minus_source_gain": 0.2376792992951275,
+      "target_nll_gain": 0.2523045081062347
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "xlmr",
+      "seed": 31415,
+      "source_nll_gain": 0.03818966065819579,
+      "target_minus_source_gain": 0.3588820935968084,
+      "target_nll_gain": 0.3970717542550042
+    },
+    {
+      "domain": "banglaclick:twitter",
+      "model": "xlmr",
+      "seed": 65537,
+      "source_nll_gain": 0.029520752174899023,
+      "target_minus_source_gain": 0.3422685228439333,
+      "target_nll_gain": 0.3717892750188323
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "banglabert",
+      "seed": 42,
+      "source_nll_gain": 0.024250512941474123,
+      "target_minus_source_gain": 0.05023698521474246,
+      "target_nll_gain": 0.07448749815621658
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "banglabert",
+      "seed": 137,
+      "source_nll_gain": 0.02998302427299271,
+      "target_minus_source_gain": 0.08469151799785679,
+      "target_nll_gain": 0.1146745422708495
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "banglabert",
+      "seed": 2718,
+      "source_nll_gain": 0.035761074051914254,
+      "target_minus_source_gain": 0.08452674629350027,
+      "target_nll_gain": 0.12028782034541452
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "banglabert",
+      "seed": 31415,
+      "source_nll_gain": 0.02183938590052914,
+      "target_minus_source_gain": 0.05006679754174925,
+      "target_nll_gain": 0.07190618344227839
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "banglabert",
+      "seed": 65537,
+      "source_nll_gain": 0.030076798120321324,
+      "target_minus_source_gain": 0.030900475618605927,
+      "target_nll_gain": 0.06097727373892725
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "ebm",
+      "seed": 42,
+      "source_nll_gain": -0.002078293391242658,
+      "target_minus_source_gain": -0.0021778732438806903,
+      "target_nll_gain": -0.0042561666351233485
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "ebm",
+      "seed": 137,
+      "source_nll_gain": -0.0020782994516593822,
+      "target_minus_source_gain": -0.0021820882365471417,
+      "target_nll_gain": -0.004260387688206524
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "ebm",
+      "seed": 2718,
+      "source_nll_gain": -0.002085837181716621,
+      "target_minus_source_gain": -0.0022292579894913622,
+      "target_nll_gain": -0.004315095171207983
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "ebm",
+      "seed": 31415,
+      "source_nll_gain": -0.002092009226473346,
+      "target_minus_source_gain": -0.0021897533273464442,
+      "target_nll_gain": -0.00428176255381979
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "ebm",
+      "seed": 65537,
+      "source_nll_gain": -0.0020699279191634945,
+      "target_minus_source_gain": -0.0022078116396354597,
+      "target_nll_gain": -0.004277739558798954
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "tfidf_lr",
+      "seed": 42,
+      "source_nll_gain": -0.002148680358100785,
+      "target_minus_source_gain": -0.0481818200616565,
+      "target_nll_gain": -0.050330500419757285
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "tfidf_lr",
+      "seed": 137,
+      "source_nll_gain": -0.002148680358100785,
+      "target_minus_source_gain": -0.0481818200616565,
+      "target_nll_gain": -0.050330500419757285
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "tfidf_lr",
+      "seed": 2718,
+      "source_nll_gain": -0.002148680358100785,
+      "target_minus_source_gain": -0.0481818200616565,
+      "target_nll_gain": -0.050330500419757285
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "tfidf_lr",
+      "seed": 31415,
+      "source_nll_gain": -0.002148680358100785,
+      "target_minus_source_gain": -0.0481818200616565,
+      "target_nll_gain": -0.050330500419757285
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "tfidf_lr",
+      "seed": 65537,
+      "source_nll_gain": -0.002148680358100785,
+      "target_minus_source_gain": -0.0481818200616565,
+      "target_nll_gain": -0.050330500419757285
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "xlmr",
+      "seed": 42,
+      "source_nll_gain": 0.03792146409725777,
+      "target_minus_source_gain": 0.11017587553731184,
+      "target_nll_gain": 0.1480973396345696
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "xlmr",
+      "seed": 137,
+      "source_nll_gain": 0.026776576853729972,
+      "target_minus_source_gain": 0.08560519739479627,
+      "target_nll_gain": 0.11238177424852624
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "xlmr",
+      "seed": 2718,
+      "source_nll_gain": 0.014625208811107238,
+      "target_minus_source_gain": 0.06091896787639667,
+      "target_nll_gain": 0.0755441766875039
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "xlmr",
+      "seed": 31415,
+      "source_nll_gain": 0.03818966065819579,
+      "target_minus_source_gain": 0.09966407944014438,
+      "target_nll_gain": 0.13785374009834017
+    },
+    {
+      "domain": "baitbuster:youtube_human",
+      "model": "xlmr",
+      "seed": 65537,
+      "source_nll_gain": 0.029520752174899023,
+      "target_minus_source_gain": 0.06588591801332455,
+      "target_nll_gain": 0.09540667018822357
+    }
+  ],
+  "schema_version": 2,
+  "scientific_non_support_or_nonestimability_is_not_pipeline_failure": true
+}

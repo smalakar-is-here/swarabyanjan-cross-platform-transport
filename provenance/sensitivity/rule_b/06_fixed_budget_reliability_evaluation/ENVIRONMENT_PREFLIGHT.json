@@ -1,0 +1,21 @@
+{
+  "accelerator_note": "CPU sufficient",
+  "environment_id": "SWARABYANJAN-KAGGLE-ENV-v2.0.0",
+  "initial_versions": {
+    "matplotlib": "3.10.8",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "pyarrow": "23.0.1"
+  },
+  "installed_now": [],
+  "policy": "preserve Kaggle compiled scientific stack; install only missing application-level packages",
+  "probe_stdout": "{\"matplotlib\": \"3.10.8\", \"numpy\": \"2.3.5\", \"pandas\": \"2.2.3\", \"pyarrow\": \"23.0.1\"}",
+  "schema_version": 1,
+  "stage_id": "06",
+  "validated_versions": {
+    "matplotlib": "3.10.8",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "pyarrow": "23.0.1"
+  }
+}

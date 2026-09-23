@@ -1,0 +1,38 @@
+{
+  "legacy_split_root_mode_enabled": false,
+  "missing_provenance_fields_tolerated": false,
+  "mode": "EXACT_CANONICAL_STAGE05_TO_STAGE06_CHAIN",
+  "schema_version": 2,
+  "stage05_duplicate_mounts": [
+    "/kaggle/input/notebooks/smalakarishere/05-external-validation-and-h3-vfinal/03_results/05_external_validation_and_H3_vFINAL"
+  ],
+  "stage05_identity": {
+    "canonical_stage05": true,
+    "canonical_version": "SWARABYANJAN-STAGE05-CANONICAL-vFINAL-1.0.1",
+    "checksum_sha256": "7171a0e581d8fb4bde2a630f4de631d74962954ee3890b8123d78a720823450a",
+    "h3_results_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22",
+    "manifest_sha256": "7246bc3a49a5f8d8472005cea9f6062d118431cd67d5dd2c4fd8f2ee31f52c27",
+    "prediction_sha256": {
+      "BAITBUSTER_HUMAN_PREDICTIONS.parquet": "a3e95820c62de00984a189e2c250f7fffd223ad4b3954db04a5368c7a544b7b9",
+      "BANGLACLICK_PLATFORM_PREDICTIONS.parquet": "5685fd4142a0e8e7f85cd6040cf48042da2368d5f9596a7740c4f9f09c9519d5",
+      "LOCKED_SOURCE_TEST_PREDICTIONS.parquet": "df863d7a24f7d451451822890de58613c3295eb0bcc1aa882150137b0aa9880a"
+    },
+    "protocol_version": "SWARABYANJAN-CROSSPLATFORM-v1.0.0",
+    "stage_id": "05",
+    "status_sha256": "005399d829bb66870810faa3f140757a7ee3d82eac4bae394fbbe79e701db8e6"
+  },
+  "stage05_root": "/kaggle/input/notebooks/smalakarishere/05-external-validation-and-h3-vfinal/03_results/05_external_validation_and_H3_vFINAL",
+  "stage06_duplicate_mounts": [
+    "/kaggle/input/notebooks/smalakarishere/06-fixed-budget-reliability-evaluation-vfinal/03_results/06_fixed_budget_reliability_evaluation"
+  ],
+  "stage06_identity": {
+    "checksum_sha256": "5f8d0f7fc9cde5e0f159bf4c5f4ca8387441675407b4c43ab87a8063afac3beb",
+    "h4_results_sha256": "299fc2e1394c80e1a090ac14d632e0f502b5b779c459e47dcb4e96130b621462",
+    "manifest_sha256": "5a2962014445c723379b07fcf02e601644818c36e6c15fb7ee9478ca34711285",
+    "protocol_version": "SWARABYANJAN-CROSSPLATFORM-v1.0.0",
+    "stage_id": "06",
+    "status_sha256": "769f33b4771f3ec55700384ae6db7e9e2feb115d23717b27cbd9c17e4983538d"
+  },
+  "stage06_root": "/kaggle/input/notebooks/smalakarishere/06-fixed-budget-reliability-evaluation-vfinal/03_results/06_fixed_budget_reliability_evaluation",
+  "status": "PASS"
+}

@@ -1,0 +1,22 @@
+dataset,artifact_id,role,label_column,label_value,count,proportion,primary_label
+BaitBuster-Bangla,baitbuster_parquet,external_youtube_multimodal_clickbait_diagnostic,ai_labeled,Clickbait,45055,0.17803374560398308,True
+BaitBuster-Bangla,baitbuster_parquet,external_youtube_multimodal_clickbait_diagnostic,ai_labeled,Not Clickbait,208015,0.8219662543960169,True
+BaitBuster-Bangla,baitbuster_parquet,external_youtube_multimodal_clickbait_diagnostic,auto_labeled,Clickbait,29312,0.1158256608843403,False
+BaitBuster-Bangla,baitbuster_parquet,external_youtube_multimodal_clickbait_diagnostic,auto_labeled,Not Clickbait,223758,0.8841743391156597,False
+BaitBuster-Bangla,baitbuster_parquet,external_youtube_multimodal_clickbait_diagnostic,human_labeled,<MISSING>,243070,0.9604852412376023,False
+BaitBuster-Bangla,baitbuster_parquet,external_youtube_multimodal_clickbait_diagnostic,human_labeled,Clickbait,5644,0.022302129845497294,False
+BaitBuster-Bangla,baitbuster_parquet,external_youtube_multimodal_clickbait_diagnostic,human_labeled,Not Clickbait,4356,0.017212628916900462,False
+BanFakeNews-2.0,banfakenews_independent_test,external_fake_news_independent_test_boundary,Label,0,460,0.46,True
+BanFakeNews-2.0,banfakenews_independent_test,external_fake_news_independent_test_boundary,Label,1,540,0.54,True
+BanFakeNews-2.0,banfakenews_main,external_fake_news_boundary,Label,0,12903,0.20952891313879282,True
+BanFakeNews-2.0,banfakenews_main,external_fake_news_boundary,Label,1,48678,0.7904710868612072,True
+BanglaBait,banglabait_dev,calibration_only_holdout,label,0,787,0.6531120331950208,True
+BanglaBait,banglabait_dev,calibration_only_holdout,label,1,418,0.34688796680497924,True
+BanglaBait,banglabait_test,locked_source_test,label,0,1952,0.648074369189907,True
+BanglaBait,banglabait_test,locked_source_test,label,1,1060,0.351925630810093,True
+BanglaBait,banglabait_train,model_development_pool,label,0,7080,0.6531967893717132,True
+BanglaBait,banglabait_train,model_development_pool,label,1,3759,0.34680321062828673,True
+BanglaClick,banglaclick,external_cross_platform_diagnostic,FINAL_CLICKBAIT_LEVEL,0,1239,0.24974803467042936,True
+BanglaClick,banglaclick,external_cross_platform_diagnostic,FINAL_CLICKBAIT_LEVEL,1,2083,0.41987502519653297,True
+BanglaClick,banglaclick,external_cross_platform_diagnostic,FINAL_CLICKBAIT_LEVEL,2,820,0.1652892561983471,True
+BanglaClick,banglaclick,external_cross_platform_diagnostic,FINAL_CLICKBAIT_LEVEL,3,819,0.1650876839346906,True
