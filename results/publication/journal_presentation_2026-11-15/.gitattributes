@@ -1,0 +1,5 @@
+# Store these publication assets byte-exactly (no line-ending conversion).
+# The SVG files and FIG01_v3_SOURCE_MANIFEST.json contain CRLF line endings as generated;
+# their SHA-256 values in PUBLICATION_FIGURE_MANIFEST.json and provenance/PUBLIC_REPOSITORY_SHA256SUMS.txt
+# refer to those exact bytes.
+* -text

@@ -16,7 +16,10 @@ PNG = 51 files). They are **presentation assets**, not new scientific results.
 - **Regeneration.** `python scripts/publication_figures/regenerate_and_verify.py` regenerates all 51 files into a
   temporary directory and verifies byte identity, value parity, text collisions, marker clearance and
   minimum text size (≥ 8 pt at print width). Byte identity requires the pinned environment in
-  `scripts/publication_figures/requirements-publication-figures.txt` and the Arial font.
+  `scripts/publication_figures/requirements-publication-figures.txt` and the Arial font. The files were
+  generated on Windows: the SVG files and `FIG01_v3_SOURCE_MANIFEST.json` have CRLF line endings, and the
+  directory's `.gitattributes` (`* -text`) keeps those bytes unchanged in Git. On other platforms the
+  generators write LF line endings, so those 18 files differ in bytes but not in content.
 
 ## Known wording differences from canonical Stage08 (documented, intentionally not changed in Stage08)
 
