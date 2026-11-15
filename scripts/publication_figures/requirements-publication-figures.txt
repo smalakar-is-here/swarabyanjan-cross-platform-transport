@@ -1,0 +1,17 @@
+# Pinned environment used to produce the journal-presentation figures (2026-11-15).
+# Python 3.13.3. Byte-identical regeneration also requires the Arial font (Windows core font).
+matplotlib==3.10.0
+pandas==2.3.3
+numpy==2.5.4
+pillow==13.0.0
+contourpy==1.4.0
+cycler==0.12.1
+fonttools==4.68.0
+kiwisolver==1.5.1
+packaging==26.3
+pyparsing==3.3.3
+python-dateutil==4.0.0
+pytz==2026.6
+tzdata==2026.6
+# QA only (font-size and marker checks)
+pymupdf==2.1
