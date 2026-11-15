@@ -1,0 +1,672 @@
+{
+ "figure": "FIG01_STUDY_DESIGN_v3",
+ "design": "Concept A, Transport Engine (approved 2026-11-15)",
+ "presentation_only": true,
+ "recomputation": "none (stored values and status counts only)",
+ "schematic_elements": "within-domain cue-present/cue-absent contrasts carry no values",
+ "sources": {
+  "H1": {
+   "path": "results/primary/stage05/H1_RESULTS.json",
+   "sha256": "e6801e7092385f50edd19f41b5f2a3b57ae1eb15e09e573381e5e5076dcce6b3"
+  },
+  "H2": {
+   "path": "results/primary/stage05/H2_RESULTS.json",
+   "sha256": "f6c3f1fec5cc60748e96e01493689721130ff73bc9f7203eb7d4b2c5a04bc26d"
+  },
+  "H3": {
+   "path": "results/primary/stage05/H3_RESULTS.json",
+   "sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  "H3P": {
+   "path": "results/primary/stage05/H3_PERTURBATION_RESULTS.json",
+   "sha256": "f480dfd1cd3960c8fd93fed9c3beb1b5249e0d8ac37565d622b59d7bef55e74c"
+  },
+  "H4": {
+   "path": "results/primary/stage06/H4_RESULTS.json",
+   "sha256": "299fc2e1394c80e1a090ac14d632e0f502b5b779c459e47dcb4e96130b621462"
+  },
+  "BRIDGE": {
+   "path": "results/primary/stage07/H3_H4_BRIDGE_RESULTS.json",
+   "sha256": "90ae9bc50b42640d3ca03c4e8697ea2b910e3c53de56e4b3c1df0a158f002deb"
+  },
+  "TEMPS": {
+   "path": "results/primary/stage04/TEMPERATURES.json",
+   "sha256": "ec6a9bf460e97b488d7a729299bfa66bbab33c8fcf5fd2c136871c2bb4fec011"
+  },
+  "SPLITS": {
+   "path": "data/derived/primary/stage03/CLEAN_SPLIT_SUMMARY.csv",
+   "sha256": "3c7910f9945b1b7e96f9f82738a8df5fec163ac93bd96ece80a00761303a702f"
+  },
+  "SPARSITY": {
+   "path": "results/primary/stage08/figure_source_data/SUPP_H3_SPARSITY_support_source.csv",
+   "sha256": "6aad2c616a0e4afe110e3245f091ef2bb67465d340e0e29cdf46b90f47a22d60"
+  },
+  "SOURCES": {
+   "path": "provenance/canonical/stage01/SOURCES_LOCK.json",
+   "sha256": "435d3c4e812b47065669b7b58ebc3da00e7b8abcdedc73b3080b0ac074154634"
+  },
+  "STAGE09": {
+   "path": "results/primary/stage09/SENSITIVITY_SUMMARY.md",
+   "sha256": "691b9e568afe7e4b66de338fb433d3a2849daa1eb92752af1e053e1f25ec87d6"
+  },
+  "RELEASE": {
+   "path": "provenance/release/RELEASE_STATUS.json",
+   "sha256": "e9b8b48f71d25d903ed6dca8a53c7439ac89ab904e2d148e14c163de0b36b8c4"
+  },
+  "P0SUM": {
+   "path": "provenance/canonical/stage02/P0_AUDIT_SUMMARY.md",
+   "sha256": "6ef24330d18debc667395e8c902bc57f74c906a77947950c8964d773c8926093"
+  },
+  "CONSTRUCT": {
+   "path": "provenance/canonical/stage02/CONSTRUCT_ALIGNMENT_MATRIX.csv",
+   "sha256": "13931034a287d0148d99e5d80ff951542ce8dacc2ea35d514da50781e7ed4ddf"
+  },
+  "FIREWALL": {
+   "path": "provenance/canonical/stage02/SPLIT_FIREWALL.json",
+   "sha256": "8640abf888c22894785b77598cdd39b7282426039dd695b04c748010d4a8db6b"
+  },
+  "EXP": {
+   "path": "manuscript sections/experiments.tex (private; not distributed in this repository)",
+   "sha256": "not available (private manuscript source)"
+  },
+  "FRAME": {
+   "path": "manuscript sections/framework.tex (private; not distributed in this repository)",
+   "sha256": "not available (private manuscript source)"
+  }
+ },
+ "elements": [
+  {
+   "element": "integrity chip 1 (public evidence)",
+   "displayed_text": "Stage02 audit P0_NO_GO",
+   "source_file": "provenance/canonical/stage02/P0_AUDIT_SUMMARY.md",
+   "source_field": "Decision",
+   "verified_value": "P0_NO_GO",
+   "source_sha256": "6ef24330d18debc667395e8c902bc57f74c906a77947950c8964d773c8926093"
+  },
+  {
+   "element": "construct-boundary note (public evidence)",
+   "displayed_text": "Construct boundary only: BanMANI, BanFakeNews-2.0",
+   "source_file": "provenance/canonical/stage02/CONSTRUCT_ALIGNMENT_MATRIX.csv",
+   "source_field": "permitted_role[BanMANI, BanFakeNews-2.0]",
+   "verified_value": "construct-boundary external diagnostic",
+   "source_sha256": "13931034a287d0148d99e5d80ff951542ce8dacc2ea35d514da50781e7ed4ddf"
+  },
+  {
+   "element": "BaitBuster tile (public evidence)",
+   "displayed_text": "BaitBuster: related construct; corroboration only",
+   "source_file": "provenance/canonical/stage02/CONSTRUCT_ALIGNMENT_MATRIX.csv",
+   "source_field": "permitted_role[BaitBuster-Bangla]",
+   "verified_value": "cross-platform construct diagnostic only",
+   "source_sha256": "13931034a287d0148d99e5d80ff951542ce8dacc2ea35d514da50781e7ed4ddf"
+  },
+  {
+   "element": "firewall (public evidence)",
+   "displayed_text": "target-blind firewall",
+   "source_file": "provenance/canonical/stage02/SPLIT_FIREWALL.json",
+   "source_field": "protected_scientific_fields.dataset",
+   "verified_value": "BanglaBait",
+   "source_sha256": "8640abf888c22894785b77598cdd39b7282426039dd695b04c748010d4a8db6b"
+  },
+  {
+   "element": "source title",
+   "displayed_text": "SOURCE: BanglaBait",
+   "source_file": "provenance/canonical/stage01/SOURCES_LOCK.json",
+   "source_field": "sources/BanglaBait",
+   "verified_value": "present",
+   "source_sha256": "435d3c4e812b47065669b7b58ebc3da00e7b8abcdedc73b3080b0ac074154634"
+  },
+  {
+   "element": "integrity chip 1",
+   "displayed_text": "Stage02 audit P0_NO_GO (title overlap)",
+   "source_file": "manuscript sections/experiments.tex (private; not distributed in this repository)",
+   "source_field": "Data integrity paragraph: P0_NO_GO",
+   "verified_value": "P0_NO_GO",
+   "source_sha256": "not available (private manuscript source)"
+  },
+  {
+   "element": "integrity chip 2",
+   "displayed_text": "Stage03 decontamination; 628 quarantined",
+   "source_file": "data/derived/primary/stage03/CLEAN_SPLIT_SUMMARY.csv",
+   "source_field": "quarantined_rows (train+dev+test)",
+   "verified_value": "295+105+228=628",
+   "source_sha256": "3c7910f9945b1b7e96f9f82738a8df5fec163ac93bd96ece80a00761303a702f"
+  },
+  {
+   "element": "integrity chip 3",
+   "displayed_text": "Clean splits: normalised-title overlap = 0",
+   "source_file": "manuscript sections/experiments.tex (private; not distributed in this repository)",
+   "source_field": "Data integrity: audited normalised cross-split title overlap is zero (lock M05; not semantic duplicates)",
+   "verified_value": "0",
+   "source_sha256": "not available (private manuscript source)"
+  },
+  {
+   "element": "splits bar (widths proportional to clean_rows)",
+   "displayed_text": "TRAIN 10,544 DEV 1,100 TEST 2,784",
+   "source_file": "data/derived/primary/stage03/CLEAN_SPLIT_SUMMARY.csv",
+   "source_field": "clean_rows",
+   "verified_value": "10544/1100/2784",
+   "source_sha256": "3c7910f9945b1b7e96f9f82738a8df5fec163ac93bd96ece80a00761303a702f"
+  },
+  {
+   "element": "development text",
+   "displayed_text": "4 model families \u00d7 5 seeds; EBM \u00b7 TF-IDF + LR \u00b7 BanglaBERT \u00b7 XLM-R",
+   "source_file": "results/primary/stage05/H1_RESULTS.json",
+   "source_field": "confirmatory_assessment_rows: model and seed sets",
+   "verified_value": "['banglabert', 'ebm', 'tfidf_lr', 'xlmr']; [42, 137, 2718, 31415, 65537]",
+   "source_sha256": "e6801e7092385f50edd19f41b5f2a3b57ae1eb15e09e573381e5e5076dcce6b3"
+  },
+  {
+   "element": "development text",
+   "displayed_text": "DEV-only calibration; 20 scalar temperatures",
+   "source_file": "results/primary/stage04/TEMPERATURES.json",
+   "source_field": "temperatures (count); source",
+   "verified_value": "20; clean BanglaBait DEV only",
+   "source_sha256": "ec6a9bf460e97b488d7a729299bfa66bbab33c8fcf5fd2c136871c2bb4fec011"
+  },
+  {
+   "element": "development text",
+   "displayed_text": "8 frozen cue families; presence = count > 0 (Eq. 1)",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[].cue (distinct)",
+   "verified_value": "8",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "firewall",
+   "displayed_text": "target-blind firewall",
+   "source_file": "manuscript sections/experiments.tex (private; not distributed in this repository)",
+   "source_field": "Data integrity and external-evaluation firewall",
+   "verified_value": "targets held out",
+   "source_sha256": "not available (private manuscript source)"
+  },
+  {
+   "element": "platform tile news",
+   "displayed_text": "News n = 1,500",
+   "source_file": "results/primary/stage08/figure_source_data/SUPP_H3_SPARSITY_support_source.csv",
+   "source_field": "rows where domain=banglaclick:news",
+   "verified_value": "1500",
+   "source_sha256": "6aad2c616a0e4afe110e3245f091ef2bb67465d340e0e29cdf46b90f47a22d60"
+  },
+  {
+   "element": "platform tile facebook",
+   "displayed_text": "Facebook n = 1,961",
+   "source_file": "results/primary/stage08/figure_source_data/SUPP_H3_SPARSITY_support_source.csv",
+   "source_field": "rows where domain=banglaclick:facebook",
+   "verified_value": "1961",
+   "source_sha256": "6aad2c616a0e4afe110e3245f091ef2bb67465d340e0e29cdf46b90f47a22d60"
+  },
+  {
+   "element": "platform tile youtube",
+   "displayed_text": "YouTube n = 1,000",
+   "source_file": "results/primary/stage08/figure_source_data/SUPP_H3_SPARSITY_support_source.csv",
+   "source_field": "rows where domain=banglaclick:youtube",
+   "verified_value": "1000",
+   "source_sha256": "6aad2c616a0e4afe110e3245f091ef2bb67465d340e0e29cdf46b90f47a22d60"
+  },
+  {
+   "element": "platform tile twitter",
+   "displayed_text": "Twitter n = 500",
+   "source_file": "results/primary/stage08/figure_source_data/SUPP_H3_SPARSITY_support_source.csv",
+   "source_field": "rows where domain=banglaclick:twitter",
+   "verified_value": "500",
+   "source_sha256": "6aad2c616a0e4afe110e3245f091ef2bb67465d340e0e29cdf46b90f47a22d60"
+  },
+  {
+   "element": "BaitBuster tile",
+   "displayed_text": "BaitBuster: related construct; 10,000 human-labelled rows; corroboration only",
+   "source_file": "results/primary/stage08/figure_source_data/SUPP_H3_SPARSITY_support_source.csv",
+   "source_field": "rows where domain=baitbuster:youtube_human",
+   "verified_value": "10000",
+   "source_sha256": "6aad2c616a0e4afe110e3245f091ef2bb67465d340e0e29cdf46b90f47a22d60"
+  },
+  {
+   "element": "construct-boundary note",
+   "displayed_text": "Construct boundary only: BanMANI, BanFakeNews-2.0",
+   "source_file": "provenance/canonical/stage01/SOURCES_LOCK.json",
+   "source_field": "sources/BanMANI, sources/BanFakeNews-2.0",
+   "verified_value": "present",
+   "source_sha256": "435d3c4e812b47065669b7b58ebc3da00e7b8abcdedc73b3080b0ac074154634"
+  },
+  {
+   "element": "construct-boundary note",
+   "displayed_text": "never trained or tuned on",
+   "source_file": "manuscript sections/experiments.tex (private; not distributed in this repository)",
+   "source_field": "Data paragraph 1: construct-boundary resources, not clickbait training or tuning data",
+   "verified_value": "stated",
+   "source_sha256": "not available (private manuscript source)"
+  },
+  {
+   "element": "centrepiece definitions",
+   "displayed_text": "RD(c,d) = P(Y=1|C=1,d) - P(Y=1|C=0,d); G_s(c,d) = E[L_s|C=1,d] - E[L_s|C=0,d]",
+   "source_file": "manuscript sections/framework.tex (private; not distributed in this repository)",
+   "source_field": "Eqs. cue-indicator, cue-rd and cue-loss-gap",
+   "verified_value": "definitions",
+   "source_sha256": "not available (private manuscript source)"
+  },
+  {
+   "element": "contrast block labels",
+   "displayed_text": "Source S: clean BanglaBait TEST; Target T: one platform at a time",
+   "source_file": "manuscript sections/experiments.tex (private; not distributed in this repository)",
+   "source_field": "external evaluation: each target analysed separately; source TEST locked",
+   "verified_value": "stated",
+   "source_sha256": "not available (private manuscript source)"
+  },
+  {
+   "element": "estimand card 1",
+   "displayed_text": "\u0394RD(c,T,S) = RD(c,T) - RD(c,S)",
+   "source_file": "manuscript sections/framework.tex (private; not distributed in this repository)",
+   "source_field": "Eq. delta-rd",
+   "verified_value": "definition",
+   "source_sha256": "not available (private manuscript source)"
+  },
+  {
+   "element": "estimand card 2",
+   "displayed_text": "\u0394NLL-gap = (1/5) \u03a3_s [G_s(c,T) - G_s(c,S)]",
+   "source_file": "manuscript sections/framework.tex (private; not distributed in this repository)",
+   "source_field": "Eq. delta-gap (five-seed EBM average of per-seed gap differences)",
+   "verified_value": "definition",
+   "source_sha256": "not available (private manuscript source)"
+  },
+  {
+   "element": "estimand scope lines",
+   "displayed_text": "model-independent / EBM only, 5-seed average",
+   "source_file": "manuscript sections/framework.tex (private; not distributed in this repository)",
+   "source_field": "text after Eq. delta-gap; Limitations \u00b62 (\u0394RD model-independent; \u0394NLL-gap EBM five-seed)",
+   "verified_value": "stated",
+   "source_sha256": "not available (private manuscript source)"
+  },
+  {
+   "element": "inference gate",
+   "displayed_text": "adjudicated only if all 5,000 locked bootstrap draws are valid; otherwise NON_ESTIMABLE",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "bootstrap_replicates; estimability_policy",
+   "verified_value": "5000",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 lane title",
+   "displayed_text": "H3 PRIMARY: cue transport",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "role (primary analysis)",
+   "verified_value": "primary",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell curiosity_information_withholding x news",
+   "displayed_text": "estimable",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=curiosity_information_withholding,target=banglaclick:news].inferential_status",
+   "verified_value": "ESTIMABLE",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell curiosity_information_withholding x facebook",
+   "displayed_text": "estimable",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=curiosity_information_withholding,target=banglaclick:facebook].inferential_status",
+   "verified_value": "ESTIMABLE",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell curiosity_information_withholding x youtube",
+   "displayed_text": "NE",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=curiosity_information_withholding,target=banglaclick:youtube].inferential_status",
+   "verified_value": "NON_ESTIMABLE_UNDER_LOCKED_BOOTSTRAP",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell curiosity_information_withholding x twitter",
+   "displayed_text": "NE",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=curiosity_information_withholding,target=banglaclick:twitter].inferential_status",
+   "verified_value": "NON_ESTIMABLE_UNDER_LOCKED_BOOTSTRAP",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell direct_address_imperative x news",
+   "displayed_text": "estimable",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=direct_address_imperative,target=banglaclick:news].inferential_status",
+   "verified_value": "ESTIMABLE",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell direct_address_imperative x facebook",
+   "displayed_text": "estimable",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=direct_address_imperative,target=banglaclick:facebook].inferential_status",
+   "verified_value": "ESTIMABLE",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell direct_address_imperative x youtube",
+   "displayed_text": "NE",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=direct_address_imperative,target=banglaclick:youtube].inferential_status",
+   "verified_value": "NON_ESTIMABLE_UNDER_LOCKED_BOOTSTRAP",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell direct_address_imperative x twitter",
+   "displayed_text": "estimable",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=direct_address_imperative,target=banglaclick:twitter].inferential_status",
+   "verified_value": "ESTIMABLE",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell exaggeration_superlative x news",
+   "displayed_text": "estimable",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=exaggeration_superlative,target=banglaclick:news].inferential_status",
+   "verified_value": "ESTIMABLE",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell exaggeration_superlative x facebook",
+   "displayed_text": "estimable",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=exaggeration_superlative,target=banglaclick:facebook].inferential_status",
+   "verified_value": "ESTIMABLE",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell exaggeration_superlative x youtube",
+   "displayed_text": "NE",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=exaggeration_superlative,target=banglaclick:youtube].inferential_status",
+   "verified_value": "NON_ESTIMABLE_UNDER_LOCKED_BOOTSTRAP",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell exaggeration_superlative x twitter",
+   "displayed_text": "estimable",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=exaggeration_superlative,target=banglaclick:twitter].inferential_status",
+   "verified_value": "ESTIMABLE",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell interrogative_structure x news",
+   "displayed_text": "estimable",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=interrogative_structure,target=banglaclick:news].inferential_status",
+   "verified_value": "ESTIMABLE",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell interrogative_structure x facebook",
+   "displayed_text": "estimable",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=interrogative_structure,target=banglaclick:facebook].inferential_status",
+   "verified_value": "ESTIMABLE",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell interrogative_structure x youtube",
+   "displayed_text": "NE",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=interrogative_structure,target=banglaclick:youtube].inferential_status",
+   "verified_value": "NON_ESTIMABLE_UNDER_LOCKED_BOOTSTRAP",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell interrogative_structure x twitter",
+   "displayed_text": "estimable",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=interrogative_structure,target=banglaclick:twitter].inferential_status",
+   "verified_value": "ESTIMABLE",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell punctuation_intensity x news",
+   "displayed_text": "estimable",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=punctuation_intensity,target=banglaclick:news].inferential_status",
+   "verified_value": "ESTIMABLE",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell punctuation_intensity x facebook",
+   "displayed_text": "estimable",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=punctuation_intensity,target=banglaclick:facebook].inferential_status",
+   "verified_value": "ESTIMABLE",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell punctuation_intensity x youtube",
+   "displayed_text": "estimable",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=punctuation_intensity,target=banglaclick:youtube].inferential_status",
+   "verified_value": "ESTIMABLE",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell punctuation_intensity x twitter",
+   "displayed_text": "estimable",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=punctuation_intensity,target=banglaclick:twitter].inferential_status",
+   "verified_value": "ESTIMABLE",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell sensational_emotional_loading x news",
+   "displayed_text": "estimable",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=sensational_emotional_loading,target=banglaclick:news].inferential_status",
+   "verified_value": "ESTIMABLE",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell sensational_emotional_loading x facebook",
+   "displayed_text": "estimable",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=sensational_emotional_loading,target=banglaclick:facebook].inferential_status",
+   "verified_value": "ESTIMABLE",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell sensational_emotional_loading x youtube",
+   "displayed_text": "NE",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=sensational_emotional_loading,target=banglaclick:youtube].inferential_status",
+   "verified_value": "NON_ESTIMABLE_UNDER_LOCKED_BOOTSTRAP",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell sensational_emotional_loading x twitter",
+   "displayed_text": "NE",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=sensational_emotional_loading,target=banglaclick:twitter].inferential_status",
+   "verified_value": "NON_ESTIMABLE_UNDER_LOCKED_BOOTSTRAP",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell specificity_numerals x news",
+   "displayed_text": "estimable",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=specificity_numerals,target=banglaclick:news].inferential_status",
+   "verified_value": "ESTIMABLE",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell specificity_numerals x facebook",
+   "displayed_text": "estimable",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=specificity_numerals,target=banglaclick:facebook].inferential_status",
+   "verified_value": "ESTIMABLE",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell specificity_numerals x youtube",
+   "displayed_text": "estimable",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=specificity_numerals,target=banglaclick:youtube].inferential_status",
+   "verified_value": "ESTIMABLE",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell specificity_numerals x twitter",
+   "displayed_text": "estimable",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=specificity_numerals,target=banglaclick:twitter].inferential_status",
+   "verified_value": "ESTIMABLE",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell vague_deictic_reference x news",
+   "displayed_text": "estimable",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=vague_deictic_reference,target=banglaclick:news].inferential_status",
+   "verified_value": "ESTIMABLE",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell vague_deictic_reference x facebook",
+   "displayed_text": "estimable",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=vague_deictic_reference,target=banglaclick:facebook].inferential_status",
+   "verified_value": "ESTIMABLE",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell vague_deictic_reference x youtube",
+   "displayed_text": "NE",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=vague_deictic_reference,target=banglaclick:youtube].inferential_status",
+   "verified_value": "NON_ESTIMABLE_UNDER_LOCKED_BOOTSTRAP",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 grid cell vague_deictic_reference x twitter",
+   "displayed_text": "estimable",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "banglaclick_cue_platform_contrasts[cue=vague_deictic_reference,target=banglaclick:twitter].inferential_status",
+   "verified_value": "ESTIMABLE",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 stats",
+   "displayed_text": "24/32 estimable; 8/32 NE",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "count of inferential_status==ESTIMABLE over 32 cells",
+   "verified_value": "24",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 stats",
+   "displayed_text": "global 32-D Wald: NON_ESTIMABLE",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "global_banglaclick_outcome_wald.status",
+   "verified_value": "NON_ESTIMABLE",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 stats",
+   "displayed_text": "8-family Simes/BH (\u0394RD and \u0394NLL-gap): NON_ESTIMABLE",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "family_fdr_outcome_full.status; family_fdr_reliability_full.status",
+   "verified_value": "NON_ESTIMABLE_FULL_8_FAMILY_BH; NON_ESTIMABLE_FULL_8_FAMILY_BH",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H3 stats",
+   "displayed_text": "BaitBuster cues: 5/8 estimable",
+   "source_file": "results/primary/stage05/H3_RESULTS.json",
+   "source_field": "baitbuster_replication: ESTIMABLE count",
+   "verified_value": "5/8",
+   "source_sha256": "9452ad840147f598ed305a721763e79d99dbe167475266a90e278b932009be22"
+  },
+  {
+   "element": "H1/H2 card",
+   "displayed_text": "H1: 80/100 estimable; localised support",
+   "source_file": "results/primary/stage05/H1_RESULTS.json",
+   "source_field": "inferential_status count; setting_supported",
+   "verified_value": "80/100; supported=[('banglaclick:youtube', 'tfidf_lr')]",
+   "source_sha256": "e6801e7092385f50edd19f41b5f2a3b57ae1eb15e09e573381e5e5076dcce6b3"
+  },
+  {
+   "element": "H1/H2 card",
+   "displayed_text": "H2: 100/100 estimable; 0/100 support",
+   "source_file": "results/primary/stage05/H2_RESULTS.json",
+   "source_field": "inferential_status count; setting_supported count",
+   "verified_value": "100/100; 0/100",
+   "source_sha256": "f6c3f1fec5cc60748e96e01493689721130ff73bc9f7203eb7d4b2c5a04bc26d"
+  },
+  {
+   "element": "H3-P card",
+   "displayed_text": "controlled cue edits; 3 cues \u00d7 2 models; 150/150 estimable; non-causal",
+   "source_file": "results/primary/stage05/H3_PERTURBATION_RESULTS.json",
+   "source_field": "rows (count), inferential_status, families, models, causal_real_world_claim",
+   "verified_value": "150; 150; ['curiosity_information_withholding', 'direct_address_imperative', 'punctuation_intensity']; ['ebm', 'banglabert']; False",
+   "source_sha256": "f480dfd1cd3960c8fd93fed9c3beb1b5249e0d8ac37565d622b59d7bef55e74c"
+  },
+  {
+   "element": "H4 card",
+   "displayed_text": "fixed review budget; 3 review metrics; 5%, 20% sensitivity; 10% primary",
+   "source_file": "results/primary/stage06/H4_RESULTS.json",
+   "source_field": "primary_budget; budgets; metrics (lift, error capture, AURC)",
+   "verified_value": "0.1; [0.05, 0.1, 0.2]",
+   "source_sha256": "299fc2e1394c80e1a090ac14d632e0f502b5b779c459e47dcb4e96130b621462"
+  },
+  {
+   "element": "H3\u2192H4 card",
+   "displayed_text": "32 cells, 4 slopes; descriptive only; joint inference NE; non-causal",
+   "source_file": "results/primary/stage07/H3_H4_BRIDGE_RESULTS.json",
+   "source_field": "cells; pairs[*].bootstrap.platform_fe_slope.estimability_status; causal",
+   "verified_value": "32; ['NON_ESTIMABLE_UNDER_LOCKED_JOINT_BOOTSTRAP', 'NON_ESTIMABLE_UNDER_LOCKED_JOINT_BOOTSTRAP', 'NON_ESTIMABLE_UNDER_LOCKED_JOINT_BOOTSTRAP', 'NON_ESTIMABLE_UNDER_LOCKED_JOINT_BOOTSTRAP']; False",
+   "source_sha256": "90ae9bc50b42640d3ca03c4e8697ea2b910e3c53de56e4b3c1df0a158f002deb"
+  },
+  {
+   "element": "coverage markers H1/H2",
+   "displayed_text": "filled marker = dataset contributes; hollow = not in this analysis",
+   "source_file": "results/primary/stage05/H1_RESULTS.json",
+   "source_field": "distinct domains in stored rows",
+   "verified_value": "baitbuster:youtube_human|banglaclick:facebook|banglaclick:news|banglaclick:twitter|banglaclick:youtube",
+   "source_sha256": "e6801e7092385f50edd19f41b5f2a3b57ae1eb15e09e573381e5e5076dcce6b3"
+  },
+  {
+   "element": "coverage markers H3-P",
+   "displayed_text": "filled marker = dataset contributes; hollow = not in this analysis",
+   "source_file": "results/primary/stage05/H3_PERTURBATION_RESULTS.json",
+   "source_field": "distinct domains in stored rows",
+   "verified_value": "baitbuster:youtube_human|banglaclick:facebook|banglaclick:news|banglaclick:twitter|banglaclick:youtube",
+   "source_sha256": "f480dfd1cd3960c8fd93fed9c3beb1b5249e0d8ac37565d622b59d7bef55e74c"
+  },
+  {
+   "element": "coverage markers H4",
+   "displayed_text": "filled marker = dataset contributes; hollow = not in this analysis",
+   "source_file": "results/primary/stage06/H4_RESULTS.json",
+   "source_field": "distinct domains in stored rows",
+   "verified_value": "baitbuster:youtube_human|banglaclick:facebook|banglaclick:news|banglaclick:twitter|banglaclick:youtube",
+   "source_sha256": "299fc2e1394c80e1a090ac14d632e0f502b5b779c459e47dcb4e96130b621462"
+  },
+  {
+   "element": "coverage markers BRIDGE",
+   "displayed_text": "filled marker = dataset contributes; hollow = not in this analysis",
+   "source_file": "results/primary/stage07/H3_H4_BRIDGE_RESULTS.json",
+   "source_field": "distinct domains in stored rows",
+   "verified_value": "banglaclick:news|banglaclick:facebook|banglaclick:youtube|banglaclick:twitter",
+   "source_sha256": "90ae9bc50b42640d3ca03c4e8697ea2b910e3c53de56e4b3c1df0a158f002deb"
+  },
+  {
+   "element": "Stage09 strip",
+   "displayed_text": "Stage09: source-site cluster sensitivity (uncertainty only)",
+   "source_file": "results/primary/stage09/SENSITIVITY_SUMMARY.md",
+   "source_field": "Source-site host clusters: 40; summary",
+   "verified_value": "sensitivity only",
+   "source_sha256": "691b9e568afe7e4b66de338fb433d3a2849daa1eb92752af1e053e1f25ec87d6"
+  },
+  {
+   "element": "Stage10 strip",
+   "displayed_text": "Stage10: release packaging, no scientific computation",
+   "source_file": "provenance/release/RELEASE_STATUS.json",
+   "source_field": "scientific_computation_executed; qa.stage09_sensitivity_only",
+   "verified_value": "False; True",
+   "source_sha256": "e9b8b48f71d25d903ed6dca8a53c7439ac89ab904e2d148e14c163de0b36b8c4"
+  }
+ ],
+ "text_qa": []
+}
