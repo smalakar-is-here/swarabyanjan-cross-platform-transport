@@ -157,7 +157,7 @@ def v3_anchor_budget(d, sizes, reps, rng):
     return pd.DataFrame(rows)
 
 
-def application(scores, pool, anc, lv, src_y, rng, boot):
+def application(scores, pool, anc, lv, src_y, rng, boot, cells_only=None, cell_filter=None):
     """Per seed and cell: risks under r6, hard aligned, and SCL over gamma; prior-corrected variants; source risk.
     Bootstrap: resample anchor publisher clusters (refit link) and target clusters (resample cell), seed-averaged."""
     pool_i = pool.set_index("row_id"); aset = set(anc.normalized_title_sha256)
@@ -168,13 +168,13 @@ def application(scores, pool, anc, lv, src_y, rng, boot):
         sc = scores[scores.seed == s]
         d = anchor_items(sc, pool, anc, lv)
         cells = {}
-        for e in B_CELLS:
+        for e in (cells_only or B_CELLS):
             c = sc[sc.env == e].copy()
             c["L"] = lv.loc[c.row_id].to_numpy().astype(int); c["z"] = linking.logit(c.p)
             c["cluster"] = pool_i.loc[c.row_id, "cluster_id"].to_numpy()
             h = pool_i.loc[c.row_id, "normalized_title_sha256"]
             c["ya_obs"] = np.where(h.isin(aset), a_idx.reindex(h).bb_label.to_numpy(), np.nan).astype(float)
-            cells[e] = c.reset_index(drop=True)
+            cells[e] = (cell_filter(e, c) if cell_filter else c).reset_index(drop=True)
         src = sc[sc.env == "banglabait:news"]
         per[s] = (d, cells, linking.risks(src_y.loc[src.row_id].to_numpy(), src.p.to_numpy()), float(src.pi_train.iloc[0]))
 
@@ -206,7 +206,7 @@ def application(scores, pool, anc, lv, src_y, rng, boot):
     for b in range(boot):
         sel = {}
         acl = per[seeds[0]][0].cluster_id.unique(); apick = rng.choice(acl, len(acl), replace=True)
-        cpick = {e: rng.choice(per[seeds[0]][1][e].cluster.unique(), per[seeds[0]][1][e].cluster.nunique(), replace=True) for e in B_CELLS}
+        cpick = {e: rng.choice(per[seeds[0]][1][e].cluster.unique(), per[seeds[0]][1][e].cluster.nunique(), replace=True) for e in per[seeds[0]][1]}
         for s, (d, cells, rs, pi_s) in per.items():
             gi = d.groupby("cluster_id").indices; ai = np.concatenate([gi[k] for k in apick])
             cs = {}
@@ -217,9 +217,12 @@ def application(scores, pool, anc, lv, src_y, rng, boot):
     return point, pd.concat(boots, ignore_index=True)
 
 
-def run(pool, src_test, anc, lv, src_y, seeds, seed_rng, out_write, boot=300, extra_scorers=None):
+def run(pool, src_test, anc, lv, src_y, seeds, seed_rng, out_write, boot=300, extra_scorers=None, pool_inf=None):
+    """pool: training pool (its cluster_id defines the training splits); pool_inf: the same rows with inference
+    (publisher) clusters, used for every fold, subsample and bootstrap below."""
     t0 = time.time(); rng = np.random.default_rng(seed_rng)
     sc = blind_tfidf(pool, src_test, seeds); sc["scorer"] = "tfidf_lr"
+    pool = pool if pool_inf is None else pool_inf
     scorers = {"tfidf_lr": sc}
     for name, frame in (extra_scorers or {}).items():
         scorers[name] = frame

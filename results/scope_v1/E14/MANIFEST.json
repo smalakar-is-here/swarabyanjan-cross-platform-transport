@@ -1,7 +1,7 @@
 {
  "experiment": "E14",
  "scope_version": "1.0.0",
- "wall_seconds": 5.2,
+ "wall_seconds": 1.0,
  "config_sha256": "22053e3efd0c674c5db8aa24a4855b991b235dbae24125e161d11874d12aa2a4",
  "python": "3.13.3",
  "platform": "Windows-11-10.0.26300-SP0",

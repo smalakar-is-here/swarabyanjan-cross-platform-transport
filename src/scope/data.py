@@ -10,6 +10,7 @@ regime r(e):
 The R6 binary target label for regime B is Y = 1[L >= 1] (verified on all 4,961 rows).
 """
 from __future__ import annotations
+import re
 import numpy as np
 import pandas as pd
 from .paths import restored, raw
@@ -100,3 +101,14 @@ def anchors() -> pd.DataFrame:
     j = a.join(b, how="inner").reset_index()
     j["bb_label"] = (j["bb_label_mean"] >= 0.5).astype(int)
     return j
+
+
+def publisher_cluster(cid: str) -> str:
+    """Inference cluster. BanglaClick news cluster ids are article URLs or bare domains ('bc:news:<url|domain>');
+    items from one publisher share editorial practice, so inference clusters them by publisher domain
+    (53 publishers for 1,500 news items; 35 among the anchors). Other cells keep their ids (page, channel,
+    account). Training splits keep the original ids, so no model changes."""
+    if not isinstance(cid, str) or not cid.startswith("bc:news:"):
+        return cid
+    host = re.sub(r"^(?:https?://)?(?:www\.)?([^/]+).*$", r"\1", cid[len("bc:news:"):])
+    return "bc:news:" + host.lower()

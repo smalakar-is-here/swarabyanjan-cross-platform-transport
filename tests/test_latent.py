@@ -40,3 +40,15 @@ def test_missing_regime_C_falls_back_to_source_cut():
     keep = reg != 2
     m = latent.fit(X[keep], reg[keep], y[keep])
     assert not m["has_C"] and latent.cut(m, "C") == m["tau_A"]
+
+
+def test_fit_bias_recovers_regime_intercepts():
+    """E23 ablation model: shared weights with one intercept per regime (binary labels)."""
+    rng = np.random.default_rng(3); n, D = 4000, 6
+    X = rng.normal(0, 1, (n, D)); w = rng.normal(0, 1, D); reg = rng.choice([0, 1, 2], n)
+    b = np.array([-0.5, 1.0, 0.2]); y = (rng.random(n) < expit(X @ w + b[reg])).astype(float)
+    m = latent.fit_bias(X, reg, y, lam=1e-3)
+    assert m["converged"] and np.corrcoef(m["w"], w)[0, 1] > 0.98
+    assert np.max(np.abs(m["b"] - b)) < 0.2
+    keep = reg != 2; m2 = latent.fit_bias(X[keep], reg[keep], y[keep])
+    assert not m2["has_C"] and np.allclose(latent.score_bias(m2, X[:5], np.full(5, 2)), latent.score_bias(m2, X[:5], np.zeros(5, int)))

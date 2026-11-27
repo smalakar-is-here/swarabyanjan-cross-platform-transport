@@ -1,0 +1,7 @@
+{
+ "crossfit_kappa_mean": 0.460016544051828,
+ "crossfit_kappa_lo": 0.453079493953899,
+ "crossfit_kappa_hi": 0.46202364937128887,
+ "reps": 20,
+ "folds": 5
+}

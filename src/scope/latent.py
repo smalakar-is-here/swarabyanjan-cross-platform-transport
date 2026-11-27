@@ -78,3 +78,24 @@ def cut(model, construct):
 
 def score(model, X, construct):
     return X @ model["w"] - cut(model, construct)
+
+
+def fit_bias(X, reg, y, lam=1.0, maxiter=500):
+    """Ablation (E23): shared weights, one intercept per regime, binary labels for every regime.
+    logit P(y=1 | x, regime r) = w'x + b_r; penalty ||w||^2 / 2 as in fit(); intercepts unpenalised."""
+    D = X.shape[1]; reg = np.asarray(reg, int); y = np.asarray(y, float)
+
+    def obj(v):
+        w, bb = v[:D], v[D:D + 3]; z = X @ w + bb[reg]
+        ll = np.sum(y * log_expit(z) + (1 - y) * log_expit(-z)); res = y - expit(z)
+        return -ll + 0.5 * lam * np.dot(w, w), np.r_[-(X.T @ res) + lam * w, -np.bincount(reg, res, minlength=3)]
+    r = minimize(obj, np.zeros(D + 3), jac=True, method="L-BFGS-B", options={"maxiter": maxiter})
+    return {"w": r.x[:D], "b": r.x[D:D + 3], "converged": bool(r.success), "has_C": bool((reg == 2).any())}
+
+
+def score_bias(model, X, reg):
+    """Logit for items of the given regimes; a regime absent from training (C held out) uses the source intercept b_A."""
+    b = model["b"].copy()
+    if not model["has_C"]:
+        b[2] = b[0]
+    return X @ model["w"] + b[np.asarray(reg, int)]

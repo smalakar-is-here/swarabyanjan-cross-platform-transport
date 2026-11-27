@@ -43,3 +43,23 @@ linked through cross-regime anchor items, used to transport a text classifier ac
 pooled ERM, which is the equal-cut special case. Not claimed: a new model class.
 
 All citations above need DOI / venue verification before use.
+
+## Update 2026-11-27 (second pass, E20)
+
+Targeted search ("partial identification AUC", "AUC bounds unknown labels known proportion") found two closer
+papers. Both were read through their arXiv HTML text:
+- Fogliato, G'Sell & Chouldechova, Fairness Evaluation in Presence of Biased Noisy Labels, AISTATS 2020
+  (arXiv 2003.13808). They derive sharp bounds on AUC, FPR, FNR and PPV when a share alpha of observed negatives are
+  hidden positives, attained by placing the hidden positives at the highest or lowest scores. There is no
+  monotonicity restriction, the labels are binary, and log loss and Brier score are not covered.
+- Claesen, Davis, De Smet & De Moor, Assessing Binary Classifiers Using Only Positive and Unlabeled Data, arXiv
+  1504.06837 (2015). They bound ROC and PR curves given one global class fraction beta, with the same rank-extreme
+  construction.
+
+Consequence for the manuscript claim: the rank-extreme construction (Prop. 3a) is not new and is now cited as such.
+The remaining contribution is narrower:
+1. known positive mass per stratum, supplied by a cross-regime link;
+2. the monotonicity endpoint (Prop. 3b), which shows that the level-only link is the sharp worst case;
+3. soft labels, with log loss and Brier score covered by the same argument;
+4. the use of all of this to bound a construct-transported risk.
+The manuscript's related work and contribution bullet were rewritten to match.

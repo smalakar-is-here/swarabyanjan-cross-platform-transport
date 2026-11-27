@@ -43,15 +43,25 @@ _CACHE = {}
 
 
 def preds():
+    """Frozen R6 predictions (inference only): news clustered by publisher (data.publisher_cluster)."""
     if "df" not in _CACHE:
-        _CACHE["df"] = data.load_predictions()
+        df = data.load_predictions(); df["cluster_id"] = df.cluster_id.map(data.publisher_cluster)
+        _CACHE["df"] = df
     return _CACHE["df"]
 
 
 def anchors():
     if "anc" not in _CACHE:
-        _CACHE["anc"] = data.anchors()
+        a = data.anchors(); a["bc_cluster"] = a.bc_cluster.map(data.publisher_cluster)
+        _CACHE["anc"] = a
     return _CACHE["anc"]
+
+
+def inference_pool():
+    """training_pool() with publisher clusters for inference (bootstrap, cross-fit folds, design halves).
+    Training splits must keep training_pool().cluster_id so that every fitted model is unchanged."""
+    p = training_pool().copy(); p["cluster_id"] = p.cluster_id.map(data.publisher_cluster)
+    return p
 
 
 def pi_source():
@@ -203,9 +213,13 @@ def E5():
 
 
 # ---------------------------------------------------------------- E4
-def E4():
+def E4(exp="E4", aligned="level"):
+    """Decomposition. aligned='level': Y* = 1[L>=2] (anchor kappa over level cuts); aligned='trigger': Y* = 1[trigger level >= 1],
+    the rubric binarisation selected by cross-fitted kappa over level and component cuts (E24)."""
     t0 = time.time(); a = anchors(); g = construct.linking_function(a)
     df = add_labels(preds(), g); pi_s = pi_source()
+    if aligned == "trigger":
+        isB = df.regime == "B"; df = df.copy(); df.loc[isB, "y_al"] = (df.loc[isB, "trigger_level"].fillna(0) >= 1).astype(float)
     rows = []
     src = df[df.env == "banglabait:news"]
     for (m, s), sm in src.groupby(["model", "seed"]):
@@ -217,14 +231,14 @@ def E4():
                 c = decompose.components(e.p_calibrated.to_numpy(), e.y_r6.to_numpy(), e[lab].to_numpy(), pi_s, rs, ra)
                 c.update(env=env, model=m, seed=s, aligned_label=lab); rows.append(c)
     r = pd.DataFrame(rows)
-    _write("E4", "decomposition_by_seed.csv", r)
+    _write(exp, "decomposition_by_seed.csv", r)
     num = [c for c in r.columns if c not in ("env", "model", "seed", "aligned_label")]
     summ = r.groupby(["aligned_label", "env", "model"])[num].mean().reset_index()
     # seed consistency: share of seeds with same sign as the mean, per component
     for comp in ("nll_construct", "nll_prior", "nll_residual", "auroc_construct"):
         summ[comp + "_seed_sign_agree"] = r.groupby(["aligned_label", "env", "model"])[comp].apply(
             lambda v: float(np.mean(np.sign(v) == np.sign(v.mean())))).to_numpy()
-    _write("E4", "decomposition_summary.csv", summ)
+    _write(exp, "decomposition_summary.csv", summ)
     # cluster bootstrap (target clusters + anchor classes), seed-averaged, hard aligned label
     rng = np.random.default_rng(C["bootstrap_seed"]); B = 500
     boots = []
@@ -249,8 +263,8 @@ def E4():
     ci = bt.groupby(["env", "model"]).agg(**{f"{k}_{q}": (k, (lambda v, q=q: float(np.percentile(v, 2.5 if q == 'lo' else 97.5))))
                                              for k in ("nll_gap", "nll_construct", "nll_prior", "nll_residual", "auroc_R00", "auroc_RA", "auroc_construct")
                                              for q in ("lo", "hi")}).reset_index()
-    _write("E4", "decomposition_cluster_bootstrap_ci.csv", ci)
-    _manifest("E4", t0, {"pi_source_dev": pi_s, "bootstrap_draws": B,
+    _write(exp, "decomposition_cluster_bootstrap_ci.csv", ci)
+    _manifest(exp, t0, {"aligned_label": aligned, "pi_source_dev": pi_s, "bootstrap_draws": B,
                          "bootstrap_note": "publisher/channel clusters resampled within each target cell; seed-averaged; source risk held fixed"})
 
 
@@ -342,7 +356,7 @@ def _gather_predictions():
 def E17():
     """Paired cluster-bootstrap comparison of protocols vs source-only (scope.compare)."""
     from . import compare
-    t0 = time.time(); pool = training_pool().set_index("row_id"); files = _gather_predictions()
+    t0 = time.time(); pool = inference_pool().set_index("row_id"); files = _gather_predictions()
     rng = np.random.default_rng(C["bootstrap_seed"]); out = []
     for (model, lab, tgt), g in files[files.protocol != "majority"].groupby(["model", "label", "target"]):
         ref = "source_only" if "source_only" in set(g.protocol) else "pooled_erm"
@@ -508,6 +522,19 @@ def E13():
     _manifest("E13", t0, {"simulation": True, "reps": C["cluster_sim_reps"], "bootstrap_draws_per_rep": 399})
 
 
+def _source_fit_prevalence(seed):
+    """Training prevalence of a news-fold source-only model: BanglaBait pool minus the news cell's titles, fit part
+    of the same cluster-grouped 90/10 split that the GPU kernel and e19.blind_tfidf use (training clusters)."""
+    key = ("pi_fit", seed)
+    if key not in _CACHE:
+        from sklearn.model_selection import GroupShuffleSplit
+        pool = training_pool(); news = pool[pool.env == "banglaclick:news"]
+        tr = pool[pool.env == "banglabait:news"]; tr = tr[~tr.normalized_title_sha256.isin(news.normalized_title_sha256)]
+        fit_i, _ = next(GroupShuffleSplit(n_splits=1, test_size=0.1, random_state=seed).split(tr, groups=tr.cluster_id))
+        _CACHE[key] = float(tr.iloc[fit_i].y_r6.mean())
+    return _CACHE[key]
+
+
 def _xcell_scorers():
     """Transformer anchor-blind scorers from GPU source-only units (xcell_ + news pred_ files), if present."""
     import glob, os
@@ -520,7 +547,13 @@ def _xcell_scorers():
             continue
         x = pd.read_parquet(f)[["row_id", "env", "p_calibrated"]]
         n = pd.read_parquet(news[0])[["row_id", "p_calibrated"]].assign(env="banglaclick:news")
-        fr = pd.concat([x, n], ignore_index=True).rename(columns={"p_calibrated": "p"}).assign(seed=seed)
+        parts_ = [x, n]
+        # Source held-out reference (w11/w12 reruns): the same model on its cluster-grouped validation split of
+        # BanglaBait. Deterministic fine-tuning makes it the same model as the xcell_ file (checked in E20).
+        sv = glob.glob(str(paths.private_root() / "kaggle_out" / "full" / "**" / os.path.basename(f).replace("xcell_", "srcval_")), recursive=True)
+        if sv:
+            parts_.append(pd.read_parquet(sv[0])[["row_id", "p_calibrated"]].assign(env="banglabait:news"))
+        fr = pd.concat(parts_, ignore_index=True).rename(columns={"p_calibrated": "p"}).assign(seed=seed, pi_train=_source_fit_prevalence(seed))
         out.setdefault(model, []).append(fr.drop_duplicates("row_id"))
     out = {k: pd.concat(v, ignore_index=True) for k, v in out.items()}
     # Validation-only scorers: every LOEO prediction set on the news cell (training excluded all its titles,
@@ -541,8 +574,9 @@ def E19():
     lv = data.banglaclick_levels().set_index("row_id").level.astype(int)
     st = data.load_predictions(with_text=True); st = st[st.env == "banglabait:news"].drop_duplicates("row_id")
     src_test = st[["row_id", "env", "title"]]; src_y = st.set_index("row_id").label.astype(float)
+    pa = pool[pool.env == "banglabait:news"].set_index("row_id").y_r6.astype(float); src_y = pd.concat([src_y, pa[~pa.index.isin(src_y.index)]])  # transformer scorers: source held-out rows come from the training pool
     sc, v1, v2, v3, pt, bt, gaps = e19.run(pool, src_test, anc, lv, src_y, C["seeds"][:3], C["bootstrap_seed"], _write,
-                                    boot=300, extra_scorers=_xcell_scorers())
+                                    boot=300, extra_scorers=_xcell_scorers(), pool_inf=inference_pool())
     # reproduction check: blind TF-IDF on the news cell == E10 source-only news predictions
     chk = []
     for s in C["seeds"][:3]:
@@ -593,9 +627,13 @@ def E19():
 def E20():
     """Sharp partial-identification bounds for source-construct risk on regime-B cells (scope.bounds, scope.e20)."""
     from . import e20
-    t0 = time.time(); pool = training_pool(); anc = anchors(); rng = np.random.default_rng(C["bootstrap_seed"] + 20)
+    t0 = time.time(); pool = inference_pool(); anc = anchors(); rng = np.random.default_rng(C["bootstrap_seed"] + 20)
     lv = data.banglaclick_levels().set_index("row_id").level.astype(int)
     st = data.load_predictions(); src_y = st[st.env == "banglabait:news"].drop_duplicates("row_id").set_index("row_id").label.astype(float)
+    # BanglaBait training-pool labels (regime A; identical under both regime-B label definitions) for the transformer
+    # scorers' source held-out split
+    pa = pool[pool.env == "banglabait:news"].set_index("row_id").y_r6.astype(float)
+    src_y = pd.concat([src_y, pa[~pa.index.isin(src_y.index)]])
     sc = pd.read_parquet(paths.private_root() / "predictions" / "E19" / "blind_tfidf_scores.parquet")  # E19's anchor-blind scorer
     scorers = {"tfidf_lr": sc[["row_id", "env", "seed", "p"]]}
     scorers.update({k: v for k, v in _xcell_scorers().items() if "|" not in k})  # transformer source-only scorers, when returned
@@ -631,7 +669,7 @@ def E20():
 def E21():
     """Design-based target auditing: model-assisted anchor sampling, validated on news anchors (truth known)."""
     from . import e21, e19
-    t0 = time.time(); pool = training_pool(); anc = anchors(); rng = np.random.default_rng(C["bootstrap_seed"] + 21)
+    t0 = time.time(); pool = inference_pool(); anc = anchors(); rng = np.random.default_rng(C["bootstrap_seed"] + 21)
     lv = data.banglaclick_levels().set_index("row_id").level.astype(int)
     sc = pd.read_parquet(paths.private_root() / "predictions" / "E19" / "blind_tfidf_scores.parquet")
     scorers = {"tfidf_lr": sc[["row_id", "env", "seed", "p"]]}
@@ -704,7 +742,220 @@ def E22():
                           "baitbuster_target": "regime C absent from training when held out: source cut tau_A used (flagged cut_identified=False)"})
 
 
-EXPS = {"E22": E22, "E21": E21,"E20": E20,"E19": E19,"E0": E0, "E1": E1, "E2": E2, "E3": E3, "E4": E4, "E5": E5, "E7": E7, "E10": E10, "E10T": E10T, "E11": E11, "E13": E13, "E14": E14, "E15": E15, "E16": E16, "E17": E17, "E18": E18}
+def E23():
+    """Ablations of the regime cut-point model (E22), TF-IDF features, identical LOEO splits and seeds.
+
+    regime_bias     shared w, one intercept per regime, regime-B labels binarised at the evaluated cut (one fit per
+                    label). Removes the ordinal structure: tests whether the rubric levels matter beyond regime offsets.
+    latent_noanchor E22 model with every title that is labelled by two regimes in the training set removed. Tests
+                    whether the common items (anchors) matter for the fitted model.
+    same_regime     plain logistic regression on the other cells of the target's own regime only (regime-B targets).
+                    Tests whether cross-corpus data helps at all once the label definition is held fixed.
+    Contrasts: each ablation vs latent_cuts (E22) by paired cluster bootstrap; Holm within metric over this family.
+    """
+    from . import latent, train_cpu, compare
+    from scipy.special import expit
+    from sklearn.model_selection import GroupShuffleSplit
+    t0 = time.time(); pool = training_pool()
+    lv = data.banglaclick_levels().set_index("row_id").level.astype(int)
+    pool["regime"] = pool.env.str.split(":").str[0].map({"banglabait": 0, "banglaclick": 1, "baitbuster": 2})
+    pool["yy"] = pool.y_r6
+    b = pool.regime == 1; pool.loc[b, "yy"] = lv.loc[pool.loc[b, "row_id"]].to_numpy().astype(float)
+    construct_of = {("r6", 1): "B1", ("aligned", 1): "B2"}
+    rows = []; pdir = paths.private_root() / "predictions" / "E23"
+    for tgt in train_cpu.TARGETS:
+        test = pool[pool.env == tgt]; treg = int(test.regime.iloc[0])
+        train = pool[pool.env != tgt]; train = train[~train.normalized_title_sha256.isin(test.normalized_title_sha256)]
+        for seed in C["seeds"][:3]:
+            fit_i, val_i = next(GroupShuffleSplit(n_splits=1, test_size=0.1, random_state=seed).split(train, groups=train.cluster_id))
+            tr, va = train.iloc[fit_i], train.iloc[val_i]
+            feats = train_cpu.featurizer(); Xtr = feats.fit_transform(tr.title)
+            Xva, Xte = feats.transform(va.title), feats.transform(test.title)
+            reg_tr, reg_va = tr.regime.to_numpy(), va.regime.to_numpy()
+
+            def record(proto, lab, p, extra=None):
+                ycol = "y_r6" if lab == "r6" else "y_al"; y = test[ycol].to_numpy()
+                r = M.all_metrics(y, p, hard=y); r.update(label=lab, target=tgt, protocol=proto, model="tfidf_lr", seed=seed, **(extra or {}))
+                rows.append(r); train_cpu._save_pred(pdir, "tfidf_lr", proto, lab, tgt, seed, test.row_id, p)
+
+            # (1) latent model without anchors
+            h = tr.groupby("normalized_title_sha256").regime.nunique(); multi = set(h[h > 1].index)
+            keep = ~tr.normalized_title_sha256.isin(multi).to_numpy()
+            m = latent.fit(Xtr[keep], reg_tr[keep], tr.yy.to_numpy()[keep])
+            for lab in ("r6", "aligned"):
+                con = construct_of.get((lab, treg), "A" if treg == 0 else "C"); tcut = {"r6": 1, "aligned": 2}[lab]
+                fv = Xva @ m["w"]; yv = va.yy.to_numpy()
+                zv = np.where(reg_va == 0, fv - latent.cut(m, "A"), np.where(reg_va == 2, fv - latent.cut(m, "C"), fv - latent.cut(m, f"B{tcut}")))
+                T = train_cpu.fit_temperature(zv, np.where(reg_va == 1, (yv >= tcut).astype(float), yv))
+                record("latent_noanchor", lab, expit(latent.score(m, Xte, con) / T), {"anchors_removed": int((~keep).sum())})
+            # (2) regime offsets only (binary labels), one fit per label definition
+            for lab in ("r6", "aligned"):
+                tcut = {"r6": 1, "aligned": 2}[lab]
+                ytr = np.where(reg_tr == 1, (tr.yy.to_numpy() >= tcut).astype(float), tr.yy.to_numpy())
+                mb = latent.fit_bias(Xtr, reg_tr, ytr)
+                yv = va.yy.to_numpy(); yvb = np.where(reg_va == 1, (yv >= tcut).astype(float), yv)
+                T = train_cpu.fit_temperature(latent.score_bias(mb, Xva, reg_va), yvb)
+                record("regime_bias", lab, expit(latent.score_bias(mb, Xte, np.full(Xte.shape[0], treg)) / T),
+                       {"cut_identified": bool(treg != 2 or mb["has_C"])})
+            # (3) same-regime training only (regime-B targets)
+            if treg == 1:
+                s_tr, s_va = reg_tr == 1, reg_va == 1
+                for lab in ("r6", "aligned"):
+                    tcut = {"r6": 1, "aligned": 2}[lab]
+                    lr = train_cpu.fit_lr(Xtr[s_tr], (tr.yy.to_numpy()[s_tr] >= tcut).astype(int), seed=seed)
+                    T = train_cpu.fit_temperature(lr.decision_function(Xva[s_va]), (va.yy.to_numpy()[s_va] >= tcut).astype(float))
+                    record("same_regime", lab, expit(lr.decision_function(Xte) / T))
+    res = pd.DataFrame(rows)
+    _write("E23", "ablation_results.csv", res)
+    num = [c for c in res.columns if c not in ("label", "target", "protocol", "model", "seed", "cut_identified")]
+    _write("E23", "ablation_summary.csv", res.groupby(["label", "target", "protocol", "model"])[num].mean().reset_index())
+    _manifest("E23", t0, {"seeds": C["seeds"][:3], "splits": "identical to E10/E22"})
+    E23C()
+
+
+def E23C():
+    """Paired cluster-bootstrap contrasts of the E23 ablations vs the full cut-point model (publisher clusters)."""
+    from . import compare
+    t0 = time.time(); pdir = paths.private_root() / "predictions" / "E23"
+    files = _gather_predictions(); files = files[files.model == "tfidf_lr"]
+    import glob, os
+    e23 = []
+    for f in glob.glob(str(pdir / "*.parquet")):
+        model, proto, lab, tgt, sd = os.path.basename(f)[:-8].split("__")
+        e23.append(dict(model=model, protocol=proto, label=lab, target=tgt.replace("-", ":", 1), seed=int(sd[1:]), file=f, col="p"))
+    files = pd.concat([files, pd.DataFrame(e23)], ignore_index=True)
+    pidx = inference_pool().set_index("row_id"); rng = np.random.default_rng(C["bootstrap_seed"] + 23); out = []
+    keep_p = ["latent_cuts", "latent_noanchor", "regime_bias", "same_regime", "pooled_erm", "source_only"]
+    for (lab, tgt), g in files[files.protocol.isin(keep_p)].groupby(["label", "target"]):
+        if "latent_cuts" not in set(g.protocol):
+            continue
+        ref_ids = pd.read_parquet(g[g.protocol == "latent_cuts"].iloc[0].file).row_id.to_numpy(); preds = {}
+        for _, r in g.iterrows():
+            preds.setdefault(r.protocol, []).append(pd.read_parquet(r.file).set_index("row_id").loc[ref_ids][r.col].to_numpy())
+        ycol = "y_r6" if lab == "r6" else "y_al"
+        cr = compare.cell(preds, pidx.loc[ref_ids, ycol].to_numpy(), pidx.loc[ref_ids, "cluster_id"].to_numpy(), "latent_cuts", 1000, rng)
+        cr.insert(0, "target", tgt); cr.insert(0, "label", lab); out.append(cr)
+    ct = pd.concat(out, ignore_index=True); ct["p_holm"] = np.nan
+    fam = ct.protocol.isin(["latent_noanchor", "regime_bias", "same_regime"]) & ct.p_wald.notna()
+    for mt, g in ct[fam].groupby("metric"):
+        ct.loc[g.index, "p_holm"] = compare.holm(g.p_wald.to_numpy())
+    _write("E23", "ablation_contrasts_vs_latent_cuts.csv", ct)
+    _manifest("E23", t0, {"seeds": C["seeds"][:3], "splits": "identical to E10/E22", "reference": "latent_cuts (E22)", "clusters": "publisher (inference_pool)",
+                          "multiplicity": "Holm within metric over the three ablation protocols vs latent_cuts; pooled_erm/source_only rows are descriptive"})
+
+
+def E24():
+    """Reviewer-requested robustness analyses (scope.e24); no model is retrained."""
+    from . import e24, e19, decompose
+    t0 = time.time(); a = anchors(); g = construct.linking_function(a); rng = np.random.default_rng(C["bootstrap_seed"] + 24)
+    # (M-06) binarisations of the rubric against the source label on anchors
+    b, cf = e24.binarisations(a, rng)
+    _write("E24", "binarisations_on_anchors.csv", b); _write("E24", "binarisations_crossfit.json", cf)
+    df = add_labels(preds(), g); pi_s = pi_source()
+    best_alt = b[~b.cut.str.startswith("level>=")].sort_values("kappa").cut.iloc[-1]
+    rows = []
+    for (env, m, s), e in df[df.regime == "B"].groupby(["env", "model", "seed"]):
+        cc = e24.candidate_cuts(e, level="level")
+        for k in dict.fromkeys(["level>=1", "level>=2", "trigger>=1", best_alt]):
+            if cc[k].min() < cc[k].max():
+                rows.append({"env": env, "model": m, "seed": s, "cut": k, "auroc": M.auroc(cc[k], e.p_calibrated.to_numpy()),
+                             "nll": M.nll(cc[k], e.p_calibrated.to_numpy()), "prevalence": float(cc[k].mean())})
+    _write("E24", "frozen_auroc_by_binarisation.csv", pd.DataFrame(rows).groupby(["env", "model", "cut"]).mean(numeric_only=True).reset_index().drop(columns="seed"))
+    # (M-02) component-based link transport -> implied delta per platform
+    lvf = data.banglaclick_levels(); pool = inference_pool(); aset = set(a.normalized_title_sha256)
+    cells = {}
+    for env in ("banglaclick:news", "banglaclick:facebook", "banglaclick:youtube", "banglaclick:twitter"):
+        ids = pool[pool.env == env]
+        cells[env] = lvf[lvf.row_id.isin(ids.row_id)].reset_index(drop=True)
+        if env == "banglaclick:news":
+            na = ids[~ids.normalized_title_sha256.isin(aset)].row_id
+            cells["banglaclick:news_nonanchor"] = lvf[lvf.row_id.isin(na)].reset_index(drop=True)
+    _write("E24", "component_link_transport.csv", e24.component_link(a, cells, rng, boot=500))
+    _write("E24", "component_mix_by_level.csv", e24.component_mix({**cells, "anchors": a.rename(columns={"bc_level": "level"})}))
+    # (M-10) BanglaClick YouTube without its dominant channel
+    src = df[df.env == "banglabait:news"]; yt = df[df.env == "banglaclick:youtube"]
+    top = yt.drop_duplicates("row_id").cluster_id.value_counts().index[0]; rows = []
+    for (m, s), e in yt.groupby(["model", "seed"]):
+        sm = src[(src.model == m) & (src.seed == s)]; rs, ra = decompose.source_risk(sm.p_calibrated.to_numpy(), sm.y_r6.to_numpy())
+        for sub, ee in (("all", e), ("without_top_channel", e[e.cluster_id != top])):
+            c = decompose.components(ee.p_calibrated.to_numpy(), ee.y_r6.to_numpy(), ee.y_al.to_numpy(), pi_s, rs, ra)
+            rows.append({"subset": sub, "model": m, "seed": s, "n": len(ee), "clusters": ee.cluster_id.nunique(),
+                         "auroc_r6": c["auroc_R00"], "auroc_aligned": c["auroc_RA"], **{k: c[k] for k in ("nll_gap", "nll_construct", "nll_prior", "nll_residual", "prev_r6", "prev_aligned")}})
+    _write("E24", "youtube_without_top_channel.csv", pd.DataFrame(rows).groupby(["subset", "model"]).mean(numeric_only=True).reset_index().drop(columns="seed"))
+    # (M-14) metric suite of the frozen models
+    rows = []
+    for (env, m, s), e in df.groupby(["env", "model", "seed"]):
+        for lab in (("y_r6", "y_al") if e.regime.iloc[0] == "B" else ("y_r6",)):
+            y = e[lab].to_numpy(); r = M.all_metrics(y, e.p_calibrated.to_numpy(), hard=y)
+            rows.append({"env": env, "model": m, "seed": s, "label": lab, **r})
+    _write("E24", "frozen_metric_suite.csv", pd.DataFrame(rows).groupby(["env", "model", "label"]).mean(numeric_only=True).reset_index().drop(columns="seed"))
+    # (M-03) score-conditional link on non-anchor news items only
+    sc = pd.read_parquet(paths.private_root() / "predictions" / "E19" / "blind_tfidf_scores.parquet")
+    st = data.load_predictions(); src_y = st[st.env == "banglabait:news"].drop_duplicates("row_id").set_index("row_id").label.astype(float)
+    pa = pool[pool.env == "banglabait:news"].set_index("row_id").y_r6.astype(float); src_y = pd.concat([src_y, pa[~pa.index.isin(src_y.index)]])
+    lv = lvf.set_index("row_id").level.astype(int); outp, outb = [], []
+    for name, s in {"tfidf_lr": sc, **{k: v for k, v in _xcell_scorers().items() if "|" not in k}}.items():
+        if not s.env.eq("banglabait:news").any():
+            continue
+        pt, bt = e19.application(s, pool, a, lv, src_y, rng, 300, cells_only=["banglaclick:news"],
+                                 cell_filter=lambda e_, c_: c_[c_.ya_obs.isna()])
+        pt["scorer"], bt["scorer"] = name, name; outp.append(pt); outb.append(bt)
+    pt, bt = pd.concat(outp), pd.concat(outb)
+    q = lambda v, a_: float(np.nanpercentile(v, a_))
+    summ = pt.groupby(["scorer", "env", "label"]).mean(numeric_only=True).reset_index().drop(columns="seed")
+    ci = bt.groupby(["scorer", "env", "label"]).agg(**{f"{m}_{k}": (m, (lambda v, a_=a_: q(v, a_))) for m in ("auroc", "nll", "nll_residual_after_prior")
+                                                     for k, a_ in (("lo", 2.5), ("hi", 97.5))}).reset_index()
+    _write("E24", "scl_news_nonanchor.csv", summ.merge(ci, on=["scorer", "env", "label"]))
+    # (M-08) publisher-cluster jackknife t-tests for the protocol contrasts
+    from . import compare
+    files = _gather_predictions(); pidx = pool.set_index("row_id"); out = []
+    for (model, lab, tgt), gg in files[~files.protocol.isin(["majority"])].groupby(["model", "label", "target"]):
+        if "source_only" not in set(gg.protocol):
+            continue
+        ref_ids = pd.read_parquet(gg.iloc[0].file).row_id.to_numpy(); P = {}
+        for _, r in gg.iterrows():
+            P.setdefault(r.protocol, []).append(pd.read_parquet(r.file).set_index("row_id").loc[ref_ids][r.col].to_numpy())
+        P = {k: np.mean(v, axis=0) for k, v in P.items()}
+        y = pidx.loc[ref_ids, "y_r6" if lab == "r6" else "y_al"].to_numpy(); cl = pidx.loc[ref_ids, "cluster_id"].to_numpy()
+        pairs = [(p, "source_only") for p in P if p not in ("source_only", "in_domain", "source_oracle")]
+        if {"latent_cuts", "pooled_erm"} <= set(P):
+            pairs.append(("latent_cuts", "pooled_erm"))
+        for pr, ref in pairs:
+            for mt in ("auroc", "nll"):
+                d0, se, p, G = e24.jackknife_contrast(y, cl, P[ref], P[pr], mt)
+                out.append({"model": model, "label": lab, "target": tgt, "protocol": pr, "reference": ref, "metric": mt,
+                            "diff": d0, "se_jack": se, "p_jack_t": p, "clusters": G})
+    jk = pd.DataFrame(out); jk["p_holm_jack"] = np.nan
+    fam = jk.p_jack_t.notna() & ~jk.protocol.isin(["source_mlls"])
+    for mt, gg in jk[fam].groupby("metric"):
+        jk.loc[gg.index, "p_holm_jack"] = compare.holm(gg.p_jack_t.to_numpy())
+    _write("E24", "protocol_contrasts_jackknife.csv", jk)
+    _manifest("E24", t0, {"clusters": "publisher (inference_pool)", "binarisation_crossfit": "5 publisher folds x 20 repeats",
+                          "component_link_bootstrap": "500 draws over anchor publishers", "scl_nonanchor_bootstrap": 300,
+                          "jackknife": "leave-one-cluster-out, t with G-1 df, Holm within metric (prior correction excluded)",
+                          "best_alternative_cut": best_alt})
+
+
+def E21S():
+    """E21 with the working link deliberately mis-transported by delta on the logit scale (design validity, M-16)."""
+    from . import e21, e19
+    t0 = time.time(); pool = inference_pool(); anc = anchors(); rng = np.random.default_rng(C["bootstrap_seed"] + 211)
+    lv = data.banglaclick_levels().set_index("row_id").level.astype(int)
+    sc = pd.read_parquet(paths.private_root() / "predictions" / "E19" / "blind_tfidf_scores.parquet")
+    sims = []
+    for sd in sorted(sc.seed.unique()):
+        d = e19.anchor_items(sc[sc.seed == sd], pool, anc, lv)
+        for sh in (-1.0, -0.5, 0.5, 1.0):
+            r = e21.simulate(d, [50, 100, 200], 200, rng, h_shift=sh); r["seed"], r["h_shift"] = sd, sh; sims.append(r)
+    sim = pd.concat(sims, ignore_index=True); sim[["auroc_cover", "nll_cover"]] = sim[["auroc_cover", "nll_cover"]].astype(float)
+    rmse = lambda v: float(np.sqrt(np.nanmean(np.square(v))))
+    _write("E21S", "design_misspecified_link.csv", sim.groupby(["h_shift", "n", "design", "estimator"]).agg(
+        auroc_bias=("auroc_err", "mean"), auroc_rmse=("auroc_err", rmse), auroc_cover=("auroc_cover", "mean"),
+        nll_bias=("nll_err", "mean"), nll_rmse=("nll_err", rmse), nll_cover=("nll_cover", "mean")).reset_index())
+    _manifest("E21S", t0, {"variant": "E21S misspecified working link", "shifts": [-1, -0.5, 0.5, 1], "reps": 200, "scorer": "tfidf_lr", "clusters": "publisher"})
+
+
+EXPS = {"E4T": lambda: E4("E4T", "trigger"), "E24": E24, "E21S": E21S, "E23C": E23C, "E23": E23, "E22": E22, "E21": E21,"E20": E20,"E19": E19,"E0": E0, "E1": E1, "E2": E2, "E3": E3, "E4": E4, "E5": E5, "E7": E7, "E10": E10, "E10T": E10T, "E11": E11, "E13": E13, "E14": E14, "E15": E15, "E16": E16, "E17": E17, "E18": E18}
 
 if __name__ == "__main__":
     todo = sys.argv[1:] or ["all"]

@@ -92,7 +92,7 @@ def estimate(y, p, L, z, h, s, pi, inv, Nh, nh):
     return out
 
 
-def simulate(d, sizes, reps, rng):
+def simulate(d, sizes, reps, rng, h_shift=0.0):
     """Population = anchors of a random half of the publisher clusters; h = flexible SCL link fitted on the other
     half (stands in for a link transported from another cell). Truth = metrics of the population's Y_A."""
     rows = []; cl = d.cluster_id.unique()
@@ -102,6 +102,8 @@ def simulate(d, sizes, reps, rng):
             continue
         L, z, p, y = pop.L.to_numpy(), pop.z.to_numpy(), pop.p.to_numpy(), pop.ya.to_numpy()
         h = linking.predict(linking.fit(aux.L, aux.z, aux.ya, 1.0, flex=True), L, z)
+        if h_shift:  # working link mis-transported by h_shift on the logit scale (design validity check)
+            h = 1 / (1 + np.exp(-(np.log(h / (1 - h)) + h_shift)))
         tau_au, tau_nl = M.auroc(y, p), M.nll(y, p)
         c = rankdata(p) - 0.5; S0 = h.sum(); a, bb = _grad((h * c).sum(), S0, len(p)); w_au = a * c + bb
         terc = np.digitize(z, np.quantile(z, [1 / 3, 2 / 3]))

@@ -1,0 +1,65 @@
+env,model,cut,auroc,nll,prevalence
+banglaclick:facebook,banglabert,level>=1,0.628417,0.992468,0.63896
+banglaclick:facebook,banglabert,level>=2,0.777695,0.543551,0.330444
+banglaclick:facebook,banglabert,trigger>=1,0.762059,0.597863,0.386028
+banglaclick:facebook,banglabert,trigger>=1 & level>=1,0.762059,0.597863,0.386028
+banglaclick:facebook,ebm,level>=1,0.462321,1.21033,0.63896
+banglaclick:facebook,ebm,level>=2,0.574586,0.96647,0.330444
+banglaclick:facebook,ebm,trigger>=1,0.554545,0.999778,0.386028
+banglaclick:facebook,ebm,trigger>=1 & level>=1,0.554545,0.999778,0.386028
+banglaclick:facebook,tfidf_lr,level>=1,0.561872,1.22626,0.63896
+banglaclick:facebook,tfidf_lr,level>=2,0.673313,0.658254,0.330444
+banglaclick:facebook,tfidf_lr,trigger>=1,0.630262,0.7766,0.386028
+banglaclick:facebook,tfidf_lr,trigger>=1 & level>=1,0.630262,0.7766,0.386028
+banglaclick:facebook,xlmr,level>=1,0.662522,1.02779,0.63896
+banglaclick:facebook,xlmr,level>=2,0.80326,0.513596,0.330444
+banglaclick:facebook,xlmr,trigger>=1,0.771572,0.608209,0.386028
+banglaclick:facebook,xlmr,trigger>=1 & level>=1,0.771572,0.608209,0.386028
+banglaclick:news,banglabert,level>=1,0.729934,1.30685,0.783333
+banglaclick:news,banglabert,level>=2,0.824272,0.498461,0.291333
+banglaclick:news,banglabert,trigger>=1,0.857344,0.514125,0.377333
+banglaclick:news,banglabert,trigger>=1 & level>=1,0.857344,0.514125,0.377333
+banglaclick:news,ebm,level>=1,0.678165,1.0502,0.783333
+banglaclick:news,ebm,level>=2,0.738917,0.545484,0.291333
+banglaclick:news,ebm,trigger>=1,0.778844,0.563337,0.377333
+banglaclick:news,ebm,trigger>=1 & level>=1,0.778844,0.563337,0.377333
+banglaclick:news,tfidf_lr,level>=1,0.71327,1.28583,0.783333
+banglaclick:news,tfidf_lr,level>=2,0.776475,0.513034,0.291333
+banglaclick:news,tfidf_lr,trigger>=1,0.807231,0.548429,0.377333
+banglaclick:news,tfidf_lr,trigger>=1 & level>=1,0.807231,0.548429,0.377333
+banglaclick:news,xlmr,level>=1,0.735679,1.2397,0.783333
+banglaclick:news,xlmr,level>=2,0.817345,0.491115,0.291333
+banglaclick:news,xlmr,trigger>=1,0.852934,0.494059,0.377333
+banglaclick:news,xlmr,trigger>=1 & level>=1,0.852934,0.494059,0.377333
+banglaclick:twitter,banglabert,level>=1,0.678184,1.00272,0.722
+banglaclick:twitter,banglabert,level>=2,0.725828,0.494948,0.226
+banglaclick:twitter,banglabert,trigger>=1,0.69816,0.547903,0.264
+banglaclick:twitter,banglabert,trigger>=1 & level>=1,0.69816,0.547903,0.264
+banglaclick:twitter,ebm,level>=1,0.61234,1.03374,0.722
+banglaclick:twitter,ebm,level>=2,0.634067,0.772108,0.226
+banglaclick:twitter,ebm,trigger>=1,0.618678,0.807822,0.264
+banglaclick:twitter,ebm,trigger>=1 & level>=1,0.618678,0.807822,0.264
+banglaclick:twitter,tfidf_lr,level>=1,0.605313,1.41115,0.722
+banglaclick:twitter,tfidf_lr,level>=2,0.660401,0.523885,0.226
+banglaclick:twitter,tfidf_lr,trigger>=1,0.615839,0.622981,0.264
+banglaclick:twitter,tfidf_lr,trigger>=1 & level>=1,0.615839,0.622981,0.264
+banglaclick:twitter,xlmr,level>=1,0.639212,1.24462,0.722
+banglaclick:twitter,xlmr,level>=2,0.724429,0.498814,0.226
+banglaclick:twitter,xlmr,trigger>=1,0.692474,0.580642,0.264
+banglaclick:twitter,xlmr,trigger>=1 & level>=1,0.692474,0.580642,0.264
+banglaclick:youtube,banglabert,level>=1,0.810117,1.01637,0.933
+banglaclick:youtube,banglabert,level>=2,0.673625,0.741484,0.441
+banglaclick:youtube,banglabert,trigger>=1,0.84481,0.68783,0.736
+banglaclick:youtube,banglabert,trigger>=1 & level>=1,0.84481,0.68783,0.736
+banglaclick:youtube,ebm,level>=1,0.816927,0.772122,0.933
+banglaclick:youtube,ebm,level>=2,0.63389,0.958194,0.441
+banglaclick:youtube,ebm,trigger>=1,0.842925,0.551999,0.736
+banglaclick:youtube,ebm,trigger>=1 & level>=1,0.842925,0.551999,0.736
+banglaclick:youtube,tfidf_lr,level>=1,0.760586,1.15906,0.933
+banglaclick:youtube,tfidf_lr,level>=2,0.646989,0.751879,0.441
+banglaclick:youtube,tfidf_lr,trigger>=1,0.78458,0.83646,0.736
+banglaclick:youtube,tfidf_lr,trigger>=1 & level>=1,0.78458,0.83646,0.736
+banglaclick:youtube,xlmr,level>=1,0.802876,1.04768,0.933
+banglaclick:youtube,xlmr,level>=2,0.66246,0.78243,0.441
+banglaclick:youtube,xlmr,trigger>=1,0.810791,0.743725,0.736
+banglaclick:youtube,xlmr,trigger>=1 & level>=1,0.810791,0.743725,0.736
