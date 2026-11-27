@@ -12,7 +12,7 @@ This audit was carried out by the same agent that wrote the code. It is a struct
 | B. Same metric code | PASS | Every protocol, TF-IDF and transformer, is scored locally by `src/scope/metrics.py` from saved per-item predictions (`run.py::_gather_predictions`). Kaggle kernels write predictions only. |
 | C. Files exist | PASS | Every manuscript number is a macro written by `scripts/scope_make_paper_assets.py` from `results/scope_v1/*`; no number is typed by hand. |
 | D. Dead code | PASS | Group DRO weights move (`dro_q` in runlogs), its objective is unit-tested against a hand computation, and DRO predictions differ from pooled ERM (E17 contrasts are non-zero). The prior-correction AUROC contrasts are exactly zero, as they must be. |
-| E. Scope | WARN | TF-IDF: all protocols, both labels, 3 seeds. BanglaBERT: pooled ERM and Group DRO (both labels). XLM-R: pooled ERM (both labels) and Group DRO (published label; aligned label still running). Transformer source-only units (w05–w08) were not run within the weekly quota and are packaged for collaborators. Claims about transformers are limited to the completed runs. |
+| E. Scope | WARN | TF-IDF: all protocols, both labels, 3 seeds. BanglaBERT: pooled ERM and Group DRO (both labels). XLM-R: pooled ERM and Group DRO (both labels). Transformer source-only units (w05–w08) were not run within the weekly quota and are packaged for collaborators. Claims about transformers are limited to the completed runs. |
 | F. Evaluation type | PASS | E13 and E15 are simulations and are labelled as such. All other experiments use real labels. E18 measures proxies against the real source label on anchors. |
 | G. Leakage | PASS | Every training path removes titles whose normalised hash occurs in the held-out cell (`test_leakage_guards_present`). Temperatures are fitted on a cluster-grouped split of the training pool, and no model selection uses target labels. |
 
@@ -35,11 +35,10 @@ This audit was carried out by the same agent that wrote the code. It is a struct
 See `CLAIM_EVIDENCE_MAP.md`.
 
 - **Supported:** C1–C15, C17–C19.
-- **Partial:** C7 (the EBM residual on Facebook) and C16 (the BanglaBERT Group DRO comparison is against pooled ERM only).
+- **Partial:** C7 (the EBM residual on Facebook) and C16 (transformer Group DRO is compared with pooled ERM only).
 - **Not supported, and reported as such:** Assumption 1, anchor representativeness (C13 documents the violation).
 
 ## Open items
 
-- XLM-R Group DRO on the aligned label (w04) must be pulled, scored and added to E10T, E17 and E18 when the kernel finishes.
-- Transformer source-only units (w05–w08) and XLM-R Group DRO on the aligned label (w04) depend on GPU quota or collaborator accounts.
+- Transformer source-only units (w05–w08) depend on GPU quota (resets 2026-11-28 00:00 UTC) or collaborator accounts.
 - Contrasts in cells with fewer than 40 clusters (Facebook, BanglaClick YouTube, BaitBuster) are indicative only (E13).
