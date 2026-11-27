@@ -69,7 +69,7 @@ for l, n in zip(lk.level, lk.n):
 a.axhline(0.5, color=C_GREY, lw=0.6, ls=":")
 a.set_xticks(range(4)); a.set_xlabel("BanglaClick rubric level $L$")
 a.set_ylabel(r"$\hat g(L)=P(Y_A=1\mid L)$"); a.set_ylim(0, 1)
-a.set_title("(a) Source label on 1,083 anchor headlines", loc="left")
+a.set_title("(a) Source label on 1,083 anchor title classes", loc="left")
 a = ax[1]
 cells = ENVS
 x = np.arange(len(cells)); w = 0.26
@@ -85,7 +85,7 @@ a.set_ylabel("positive prevalence"); a.legend(frameon=False, loc="upper left", n
 a.set_title("(b) Target prevalence under two label definitions", loc="left")
 fig.tight_layout(); save(fig, "fig1_phenomenon")
 
-t1 = ta.copy(); t1["threshold"] = [r"$L\geq1$ (R6)", r"$L\geq2$", r"$L\geq3$"]
+t1 = ta.copy(); t1["threshold"] = [r"$L\geq1$ (published)", r"$L\geq2$", r"$L\geq3$"]
 bs = json.loads((R / "E1/bootstrap_summary.json").read_text())
 kc = bs["publisher_cluster_bootstrap"]["kappa_ci"]
 t1["kappa"] = [f"{k:.3f} [{kc[str(t)][0]:.2f}, {kc[str(t)][1]:.2f}]" for k, t in zip(ta.kappa, (1, 2, 3))]
@@ -93,7 +93,7 @@ t1 = t1.rename(columns={"threshold": "BanglaClick cut", "disagreement": "Disagre
                         "bc_prevalence": "Prev.\\ B", "bb_prevalence": "Prev.\\ A"})
 for c in ("Disagree", "Prev.\\ B", "Prev.\\ A"):
     t1[c] = t1[c].map(f3)
-tex_table(t1, "tab_anchor_agreement", r"Agreement between BanglaBait (regime A) and BanglaClick (regime B) on the 1,083 shared news headlines, by the cut used to binarise the BanglaClick rubric level. Intervals: publisher-cluster bootstrap (2,000 draws).",
+tex_table(t1, "tab_anchor_agreement", r"Agreement between BanglaBait (regime A) and BanglaClick (regime B) on the 1,083 shared news title classes, by the cut used to binarise the BanglaClick rubric level. Intervals: publisher-cluster bootstrap (2,000 draws).",
           "tab:anchor", "lrrrr")
 
 # ---------------------------------------------------------------- Table: rubric components
@@ -108,7 +108,7 @@ prev = {r.dimension: r.n for r in rd[(rd.failed == 1)].itertuples()}
 rl["Anchors with component"] = [prev.get({"Fails Factual": "factual", "Fails Attribution": "attribution", "Fails Specificity": "specificity", "Fails Tone": "tone"}.get(t, ""), "--") for t in rl.term]
 rl["$p$"] = rl.p.map(lambda v: "$<$0.001" if v < 0.001 else f"{v:.3f}")
 tex_table(rl[["term", "Anchors with component", "OR [95\\% CI]", "$p$"]].rename(columns={"term": "BanglaClick rubric component"}),
-          "tab_rubric", r"Which BanglaClick rubric components predict the BanglaBait label on anchors? Logistic regression, HC1 errors ($n=1{,}083$).", "tab:rubric", "lrrr", wide=True)
+          "tab_rubric", r"Which BanglaClick rubric components predict the BanglaBait label on anchors? Logistic regression, HC1 errors ($n=1{,}083$ title classes).", "tab:rubric", "lrrr", wide=True)
 
 # ---------------------------------------------------------------- Fig 3 + Table: AUROC under two constructs (frozen R6 models)
 e5 = pd.read_csv(R / "E5/calibration_adaptation_summary.csv")
@@ -138,7 +138,7 @@ for c in ["banglabait:news"] + ENVS + ["baitbuster:youtube"]:
         v6 = s[s.label == "r6"].auroc.iloc[0]
         r[MNAME[m]] = f"{v6:.3f}" + (f" / {s[s.label == 'aligned'].auroc.iloc[0]:.3f}" if (s.label == "aligned").any() else "")
     rows.append(r)
-tex_table(pd.DataFrame(rows), "tab_auroc", r"AUROC of the frozen R6 source models (mean of five seeds). Regime-B cells: published label / aligned label.", "tab:auroc", "lrrrr", wide=True)
+tex_table(pd.DataFrame(rows), "tab_auroc", r"AUROC of the frozen source models (mean of five seeds). Regime-B cells: published label / aligned label.", "tab:auroc", "lrrrr", wide=True)
 
 # ---------------------------------------------------------------- Fig 4 + Table: decomposition
 dec = pd.read_csv(R / "E4/decomposition_summary.csv"); dec = dec[dec.aligned_label == "y_al"]
@@ -220,7 +220,7 @@ fig.tight_layout(); save(fig, "fig6_audit")
 if (R / "E13/few_cluster_size.csv").exists():
     fc = pd.read_csv(R / "E13/few_cluster_size.csv")
     t = fc.pivot(index="G", columns="method", values="size_at_5pct").reset_index()
-    t.columns = ["Clusters $G$"] + [{"cr1": "CR1 $t_{G-1}$", "pairs": "Pairs bootstrap (R6)", "wcr": "Wild cluster (WCR)"}[c] for c in t.columns[1:]]
+    t.columns = ["Clusters $G$"] + [{"cr1": "CR1 $t_{G-1}$", "pairs": "Pairs bootstrap", "wcr": "Wild cluster (WCR)"}[c] for c in t.columns[1:]]
     for c in t.columns[1:]:
         t[c] = t[c].map(lambda v: f"{v:.3f}")
     tex_table(t, "tab_fewcluster", r"Empirical size of nominal 5\% tests of a zero risk-difference cue effect in simulated clustered data (1,000 replications per $G$; Monte Carlo SE $\approx 0.007$).", "tab:fewcluster", "rrrr")
@@ -678,6 +678,8 @@ if (R / "E20/identified_sets_summary.csv").exists():
     W += nm("IdAnchors", f"{int(mc.n_anchors.iloc[0]):,}".replace(",", "{,}")) + nm("IdAnchorClusters", str(int(mc.n_clusters.iloc[0])))
     W += nm("IdValFolds", str(int(vs.n_folds.iloc[0]))) + nm("IdValCovMin", f"{vs.coverage_ALM.min():.2f}")
     W += nm("IdValCovHits", str(int(round(vs.coverage_ALM.min() * vs.n_folds.iloc[0]))))
+    W += nm("IdValAucCovMin", f"{vs[vs.metric == 'auroc'].coverage_ALM.min():.2f}") + nm("IdValLossCovMin", f"{vs[vs.metric != 'auroc'].coverage_ALM.min():.2f}")
+    W += nm("IdValLossCovMax", f"{vs[vs.metric != 'auroc'].coverage_ALM.max():.2f}") + nm("IdValNllMissMax", f"{vs[vs.metric == 'nll'].mean_miss_ALM.max():.3f}")
     va = vs[vs.metric == "auroc"].set_index("scorer")
     W += nm("IdValWidthAlAuc", f"{va.width_AL.mean():.2f}") + nm("IdValWidthAlmAuc", f"{va.width_ALM.mean():.2f}")
     W += nm("IdValConstGapMin", f"{va.truth_minus_const.min():.2f}") + nm("IdValConstGapMax", f"{va.truth_minus_const.max():.2f}")
@@ -833,7 +835,7 @@ if (R / "E17/protocol_contrasts_cluster_bootstrap.csv").exists():
                         r[TSHORT[tg]] = cell(v.iloc[0]) if len(v) else "--"
                     rows.append(r)
         tex_table(pd.DataFrame(rows), "tab_latent_vs_pooled",
-                  "Regime cut-point model minus pooled ERM (the nested equal-cut model) under leave-one-environment-out training: paired differences over three seeds with publisher/channel-cluster bootstrap. $^{*}$Holm-adjusted $p<0.05$ in the family of all paired contrasts. Positive AUROC and negative NLL differences favour the cut-point model. Clusters: Facebook 26, YT-B 10, YT-C 13.",
+                  "Regime cut-point model minus pooled ERM (the nested equal-cut model) under leave-one-environment-out training: paired differences over three seeds with publisher/channel-cluster bootstrap. $^{*}$Holm-adjusted $p<0.05$ within each metric over all paired contrasts. Positive AUROC and negative NLL differences favour the cut-point model. Clusters: Facebook 26, YT-B 10, YT-C 13.",
                   "tab:latent", "lll" + "r" * len(TGTS), wide=True)
         for m, k in FAM.items():
             for lab, lk in (("r6", "Rsix"), ("aligned", "Al")):
@@ -922,11 +924,11 @@ if (E24D / "binarisations_on_anchors.csv").exists():
     rows = []
     for e in ["banglaclick:news", "banglaclick:news_nonanchor", "banglaclick:facebook", "banglaclick:twitter", "banglaclick:youtube"]:
         r_ = cl.loc[e]
-        rows.append([ENAME[e]] + [f"{r_[f'g_e_{l}']:.2f}" for l in range(4)] + [f"{r_.delta_implied:.2f} [{r_.delta_implied_lo:.2f}, {r_.delta_implied_hi:.2f}]"])
-        W += nm(f"CompDelta{TK[e]}", f"{r_.delta_implied:.2f}") + nm(f"CompDelta{TK[e]}Lo", f"{r_.delta_implied_lo:.2f}") + nm(f"CompDelta{TK[e]}Hi", f"{r_.delta_implied_hi:.2f}")
+        rows.append([ENAME[e]] + [f"{r_[f'g_e_{l}']:.2f}" for l in range(4)] + [f"{r_.delta_implied_all_levels:.2f} [{r_.delta_implied_all_levels_lo:.2f}, {r_.delta_implied_all_levels_hi:.2f}]"])
+        W += nm(f"CompDelta{TK[e]}", f"{r_.delta_implied_all_levels:.2f}") + nm(f"CompDelta{TK[e]}Lo", f"{r_.delta_implied_all_levels_lo:.2f}") + nm(f"CompDelta{TK[e]}Hi", f"{r_.delta_implied_all_levels_hi:.2f}")
     rows.append(["Anchors (fitted link)"] + [f"{cl.iloc[0][f'g_news_{l}']:.2f}" for l in range(4)] + ["--"])
     t = pd.DataFrame(rows, columns=["Cell", r"$\hat g_e(0)$", r"$\hat g_e(1)$", r"$\hat g_e(2)$", r"$\hat g_e(3)$", r"$\hat\delta_e$ [95\% CI]"])
-    tex_table(t, "tab_complink", r"Component-based link transport (Eq.~\eqref{eq:compdelta}). $\hat g_e(l)$ averages the anchor-fitted $\hat m(l,c)=\hat P(\YA=1\mid\Lv=l,C=c)$ over the rubric components $c$ observed in cell $e$; $\hat\delta_e$ is the largest logit distance from the anchor link. Intervals: 500 bootstrap draws over anchor publishers. $\hat\delta_e$ reflects only shifts in the observed components and is therefore a lower bound on link non-transport.",
+    tex_table(t, "tab_complink", r"Component-based link transport (Eq.~\eqref{eq:compdelta}). $\hat g_e(l)$ averages the anchor-fitted $\hat m(l,c)=\hat P(\YA=1\mid\Lv=l,C=c)$ over the rubric components $c$ observed in cell $e$; $\hat\delta_e$ is the largest logit distance from the anchor link. Intervals: 500 bootstrap draws over anchor publishers. $\hat\delta_e$ (maximum over all four levels) reflects only shifts in the observed components; it neither bounds nor captures shifts that the components do not explain.",
               "tab:complink", "lrrrrr")
     mx = pd.read_csv(E24D / "component_mix_by_level.csv").set_index(["env", "level"])
     W += nm("MixYtOneTrig", f"{mx.loc[('banglaclick:youtube', 1), 'trigger_ge1']:.2f}") + nm("MixAncOneTrig", f"{mx.loc[('anchors', 1), 'trigger_ge1']:.2f}")
@@ -996,7 +998,7 @@ if (E24D / "binarisations_on_anchors.csv").exists():
             g_ = g_.set_index("label"); k_ = MK[s_]; r1 = g_.loc["scl_g1"]
             rows.append([MNAME[s_], f3(g_.loc["r6", "auroc"]), f3(g_.loc["hard_aligned", "auroc"]), f"{f3(r1.auroc)} [{f3(r1.auroc_lo)}, {f3(r1.auroc_hi)}]", f3(r1.src_auroc)])
             W += nm(f"SclNa{k_}", f3(r1.auroc)) + nm(f"SclNa{k_}Lo", f3(r1.auroc_lo)) + nm(f"SclNa{k_}Hi", f3(r1.auroc_hi)) + nm(f"SclNaSrc{k_}", f3(r1.src_auroc))
-            W += nm(f"SclNaPub{k_}", f3(g_.loc["r6", "auroc"]))
+            W += nm(f"SclNaPub{k_}", f3(g_.loc["r6", "auroc"])) + nm(f"SclNaDrop{k_}", f"{r1.src_auroc - r1.auroc_lo:.2f}")
         t = pd.DataFrame(rows, columns=["Scorer", "Published $Y$", r"$1[\Lv\geq2]$", r"Score-conditional [95\% CI]", "Source held-out"])
         tex_table(t, "tab_scl_nonanchor", r"Source-construct AUROC on BanglaClick news items that are not anchors (anchors only fit the link), for the three anchor-blind source-only scorers (mean over three seeds; intervals: 300 bootstrap draws over anchor publishers and target clusters). Source held-out: TF-IDF on the BanglaBait test set, transformers on their cluster-grouped BanglaBait validation split.",
                   "tab:sclnonanchor", "lrrrr")
@@ -1006,6 +1008,16 @@ d2 = pd.read_csv(R / "E4/decomposition_summary.csv"); d2 = d2[d2.aligned_label =
 if (R / "E4T/decomposition_summary.csv").exists():
     dt = pd.read_csv(R / "E4T/decomposition_summary.csv"); dt = dt[dt.aligned_label == "y_al"].assign(lab="Tr")
     dd = pd.concat([d2, dt]); dd["inter"] = (dd.nll_R00 - dd.nll_RA) - (dd.nll_RP - dd.nll_RAP)
+    # skill-scale residual: subtract the entropy of each side's prevalence, so that R_AP (target prevalence) and R_S (source
+    # prevalence) are compared as excess log loss over a constant predictor at the true base rate
+    Hb = lambda p: float(-(p * np.log(p) + (1 - p) * np.log(1 - p)))
+    abx = pd.read_csv(R / "E24/frozen_auroc_by_binarisation.csv"); msx = pd.read_csv(R / "E24/frozen_metric_suite.csv")
+    piS_ = float(msx[msx.env == "banglabait:news"].prevalence.iloc[0])
+    def _skill(r_):
+        cut = "level>=2" if r_.lab == "L2" else "trigger>=1"
+        pv = abx[(abx.env == r_.env) & (abx.cut == cut)]
+        return np.nan if not len(pv) else (r_.nll_RAP - Hb(float(pv.prevalence.iloc[0]))) - (r_.nll_RS - Hb(piS_))
+    dd["skill_res"] = dd.apply(_skill, axis=1)
     rows = []
     for e in CELLS5 + ["banglaclick:news_nonanchor"]:
         for m in MODELS:
@@ -1013,14 +1025,20 @@ if (R / "E4T/decomposition_summary.csv").exists():
             if not len(a_) or not len(b_):
                 continue
             a_, b_ = a_.iloc[0], b_.iloc[0]
-            rows.append([ENAME[e] if m == MODELS[0] else "", MNAME[m], f"{a_.nll_gap:.3f}"] + [f"{x:+.3f}" for x in (a_.nll_construct, a_.nll_prior, a_.inter, a_.nll_residual,
-                                                                                                      b_.nll_construct, b_.nll_prior, b_.inter, b_.nll_residual)])
+            fs = lambda v: "--" if pd.isna(v) else f"{v:+.3f}"
+            rows.append([ENAME[e] if m == MODELS[0] else "", MNAME[m], f"{a_.nll_gap:.3f}"] + [f"{x:+.3f}" for x in (a_.nll_construct, a_.nll_prior, a_.inter, a_.nll_residual)]
+                        + [fs(a_.skill_res)] + [f"{x:+.3f}" for x in (b_.nll_construct, b_.nll_prior, b_.inter, b_.nll_residual)] + [fs(b_.skill_res)])
             for lab_, r_ in (("L", a_), ("T", b_)):
                 W += nm(f"Dec{lab_}{TK[e]}{MK[m]}Con", f"{r_.nll_construct:+.3f}") + nm(f"Dec{lab_}{TK[e]}{MK[m]}Pri", f"{r_.nll_prior:+.3f}")
                 W += nm(f"Dec{lab_}{TK[e]}{MK[m]}Int", f"{r_.inter:+.3f}") + nm(f"Dec{lab_}{TK[e]}{MK[m]}Res", f"{r_.nll_residual:+.3f}")
-    t = pd.DataFrame(rows, columns=["Cell", "Model", "Gap", r"$\phi_A$", r"$\phi_P$", "$I$", "Res.", r"$\phi_A$", r"$\phi_P$", "$I$", "Res."])
-    tex_table(t, "tab_decomp_both", r"Shapley decomposition of the log-loss gap $R_{00}-R_S$ under two proxies $Y^{*}$ of the source construct: $1[\Lv\geq2]$ (columns 4--7) and $1[\text{trigger}\geq1]$ (columns 8--11). $\phi_A$: label definition; $\phi_P$: prevalence; $I=(R_{00}-R_{A})-(R_{P}-R_{AP})$: interaction, split equally by the Shapley rule; Res.: residual $R_{AP}-R_S$ (text shift plus proxy error). Mean over five seeds.",
-              "tab:decompboth", "llr" + "r" * 8, wide=True)
+    t = pd.DataFrame(rows, columns=["Cell", "Model", "Gap", r"$\phi_A$", r"$\phi_P$", "$I$", "Res.", r"Res.$_H$", r"$\phi_A$", r"$\phi_P$", "$I$", "Res.", r"Res.$_H$"])
+    tex_table(t, "tab_decomp_both", r"Shapley decomposition of the log-loss gap $R_{00}-R_S$ under two proxies $Y^{*}$ of the source construct: $1[\Lv\geq2]$ (columns 4--8) and $1[\text{trigger}\geq1]$ (columns 9--13). $\phi_A$: label definition; $\phi_P$: prevalence (corrected to the true target prevalence of $Y^{*}$); $I=(R_{00}-R_{A})-(R_{P}-R_{AP})$: interaction, split equally by the Shapley rule; Res.: residual $R_{AP}-R_S$ (text shift plus proxy error); Res.$_H$: the residual on a skill scale, $[R_{AP}-H(\pi^{*}_e)]-[R_S-H(\pi_S)]$, which removes the difference in label entropy between target and source. Non-anchor news: prevalence of the subset not tabulated. Frozen models; on news they were trained on most anchor titles (Section~\ref{sec:data}). Mean over five seeds.",
+              "tab:decompboth", "llr" + "r" * 10, wide=True)
+    sk = dd[dd.env.isin(CELLS5)]
+    for lab_, lk_ in (("L2", "L"), ("Tr", "T")):
+        for e in CELLS5:
+            v = sk[(sk.lab == lab_) & (sk.env == e)].skill_res
+            W += nm(f"Skill{lk_}{TK[e]}Min", f"{v.min():+.3f}") + nm(f"Skill{lk_}{TK[e]}Max", f"{v.max():+.3f}")
     tr = dd[(dd.lab == "Tr") & dd.env.isin(CELLS5)]; l2 = dd[(dd.lab == "L2") & dd.env.isin(CELLS5)]
     W += nm("DecTrConPos", str(int((tr.nll_construct > 0).sum()))) + nm("DecTrN", str(len(tr)))
     W += nm("DecLTwoConPos", str(int((l2.nll_construct > 0).sum()))) + nm("DecLTwoN", str(len(l2)))
@@ -1078,6 +1096,12 @@ if (R / "E21S/design_misspecified_link.csv").exists():
     W += nm("DesMisDiffBiasMax", f"{dd_.auroc_bias.abs().max():.3f}") + nm("DesMisCovMin", f"{dd_.auroc_cover.min():.2f}") + nm("DesMisCovMax", f"{dd_.auroc_cover.max():.2f}")
     W += nm("DesMisPlugNllBiasMax", f"{mo.nll_bias.abs().max():.3f}") + nm("DesMisPlugAucBiasMax", f"{mo.auroc_bias.abs().max():.3f}")
     W += nm("DesMisDiffRmseMin", f"{dd_.auroc_rmse.min():.3f}") + nm("DesMisDiffRmseMax", f"{dd_.auroc_rmse.max():.3f}")
+
+# E25: media attachments of BanglaClick social-media items (text-free counts)
+if (R / "E25/banglaclick_media_type_counts.csv").exists():
+    md_ = pd.read_csv(R / "E25/banglaclick_media_type_counts.csv")
+    soc_ = md_[md_.platform == "Social Media"]
+    W += nm("NMediaSocial", f"{int(soc_[soc_.media_type != '<empty>'].n.sum()):,}") + nm("NSocialItems", f"{int(soc_.n.sum()):,}")
 
 with open(PAPER / "numbers.tex", "a", encoding="utf-8") as fh:
     fh.write(W)

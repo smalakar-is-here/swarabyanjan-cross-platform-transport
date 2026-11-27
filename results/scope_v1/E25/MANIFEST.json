@@ -1,0 +1,12 @@
+{
+  "experiment": "E25",
+  "created": "2026-11-28T00:20:09",
+  "code_revision": "69f333d7f65e2f57ed31c065570e467e5f560cd3",
+  "inputs": {
+    "Final_4961_Dataset.xlsx": "2202f89445fa12f1880854edb50f10d37293bd006758fe1901c69213f058e060"
+  },
+  "outputs": {
+    "banglaclick_media_type_counts.csv": "631e03e4165fc958e9d59ffe1a2a7073b4fd4def18436776bb0b92bb69ad4be7",
+    "summary.json": "86db8cb7502eb5b8a5ed48654bf07aace15b77cbbda22d7cc808239b4fe69454"
+  }
+}
