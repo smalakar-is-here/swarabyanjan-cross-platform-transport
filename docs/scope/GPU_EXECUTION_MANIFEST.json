@@ -26,13 +26,15 @@
    "slug": "scope-e10-xlmr-full",
    "model": "xlmr",
    "mode": "full",
-   "subdir": "results",
+   "subdir": "scope-e10-xlmr-full",
    "gpu": "GPU (type not logged)",
-   "status": "RUNNING",
+   "status": "COMPLETE",
    "description": "LOEO pooled ERM, XLM-R, both labels, 3 seeds",
-   "runs_logged": 0,
-   "train_seconds_sum": 0,
-   "git_sha": []
+   "runs_logged": 30,
+   "train_seconds_sum": 19247.5,
+   "git_sha": [
+    "baca5ae"
+   ]
   },
   {
    "experiment_id": "E10_w01",
@@ -84,7 +86,7 @@
    "mode": "full",
    "subdir": "scope-e10-w04-xlmr-groupdro-aligned",
    "gpu": "GPU (type not logged)",
-   "status": "QUEUED",
+   "status": "RUNNING",
    "description": "LOEO Group DRO, XLM-R, aligned label",
    "runs_logged": 0,
    "train_seconds_sum": 0,

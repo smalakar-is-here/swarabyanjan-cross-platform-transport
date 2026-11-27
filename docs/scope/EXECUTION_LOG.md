@@ -23,7 +23,7 @@ Dates are UTC. Every experiment listed here has an entry in `EXPERIMENT_REGISTRY
 ## Phase 2. Training benchmark (E10, E10T, E16, E17)
 
 - **E10, TF-IDF LOEO (CPU).** Source-only, pooled ERM, batch Group DRO, an in-domain reference and a majority baseline, under both label definitions, with 3 seeds. Training excludes every title that occurs in the held-out cell.
-- **E10T, transformer LOEO (Kaggle GPU, Account01).** Pooled ERM for BanglaBERT (30 runs, 1.86 GPU-h of training time) and XLM-R. Predictions are scored locally with the same metric code as every other method.
+- **E10T, transformer LOEO (Kaggle GPU, Account01).** Pooled ERM for BanglaBERT (30 runs, 1.86 GPU-h of training time) and XLM-R (30 runs, 5.35 GPU-h). Group DRO for BanglaBERT under both labels (w01, w02; Group DRO weights concentrated on BanglaBait news and BanglaClick Facebook, about 0.48 and 0.51). Predictions are scored locally with the same metric code as every other method.
 - **E16, shift-correction baselines (CPU).** Prior correction to the MLLS estimate, prior correction to the oracle prevalence (reference), and importance weighting by a cross-fitted domain-classifier density ratio, for source and pooled training sets.
 - **E17.** Paired cluster-bootstrap contrasts between protocols (1,000 draws, Holm correction). First run gave undefined intervals for every BaitBuster contrast: its labels are channel labels, so some resamples of its 13 channels contain one class and AUROC is undefined, and one undefined draw made the percentile interval undefined. Such draws are now dropped and the number of valid draws is reported (990–994 of 1,000 for BaitBuster).
 - **Transformer Group DRO and source-only units** (`experiments/kaggle/WORKER_UNITS.md`). These were run through a queue on Account01 as GPU slots and quota allowed, and are available to team members to launch from their own accounts. The registry records which units completed.
@@ -39,7 +39,7 @@ Dates are UTC. Every experiment listed here has an entry in `EXPERIMENT_REGISTRY
 
 - **E15, synthetic recovery (known ground truth).** This experiment found a defect in the code. Soft-label Brier omitted the label-variance term q(1−q), which biased soft-label Brier downward by up to 0.2. `metrics.brier` now computes the expected Brier score. Hard-label results are unchanged by construction, and E4/E5/E11 were rerun; NLL and AUROC were identical and only soft-label Brier rows changed. A second defect: in one simulation cell, the Nelder–Mead calibration failed to converge. It was replaced by an exact logistic fit and E15 was rerun.
 - **E18, real-data proxy check on anchors.** This uses models that never saw the anchor titles. Every target-side label understates AUROC against the source label, and the hard aligned label is the least biased. The score predicts the source label beyond the rubric level, so the condition under which soft linking is exact fails on these data.
-- **Anchor representativeness (Assumption 1).** Models that never saw the anchors still score anchors 0.07–0.19 higher than non-anchors within rubric levels 0, 1 and 3. Memorisation therefore does not explain the gap, and the assumption is reported as violated.
+- **Anchor representativeness (Assumption 1).** Models that never saw the anchors (TF-IDF, BanglaBERT and XLM-R, retrained leave-one-environment-out) still score anchors 0.08–0.17 higher than non-anchors within rubric levels 0, 1 and 3 (level 2: +0.02). Memorisation therefore does not explain the gap, and the assumption is reported as violated.
 
 ## Compute
 
