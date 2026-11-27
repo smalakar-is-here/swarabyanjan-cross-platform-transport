@@ -1,0 +1,4 @@
+scorer,seed,beta_hat,beta_lo,beta_hi,within_level_auroc,wl_auroc_lo,wl_auroc_hi,n_anchors,n_clusters
+tfidf_lr,42,1.08497,0.91804,1.30644,0.790433,0.759082,0.822311,1100,923
+tfidf_lr,137,1.04735,0.894298,1.23933,0.785066,0.748829,0.821652,1100,923
+tfidf_lr,2718,0.950776,0.814913,1.10613,0.782069,0.7482,0.811579,1100,923

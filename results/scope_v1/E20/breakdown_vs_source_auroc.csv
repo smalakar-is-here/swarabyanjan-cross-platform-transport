@@ -1,0 +1,13 @@
+scorer,env,seed,side,delta_star
+tfidf_lr,banglaclick:news,42,contains,0
+tfidf_lr,banglaclick:facebook,42,contains,0
+tfidf_lr,banglaclick:youtube,42,contains,0
+tfidf_lr,banglaclick:twitter,42,contains,0
+tfidf_lr,banglaclick:news,137,contains,0
+tfidf_lr,banglaclick:facebook,137,contains,0
+tfidf_lr,banglaclick:youtube,137,contains,0
+tfidf_lr,banglaclick:twitter,137,contains,0
+tfidf_lr,banglaclick:news,2718,contains,0
+tfidf_lr,banglaclick:facebook,2718,contains,0
+tfidf_lr,banglaclick:youtube,2718,contains,0
+tfidf_lr,banglaclick:twitter,2718,contains,0

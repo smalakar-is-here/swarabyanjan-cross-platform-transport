@@ -1,0 +1,4 @@
+scorer,metric,coverage_AL,coverage_ALM,width_AL,width_ALM,mean_miss_ALM,truth_minus_const,n_folds
+tfidf_lr,auroc,1,1,0.752123,0.3962,0,0.222397,300
+tfidf_lr,brier,1,1,0.275107,0.148838,0,-0.0852403,300
+tfidf_lr,nll,1,1,0.745562,0.380999,0,-0.227332,300
