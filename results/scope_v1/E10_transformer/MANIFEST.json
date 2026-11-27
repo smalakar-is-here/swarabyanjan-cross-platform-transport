@@ -1,7 +1,7 @@
 {
  "experiment": "E10_transformer",
  "scope_version": "1.0.0",
- "wall_seconds": 16.3,
+ "wall_seconds": 18.8,
  "config_sha256": "22053e3efd0c674c5db8aa24a4855b991b235dbae24125e161d11874d12aa2a4",
  "python": "3.13.3",
  "platform": "Windows-11-10.0.26300-SP0",
@@ -13,6 +13,6 @@
   "statsmodels": "0.14.6"
  },
  "outputs": [],
- "prediction_files": 120,
+ "prediction_files": 150,
  "metric_code": "scope.metrics.all_metrics (same as all methods)"
 }
