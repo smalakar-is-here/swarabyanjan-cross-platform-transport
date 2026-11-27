@@ -41,7 +41,7 @@ Status meanings:
 | C30 | Model-assisted anchor sampling: 95% design CIs cover 92-95% at n≥100 (under-cover at n=25); the difference estimator lowers AUROC RMSE vs the sample-only estimator by ~35-40% at fixed n; in-distribution (news) the transported link alone is already accurate (RMSE 0.024) | `E21/design_summary.csv` | NEW | yes (real anchors, simulated sampling). The estimator is not new (see NOVELTY_CHECK_E20_E22.md) |
 | C31 | Regime cut-point model (TF-IDF) vs pooled ERM: Holm-significant gains on 5 contrasts (r6 Facebook AUROC +0.070; r6 news/Twitter NLL and Brier), never significantly worse; vs source-only mixed (Facebook r6 AUROC −0.036) | `E17/protocol_contrasts_cluster_bootstrap.csv` (reference pooled_erm), `E22/*` | NEW | yes for TF-IDF; transformer units w09/w10 running |
 | C32 | The fitted cuts order the three label definitions on one latent scale: θ1 < τ_C < τ_A ≈ θ2 (BanglaBait ≈ BanglaClick level ≥ 2), recovered from text without anchors in the news fold | `E22/cut_points.csv` | NEW | partial: τ_C unstable across seeds (−0.6 to +0.7) |
-| C33 | BanglaBERT fine-tuning is bit-reproducible across independent Kaggle GPU sessions (w05 replicate: max abs Δp = 0 at 4 d.p.) | `docs/scope/EXECUTION_LOG.md`; private replicate manifest | NEW | yes |
+| C33 | BanglaBERT and XLM-R fine-tuning is reproducible across independent Kaggle GPU sessions (w05 and w07 replicates: max abs Δp = 0) | `docs/scope/EXECUTION_LOG.md`; private replicate manifest | NEW | yes |
 
 Claims not made:
 - No claim of a platform × regime interaction (not identifiable).
