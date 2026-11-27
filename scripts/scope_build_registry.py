@@ -32,6 +32,7 @@ EXPERIMENTS = {
     "E16": ("benchmark", "shift-correction baselines: MLLS prior shift, importance weighting"),
     "E17": ("benchmark", "paired cluster-bootstrap contrasts between LOEO protocols, Holm-adjusted"),
     "E18": ("validation", "bias of target-side label proxies against the source label on anchors"),
+    "E19": ("method+validation", "score-conditional anchor linking: cross-fit, selection stress, anchor budget, application"),
 }
 
 

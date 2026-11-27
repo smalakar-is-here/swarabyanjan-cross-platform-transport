@@ -1,0 +1,110 @@
+{
+ "banglabait_rows": 15056,
+ "banglaclick_rows": 4961,
+ "banglaclick_platform_counts": {
+  "facebook": 1961,
+  "news": 1500,
+  "youtube": 1000,
+  "twitter": 500
+ },
+ "prevalence_r6_by_platform": {
+  "facebook": 0.639,
+  "news": 0.7833,
+  "twitter": 0.722,
+  "youtube": 0.933
+ },
+ "prevalence_aligned_by_platform": {
+  "facebook": 0.3304,
+  "news": 0.2913,
+  "twitter": 0.226,
+  "youtube": 0.441
+ },
+ "banglabait_prevalence_by_split": {
+  "dev": 0.3469,
+  "test": 0.3519,
+  "train": 0.3468
+ },
+ "overlap": {
+  "strict_nfc_whitespace": {
+   "shared_title_classes": 1083,
+   "bb_label_inconsistent_within_class": 0,
+   "bc_level_inconsistent_within_class": 10,
+   "cut1": {
+    "conflicts": 564,
+    "disagreement": 0.5208,
+    "kappa": 0.1326,
+    "bc_prev": 0.843
+   },
+   "cut2": {
+    "conflicts": 294,
+    "disagreement": 0.2715,
+    "kappa": 0.4034,
+    "bc_prev": 0.3463
+   },
+   "cut3": {
+    "conflicts": 322,
+    "disagreement": 0.2973,
+    "kappa": 0.2683,
+    "bc_prev": 0.1801
+   },
+   "bb_prev_on_anchors": 0.3536,
+   "train_split_only": {
+    "classes": 1053,
+    "conflicts_cut1": 540
+   },
+   "any_platform_classes": 1083
+  },
+  "loose_no_punct_casefold": {
+   "shared_title_classes": 1081,
+   "bb_label_inconsistent_within_class": 1,
+   "bc_level_inconsistent_within_class": 12,
+   "cut1": {
+    "conflicts": 564,
+    "disagreement": 0.5217,
+    "kappa": 0.1321,
+    "bc_prev": 0.8427
+   },
+   "cut2": {
+    "conflicts": 293,
+    "disagreement": 0.271,
+    "kappa": 0.4037,
+    "bc_prev": 0.346
+   },
+   "cut3": {
+    "conflicts": 320,
+    "disagreement": 0.296,
+    "kappa": 0.2703,
+    "bc_prev": 0.1804
+   },
+   "bb_prev_on_anchors": 0.3525,
+   "train_split_only": {
+    "classes": 1051,
+    "conflicts_cut1": 540
+   },
+   "any_platform_classes": 1081
+  }
+ },
+ "pipeline_E1": [
+  {
+   "threshold": 1,
+   "disagreement": 0.5208,
+   "kappa": 0.1326,
+   "bc_prevalence": 0.843,
+   "bb_prevalence": 0.3536
+  },
+  {
+   "threshold": 2,
+   "disagreement": 0.2715,
+   "kappa": 0.4034,
+   "bc_prevalence": 0.3463,
+   "bb_prevalence": 0.3536
+  },
+  {
+   "threshold": 3,
+   "disagreement": 0.2973,
+   "kappa": 0.2683,
+   "bc_prevalence": 0.1801,
+   "bb_prevalence": 0.3536
+  }
+ ]
+}

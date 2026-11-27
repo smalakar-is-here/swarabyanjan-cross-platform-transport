@@ -28,9 +28,16 @@ Status meanings:
 | C17 | MLLS prior correction increases log loss in most LOEO cells; importance weighting gives no consistent gain | `E16/shift_baselines_summary.csv`, `E17/...` | NEW | yes (9 of 10 MLLS cells worse; IW ESS 9–62% of nominal) |
 | C18 | Soft-label risk equals source-construct risk iff Y_A ⟂ f given L (Proposition, soft linking) | proof in manuscript; `E15/synthetic_recovery_summary.csv`; `tests/test_scope.py` | NEW | yes (proof; synthetic recovery at ω = 1) |
 | C19 | On real anchors the soft-linking condition fails and the hard aligned label is the least biased proxy | `E18/anchor_proxy_check_summary.csv`, `E18/score_beyond_level_test.csv` | NEW | yes for the models and anchors tested; all proxies understate AUROC against Y_A |
+| C20 | Score-conditional link is near-unbiased for AUROC/NLL on held-out anchors for every anchor-blind scorer; rubric-only labels are not | `E19/v1_summary.csv` | NEW | yes (in-distribution cross-fit) |
+| C21 | Under score-dependent anchor selection SCL stays unbiased; under Y_A-dependent selection AUROC survives but NLL/prevalence are biased | `E19/v2_summary.csv` | NEW | yes (resampling real anchors; selection is simulated) |
+| C22 | 100-200 anchors give SCL AUROC RMSE of a few hundredths | `E19/v3_summary.csv` | NEW | yes; slightly optimistic (subsample inside evaluation set) |
+| C23 | On news, anchor-blind TF-IDF source model's source-construct AUROC is at least its source test AUROC | `E19/application_summary.csv`, `application_contrasts.csv` | NEW | yes under Assumption 1'; one scorer family (transformer xcell scores pending w05/w07) |
+| C24 | Facebook/Twitter/YouTube source-construct AUROC is not point-identified; gamma range reported | `E19/application_summary.csv` | NEW | yes (sensitivity range, not a bound) |
+| C25 | Phenomenon numbers reproduced by independent code from raw files; 556/1,058 superseded by 564/1,083 | `results/scope_v1/INDEPENDENT_CHECK/independent_check.json` | REPRO | yes |
 
 Claims not made:
 - No claim of a platform × regime interaction (not identifiable).
 - No claim that the aligned label is "correct".
 - No claim separating covariate from concept shift inside the residual.
 - No causal claims.
+- No claim that SCL identifies platform effects on Facebook, Twitter or YouTube.

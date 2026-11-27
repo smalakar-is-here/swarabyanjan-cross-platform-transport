@@ -130,6 +130,15 @@ for lab in LABELS:
             z = logits(model, test.title.tolist())
             pd.DataFrame({"row_id": test.row_id.to_numpy(), "logit": z, "temperature": T,
                           "p_calibrated": 1 / (1 + np.exp(-z / T))}).to_parquet(fn, index=False)
+            if PROTOCOL == "source_only" and tgt == "banglaclick:news" and MODE == "full":
+                # Anchor-blind scorer for E19: this model never saw a BanglaClick-news title (hence no anchor).
+                # Score every other non-source cell with the same model and temperature. Separate file prefix
+                # (xcell_) so LOEO scoring, which globs pred_*, is unaffected.
+                oth = pool[(pool.env != "banglabait:news") & (pool.env != tgt)]
+                zo = logits(model, oth.title.tolist())
+                pd.DataFrame({"row_id": oth.row_id.to_numpy(), "env": oth.env.to_numpy(), "logit": zo, "temperature": T,
+                              "p_calibrated": 1 / (1 + np.exp(-zo / T))}).to_parquet(
+                    OUT / f"xcell_{MODEL}_{lab}_heldout-{tgt.replace(':', '-')}_s{seed}_{PROTOCOL}.parquet", index=False)
             rec = {"model": MODEL, "protocol": PROTOCOL, "envs": envs, "dro_q": q.tolist() if PROTOCOL == "group_dro" else None, "label": lab, "target": tgt, "seed": seed, "n_train": len(tr), "n_val": len(va),
                    "n_test": len(test), "temperature": float(T), "seconds": round(time.time() - t0, 1),
                    "repo": REPO[0], "revision": REPO[1], "epochs": REPO[2], "git_sha": GIT_SHA, "mode": MODE}

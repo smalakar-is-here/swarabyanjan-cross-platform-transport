@@ -1,0 +1,66 @@
+{
+ "experiment": "E19",
+ "scope_version": "1.0.0",
+ "wall_seconds": 1024.5,
+ "config_sha256": "22053e3efd0c674c5db8aa24a4855b991b235dbae24125e161d11874d12aa2a4",
+ "python": "3.13.3",
+ "platform": "Windows-11-10.0.26300-SP0",
+ "versions": {
+  "numpy": "2.5.5",
+  "pandas": "2.3.3",
+  "scikit-learn": "1.6.1",
+  "scipy": "1.16.3",
+  "statsmodels": "0.14.6"
+ },
+ "outputs": [
+  "application_by_seed.csv",
+  "application_contrasts.csv",
+  "application_summary.csv",
+  "selection_gap_calibration.csv",
+  "v1_crossfit_anchor_validation.csv",
+  "v1_summary.csv",
+  "v2_summary.csv",
+  "v3_summary.csv"
+ ],
+ "scorers": [
+  "tfidf_lr",
+  "banglabert|group_dro|aligned",
+  "banglabert|group_dro|r6",
+  "banglabert|pooled_erm|aligned",
+  "banglabert|pooled_erm|r6",
+  "tfidf_lr|group_dro|aligned",
+  "tfidf_lr|group_dro|r6",
+  "tfidf_lr|pooled_erm|aligned",
+  "tfidf_lr|pooled_erm|r6",
+  "xlmr|group_dro|aligned",
+  "xlmr|group_dro|r6",
+  "xlmr|pooled_erm|aligned",
+  "xlmr|pooled_erm|r6"
+ ],
+ "seeds": [
+  42,
+  137,
+  2718
+ ],
+ "gammas": [
+  0,
+  0.25,
+  0.5,
+  0.75,
+  1
+ ],
+ "v1": "5-fold publisher-cluster cross-fit on anchors, 20 fold draws",
+ "v3": "anchor budget 50-800, cluster-wise subsamples, 200 draws",
+ "v2": "200 draws; kappa_score in {0,1,2}, delta_label in {0,1}; 60% target fit share",
+ "bootstrap": "300 draws; anchor publisher clusters (link refit) x target clusters; seed-averaged",
+ "repro_check_max_abs_diff_vs_E10_source_only_news": 0.0,
+ "primary_link": "flexible score function (linear spline, hinges at anchor quartiles of the logit); chosen because the linear link is misspecified for bimodal transformer logits (diagnosed in V2); both are reported, and V1 gives the cross-fitted anchor NLL of each",
+ "private_raw_outputs": {
+  "location": "$SCOPE_PRIVATE_DATA/results_raw/E19/",
+  "files": [
+   "v2_selection_stress.csv",
+   "v3_anchor_budget.csv"
+  ],
+  "note": "per-draw rows; summaries in this folder are computed from them"
+ }
+}

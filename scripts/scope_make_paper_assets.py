@@ -513,3 +513,115 @@ if (R / "E10/anchor_representativeness_dedup_models.csv").exists():
 with open(PAPER / "numbers.tex", "a", encoding="utf-8") as fh:
     fh.write(X)
 print("benchmark/synthetic/proxy assets written;", X.count("newcommand"), "macros")
+
+
+# ---------------------------------------------------------------- E19: score-conditional linking (tables, figure, macros)
+if (R / "E19/application_summary.csv").exists():
+    Y = ""
+    v1 = pd.read_csv(R / "E19/v1_summary.csv"); v2 = pd.read_csv(R / "E19/v2_summary.csv"); v3 = pd.read_csv(R / "E19/v3_summary.csv")
+    ap = pd.read_csv(R / "E19/application_summary.csv"); con = pd.read_csv(R / "E19/application_contrasts.csv")
+    PROT = {"pooled_erm": "pooled ERM", "group_dro": "Group DRO"}
+    LABN = {"r6": "$Y$", "aligned": "$Y^\\star$"}
+
+    def scn(s):
+        if s == "tfidf_lr":
+            return "TF-IDF LR", "source only (blind)", "--"
+        if "|" not in s:
+            return MNAME.get(s, s), "source only (blind)", "--"
+        m, p, l = s.split("|")
+        return MNAME.get(m, m), PROT.get(p, p), LABN.get(l, l)
+    rows = []
+    for s, g in v1.groupby("scorer", sort=False):
+        b = g.set_index("proxy")
+        m, p, l = scn(s)
+        rows.append({"Scorer": m, "Protocol": p, "Trained on": l,
+                     **{k: f"{b.loc[c, 'auroc_bias_mean']:+.3f}" for k, c in (("$\\Delta$ $Y$", "r6"), ("$\\Delta$ $Y^\\star$", "hard_aligned"),
+                                                                               ("$\\Delta$ $q$", "soft_isotonic"), ("$\\Delta$ SCL-lin", "scl_gamma1"), ("$\\Delta$ SCL", "scl_flex"))},
+                     "NLL $\\Delta$ SCL": f"{b.loc['scl_flex', 'nll_bias_mean']:+.3f}"})
+    t = pd.DataFrame(rows).sort_values(["Scorer", "Protocol", "Trained on"])
+    tex_table(t, "tab_scl_validation", "Cross-fitted validation of the target-side labels on news anchors, where $Y_A$ is observed. Each label is fitted on four fifths of the anchor publisher clusters and applied to the held-out fifth (20 fold draws, mean over seeds). $\\Delta$: AUROC (or NLL) of the scorer against the label minus against $Y_A$. SCL: score-conditional link with a linear-spline score function ($\\gamma=1$); SCL-lin: linear in the logit. No scorer saw an anchor title.",
+              "tab:sclval", colfmt="lllrrrrrr", wide=True)
+    sv1 = v1[v1.proxy == "scl_flex"]; sl1 = v1[v1.proxy == "scl_gamma1"]
+    Y += nm("SclLinVOneAbsMax", f"{sl1.auroc_bias_mean.abs().max():.3f}")
+    nl = v1.pivot_table(index="scorer", columns="proxy", values="label_nll_vs_YA")
+    Y += nm("SclFlexNllWins", str(int((nl.scl_flex <= nl.scl_gamma1).sum()))) + nm("SclVOneNScorersB", str(len(nl)))
+    gp = pd.read_csv(R / "E19/selection_gap_calibration.csv")
+    Y += nm("GapObsMin", f"{gp.observed_gap_sd.min():.2f}") + nm("GapObsMax", f"{gp.observed_gap_sd.max():.2f}")
+    Y += nm("GapKHalf", f"{gp['induced_gap_kappa0.5'].mean():.2f}") + nm("GapKTwo", f"{gp['induced_gap_kappa2'].mean():.2f}")
+    Y += nm("GapKOne", f"{gp['induced_gap_kappa1'].mean():.2f}")
+    sf = v2[(v2.proxy == "scl_flex") & (v2.delta_label == 0) & (v2.kappa_score <= 1)]
+    Y += nm("SclVTwoAucMaxRealistic", f"{sf.auroc_bias_mean.abs().max():.3f}")
+    s2l = v2[(v2.proxy == "scl_gamma1") & (v2.delta_label == 0) & (v2.kappa_score == 0.5)]
+    h2r = v2[(v2.proxy == "hard_aligned") & (v2.delta_label == 0) & (v2.kappa_score == 0.5)]
+    Y += nm("SclLinVTwoRealMax", f"{s2l.auroc_bias_mean.abs().max():.3f}")
+    Y += nm("HardVTwoRealMin", f"{h2r.auroc_bias_mean.min():.2f}") + nm("HardVTwoRealMax", f"{h2r.auroc_bias_mean.max():.2f}")
+    s2lk = v2[(v2.proxy == "scl_gamma1") & (v2.delta_label == 0) & (v2.kappa_score == 2)]
+    Y += nm("SclLinVTwoKTwoMax", f"{s2lk.auroc_bias_mean.abs().max():.3f}")
+    Y += nm("SclVOneAbsMax", f"{sv1.auroc_bias_mean.abs().max():.3f}") + nm("SclVOneNllAbsMax", f"{sv1.nll_bias_mean.abs().max():.3f}")
+    Y += nm("SclVOneHardMin", f"{v1[v1.proxy == 'hard_aligned'].auroc_bias_mean.min():.2f}") + nm("SclVOneHardMax", f"{v1[v1.proxy == 'hard_aligned'].auroc_bias_mean.max():.2f}")
+    Y += nm("SclVOneSoftMin", f"{v1[v1.proxy == 'soft_isotonic'].auroc_bias_mean.min():.2f}") + nm("SclVOneSoftMax", f"{v1[v1.proxy == 'soft_isotonic'].auroc_bias_mean.max():.2f}")
+    Y += nm("SclVOneNScorers", str(v1.scorer.nunique()))
+    s2 = v2[v2.proxy == "scl_flex"]; h2 = v2[v2.proxy == "soft_isotonic"]
+    Y += nm("SclVTwoAucMaxNull", f"{s2[s2.delta_label == 0].auroc_bias_mean.abs().max():.3f}")
+    Y += nm("SclVTwoNllMaxNull", f"{s2[s2.delta_label == 0].nll_bias_mean.abs().max():.3f}")
+    Y += nm("SclVTwoSoftNllKTwo", f"{h2[(h2.delta_label == 0) & (h2.kappa_score == 2)].nll_bias_mean.mean():.2f}")
+    Y += nm("SclVTwoAucMaxAlt", f"{s2[s2.delta_label == 1].auroc_bias_mean.abs().max():.3f}")
+    Y += nm("SclVTwoNllAltMin", f"{s2[s2.delta_label == 1].nll_bias_mean.min():.2f}") + nm("SclVTwoNllAltMax", f"{s2[s2.delta_label == 1].nll_bias_mean.max():.2f}")
+    Y += nm("SclVTwoPrevAltMax", f"{s2[s2.delta_label == 1].prev_bias_mean.max():.2f}")
+    h3 = v3[(v3.proxy == "hard_aligned")]
+    s3all = v3[v3.proxy == "scl_flex"].groupby("n_anchors").auroc_rmse.max()
+    for n, k in ((50, "Fifty"), (100, "Hundred"), (200, "TwoHundred"), (400, "FourHundred")):
+        Y += nm(f"SclBudgetRmse{k}", f"{s3all.loc[n]:.3f}")
+    Y += nm("SclBudgetHardMin", f"{h3.auroc_bias_mean.min():.2f}") + nm("SclBudgetHardMax", f"{h3.auroc_bias_mean.max():.2f}")
+    # application table (blind TF-IDF scorer: the only scorer observed on every cell and on the source test set)
+    a = ap[ap.scorer == "tfidf_lr"].set_index(["env", "label"])
+    rows = []
+    for e in ENVS:
+        g0, g1 = a.loc[(e, "scl_g0")], a.loc[(e, "scl_g1")]
+        ident = e == "banglaclick:news"
+        rows.append({"Cell": ENAME[e], "$Y$": f3(a.loc[(e, 'r6'), 'auroc']), "$Y^\\star$": f3(a.loc[(e, 'hard_aligned'), 'auroc']),
+                     "SCL, $\\gamma\\in[0,1]$": f"[{g0.auroc:.3f}, {g1.auroc:.3f}]",
+                     "SCL, $\\gamma=1$ (95\\% CI)": f"{g1.auroc:.3f} ({g1.auroc_lo:.3f}, {g1.auroc_hi:.3f})" + ("" if ident else "$^\\dagger$"),
+                     "$\\hat\\pi^\\star$": f"{g1.prevalence:.2f}", "$\\rho^\\star$ (NLL)": f"{g1.nll_residual_after_prior:+.3f}"})
+    tex_table(pd.DataFrame(rows), "tab_scl_app", "AUROC of the anchor-blind TF-IDF source model on regime-B cells against three target-side labels: published ($Y$), hard aligned ($Y^\\star$) and the score-conditional link over the sensitivity range $\\gamma\\in[0,1]$. Source test AUROC " + f3(a.src_auroc.iloc[0]) + ". $\\hat\\pi^\\star$: implied source-construct prevalence and $\\rho^\\star$: prior-corrected NLL gap to the source, both at $\\gamma=1$. Intervals: 300-draw bootstrap over anchor publisher clusters and target clusters, seed-averaged (3 seeds); YouTube has 10 clusters and Facebook 26. $^\\dagger$Transported cell: $\\gamma=1$ assumes that the news within-level score function carries over; it is an endpoint of the sensitivity range, not an estimate.",
+              "tab:sclapp", colfmt="lrrrrrr", wide=True)
+    n1 = a.loc[("banglaclick:news", "scl_g1")]
+    Y += nm("SclNewsAuc", f3(n1.auroc)) + nm("SclNewsAucLo", f3(n1.auroc_lo)) + nm("SclNewsAucHi", f3(n1.auroc_hi))
+    Y += nm("SclNewsHard", f3(a.loc[("banglaclick:news", "hard_aligned"), "auroc"])) + nm("SclNewsPub", f3(a.loc[("banglaclick:news", "r6"), "auroc"]))
+    Y += nm("SclSrcAuc", f3(n1.src_auroc))
+    Y += nm("SclNewsResid", f"{n1.nll_residual_after_prior:+.3f}") + nm("SclNewsPrev", f"{n1.prevalence:.2f}")
+    Y += nm("SclBeta", f"{n1.beta_hat:.2f}") + nm("SclNewsAucLin", f3(a.loc[("banglaclick:news", "scl_lin_g1"), "auroc"]))
+    for e, k in (("banglaclick:facebook", "Fb"), ("banglaclick:twitter", "Tw"), ("banglaclick:youtube", "Yt")):
+        Y += nm(f"Scl{k}Lo", f3(a.loc[(e, "scl_g0"), "auroc"])) + nm(f"Scl{k}Hi", f3(a.loc[(e, "scl_g1"), "auroc"]))
+        Y += nm(f"Scl{k}Hard", f3(a.loc[(e, "hard_aligned"), "auroc"]))
+    cn = con[(con.scorer == "tfidf_lr") & (con.env == "banglaclick:news") & (con.metric == "auroc") & (con.contrast == "scl_g1 - hard_aligned")].iloc[0]
+    Y += nm("SclNewsMinusHard", f"{cn['mean']:.3f}") + nm("SclNewsMinusHardLo", f"{cn.lo:.3f}") + nm("SclNewsMinusHardHi", f"{cn.hi:.3f}")
+    # figure: estimated AUROC over gamma by cell
+    fig, ax = plt.subplots(figsize=(W1, 2.4))
+    cols = {"banglaclick:news": C_SRC, "banglaclick:facebook": "#1F5F8B", "banglaclick:twitter": "#6A8F3A", "banglaclick:youtube": "#B4532A"}
+    gs = [0, 0.25, 0.5, 0.75, 1]
+    for e in ENVS:
+        m = [a.loc[(e, f"scl_g{g:g}"), "auroc"] for g in gs]
+        lo = [a.loc[(e, f"scl_g{g:g}"), "auroc_lo"] for g in gs]; hi = [a.loc[(e, f"scl_g{g:g}"), "auroc_hi"] for g in gs]
+        ax.fill_between(gs, lo, hi, color=cols[e], alpha=0.12, lw=0)
+        ax.plot(gs, m, "-o", color=cols[e], ms=2.8, lw=1.0, label=ENAME[e].replace(" (B)", ""))
+        ax.plot([-0.08], [a.loc[(e, "hard_aligned"), "auroc"]], marker="s", color=cols[e], ms=3.2, ls="none", clip_on=False)
+    ax.axhline(a.src_auroc.iloc[0], ls="--", color=C_GREY, lw=0.8)
+    ax.text(0.02, a.src_auroc.iloc[0] + 0.006, "source test", fontsize=6.5, color=C_GREY)
+    ax.text(-0.08, 0.525, r"$Y^\star$", fontsize=6.5, ha="center", color=C_GREY)
+    ax.set_xlabel(r"$\gamma$: share of news score function transported")
+    ax.set_ylabel(r"estimated AUROC against $Y_A$")
+    ax.set_xlim(-0.14, 1.04); ax.set_ylim(0.5, 0.88); ax.set_xticks(gs)
+    ax.legend(frameon=False, ncol=2, loc="lower right", handlelength=1.4)
+    save(fig, "fig8_scl_sensitivity")
+    with open(PAPER / "numbers.tex", "a", encoding="utf-8") as fh:
+        fh.write(Y)
+    print("E19 assets written;", Y.count("newcommand"), "macros")
+
+# ---------------------------------------------------------------- independent re-derivation (scripts/scope_independent_check.py)
+if (R / "INDEPENDENT_CHECK/independent_check.json").exists():
+    ic = json.loads((R / "INDEPENDENT_CHECK/independent_check.json").read_text(encoding="utf-8"))["overlap"]["strict_nfc_whitespace"]
+    Z = nm("IndConflictsOne", str(ic["cut1"]["conflicts"])) + nm("IndAnchors", f"{ic['shared_title_classes']:,}".replace(",", "{,}"))
+    Z += nm("IndDisagreeOne", f"{100 * ic['cut1']['disagreement']:.1f}")
+    with open(PAPER / "numbers.tex", "a", encoding="utf-8") as fh:
+        fh.write(Z)

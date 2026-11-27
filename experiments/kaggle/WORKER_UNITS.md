@@ -18,6 +18,13 @@ time, so any number can run at once, each on a different team member's own Kaggl
 
 Pooled ERM for both models is already covered by the `scope-e10-*-full` kernels.
 
+**Source-only units: w05 and w07 only (2026-11-27).** Under `source_only` the training and temperature-validation
+items are all BanglaBait news, where `y_r6 == y_al`, so w06 is the same model as w05 and w08 the same as w07
+(verified bit for bit on the TF-IDF source-only predictions). Only w05 and w07 are run; E10T and E17 score each
+source-only prediction under both labels. The news-held-out run of each unit also writes
+`xcell_<model>_<label>_heldout-banglaclick-news_s<seed>_source_only.parquet`: scores of that anchor-blind model on
+every other non-source cell, used by E19 (score-conditional linking). Return these files with the `pred_*` files.
+
 ## Prerequisites (once per team member)
 
 1. Your own Kaggle account with the API set up on your own machine (`kaggle config view` shows your username).

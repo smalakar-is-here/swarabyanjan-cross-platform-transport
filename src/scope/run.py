@@ -330,9 +330,13 @@ def _gather_predictions():
         if b in seen:
             continue
         seen.add(b); parts = b[:-8].split("_", 5)
-        rows.append(dict(model=parts[1], protocol=parts[5] if len(parts) > 5 else "pooled_erm", label=parts[2],
-                         target=parts[3].replace("-", ":", 1), seed=int(parts[4][1:]), file=f, col="p_calibrated"))
-    return pd.DataFrame(rows)
+        rec = dict(model=parts[1], protocol=parts[5] if len(parts) > 5 else "pooled_erm", label=parts[2],
+                   target=parts[3].replace("-", ":", 1), seed=int(parts[4][1:]), file=f, col="p_calibrated")
+        rows.append(rec)
+        if rec["protocol"] == "source_only":  # source-only training never sees a regime-B label: one model, scored under both
+            rows.append({**rec, "label": "aligned" if rec["label"] == "r6" else "r6"})
+    out = pd.DataFrame(rows)
+    return out.drop_duplicates(["model", "protocol", "label", "target", "seed"]) if len(out) else out
 
 
 def E17():
@@ -428,9 +432,11 @@ def E10T():
         parts = os.path.basename(f)[:-8].split("_", 5)  # pred_{model}_{label}_{target}_s{seed}[_{protocol}]
         _, model, lab, tgt, seed = parts[:5]; proto = parts[5] if len(parts) > 5 else "pooled_erm"
         tgt = tgt.replace("-", ":", 1); seed = int(seed[1:])
-        p = pd.read_parquet(f); y = pool.loc[p.row_id, "y_r6" if lab == "r6" else "y_al"].to_numpy()
-        r = M.all_metrics(y, p.p_calibrated.to_numpy(), hard=y)
-        r.update(label=lab, target=tgt, protocol=proto, model=model, seed=seed); rows.append(r)
+        p = pd.read_parquet(f)
+        for lab_s in (("r6", "aligned") if proto == "source_only" else (lab,)):  # source-only: one model, both labels
+            y = pool.loc[p.row_id, "y_r6" if lab_s == "r6" else "y_al"].to_numpy()
+            r = M.all_metrics(y, p.p_calibrated.to_numpy(), hard=y)
+            r.update(label=lab_s, target=tgt, protocol=proto, model=model, seed=seed); rows.append(r)
         if tgt == "banglaclick:news" and proto == "pooled_erm":
             h = pool.loc[p.row_id, "normalized_title_sha256"].isin(anc_h).to_numpy()
             for l in range(4):
@@ -498,7 +504,89 @@ def E13():
     _manifest("E13", t0, {"simulation": True, "reps": C["cluster_sim_reps"], "bootstrap_draws_per_rep": 399})
 
 
-EXPS = {"E0": E0, "E1": E1, "E2": E2, "E3": E3, "E4": E4, "E5": E5, "E7": E7, "E10": E10, "E10T": E10T, "E11": E11, "E13": E13, "E14": E14, "E15": E15, "E16": E16, "E17": E17, "E18": E18}
+def _xcell_scorers():
+    """Transformer anchor-blind scorers from GPU source-only units (xcell_ + news pred_ files), if present."""
+    import glob, os
+    out = {}
+    for f in sorted(glob.glob(str(paths.private_root() / "kaggle_out" / "full" / "**" / "xcell_*_source_only.parquet"), recursive=True)):
+        parts = os.path.basename(f)[:-8].split("_")  # xcell_{model}_{label}_heldout-..._s{seed}_source_only
+        model, seed = parts[1], int(parts[4][1:])
+        news = glob.glob(str(paths.private_root() / "kaggle_out" / "full" / "**" / f"pred_{model}_{parts[2]}_banglaclick-news_s{seed}_source_only.parquet"), recursive=True)
+        if not news:
+            continue
+        x = pd.read_parquet(f)[["row_id", "env", "p_calibrated"]]
+        n = pd.read_parquet(news[0])[["row_id", "p_calibrated"]].assign(env="banglaclick:news")
+        fr = pd.concat([x, n], ignore_index=True).rename(columns={"p_calibrated": "p"}).assign(seed=seed)
+        out.setdefault(model, []).append(fr.drop_duplicates("row_id"))
+    out = {k: pd.concat(v, ignore_index=True) for k, v in out.items()}
+    # Validation-only scorers: every LOEO prediction set on the news cell (training excluded all its titles,
+    # hence every anchor). They enter V1-V3 only; the application needs the same model on every cell.
+    f = _gather_predictions()
+    f = f[(f.target == "banglaclick:news") & f.protocol.isin(["pooled_erm", "group_dro"])]
+    for (m, pr, lab), g in f.groupby(["model", "protocol", "label"]):
+        fr = [pd.read_parquet(r.file)[["row_id", r.col]].rename(columns={r.col: "p"}).assign(env="banglaclick:news", seed=r.seed)
+              for r in g.itertuples()]
+        out[f"{m}|{pr}|{lab}"] = pd.concat(fr, ignore_index=True)
+    return out
+
+
+def E19():
+    """Score-conditional anchor linking: validation on anchors and application to every regime-B cell."""
+    from . import e19
+    t0 = time.time(); pool = training_pool(); anc = anchors()
+    lv = data.banglaclick_levels().set_index("row_id").level.astype(int)
+    st = data.load_predictions(with_text=True); st = st[st.env == "banglabait:news"].drop_duplicates("row_id")
+    src_test = st[["row_id", "env", "title"]]; src_y = st.set_index("row_id").label.astype(float)
+    sc, v1, v2, v3, pt, bt, gaps = e19.run(pool, src_test, anc, lv, src_y, C["seeds"][:3], C["bootstrap_seed"], _write,
+                                    boot=300, extra_scorers=_xcell_scorers())
+    # reproduction check: blind TF-IDF on the news cell == E10 source-only news predictions
+    chk = []
+    for s in C["seeds"][:3]:
+        ref = pd.read_parquet(paths.private_root() / "predictions" / "E10" / f"tfidf_lr__source_only__r6__banglaclick-news__s{s}.parquet").set_index("row_id").p
+        mine = sc[(sc.seed == s) & (sc.env == "banglaclick:news")].set_index("row_id").p.loc[ref.index]
+        chk.append(float(np.abs(mine.to_numpy() - ref.to_numpy()).max()))
+    pdir = paths.private_root() / "predictions" / "E19"; pdir.mkdir(parents=True, exist_ok=True)
+    sc.to_parquet(pdir / "blind_tfidf_scores.parquet", index=False)
+    _write("E19", "v1_crossfit_anchor_validation.csv", v1)
+    _write("E19", "v1_summary.csv", v1.groupby(["scorer", "proxy"]).agg(
+        **{f"{m}_bias_mean": (f"{m}_bias", "mean") for m in ("auroc", "nll", "brier")},
+        **{f"{m}_bias_sd": (f"{m}_bias", "std") for m in ("auroc", "nll", "brier")},
+        label_nll_vs_YA=("label_nll_vs_YA", "mean")).reset_index())
+    raw_dir = paths.private_root() / "results_raw" / "E19"; raw_dir.mkdir(parents=True, exist_ok=True)  # per-draw files are large; summaries stay in the repo
+    v2.to_csv(raw_dir / "v2_selection_stress.csv", index=False, float_format="%.6g")
+    _write("E19", "v2_summary.csv", v2.groupby(["scorer", "kappa_score", "delta_label", "proxy"]).agg(
+        **{f"{m}_bias_mean": (f"{m}_bias", "mean") for m in ("auroc", "nll", "brier", "prev")},
+        **{f"{m}_rmse": (f"{m}_bias", lambda v: float(np.sqrt(np.mean(np.square(v))))) for m in ("auroc", "nll", "prev")}).reset_index())
+    v3.to_csv(raw_dir / "v3_anchor_budget.csv", index=False, float_format="%.6g")
+    _write("E19", "selection_gap_calibration.csv", gaps)
+    _write("E19", "v3_summary.csv", v3.groupby(["scorer", "n_anchors", "proxy"]).agg(
+        auroc_bias_mean=("auroc_bias", "mean"), auroc_sd=("auroc_bias", "std"), nll_bias_mean=("nll_bias", "mean"),
+        nll_sd=("nll_bias", "std"), auroc_rmse=("auroc_bias", lambda v: float(np.sqrt(np.mean(np.square(v)))))).reset_index())
+    _write("E19", "application_by_seed.csv", pt)
+    summ = pt.groupby(["scorer", "env", "label"]).mean(numeric_only=True).reset_index().drop(columns="seed")
+    q = lambda v, a: float(np.nanpercentile(v, a))
+    ci = bt.groupby(["scorer", "env", "label"]).agg(**{f"{m}_{k}": (m, (lambda v, a=a: q(v, a))) for m in
+                                                     ("auroc", "nll", "prevalence", "nll_residual_after_prior") for k, a in (("lo", 2.5), ("hi", 97.5))}).reset_index()
+    _write("E19", "application_summary.csv", summ.merge(ci, on=["scorer", "env", "label"]))
+    # paired contrasts SCL(gamma=1) - hard aligned, from the same bootstrap draws
+    w = bt.pivot_table(index=["scorer", "env", "draw"], columns="label", values=["auroc", "nll"])
+    con = []
+    for (scn, env), g in w.groupby(level=[0, 1]):
+        for m in ("auroc", "nll"):
+            for ref in ("hard_aligned", "scl_g0", "scl_lin_g1"):
+                dlt = g[(m, "scl_g1")] - g[(m, ref)]
+                con.append({"scorer": scn, "env": env, "metric": m, "contrast": f"scl_g1 - {ref}", "mean": float(dlt.mean()),
+                            "lo": q(dlt, 2.5), "hi": q(dlt, 97.5)})
+    _write("E19", "application_contrasts.csv", pd.DataFrame(con))
+    _manifest("E19", t0, {"scorers": sorted(set(sc.scorer)) + sorted(_xcell_scorers()), "seeds": C["seeds"][:3], "gammas": [0, .25, .5, .75, 1],
+                          "v1": "5-fold publisher-cluster cross-fit on anchors, 20 fold draws", "v3": "anchor budget 50-800, cluster-wise subsamples, 200 draws", "v2": "200 draws; kappa_score in {0,1,2}, delta_label in {0,1}; 60% target fit share",
+                          "bootstrap": "300 draws; anchor publisher clusters (link refit) x target clusters; seed-averaged",
+                          "repro_check_max_abs_diff_vs_E10_source_only_news": max(chk),
+                          "primary_link": "flexible score function (linear spline, hinges at anchor quartiles of the logit); chosen because the linear link "
+                                          "is misspecified for bimodal transformer logits (diagnosed in V2); both are reported, and V1 gives the cross-fitted anchor NLL of each"})
+
+
+EXPS = {"E19": E19, "E0": E0, "E1": E1, "E2": E2, "E3": E3, "E4": E4, "E5": E5, "E7": E7, "E10": E10, "E10T": E10T, "E11": E11, "E13": E13, "E14": E14, "E15": E15, "E16": E16, "E17": E17, "E18": E18}
 
 if __name__ == "__main__":
     todo = sys.argv[1:] or ["all"]

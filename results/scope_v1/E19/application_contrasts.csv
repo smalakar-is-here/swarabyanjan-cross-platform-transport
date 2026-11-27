@@ -1,0 +1,25 @@
+scorer,env,metric,contrast,mean,lo,hi
+tfidf_lr,banglaclick:facebook,auroc,scl_g1 - hard_aligned,0.136387,0.0729667,0.204071
+tfidf_lr,banglaclick:facebook,auroc,scl_g1 - scl_g0,0.225009,0.18713,0.267247
+tfidf_lr,banglaclick:facebook,auroc,scl_g1 - scl_lin_g1,0.00380083,-0.0132242,0.023275
+tfidf_lr,banglaclick:facebook,nll,scl_g1 - hard_aligned,-0.184526,-0.258127,-0.112139
+tfidf_lr,banglaclick:facebook,nll,scl_g1 - scl_g0,-0.247807,-0.299459,-0.202208
+tfidf_lr,banglaclick:facebook,nll,scl_g1 - scl_lin_g1,-0.0016281,-0.0134416,0.00757893
+tfidf_lr,banglaclick:news,auroc,scl_g1 - hard_aligned,0.0807594,0.0471922,0.114064
+tfidf_lr,banglaclick:news,auroc,scl_g1 - scl_g0,0.057668,0.0263002,0.0949531
+tfidf_lr,banglaclick:news,auroc,scl_g1 - scl_lin_g1,0.000858119,-0.00437671,0.0066468
+tfidf_lr,banglaclick:news,nll,scl_g1 - hard_aligned,-0.0712692,-0.114986,-0.0328175
+tfidf_lr,banglaclick:news,nll,scl_g1 - scl_g0,-0.067319,-0.112832,-0.0301397
+tfidf_lr,banglaclick:news,nll,scl_g1 - scl_lin_g1,-0.000716132,-0.00612436,0.00377089
+tfidf_lr,banglaclick:twitter,auroc,scl_g1 - hard_aligned,0.130807,0.0633035,0.200072
+tfidf_lr,banglaclick:twitter,auroc,scl_g1 - scl_g0,0.221253,0.180201,0.262372
+tfidf_lr,banglaclick:twitter,auroc,scl_g1 - scl_lin_g1,0.00427598,-0.0177647,0.0282964
+tfidf_lr,banglaclick:twitter,nll,scl_g1 - hard_aligned,-0.0926283,-0.167063,-0.0244421
+tfidf_lr,banglaclick:twitter,nll,scl_g1 - scl_g0,-0.248209,-0.296465,-0.198772
+tfidf_lr,banglaclick:twitter,nll,scl_g1 - scl_lin_g1,-0.0027505,-0.0172619,0.0100182
+tfidf_lr,banglaclick:youtube,auroc,scl_g1 - hard_aligned,0.181459,0.0941287,0.249306
+tfidf_lr,banglaclick:youtube,auroc,scl_g1 - scl_g0,0.248092,0.208058,0.280066
+tfidf_lr,banglaclick:youtube,auroc,scl_g1 - scl_lin_g1,0.000333452,-0.00869332,0.0105445
+tfidf_lr,banglaclick:youtube,nll,scl_g1 - hard_aligned,-0.186439,-0.270295,-0.0545529
+tfidf_lr,banglaclick:youtube,nll,scl_g1 - scl_g0,-0.255959,-0.299413,-0.200649
+tfidf_lr,banglaclick:youtube,nll,scl_g1 - scl_lin_g1,0.000442101,-0.0095883,0.00923592
