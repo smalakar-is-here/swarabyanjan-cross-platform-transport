@@ -1,0 +1,33 @@
+{
+ "experiment": "E15",
+ "scope_version": "1.0.0",
+ "wall_seconds": 793.5,
+ "config_sha256": "22053e3efd0c674c5db8aa24a4855b991b235dbae24125e161d11874d12aa2a4",
+ "python": "3.13.3",
+ "platform": "Windows-11-10.0.26300-SP0",
+ "versions": {
+  "numpy": "2.5.5",
+  "pandas": "2.3.3",
+  "scikit-learn": "1.6.1",
+  "scipy": "1.16.3",
+  "statsmodels": "0.14.6"
+ },
+ "outputs": [
+  "synthetic_recovery_raw.csv",
+  "synthetic_recovery_summary.csv"
+ ],
+ "g_true": [
+  0.1023391812865497,
+  0.24953617810760667,
+  0.5773480662983426,
+  0.6556122448979592
+ ],
+ "pi_L": [
+  0.24974803467042936,
+  0.41987502519653297,
+  0.1652892561983471,
+  0.1650876839346906
+ ],
+ "mu": 1.0,
+ "evaluation_type": "synthetic (known ground truth); not real data"
+}

@@ -1,0 +1,13 @@
+dimension,failed,n,p_bb_clickbait
+factual,0,840,0.275
+factual,1,243,0.625514
+attribution,0,291,0.278351
+attribution,1,792,0.381313
+specificity,0,645,0.227907
+specificity,1,438,0.538813
+tone,0,828,0.27657
+tone,1,255,0.603922
+trigger_level,0,607,0.15486
+trigger_level,1,238,0.579832
+trigger_level,2,204,0.632353
+trigger_level,3,34,0.647059

@@ -1,0 +1,16 @@
+{
+  "schema": "scope-config/1.0",
+  "private_data_env": "SCOPE_PRIVATE_DATA",
+  "seeds": [42, 137, 2718, 31415, 65537],
+  "models": ["ebm", "tfidf_lr", "banglabert", "xlmr"],
+  "probability_column": "p_calibrated",
+  "r6_banglaclick_threshold": 1,
+  "bootstrap_draws": 2000,
+  "bootstrap_seed": 20261127,
+  "audit_budgets": [25, 50, 100, 200],
+  "audit_replications": 2000,
+  "audit_auroc_tolerance": 0.05,
+  "cluster_sim_G": [10, 13, 26, 40],
+  "cluster_sim_reps": 1000,
+  "decision_threshold": 0.5
+}

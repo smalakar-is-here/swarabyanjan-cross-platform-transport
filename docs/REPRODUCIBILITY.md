@@ -1,50 +1,75 @@
-# Reproducibility
+# Reproducibility --- R6 Historical Baseline and SCOPE Successor
 
-## Scientific execution boundary
+This repository contains two distinct research tracks. Their code,
+environments, outputs and claims must not be mixed.
 
-The canonical scientific workflow is Stage01–Stage09. Stage10 is release/package engineering only. The implementation is notebook-embedded; there is no fabricated standalone `src/` implementation.
+## 1. R6 historical baseline
 
-## What the public repository preserves
+R6 uses the original Stage01--Stage09 notebook workflow. Stage10 is
+release/package engineering only for the historical R6 study.
 
-The public package preserves:
+The R6 tree, frozen results and provenance must remain unchanged when
+running SCOPE. For R6 reproduction, follow the canonical notebook map,
+stage manifests, external-restricted artifact manifest and historical
+scientific locks.
 
-1. all nine canonical scientific notebooks unchanged;
-2. Stage10 release engineering unchanged;
-3. frozen configuration/schema locks;
-4. aggregate H1/H2/H3/H3-P/H4/bridge results;
-5. publication figure/table source data and rendered figures available in the core;
-6. Rule A / Rule B aggregate sensitivity outputs and comparison evidence;
-7. stage manifests/checksums/status records and non-text-bearing provenance;
-8. exact hashes and access/reproduction metadata for intentionally excluded restricted artifacts.
+A fresh public clone may not contain restricted third-party text or
+model binaries. Verify the exact hashes and access conditions before
+restoring excluded inputs. Do not infer redistribution permission from
+public accessibility.
 
-## What is intentionally external
+## 2. SCOPE successor
 
-A fresh clone does not contain every byte needed to rerun every stage. Public-redistribution-uncertain artifacts containing literal third-party text/row-level source bytes, plus the 10 unresolved-license Stage03 `.joblib` binaries, are excluded.
+SCOPE is a separately versioned successor study. Its implementation,
+tests, configurations and results are distinct from the R6 notebook
+baseline.
 
-See `../provenance/external_restricted/RESTRICTED_ARTIFACT_MANIFEST.json` for the exact dependency list. Restore an authorised copy at the recorded expected path and require SHA-256 equality before executing a dependent notebook.
+Use: - `src/scope/` for the implementation (verify path in the current
+checkout); - `tests/` for validation; - `requirements-scope.txt` for the
+SCOPE environment; - `python -m scope.run` for CPU-compatible experiment
+groups; - `experiments/kaggle/WORKER_UNITS.md` for independent GPU
+units; - `scripts/scope_make_worker_packages.py` for worker-package
+generation; - `docs/scope/EXPERIMENT_REGISTRY.csv` for run status; -
+`docs/scope/CLAIM_EVIDENCE_MAP.md` for claim-to-evidence mapping; -
+`docs/scope/REPRODUCE.md` for commands and data paths.
 
-## Retained non-text-bearing derived interfaces
+Verify each path and command against the current checkout before
+execution. Documentation is not proof that a run completed.
 
-The repository retains metadata/numerical derived interfaces such as the Stage03 clean-row hash manifest, train/dev assignment manifest, and Stage04 DEV prediction table because the public-safety inspection verified that these files do not carry the excluded literal title fields. Their original scientific bytes are unchanged.
+## 3. Data boundary
 
-## From-scratch boundary
+Keep restricted data in the Git-ignored workspace `private_data/scope/`
+where the licence and access terms permit. The repository must not
+contain restricted row-level third-party text, secrets or credentials.
 
-Full from-scratch reconstruction depends on obtaining the external datasets under their original source/access conditions, satisfying the Stage01/Stage02 frozen identity contracts, and reproducing any excluded derived/model artifacts. External URLs may change over time. This repository therefore does **not** claim one-command, fresh-clone reproducibility.
+A private Kaggle dataset is an external transfer. Confirm that the
+dataset terms permit the intended processing and hosting before upload.
+If permission is unclear, continue local analyses and experiments using
+cleared data.
 
-## Primary execution sequence
+## 4. Run provenance
 
-1. Stage01 acquisition/freeze
-2. Stage02 integrity/provenance/leakage audit
-3. Stage03 primary model development
-4. Stage04 calibration
-5. Stage05 external validation/H3
-6. Stage06 fixed-budget reliability
-7. Stage07 exploratory H3→H4 bridge
-8. Stage08 deterministic manuscript figures/tables
-9. Stage09 source-site clustering sensitivity
+Every experiment must record: - unique experiment ID; - code revision
+and configuration hash; - data version and SHA-256; - model and
+hyperparameters; - split and seed; - execution environment and account
+alias; - submission, running, completion and download
+timestamps/status; - output file hashes; - validation and scoring
+status.
 
-Stage10 assembles/verifies release artifacts only.
+A submitted kernel is not a completed experiment. A completed kernel is
+not a scored result. A scored result is not validated until its outputs,
+configuration and metric calculations are checked.
 
-## Rule A / Rule B
+## 5. Statistical and scientific reproducibility
 
-Rule A and Rule B remain separate post-hoc News-decontamination sensitivity branches. Their aggregate results are public; their text-bearing branch caches are externally restricted and hash-documented rather than redistributed.
+Use the same metric implementation across baselines. Respect cluster
+dependence and the pre-specified inferential design. Report uncertainty,
+negative findings, partial identification and non-estimability honestly.
+Never tune on held-out target test labels.
+
+## 6. Publication assets
+
+Generate figures, tables and manuscript numbers from machine-readable
+results. Store scripts and manifests. Verify every figure/table value
+against its source. Preserve the R6 release assets separately from SCOPE
+successor assets.

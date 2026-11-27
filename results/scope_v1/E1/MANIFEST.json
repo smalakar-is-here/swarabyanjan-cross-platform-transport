@@ -1,0 +1,25 @@
+{
+ "experiment": "E1",
+ "scope_version": "1.0.0",
+ "wall_seconds": 32.6,
+ "config_sha256": "22053e3efd0c674c5db8aa24a4855b991b235dbae24125e161d11874d12aa2a4",
+ "python": "3.13.3",
+ "platform": "Windows-11-10.0.26300-SP0",
+ "versions": {
+  "numpy": "2.5.5",
+  "pandas": "2.3.3",
+  "scikit-learn": "1.6.1",
+  "scipy": "1.16.3",
+  "statsmodels": "0.14.6"
+ },
+ "outputs": [
+  "anchor_crosstab.csv",
+  "anchor_representativeness.csv",
+  "anchor_summary.json",
+  "bootstrap_summary.json",
+  "linking_function.csv",
+  "residual_disagreement_by_rubric.csv",
+  "rubric_logit_HC1.csv",
+  "threshold_agreement.csv"
+ ]
+}
