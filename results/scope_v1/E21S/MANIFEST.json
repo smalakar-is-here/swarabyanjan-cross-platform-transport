@@ -1,0 +1,28 @@
+{
+ "experiment": "E21S",
+ "scope_version": "1.0.0",
+ "wall_seconds": 222.5,
+ "config_sha256": "22053e3efd0c674c5db8aa24a4855b991b235dbae24125e161d11874d12aa2a4",
+ "python": "3.13.3",
+ "platform": "Windows-11-10.0.26300-SP0",
+ "versions": {
+  "numpy": "2.5.5",
+  "pandas": "2.3.3",
+  "scikit-learn": "1.6.1",
+  "scipy": "1.16.3",
+  "statsmodels": "0.14.6"
+ },
+ "outputs": [
+  "design_misspecified_link.csv"
+ ],
+ "variant": "E21S misspecified working link",
+ "shifts": [
+  -1,
+  -0.5,
+  0.5,
+  1
+ ],
+ "reps": 200,
+ "scorer": "tfidf_lr",
+ "clusters": "publisher"
+}

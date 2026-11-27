@@ -1,0 +1,17 @@
+regime_B_minus_A_on_news,regime_C_minus_B_on_youtube,platform_facebook_minus_news_in_B,platform_youtube_minus_news_in_B,platform_twitter_minus_news_in_B,platform_sd_in_B,cue,regime_B_label
+-0.119398,2.49383,-0.875421,0.129668,-0.390847,0.452022,curiosity_information_withholding,y_r6
+-0.635497,3.47563,-0.265435,-0.336035,2.31759,1.26733,curiosity_information_withholding,y_al
+-0.696675,2.9441,-1.08978,1.01032,-0.44245,0.882424,direct_address_imperative,y_r6
+-0.495489,4.18425,-0.688146,-0.431018,0.0837773,0.364387,direct_address_imperative,y_al
+0.553878,0.680352,-1.83535,-0.249476,-1.63688,0.939387,exaggeration_superlative,y_r6
+0.22169,0.292372,-0.874623,0.470693,-0.748871,0.636419,exaggeration_superlative,y_al
+-0.920644,0.938316,-0.422292,1.16601,0.769164,0.720491,interrogative_structure,y_r6
+-0.719575,2.28024,0.159763,-0.376978,0.414017,0.331343,interrogative_structure,y_al
+1.08075,1.96564,-1.57639,0.117894,-0.522612,0.772623,punctuation_intensity,y_r6
+0.502769,3.54149,-0.449704,-0.879973,-0.488603,0.359992,punctuation_intensity,y_al
+1.21538,1.583,-3.0788,-1.10163,-5.20299,2.2914,sensational_emotional_loading,y_r6
+0.368224,2.78348,-2.22795,-1.45495,-2.17111,1.03714,sensational_emotional_loading,y_al
+-0.129385,-0.657245,-0.932381,-0.0185611,-0.652439,0.466422,specificity_numerals,y_r6
+-0.503717,-0.814114,-0.83875,0.51264,-0.262466,0.562312,specificity_numerals,y_al
+-0.665717,-0.121787,-1.88489,1.4214,-0.61532,1.37366,vague_deictic_reference,y_r6
+-0.601166,2.05021,-1.62026,-0.815155,-1.19436,0.688573,vague_deictic_reference,y_al

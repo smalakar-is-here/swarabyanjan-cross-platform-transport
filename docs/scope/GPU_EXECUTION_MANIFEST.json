@@ -1,0 +1,224 @@
+{
+ "accounts": [
+  {
+   "alias": "Account01",
+   "note": "the single Kaggle account configured on the execution machine; no other account was used (see EXECUTION_LOG.md, section 'Compute')"
+  }
+ ],
+ "kernels": [
+  {
+   "experiment_id": "E10_transformer",
+   "slug": "scope-e10-banglabert-full",
+   "model": "banglabert",
+   "mode": "full",
+   "subdir": "results",
+   "gpu": "GPU (type not logged)",
+   "status": "COMPLETE",
+   "description": "LOEO pooled ERM, BanglaBERT, both labels, 3 seeds",
+   "runs_logged": 30,
+   "train_seconds_sum": 6708.0,
+   "git_sha": [
+    "baca5ae"
+   ]
+  },
+  {
+   "experiment_id": "E10_transformer",
+   "slug": "scope-e10-xlmr-full",
+   "model": "xlmr",
+   "mode": "full",
+   "subdir": "scope-e10-xlmr-full",
+   "gpu": "GPU (type not logged)",
+   "status": "COMPLETE",
+   "description": "LOEO pooled ERM, XLM-R, both labels, 3 seeds",
+   "runs_logged": 30,
+   "train_seconds_sum": 19247.5,
+   "git_sha": [
+    "baca5ae"
+   ]
+  },
+  {
+   "experiment_id": "E10_w01",
+   "slug": "scope-e10-w01-banglabert-groupdro-r6",
+   "model": "banglabert",
+   "mode": "full",
+   "subdir": "scope-e10-w01-banglabert-groupdro-r6",
+   "gpu": "GPU (type not logged)",
+   "status": "COMPLETE",
+   "description": "LOEO Group DRO, BanglaBERT, published label",
+   "runs_logged": 15,
+   "train_seconds_sum": 3409.7,
+   "git_sha": [
+    "0871c09"
+   ]
+  },
+  {
+   "experiment_id": "E10_w02",
+   "slug": "scope-e10-w02-banglabert-groupdro-aligned",
+   "model": "banglabert",
+   "mode": "full",
+   "subdir": "scope-e10-w02-banglabert-groupdro-aligned",
+   "gpu": "GPU (type not logged)",
+   "status": "COMPLETE",
+   "description": "LOEO Group DRO, BanglaBERT, aligned label",
+   "runs_logged": 15,
+   "train_seconds_sum": 3499.2,
+   "git_sha": [
+    "0871c09"
+   ]
+  },
+  {
+   "experiment_id": "E10_w03",
+   "slug": "scope-e10-w03-xlmr-groupdro-r6",
+   "model": "xlmr",
+   "mode": "full",
+   "subdir": "scope-e10-w03-xlmr-groupdro-r6",
+   "gpu": "GPU (type not logged)",
+   "status": "COMPLETE",
+   "description": "LOEO Group DRO, XLM-R, published label",
+   "runs_logged": 15,
+   "train_seconds_sum": 9501.2,
+   "git_sha": [
+    "0871c09"
+   ]
+  },
+  {
+   "experiment_id": "E10_w04",
+   "slug": "scope-e10-w04-xlmr-groupdro-aligned",
+   "model": "xlmr",
+   "mode": "full",
+   "subdir": "scope-e10-w04-xlmr-groupdro-aligned",
+   "gpu": "GPU (type not logged)",
+   "status": "COMPLETE",
+   "description": "LOEO Group DRO, XLM-R, aligned label",
+   "runs_logged": 15,
+   "train_seconds_sum": 9491.5,
+   "git_sha": [
+    "db7ad71"
+   ]
+  },
+  {
+   "experiment_id": "E10_w05",
+   "slug": "scope-e10-w05-banglabert-sourceonly-r6",
+   "model": "banglabert",
+   "mode": "full",
+   "subdir": "scope-e10-w05-banglabert-sourceonly-r6",
+   "gpu": "GPU (type not logged)",
+   "status": "NOT_RUN_QUOTA (packaged for collaborators)",
+   "description": "LOEO source-only, BanglaBERT, published label",
+   "runs_logged": 0,
+   "train_seconds_sum": 0,
+   "git_sha": []
+  },
+  {
+   "experiment_id": "E10_w06",
+   "slug": "scope-e10-w06-banglabert-sourceonly-aligned",
+   "model": "banglabert",
+   "mode": "full",
+   "subdir": "scope-e10-w06-banglabert-sourceonly-aligned",
+   "gpu": "GPU (type not logged)",
+   "status": "NOT_RUN_QUOTA (packaged for collaborators)",
+   "description": "LOEO source-only, BanglaBERT, aligned label",
+   "runs_logged": 0,
+   "train_seconds_sum": 0,
+   "git_sha": []
+  },
+  {
+   "experiment_id": "E10_w07",
+   "slug": "scope-e10-w07-xlmr-sourceonly-r6",
+   "model": "xlmr",
+   "mode": "full",
+   "subdir": "scope-e10-w07-xlmr-sourceonly-r6",
+   "gpu": "GPU (type not logged)",
+   "status": "NOT_RUN_QUOTA (packaged for collaborators)",
+   "description": "LOEO source-only, XLM-R, published label",
+   "runs_logged": 0,
+   "train_seconds_sum": 0,
+   "git_sha": []
+  },
+  {
+   "experiment_id": "E10_w08",
+   "slug": "scope-e10-w08-xlmr-sourceonly-aligned",
+   "model": "xlmr",
+   "mode": "full",
+   "subdir": "scope-e10-w08-xlmr-sourceonly-aligned",
+   "gpu": "GPU (type not logged)",
+   "status": "NOT_RUN_QUOTA (packaged for collaborators)",
+   "description": "LOEO source-only, XLM-R, aligned label",
+   "runs_logged": 0,
+   "train_seconds_sum": 0,
+   "git_sha": []
+  }
+ ],
+ "planned_allocation": {
+  "note": "Accounts delegated to the coordinator for concurrent unit dispatch. Aliases only; usernames and tokens are never stored in this file. See docs/scope/KAGGLE_ACCOUNT_REGISTRY.md (Git-ignored) for the alias-to-owner map. This block records intent, not execution; `accounts` above records actual kernel runs.",
+  "units": [
+   "w05",
+   "w07"
+  ],
+  "accounts": [
+   {
+    "alias": "Account02",
+    "cleared_units": [
+     "w05",
+     "w07"
+    ]
+   },
+   {
+    "alias": "Account03",
+    "cleared_units": [
+     "w05",
+     "w07"
+    ]
+   },
+   {
+    "alias": "Account04",
+    "cleared_units": [
+     "w05",
+     "w07"
+    ]
+   },
+   {
+    "alias": "Account05",
+    "cleared_units": [
+     "w05",
+     "w07"
+    ]
+   },
+   {
+    "alias": "Account06",
+    "cleared_units": [
+     "w05",
+     "w07"
+    ]
+   },
+   {
+    "alias": "Account07",
+    "cleared_units": [
+     "w05",
+     "w07"
+    ]
+   },
+   {
+    "alias": "Account08",
+    "cleared_units": [
+     "w05",
+     "w07"
+    ]
+   },
+   {
+    "alias": "Account09",
+    "cleared_units": [
+     "w05",
+     "w07"
+    ]
+   },
+   {
+    "alias": "Account10",
+    "cleared_units": [
+     "w05",
+     "w07"
+    ]
+   }
+  ]
+ }
+}

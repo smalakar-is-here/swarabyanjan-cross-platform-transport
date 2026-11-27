@@ -1,0 +1,32 @@
+{
+ "experiment": "E24",
+ "scope_version": "1.0.0",
+ "wall_seconds": 377.0,
+ "config_sha256": "22053e3efd0c674c5db8aa24a4855b991b235dbae24125e161d11874d12aa2a4",
+ "python": "3.13.3",
+ "platform": "Windows-11-10.0.26300-SP0",
+ "versions": {
+  "numpy": "2.5.5",
+  "pandas": "2.3.3",
+  "scikit-learn": "1.6.1",
+  "scipy": "1.16.3",
+  "statsmodels": "0.14.6"
+ },
+ "outputs": [
+  "binarisations_crossfit.json",
+  "binarisations_on_anchors.csv",
+  "component_link_transport.csv",
+  "component_mix_by_level.csv",
+  "frozen_auroc_by_binarisation.csv",
+  "frozen_metric_suite.csv",
+  "protocol_contrasts_jackknife.csv",
+  "scl_news_nonanchor.csv",
+  "youtube_without_top_channel.csv"
+ ],
+ "clusters": "publisher (inference_pool)",
+ "binarisation_crossfit": "5 publisher folds x 20 repeats",
+ "component_link_bootstrap": "500 draws over anchor publishers",
+ "scl_nonanchor_bootstrap": 300,
+ "jackknife": "leave-one-cluster-out, t with G-1 df, Holm within metric (prior correction excluded)",
+ "best_alternative_cut": "trigger>=1 & level>=1"
+}

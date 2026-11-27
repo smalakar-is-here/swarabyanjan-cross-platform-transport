@@ -54,3 +54,17 @@ provenance/canonical/stage02/P0_BLOCKER_FORENSICS.json
 provenance/canonical/stage03/DECONTAMINATION_FORENSICS.json
 data/derived/primary/stage09/SOURCE_PUBLISHER_MAPPING.csv
 results/primary/stage09/SOURCE_CLUSTER_DIAGNOSTICS.json
+
+# SCOPE successor work: restricted inputs never enter git
+private_data/
+results/scope_v1/private/
+*.joblib
+models/checkpoints/
+experiments/kaggle/build/
+paper_scope/*.log
+paper_scope/*.fls
+paper_scope/
+
+# Kaggle orchestration (aliases only; no tokens)
+docs/scope/KAGGLE_ACCOUNT_REGISTRY.md
+docs/scope/ACCOUNT_USERNAME_MAP.json

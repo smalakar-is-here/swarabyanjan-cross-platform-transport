@@ -1,0 +1,29 @@
+{
+ "experiment": "E22",
+ "scope_version": "1.0.0",
+ "wall_seconds": 364.0,
+ "config_sha256": "22053e3efd0c674c5db8aa24a4855b991b235dbae24125e161d11874d12aa2a4",
+ "python": "3.13.3",
+ "platform": "Windows-11-10.0.26300-SP0",
+ "versions": {
+  "numpy": "2.5.5",
+  "pandas": "2.3.3",
+  "scikit-learn": "1.6.1",
+  "scipy": "1.16.3",
+  "statsmodels": "0.14.6"
+ },
+ "outputs": [
+  "cut_points.csv",
+  "latent_cuts_results.csv",
+  "latent_cuts_summary.csv"
+ ],
+ "seeds": [
+  42,
+  137,
+  2718
+ ],
+ "splits": "identical to E10 (same dedup, GroupShuffleSplit seed, featuriser)",
+ "penalty": "||w||^2/2 (liblinear C=1 scale)",
+ "optimizer": "L-BFGS-B, maxiter 500",
+ "baitbuster_target": "regime C absent from training when held out: source cut tau_A used (flagged cut_identified=False)"
+}

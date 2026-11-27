@@ -1,0 +1,15 @@
+{
+ "anchor_classes": 1083,
+ "banglaclick_news_items": 1500,
+ "anchor_items_in_banglaclick_news": 1100,
+ "banglabait_splits_of_anchors": {
+  "train": 1028,
+  "test": 23,
+  "test,train": 17,
+  "dev,train": 8,
+  "dev": 7
+ },
+ "classes_with_inconsistent_bc_level": 10,
+ "prior_audit_reported_classes": 1058,
+ "note": "1058 in the 2026-11-26 assessment came from the R6 decontamination file (per-split counts of Stage02-cleaned rows); 1083 here joins all 15,056 raw BanglaBait rows by normalised-title hash."
+}

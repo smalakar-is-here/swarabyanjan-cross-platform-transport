@@ -1,102 +1,124 @@
-# Swarabyanjan — Public-Safe Reproducibility Core
+# Swarabyanjan --- R6 Baseline and SCOPE Successor
 
-Swarabyanjan is a reproducibility and evidence repository for a Bengali clickbait external-validity study of cue–outcome transport, cue-conditioned proper-loss transport, probability reliability, and fixed-budget review behaviour under distribution shift.
+Swarabyanjan contains two related but distinct research tracks. This
+repository/branch preserves the R6 historical reproducibility core and
+the SCOPE successor implementation. Do not conflate their protocols,
+results or claims.
 
-## Study at a glance
+## Research tracks
 
-| Resource | Role |
-|---|---|
-| BanglaBait (decontaminated) | Source. Models are developed only here: TRAIN 10,544, DEV 1,100, TEST 2,784 after quarantining 628 protected-title rows. Temperature scaling is fitted on DEV only. |
-| BanglaClick | Four separately evaluated target platforms: News 1,500, Facebook 1,961, YouTube 1,000, Twitter 500. Never used for training, calibration or tuning. |
-| BaitBuster-Bangla | 10,000 human-labelled rows of a related YouTube/multimodal construct. **External corroboration only**, not a construct-equivalent replication. |
-| BanMANI, BanFakeNews-2.0 | Construct-boundary resources only. |
+### R6 --- historical baseline
 
-Four model families (EBM, TF-IDF + logistic regression, BanglaBERT, XLM-R) × five seeds (42, 137, 2718, 31415, 65537).
+R6 is the previously completed Bengali clickbait external-validity
+study. Its original Stage01--Stage09 notebooks, frozen primary results,
+sensitivity outputs, provenance and Stage10 release engineering remain
+historical baseline artifacts.
 
-| Analysis | Evidential role |
-|---|---|
-| H1, H2 | Supporting: model-level discrimination/reliability decoupling and calibration-gain attenuation |
-| H3 | **Primary**: source-to-platform transport of eight prespecified cue–label (ΔRD) and cue-conditioned proper-loss (ΔNLL-gap) relationships on 32 cue–platform cells; 24/32 estimable, 8/32 non-estimable; the global 32-dimensional Wald test and both eight-family Simes/BH procedures are NON_ESTIMABLE |
-| H3-P | Controlled model-sensitivity corroboration (150/150 estimable); non-causal |
-| H4 | Operational: fixed-budget review at a 10% primary budget (5% and 20% sensitivity) |
-| H3→H4 bridge | Exploratory and **descriptive only**; all four joint-bootstrap analyses are NON_ESTIMABLE |
-| Stage09; Rule A/B | Source-site sensitivity; post-hoc News-decontamination sensitivity |
+The R6 analysis used BanglaBait as the source, BanglaClick as separate
+target-platform datasets, and BaitBuster-Bangla for external
+corroboration only. The historical hypotheses, estimands, bootstrap
+rules and non-estimability statuses are documented in the R6 provenance
+and `docs/SCIENTIFIC_LOCKS.md` in the parent workspace.
 
-All inference uses 5,000 locked bootstrap draws and a fail-closed all-valid-draw rule. Non-estimability is a boundary on inference, not evidence of stability, instability or a null effect.
+R6 results must not be silently replaced by successor results.
 
-## Scientific workflow
+### SCOPE --- successor research
 
-The canonical scientific workflow contains **exactly nine notebooks: Stage01–Stage09** in `notebooks/`. Stage10 is **release engineering only** and is kept at `scripts/release/10-release-package-assembly-vfinal.ipynb`.
+SCOPE investigates why Bengali clickbait detection performance and cue
+relationships vary across datasets and platforms, including the roles of
+prevalence, text/cue distributions and annotation/label definitions.
 
-The scientific implementation is notebook-embedded. The completed forensic inventory found no standalone implementation tree, so this repository does not fabricate a `src/` package. The only standalone Python files are the presentation-only figure generators in `scripts/publication_figures/` (added 2026-11-15); they re-render frozen Stage08 source data and perform no scientific computation.
+The successor programme is separately versioned and must be
+reconstructed from the current source code, configurations,
+machine-readable results and run manifests. The preliminary design is
+not proof that all proposed components are identifiable or novel.
 
-## Public-safe data boundary
+The current branch documentation identifies: - implementation under
+`src/scope/`; - automated tests under `tests/`; - experiment runner
+`python -m scope.run`; - GPU worker specification under
+`experiments/kaggle/WORKER_UNITS.md`; - worker-package generator
+`scripts/scope_make_worker_packages.py`; - experiment registry under
+`docs/scope/EXPERIMENT_REGISTRY.csv`; - claim/evidence map under
+`docs/scope/CLAIM_EVIDENCE_MAP.md`; - reproduction instructions in
+`docs/scope/REPRODUCE.md`.
 
-This public core intentionally excludes frozen artifacts whose public redistribution permission is unresolved when they contain third-party text/row-level source bytes, together with the 10 Stage03 `.joblib` model binaries whose redistribution permission remains unresolved.
+**Verify that each path exists in the current checkout before relying on
+it.** If a documented path is absent, report the mismatch rather than
+inventing a replacement.
 
-The excluded bytes are **not needed to inspect the published aggregate H1/H2/H3/H3-P/H4/bridge results, figures, tables, or Rule A/B comparison evidence**. Exact expected paths, filenames, sizes, SHA-256 values, access/reproduction routes, dependency links, and verification instructions are preserved under `provenance/external_restricted/`.
+## SCOPE research principles
 
-A fresh clone therefore does **not** contain every private/external input needed to rerun all notebooks. An authorised researcher must first obtain/reproduce the restricted inputs and verify their hashes. Public reproducibility metadata does not imply public redistribution rights.
+1.  Separate platform effects from dataset and annotation effects where
+    the design permits.
+2.  Reconcile overlap/anchor denominators and label thresholds before
+    making comparisons.
+3.  Formalise estimands and identification assumptions.
+4.  Compare against fair, strong baselines.
+5.  Use cluster-aware uncertainty and appropriate multiple-testing
+    procedures.
+6.  Report negative, partial and non-estimable findings.
+7.  Do not claim causality, universal decomposition or SCOPE superiority
+    without evidence.
+8.  Keep R6 and SCOPE results separately versioned.
+
+## Data and privacy boundary
+
+Restricted third-party text and private research records are not part of
+the public repository. Keep private data in the Git-ignored workspace
+`private_data/scope/` when permitted by the data terms. A private Kaggle
+dataset is still an external transfer; verify the licence and transfer
+permission before uploading. Never commit tokens, credentials,
+restricted raw text or private records.
+
+Public-safe aggregates and reproducibility metadata may be shared only
+according to their provenance and applicable licences.
 
 ## Repository map
 
-```text
-notebooks/                         9 canonical scientific notebooks
-scripts/release/                   Stage10 release-engineering notebook
-configs/                           frozen configuration/schema locks
-experiments/sensitivity/           Rule A / Rule B branch notebooks
-results/primary/                   aggregate frozen primary results/figures/tables
-results/sensitivity/               Rule A / Rule B aggregate sensitivity evidence
-results/publication/               journal-presentation figure re-renders (presentation only)
-scripts/publication_figures/       deterministic generators and QA for results/publication/
-data/access/                       data/model access and licensing boundary
-data/derived/                      only retained non-text-bearing derived interfaces
-provenance/canonical/              Stage01–Stage09 manifests/checksums/status records
-provenance/external_restricted/    hashes + access metadata for excluded bytes
-provenance/feasibility_audit/      News-decontamination feasibility evidence
-provenance/rowlevel_audit/         non-text-bearing identity/audit metadata
-provenance/sensitivity/            Rule A / Rule B execution provenance
-provenance/release/                Stage10/repackaging release provenance
-provenance/archive/                historical/repair notebooks
-docs/                              reproducibility, traceability and safety audits
+``` text
+notebooks/                         R6 historical Stage01–Stage09 notebooks
+scripts/release/                   R6 Stage10 release engineering
+results/primary/                   R6 frozen primary results
+results/sensitivity/               R6 Rule A / Rule B sensitivity evidence
+provenance/                        R6 provenance and restricted-artifact metadata
+src/scope/                         SCOPE successor implementation (verify current checkout)
+tests/                             SCOPE tests (verify current checkout)
+experiments/kaggle/                SCOPE independent GPU work units
+scripts/scope_make_worker_packages.py  SCOPE worker package generator
+docs/scope/                        SCOPE registry, evidence map and reproduction guide
+results/scope_v1/                  versioned SCOPE results, if present
 ```
 
-## Primary versus sensitivity evidence
+## Reproducibility
 
-The Stage01–Stage09 analysis remains frozen and primary. Rule A and Rule B are post-hoc News-decontamination sensitivity analyses only; neither is presented as a replacement or preferred rule. Aggregate Rule A/B tables and Table S10/S11 evidence remain public under `results/sensitivity/`.
+-   R6: follow the historical notebook and provenance instructions in
+    `docs/REPRODUCIBILITY.md` and the R6 manifests.
+-   SCOPE: follow `docs/scope/REPRODUCE.md`. Use the SCOPE environment
+    and versioned outputs; do not run successor experiments inside the
+    frozen R6 notebook sequence.
 
-## Data and models
+## Current evidence and limitations
 
-Raw external datasets are not redistributed here. Text-bearing derived caches/splits and model binaries with unresolved public redistribution permission are also excluded. See `data/access/` and `provenance/external_restricted/`.
+`docs/scope/CLAIM_EVIDENCE_MAP.md` is a claim index. Verify every claim
+against the underlying code, result files, logs and manifests before
+using it in a manuscript. A claim map entry is not itself a
+completed-run artifact.
 
-## Reproducibility and evidence
+The current evidence map records limitations, including partial loss
+decomposition, point-estimate-only cue-spread evidence, YouTube-specific
+regime/platform contrast, no PPI gain, unsupported anchor
+representativeness for frozen models, and no causal or
+platform-by-regime interaction claim. Preserve these qualifications
+unless new verified evidence justifies a change.
 
-See:
+## Citation and licence
 
-- `docs/REPRODUCIBILITY.md`
-- `docs/EVIDENCE_TRACEABILITY.md`
-- `docs/CANONICAL_NOTEBOOK_MAP.md`
-- `docs/PUBLIC_REDISTRIBUTION_SAFETY_AUDIT.md`
-- `docs/MANUSCRIPT_REPOSITORY_CROSSCHECK_PUBLIC_SAFE.md`
-
-## Publication materials
-
-The manuscript source, manuscript PDFs and editorial records are kept outside this public repository.
-
-`results/publication/journal_presentation_2026-11-15/` holds the journal-presentation versions of the five main and twelve supplementary figures, re-rendered deterministically from the frozen Stage08 figure source data. The canonical Stage08 figures in `results/primary/stage08/` are unchanged and remain the reference artefacts. Wording differences between the two sets (for example `Youtube` → `YouTube`, and BaitBuster "replication" → "external corroboration") are listed in that folder's `README.md`.
-
-## Installation and verification
-
-There is no single environment for every stage. `requirements.txt` is a snapshot of the Stage10 assembly environment, not a lockfile for the historical Stage01–Stage09 runs (see its header).
-
-- **Publication figures:** create a Python 3.13 environment from `scripts/publication_figures/requirements-publication-figures.txt` and run `python scripts/publication_figures/regenerate_and_verify.py`. It writes only to a temporary directory and checks source hashes, exact values and output hashes (see `scripts/publication_figures/README.md`).
-- **File integrity:** from the repository root run `sha256sum -c provenance/PUBLIC_REPOSITORY_SHA256SUMS.txt` (the manifest does not list itself). Line endings are pinned in `.gitattributes`, so a fresh clone verifies on Windows, macOS and Linux.
-- **Notebooks:** see `docs/REPRODUCIBILITY.md`; some stages need restricted inputs listed in `provenance/external_restricted/`.
-
-## Citation and license
-
-`CITATION.cff` is intentionally omitted pending author approval of the final repository identity/URL. No repository-wide `LICENSE` is fabricated; see `docs/LICENSE_STATUS.md`.
+Do not invent a repository-wide licence or `CITATION.cff`. Follow the
+current repository licence-status documentation and obtain author
+approval for any new licence or public data release.
 
 ## Integrity
 
-Public-safety repackaging removed restricted bytes only. The retained scientific notebooks, aggregate results, figures/tables, and scientific provenance were not recomputed or numerically altered.
+Every reported number must map to a versioned machine-readable result.
+Keep configuration hashes, code revision, data hashes, seeds, logs and
+output manifests. Never hand-edit result values.

@@ -1,0 +1,29 @@
+{
+ "experiment": "E23",
+ "scope_version": "1.0.0",
+ "wall_seconds": 244.1,
+ "config_sha256": "22053e3efd0c674c5db8aa24a4855b991b235dbae24125e161d11874d12aa2a4",
+ "python": "3.13.3",
+ "platform": "Windows-11-10.0.26300-SP0",
+ "versions": {
+  "numpy": "2.5.5",
+  "pandas": "2.3.3",
+  "scikit-learn": "1.6.1",
+  "scipy": "1.16.3",
+  "statsmodels": "0.14.6"
+ },
+ "outputs": [
+  "ablation_contrasts_vs_latent_cuts.csv",
+  "ablation_results.csv",
+  "ablation_summary.csv"
+ ],
+ "seeds": [
+  42,
+  137,
+  2718
+ ],
+ "splits": "identical to E10/E22",
+ "reference": "latent_cuts (E22)",
+ "clusters": "publisher (inference_pool)",
+ "multiplicity": "Holm within metric over the three ablation protocols vs latent_cuts; pooled_erm/source_only rows are descriptive"
+}

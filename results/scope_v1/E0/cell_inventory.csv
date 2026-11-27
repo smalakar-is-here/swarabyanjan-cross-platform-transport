@@ -1,0 +1,7 @@
+env,rows,clusters,prevalence_r6
+baitbuster:youtube,10000,13,0.5644
+banglabait:news,2784,2784,0.341236
+banglaclick:facebook,1961,26,0.63896
+banglaclick:news,1500,53,0.783333
+banglaclick:twitter,500,314,0.722
+banglaclick:youtube,1000,10,0.933

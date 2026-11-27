@@ -1,0 +1,26 @@
+{
+ "w05 vs Account01 replicate (2026-11-27)": {
+  "files_compared": 18,
+  "all_rows_match": true,
+  "max_abs_dp": 0.0,
+  "max_abs_dlogit": 0.0
+ },
+ "w05 vs news-fold rerun w11/w12 (2026-11-27)": {
+  "files_compared": 6,
+  "all_rows_match": true,
+  "max_abs_dp": 0.0,
+  "max_abs_dlogit": 0.0
+ },
+ "w07 vs Account01 replicate (2026-11-27)": {
+  "files_compared": 18,
+  "all_rows_match": true,
+  "max_abs_dp": 0.0,
+  "max_abs_dlogit": 0.0
+ },
+ "w07 vs news-fold rerun w11/w12 (2026-11-27)": {
+  "files_compared": 6,
+  "all_rows_match": true,
+  "max_abs_dp": 0.0,
+  "max_abs_dlogit": 0.0
+ }
+}
