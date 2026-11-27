@@ -1,0 +1,16 @@
+target,seed,tau_A,tau_C,has_C,theta_1,theta_2,theta_3,converged
+banglaclick:news,42,1.13433,-0.621424,True,-1.50933,1.19738,2.64906,True
+banglaclick:news,137,1.06575,-0.507161,True,-1.71993,0.913342,2.35137,True
+banglaclick:news,2718,1.12734,-0.635852,True,-1.53787,1.18692,2.61674,True
+banglaclick:facebook,42,1.64187,-0.0728821,True,-1.53658,1.93174,3.14745,True
+banglaclick:facebook,137,1.65164,-0.0492835,True,-1.52478,1.9365,3.16295,True
+banglaclick:facebook,2718,1.47562,0.737826,True,-1.65134,1.71017,2.8819,True
+banglaclick:youtube,42,1.01097,-0.649372,True,-1.67658,0.778436,2.14107,True
+banglaclick:youtube,137,1.0234,-0.617851,True,-1.66286,0.792453,2.13904,True
+banglaclick:youtube,2718,0.916479,0.341119,True,-1.76578,0.713095,2.06884,True
+banglaclick:twitter,42,0.994675,-0.767545,True,-1.79729,0.920147,2.32282,True
+banglaclick:twitter,137,1.0013,-0.659648,True,-1.60493,0.981402,2.40234,True
+banglaclick:twitter,2718,0.925544,0.15559,True,-1.83803,0.87424,2.24103,True
+baitbuster:youtube,42,0.503437,0,False,-2.14775,0.377968,1.66919,True
+baitbuster:youtube,137,0.524502,0,False,-2.1315,0.382753,1.6555,True
+baitbuster:youtube,2718,0.503484,0,False,-2.10752,0.360147,1.68236,True

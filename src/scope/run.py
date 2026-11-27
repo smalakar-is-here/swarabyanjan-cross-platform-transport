@@ -321,7 +321,7 @@ def _gather_predictions():
     """All saved LOEO predictions: TF-IDF (E10/E16) and transformers (Kaggle). Returns DataFrame of files."""
     import glob, os
     rows = []
-    for f in glob.glob(str(paths.private_root() / "predictions" / "E1[06]" / "*.parquet")):
+    for f in [x for e in ("E10", "E16", "E22") for x in glob.glob(str(paths.private_root() / "predictions" / e / "*.parquet"))]:
         model, proto, lab, tgt, seed = os.path.basename(f)[:-8].split("__")
         rows.append(dict(model=model, protocol=proto, label=lab, target=tgt.replace("-", ":", 1), seed=int(seed[1:]), file=f, col="p"))
     seen = set()
@@ -586,7 +586,121 @@ def E19():
                                           "is misspecified for bimodal transformer logits (diagnosed in V2); both are reported, and V1 gives the cross-fitted anchor NLL of each"})
 
 
-EXPS = {"E19": E19, "E0": E0, "E1": E1, "E2": E2, "E3": E3, "E4": E4, "E5": E5, "E7": E7, "E10": E10, "E10T": E10T, "E11": E11, "E13": E13, "E14": E14, "E15": E15, "E16": E16, "E17": E17, "E18": E18}
+def E20():
+    """Sharp partial-identification bounds for source-construct risk on regime-B cells (scope.bounds, scope.e20)."""
+    from . import e20
+    t0 = time.time(); pool = training_pool(); anc = anchors(); rng = np.random.default_rng(C["bootstrap_seed"] + 20)
+    lv = data.banglaclick_levels().set_index("row_id").level.astype(int)
+    st = data.load_predictions(); src_y = st[st.env == "banglabait:news"].drop_duplicates("row_id").set_index("row_id").label.astype(float)
+    sc = pd.read_parquet(paths.private_root() / "predictions" / "E19" / "blind_tfidf_scores.parquet")  # E19's anchor-blind scorer
+    scorers = {"tfidf_lr": sc[["row_id", "env", "seed", "p"]]}
+    scorers.update({k: v for k, v in _xcell_scorers().items() if "|" not in k})  # transformer source-only scorers, when returned
+    mc, va, pt, bt, rel = e20.run(scorers, pool, anc, lv, src_y, rng, boot=300)
+    _write("E20", "m_check.csv", mc)
+    _write("E20", "validation_by_fold.csv", va)
+    _write("E20", "validation_summary.csv", va.groupby(["scorer", "metric"]).agg(
+        coverage_AL=("in_AL", "mean"), coverage_ALM=("in_ALM", "mean"), width_AL=("width_AL", "mean"), width_ALM=("width_ALM", "mean"),
+        mean_miss_ALM=("dist_ALM", "mean"), truth_minus_const=("truth_minus_const", "mean"), n_folds=("truth", "size")).reset_index())
+    _write("E20", "identified_sets_by_seed.csv", pt)
+    summ = pt.groupby(["scorer", "env"]).mean(numeric_only=True).reset_index().drop(columns="seed")
+    q = lambda v, a: float(np.nanpercentile(v, a))
+    cs = []
+    for (scn, env), g in bt.groupby(["scorer", "env"]):
+        row = {"scorer": scn, "env": env}
+        for m in ("auroc", "nll", "brier"):
+            for a in ("AL", "ALM"):
+                row[f"{m}_{a}_cs_lo"] = q(g[f"{m}_{a}_lo"], 2.5); row[f"{m}_{a}_cs_hi"] = q(g[f"{m}_{a}_hi"], 97.5)
+        row["prevalence_AL_lo"], row["prevalence_AL_hi"] = q(g.prevalence_AL, 2.5), q(g.prevalence_AL, 97.5)
+        cs.append(row)
+    _write("E20", "identified_sets_summary.csv", summ.merge(pd.DataFrame(cs), on=["scorer", "env"]))
+    r = rel[rel.metric != "auroc_breakdown_vs_source"]
+    _write("E20", "relaxation_summary.csv", r.groupby(["scorer", "env", "metric", "delta"]).mean(numeric_only=True).reset_index().drop(columns="seed"))
+    bk = rel[rel.metric == "auroc_breakdown_vs_source"]
+    _write("E20", "breakdown_vs_source_auroc.csv", bk[["scorer", "env", "seed", "side", "delta_star"]])
+    _manifest("E20", t0, {"scorers": sorted(scorers), "bootstrap": "300 draws; anchor publisher clusters (link refit) x target clusters; seed-averaged; "
+                          "confidence set = [2.5th pct of lower end, 97.5th pct of upper end]",
+                          "assumptions": {"A0": "none", "AL": "E_e[h|L=l] = g(l) (level-link transport)", "M": "h non-decreasing in score within level"},
+                          "relaxation": "logit g(l) +- delta, delta in {0, .25, .5, 1}; AUROC by 9-point grid per level",
+                          "validation": "5-fold publisher-cluster cross-fit on news anchors, 20 draws"})
+
+
+def E21():
+    """Design-based target auditing: model-assisted anchor sampling, validated on news anchors (truth known)."""
+    from . import e21, e19
+    t0 = time.time(); pool = training_pool(); anc = anchors(); rng = np.random.default_rng(C["bootstrap_seed"] + 21)
+    lv = data.banglaclick_levels().set_index("row_id").level.astype(int)
+    sc = pd.read_parquet(paths.private_root() / "predictions" / "E19" / "blind_tfidf_scores.parquet")
+    scorers = {"tfidf_lr": sc[["row_id", "env", "seed", "p"]]}
+    scorers.update({k: v for k, v in _xcell_scorers().items() if "|" not in k})
+    sims = []
+    for name, s in scorers.items():
+        for sd in sorted(s.seed.unique()):
+            d = e19.anchor_items(s[s.seed == sd], pool, anc, lv)
+            r = e21.simulate(d, [25, 50, 100, 150, 200], 300, rng); r["scorer"], r["seed"] = name, sd; sims.append(r)
+    sim = pd.concat(sims, ignore_index=True)
+    sim[["auroc_cover", "nll_cover"]] = sim[["auroc_cover", "nll_cover"]].astype(float)  # bool/NaN mix is object dtype otherwise
+    raw_dir = paths.private_root() / "results_raw" / "E21"; raw_dir.mkdir(parents=True, exist_ok=True)
+    sim.to_csv(raw_dir / "design_simulation.csv", index=False, float_format="%.6g")
+    rmse = lambda v: float(np.sqrt(np.nanmean(np.square(v))))
+    _write("E21", "design_summary.csv", sim.groupby(["scorer", "n", "design", "estimator"]).agg(
+        auroc_bias=("auroc_err", "mean"), auroc_rmse=("auroc_err", rmse), nll_bias=("nll_err", "mean"), nll_rmse=("nll_err", rmse),
+        auroc_ci_coverage=("auroc_cover", "mean"), nll_ci_coverage=("nll_cover", "mean"), draws=("auroc_err", "size"), N=("N", "mean")).reset_index())
+    _manifest("E21", t0, {"scorers": sorted(scorers), "population": "news anchors of a random half of publisher clusters per draw; "
+                          "working link = flexible SCL fitted on the other half", "draws_per_seed": 300, "budgets": [25, 50, 100, 150, 200],
+                          "designs": ["srs", "level_prop", "level_x_score_neyman"], "estimators": ["sample_only", "model_only", "diff", "scl_refit"],
+                          "ci": "95% normal, stratified design variance with fpc; AUROC by linearisation"})
+
+
+def E22():
+    """Latent-intensity model with regime-specific cut-points (scope.latent), TF-IDF features, E10 LOEO splits."""
+    from . import latent, train_cpu
+    from scipy.special import expit
+    from sklearn.model_selection import GroupShuffleSplit
+    t0 = time.time(); pool = training_pool()
+    lv = data.banglaclick_levels().set_index("row_id").level.astype(int)
+    pool["regime"] = pool.env.str.split(":").str[0].map({"banglabait": 0, "banglaclick": 1, "baitbuster": 2})
+    pool["yy"] = pool.y_r6
+    b = pool.regime == 1; pool.loc[b, "yy"] = lv.loc[pool.loc[b, "row_id"]].to_numpy().astype(float)
+    construct_of = {("r6", 1): "B1", ("aligned", 1): "B2"}
+    rows, cuts = [], []
+    pdir = paths.private_root() / "predictions" / "E22"
+    for tgt in train_cpu.TARGETS:
+        test = pool[pool.env == tgt]; treg = int(test.regime.iloc[0])
+        train = pool[pool.env != tgt]; train = train[~train.normalized_title_sha256.isin(test.normalized_title_sha256)]
+        for seed in C["seeds"][:3]:
+            fit_i, val_i = next(GroupShuffleSplit(n_splits=1, test_size=0.1, random_state=seed).split(train, groups=train.cluster_id))
+            tr, va = train.iloc[fit_i], train.iloc[val_i]
+            feats = train_cpu.featurizer(); Xtr = feats.fit_transform(tr.title)
+            m = latent.fit(Xtr, tr.regime.to_numpy(), tr.yy.to_numpy())
+            Xva, Xte = feats.transform(va.title), feats.transform(test.title)
+            cuts.append({"target": tgt, "seed": seed, "tau_A": m["tau_A"], "tau_C": m["tau_C"], "has_C": m["has_C"],
+                         **{f"theta_{k + 1}": m["theta"][k] for k in range(3)}, "converged": m["converged"]})
+            for lab in ("r6", "aligned"):
+                con = construct_of.get((lab, treg), "A" if treg == 0 else "C")
+                # temperature on the validation split, each item under its own regime's binary construct
+                fv = Xva @ m["w"]; reg_v = va.regime.to_numpy(); yv = va.yy.to_numpy()
+                tcut = {"r6": 1, "aligned": 2}[lab]
+                zv = np.where(reg_v == 0, fv - latent.cut(m, "A"), np.where(reg_v == 2, fv - latent.cut(m, "C"), fv - latent.cut(m, f"B{tcut}")))
+                ybin = np.where(reg_v == 1, (yv >= tcut).astype(float), yv)
+                T = train_cpu.fit_temperature(zv, ybin)
+                p = expit(latent.score(m, Xte, con) / T)
+                ycol = "y_r6" if lab == "r6" else "y_al"; y = test[ycol].to_numpy()
+                r = M.all_metrics(y, p, hard=y)
+                r.update(label=lab, target=tgt, protocol="latent_cuts", model="tfidf_lr", seed=seed, construct=con,
+                         cut_identified=bool(treg != 2 or m["has_C"]))
+                rows.append(r)
+                train_cpu._save_pred(pdir, "tfidf_lr", "latent_cuts", lab, tgt, seed, test.row_id, p)
+    res = pd.DataFrame(rows)
+    _write("E22", "latent_cuts_results.csv", res)
+    _write("E22", "cut_points.csv", pd.DataFrame(cuts))
+    num = [c for c in res.columns if c not in ("label", "target", "protocol", "model", "seed", "construct", "cut_identified")]
+    _write("E22", "latent_cuts_summary.csv", res.groupby(["label", "target", "protocol", "model", "construct"])[num].mean().reset_index())
+    _manifest("E22", t0, {"seeds": C["seeds"][:3], "splits": "identical to E10 (same dedup, GroupShuffleSplit seed, featuriser)",
+                          "penalty": "||w||^2/2 (liblinear C=1 scale)", "optimizer": "L-BFGS-B, maxiter 500",
+                          "baitbuster_target": "regime C absent from training when held out: source cut tau_A used (flagged cut_identified=False)"})
+
+
+EXPS = {"E22": E22, "E21": E21,"E20": E20,"E19": E19,"E0": E0, "E1": E1, "E2": E2, "E3": E3, "E4": E4, "E5": E5, "E7": E7, "E10": E10, "E10T": E10T, "E11": E11, "E13": E13, "E14": E14, "E15": E15, "E16": E16, "E17": E17, "E18": E18}
 
 if __name__ == "__main__":
     todo = sys.argv[1:] or ["all"]
