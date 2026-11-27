@@ -81,7 +81,7 @@ Dispatch across all delegated accounts:
     .\.venv-scope\Scripts\python.exe scripts\scope_multi_queue.py check
     .\.venv-scope\Scripts\python.exe scripts\scope_multi_queue.py queue w05 w07
 
-`check` lists `swagotammalakar/scope-training-pool-v1` under every
+`check` lists `smalakarishere/scope-training-pool-v1` (the data holder; set `SCOPE_DATASET_OWNER=smalakarishere`) under every
 account's own token (read-only, no quota) and prints `ACCESS_OK` or
 `NO_ACCESS`. Kaggle accepts a kernel push that references a private
 dataset the pushing account cannot read; it mounts nothing, and the
@@ -89,7 +89,7 @@ kernel fails at start-up (`POOL_NOT_FOUND`, formerly `StopIteration`).
 `push()` now runs the same check and skips accounts without access.
 Poll kernels with `scope_multi_queue.py status Account05 <slug> ...`.
 For `scope_make_worker_packages.py probe|push` run from a non-owner
-login, set `SCOPE_DATASET_OWNER=swagotammalakar` first.
+login, set `SCOPE_DATASET_OWNER=smalakarishere` first.
 
 The script reads tokens from the out-of-tree token file
 (`SCOPE_KAGGLE_TOKENS`), discovers each token's Kaggle username once
