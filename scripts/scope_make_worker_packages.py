@@ -27,6 +27,10 @@ UNITS = {f"w{i + 1:02d}": dict(model=m, protocol=p, label=l) for i, (m, p, l) in
 # E22 regime cut-point model; one model per (target, seed) writes predictions under both label definitions
 UNITS.update({"w09": dict(model="banglabert", protocol="latent_cuts", label="r6"),
               "w10": dict(model="xlmr", protocol="latent_cuts", label="r6")})
+# E20 source reference: rerun of the news fold of w05/w07, adding source held-out scores (srcval_*). Deterministic
+# fine-tuning (C33) means its xcell_* files must equal those of w05/w07, which checks the rerun.
+UNITS.update({"w11": dict(model="banglabert", protocol="source_only", label="r6", targets=["banglaclick:news"]),
+              "w12": dict(model="xlmr", protocol="source_only", label="r6", targets=["banglaclick:news"])})
 
 
 def build(unit, mode="full", owner="OWNER", dataset_owner="DATASET_OWNER", gpu=True, protocol=None):
@@ -34,7 +38,7 @@ def build(unit, mode="full", owner="OWNER", dataset_owner="DATASET_OWNER", gpu=T
     sha = subprocess.run(["git", "-C", str(ROOT), "rev-parse", "--short", "HEAD"], capture_output=True, text=True).stdout.strip() or "uncommitted"
     src = TEMPLATE.read_text(encoding="utf-8")
     for k, v in {"__MODEL__": u["model"], "__MODE__": mode, "__GIT_SHA__": sha, "__PROTOCOL__": u["protocol"],
-                 "__LABELS__": json.dumps([u["label"]]), "__TARGETS__": "[]", "__SEEDS__": "[]"}.items():
+                 "__LABELS__": json.dumps([u["label"]]), "__TARGETS__": json.dumps(u.get("targets", [])), "__SEEDS__": "[]"}.items():
         src = src.replace(k, v)
     slug = f"scope-e10-{unit}-{u['model']}-{u['protocol'].replace('_', '')}-{u['label']}" + ("" if mode == "full" else "-probe")
     d = BUILD / slug; d.mkdir(parents=True, exist_ok=True)

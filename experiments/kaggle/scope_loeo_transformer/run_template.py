@@ -200,6 +200,12 @@ for lab in LABELS:
                 pd.DataFrame({"row_id": oth.row_id.to_numpy(), "env": oth.env.to_numpy(), "logit": zo, "temperature": T,
                               "p_calibrated": 1 / (1 + np.exp(-zo / T))}).to_parquet(
                     OUT / f"xcell_{MODEL}_{lab}_heldout-{tgt.replace(':', '-')}_s{seed}_{PROTOCOL}.parquet", index=False)
+                # Source held-out reference for E20: the same model on its cluster-grouped 10% validation split of
+                # BanglaBait (never trained on; used only for T, which leaves AUROC unchanged).
+                zv_ = logits(model, va.title.tolist())
+                pd.DataFrame({"row_id": va.row_id.to_numpy(), "logit": zv_, "temperature": T,
+                              "p_calibrated": 1 / (1 + np.exp(-zv_ / T))}).to_parquet(
+                    OUT / f"srcval_{MODEL}_{lab}_heldout-{tgt.replace(':', '-')}_s{seed}_{PROTOCOL}.parquet", index=False)
             rec = {"model": MODEL, "protocol": PROTOCOL, "envs": envs, "dro_q": q.tolist() if PROTOCOL == "group_dro" else None,
                    "cuts": {k: float(v) for k, v in th.items()} if LAT else None, "label": lab, "target": tgt, "seed": seed, "n_train": len(tr), "n_val": len(va),
                    "n_test": len(test), "temperature": float(T), "seconds": round(time.time() - t0, 1),
