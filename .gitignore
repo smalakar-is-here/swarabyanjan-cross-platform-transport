@@ -64,3 +64,7 @@ experiments/kaggle/build/
 paper_scope/*.log
 paper_scope/*.fls
 paper_scope/
+
+# Kaggle orchestration (aliases only; no tokens)
+docs/scope/KAGGLE_ACCOUNT_REGISTRY.md
+docs/scope/ACCOUNT_USERNAME_MAP.json

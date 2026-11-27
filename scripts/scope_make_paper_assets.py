@@ -349,17 +349,18 @@ print("E14 macros appended")
 # ================================================================ benchmark, synthetic and anchor-proxy assets
 PNAME = {"majority": "majority", "source_only": "source only", "pooled_erm": "pooled ERM", "group_dro": "Group DRO",
          "group_balanced": "env.-balanced ERM", "iw_source": "IW (source)", "iw_pooled": "IW (pooled)",
-         "source_mlls": "source + MLLS prior", "source_oracle": "source + oracle prior", "in_domain": "in domain (ref.)"}
+         "source_mlls": "source + MLLS prior", "source_oracle": "source + oracle prior", "in_domain": "in domain (ref.)",
+         "latent_cuts": "regime cuts"}
 TGTS = ENVS + ["baitbuster:youtube"]
 TSHORT = {"banglaclick:news": "News", "banglaclick:facebook": "FB", "banglaclick:youtube": "YT-B",
           "banglaclick:twitter": "TW", "baitbuster:youtube": "YT-C"}
 TMAC = {"banglaclick:news": "News", "banglaclick:facebook": "Fb", "banglaclick:youtube": "Yt",
         "banglaclick:twitter": "Tw", "baitbuster:youtube": "C"}
-PMAC = {"source_only": "Src", "pooled_erm": "Pool", "group_dro": "Dro", "iw_source": "Iws", "iw_pooled": "Iwp"}
+PMAC = {"source_only": "Src", "pooled_erm": "Pool", "group_dro": "Dro", "iw_source": "Iws", "iw_pooled": "Iwp", "latent_cuts": "Lat"}
 LAB_TEX = {"r6": "$Y$", "aligned": r"$Y^\star$"}
 X = ""
 parts = [pd.read_csv(f) for f in [R / "E10/loeo_tfidf_summary.csv", R / "E16/shift_baselines_summary.csv",
-                                  R / "E10/loeo_transformer_summary.csv"] if f.exists()]
+                                  R / "E10/loeo_transformer_summary.csv", R / "E22/latent_cuts_summary.csv"] if f.exists()]
 if parts:
     bm = pd.concat(parts, ignore_index=True)
 
@@ -379,9 +380,9 @@ if parts:
         t = pd.DataFrame(rows)
         tex_table(t, name, caption, label, "ll" + "r" * (t.shape[1] - 2), wide=True)
 
-    bench_table("auroc", ["source_only", "pooled_erm", "group_dro", "iw_source", "iw_pooled", "in_domain"], "tab_loeo",
-                r"AUROC of models retrained leave-one-environment-out under the published label $Y$ (left block) and the aligned label $Y^\star$ (right block), mean over three seeds. Training excludes the held-out cell and every title that occurs in it. Prior corrections leave AUROC unchanged and are omitted. \emph{In domain} uses target labels (cluster-grouped cross-fitting) and is a reference, not a baseline. YT-B: BanglaClick YouTube; YT-C: BaitBuster YouTube.", "tab:loeo")
-    bench_table("nll", ["majority", "source_only", "source_mlls", "source_oracle", "pooled_erm", "group_dro", "iw_source", "iw_pooled"], "supp_tab_loeo_nll",
+    bench_table("auroc", ["source_only", "pooled_erm", "group_dro", "iw_source", "iw_pooled", "latent_cuts", "in_domain"], "tab_loeo",
+                r"AUROC of models retrained leave-one-environment-out under the published label $Y$ (left block) and the aligned label $Y^\star$ (right block), mean over three seeds. Training excludes the held-out cell and every title that occurs in it. Prior corrections leave AUROC unchanged and are omitted. \emph{Regime cuts}: the latent-intensity model of Section~\ref{sec:latent}. \emph{In domain} uses target labels (cluster-grouped cross-fitting) and is a reference, not a baseline. YT-B: BanglaClick YouTube; YT-C: BaitBuster YouTube.", "tab:loeo")
+    bench_table("nll", ["majority", "source_only", "source_mlls", "source_oracle", "pooled_erm", "group_dro", "iw_source", "iw_pooled", "latent_cuts"], "supp_tab_loeo_nll",
                 r"Log loss of the LOEO models (mean over three seeds). \emph{Source + MLLS prior}: source-only model with its prior moved to the MLLS estimate from unlabelled target scores. \emph{Oracle prior} uses the true target prevalence and is a reference.", "tab:s-loeo-nll")
     base5 = ["source_only", "pooled_erm", "group_dro", "iw_source", "iw_pooled"]
     tf = bm[bm.model == "tfidf_lr"].pivot_table(index=["label", "target"], columns="protocol", values="auroc")
@@ -398,14 +399,14 @@ if parts:
         X += nm("IwEssMin", f"{100 * e.min():.0f}") + nm("IwEssMax", f"{100 * e.max():.0f}")
     for tg in TGTS:
         for lab in ("r6", "aligned"):
-            for pr in base5:
+            for pr in base5 + ["latent_cuts"]:
                 v = bm[(bm.model == "tfidf_lr") & (bm.protocol == pr) & (bm.label == lab) & (bm.target == tg)].auroc
                 if len(v):
                     X += nm("Lo" + PMAC[pr] + ("Rsix" if lab == "r6" else "Al") + TMAC[tg], f"{v.iloc[0]:.3f}")
     for model, mt in [("banglabert", "Bbert"), ("xlmr", "Xlmr")]:
         for tg in TGTS:
             for lab in ("r6", "aligned"):
-                for pr in ("pooled_erm", "group_dro", "source_only"):
+                for pr in ("pooled_erm", "group_dro", "source_only", "latent_cuts"):
                     v = bm[(bm.model == model) & (bm.protocol == pr) & (bm.label == lab) & (bm.target == tg)].auroc
                     if len(v):
                         X += nm("Lo" + PMAC[pr] + ("Rsix" if lab == "r6" else "Al") + TMAC[tg] + mt, f"{v.iloc[0]:.3f}")
@@ -413,7 +414,7 @@ if parts:
 # ---- E17 forest plot of paired contrasts
 if (R / "E17/protocol_contrasts_cluster_bootstrap.csv").exists():
     ct = pd.read_csv(R / "E17/protocol_contrasts_cluster_bootstrap.csv")
-    a = ct[ct.metric == "auroc"]
+    a = ct[(ct.metric == "auroc") & (ct.reference == "source_only")]
     protos = [p for p in ["pooled_erm", "group_dro", "iw_source", "iw_pooled", "group_balanced"] if p in set(a.protocol)]
     combos = [(m, l) for m in ["tfidf_lr", "banglabert", "xlmr"] for l in ("r6", "aligned") if not a[(a.model == m) & (a.label == l)].empty]
     fig, axs = plt.subplots(1, len(combos), figsize=(7.16, 2.5), sharey=True, squeeze=False)
@@ -442,7 +443,7 @@ if (R / "E17/protocol_contrasts_cluster_bootstrap.csv").exists():
         h_, l_ = ax.get_legend_handles_labels(); hs += h_; ls_ += l_
     fig.legend(hs, ls_, loc="upper center", ncol=len(hs), frameon=False, fontsize=6.5, bbox_to_anchor=(0.5, 1.03))
     fig.tight_layout(rect=(0, 0, 1, 0.9)); save(fig, "fig7_benchmark")
-    A = (ct.metric == "auroc") & ct.p_holm.notna()  # Holm family only (references excluded)
+    A = (ct.metric == "auroc") & ct.p_holm.notna() & (ct.reference == "source_only")  # vs source-only; Holm family = all paired contrasts
     X += nm("ContrastsTotal", str(int(A.sum())))
     X += nm("ContrastsSigPos", str(int((A & (ct.p_holm < 0.05) & (ct["diff"] > 0)).sum())))
     X += nm("ContrastsSigNeg", str(int((A & (ct.p_holm < 0.05) & (ct["diff"] < 0)).sum())))
@@ -625,3 +626,202 @@ if (R / "INDEPENDENT_CHECK/independent_check.json").exists():
     Z += nm("IndDisagreeOne", f"{100 * ic['cut1']['disagreement']:.1f}")
     with open(PAPER / "numbers.tex", "a", encoding="utf-8") as fh:
         fh.write(Z)
+
+
+# ================================================================ E20 partial identification, E21 anchor design, E22 regime cut-points
+FAM = {"tfidf_lr": "Tfidf", "banglabert": "Bbert", "xlmr": "Xlmr"}
+CK = {"banglaclick:news": "News", "banglaclick:facebook": "Fb", "banglaclick:youtube": "Yt", "banglaclick:twitter": "Tw"}
+W = ""
+if (R / "E20/identified_sets_summary.csv").exists():
+    ids = pd.read_csv(R / "E20/identified_sets_summary.csv").set_index("env")
+    mc = pd.read_csv(R / "E20/m_check.csv"); vs = pd.read_csv(R / "E20/validation_summary.csv")
+    rx = pd.read_csv(R / "E20/relaxation_summary.csv"); bd = pd.read_csv(R / "E20/breakdown_vs_source_auroc.csv")
+    rows = []
+    for e in ENVS:
+        s = ids.loc[e]
+        rows.append({"Cell": ENAME[e], "AL": f"[{s.auroc_AL_lo:.2f}, {s.auroc_AL_hi:.2f}]",
+                     "AL+M": f"[{s.auroc_ALM_lo:.3f}, {s.auroc_ALM_hi:.3f}]", "AL+M, 95\\% CS": f"[{s.auroc_ALM_cs_lo:.3f}, {s.auroc_ALM_cs_hi:.3f}]",
+                     "Const.\\ link": f"{s.auroc_const:.3f}",
+                     "NLL, AL+M": f"[{s.nll_ALM_lo:.3f}, {s.nll_ALM_hi:.3f}]", "Brier, AL+M": f"[{s.brier_ALM_lo:.3f}, {s.brier_ALM_hi:.3f}]",
+                     "$\\pi^\\star$ [95\\% CS]": f"{s.prevalence_AL:.2f} [{s.prevalence_AL_lo:.2f}, {s.prevalence_AL_hi:.2f}]"})
+    src = ids.src_auroc.iloc[0]
+    tex_table(pd.DataFrame(rows), "tab_ident_sets",
+              "Identified sets for the source-construct risk $R^\\star_e$ of the anchor-blind TF-IDF source model on each regime-B cell, without target labels (Proposition~\\ref{prop:ident}). The first four numeric columns are AUROC. AL: level-link transport only; AL+M: adds within-level monotonicity in the score. Point sets are seed-averaged (3 seeds); CS: 95\\% confidence set from 300 bootstrap draws over anchor publisher clusters and target clusters (outer quantiles of the endpoints). \\emph{Const.\\ link}: labels $q_i=\\hat g(L_i)$, which attain the AL+M lower AUROC bound and the AL+M upper NLL and Brier bounds. Source test AUROC " + f3(src) + ", NLL " + f3(ids.src_nll.iloc[0]) + ". $\\pi^\\star$: source-construct prevalence, identified under AL.",
+              "tab:identsets", "lrrrrrrr", wide=True)
+    W += nm("IdSrcAuc", f3(src))
+    for e, k in CK.items():
+        s = ids.loc[e]
+        W += nm(f"IdAl{k}Lo", f"{s.auroc_AL_lo:.2f}") + nm(f"IdAl{k}Hi", f"{s.auroc_AL_hi:.2f}")
+        W += nm(f"IdAlm{k}Lo", f3(s.auroc_ALM_lo)) + nm(f"IdAlm{k}Hi", f3(s.auroc_ALM_hi)) + nm(f"IdAlmCs{k}Lo", f3(s.auroc_ALM_cs_lo))
+        W += nm(f"IdRelaxOne{k}", f3(rx[(rx.env == e) & (rx.metric == "auroc") & (rx.delta == 1)].lo_ALM.iloc[0]))
+        W += nm(f"IdPrev{k}", f"{s.prevalence_AL:.2f}")
+    W += nm("IdAlLoMin", f"{ids.auroc_AL_lo.min():.2f}") + nm("IdAlHiMax", f"{ids.auroc_AL_hi.max():.2f}")
+    W += nm("IdAlmLoMin", f"{ids.auroc_ALM_lo.min():.2f}") + nm("IdAlmLoMax", f"{ids.auroc_ALM_lo.max():.2f}")
+    W += nm("IdAlmCsLoMin", f"{ids.auroc_ALM_cs_lo.min():.2f}") + nm("IdAlmCsLoMax", f"{ids.auroc_ALM_cs_lo.max():.2f}")
+    W += nm("IdNllAlmHiMin", f"{ids.nll_ALM_hi.min():.2f}") + nm("IdNllAlmHiMax", f"{ids.nll_ALM_hi.max():.2f}")
+    W += nm("IdSrcNll", f3(ids.src_nll.iloc[0]))
+    W += nm("IdContainsSrc", str(int((bd.side == "contains").sum()))) + nm("IdContainsSrcN", str(len(bd)))
+    r1 = rx[(rx.metric == "auroc") & (rx.delta == 1)]
+    W += nm("IdRelaxOneMin", f3(r1.lo_ALM.min())) + nm("IdRelaxOneMax", f3(r1.lo_ALM.max()))
+    mcs = mc.groupby("scorer")[["within_level_auroc", "wl_auroc_lo", "wl_auroc_hi", "beta_hat", "beta_lo", "beta_hi"]].mean()
+    for m, k in FAM.items():
+        W += nm(f"MWl{k}", f"{mcs.loc[m, 'within_level_auroc']:.2f}") + nm(f"MWl{k}Lo", f"{mcs.loc[m, 'wl_auroc_lo']:.2f}") + nm(f"MWl{k}Hi", f"{mcs.loc[m, 'wl_auroc_hi']:.2f}")
+        W += nm(f"MBeta{k}", f"{mcs.loc[m, 'beta_hat']:.2f}") + nm(f"MBeta{k}Lo", f"{mcs.loc[m, 'beta_lo']:.2f}") + nm(f"MBeta{k}Hi", f"{mcs.loc[m, 'beta_hi']:.2f}")
+    W += nm("IdAnchors", f"{int(mc.n_anchors.iloc[0]):,}".replace(",", "{,}")) + nm("IdAnchorClusters", str(int(mc.n_clusters.iloc[0])))
+    W += nm("IdValFolds", str(int(vs.n_folds.iloc[0]))) + nm("IdValCovMin", f"{vs.coverage_ALM.min():.2f}")
+    W += nm("IdValCovHits", str(int(round(vs.coverage_ALM.min() * vs.n_folds.iloc[0]))))
+    va = vs[vs.metric == "auroc"].set_index("scorer")
+    W += nm("IdValWidthAlAuc", f"{va.width_AL.mean():.2f}") + nm("IdValWidthAlmAuc", f"{va.width_ALM.mean():.2f}")
+    W += nm("IdValConstGapMin", f"{va.truth_minus_const.min():.2f}") + nm("IdValConstGapMax", f"{va.truth_minus_const.max():.2f}")
+    # figure: identified sets (a) and relaxation of the link (b)
+    fig, axs = plt.subplots(1, 2, figsize=(W2, 2.3), gridspec_kw={"width_ratios": [1.25, 1]})
+    a = axs[0]
+    for j, e in enumerate(ENVS):
+        s = ids.loc[e]
+        a.plot([s.auroc_AL_lo, s.auroc_AL_hi], [j, j], color="#C9C9C9", lw=7, solid_capstyle="butt", label="AL" if j == 0 else None)
+        a.plot([s.auroc_ALM_lo, s.auroc_ALM_hi], [j, j], color=C_AL, lw=3.2, solid_capstyle="butt", label="AL + M" if j == 0 else None)
+        a.plot([s.auroc_ALM_cs_lo, s.auroc_ALM_lo], [j, j], color=C_AL, lw=0.8)
+        a.plot([s.auroc_ALM_cs_lo] * 2, [j - 0.18, j + 0.18], color=C_AL, lw=0.8, label="AL + M, 95% CS lower end" if j == 0 else None)
+    a.axvline(src, color=C_R6, ls="--", lw=0.9); a.text(src - 0.008, -0.62, "source test", color=C_R6, fontsize=6.5, ha="right")
+    a.axvline(0.5, color=C_GREY, ls=":", lw=0.6)
+    a.set_yticks(range(len(ENVS))); a.set_yticklabels([ENAME[e].replace(" (B)", "") for e in ENVS]); a.invert_yaxis()
+    a.set_ylim(len(ENVS) + 0.25, -0.9)
+    a.set_xlim(0.1, 1.0); a.set_xlabel(r"source-construct AUROC (against $Y_A$)")
+    a.set_title("(a) Identified sets, TF-IDF source model", loc="left")
+    a.legend(frameon=False, loc="lower left", fontsize=6.3, ncol=3, handlelength=1.6, columnspacing=1.0, borderaxespad=0.1)
+    a = axs[1]
+    colsE = {"banglaclick:news": C_SRC, "banglaclick:facebook": "#1F5F8B", "banglaclick:twitter": "#6A8F3A", "banglaclick:youtube": "#B4532A"}
+    for e in ENVS:
+        g = rx[(rx.env == e) & (rx.metric == "auroc")].sort_values("delta")
+        a.plot(g.delta, g.lo_ALM, "-o", ms=2.6, lw=1.0, color=colsE[e], label=ENAME[e].replace(" (B)", ""))
+    a.axhline(0.5, color=C_GREY, ls=":", lw=0.6)
+    a.set_xlabel(r"link misspecification $\delta$ (logit scale)"); a.set_ylabel("AL + M lower bound on AUROC")
+    a.set_title(r"(b) Relaxed link: $|\mathrm{logit}\,h-\mathrm{logit}\,g|\leq\delta$", loc="left")
+    a.legend(frameon=False, fontsize=6.3)
+    fig.tight_layout(); save(fig, "fig9_identified_sets")
+
+if (R / "E21/design_summary.csv").exists():
+    ds = pd.read_csv(R / "E21/design_summary.csv")
+    DES = {"srs": "SRS", "level_prop": "level-stratified", "level_x_score_neyman": "level $\\times$ score, Neyman"}
+    EST = {"sample_only": "sample only (HT)", "diff": "difference est.", "scl_refit": "SCL refit", "model_only": "link only (no labels)"}
+    rows = []
+    h = ds[ds.n == 100]
+    for d_, dn in DES.items():
+        for est, en in EST.items():
+            if est == "model_only" and d_ != "srs":
+                continue  # the label-free plug-in does not depend on the design
+            r = {"Design": dn if est != "model_only" else "(any)", "Estimator": en}
+            for m in ("tfidf_lr", "banglabert", "xlmr"):
+                v = h[(h.design == d_) & (h.estimator == est) & (h.scorer == m)].iloc[0]
+                mn = MNAME[m].replace(" LR", "")
+                r[mn + " RMSE"] = f3(v.auroc_rmse)
+                r[mn + " cov."] ="--" if pd.isna(v.auroc_ci_coverage) else f"{v.auroc_ci_coverage:.2f}"
+            rows.append(r)
+    tex_table(pd.DataFrame(rows), "tab_design",
+              "Anchor-audit designs on news anchors ($n=100$ labelled anchors per draw, " + str(int(ds.draws.iloc[0])) + " draws; Section~\\ref{sec:anchoraudit}). RMSE of the estimated source-construct AUROC against its value on the held-out half of the anchor clusters, and coverage (cov.) of the nominal 95\\% design-based interval. \\emph{Link only} uses the transported link and no new labels: an in-distribution reference with no design-based guarantee under shift. SCL refit: the score-conditional link refitted on the sample alone.",
+              "tab:design", "ll" + "r" * 6, wide=True)
+    for d_, k in (("srs", "Srs"), ("level_x_score_neyman", "Ney"), ("level_prop", "Lev")):
+        red = 1 - h[(h.design == d_) & (h.estimator == "diff")].set_index("scorer").auroc_rmse / h[(h.design == d_) & (h.estimator == "sample_only")].set_index("scorer").auroc_rmse
+        W += nm(f"DesRed{k}Min", f"{100 * red.min():.0f}") + nm(f"DesRed{k}Max", f"{100 * red.max():.0f}")
+    dh = h[h.estimator == "diff"]; sh = h[h.estimator == "sample_only"]; mh = h[h.estimator == "model_only"]
+    W += nm("DesDiffRmseMin", f"{dh.auroc_rmse.min():.3f}") + nm("DesDiffRmseMax", f"{dh.auroc_rmse.max():.3f}")
+    W += nm("DesSampleRmseMin", f"{sh.auroc_rmse.min():.3f}") + nm("DesSampleRmseMax", f"{sh.auroc_rmse.max():.3f}")
+    W += nm("DesModelRmseMin", f"{mh.auroc_rmse.min():.3f}") + nm("DesModelRmseMax", f"{mh.auroc_rmse.max():.3f}")
+    cv = ds[(ds.estimator == "diff") & (ds.n >= 100)].auroc_ci_coverage
+    W += nm("DesCovMin", f"{cv.min():.2f}") + nm("DesCovMax", f"{cv.max():.2f}")
+    c25 = ds[(ds.estimator == "diff") & (ds.n == 25)].auroc_ci_coverage
+    W += nm("DesCovSmallMin", f"{c25.min():.2f}") + nm("DesCovSmallMax", f"{c25.max():.2f}")
+    W += nm("DesDraws", str(int(ds.draws.iloc[0])))
+    # figure: RMSE and coverage against n (mean over the three scorers; band = scorer range)
+    fig, axs = plt.subplots(1, 2, figsize=(W2, 2.2))
+    sty = [("srs", "sample_only", C_GREY, "--", "SRS, sample only"), ("level_x_score_neyman", "sample_only", C_R6, "--", "Neyman, sample only"),
+           ("srs", "diff", "#6A8F3A", "-", "SRS, difference"), ("level_x_score_neyman", "diff", C_AL, "-", "Neyman, difference"),
+           ("srs", "model_only", C_SRC, ":", "link only (no labels)")]
+    for d_, est, c, ls, lab in sty:
+        q = ds[(ds.design == d_) & (ds.estimator == est)].groupby("n")
+        for ax, col in zip(axs, ("auroc_rmse", "auroc_ci_coverage")):
+            if est == "model_only" and col == "auroc_ci_coverage":
+                continue
+            mu, lo, hi = q[col].mean(), q[col].min(), q[col].max()
+            ax.fill_between(mu.index, lo, hi, color=c, alpha=0.12, lw=0)
+            ax.plot(mu.index, mu, ls=ls, marker="o", ms=2.4, lw=1.0, color=c, label=lab)
+    axs[0].set_xlabel("labelled anchors $n$"); axs[0].set_ylabel("AUROC RMSE"); axs[0].set_title("(a) Accuracy", loc="left")
+    axs[1].axhline(0.95, color=C_GREY, lw=0.6, ls=":"); axs[1].set_ylim(0.6, 1.0)
+    axs[1].set_xlabel("labelled anchors $n$"); axs[1].set_ylabel("coverage of 95% interval"); axs[1].set_title("(b) Interval coverage", loc="left")
+    axs[0].legend(frameon=False, fontsize=6.2)
+    fig.tight_layout(); save(fig, "fig10_design")
+
+if (R / "E22/cut_points.csv").exists():
+    cp = pd.read_csv(R / "E22/cut_points.csv").assign(model="tfidf_lr")
+    cp.loc[~cp.has_C, "tau_C"] = np.nan
+    if (R / "E22/cut_points_transformer.csv").exists():
+        cp = pd.concat([cp, pd.read_csv(R / "E22/cut_points_transformer.csv")], ignore_index=True)
+    hc = cp[cp.has_C]
+    W += nm("CutOrderShare", f"{100 * ((hc.theta_1 < hc.tau_C) & (hc.tau_C < hc.tau_A)).mean():.0f}") + nm("CutFits", str(len(hc)))
+    for m, k in FAM.items():
+        d = cp[cp.model == m]
+        if d.empty:
+            continue
+        W += nm(f"CutGapA{k}", f"{(d.tau_A - d.theta_2).mean():+.2f}")
+        W += nm(f"CutTauC{k}Min", f"{d.tau_C.min():+.2f}") + nm(f"CutTauC{k}Max", f"{d.tau_C.max():+.2f}")
+    fig, ax = plt.subplots(figsize=(W1, 1.9))
+    marks = [("theta_1", r"$\theta_1$ (B: $L\geq1$)", C_R6, "o"), ("tau_C", r"$\tau_C$ (BaitBuster)", "#6A8F3A", "D"),
+             ("tau_A", r"$\tau_A$ (BanglaBait)", C_SRC, "s"), ("theta_2", r"$\theta_2$ (B: $L\geq2$)", C_AL, "o")]
+    fams = [m for m in FAM if m in set(cp.model)]
+    for j, m in enumerate(fams):
+        d = cp[cp.model == m]
+        for k, (col, lab, c, mk) in enumerate(marks):
+            v = d[col].dropna()
+            ax.plot([v.min(), v.max()], [j, j], color=c, lw=0.8, alpha=0.7)
+            ax.plot(v.mean(), j, marker=mk, color=c, ms=4.5, ls="none", label=lab if j == 0 else None, mfc=c if col != "tau_C" else "white")
+    ax.set_yticks(range(len(fams))); ax.set_yticklabels([MNAME[m] for m in fams]); ax.invert_yaxis()
+    ax.set_xlabel("latent clickbait intensity (logit scale of each model)")
+    ax.set_ylim(len(fams) - 0.4, -1.3)
+    ax.legend(frameon=False, fontsize=6, ncol=2, loc="upper center", bbox_to_anchor=(0.5, 1.02), handletextpad=0.3, columnspacing=0.8)
+    save(fig, "fig11_cutpoints")
+
+if (R / "E17/protocol_contrasts_cluster_bootstrap.csv").exists():
+    ct = pd.read_csv(R / "E17/protocol_contrasts_cluster_bootstrap.csv")
+    lc = ct[(ct.protocol == "latent_cuts") & (ct.reference == "pooled_erm")]
+    if len(lc):
+        def cell(v):
+            return f"{v['diff']:+.3f}" + ("$^{*}$" if v.p_holm < 0.05 else "")
+        rows = []
+        for m in ("tfidf_lr", "banglabert", "xlmr"):
+            for lab in ("r6", "aligned"):
+                for met, mt in (("auroc", "AUROC"), ("nll", "NLL")):
+                    r = {"Model": MNAME[m], "Label": LAB_TEX[lab], "Metric": mt}
+                    for tg in TGTS:
+                        v = lc[(lc.model == m) & (lc.label == lab) & (lc.metric == met) & (lc.target == tg)]
+                        r[TSHORT[tg]] = cell(v.iloc[0]) if len(v) else "--"
+                    rows.append(r)
+        tex_table(pd.DataFrame(rows), "tab_latent_vs_pooled",
+                  "Regime cut-point model minus pooled ERM (the nested equal-cut model) under leave-one-environment-out training: paired differences over three seeds with publisher/channel-cluster bootstrap. $^{*}$Holm-adjusted $p<0.05$ in the family of all paired contrasts. Positive AUROC and negative NLL differences favour the cut-point model. Clusters: Facebook 26, YT-B 10, YT-C 13.",
+                  "tab:latent", "lll" + "r" * len(TGTS), wide=True)
+        for m, k in FAM.items():
+            for lab, lk in (("r6", "Rsix"), ("aligned", "Al")):
+                for tg in TGTS:
+                    for met, mk in (("auroc", "Auc"), ("nll", "Nll")):
+                        v = lc[(lc.model == m) & (lc.label == lab) & (lc.metric == met) & (lc.target == tg)]
+                        if len(v):
+                            W += nm(f"Lat{k}{lk}{TMAC[tg]}{mk}", f"{v['diff'].iloc[0]:+.3f}")
+        sig = lc[lc.p_holm < 0.05]
+        good = ((sig.metric == "auroc") & (sig["diff"] > 0)) | ((sig.metric != "auroc") & (sig["diff"] < 0))
+        W += nm("LatSigPos", str(int(good.sum()))) + nm("LatSigNeg", str(int((~good).sum()))) + nm("LatTotal", str(len(lc)))
+    ls_ = ct[(ct.protocol == "latent_cuts") & (ct.reference == "source_only") & (ct.metric == "auroc")]
+    W += nm("LatSrcSigPos", str(int(((ls_.p_holm < 0.05) & (ls_["diff"] > 0)).sum()))) + nm("LatSrcSigNeg", str(int(((ls_.p_holm < 0.05) & (ls_["diff"] < 0)).sum())))
+    W += nm("LatSrcTotal", str(len(ls_)))
+    so = ct[(ct.reference == "source_only") & ct.protocol.isin(["pooled_erm", "group_dro"]) & ct.model.isin(["banglabert", "xlmr"]) & (ct.metric == "auroc")]
+    W += nm("TrSrcSigAuc", str(int((so.p_holm < 0.05).sum()))) + nm("TrSrcTotalAuc", str(len(so)))
+    for m, k in (("banglabert", "Bbert"), ("xlmr", "Xlmr")):
+        for pr, pk in (("pooled_erm", "Pool"), ("group_dro", "Dro")):
+            for lab, lk in (("r6", "Rsix"), ("aligned", "Al")):
+                v = so[(so.model == m) & (so.protocol == pr) & (so.label == lab) & (so.target == "banglaclick:twitter")]
+                if len(v):
+                    W += nm(f"TrSrc{pk}{lk}Tw{k}", f"{v['diff'].iloc[0]:+.3f}")
+    vv = so[(so.model == "xlmr") & (so.protocol == "pooled_erm") & (so.label == "r6") & (so.target == "banglaclick:facebook")].iloc[0]
+    W += nm("TrSrcPoolRsixFbXlmr", f"{vv['diff']:+.3f}") + nm("TrSrcPoolRsixFbXlmrP", f"{vv.p_holm:.2f}")
+
+with open(PAPER / "numbers.tex", "a", encoding="utf-8") as fh:
+    fh.write(W)
+print("E20-E22 assets written;", W.count("newcommand"), "macros")
