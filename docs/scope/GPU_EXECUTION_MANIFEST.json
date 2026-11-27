@@ -73,11 +73,13 @@
    "mode": "full",
    "subdir": "scope-e10-w03-xlmr-groupdro-r6",
    "gpu": "GPU (type not logged)",
-   "status": "RUNNING",
+   "status": "COMPLETE",
    "description": "LOEO Group DRO, XLM-R, published label",
-   "runs_logged": 0,
-   "train_seconds_sum": 0,
-   "git_sha": []
+   "runs_logged": 15,
+   "train_seconds_sum": 9501.2,
+   "git_sha": [
+    "0871c09"
+   ]
   },
   {
    "experiment_id": "E10_w04",
@@ -99,7 +101,7 @@
    "mode": "full",
    "subdir": "scope-e10-w05-banglabert-sourceonly-r6",
    "gpu": "GPU (type not logged)",
-   "status": "QUEUED",
+   "status": "NOT_RUN_QUOTA (packaged for collaborators)",
    "description": "LOEO source-only, BanglaBERT, published label",
    "runs_logged": 0,
    "train_seconds_sum": 0,
@@ -112,7 +114,7 @@
    "mode": "full",
    "subdir": "scope-e10-w06-banglabert-sourceonly-aligned",
    "gpu": "GPU (type not logged)",
-   "status": "QUEUED",
+   "status": "NOT_RUN_QUOTA (packaged for collaborators)",
    "description": "LOEO source-only, BanglaBERT, aligned label",
    "runs_logged": 0,
    "train_seconds_sum": 0,
@@ -125,7 +127,7 @@
    "mode": "full",
    "subdir": "scope-e10-w07-xlmr-sourceonly-r6",
    "gpu": "GPU (type not logged)",
-   "status": "QUEUED",
+   "status": "NOT_RUN_QUOTA (packaged for collaborators)",
    "description": "LOEO source-only, XLM-R, published label",
    "runs_logged": 0,
    "train_seconds_sum": 0,
@@ -138,7 +140,7 @@
    "mode": "full",
    "subdir": "scope-e10-w08-xlmr-sourceonly-aligned",
    "gpu": "GPU (type not logged)",
-   "status": "QUEUED",
+   "status": "NOT_RUN_QUOTA (packaged for collaborators)",
    "description": "LOEO source-only, XLM-R, aligned label",
    "runs_logged": 0,
    "train_seconds_sum": 0,
