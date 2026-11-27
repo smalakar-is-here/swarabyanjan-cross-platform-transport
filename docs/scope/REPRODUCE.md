@@ -72,28 +72,26 @@ experiment IDs.
 Read `experiments/kaggle/WORKER_UNITS.md`. Build worker packages using
 the documented generator:
 
-``` powershell
-.\.venv-scope\Scripts\python.exe scripts\scope_make_worker_packages.py build
-```
+    .\.venv-scope\Scripts\python.exe scripts\scope_make_worker_packages.py build
 
-Each independently authorised team member launches their assigned unit
-from their own authenticated Kaggle session and only if platform terms
-permit. Do not share tokens, pool quotas or use multiple accounts
-contrary to platform rules.
+Dispatch across all delegated accounts:
 
-Typical commands, run by the authorised account owner:
+    $env:SCOPE_PRIVATE_DATA = "<workspace>\private_data\scope"
+    .\.venv-scope\Scripts\python.exe scripts\scope_multi_queue.py discover
+    .\.venv-scope\Scripts\python.exe scripts\scope_multi_queue.py queue w05 w07
 
-``` powershell
-kaggle kernels push -p experiments\kaggle\build\workers\<unit-folder>
-kaggle kernels status <authorised-owner>/<kernel-slug>
-kaggle kernels output <authorised-owner>/<kernel-slug> -p <local-output-folder>
-```
+The script reads tokens from the out-of-tree token file
+(`SCOPE_KAGGLE_TOKENS`), discovers each token's Kaggle username once
+via `security.OAuthService/IntrospectToken`, and caches the mapping
+in `docs/scope/ACCOUNT_USERNAME_MAP.json` (Git-ignored). It then
+dispatches every queued unit to the account with the most remaining
+GPU quota and a free slot, and polls each kernel under its owning
+account's credentials.
 
-Do not put usernames or credentials in the shared registry. Record
-account aliases only. The data holder validates and imports returned
-outputs into the canonical private workspace, verifies hashes, scores
-them with the same metric code and updates
-`docs/scope/EXPERIMENT_REGISTRY.csv`.
+The data holder validates and imports returned outputs into the
+canonical private workspace, verifies hashes, scores them with the
+same metric code, and updates `docs/scope/EXPERIMENT_REGISTRY.csv`
+recording the account alias.
 
 ## 6. Scoring, assets and tests
 

@@ -148,5 +148,77 @@
    "train_seconds_sum": 0,
    "git_sha": []
   }
- ]
+ ],
+ "planned_allocation": {
+  "note": "Accounts delegated to the coordinator for concurrent unit dispatch. Aliases only; usernames and tokens are never stored in this file. See docs/scope/KAGGLE_ACCOUNT_REGISTRY.md (Git-ignored) for the alias-to-owner map. This block records intent, not execution; `accounts` above records actual kernel runs.",
+  "units": [
+   "w05",
+   "w07"
+  ],
+  "accounts": [
+   {
+    "alias": "Account02",
+    "cleared_units": [
+     "w05",
+     "w07"
+    ]
+   },
+   {
+    "alias": "Account03",
+    "cleared_units": [
+     "w05",
+     "w07"
+    ]
+   },
+   {
+    "alias": "Account04",
+    "cleared_units": [
+     "w05",
+     "w07"
+    ]
+   },
+   {
+    "alias": "Account05",
+    "cleared_units": [
+     "w05",
+     "w07"
+    ]
+   },
+   {
+    "alias": "Account06",
+    "cleared_units": [
+     "w05",
+     "w07"
+    ]
+   },
+   {
+    "alias": "Account07",
+    "cleared_units": [
+     "w05",
+     "w07"
+    ]
+   },
+   {
+    "alias": "Account08",
+    "cleared_units": [
+     "w05",
+     "w07"
+    ]
+   },
+   {
+    "alias": "Account09",
+    "cleared_units": [
+     "w05",
+     "w07"
+    ]
+   },
+   {
+    "alias": "Account10",
+    "cleared_units": [
+     "w05",
+     "w07"
+    ]
+   }
+  ]
+ }
 }

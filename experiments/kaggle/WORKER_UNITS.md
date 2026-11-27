@@ -27,36 +27,34 @@ every other non-source cell, used by E19 (score-conditional linking). Return the
 
 ## Prerequisites (once per team member)
 
-1. Your own Kaggle account with the API set up on your own machine (`kaggle config view` shows your username).
-2. Read access to the private dataset `scope-training-pool-v1`. It holds restricted third-party text, so the
-   data holder shares it only with team members covered by the dataset licences. It must stay private.
+1. Your own Kaggle account with an API token. The token is delegated
+   to the coordinator via the out-of-tree token file (never stored in
+   this repository). Team members are listed in the coordinator's
+   scheduling registry.
+2. Read access to the private dataset `scope-training-pool-v1`, shared
+   by the data holder. It holds restricted third-party text, so it
+   stays private and is shared only with team members covered by the
+   dataset licences.
 
 ## Launch a unit
 
-From the repository root, on your own machine:
+Units are dispatched by the coordinator via `scripts/scope_multi_queue.py`.
+From the repository root:
 
-```
-python scripts/scope_make_worker_packages.py build
-```
+    python scripts/scope_multi_queue.py discover
+    python scripts/scope_multi_queue.py queue w05 w07
 
-Open `experiments/kaggle/build/workers/<unit folder>/kernel-metadata.json`. Replace `OWNER` with your Kaggle
-username and `DATASET_OWNER` with the username that shares the dataset. Then run:
+The coordinator builds each unit's kernel folder under the target
+account's credentials, sets the correct `dataset_sources` entry
+(`<data-holder>/scope-training-pool-v1`), pushes the kernel, polls
+`kaggle kernels status` on each account, downloads completed outputs
+to `$SCOPE_PRIVATE_DATA/kaggle_out/full/<model>/<slug>/`, and appends
+one line per event to `$SCOPE_PRIVATE_DATA/kaggle_out/multi_queue.jsonl`.
 
-```
-kaggle kernels push -p experiments/kaggle/build/workers/<unit folder>
-kaggle kernels status <your username>/<unit folder>
-```
-
-When the status is complete:
-
-```
-kaggle kernels output <your username>/<unit folder> -p <output folder>
-```
-
-Send the `pred_*.parquet` and `runlog_*.json` files to the data holder. They go into
-`$SCOPE_PRIVATE_DATA/kaggle_out/full/<model>/`, and `python -m scope.run E10T` scores every unit with the
-same metric code. Record the unit, the kernel slug and the account alias (not the username) in
-`docs/scope/EXPERIMENT_REGISTRY.csv`.
+The units running today are w05 and w07 only. Every completed run is
+scored by `python -m scope.run E10T` with the same metric code as
+every other method; the registry entry records the account alias
+(never username, never token).
 
 ## Group DRO implementation (audited)
 
