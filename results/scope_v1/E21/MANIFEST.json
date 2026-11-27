@@ -1,7 +1,7 @@
 {
  "experiment": "E21",
  "scope_version": "1.0.0",
- "wall_seconds": 74.5,
+ "wall_seconds": 304.5,
  "config_sha256": "22053e3efd0c674c5db8aa24a4855b991b235dbae24125e161d11874d12aa2a4",
  "python": "3.13.3",
  "platform": "Windows-11-10.0.26300-SP0",
@@ -16,7 +16,9 @@
   "design_summary.csv"
  ],
  "scorers": [
-  "tfidf_lr"
+  "banglabert",
+  "tfidf_lr",
+  "xlmr"
  ],
  "population": "news anchors of a random half of publisher clusters per draw; working link = flexible SCL fitted on the other half",
  "draws_per_seed": 300,
