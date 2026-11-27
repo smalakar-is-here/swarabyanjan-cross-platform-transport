@@ -24,6 +24,9 @@ TEMPLATE = ROOT / "experiments/kaggle/scope_loeo_transformer/run_template.py"
 BUILD = ROOT / "experiments/kaggle/build/workers"
 UNITS = {f"w{i + 1:02d}": dict(model=m, protocol=p, label=l) for i, (m, p, l) in enumerate(
     [(m, p, l) for p in ("group_dro", "source_only") for m in ("banglabert", "xlmr") for l in ("r6", "aligned")])}
+# E22 regime cut-point model; one model per (target, seed) writes predictions under both label definitions
+UNITS.update({"w09": dict(model="banglabert", protocol="latent_cuts", label="r6"),
+              "w10": dict(model="xlmr", protocol="latent_cuts", label="r6")})
 
 
 def build(unit, mode="full", owner="OWNER", dataset_owner="DATASET_OWNER", gpu=True, protocol=None):

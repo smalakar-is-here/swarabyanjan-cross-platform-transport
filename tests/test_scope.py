@@ -195,3 +195,23 @@ def test_holm_and_paired_bootstrap_identity():
     rng = np.random.default_rng(0); y = (rng.random(300) < .4).astype(float); p = rng.random(300)
     r = compare.cell({"source_only": [p], "same": [p.copy()]}, y, np.repeat(np.arange(30), 10), "source_only", 50, rng)
     assert np.allclose(r["diff"], 0) and np.allclose(r.ci_low, 0) and np.allclose(r.ci_high, 0)
+
+
+def test_template_latent_loss_matches_cpu_latent_model():
+    """GPU latent_cuts loss (3 levels) == scope.latent likelihood with theta_3 -> +inf, lam = 0."""
+    import numpy as np, pytest
+    torch = pytest.importorskip("torch")
+    from pathlib import Path
+    from scope import latent
+    src = (Path(__file__).resolve().parents[1] / "experiments/kaggle/scope_loeo_transformer/run_template.py").read_text(encoding="utf-8")
+    ns = {"torch": torch, "PROTOCOL": "latent_cuts", "DRO_ETA": 0.01}
+    exec(src[src.index("# OBJECTIVE-BEGIN"):src.index("# OBJECTIVE-END")], ns)
+    rng = np.random.default_rng(0); n = 200
+    f = rng.normal(0, 2, n); reg = rng.choice([0, 1, 2], n); y = np.where(reg == 1, rng.integers(0, 3, n), rng.integers(0, 2, n)).astype(float)
+    tA, tC, t1, lg = 0.7, -0.4, -1.1, 0.3
+    cuts = torch.tensor([tA, tC, t1, lg], dtype=torch.float64, requires_grad=True)
+    gpu = ns["latent_loss"](torch.tensor(f), torch.tensor(reg), torch.tensor(y), cuts).sum()
+    cpu, _ = latent.nll_grad(np.r_[1.0, tA, tC, t1, lg, 30.0], f[:, None], reg, y, lam=0.0)
+    assert abs(gpu.item() - cpu) < 1e-6
+    gpu.backward()
+    assert torch.isfinite(cuts.grad).all() and cuts.grad.abs().sum() > 0

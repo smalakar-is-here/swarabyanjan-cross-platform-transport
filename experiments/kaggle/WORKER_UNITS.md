@@ -79,3 +79,17 @@ Online Group DRO over training environments (Sagawa et al., 2020), step size 0.0
   max length 128). Sagawa et al. pair Group DRO with strong ℓ2 regularisation. The R6 lock is kept so
   that protocols differ only in their objective, and this is a stated limitation.
 - The final probe output records the environment weights `dro_q` per run, so the weights can be inspected.
+
+## E22 units: regime cut-point model (`latent_cuts`)
+
+| Unit | Model | Protocol | Labels written |
+|---|---|---|---|
+| w09 | BanglaBERT | latent_cuts | r6 and aligned (one model per target and seed) |
+| w10 | XLM-R | latent_cuts | r6 and aligned (one model per target and seed) |
+
+The objective (`latent_loss`, between the OBJECTIVE markers of `run_template.py`) is the E22 likelihood with
+BanglaClick levels 0, 1, 2+ (= y_r6 + y_al; level 3 is merged because the uploaded pool carries only the two
+binarisations). It is tested against `scope.latent` (`tests/test_scope.py::test_template_latent_loss_matches_cpu_latent_model`).
+Cut-points have their own Adam optimiser (lr 1e-2) and are unscaled from the AMP loss scale before each step.
+The fitted cuts are recorded per run in `runlog_<model>_latent_cuts.json`. Run a CPU probe first:
+`SCOPE_DATASET_OWNER=smalakarishere python scripts/scope_make_worker_packages.py probe w09 <user>`.

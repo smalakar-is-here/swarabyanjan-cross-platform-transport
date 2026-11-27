@@ -357,6 +357,10 @@ def E17():
         res = compare.cell(preds, pool.loc[ref_ids, ycol].to_numpy(), pool.loc[ref_ids, "cluster_id"].to_numpy(),
                            ref, 1000, rng)
         res.insert(0, "target", tgt); res.insert(0, "label", lab); res.insert(0, "model", model); out.append(res)
+        if {"latent_cuts", "pooled_erm"} <= set(preds):  # E22 vs the model it nests (equal cuts)
+            r2 = compare.cell({k: preds[k] for k in ("pooled_erm", "latent_cuts")}, pool.loc[ref_ids, ycol].to_numpy(),
+                              pool.loc[ref_ids, "cluster_id"].to_numpy(), "pooled_erm", 1000, rng)
+            r2.insert(0, "target", tgt); r2.insert(0, "label", lab); r2.insert(0, "model", model); out.append(r2)
     res = pd.concat(out, ignore_index=True)
     # Holm family: baseline contrasts within a metric. in_domain and source_oracle use target labels and are
     # references, so they are excluded from the family; their p_holm is left empty.

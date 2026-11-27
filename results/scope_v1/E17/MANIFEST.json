@@ -1,7 +1,7 @@
 {
  "experiment": "E17",
  "scope_version": "1.0.0",
- "wall_seconds": 204.2,
+ "wall_seconds": 268.1,
  "config_sha256": "22053e3efd0c674c5db8aa24a4855b991b235dbae24125e161d11874d12aa2a4",
  "python": "3.13.3",
  "platform": "Windows-11-10.0.26300-SP0",
@@ -18,5 +18,5 @@
  "draws": 1000,
  "reference": "source_only where available, else pooled_erm",
  "multiplicity": "Holm within metric over baseline contrasts (in_domain, source_oracle excluded), on Wald p from bootstrap SE",
- "prediction_sets": 370
+ "prediction_sets": 430
 }
