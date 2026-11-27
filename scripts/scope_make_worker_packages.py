@@ -16,7 +16,7 @@ Usage:
   python scripts/scope_make_worker_packages.py probe <unit> <user> [protocol]   # CPU probe (tiny subset, no GPU quota) on the local login
   python scripts/scope_make_worker_packages.py push  <unit> <user>   # full GPU run of one unit on the local login
 """
-import json, subprocess, sys
+import json, os, subprocess, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -52,6 +52,10 @@ if __name__ == "__main__":
         (BUILD / "UNITS.json").write_text(json.dumps(UNITS, indent=1))
     else:
         unit, user = sys.argv[2:4]; proto = sys.argv[4] if len(sys.argv) > 4 else None  # protocol override, for A/B probes
-        d = build(unit, mode="probe" if cmd == "probe" else "full", owner=user, dataset_owner=user, gpu=(cmd == "push"), protocol=proto)
+        # The dataset lives on the data holder's account, not necessarily the pushing account.
+        ds_owner = os.environ.get("SCOPE_DATASET_OWNER") or user
+        if ds_owner == user and "SCOPE_DATASET_OWNER" not in os.environ:
+            print(f"note: SCOPE_DATASET_OWNER unset; assuming {user} owns scope-training-pool-v1", file=sys.stderr)
+        d = build(unit, mode="probe" if cmd == "probe" else "full", owner=user, dataset_owner=ds_owner, gpu=(cmd == "push"), protocol=proto)
         r = subprocess.run(["kaggle", "kernels", "push", "-p", str(d)], capture_output=True, text=True)
         print(d.name, r.stdout[-400:], r.stderr[-400:])

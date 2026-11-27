@@ -42,7 +42,14 @@ Units are dispatched by the coordinator via `scripts/scope_multi_queue.py`.
 From the repository root:
 
     python scripts/scope_multi_queue.py discover
+    python scripts/scope_multi_queue.py check          # dataset access per account; no quota
     python scripts/scope_multi_queue.py queue w05 w07
+
+Run `check` before spending GPU quota. A share made in the Kaggle UI
+must name the account's Kaggle username. An account showing `NO_ACCESS`
+gets a kernel with an empty `/kaggle/input` even though the push
+succeeds. `push()` skips such accounts, and the kernel itself now stops
+with `POOL_NOT_FOUND` and a listing of what was mounted.
 
 The coordinator builds each unit's kernel folder under the target
 account's credentials, sets the correct `dataset_sources` entry

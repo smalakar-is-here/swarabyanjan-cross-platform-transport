@@ -29,7 +29,23 @@ SEEDS = _sel('__SEEDS__', [42, 137, 2718])
 TARGETS = _sel('__TARGETS__', TARGETS)
 LABELS = _sel('__LABELS__', ["r6", "aligned"])
 OUT = Path("/kaggle/working/results"); OUT.mkdir(parents=True, exist_ok=True)
-pool = pd.read_parquet(next(Path("/kaggle/input").rglob("scope_training_pool_v1.parquet")))
+def _find_pool(root=Path("/kaggle/input")):
+    """Locate the training pool. Exact name first; else the single *.parquet whose name contains
+    'training_pool' (dataset file renamed on upload). An empty /kaggle/input means the kernel's account
+    cannot read the private dataset (Kaggle accepts the push but mounts nothing): fail fast, listing what
+    is mounted, before any model download or GPU time."""
+    hits = sorted(root.rglob("scope_training_pool_v1.parquet"))
+    if not hits:
+        hits = sorted(p for p in root.rglob("*.parquet") if "training_pool" in p.name.replace("-", "_"))
+    if len(hits) != 1:
+        mounted = sorted(str(p) for p in root.rglob("*"))[:50]
+        raise SystemExit(f"POOL_NOT_FOUND: {len(hits)} candidate(s) {hits}; /kaggle/input contains {mounted or 'NOTHING'}. "
+                         "Empty => this account has no read access to the dataset in kernel-metadata dataset_sources.")
+    print("pool", hits[0], flush=True)
+    return hits[0]
+
+
+pool = pd.read_parquet(_find_pool())
 dev = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print("device", dev, torch.cuda.get_device_name(0) if dev.type == "cuda" else "", flush=True)
 tok = AutoTokenizer.from_pretrained(REPO[0], revision=REPO[1])
