@@ -1,0 +1,19 @@
+{
+  "experiment": "E27-design",
+  "created": "2026-11-28T12:54:38",
+  "seed": 20261128,
+  "n_items": 450,
+  "blocks": {
+    "news_nonanchor": 100,
+    "twitter": 100,
+    "facebook": 100,
+    "youtube": 100,
+    "gold": 50
+  },
+  "private_key_sha256": "8660a9e64c7053e172e31c1661e0e513cb69d0c56b8b93f51d8165156f60e603",
+  "sheets_sha256": {
+    "sheet_annotator_1.csv": "57704fb844bf3e4c19c80b8a31f74c377dd49de063b029980a85eeb697111ab5",
+    "sheet_annotator_2.csv": "0a4d3fd68b49b7cdfdab4f0771a3270c76132e8a9cec71d3d3cdc6e6b6586fd3",
+    "sheet_annotator_3.csv": "cee3bfb6ceeac49a0c9e1a612ecf3363517f0b3214b1a029a35d4fc089c82be3"
+  }
+}

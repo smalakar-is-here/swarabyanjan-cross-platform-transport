@@ -136,10 +136,18 @@ for lab in LABELS:
                 continue
             t0 = time.time(); seed_all(seed)
             test = pool[pool.env == tgt]
-            base = pool[pool.env == "banglabait:news"] if PROTOCOL == "source_only" else pool[pool.env != tgt]
+            if PROTOCOL == "same_regime" and not tgt.startswith("banglaclick"):
+                continue  # E28 ablation: defined for regime-B targets only (as E23)
+            base = (pool[pool.env == "banglabait:news"] if PROTOCOL == "source_only" else
+                    pool[(pool.env != tgt) & pool.env.str.startswith("banglaclick")] if PROTOCOL == "same_regime" else pool[pool.env != tgt])
             train = base[~base.normalized_title_sha256.isin(test.normalized_title_sha256)]
             fit_i, val_i = next(GroupShuffleSplit(1, test_size=0.1, random_state=seed).split(train, groups=train.cluster_id))
             tr, va = train.iloc[fit_i], train.iloc[val_i]
+            regime = lambda d: d.env.str.split(":").str[0].map({"banglabait": 0, "banglaclick": 1, "baitbuster": 2}).to_numpy()
+            n_anchor_removed = 0
+            if PROTOCOL == "latent_noanchor":  # E28 ablation (as E23): drop every title labelled by two regimes in training
+                h_ = tr.assign(_r=regime(tr)).groupby("normalized_title_sha256")._r.nunique(); multi = set(h_[h_ > 1].index)
+                n_anchor_removed = int(tr.normalized_title_sha256.isin(multi).sum()); tr = tr[~tr.normalized_title_sha256.isin(multi)]
             if MODE != "full":
                 tr = tr.sample(400, random_state=seed); va = va.sample(200, random_state=seed); test = test.sample(300, random_state=seed)
             model = AutoModelForSequenceClassification.from_pretrained(REPO[0], revision=REPO[1], num_labels=2).to(dev)
@@ -150,9 +158,13 @@ for lab in LABELS:
             rng = np.random.default_rng(seed); X = tr.title.tolist(); Y = tr[ycol].to_numpy().astype(int)
             envs = sorted(tr.env.unique()); G = torch.tensor(tr.env.map({e: i for i, e in enumerate(envs)}).to_numpy(), device=dev)
             q = torch.ones(len(envs), device=dev) / len(envs)
-            LAT = PROTOCOL == "latent_cuts"
+            LAT = PROTOCOL in ("latent_cuts", "latent_noanchor"); RB = PROTOCOL == "regime_bias"
+            if RB:  # E28 ablation (as E23 regime_bias): binary labels at the evaluated cut, one intercept per regime
+                ybin = lambda d: np.where(regime(d) == 1, d[ycol].to_numpy(), d.y_r6.to_numpy()).astype(float)
+                R = torch.tensor(regime(tr), device=dev); YB = torch.tensor(ybin(tr), dtype=torch.float32, device=dev)
+                bias = torch.nn.Parameter(torch.zeros(3, device=dev)); copt = torch.optim.Adam([bias], lr=1e-2)
+                has_C = bool((regime(tr) == 2).any())
             if LAT:
-                regime = lambda d: d.env.str.split(":").str[0].map({"banglabait": 0, "banglaclick": 1, "baitbuster": 2}).to_numpy()
                 level = lambda d: np.where(regime(d) == 1, d.y_r6.to_numpy() + d.y_al.to_numpy(), d.y_r6.to_numpy())
                 R = torch.tensor(regime(tr), device=dev); K = torch.tensor(level(tr), dtype=torch.float32, device=dev)
                 cuts = torch.nn.Parameter(torch.tensor([0.0, 0.0, -1.0, 0.0], device=dev))
@@ -166,13 +178,17 @@ for lab in LABELS:
                     if LAT:
                         jj = torch.as_tensor(j, device=dev)
                         loss = latent_loss(lo[:, 1] - lo[:, 0], R[jj], K[jj], cuts).mean(); copt.zero_grad()
+                    elif RB:
+                        jj = torch.as_tensor(j, device=dev)
+                        loss = torch.nn.functional.binary_cross_entropy_with_logits(lo[:, 1] - lo[:, 0] - bias[R[jj]], YB[jj]); copt.zero_grad()
                     else:
                         lv = torch.nn.functional.cross_entropy(lo, yb, reduction="none")
                         loss, q = objective(lv, gb, q, len(envs))
                     opt.zero_grad(); scaler.scale(loss).backward(); scaler.unscale_(opt)
-                    if LAT:  # cuts are not in opt, so unscale_ did not touch them; skip the step on overflow like scaler.step
-                        cuts.grad.div_(scaler.get_scale())
-                        if torch.isfinite(cuts.grad).all():
+                    if LAT or RB:  # cuts/bias are not in opt, so unscale_ did not touch them; skip the step on overflow like scaler.step
+                        extra_p = cuts if LAT else bias
+                        extra_p.grad.div_(scaler.get_scale())
+                        if torch.isfinite(extra_p.grad).all():
                             copt.step()
                     torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0); scaler.step(opt); scaler.update(); sch.step()
             if LAT:
@@ -185,7 +201,14 @@ for lab in LABELS:
                     T = fit_T(zv, np.where(rv == 1, (kv >= tb).astype(float), kv))
                     z = zt - th[con]
                     pd.DataFrame({"row_id": test.row_id.to_numpy(), "logit": z, "temperature": T, "p_calibrated": 1 / (1 + np.exp(-z / T))}).to_parquet(
-                        OUT / f"pred_{MODEL}_{lab2}_{tgt.replace(':', '-')}_s{seed}_latent_cuts.parquet", index=False)
+                        OUT / f"pred_{MODEL}_{lab2}_{tgt.replace(':', '-')}_s{seed}_{PROTOCOL}.parquet", index=False)
+            elif RB:
+                b_ = bias.detach().cpu().numpy(); treg = int(regime(test)[0]); rv = regime(va)
+                T = fit_T(logits(model, va.title.tolist()) - b_[rv], ybin(va))
+                z = logits(model, test.title.tolist()) - b_[treg]
+                pd.DataFrame({"row_id": test.row_id.to_numpy(), "logit": z, "temperature": T,
+                              "p_calibrated": 1 / (1 + np.exp(-z / T))}).to_parquet(fn, index=False)
+                th = {"bias_A": b_[0], "bias_B": b_[1], "bias_C": b_[2], "C_identified": float(has_C)}
             else:
                 T = fit_T(logits(model, va.title.tolist()), va[ycol].to_numpy())
                 z = logits(model, test.title.tolist())
@@ -207,7 +230,7 @@ for lab in LABELS:
                               "p_calibrated": 1 / (1 + np.exp(-zv_ / T))}).to_parquet(
                     OUT / f"srcval_{MODEL}_{lab}_heldout-{tgt.replace(':', '-')}_s{seed}_{PROTOCOL}.parquet", index=False)
             rec = {"model": MODEL, "protocol": PROTOCOL, "envs": envs, "dro_q": q.tolist() if PROTOCOL == "group_dro" else None,
-                   "cuts": {k: float(v) for k, v in th.items()} if LAT else None, "label": lab, "target": tgt, "seed": seed, "n_train": len(tr), "n_val": len(va),
+                   "cuts": {k: float(v) for k, v in th.items()} if (LAT or RB) else None, "anchors_removed": n_anchor_removed, "label": lab, "target": tgt, "seed": seed, "n_train": len(tr), "n_val": len(va),
                    "n_test": len(test), "temperature": float(T), "seconds": round(time.time() - t0, 1),
                    "repo": REPO[0], "revision": REPO[1], "epochs": REPO[2], "git_sha": GIT_SHA, "mode": MODE}
             log.append(rec); print(json.dumps(rec), flush=True)

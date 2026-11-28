@@ -93,3 +93,17 @@ binarisations). It is tested against `scope.latent` (`tests/test_scope.py::test_
 Cut-points have their own Adam optimiser (lr 1e-2) and are unscaled from the AMP loss scale before each step.
 The fitted cuts are recorded per run in `runlog_<model>_latent_cuts.json`. Run a CPU probe first:
 `SCOPE_DATASET_OWNER=smalakarishere python scripts/scope_make_worker_packages.py probe w09 <user>`.
+
+## E28 units: transformer ablations of the regime cut-point model (as E23)
+
+| Units | Model | Protocol | Labels |
+|---|---|---|---|
+| w13 / w18 | BanglaBERT / XLM-R | latent_noanchor (titles labelled by two regimes removed from training) | both, from one model |
+| w14-w15 / w19-w20 | BanglaBERT / XLM-R | regime_bias (binary labels, one intercept per regime) | r6, aligned |
+| w16-w17 / w21-w22 | BanglaBERT / XLM-R | same_regime (BanglaClick cells only; regime-B targets) | r6, aligned |
+
+## E29 units: seeds 31415 and 65537 for the main protocols (five seeds in total)
+
+w23-w29 (BanglaBERT) and w30-w36 (XLM-R): pooled_erm, group_dro, source_only (r6 and aligned) and latent_cuts.
+Expected GPU time: about 1 h per BanglaBERT and 2.6 h per XLM-R unit for E28; two thirds of that for E29.
+Local smoke test of every protocol: `python tests/smoke_template_protocols.py <pool.parquet> <protocols...>`.

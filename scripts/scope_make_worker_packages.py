@@ -31,6 +31,15 @@ UNITS.update({"w09": dict(model="banglabert", protocol="latent_cuts", label="r6"
 # fine-tuning (C33) means its xcell_* files must equal those of w05/w07, which checks the rerun.
 UNITS.update({"w11": dict(model="banglabert", protocol="source_only", label="r6", targets=["banglaclick:news"]),
               "w12": dict(model="xlmr", protocol="source_only", label="r6", targets=["banglaclick:news"])})
+# E28 transformer ablations of the regime cut-point model (as E23 for TF-IDF): seeds 42/137/2718, all targets.
+# latent_noanchor writes both label definitions from one model (like latent_cuts); the others are one unit per label.
+_E28 = [("latent_noanchor", "r6")] + [(p, l) for p in ("regime_bias", "same_regime") for l in ("r6", "aligned")]
+UNITS.update({f"w{13 + i:02d}": dict(model=m, protocol=p, label=l) for i, (m, (p, l)) in enumerate(
+    [(m, pl) for m in ("banglabert", "xlmr") for pl in _E28])})
+# E29 two additional seeds (31415, 65537) for the main transformer protocols, so transformer inference uses five seeds.
+_E29 = [(p, l) for p in ("pooled_erm", "group_dro", "source_only") for l in ("r6", "aligned")] + [("latent_cuts", "r6")]
+UNITS.update({f"w{23 + i:02d}": dict(model=m, protocol=p, label=l, seeds=[31415, 65537]) for i, (m, (p, l)) in enumerate(
+    [(m, pl) for m in ("banglabert", "xlmr") for pl in _E29])})
 
 
 def build(unit, mode="full", owner="OWNER", dataset_owner="DATASET_OWNER", gpu=True, protocol=None):
@@ -38,9 +47,10 @@ def build(unit, mode="full", owner="OWNER", dataset_owner="DATASET_OWNER", gpu=T
     sha = subprocess.run(["git", "-C", str(ROOT), "rev-parse", "--short", "HEAD"], capture_output=True, text=True).stdout.strip() or "uncommitted"
     src = TEMPLATE.read_text(encoding="utf-8")
     for k, v in {"__MODEL__": u["model"], "__MODE__": mode, "__GIT_SHA__": sha, "__PROTOCOL__": u["protocol"],
-                 "__LABELS__": json.dumps([u["label"]]), "__TARGETS__": json.dumps(u.get("targets", [])), "__SEEDS__": "[]"}.items():
+                 "__LABELS__": json.dumps([u["label"]]), "__TARGETS__": json.dumps(u.get("targets", [])), "__SEEDS__": json.dumps(u.get("seeds", []))}.items():
         src = src.replace(k, v)
-    slug = f"scope-e10-{unit}-{u['model']}-{u['protocol'].replace('_', '')}-{u['label']}" + ("" if mode == "full" else "-probe")
+    slug = (f"scope-e10-{unit}-{u['model']}-{u['protocol'].replace('_', '')}-{u['label']}" + ("-5seed" if u.get("seeds") else "")
+            + ("" if mode == "full" else "-probe"))
     d = BUILD / slug; d.mkdir(parents=True, exist_ok=True)
     (d / "run.py").write_text(src, encoding="utf-8")
     (d / "kernel-metadata.json").write_text(json.dumps({

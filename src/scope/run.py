@@ -268,6 +268,59 @@ def E4(exp="E4", aligned="level"):
                          "bootstrap_note": "publisher/channel clusters resampled within each target cell; seed-averaged; source risk held fixed"})
 
 
+def E27():
+    """Source-guideline human audit (docs/scope/ANNOTATION_PROTOCOL.md). Runs only when all returned sheets exist."""
+    from . import e27, e19, linking
+    import glob, os
+    t0 = time.time(); ann = paths.private_root() / "annotation"
+    key = pd.read_csv(ann / "AUDIT_KEY_PRIVATE.csv")
+    files = sorted(glob.glob(str(ann / "returned" / "sheet_annotator_*.csv")))
+    if len(files) < 3:
+        raise SystemExit(f"E27: {len(files)} of 3 returned sheets present in {ann / 'returned'}; nothing to analyse yet.")
+    sheets = [pd.read_csv(f, encoding="utf-8-sig") for f in files]
+    m = e27.majority(sheets)
+    R = m[[c for c in m.columns if c.startswith("r") and c[1:].isdigit()]].to_numpy(float)
+    k = key.merge(m[["audit_id", "y_major", "n_rated"]], on="audit_id", how="left")
+    gold = k[k.block == "gold"].dropna(subset=["y_major"])
+    qa = {"items": int(len(m)), "fully_rated": int((m.n_rated == 3).sum()), "ties_or_missing": int(m.y_major.isna().sum()),
+          "fleiss_kappa": e27.fleiss_kappa(R),
+          "gold_n": int(len(gold)), "gold_cohen_kappa_vs_banglabait": e27.cohen_kappa(gold.y_major, gold.bb_label),
+          "gold_agreement": float(np.mean(gold.y_major == gold.bb_label)),
+          "gold_confusion": pd.crosstab(gold.bb_label, gold.y_major).to_dict()}
+    for b_ in ("facebook", "twitter", "youtube", "news_nonanchor"):
+        r_ = R[m.audit_id.isin(k[k.block == b_].audit_id).to_numpy()]
+        qa[f"fleiss_kappa_{b_}"] = e27.fleiss_kappa(r_)
+    _write("E27", "audit_quality.json", {kk: (float(v) if isinstance(v, (np.floating,)) else v) for kk, v in qa.items()})
+    pool = inference_pool(); anc = anchors(); lv = data.banglaclick_levels().set_index("row_id").level.astype(int)
+    sc = pd.read_parquet(paths.private_root() / "predictions" / "E19" / "blind_tfidf_scores.parquet")
+    scorers = {"tfidf_lr": sc[["row_id", "env", "seed", "p"]]}
+    scorers.update({kk: v for kk, v in _xcell_scorers().items() if "|" not in kk})
+    anchor_hash = set(anc.normalized_title_sha256)
+    rows = []
+    for name, s in scorers.items():
+        for sd in sorted(s.seed.unique()):
+            ss = s[s.seed == sd]
+            d = e19.anchor_items(ss, pool, anc, lv)
+            link = linking.fit(d.L, d.z, d.ya, 1.0, flex=True)
+            for b_, env in (("facebook", "banglaclick:facebook"), ("twitter", "banglaclick:twitter"),
+                            ("youtube", "banglaclick:youtube"), ("news_nonanchor", "banglaclick:news")):
+                pop = ss[ss.env == env].merge(pool[["row_id", "normalized_title_sha256"]], on="row_id")
+                if b_ == "news_nonanchor":
+                    pop = pop[~pop.normalized_title_sha256.isin(anchor_hash)]
+                pop = pop.drop_duplicates("row_id").assign(L=lambda x: lv.loc[x.row_id].to_numpy().astype(int))
+                smp = k[(k.block == b_)].dropna(subset=["y_major"]).rename(columns={"y_major": "y"})
+                r = e27.block_estimate(pop, smp, link); r.update(scorer=name, seed=int(sd), block=b_); rows.append(r)
+    est = pd.DataFrame(rows)
+    _write("E27", "audit_estimates_by_seed.csv", est)
+    summ = est.groupby(["scorer", "block"]).agg(auroc=("auroc", "mean"), auroc_se=("auroc_se", "mean"), nll=("nll", "mean"),
+                                                 nll_se=("nll_se", "mean"), prev_hat=("prev_hat", "mean"), n=("n", "first"), N=("N", "first")).reset_index()
+    summ["auroc_lo"], summ["auroc_hi"] = summ.auroc - 1.96 * summ.auroc_se, summ.auroc + 1.96 * summ.auroc_se
+    _write("E27", "audit_estimates_summary.csv", summ)
+    _manifest("E27", t0, {"returned_sheets": [os.path.basename(f) for f in files], "estimator": "difference (Eq. 8), stratified by level",
+                          "working_link": "flexible SCL fitted on all news anchors per scorer seed",
+                          "seed_aggregation": "mean of estimates and of design SEs over seeds"})
+
+
 def E26(n_perm=200):
     """Placebo null for the decomposition. Within each target cell, the aligned label is permuted (same prevalence,
     no information about the item). The joint label-and-base-rate component J = R00 - RAP of the placebo label
@@ -999,7 +1052,7 @@ def E21S():
     _manifest("E21S", t0, {"variant": "E21S misspecified working link", "shifts": [-1, -0.5, 0.5, 1], "reps": 200, "scorer": "tfidf_lr", "clusters": "publisher"})
 
 
-EXPS = {"E26": E26, "E4T": lambda: E4("E4T", "trigger"), "E24": E24, "E21S": E21S, "E23C": E23C, "E23": E23, "E22": E22, "E21": E21,"E20": E20,"E19": E19,"E0": E0, "E1": E1, "E2": E2, "E3": E3, "E4": E4, "E5": E5, "E7": E7, "E10": E10, "E10T": E10T, "E11": E11, "E13": E13, "E14": E14, "E15": E15, "E16": E16, "E17": E17, "E18": E18}
+EXPS = {"E27": E27, "E26": E26, "E4T": lambda: E4("E4T", "trigger"), "E24": E24, "E21S": E21S, "E23C": E23C, "E23": E23, "E22": E22, "E21": E21,"E20": E20,"E19": E19,"E0": E0, "E1": E1, "E2": E2, "E3": E3, "E4": E4, "E5": E5, "E7": E7, "E10": E10, "E10T": E10T, "E11": E11, "E13": E13, "E14": E14, "E15": E15, "E16": E16, "E17": E17, "E18": E18}
 
 if __name__ == "__main__":
     todo = sys.argv[1:] or ["all"]
