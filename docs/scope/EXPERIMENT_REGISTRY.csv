@@ -40,3 +40,4 @@ E24,robustness,"Reviewer round 1 analyses: rubric binarisations with cross-fitte
 E4T,decomposition,"Shapley decomposition with Y* = 1[trigger level >= 1] (binarisation selected by cross-fitted kappa in E24)",local CPU (8 cores),,,COMPLETE,0.22,,results/scope_v1/E4T/,real data
 E21S,simulation,"Anchor audit with a deliberately mis-transported working link (logit shift -1,-0.5,0.5,1; n 50/100/200; 200 reps)",local CPU (8 cores),,,COMPLETE,,,results/scope_v1/E21S/,real data (news anchors)
 E25,data audit,"BanglaClick media attachments by platform and empty content field (text-free counts; stdlib xlsx reader)",local CPU,,,COMPLETE,,,results/scope_v1/E25/,real data
+E26,decomposition,"Placebo null for the joint label-and-base-rate component: aligned label permuted within cell (200 permutations), both proxies, frozen models",local CPU,,,COMPLETE,,,results/scope_v1/E26/,real data

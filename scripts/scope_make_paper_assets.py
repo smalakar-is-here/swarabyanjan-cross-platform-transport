@@ -999,9 +999,11 @@ if (E24D / "binarisations_on_anchors.csv").exists():
             rows.append([MNAME[s_], f3(g_.loc["r6", "auroc"]), f3(g_.loc["hard_aligned", "auroc"]), f"{f3(r1.auroc)} [{f3(r1.auroc_lo)}, {f3(r1.auroc_hi)}]", f3(r1.src_auroc)])
             W += nm(f"SclNa{k_}", f3(r1.auroc)) + nm(f"SclNa{k_}Lo", f3(r1.auroc_lo)) + nm(f"SclNa{k_}Hi", f3(r1.auroc_hi)) + nm(f"SclNaSrc{k_}", f3(r1.src_auroc))
             W += nm(f"SclNaPub{k_}", f3(g_.loc["r6", "auroc"])) + nm(f"SclNaDrop{k_}", f"{r1.src_auroc - r1.auroc_lo:.2f}")
-        t = pd.DataFrame(rows, columns=["Scorer", "Published $Y$", r"$1[\Lv\geq2]$", r"Score-conditional [95\% CI]", "Source held-out"])
-        tex_table(t, "tab_scl_nonanchor", r"Source-construct AUROC on BanglaClick news items that are not anchors (anchors only fit the link), for the three anchor-blind source-only scorers (mean over three seeds; intervals: 300 bootstrap draws over anchor publishers and target clusters). Source held-out: TF-IDF on the BanglaBait test set, transformers on their cluster-grouped BanglaBait validation split.",
-                  "tab:sclnonanchor", "lrrrr")
+            W += nm(f"SclNa{k_}GZero", f3(g_.loc["scl_g0", "auroc"])) + nm(f"SclNa{k_}GHalf", f3(g_.loc["scl_g0.5", "auroc"])) + nm(f"SclNa{k_}GThreeQ", f3(g_.loc["scl_g0.75", "auroc"]))
+            rows[-1][3:3] = [f3(g_.loc["scl_g0", "auroc"]), f3(g_.loc["scl_g0.5", "auroc"])]
+        t = pd.DataFrame(rows, columns=["Scorer", "Published $Y$", r"$1[\Lv\geq2]$", r"$\gamma=0$", r"$\gamma=0.5$", r"$\gamma=1$ [95\% CI]", "Source held-out"])
+        tex_table(t, "tab_scl_nonanchor", r"Source-construct AUROC on BanglaClick news items that are not anchors (anchors only fit the link), for the three anchor-blind source-only scorers (mean over three seeds; intervals: 300 bootstrap draws over anchor publishers and target clusters). $\gamma$ scales the anchor-fitted score slope of the link: $\gamma=1$ is the estimate under Assumption~\ref{as:crep}, $\gamma=0$ the level-only link (the lower endpoint of Proposition~\ref{prop:ident}(b)). Source held-out: TF-IDF on the BanglaBait test set, transformers on their cluster-grouped BanglaBait validation split.",
+                  "tab:sclnonanchor", "lrrrrrr")
 
 # decomposition under both aligned labels, with the interaction term
 d2 = pd.read_csv(R / "E4/decomposition_summary.csv"); d2 = d2[d2.aligned_label == "y_al"].assign(lab="L2")
@@ -1014,9 +1016,8 @@ if (R / "E4T/decomposition_summary.csv").exists():
     abx = pd.read_csv(R / "E24/frozen_auroc_by_binarisation.csv"); msx = pd.read_csv(R / "E24/frozen_metric_suite.csv")
     piS_ = float(msx[msx.env == "banglabait:news"].prevalence.iloc[0])
     def _skill(r_):
-        cut = "level>=2" if r_.lab == "L2" else "trigger>=1"
-        pv = abx[(abx.env == r_.env) & (abx.cut == cut)]
-        return np.nan if not len(pv) else (r_.nll_RAP - Hb(float(pv.prevalence.iloc[0]))) - (r_.nll_RS - Hb(piS_))
+        # prevalence of the hard aligned label in this cell (prev_aligned = mean of y_al; cell-specific, incl. non-anchor news)
+        return (r_.nll_RAP - Hb(float(r_.prev_aligned))) - (r_.nll_RS - Hb(piS_))
     dd["skill_res"] = dd.apply(_skill, axis=1)
     rows = []
     for e in CELLS5 + ["banglaclick:news_nonanchor"]:
@@ -1032,12 +1033,15 @@ if (R / "E4T/decomposition_summary.csv").exists():
                 W += nm(f"Dec{lab_}{TK[e]}{MK[m]}Con", f"{r_.nll_construct:+.3f}") + nm(f"Dec{lab_}{TK[e]}{MK[m]}Pri", f"{r_.nll_prior:+.3f}")
                 W += nm(f"Dec{lab_}{TK[e]}{MK[m]}Int", f"{r_.inter:+.3f}") + nm(f"Dec{lab_}{TK[e]}{MK[m]}Res", f"{r_.nll_residual:+.3f}")
     t = pd.DataFrame(rows, columns=["Cell", "Model", "Gap", r"$\phi_A$", r"$\phi_P$", "$I$", "Res.", r"Res.$_H$", r"$\phi_A$", r"$\phi_P$", "$I$", "Res.", r"Res.$_H$"])
-    tex_table(t, "tab_decomp_both", r"Shapley decomposition of the log-loss gap $R_{00}-R_S$ under two proxies $Y^{*}$ of the source construct: $1[\Lv\geq2]$ (columns 4--8) and $1[\text{trigger}\geq1]$ (columns 9--13). $\phi_A$: label definition; $\phi_P$: prevalence (corrected to the true target prevalence of $Y^{*}$); $I=(R_{00}-R_{A})-(R_{P}-R_{AP})$: interaction, split equally by the Shapley rule; Res.: residual $R_{AP}-R_S$ (text shift plus proxy error); Res.$_H$: the residual on a skill scale, $[R_{AP}-H(\pi^{*}_e)]-[R_S-H(\pi_S)]$, which removes the difference in label entropy between target and source. Non-anchor news: prevalence of the subset not tabulated. Frozen models; on news they were trained on most anchor titles (Section~\ref{sec:data}). Mean over five seeds.",
+    tex_table(t, "tab_decomp_both", r"Shapley decomposition of the log-loss gap $R_{00}-R_S$ under two proxies $Y^{*}$ of the source construct: $1[\Lv\geq2]$ (columns 4--8) and $1[\text{trigger}\geq1]$ (columns 9--13). $\phi_A$: label definition; $\phi_P$: prevalence (corrected to the true target prevalence of $Y^{*}$); $I=(R_{00}-R_{A})-(R_{P}-R_{AP})$: interaction, split equally by the Shapley rule; Res.: residual $R_{AP}-R_S$ (text shift plus proxy error); Res.$_H$: the residual on a skill scale, $[R_{AP}-H(\pi^{*}_e)]-[R_S-H(\pi_S)]$, which removes the difference in label entropy between target and source. Frozen models; on news they were trained on most anchor titles (Section~\ref{sec:data}). Mean over five seeds.",
               "tab:decompboth", "llr" + "r" * 10, wide=True)
     sk = dd[dd.env.isin(CELLS5)]
     for lab_, lk_ in (("L2", "L"), ("Tr", "T")):
-        for e in CELLS5:
-            v = sk[(sk.lab == lab_) & (sk.env == e)].skill_res
+        for e in CELLS5 + ["banglaclick:news_nonanchor"]:
+            if e.endswith("nonanchor"):  # text-based models only (the cue model is not discussed for this subset)
+                v = dd[(dd.lab == lab_) & (dd.env == e) & dd.model.isin(["tfidf_lr", "banglabert", "xlmr"])].skill_res
+            else:
+                v = sk[(sk.lab == lab_) & (sk.env == e)].skill_res
             W += nm(f"Skill{lk_}{TK[e]}Min", f"{v.min():+.3f}") + nm(f"Skill{lk_}{TK[e]}Max", f"{v.max():+.3f}")
     tr = dd[(dd.lab == "Tr") & dd.env.isin(CELLS5)]; l2 = dd[(dd.lab == "L2") & dd.env.isin(CELLS5)]
     W += nm("DecTrConPos", str(int((tr.nll_construct > 0).sum()))) + nm("DecTrN", str(len(tr)))
@@ -1096,6 +1100,29 @@ if (R / "E21S/design_misspecified_link.csv").exists():
     W += nm("DesMisDiffBiasMax", f"{dd_.auroc_bias.abs().max():.3f}") + nm("DesMisCovMin", f"{dd_.auroc_cover.min():.2f}") + nm("DesMisCovMax", f"{dd_.auroc_cover.max():.2f}")
     W += nm("DesMisPlugNllBiasMax", f"{mo.nll_bias.abs().max():.3f}") + nm("DesMisPlugAucBiasMax", f"{mo.auroc_bias.abs().max():.3f}")
     W += nm("DesMisDiffRmseMin", f"{dd_.auroc_rmse.min():.3f}") + nm("DesMisDiffRmseMax", f"{dd_.auroc_rmse.max():.3f}")
+
+# E26: placebo null for the joint label-and-base-rate component
+if (R / "E26/decomposition_placebo_summary.csv").exists():
+    pl = pd.read_csv(R / "E26/decomposition_placebo_summary.csv")
+    CELLN = {"banglaclick:news": "News", "banglaclick:facebook": "Facebook", "banglaclick:twitter": "Twitter", "banglaclick:youtube": "YouTube"}
+    CK = {"banglaclick:news": "News", "banglaclick:facebook": "Fb", "banglaclick:twitter": "Tw", "banglaclick:youtube": "Yt"}
+    rows = []
+    for (env_, m_), g_ in pl.groupby(["env", "model"], sort=False):
+        g_ = g_.set_index("proxy")
+        rows.append([CELLN[env_], MNAME[m_], f3(g_.loc["level2", "nll_gap"])] +
+                    [f"{f3(g_.loc[px, 'nll_joint'])} / {f3(g_.loc[px, 'nll_joint_placebo_mean'])} / {g_.loc[px, 'nll_excess_share']:.2f}" for px in ("level2", "trigger")])
+    order = {"News": 0, "Facebook": 1, "Twitter": 2, "YouTube": 3}
+    rows.sort(key=lambda r: (order[r[0]], r[1]))
+    t = pd.DataFrame(rows, columns=["Cell", "Model", "Gap", r"$\Lv\geq2$: $J$ / placebo / share", r"Trigger: $J$ / placebo / share"])
+    tex_table(t, "tab_placebo", r"Placebo null for the joint label-and-base-rate component $J=R_{00}-R_{AP}$ (log loss, nats; mean over seeds). Placebo: the aligned label permuted within the cell (same prevalence, no item information), 200 permutations. Share: $(J-\bar J_{\text{placebo}})/(R_{00}-R_S)$, the part of the gap attributable to the information in the aligned label.",
+              "tab:placebo", "llrll")
+    tx = pl[pl.model.isin(["tfidf_lr", "banglabert", "xlmr"])]
+    for px_, pk_ in (("level2", "L"), ("trigger", "T")):
+        for env_, ck_ in CK.items():
+            v_ = tx[(tx.proxy == px_) & (tx.env == env_)]
+            W += nm(f"Plc{pk_}{ck_}ShareMin", f"{v_.nll_excess_share.min():.2f}") + nm(f"Plc{pk_}{ck_}ShareMax", f"{v_.nll_excess_share.max():.2f}")
+            W += nm(f"Plc{pk_}{ck_}PlShareMin", f"{v_.nll_placebo_share.min():.2f}") + nm(f"Plc{pk_}{ck_}PlShareMax", f"{v_.nll_placebo_share.max():.2f}")
+    W += nm("PlcPermMax", f"{tx.nll_p_perm.max():.3f}") + nm("PlcNPerm", "200")
 
 # E25: media attachments of BanglaClick social-media items (text-free counts)
 if (R / "E25/banglaclick_media_type_counts.csv").exists():

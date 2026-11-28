@@ -268,6 +268,50 @@ def E4(exp="E4", aligned="level"):
                          "bootstrap_note": "publisher/channel clusters resampled within each target cell; seed-averaged; source risk held fixed"})
 
 
+def E26(n_perm=200):
+    """Placebo null for the decomposition. Within each target cell, the aligned label is permuted (same prevalence,
+    no information about the item). The joint label-and-base-rate component J = R00 - RAP of the placebo label
+    measures what a prevalence change alone yields; J_obs - mean(J_placebo) is the part due to the aligned label's
+    information. Both proxies (level >= 2, trigger >= 1), NLL and Brier, frozen models, all seeds."""
+    t0 = time.time(); a = anchors(); g = construct.linking_function(a)
+    df = add_labels(preds(), g); pi_s = pi_source()
+    isB = df.regime == "B"; df = df.copy()
+    df["y_tr"] = np.where(isB, (df.trigger_level.fillna(0) >= 1).astype(float), np.nan)
+    rng = np.random.default_rng(C["bootstrap_seed"]); rows = []
+    src = df[df.env == "banglabait:news"]
+    for (m, s), sm in src.groupby(["model", "seed"]):
+        rs, ra = decompose.source_risk(sm.p_calibrated.to_numpy(), sm.y_r6.to_numpy())
+        tg = df[(df.dataset == "banglaclick") & (df.model == m) & (df.seed == s)]
+        for env, e in tg.groupby("env"):
+            p, y = e.p_calibrated.to_numpy(), e.y_r6.to_numpy()
+            for proxy, col in (("level2", "y_al"), ("trigger", "y_tr")):
+                ya = e[col].to_numpy()
+                c = decompose.components(p, y, ya, pi_s, rs, ra)
+                perm = []
+                for _ in range(n_perm):
+                    cp = decompose.components(p, y, rng.permutation(ya), pi_s, rs, ra)
+                    perm.append({k: cp[f"{k}_R00"] - cp[f"{k}_RAP"] for k in ("nll", "brier")})
+                perm = pd.DataFrame(perm)
+                r = {"env": env, "model": m, "seed": s, "proxy": proxy}
+                for k in ("nll", "brier"):
+                    j = c[f"{k}_R00"] - c[f"{k}_RAP"]
+                    r.update({f"{k}_gap": c[f"{k}_gap"], f"{k}_joint": j, f"{k}_joint_placebo_mean": float(perm[k].mean()),
+                              f"{k}_joint_placebo_q975": float(perm[k].quantile(0.975)),
+                              f"{k}_joint_excess": j - float(perm[k].mean()),
+                              f"{k}_p_perm": float((1 + (perm[k] >= j).sum()) / (1 + n_perm))})
+                rows.append(r)
+    r = pd.DataFrame(rows)
+    _write("E26", "decomposition_placebo_by_seed.csv", r)
+    num = [c for c in r.columns if c not in ("env", "model", "seed", "proxy")]
+    s_ = r.groupby(["proxy", "env", "model"])[num].mean().reset_index()
+    for k in ("nll", "brier"):
+        s_[f"{k}_joint_share"] = s_[f"{k}_joint"] / s_[f"{k}_gap"]
+        s_[f"{k}_excess_share"] = s_[f"{k}_joint_excess"] / s_[f"{k}_gap"]
+        s_[f"{k}_placebo_share"] = s_[f"{k}_joint_placebo_mean"] / s_[f"{k}_gap"]
+    _write("E26", "decomposition_placebo_summary.csv", s_)
+    _manifest("E26", t0, {"n_perm": n_perm, "pi_source_dev": pi_s, "note": "aligned label permuted within cell; frozen models; seeds averaged in summary"})
+
+
 # ---------------------------------------------------------------- E7
 def E7():
     from . import cues
@@ -955,7 +999,7 @@ def E21S():
     _manifest("E21S", t0, {"variant": "E21S misspecified working link", "shifts": [-1, -0.5, 0.5, 1], "reps": 200, "scorer": "tfidf_lr", "clusters": "publisher"})
 
 
-EXPS = {"E4T": lambda: E4("E4T", "trigger"), "E24": E24, "E21S": E21S, "E23C": E23C, "E23": E23, "E22": E22, "E21": E21,"E20": E20,"E19": E19,"E0": E0, "E1": E1, "E2": E2, "E3": E3, "E4": E4, "E5": E5, "E7": E7, "E10": E10, "E10T": E10T, "E11": E11, "E13": E13, "E14": E14, "E15": E15, "E16": E16, "E17": E17, "E18": E18}
+EXPS = {"E26": E26, "E4T": lambda: E4("E4T", "trigger"), "E24": E24, "E21S": E21S, "E23C": E23C, "E23": E23, "E22": E22, "E21": E21,"E20": E20,"E19": E19,"E0": E0, "E1": E1, "E2": E2, "E3": E3, "E4": E4, "E5": E5, "E7": E7, "E10": E10, "E10T": E10T, "E11": E11, "E13": E13, "E14": E14, "E15": E15, "E16": E16, "E17": E17, "E18": E18}
 
 if __name__ == "__main__":
     todo = sys.argv[1:] or ["all"]
