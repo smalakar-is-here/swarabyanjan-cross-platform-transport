@@ -61,7 +61,10 @@ The sample has 450 rows and 449 distinct titles. Inclusion probabilities π = n_
    - Fleiss κ among the three annotators;
    - Cohen's κ of the majority label with the BanglaBait label on the 50 gold items. This is the key check that the new team reproduces the source construct.
    - Results are reported whatever their values. If gold κ is far below the BanglaBait team's own agreement, the audit measures a third reading of the construct, and the paper must say so.
-6. **Return:** save the completed sheets under `private_data/scope/annotation/returned/`, unchanged in name. Do not edit `AUDIT_KEY_PRIVATE.csv`.
+6. **Distribution and return:**
+   - `python scripts/scope_audit_packs.py build` writes one zip per annotator to `private_data/scope/annotation/distribution/` (SHA-256 values in `MANIFEST.json`). Each zip holds an annotator-facing guideline (§1 and §3 only, with no sample design, block names or mention of gold items), the practice workbook and the annotator's own main workbook. The workbooks have dropdown validation and lock the order, ID and text columns.
+   - Returned workbooks go in `private_data/scope/annotation/returned/`, unchanged in name. `python scripts/scope_audit_packs.py intake` scores the practice sheets against the practice key and converts each main workbook to `sheet_annotator_{k}.csv`. It refuses a workbook whose rows were re-ordered, whose text was changed, or that has missing or invalid labels.
+   - Do not edit `AUDIT_KEY_PRIVATE.csv`.
 
 ## 4. Analysis (E27, `python -m scope.run E27`)
 
