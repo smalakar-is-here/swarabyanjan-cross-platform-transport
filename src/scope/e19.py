@@ -214,7 +214,7 @@ def application(scores, pool, anc, lv, src_y, rng, boot, cells_only=None, cell_f
                 ci = c.groupby("cluster").indices; cs[e] = c.iloc[np.concatenate([ci[k] for k in cpick[e]])]
             sel[s] = (d.iloc[ai], cs, rs, pi_s)
         r = evaluate(sel).groupby(["env", "label"]).mean(numeric_only=True).reset_index(); r["draw"] = b; boots.append(r)
-    return point, pd.concat(boots, ignore_index=True)
+    return point, (pd.concat(boots, ignore_index=True) if boots else pd.DataFrame())
 
 
 def run(pool, src_test, anc, lv, src_y, seeds, seed_rng, out_write, boot=300, extra_scorers=None, pool_inf=None):

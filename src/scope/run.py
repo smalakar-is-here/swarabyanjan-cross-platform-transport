@@ -1052,7 +1052,189 @@ def E21S():
     _manifest("E21S", t0, {"variant": "E21S misspecified working link", "shifts": [-1, -0.5, 0.5, 1], "reps": 200, "scorer": "tfidf_lr", "clusters": "publisher"})
 
 
-EXPS = {"E27": E27, "E26": E26, "E4T": lambda: E4("E4T", "trigger"), "E24": E24, "E21S": E21S, "E23C": E23C, "E23": E23, "E22": E22, "E21": E21,"E20": E20,"E19": E19,"E0": E0, "E1": E1, "E2": E2, "E3": E3, "E4": E4, "E5": E5, "E7": E7, "E10": E10, "E10T": E10T, "E11": E11, "E13": E13, "E14": E14, "E15": E15, "E16": E16, "E17": E17, "E18": E18}
+def _anchor_blind_scorers():
+    """The anchor-blind scorers of E19-E21: blind TF-IDF and the transformer source-only (xcell) scorers."""
+    sc = pd.read_parquet(paths.private_root() / "predictions" / "E19" / "blind_tfidf_scores.parquet")
+    out = {"tfidf_lr": sc[["row_id", "env", "seed", "p", "pi_train"]]}
+    out.update({k: v for k, v in _xcell_scorers().items() if "|" not in k})
+    return out
+
+
+def _source_y(pool):
+    st = data.load_predictions(); src_y = st[st.env == "banglabait:news"].drop_duplicates("row_id").set_index("row_id").label.astype(float)
+    pa = pool[pool.env == "banglabait:news"].set_index("row_id").y_r6.astype(float)
+    return pd.concat([src_y, pa[~pa.index.isin(src_y.index)]])
+
+
+def E30():
+    """Identified sets with the news level link estimated under conditional MAR (g_tilde), next to E20's anchor g_hat."""
+    from . import e30
+    t0 = time.time(); pool = inference_pool(); anc = anchors(); rng = np.random.default_rng(C["bootstrap_seed"] + 30)
+    lv = data.banglaclick_levels().set_index("row_id").level.astype(int)
+    pt, bt, jk = e30.run(_anchor_blind_scorers(), pool, anc, lv, _source_y(pool), rng, boot=C["bootstrap_draws"])
+    _write("E30", "identified_sets_by_seed.csv", pt)
+    summ = pt.groupby(["scorer", "env", "link"]).mean(numeric_only=True).reset_index().drop(columns="seed")
+    q = lambda v, a: float(np.nanpercentile(v, a)); cs = []
+    for (scn, env, lk), g in bt.groupby(["scorer", "env", "link"]):
+        row = {"scorer": scn, "env": env, "link": lk}
+        for m in ("auroc", "nll", "brier"):
+            for a in ("AL", "ALM"):
+                row[f"{m}_{a}_cs_lo"] = q(g[f"{m}_{a}_lo"], 2.5); row[f"{m}_{a}_cs_hi"] = q(g[f"{m}_{a}_hi"], 97.5)
+        for l in range(4):
+            row[f"g{l}_lo"], row[f"g{l}_hi"] = q(g[f"g{l}"], 2.5), q(g[f"g{l}"], 97.5)
+        cs.append(row)
+    _write("E30", "identified_sets_summary.csv", summ.merge(pd.DataFrame(cs), on=["scorer", "env", "link"]))
+    # paired difference g_tilde - g_hat of the AL+M AUROC lower end, from the same draws
+    w = bt.pivot_table(index=["scorer", "env", "draw"], columns="link", values="auroc_ALM_lo")
+    dif = (w["g_tilde_scl"] - w["g_hat_anchor"]).groupby(level=[0, 1]).agg(
+        mean="mean", lo=lambda v: q(v, 2.5), hi=lambda v: q(v, 97.5)).reset_index()
+    _write("E30", "alm_lower_difference.csv", dif)
+    # link per level: g_hat vs g_tilde per scorer, and the spread of g_tilde across scorers (Assumption 3 diagnostic)
+    lk = summ[summ.env == "banglaclick:news"][["scorer", "link"] + [f"g{l}" for l in range(4)]]
+    _write("E30", "news_link_by_level.csv", lk)
+    gt = lk[lk.link == "g_tilde_scl"][[f"g{l}" for l in range(4)]]
+    _write("E30", "jackknife_few_cluster.csv", jk)
+    _manifest("E30", t0, {"scorers": sorted(set(pt.scorer)), "bootstrap_draws": C["bootstrap_draws"],
+                          "bootstrap": "news publisher clusters resampled once and shared by anchors and non-anchor news items (both enter g_tilde); "
+                                       "each other target cell resamples its own clusters; seed-averaged; CS = [2.5 pct lower end, 97.5 pct upper end]",
+                          "g_tilde": "level mean over all news items of q (Y_A on anchors, flexible SCL h_hat elsewhere); Assumptions 2 + 3",
+                          "g_hat": "anchor level frequencies, Jeffreys + PAVA (as E20); Assumptions 1 + 2",
+                          "g_tilde_spread_across_scorers_max": float((gt.max() - gt.min()).max()),
+                          "jackknife": "delete-one-cluster, target cells with <= 26 clusters, links fixed at full-sample estimates; t_{G-1}"})
+
+
+def E31():
+    """Few-cluster inference (review item R1-W5): jackknife size simulation, and delete-one-cluster jackknife intervals
+    and leave-one-cluster-out ranges for the decomposition (E4) and the SCL application (E19) in cells with <= 26 clusters."""
+    from . import jackknife, e19
+    t0 = time.time()
+    size = jackknife.jackknife_size((10, 13, 26), reps=500, boot=399, seed=C["bootstrap_seed"] + 31)
+    _write("E31", "jackknife_size.csv", size)
+    # (a) decomposition, hard aligned label, seed-averaged (as the E4 bootstrap)
+    a = anchors(); g = construct.linking_function(a); df = add_labels(preds(), g); pi_s = pi_source()
+    src = df[df.env == "banglabait:news"]
+    src_r = {(m, s): decompose.source_risk(*[src[(src.model == m) & (src.seed == s)][c].to_numpy() for c in ("p_calibrated", "y_r6")])
+             for m in C["models"] for s in C["seeds"]}
+    keys = ["nll_gap", "nll_construct", "nll_prior", "nll_residual", "auroc_R00", "auroc_RA", "auroc_construct", "auroc_residual"]
+    rows = []
+    isB = df.regime == "B"; dft = df.copy(); dft.loc[isB, "y_al"] = (dft.loc[isB, "trigger_level"].fillna(0) >= 1).astype(float)  # E4T proxy
+    for proxy, dfx in (("hard_aligned", df), ("trigger", dft)):
+      for env, e_all in dfx[dfx.dataset == "banglaclick"].groupby("env"):
+        cl = e_all.drop_duplicates("row_id").cluster_id.unique()
+        if len(cl) > 26:
+            continue
+        for m in C["models"]:
+            def stat(drop=None):
+                acc = []
+                for s in C["seeds"]:
+                    w = e_all[(e_all.model == m) & (e_all.seed == s)]
+                    w = w if drop is None else w[w.cluster_id != drop]
+                    acc.append(decompose.components(w.p_calibrated.to_numpy(), w.y_r6.to_numpy(), w.y_al.to_numpy(), pi_s, *src_r[(m, s)]))
+                return pd.DataFrame(acc)[keys].mean().to_dict()
+            for r in jackknife.summarize(stat(), [stat(k) for k in cl], len(cl), keys):
+                rows.append({"analysis": "decomposition_E4", "env": env, "model": m, "label": proxy, **r})
+    # (b) SCL application (E19), link refitted after each deletion (deleting a news publisher removes its anchors too)
+    pool = inference_pool(); anc = anchors(); lv = data.banglaclick_levels().set_index("row_id").level.astype(int)
+    src_y = _source_y(pool); clmap = pool.set_index("row_id").cluster_id; rng = np.random.default_rng(0)
+    qk = ["auroc", "nll", "prevalence", "nll_residual_after_prior", "auroc_gap"]
+    for name, s in _anchor_blind_scorers().items():
+        s = s.assign(cluster=clmap.reindex(s.row_id).to_numpy())
+        for env in e19.B_CELLS:
+            cl = s[s.env == env].cluster.unique()
+            if len(cl) > 26:
+                continue
+            def stat(drop=None):
+                ss = s if drop is None else s[~((s.env == env) & (s.cluster == drop))]
+                pt, _ = e19.application(ss.drop(columns="cluster"), pool, anc, lv, src_y, rng, 0, cells_only=[env])
+                return pt.groupby("label")[qk].mean()
+            full = stat(); loo = [stat(k) for k in cl]
+            for lab in full.index:
+                for r in jackknife.summarize(full.loc[lab].to_dict(), [x.loc[lab].to_dict() for x in loo], len(cl), qk):
+                    rows.append({"analysis": "scl_application_E19", "env": env, "model": name, "label": lab, **r})
+    _write("E31", "jackknife_intervals.csv", pd.DataFrame(rows))
+    _manifest("E31", t0, {"size_simulation": "two exchangeable scorers with cluster-varying signal (true AUROC contrast 0); G in {10,13,26}; "
+                                             "with and without one cluster holding half the items; 500 reps; pairs bootstrap 399 draws",
+                          "jackknife": "delete-one-cluster; SE^2 = (G-1)/G sum (theta_-k - mean)^2; interval theta_hat +- t_{G-1,.975} SE; LOCO min/max reported",
+                          "decomposition": "E4 hard aligned label 1[L>=2] and E4T trigger proxy 1[trigger level>=1], R6 frozen predictions, seed-averaged, source risk fixed",
+                          "scl": "E19 application, anchor-blind scorers; SCL link refitted on the remaining anchors after each deletion"})
+
+
+def E32():
+    """Prior-corrected baselines (review item R2-W5): pooled ERM and source-only with the Bayes prior correction from the
+    training prevalence to an MLLS estimate (deployable) or the true target prevalence (oracle reference), for TF-IDF
+    and both transformers, from the saved LOEO predictions; paired cluster-bootstrap contrasts (2,000 draws) and, for
+    targets with <= 26 clusters, delete-one-cluster jackknife intervals."""
+    from sklearn.model_selection import GroupShuffleSplit
+    from . import compare, jackknife
+    t0 = time.time(); pool = training_pool(); pinf = inference_pool().set_index("row_id")
+    files = _gather_predictions(); files = files[files.protocol.isin(["pooled_erm", "source_only", "latent_cuts", "group_dro"])]
+    nts = pool.normalized_title_sha256; cache = {}
+
+    def pi_fit(proto, lab, tgt, seed):
+        k = (proto == "source_only", lab, tgt, seed)
+        if k not in cache:
+            ycol = "y_r6" if lab == "r6" else "y_al"; test_h = set(nts[pool.env == tgt])
+            tr = pool[pool.env == "banglabait:news"] if proto == "source_only" else pool[pool.env != tgt]
+            tr = tr[~tr.normalized_title_sha256.isin(test_h)]
+            fi, _ = next(GroupShuffleSplit(n_splits=1, test_size=0.1, random_state=seed).split(tr, groups=tr.cluster_id))
+            cache[k] = float(tr.iloc[fi][ycol].mean())
+        return cache[k]
+
+    rows, con, jk = [], [], []; rng = np.random.default_rng(C["bootstrap_seed"] + 32)
+    for (model, lab, tgt), g in files.groupby(["model", "label", "target"]):
+        ycol = "y_r6" if lab == "r6" else "y_al"
+        ids = pd.read_parquet(g[g.protocol == "pooled_erm"].iloc[0].file).row_id.to_numpy() if (g.protocol == "pooled_erm").any() else None
+        if ids is None:
+            continue
+        y = pinf.loc[ids, ycol].to_numpy(); clu = pinf.loc[ids, "cluster_id"].to_numpy(); preds_ = {}
+        for r in g.itertuples():
+            p = pd.read_parquet(r.file).set_index("row_id").loc[ids, r.col].to_numpy()
+            out = {r.protocol: p}
+            if r.protocol in ("pooled_erm", "source_only"):
+                pis = pi_fit(r.protocol, lab, tgt, r.seed); pih = priors.mlls_em(p, pis)
+                out[f"{r.protocol}_mlls"] = priors.prior_adjust(p, pis, pih)
+                out[f"{r.protocol}_oracle"] = priors.prior_adjust(p, pis, float(np.mean(y)))
+            for pr, pp in out.items():
+                rows.append({"model": model, "label": lab, "target": tgt, "protocol": pr, "seed": r.seed,
+                             "pi_train": pi_fit(r.protocol, lab, tgt, r.seed) if r.protocol in ("pooled_erm", "source_only") else np.nan,
+                             "pi_mlls": pih if pr.endswith("_mlls") else np.nan, **M.all_metrics(y, pp, hard=y)})
+                preds_.setdefault(pr, []).append(pp)
+        uc = np.unique(clu)
+        # two references: the deployable MLLS-corrected pooled model, and the oracle-prevalence one (uses the true target
+        # prevalence, so it is a reference ceiling for prior correction, not a deployable baseline)
+        for ref, cmp in (("pooled_erm_mlls", {k: v for k, v in preds_.items() if not k.endswith("_oracle")}),
+                         ("pooled_erm_oracle", {k: preds_[k] for k in ("pooled_erm_oracle", "pooled_erm", "latent_cuts", "group_dro") if k in preds_})):
+            res = compare.cell(cmp, y, clu, ref, C["bootstrap_draws"], rng)
+            res.insert(0, "target", tgt); res.insert(0, "label", lab); res.insert(0, "model", model); con.append(res)
+            if len(uc) <= 26:
+                def stat(drop=None, cmp=cmp, ref=ref):
+                    m_ = np.ones(len(y), bool) if drop is None else clu != drop
+                    o = {}
+                    for pr, ps in cmp.items():
+                        if pr == ref:
+                            continue
+                        for mn, f in compare.METRICS.items():
+                            o[f"{pr}|{mn}"] = np.mean([f(y[m_], p[m_]) for p in ps]) - np.mean([f(y[m_], p[m_]) for p in cmp[ref]])
+                    return o
+                for r_ in jackknife.summarize(stat(), [stat(k) for k in uc], len(uc)):
+                    pr, mn = r_.pop("quantity").split("|")
+                    jk.append({"model": model, "label": lab, "target": tgt, "protocol": pr, "reference": ref, "metric": mn, **r_})
+    res = pd.DataFrame(rows); _write("E32", "prior_corrected_by_seed.csv", res)
+    num = [c for c in res.columns if c not in ("model", "label", "target", "protocol", "seed")]
+    _write("E32", "prior_corrected_summary.csv", res.groupby(["model", "label", "target", "protocol"])[num].mean().reset_index())
+    con = pd.concat(con, ignore_index=True); con["p_holm"] = np.nan
+    for (mn, rf), gg in con[con.p_wald.notna()].groupby(["metric", "reference"]):
+        con.loc[gg.index, "p_holm"] = compare.holm(gg.p_wald.to_numpy())
+    _write("E32", "contrasts_vs_prior_corrected_pooled.csv", con)
+    _write("E32", "jackknife_contrasts_few_cluster.csv", pd.DataFrame(jk))
+    _manifest("E32", t0, {"prior_correction": "Bayes odds rescaling from the training-fit prevalence (same cluster-grouped 90/10 split as "
+                                              "the trainers) to MLLS-EM on unlabelled target scores (deployable) or to the true target prevalence (oracle)",
+                          "references": {"pooled_erm_mlls": "deployable", "pooled_erm_oracle": "uses the true target prevalence; ceiling of prior correction"}, "draws": C["bootstrap_draws"], "multiplicity": "Holm within metric and reference",
+                          "threshold_metrics": "at 0.5 on the corrected probability, which is the Bayes rule for the estimated target prior",
+                          "prediction_sets": int(len(files)), "auroc_note": "AUROC is invariant to the (monotone) prior correction"})
+
+
+EXPS = {"E32": E32, "E31": E31, "E30": E30, "E27": E27, "E26": E26, "E4T": lambda: E4("E4T", "trigger"), "E24": E24, "E21S": E21S, "E23C": E23C, "E23": E23, "E22": E22, "E21": E21,"E20": E20,"E19": E19,"E0": E0, "E1": E1, "E2": E2, "E3": E3, "E4": E4, "E5": E5, "E7": E7, "E10": E10, "E10T": E10T, "E11": E11, "E13": E13, "E14": E14, "E15": E15, "E16": E16, "E17": E17, "E18": E18}
 
 if __name__ == "__main__":
     todo = sys.argv[1:] or ["all"]

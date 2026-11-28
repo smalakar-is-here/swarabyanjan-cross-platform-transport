@@ -1,0 +1,33 @@
+{
+ "experiment": "E30",
+ "scope_version": "1.0.0",
+ "wall_seconds": 1052.8,
+ "config_sha256": "22053e3efd0c674c5db8aa24a4855b991b235dbae24125e161d11874d12aa2a4",
+ "python": "3.13.3",
+ "platform": "Windows-11-10.0.26300-SP0",
+ "versions": {
+  "numpy": "2.5.5",
+  "pandas": "2.3.3",
+  "scikit-learn": "1.6.1",
+  "scipy": "1.16.3",
+  "statsmodels": "0.14.6"
+ },
+ "outputs": [
+  "alm_lower_difference.csv",
+  "identified_sets_by_seed.csv",
+  "identified_sets_summary.csv",
+  "jackknife_few_cluster.csv",
+  "news_link_by_level.csv"
+ ],
+ "scorers": [
+  "banglabert",
+  "tfidf_lr",
+  "xlmr"
+ ],
+ "bootstrap_draws": 2000,
+ "bootstrap": "news publisher clusters resampled once and shared by anchors and non-anchor news items (both enter g_tilde); each other target cell resamples its own clusters; seed-averaged; CS = [2.5 pct lower end, 97.5 pct upper end]",
+ "g_tilde": "level mean over all news items of q (Y_A on anchors, flexible SCL h_hat elsewhere); Assumptions 2 + 3",
+ "g_hat": "anchor level frequencies, Jeffreys + PAVA (as E20); Assumptions 1 + 2",
+ "g_tilde_spread_across_scorers_max": 0.014334938802587516,
+ "jackknife": "delete-one-cluster, target cells with <= 26 clusters, links fixed at full-sample estimates; t_{G-1}"
+}

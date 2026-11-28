@@ -1,0 +1,7 @@
+scorer,link,g0,g1,g2,g3
+banglabert,g_hat_anchor,0.105797,0.252036,0.57438,0.65601
+banglabert,g_tilde_scl,0.0699016,0.224917,0.56801,0.627032
+tfidf_lr,g_hat_anchor,0.106936,0.25226,0.574176,0.655612
+tfidf_lr,g_tilde_scl,0.0735187,0.222734,0.553676,0.633275
+xlmr,g_hat_anchor,0.105797,0.252036,0.57438,0.65601
+xlmr,g_tilde_scl,0.071489,0.22403,0.557273,0.63191

@@ -1,0 +1,23 @@
+{
+ "experiment": "E31",
+ "scope_version": "1.0.0",
+ "wall_seconds": 605.2,
+ "config_sha256": "22053e3efd0c674c5db8aa24a4855b991b235dbae24125e161d11874d12aa2a4",
+ "python": "3.13.3",
+ "platform": "Windows-11-10.0.26300-SP0",
+ "versions": {
+  "numpy": "2.5.5",
+  "pandas": "2.3.3",
+  "scikit-learn": "1.6.1",
+  "scipy": "1.16.3",
+  "statsmodels": "0.14.6"
+ },
+ "outputs": [
+  "jackknife_intervals.csv",
+  "jackknife_size.csv"
+ ],
+ "size_simulation": "two exchangeable scorers with cluster-varying signal (true AUROC contrast 0); G in {10,13,26}; with and without one cluster holding half the items; 500 reps; pairs bootstrap 399 draws",
+ "jackknife": "delete-one-cluster; SE^2 = (G-1)/G sum (theta_-k - mean)^2; interval theta_hat +- t_{G-1,.975} SE; LOCO min/max reported",
+ "decomposition": "E4 hard aligned label 1[L>=2] and E4T trigger proxy 1[trigger level>=1], R6 frozen predictions, seed-averaged, source risk fixed",
+ "scl": "E19 application, anchor-blind scorers; SCL link refitted on the remaining anchors after each deletion"
+}

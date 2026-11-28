@@ -1130,6 +1130,123 @@ if (R / "E25/banglaclick_media_type_counts.csv").exists():
     soc_ = md_[md_.platform == "Social Media"]
     W += nm("NMediaSocial", f"{int(soc_[soc_.media_type != '<empty>'].n.sum()):,}") + nm("NSocialItems", f"{int(soc_.n.sum()):,}")
 
+# E30: identified sets with the news link estimated under conditional MAR (g_tilde) next to the anchor link (g_hat)
+if (R / "E30/identified_sets_summary.csv").exists():
+    s30 = pd.read_csv(R / "E30/identified_sets_summary.csv"); lk30 = pd.read_csv(R / "E30/news_link_by_level.csv")
+    df30 = pd.read_csv(R / "E30/alm_lower_difference.csv").set_index(["scorer", "env"])
+    jk30 = pd.read_csv(R / "E30/jackknife_few_cluster.csv"); jk30 = jk30[jk30.quantity == "auroc_ALM_lo"].set_index(["scorer", "env", "link"])
+    SC3 = ["tfidf_lr", "banglabert", "xlmr"]; CEL = ["banglaclick:news", "banglaclick:facebook", "banglaclick:twitter", "banglaclick:youtube"]
+    rows = []
+    for sc_ in SC3:
+        for e_ in CEL:
+            a_ = s30[(s30.scorer == sc_) & (s30.env == e_)].set_index("link")
+            h_, t_ = a_.loc["g_hat_anchor"], a_.loc["g_tilde_scl"]; d_ = df30.loc[(sc_, e_)]
+            jk_ = (f"[{f3(jk30.loc[(sc_, e_, 'g_tilde_scl'), 'jk_lo'])}, {f3(jk30.loc[(sc_, e_, 'g_tilde_scl'), 'jk_hi'])}]"
+                   if (sc_, e_, "g_tilde_scl") in jk30.index else "--")
+            rows.append([MNAME[sc_], ENAME[e_], f"{f3(h_.auroc_ALM_lo)} ({f3(h_.auroc_ALM_cs_lo)})", f"{f3(t_.auroc_ALM_lo)} ({f3(t_.auroc_ALM_cs_lo)})",
+                         f"{d_['mean']:+.3f} [{d_.lo:+.3f}, {d_.hi:+.3f}]", jk_, f3(t_.src_auroc)])
+    t = pd.DataFrame(rows, columns=["Scorer", "Cell", r"AL+M lower, $\hat g$ (CS)", r"AL+M lower, $\tilde g$ (CS)", r"$\tilde g-\hat g$ [95\%]", r"Jackknife, $\tilde g$", "Source"])
+    tex_table(t, "tab_ident_gtilde", r"AL+M lower end of the identified set of source-construct AUROC with the news level link estimated from the anchors alone ($\hat g$, Assumptions~\ref{as:rep}+\ref{as:link}) or from all news items under conditional MAR ($\tilde g$, Assumptions~\ref{as:crep}+\ref{as:link}). In parentheses: lower end of the 95\% confidence set; bracketed: paired 95\% interval of the difference (2,000 cluster-bootstrap draws, news publishers resampled jointly for anchors and non-anchor items). Jackknife: delete-one-cluster 95\% $t_{G-1}$ interval of the $\tilde g$ lower end, link held fixed, for cells with at most 26 clusters. Source: held-out source AUROC.",
+              "tab:identgtilde", "llrrrrr", wide=True)
+    lrows = []
+    for sc_ in SC3:
+        for lk_, nm_ in (("g_hat_anchor", r"$\hat g$ (anchors)"), ("g_tilde_scl", r"$\tilde g$ (all news)")):
+            v_ = lk30[(lk30.scorer == sc_) & (lk30.link == lk_)].iloc[0]
+            lrows.append([MNAME[sc_], nm_] + [f3(v_[f"g{l}"]) for l in range(4)])
+    tex_table(pd.DataFrame(lrows, columns=["Scorer", "Link", r"$\Lv=0$", r"$\Lv=1$", r"$\Lv=2$", r"$\Lv=3$"]), "tab_news_link",
+              r"News level link $P(\YA=1\mid\Lv=l)$ estimated from the anchors and from all news items under conditional MAR ($\tilde g_l$: mean over news items at level $l$ of the observed $\YA$ on anchors and of the score-conditional link elsewhere). $\hat g$ does not depend on the scorer; $\tilde g$ does, and agreement across scorers is necessary for Assumption~\ref{as:crep}.",
+              "tab:newslink", "llrrrr")
+    gh_ = lk30[lk30.link == "g_hat_anchor"].set_index("scorer")[[f"g{l}" for l in range(4)]]
+    gt_ = lk30[lk30.link == "g_tilde_scl"].set_index("scorer")[[f"g{l}" for l in range(4)]]
+    drop_ = (gh_ - gt_).to_numpy()
+    W += nm("GtDropMin", f"{drop_.min():.2f}") + nm("GtDropMax", f"{drop_.max():.2f}") + nm("GtSpreadMax", f"{(gt_.max() - gt_.min()).max():.3f}")
+    W += nm("GtAlmDiffMin", f"{df30['mean'].min():+.3f}") + nm("GtAlmDiffMax", f"{df30['mean'].max():+.3f}")
+    jt_ = jk30.xs("g_tilde_scl", level="link").reset_index()
+    for e_, k_ in (("banglaclick:facebook", "Fb"), ("banglaclick:youtube", "Yt")):
+        v_ = jt_[jt_.env == e_]
+        W += nm(f"GtJk{k_}LoMin", f3(v_.jk_lo.min())) + nm(f"GtJk{k_}LoMax", f3(v_.jk_lo.max()))
+    tt_ = s30[s30.link == "g_tilde_scl"]
+    W += nm("GtAlmLoMin", f3(tt_.auroc_ALM_lo.min())) + nm("GtAlmLoMax", f3(tt_.auroc_ALM_lo.max()))
+
+# E31: few-cluster inference -- jackknife size and delete-one-cluster intervals for headline quantities
+if (R / "E31/jackknife_intervals.csv").exists():
+    sz = pd.read_csv(R / "E31/jackknife_size.csv")
+    rows = []
+    for (G_, dom_), g_ in sz.groupby(["G", "dominant_cluster"]):
+        g_ = g_.set_index("method")
+        rows.append([str(G_), "yes" if dom_ else "no"] + [f"{g_.loc[m_, 'size_at_5pct']:.3f} ({g_.loc[m_, 'mc_se']:.3f})" for m_ in ("pairs_bootstrap", "jackknife_t")])
+    tex_table(pd.DataFrame(rows, columns=["Clusters", "One cluster = half", "Pairs bootstrap", r"Jackknife $t_{G-1}$"]), "tab_jk_size",
+              r"Empirical size (Monte Carlo SE) of nominal 5\% tests of an AUROC contrast between two exchangeable scorers (true contrast 0) in simulated clustered data with cluster-varying signal; 500 replications, 399 bootstrap draws. With one dominant cluster, that cluster holds half of the items, as the largest BanglaClick YouTube channel.",
+              "tab:jksize", "llrr")
+    jk = pd.read_csv(R / "E31/jackknife_intervals.csv")
+    ci4 = {"hard_aligned": pd.read_csv(R / "E4/decomposition_cluster_bootstrap_ci.csv").set_index(["env", "model"]),
+           "trigger": pd.read_csv(R / "E4T/decomposition_cluster_bootstrap_ci.csv").set_index(["env", "model"])}
+    ci19 = pd.read_csv(R / "E19/application_summary.csv").set_index(["scorer", "env", "label"])
+    QN = {"nll_construct": r"$\phi_A$", "nll_residual": r"$\rho$", "auroc": "AUROC"}
+    PX = {"hard_aligned": r"$\Lv\geq2$", "trigger": "trigger", "scl_g1": r"SCL $\gamma=1$"}
+    rows = []
+    for e_ in ("banglaclick:facebook", "banglaclick:youtube"):
+        for px_ in ("hard_aligned", "trigger"):
+            for m_ in ("tfidf_lr", "banglabert", "xlmr"):
+                for q_ in ("nll_construct", "nll_residual"):
+                    v_ = jk[(jk.analysis == "decomposition_E4") & (jk.env == e_) & (jk.model == m_) & (jk.label == px_) & (jk.quantity == q_)]
+                    if not len(v_):
+                        continue
+                    v_ = v_.iloc[0]; b_ = ci4[px_].loc[(e_, m_)]
+                    rows.append([ENAME[e_], PX[px_], MNAME[m_], QN[q_], f3(v_.estimate), f"[{f3(b_[q_ + '_lo'])}, {f3(b_[q_ + '_hi'])}]",
+                                 f"[{f3(v_.jk_lo)}, {f3(v_.jk_hi)}]", f"{f3(v_.loco_min)}--{f3(v_.loco_max)}"])
+        for m_ in ("tfidf_lr", "banglabert", "xlmr"):
+            v_ = jk[(jk.analysis == "scl_application_E19") & (jk.env == e_) & (jk.model == m_) & (jk.label == "scl_g1") & (jk.quantity == "auroc")].iloc[0]
+            b_ = ci19.loc[(m_, e_, "scl_g1")]
+            rows.append([ENAME[e_], PX["scl_g1"], MNAME[m_], QN["auroc"], f3(v_.estimate), f"[{f3(b_.auroc_lo)}, {f3(b_.auroc_hi)}]",
+                         f"[{f3(v_.jk_lo)}, {f3(v_.jk_hi)}]", f"{f3(v_.loco_min)}--{f3(v_.loco_max)}"])
+    tex_table(pd.DataFrame(rows, columns=["Cell", "Proxy", "Model", "Quantity", "Estimate", "Pairs 95\\%", "Jackknife 95\\%", "LOCO range"]), "tab_jk_cells",
+              r"Headline quantities in the cells with few clusters (Facebook 26 pages, YouTube 10 channels): decomposition components (log loss, nats; frozen source models, mean over seeds) and source-construct AUROC under the score-conditional link. Pairs: percentile cluster bootstrap as in the main tables; jackknife: delete-one-cluster $t_{G-1}$ interval; LOCO range: minimum and maximum of the estimate with one cluster removed. For SCL the link is refitted after each deletion.",
+              "tab:jkcells", "llllrrrr", wide=True)
+    dz = jk[(jk.analysis == "decomposition_E4") & jk.quantity.isin(["nll_construct", "nll_residual"]) & jk.model.isin(["tfidf_lr", "banglabert", "xlmr"])]
+    yt_ = dz[dz.env == "banglaclick:youtube"]; fb_ = dz[dz.env == "banglaclick:facebook"]
+    inc = lambda d: int(((d.jk_lo <= 0) & (d.jk_hi >= 0)).sum())
+    W += nm("JkYtZeroN", str(inc(yt_))) + nm("JkYtN", str(len(yt_))) + nm("JkFbZeroN", str(inc(fb_))) + nm("JkFbN", str(len(fb_)))
+    fbc_ = fb_[(fb_.quantity == "nll_construct") & (fb_.label == "hard_aligned")]
+    W += nm("JkFbConLoMin", f3(fbc_.jk_lo.min()))
+    ebm_ = jk[(jk.analysis == "decomposition_E4") & (jk.env == "banglaclick:youtube") & (jk.model == "ebm") & (jk.label == "trigger") & (jk.quantity == "nll_residual")].iloc[0]
+    W += nm("JkYtEbmTrResLo", f3(ebm_.jk_lo)) + nm("JkYtEbmTrResHi", f3(ebm_.jk_hi))
+    for G_, k_ in ((10, "Ten"), (13, "Thirteen"), (26, "TwentySix")):
+        for dom_, d_ in ((False, ""), (True, "Dom")):
+            g_ = sz[(sz.G == G_) & (sz.dominant_cluster == dom_)].set_index("method").size_at_5pct
+            W += nm(f"JkSize{k_}{d_}", f"{g_['jackknife_t']:.3f}") + nm(f"PairsAucSize{k_}{d_}", f"{g_['pairs_bootstrap']:.3f}")
+
+# E32: prior-corrected pooled ERM (deployable MLLS and oracle-prevalence references)
+if (R / "E32/prior_corrected_summary.csv").exists():
+    s32 = pd.read_csv(R / "E32/prior_corrected_summary.csv"); c32 = pd.read_csv(R / "E32/contrasts_vs_prior_corrected_pooled.csv")
+    TG = {"banglaclick:news": "News (B)", "banglaclick:facebook": "Facebook (B)", "banglaclick:twitter": "Twitter (B)",
+          "banglaclick:youtube": "YouTube (B)", "baitbuster:youtube": "YouTube (C)"}
+    rows = []
+    for m_ in ("tfidf_lr", "banglabert", "xlmr"):
+        for lab_, ln_ in (("r6", "published"), ("aligned", "aligned")):
+            for t_, tn_ in TG.items():
+                v_ = s32[(s32.model == m_) & (s32.label == lab_) & (s32.target == t_)].set_index("protocol")
+                rows.append([MNAME[m_], ln_, tn_, f"{v_.loc['pooled_erm', 'prevalence']:.2f}", f"{v_.loc['pooled_erm_mlls', 'pi_mlls']:.2f}"]
+                            + [f3(v_.loc[p_, "nll"]) for p_ in ("pooled_erm", "pooled_erm_mlls", "pooled_erm_oracle", "latent_cuts", "group_dro")])
+    tex_table(pd.DataFrame(rows, columns=["Model", "Label", "Target", r"$\pi_e$", r"$\hat\pi_e^{\text{MLLS}}$", "Pooled", "+MLLS", "+oracle $\pi_e$", "Cut-point", "Group DRO"]),
+              "tab_prior_pooled", r"Prior-corrected pooled ERM on the LOEO targets: log loss (nats, mean over seeds). $\pi_e$: true target prevalence; $\hat\pi_e^{\text{MLLS}}$: MLLS estimate from unlabelled target scores, used by the deployable correction (+MLLS). +oracle $\pi_e$ moves the pooled model to the true target prevalence and therefore uses target labels; it is the best that any prior correction can do, not a deployable baseline. AUROC is unchanged by prior correction.",
+              "tab:priorpooled", "lllrrrrrrr", wide=True)
+    def cnt(ref, pr, m):
+        y_ = c32[(c32.reference == ref) & (c32.protocol == pr) & (c32.metric == m)]
+        good = (y_["diff"] > 0) if m == "auroc" else (y_["diff"] < 0)
+        return len(y_), int(((y_.p_holm < .05) & good).sum()), int(((y_.p_holm < .05) & ~good).sum())
+    for ref_, rk_ in (("pooled_erm_mlls", "Mlls"), ("pooled_erm_oracle", "Orc")):
+        for pr_, pk_ in (("latent_cuts", "Lat"), ("group_dro", "Dro"), ("pooled_erm", "Pool")):
+            for m_, mk_ in (("nll", "Nll"), ("auroc", "Auc")):
+                n_, b_, w_ = cnt(ref_, pr_, m_)
+                W += nm(f"Pc{rk_}{pk_}{mk_}N", str(n_)) + nm(f"Pc{rk_}{pk_}{mk_}Better", str(b_)) + nm(f"Pc{rk_}{pk_}{mk_}Worse", str(w_))
+    ml_ = s32[s32.protocol == "pooled_erm_mlls"]
+    W += nm("PcMllsWrongDir", str(int((np.sign(ml_.pi_mlls - ml_.pi_train) != np.sign(ml_.prevalence - ml_.pi_train)).sum()))) + nm("PcMllsCells", str(len(ml_)))
+    tw_ = s32[(s32.target == "banglaclick:twitter") & (s32.label == "aligned") & (s32.model == "banglabert")].set_index("protocol")
+    W += nm("PcTwAlBbertPool", f3(tw_.loc["pooled_erm", "nll"])) + nm("PcTwAlBbertMlls", f3(tw_.loc["pooled_erm_mlls", "nll"]))
+    nw_ = s32[(s32.target == "banglaclick:news") & (s32.label == "r6")]
+    W += nm("PcNewsRsixPiTrue", f"{nw_.prevalence.mean():.2f}") + nm("PcNewsRsixPiMllsMin", f"{nw_[nw_.protocol == 'pooled_erm_mlls'].pi_mlls.min():.2f}") + nm("PcNewsRsixPiMllsMax", f"{nw_[nw_.protocol == 'pooled_erm_mlls'].pi_mlls.max():.2f}")
+
 with open(PAPER / "numbers.tex", "a", encoding="utf-8") as fh:
     fh.write(W)
 print("S5 assets written;", W.count("newcommand"), "macros")

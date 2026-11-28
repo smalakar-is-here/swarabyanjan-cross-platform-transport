@@ -1,0 +1,13 @@
+scorer,env,mean,lo,hi
+banglabert,banglaclick:facebook,0.00928732,0.000762551,0.0203715
+banglabert,banglaclick:news,0.0107238,0.000314363,0.0254684
+banglabert,banglaclick:twitter,0.00855825,0.000968836,0.0191041
+banglabert,banglaclick:youtube,0.00163013,-0.00633733,0.0120685
+tfidf_lr,banglaclick:facebook,0.00458963,0.000588252,0.0109528
+tfidf_lr,banglaclick:news,0.00794987,0.00138671,0.0185496
+tfidf_lr,banglaclick:twitter,0.0054738,0.00124103,0.0118809
+tfidf_lr,banglaclick:youtube,0.00292709,-0.00214004,0.00957285
+xlmr,banglaclick:facebook,0.0102591,0.000247543,0.0240097
+xlmr,banglaclick:news,0.00987598,-0.000258486,0.0254651
+xlmr,banglaclick:twitter,0.00818007,0.000427318,0.0189471
+xlmr,banglaclick:youtube,0.00269103,-0.00460858,0.0115172

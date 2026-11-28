@@ -1,0 +1,13 @@
+G,dominant_cluster,method,reps_valid,size_at_5pct,mc_se
+10,False,jackknife_t,500,0.088,0.0126693
+10,False,pairs_bootstrap,500,0.128,0.014941
+10,True,jackknife_t,500,0.108,0.0138806
+10,True,pairs_bootstrap,500,0.132,0.0151378
+13,False,jackknife_t,500,0.084,0.0124052
+13,False,pairs_bootstrap,500,0.11,0.0139929
+13,True,jackknife_t,500,0.112,0.0141036
+13,True,pairs_bootstrap,500,0.122,0.0146367
+26,False,jackknife_t,500,0.048,0.00955992
+26,False,pairs_bootstrap,500,0.068,0.0112584
+26,True,jackknife_t,500,0.104,0.0136517
+26,True,pairs_bootstrap,500,0.116,0.0143209

@@ -1,0 +1,31 @@
+{
+ "experiment": "E32",
+ "scope_version": "1.0.0",
+ "wall_seconds": 972.4,
+ "config_sha256": "22053e3efd0c674c5db8aa24a4855b991b235dbae24125e161d11874d12aa2a4",
+ "python": "3.13.3",
+ "platform": "Windows-11-10.0.26300-SP0",
+ "versions": {
+  "numpy": "2.5.5",
+  "pandas": "2.3.3",
+  "scikit-learn": "1.6.1",
+  "scipy": "1.16.3",
+  "statsmodels": "0.14.6"
+ },
+ "outputs": [
+  "contrasts_vs_prior_corrected_pooled.csv",
+  "jackknife_contrasts_few_cluster.csv",
+  "prior_corrected_by_seed.csv",
+  "prior_corrected_summary.csv"
+ ],
+ "prior_correction": "Bayes odds rescaling from the training-fit prevalence (same cluster-grouped 90/10 split as the trainers) to MLLS-EM on unlabelled target scores (deployable) or to the true target prevalence (oracle)",
+ "references": {
+  "pooled_erm_mlls": "deployable",
+  "pooled_erm_oracle": "uses the true target prevalence; ceiling of prior correction"
+ },
+ "draws": 2000,
+ "multiplicity": "Holm within metric and reference",
+ "threshold_metrics": "at 0.5 on the corrected probability, which is the Bayes rule for the estimated target prior",
+ "prediction_sets": 360,
+ "auroc_note": "AUROC is invariant to the (monotone) prior correction"
+}
